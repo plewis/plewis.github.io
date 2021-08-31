@@ -1,0 +1,16 @@
+<div class="{{ include.css }}"><figure>
+{% if include.targeturl and include.height %}
+    <a href="{{ include.targeturl }}"><img class="{{ include.css }}" src="{{ site.baseurl }}{{ include.url }}" alt="{{ include.description }}" height="{{ include.height }}"></a>
+{% elsif include.targeturl and include.width %}
+    <a href="{{ include.targeturl }}"><img class="{{ include.css }}" src="{{ site.baseurl }}{{ include.url }}" alt="{{ include.description }}" width="{{ include.width }}"></a>
+{% elsif include.targeturl %}
+    <a href="{{ include.targeturl }}"><img class="{{ include.css }}" src="{{ site.baseurl }}{{ include.url }}" alt="{{ include.description }}" width="200px"></a>
+{% elsif include.height %}
+    <img class="{{ include.css }}" src="{{ site.baseurl }}{{ include.url }}" alt="{{ include.description }}" height="{{ include.height }}">
+{% elsif include.width %}
+    <img class="{{ include.css }}" src="{{ site.baseurl }}{{ include.url }}" alt="{{ include.description }}" width="{{ include.width }}">
+{% else %}
+    <img class="{{ include.css }}" src="{{ site.baseurl }}{{ include.url }}" alt="{{ include.description }}" width="200px">
+{% endif %}
+<figcaption>{{ include.description }}</figcaption>
+</figure></div>
