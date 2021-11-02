@@ -7,7 +7,7 @@ permalink: /publications/
 
 ([Jump to key to symbols](#key-to-symbols))
 
-publications.mdW Shi, MH Chen, L Kuo, and PO Lewis. 2021. [Bayesian information and dissonance.](https://doi.org/10.1214/21-BA1277) Bayesian Analysis (advance publication). &diams;
+W Shi, MH Chen, L Kuo, and PO Lewis. 2021. [Bayesian information and dissonance.](https://doi.org/10.1214/21-BA1277) Bayesian Analysis (advance publication). &diams;
 
 D Shi, MH Chen, L Kuo, and PO Lewis. 2021. [New partition based measures for data compatibility and information gain.](https://doi.org/10.1002/sim.8982) Statistics in Medicine 40:3560-3581. &diams;
 
