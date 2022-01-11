@@ -8,6 +8,16 @@ permalink: /teaching/
 
 ---
 
+### Phylogenetics (EEB 5349) ###
+
+{% include figure.html description="A seaweed phylogeny" url="/assets/img/seaweed-phylogeny.png" css="image-left" width="300px" targeturl="https://phylogeny.uconn.edu/courses/" %}
+
+This graduate course explains models and methods used in maximum-likelihood and Bayesian phylogenetics. Phylogenetic trees, genealogies at the level of species or more inclusive groups, are now pervasive in biology. Their estimation has been revolutionized by the availability of molecular sequence data, which has allowed elucidation of historical relatedness among lineages for which important life cycle stages have never been observed. Topics include substitution models, Markov chain Monte Carlo (MCMC), Bayesian statistics, comparative methods, and the use of a range of phylogenetic inference software.
+
+[Link to Spring 2022 lecture/lab schedule](/phylogenetics2022/)
+
+---
+
 ### Introduction to Botany (BIOL 1110) ###
 
 {% include figure.html description="Liverwort, Woods Hole, MA." url="/assets/img/liverwort.jpg" css="image-left" width="300px" targeturl="https://en.wikipedia.org/wiki/Marchantiophyta" %}
@@ -27,13 +37,3 @@ This is a sophomore-level 3-credit undergraduate course that satisfies the [Evol
 [Link to Spring 2021 course web site](https://uconneeb.github.io/evolution/)
 
 <p class="sectionbreak"/>
-
----
-
-### Phylogenetics (EEB 5349) ###
-
-{% include figure.html description="A seaweed phylogeny" url="/assets/img/seaweed-phylogeny.png" css="image-left" width="300px" targeturl="https://phylogeny.uconn.edu/courses/" %}
-
-This graduate course explains models and methods used in maximum-likelihood and Bayesian phylogenetics. Phylogenetic trees, genealogies at the level of species or more inclusive groups, are now pervasive in biology. Their estimation has been revolutionized by the availability of molecular sequence data, which has allowed elucidation of historical relatedness among lineages for which important life cycle stages have never been observed. Topics include substitution models, Markov chain Monte Carlo (MCMC), Bayesian statistics, comparative methods, and the use of a range of phylogenetic inference software.
-
-[Link to Spring 2020 lecture/lab schedule](/phylogenetics2020/)
