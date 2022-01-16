@@ -15,44 +15,44 @@ This is a graduate-level course in phylogenetics, emphasizing primarily maximum 
 
 Date        |  Lecture topic  |  Lab/homework
 :---------: | :-------------  | :------------
-Tuesday Jan. 18         | **Introduction**<br/>The jargon of phylogenetics (edges, vertices, leaves, degree, split, polytomy, taxon, clade); types of genealogies; rooted vs. unrooted trees; newick descriptions; monophyletic, paraphyletic, and polyphyletic groups | Homework 1: Trees From Splits
-Thursday Jan. 20        | **Optimality criteria, search strategies, consensus trees**<br/>Exhaustive enumeration, branch-and-bound search, algorithmic methods (star decomposition, stepwise addition, NJ), heuristic search strategies (NNI, SPR, TBR), evolutionary algorithms; consensus trees | Friday Jan. 24 Lab: [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
-Tuesday Jan. 25         | **The parsimony criterion**<br/>Strict, semi-strict, and majority-rule consensus trees; maximum agreement subtrees; Camin-Sokal, Wagner, Fitch, Dollo, and transversion parsimony; step matrices and generalized parsimony | Homework 2: Parsimony
-Thursday Jan 27         | **Distance methods**<br/>Distance methods: least squares criterion, minimum evolution criterion, neighbor-joining | Friday Jan. 31 Lab: Searching
-Tuesday Feb. 1          | **Substitution models**<br/>Instantaneous rates, expected number of substitutions, equilibrium frequencies, JC69 model. | Homework 3: Least squares distances (working through the [Python Primer](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_Python_Primer) first will make this homework much easier)
-Thursday Feb. 3         | **Maximum likelihood criterion**<br/>JC distance formula; common substitution models: K2P, F81, F84, HKY85, and GTR; likelihood: the probability of data given a model, likelihood of a “tree” with just one vertex and no edges, why likelihoods are always on the log scale, likelihood ratio tests. \[[Transition Probability Applet](/applets/jc-transition-probabilities/)\] | Friday Feb. 7 Lab: Likelihood
-Tuesday Feb. 8         | **Maximum likelihood (cont.)**<br/> Likelihood of a tree with 2 vertices connected by one edge, transition probabilities, maximum likelihood estimates (MLEs) of model parameters, likelihood of a tree. | Homework 4: Site likelihoods
-Thursday Feb. 10        | **Bootstrapping, rate heterogeneity**<br/>Non-parametric bootstrapping, ultrafast bootstrapping<br/>**Rate heterogeneity**<br/>Invariable sites model, Discrete gamma model, site-specific rates, mixture models. | Friday, Feb. 14 Lab: IQ-TREE tutorial
-Tuesday Feb. 15	        | **Simulation**<br/>How to simulate nucleotide sequence data, and why it’s done | Homework 5: Rate heterogeneity (python program to modify)
-Thursday Feb. 17        | **Long branch attraction, topology tests**<br/>Statistical consistency, long branch attraction, KH test, SH test, and AU test. | Friday, Feb. 21 Lab: Simulating sequence data using PAUP*
-Tuesday Feb. 22         | **Codon, secondary structure, and amino acid models**<br/>Nonsynonymous vs. synonymous rates, codon models, RNA stem/loop structure, compensatory substitutions, stem models, empirical amino acid rate matrices (PAM, JTT, WAG, LE) | Homework 6: Simulation
-Thursday Feb. 24        | **Bayes' Rule**<br/> Joint, conditional, and marginal probabilities, and how they interact to create Bayes’ Rule; calculating the expected number of substitutions per site; rate matrices to transition probability matrices \[[Eigenvector/eigenvalue applet](/applets/diagonalization/)\] | Friday, Feb. 28 Lab: Using HyPhy to test hypotheses
-Tuesday Mar. 1          | **Bayesian statistics, MCMC**<br/> Probability vs. probability density, Metropolis-Hastings algorithm, mixing, burn-in, trace plots.\[Archery priors applet](https://phylogeny.uconn.edu/archery-priors/)\] \[[MCMC robot applet](/applets/mcmc-robot/)\] | Homework 7: MCMC
-Thursday Mar. 3         | **Heated chains, topology proposals**<br/> Metropolis-coupled MCMC (i.e. “heated chains”), algorithms (a.k.a. updaters, moves, operators, proposals) for updating parameters and trees during MCMC. | Friday, Mar. 6 Lab: Using R to explore probability distributions and plot trees
-Tuesday Mar. 8         | **Prior distributions used in phylogenetics**<br/> Discrete Uniform (topology), Gamma (kappa, omega), Beta (pinvar), Dirichlet (base frequencies, GTR exchangeabilities); Tree length prior; induced split prior. | No homework assigned this week
-Thursday Mar. 10        | **Priors**<br/> continued. | Friday, Mar. 13 Lab: RevBayes
+Tuesday Jan. 18         | **Introduction**<br/>The jargon of phylogenetics (edges, vertices, leaves, degree, split, polytomy, taxon, clade); types of genealogies; rooted vs. unrooted trees; newick descriptions; monophyletic, paraphyletic, and polyphyletic groups | **Homework 1**: Trees From Splits
+Thursday Jan. 20        | **Optimality criteria, search strategies, consensus trees**<br/>Exhaustive enumeration, branch-and-bound search, algorithmic methods (star decomposition, stepwise addition, NJ), heuristic search strategies (NNI, SPR, TBR), evolutionary algorithms; consensus trees | **Lab 1**: [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
+Tuesday Jan. 25         | **The parsimony criterion**<br/>Strict, semi-strict, and majority-rule consensus trees; maximum agreement subtrees; Camin-Sokal, Wagner, Fitch, Dollo, and transversion parsimony; step matrices and generalized parsimony | **Homework 2**: Parsimony
+Thursday Jan 27         | **Distance methods**<br/>Distance methods: least squares criterion, minimum evolution criterion, neighbor-joining | **Lab 2**: Searching
+Tuesday Feb. 1          | **Substitution models**<br/>Instantaneous rates, expected number of substitutions, equilibrium frequencies, JC69 model. | **Homework 3**: Least squares distances (working through the [Python Primer](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_Python_Primer) first will make this homework much easier)
+Thursday Feb. 3         | **Maximum likelihood criterion**<br/>JC distance formula; common substitution models: K2P, F81, F84, HKY85, and GTR; likelihood: the probability of data given a model, likelihood of a “tree” with just one vertex and no edges, why likelihoods are always on the log scale, likelihood ratio tests. \[[Transition Probability Applet](/applets/jc-transition-probabilities/)\] | **Lab 3**: Likelihood
+Tuesday Feb. 8         | **Maximum likelihood (cont.)**<br/> Likelihood of a tree with 2 vertices connected by one edge, transition probabilities, maximum likelihood estimates (MLEs) of model parameters, likelihood of a tree. | **Homework 4**: Site likelihoods
+Thursday Feb. 10        | **Bootstrapping, rate heterogeneity**<br/>Non-parametric bootstrapping, ultrafast bootstrapping<br/>**Rate heterogeneity**<br/>Invariable sites model, Discrete gamma model, site-specific rates, mixture models. | **Lab 4**: IQ-TREE tutorial
+Tuesday Feb. 15	        | **Simulation**<br/>How to simulate nucleotide sequence data, and why it’s done | **Homework 5**: Rate heterogeneity (python program to modify)
+Thursday Feb. 17        | **Long branch attraction, topology tests**<br/>Statistical consistency, long branch attraction, KH test, SH test, and AU test. | **Lab 5**: Simulating sequence data using PAUP*
+Tuesday Feb. 22         | **Codon, secondary structure, and amino acid models**<br/>Nonsynonymous vs. synonymous rates, codon models, RNA stem/loop structure, compensatory substitutions, stem models, empirical amino acid rate matrices (PAM, JTT, WAG, LE) | **Homework 6**: Simulation
+Thursday Feb. 24        | **Bayes' Rule**<br/> Joint, conditional, and marginal probabilities, and how they interact to create Bayes’ Rule; calculating the expected number of substitutions per site; rate matrices to transition probability matrices \[[Eigenvector/eigenvalue applet](/applets/diagonalization/)\] | **Lab 6**: Using HyPhy to test hypotheses
+Tuesday Mar. 1          | **Bayesian statistics, MCMC**<br/> Probability vs. probability density, Metropolis-Hastings algorithm, mixing, burn-in, trace plots.\[Archery priors applet](https://phylogeny.uconn.edu/archery-priors/)\] \[[MCMC robot applet](/applets/mcmc-robot/)\] | **Homework 7**: MCMC
+Thursday Mar. 3         | **Heated chains, topology proposals**<br/> Metropolis-coupled MCMC (i.e. “heated chains”), algorithms (a.k.a. updaters, moves, operators, proposals) for updating parameters and trees during MCMC. | **Lab 7**: Using R to explore probability distributions and plot trees
+Tuesday Mar. 8         | **Prior distributions used in phylogenetics**<br/> Discrete Uniform (topology), Gamma (kappa, omega), Beta (pinvar), Dirichlet (base frequencies, GTR exchangeabilities); Tree length prior; induced split prior. | **Homework 8**: TBD
+Thursday Mar. 10        | **Priors**<br/> continued. | **Lab 8**: RevBayes
 Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
-Tuesday Mar.  22        | **Bayesian phylogenetics (continued)**<br/> Dirichlet process priors, credible vs. confidence intervals. \[[CI applet](/applets/ci/)\] \[[Stick-breaking applet](/applets/stickbreaking/)\] | Homework: no homework this week
-Thursday Mar. 24        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood. | Friday, Mar. 27 Lab: Morphology and partitioning in RevBayes
-Tuesday Mar. 29         | **Discrete morphological models**<br/> Dirichlet process prior models revisited; introduction to discrete morphological models; Mk model; conditioning on variability. | Homework 8: TBA
-Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> BIC; Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | Friday, Apr. 3 Lab: BayesTraits
-Tuesday Apr. 5          | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. | Homework 9: TBA
-Thursday Apr. 7         | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | Friday, Apr. 10 Lab: TBA
-Tuesday Apr. 12         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[OU applet](/applets/ou/)\] | Homework: no homework this week
-Thursday Apr. 14        | **Phylogenetic signal in comparative data**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[Pagel transformation applet](/applets/pagel/)\]<br/>**[Introduction to the coalescent**<br/>Just enough coalescent theory to understand the multispecies coalescent used to estimate species trees given possibly conflicting gene trees. | Friday, Apr. 17 Lab: APE
-Tuesday Apr. 19         | **Species Tree Estimation (cont.)**<br/> Deep coalescence, incomplete lineage sorting, gene tree discordance due to ILS, estimating species trees using the multispecies coalescent. The SVDQuartets and ASTRAL species tree methods. | Homework 10: TBA
-Thursday Apr. 21        | **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. | Friday, Apr. 24 Lab: Divergence time estimation
-Tuesday Apr. 26         | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants); BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | TBA
-Thursday Apr. 28        | **TBA**<br/> I'm sure I will be behind at this point! | Friday, May 1: TBA
+Tuesday Mar.  22        | **Bayesian phylogenetics (continued)**<br/> Dirichlet process priors, credible vs. confidence intervals. \[[CI applet](/applets/ci/)\] \[[Stick-breaking applet](/applets/stickbreaking/)\] | **Homework 9**: TBD
+Thursday Mar. 24        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood. | **Lab 9**: Morphology and partitioning in RevBayes
+Tuesday Mar. 29         | **Discrete morphological models**<br/> Dirichlet process prior models revisited; introduction to discrete morphological models; Mk model; conditioning on variability. | **Homework 10**: TBD
+Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> BIC; Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | **Lab 10**: BayesTraits
+Tuesday Apr. 5          | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. | **Homework 11**: TBD
+Thursday Apr. 7         | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | **Lab 11**: TBD
+Tuesday Apr. 12         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[OU applet](/applets/ou/)\] | **Homework 12**: TBD
+Thursday Apr. 14        | **Phylogenetic signal in comparative data**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[Pagel transformation applet](/applets/pagel/)\]<br/>**[Introduction to the coalescent**<br/>Just enough coalescent theory to understand the multispecies coalescent used to estimate species trees given possibly conflicting gene trees. | **Lab 12**: APE
+Tuesday Apr. 19         | **Species Tree Estimation (cont.)**<br/> Deep coalescence, incomplete lineage sorting, gene tree discordance due to ILS, estimating species trees using the multispecies coalescent. The SVDQuartets and ASTRAL species tree methods. | **Homework 13**: TBD
+Thursday Apr. 21        | **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. | **Lab 13**: Divergence time estimation
+Tuesday Apr. 26         | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants); BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | **Homework 14**:TBD
+Thursday Apr. 28        | **TBA**<br/> I'm sure I will be behind at this point! | **Lab 14**: TBD
 
 ## Grading
 
-This course involves weekly **homework assignments** that you are expected to complete without consulting with other students (but you are welcome to consult with the instructors). Some homework assignments will involve hand calculations (using an actual or online calculator), some will involve a small amount of computer programming in Python and R (but note that no previous programming background is assumed), and others will involve small projects that require you to understand how to set up software such as RevBayes to carry out an analysis, and then report on what you found. There are no formal exams, term papers, or projects, only homeworks, so it is important to not skip or get behind on the homework assignments. **Labs** involve self-paced tutorials designed to teach you how to use important phylogenetics software packages and how to carry out analyses remotely using the Xanadu cluster. There are no grades specifically associated with labs, but labs are important preparation for later homework assignments.
+This course involves weekly **homework assignments** that you are expected to complete without consulting with other students (but you are welcome to consult with the instructors). Some homework assignments will involve hand calculations (using an actual or online calculator), some will involve a small amount of computer programming in Python and R (but note that no previous programming background is assumed), and others will involve small projects that require you to understand how to set up software such as RevBayes to carry out an analysis, and then report on what you found. There are no formal exams, term papers, or projects, only homeworks, so it is important to not skip or get behind on the homework assignments. **Labs** involve self-paced tutorials designed to teach you how to use important phylogenetics software packages and how to carry out analyses remotely using the Xanadu cluster. For each lab you will need to turn in something to demonstrate that you worked through the lab exercise. You will get participation points for what you turn in.
 
 At least | Less than | Letter grade  
 :------: | :-------: | :----------:
-   92%   |    100%   |      A 
+   93%   |    100%   |      A 
    90%   |     93%   |      A- 
    87%   |     90%   |      B+
    83%   |     87%   |      B
@@ -64,6 +64,28 @@ At least | Less than | Letter grade
    63%   |     67%   |      D
    60%   |     63%   |      D-
     0%   |     60%   |      F
+
+## Books on phylogenetics
+
+This is a list of books that you should know about, but none are required texts for this course. Listed in reverse chronological order.
+
+Harmon, L. 2019. **[Phylogenetic comparative methods.](https://lukejharmon.github.io/pcm/)** (Version 1.4, released 15 March 2019). Published online by the author.
+
+Yang, Z. 2014. **[Molecular evolution: a statistical approach.](https://doi.org/10.1093/sysbio/syv002)** Oxford University Press.
+
+Baum, D. A., and S. D. Smith. 2013. **Tree thinking: an introduction to phylogenetic biology.** Roberts and Company Publishers, Greenwood Village, Colorado. (This book is probably the most useful companion volume for this course, introducing the methods in a very accessible way but also providing lots of practice interpreting phylogenies correctly.)
+
+Garamszegi, L. Z. 2014. **[Modern phylogenetic comparative methods and their application in evolutionary biology: concepts and practice.](https://doi.org/10.1007/978-3-662-43550-2)** Springer-Verlag, Berlin. (Well-written chapters by current leaders in phylogenetic comparative methods.)
+
+Hall, B. G. 2011. **Phylogenetic trees made easy: a how-to manual (4th edition).** Sinauer Associates, Sunderland. (A guide to running some of the most important phylogenetic software packages.)
+
+Lemey, P., Salemi, M., and Vandamme, A.-M. 2009. **The phylogenetic handbook: a practical approach to phylogenetic analysis and hypothesis testing (2nd edition).** Cambridge University Press, Cambridge, UK (Chapters on theory are paired with practical chapters on software related to the theory.)
+
+Felsenstein, J. 2004. **Inferring phylogenies.** Sinauer Associates, Sunderland. (Comprehensive overview of both history and methods of phylogenetics.)
+
+Page, R., and Holmes, E. 1998. **Molecular evolution: a phylogenetic approach.** Blackwell Science (Very nice and accessible pre-Bayesian-era introduction to the field.)
+
+Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sinauer Associates, Sunderland. Chapters 11 (**Phylogenetic inference**) and 12 (**Applications of molecular systematics**). (Still a very valuable compendium of pre-Bayesian-era phylogenetic methods.)
 
 ## Literature cited in lecture
 
@@ -241,24 +263,3 @@ Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences wit
 
 Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
 
-## Books on phylogenetics
-
-This is a list of books that you should know about, but none are required texts for this course. Listed in reverse chronological order.
-
-Harmon, L. 2019. **[Phylogenetic comparative methods.](https://lukejharmon.github.io/pcm/)** (Version 1.4, released 15 March 2019). Published online by the author.
-
-Yang, Z. 2014. **[Molecular evolution: a statistical approach.](https://doi.org/10.1093/sysbio/syv002)** Oxford University Press.
-
-Baum, D. A., and S. D. Smith. 2013. **Tree thinking: an introduction to phylogenetic biology.** Roberts and Company Publishers, Greenwood Village, Colorado. (This book is probably the most useful companion volume for this course, introducing the methods in a very accessible way but also providing lots of practice interpreting phylogenies correctly.)
-
-Garamszegi, L. Z. 2014. **[Modern phylogenetic comparative methods and their application in evolutionary biology: concepts and practice.](https://doi.org/10.1007/978-3-662-43550-2)** Springer-Verlag, Berlin. (Well-written chapters by current leaders in phylogenetic comparative methods.)
-
-Hall, B. G. 2011. **Phylogenetic trees made easy: a how-to manual (4th edition).** Sinauer Associates, Sunderland. (A guide to running some of the most important phylogenetic software packages.)
-
-Lemey, P., Salemi, M., and Vandamme, A.-M. 2009. **The phylogenetic handbook: a practical approach to phylogenetic analysis and hypothesis testing (2nd edition).** Cambridge University Press, Cambridge, UK (Chapters on theory are paired with practical chapters on software related to the theory.)
-
-Felsenstein, J. 2004. **Inferring phylogenies.** Sinauer Associates, Sunderland. (Comprehensive overview of both history and methods of phylogenetics.)
-
-Page, R., and Holmes, E. 1998. **Molecular evolution: a phylogenetic approach.** Blackwell Science (Very nice and accessible pre-Bayesian-era introduction to the field.)
-
-Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sinauer Associates, Sunderland. Chapters 11 (**Phylogenetic inference**) and 12 (**Applications of molecular systematics**). (Still a very valuable compendium of pre-Bayesian-era phylogenetic methods.)
