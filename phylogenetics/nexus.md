@@ -36,7 +36,7 @@ If you would like your comment printed out in the output when PAUP* executes the
 
 Here is a list of common NEXUS blocks and the most-common commands within these blocks. For a complete description of the NEXUS file format, take a look at this paper:
 
-> :thinking: [Maddison, David R., Swofford, David L. and Maddison, Wayne P. 1997. NEXUS: an extensible file format for systematic information. Systematic Biology 46: 590-621](http://www.jstor.org/stable/2413497)
+> [Maddison, David R., Swofford, David L. and Maddison, Wayne P. 1997. NEXUS: an extensible file format for systematic information. Systematic Biology 46: 590-621](http://www.jstor.org/stable/2413497)
 
 ### Taxa block 
 

@@ -9,9 +9,9 @@ First, download the file [angio35.txt](https://hydrodictyon.eeb.uconn.edu/people
 
 Now login to the cluster (`ssh username@xanadu-submit-ext.cam.uchc.edu`) and type the following command:
 
-    srun --partition=general --qos=general --pty bash
+    srun --partition=mcbstudent --qos=mcbstudent --pty bash
 
-This will find a node that is not currently fully loaded with jobs and allow you to play with programs without bogging down the head node (the node everyone uses to access the cluster). You should always use srun if you are planning to do any computation interactively, as we will do today.
+This will find a node that is not currently fully loaded with jobs and allow you to play with programs without bogging down the head node (the node everyone uses to access the cluster). You should always use `srun` if you are planning to do any computation interactively, as we will do today.
 
 Once the system has moved you to a compute node, type the following commands to start the PAUP* program:
 
@@ -22,7 +22,7 @@ Now type in the following (PAUP) command:
 
     tonexus from=angio35.txt to=angio35.nex datatype=nucleotide format=text;
 
-After the conversion, the file `angio35.nex` should be present. Type `quit` to quit PAUP*, then open this Nexus file in the nano editor to see what PAUP* did to convert the original file to Nexus format. (The most important thing PAUP* did was to count the number of nucleotides and set `nchar` for you.)
+After the conversion, the file `angio35.nex` should be present. Type `quit` to quit PAUP*, then open this Nexus file in the nano editor to see what PAUP* did to convert the original file to Nexus format. (The most important thing PAUP* did was to count the number of nucleotides and set nchar for you.)
 
 ##  Automatically excluding sites using a default exset 
 
@@ -40,7 +40,7 @@ Create a sets block comprising the following three charset commands:
 * The first charset should be named 18S and include sites 1 through 1855
 * The second charset should be named rbcL and include sites 1856 through 3283
 * The third charset should be named atpB and include sites 3284 through 4811
-This block should be placed after the assumptions block. Look at the [of the sets block]([Phylogenetics:_NEXUS_Format#Sets_block|description)] and try to do this part on your own.
+This block should be placed after the assumptions block. Look at the [description of the sets block](/nexus/#sets-block) and try to do this part on your own.
 
 After saving the file in nano, start paup specifying the data file name on the command line:
 
@@ -81,7 +81,7 @@ Now try heuristic searching. This approach does not attempt to look at all possi
 
     hsearch;
 
-> :thinking: What is the parsimony score of the best tree found during the search? (Write down this score somewhere for later reference.) How many trees were examined (look at `# Rearrangements tried`)?
+> :thinking: What is the parsimony score of the best tree found during the search? (Write down this score somewhere for later reference.) How many trees were examined (look at "Total number of rearrangements tried")?
 
 ##  Showing and saving trees 
 

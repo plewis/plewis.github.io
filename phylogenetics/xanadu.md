@@ -34,27 +34,25 @@ If you do not see a file named "config" in your ".ssh" directory, create an empt
 
     touch config
 
-Open the config file in a text editor such as [https://www.barebones.com BBEdit] (NOT a word processor such as Microsoft Word or Pages!) and add the following lines (replace _plewis_ with your actual username on xanadu, and replace _/Users/plewis_ with your home directory path on your Mac, which you can get by typing `pwd` at the command line):
+Open the config file in a text editor such as [https://www.barebones.com BBEdit] (NOT a word processor such as Microsoft Word or Pages!) and add the following lines, replacing _eeb5349usr10_ with your actual username on xanadu:
 
     host xanadu
         HostName xanadu-submit-ext.cam.uchc.edu
-        User plewis
-        IdentityFile /Users/plewis/.ssh/id_rsa
-        Cipher blowfish
+        User eeb5349usr10
     host xfer
         HostName transfer.cam.uchc.edu
-        User plewis
-        IdentityFile /Users/plewis/.ssh/id_rsa
-        Cipher blowfish
+        User eeb5349usr10
 
 Once you save the config file, you should be able to just type
 
     ssh xanadu
 
-to login to the xanadu cluster. (The second entry (xfer) will be used when transferring files to and from the cluster.)
+to login to the xanadu cluster. The second entry (xfer) will be used when transferring files to and from the cluster.
 
 ####  SCP/SFTP 
-An SCP or SFTP client is needed to to transfer files back and forth using the Secure Copy Protocol (SCP) or Secure File Transfer Protocol (SFTP). I will show you how to transfer files using both methods, but for now  you should go ahead and install [Cyberduck](https://cyberduck.io). Cyberduck provides a nice graphical user interface, but you might find that the command line clients let you get your work done faster once you get used to using them.
+An SCP or SFTP client is needed to to transfer files back and forth using the Secure Copy Protocol (SCP) or Secure File Transfer Protocol (SFTP). I will show you how to transfer files using both methods, but for now  you should go ahead and install [Cyberduck](https://cyberduck.io/download/). Cyberduck provides a nice graphical user interface, but you might find that the command line clients let you get your work done faster once you get used to using them.
+
+Please skip now to the section [Learning enough UNIX to get around](#learning-enough-unix-to-get-around)
 
 ###  If you use Windows... 
 ####  SSH 
@@ -93,11 +91,11 @@ to login to the xanadu cluster. (The second entry (xfer) will be used for transf
 
 ####  SCP/SFTP 
 
-An SCP or SFTP client is needed to to transfer files back and forth using the Secure Copy Protocol (SCP) or Secure File Transfer Protocol (SFTP). For now  you should go ahead and install [Cyberduck](https://cyberduck.io). Cyberduck provides a nice graphical user interface, which makes moving files back and forth easy.
+An SCP or SFTP client is needed to to transfer files back and forth using the Secure Copy Protocol (SCP) or Secure File Transfer Protocol (SFTP). For now  you should go ahead and install [Cyberduck](https://cyberduck.io/download/). Cyberduck provides a nice graphical user interface, which makes moving files back and forth easy.
 
 ###  Learning enough UNIX to get around 
 
-I'm presuming that you do not know a lot of UNIX commands, but even if you are already a UNIX guru, please complete this section anyway because otherwise you will fail to create some files you will need later.
+I'm presuming that you do not know a lot of UNIX commands, but, even if you are already a UNIX guru, please complete this section anyway because otherwise you will fail to create some files you will need later.
 
 ####  ls command: finding out what is in the present working directory 
 
@@ -117,11 +115,11 @@ Typing
 
     pwd
 
-shows you the full path of the present working directory. The path shown should end with your username, indicating that you are currently in your home directory.
+shows you the full path of the present working directory. The path shown should end with your username, indicating that you are currently in your home directory. If you are using one of the students accounts, e.g. `eeb5349usr10`, then the directory path will end with `eeb5349/usr10`, not `eeb5349usr10`.
 
 ####  mkdir command: creating a new directory 
 
-Typing the following command will create a new directory named `pauprun` in your home directory:
+Typing the following command will create a new directory named _pauprun_ in your home directory:
 
     mkdir pauprun
 
@@ -129,7 +127,7 @@ Use the `ls` command now to make sure a directory of that name was indeed create
 
 ####  cd command: leaving the nest and returning home again 
 
-The cd command lets you change the present working directory. To move into the newly-created `pauprun` directory, type
+The cd command lets you change the present working directory. To move into the newly-created _pauprun_ directory, type
 
     cd pauprun
 
@@ -137,7 +135,7 @@ You can always go back to your home directory (no matter how lost you get!) by t
 
     cd
 
-If you want to go down one directory level (say from pauprun back down to your home directory), you can specify the parent directory using two dots:
+If you want to go down one directory level (say from _pauprun_ back down to your home directory), you can specify the parent directory using two dots:
 
     cd ..
 
@@ -145,7 +143,7 @@ If you want to go down one directory level (say from pauprun back down to your h
 
 One way to create a new file, or edit one that already exists, is to use the nano editor. You will now use nano to create a run.nex file containing a paup block. You will later execute this file in PAUP* to perform an analysis.
 
-First use the pwd command to see where you are, then use cd to go into the pauprun directory if you are not already there. Type
+First use the pwd command to see where you are, then use cd to go into the _pauprun_ directory if you are not already there. Type
 
     nano run.nex
 
@@ -169,13 +167,13 @@ For now, type the following into the editor:
         quit;
     end;
 
-Once you have entered everything, use `^X` to exit. Nano will ask if you want to save the modified **buffer** (a _buffer_ is a predefined amount of computer memory used to store the text you type; the text stored in the buffer will be lost once you exit the program unless you save it to a file on the hard drive), at which point you should press the Y key to answer yes. Nano will now ask you whether you want to use the file name run.nex; this time just press Enter to accept. Nano should now exit and you can use cat to look at the contents of the file you just created:
+Once you have entered everything, use `^X` to exit. Nano will ask if you want to save the modified **buffer** (a _buffer_ is a predefined amount of computer memory used to store the text you type; the text stored in the buffer will be lost once you exit the program unless you save it to a file on the hard drive), at which point you should press the `Y` key to answer yes. Nano will now ask you whether you want to use the file name _run.nex_; this time just press Enter to accept. Nano should now exit and you can use cat to look at the contents of the file you just created:
 
     cat run.nex
 
 ####  Create the gopaup file 
 
-Now use nano to create a second file named `gopaup` in your `pauprun` directory. To do this, type `pwd` to make sure you are in the `pauprun` directory, then type `nano gopaup`. This file should contain this text:
+Now use nano to create a second file named _gopaup_ in your _pauprun_ directory. To do this, type `pwd` to make sure you are in the _pauprun_ directory, then type `nano gopaup`. This file should contain this text:
 
     #!/bin/bash
     #SBATCH --partition=mcbstudent
@@ -186,6 +184,21 @@ Now use nano to create a second file named `gopaup` in your `pauprun` directory.
     paup -n run.nex
 
 ## Downloading files to the cluster
+
+The next three sections describe **three different ways** to get a file into a directory on the cluster. If the file is located on a website, which is the usual case for labs in this course, **I would use the curl method**. If you don't like that method, the other two sections offer alternative ways (both of which involve first getting the file onto your local computer, then uploading it to the cluster).
+
+###   Using curl to download the algae.nex data file directly 
+
+One of my favorite methods to transfer files that are stored on a web site involves the program curl (which stands for copy url). The following command should be carried out in a terminal that _is already logged into the cluster_.
+
+In your terminal, navigate to the directory where you want to save the file (on the cluster). Use this command to download the _algae.nex_ file directly into the present working directory on the cluster:
+
+    curl -O http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/algae.nex
+
+The `-O` tells curl to save it under the same file name (algae.nex) that it has on the remote server. If you forget the `-O`, curl will just spit out the entire contents of the file to your terminal, which is almost never what you want!
+
+If this method worked, skip now to the section [A few more UNIX commands](#a-few-more-unix-commands)
+
 ###  Using Cyberduck to upload the algae.nex data file 
 
 Download the file [algae.nex](http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/algae.nex) and save it on your hard drive.
@@ -196,11 +209,13 @@ Open Cyberduck, choose `Bookmark > New Bookmark` from the main menu, then fill o
 
 Once you are in, you will see a listing of the files in your home directory on the cluster. To copy the `algae.nex` file to the cluster, you need only drag-and-drop it onto the Cyberduck window.
 
+If this method worked, skip now to the section [A few more UNIX commands](#a-few-more-unix-commands)
+
 ###   Using scp to upload the algae.nex data file 
 
-While you will probably want to do your file transfers with Cyberduck as described above, it is also possible to transfer files using the command line scp client. Read on if you are interested in this option, but feel free to skip this section if you are happy using Cyberduck.
+Download the file [algae.nex](http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/algae.nex) and save it on your hard drive.
 
-The following should be carried out in a terminal that *is not* already logged into the cluster.
+The following should be carried out in a terminal that _is_ **not** _already logged into the cluster_.
 
 In your terminal, navigate to where you saved the file (on your local Mac or Windows computer). If you saved it on the desktop, you can go there by typing `cd Desktop`.
 
@@ -214,58 +229,44 @@ If you have not made a shortcut, use this command instead:
 
 where `username` should be replaced by your own user name on the cluster. (Don't overlook the colon on the very end of the line!)
 
-###   Using curl to download the algae.nex data file directly 
-
-One of my favorite methods to transfer files that are stored on a web site involves the program curl (which stands for copy url). The following command should be carried out in a terminal that *is* logged into the cluster.
-
-In your terminal, navigate to the directory where you want to save the file (on the cluster). Use this command to download the algae.nex file directly into the present working directory on the cluster:
-
-    curl -O http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/algae.nex
-
-The `-O` tells curl to save it under the same file name (algae.nex) that it has on the remote server. If you forget the `-O`, curl will just spit out the entire contents of the file to your terminal, which is almost never what you want!
-
 ###  A few more UNIX commands 
 
-You have now transferred a data file (algae.nex) to the cluster, but it is not in the right place. The algae.nex file is currently in your home directory, whereas the run.nex file is in the pauprun directory. The run.nex file contains a line containing the command `execute algae.nex`, which means that algae.nex should also be located in the pauprun directory. Use the following commands to ensure that (1) you are in your home directory, and (2) algae.nex is also in your home directory:
-
-    cd $HOME
-    ls algae.*
-
-Note the use of a wildcard character (*) in the ls command. This will show you only files that begin with the letters `algae` followed by a period and any number of other non-whitespace characters. The `$HOME` is a predefined shell variable that will be replaced with your home directory. It is not necessary in this case (typing `cd` all by itself would take you to your home directory) but the `$HOME` variable is good to know about (especially for use in scripts).
+You have now transferred a data file (_algae.nex_) to the cluster, but it may not be in the right place. Use the `pwd` and `cd` commands to ensure that you are in the _pauprun_ directory, then type `ls` to see if the _algae.nex_ file is there. The _run.nex_ file contains a line containing the command `execute algae.nex`, which means that _algae.nex_ should also be located in the _pauprun_ directory. 
 
 ####  mv command: moving or renaming a file 
 
-Now use the mv command to move algae.nex to the directory pauprun:
+If _algae.nex_ is in your home directory, you can use the `mv` command to move it to the directory _pauprun_:
 
+    cd
     mv algae.nex pauprun
 
-The mv command takes two arguments. The first argument is the name of the directory or file you want to move, whereas the second argument is the destination. The destination could be either a directory (which is true in this case) or a file name. If the directory pauprun did not already exist, mv would have interpreted this as a request to rename algae.nex to the file name pauprun! So, be aware that mv can rename files as well as move them.
+The `mv` command takes two arguments. The first argument is the name of the directory or file you want to move, whereas the second argument is the destination. The destination could be either a directory (which is true in this case) or a file name. If the directory _pauprun_ did not already exist, `mv` would have interpreted this as a request to rename _algae.nex_ to the file name _pauprun_! So, be aware that `mv` can rename files as well as move them.
 
 ####  cp command: copying a file 
 
-The cp command copies files. It leaves the original file in place and makes a copy elsewhere. You could have used this command to get a copy of algae.nex into the directory pauprun:
+The `cp` command copies files. It leaves the original file in place and makes a copy elsewhere. You could have used this command to make a copy of _algae.nex_ in the directory _pauprun_:
 
     cp algae.nex pauprun
 
-This would have left the original in your home directory, and made a duplicate of this file in the directory pauprun.
+This would have left the original in your home directory, and made a duplicate of this file in the directory _pauprun_.
 
 ####  rm command: cleaning up 
 
-The rm command removes files. If you had used the cp command to copy algae.nex into the pauprun directory, you could remove the original file using these commands:
+The `rm` command removes files. If you had used the `cp` command to copy _algae.nex_ into the _pauprun_ directory, you could remove the original file using these commands:
 
     cd
     rm algae.nex
 
-The first cd command just ensures that the copy you are removing will be the one in your home directory (typing `cd` by itself acts the same as typing `cd $HOME`). 
-To delete an entire directory (don't try this now!), you can add the -rf flags. The r flag tells rm to recursively apply the remove command to everything in every subdirectory, while the f flag means force (don't ask whether each file should be deleted in each subdirectory, just do it!):
+The first `cd` command just ensures that the copy you are removing will be the one in your home directory. The variable `$HOME` holds the path to your home directory. The symbol `~` is shorthand for `$HOME`. Typing `cd` by itself, `cd ~`, or `cd $HOME` all change the present working directory to `$HOME`. 
+To delete an entire directory (don't try this now!), you can add the `-rf` flags. The `r` flag tells `rm` to recursively apply the remove command to everything in every subdirectory, while the `f` flag means force (don't ask whether each file should be deleted in each subdirectory, just do it!):
 
     rm -rf pauprun
 
-The above command would remove everything in the pauprun directory (without asking!), and then remove the pauprun directory itself. I want to stress that this is a particularly dangerous command, so make sure you are not distracted or sleep-deprived when you use it! Unlike the Windows or Mac graphical user interface, files deleted using rm are **not** moved to the Recycle Bin or Trash, they are just gone. There is **no undo** for the rm command.
+The above command would remove everything in the _pauprun_ directory (without asking!), and then remove the _pauprun_ directory itself. I want to stress that this is a **particularly dangerous command**, so make sure you are not distracted or sleep-deprived when you use it! Unlike the Windows or Mac graphical user interface, files deleted using rm are **not** moved to the Recycle Bin or Trash, they are just gone. There is **no undo** for the rm command.
 
 ###  Starting a PAUP* analysis 
 
-If you've been following the directions in sequence, you now have two files (algae.nex and run.nex) in your `$HOME/pauprun` directory on the cluster, whereas the gopaup file should be in `$HOME`. Use the cd command to make sure you are in your home directory, then the cat command to look at the contents of the gopaup file you created earlier. You should see this: 
+If you've been following the directions in sequence, you now have two files (_algae.nex_ and _run.nex_) in your `$HOME/pauprun` directory on the cluster, whereas the _gopaup_ file should be in `$HOME`. Use the `cd` command to make sure you are in your home directory, then the `cat` command to look at the contents of the _gopaup_ file you created earlier. You should see this: 
 
     #!/bin/bash
     #SBATCH --partition=mcbstudent 
@@ -277,12 +278,12 @@ If you've been following the directions in sequence, you now have two files (alg
 
 This file will be used by software called SLURM to start your run. SLURM provides a command called `sbatch` that you will use to submit your analysis. The SLURM `sbatch` command will look for a core (i.e. processor) on a node (i.e. machine) in the cluster that is currently not being used and will start your analysis on that node. This saves you the effort of looking amongst all nodes in the cluster for a core that is not busy.
 
-Here is an explanation of each of the lines in gopaup:
+Here is an explanation of each of the lines in _gopaup_:
 * The 1st line specifies the command interpreter to use (just include this in your scripts verbatim).
-* The 2nd, 3rd, and 4th lines begin with #SBATCH and are interpreted as commands by SLURM itself. In this case, the first and second #SBATCH commands tell SLURM to use the general partition (--partition=general) and the general quality of service (--qos=general). You should always include these two lines verbatim. The last #SBATCH line gives a name to your job (--job-name=pauprun). You could change "pauprun" here to something else, but keep your job names short and without embedded spaces or punctuation. The job name will help you identify your run when checking status.
-* The 5th line is simply a cd command that changes the present working directory to the pauprun directory you created earlier. This will ensure that anything saved by PAUP* ends up in this directory rather than in your home directory. Note that $HOME is like a macro that will be expanded to the full path to your home directory.
-* The 6th line informs the system that you want to use a particular version of paup. If you left this line out, the command on the last line might not work at all, or might run an older version of paup. You can get a list of all available modules using the command "module avail"
-* The 7th and last line starts up PAUP* and executes the run.nex file. The -n flag tells PAUP* that no human is going to be listening or answering questions, so it should just use default answers to any questions it needs to ask during the run.
+* The 2nd, 3rd, and 4th lines begin with `#SBATCH` and are interpreted as commands by SLURM itself. In this case, the first and second `#SBATCH` commands tell SLURM to use the general partition (`--partition=mcbstudent`) and the general quality of service (`--qos=mcbstudent`). You should always include these two lines verbatim. The last `#SBATCH` line gives a name to your job (`--job-name=pauprun`). You could change `pauprun` here to something else, but keep your job names short and without embedded spaces or punctuation. The job name will help you identify your run when checking status.
+* The 5th line is simply a `cd` command that changes the present working directory to the _pauprun_ directory you created earlier. This will ensure that anything saved by PAUP* ends up in this directory rather than in your home directory. 
+* The 6th line informs the system that you want to use a particular version of paup. If you left this line out, the command on the last line might not work at all, or might run an older version of paup. You can get a list of all available modules using the command `module avail`.
+* The 7th and last line starts up PAUP* and executes the _run.nex_ file. The `-n` flag tells PAUP* that no human is going to be listening or answering questions, so it should just use default answers to any questions it needs to ask during the run.
 
 ####  Submitting a job using sbatch 
 
@@ -308,7 +309,7 @@ The PD under ST (state) means that my job is pending (not yet running). This job
 
 ####  Killing a job using scancel 
 
-Sometimes it is clear that an analysis is not going to do what you wanted it to. Suppose that just after you press the Enter key to start an analysis, you realize that you forgot to put in a savetrees command in your paup block (so in the end you will not be able to see the results of the search). In such situations, you really want to just kill the job, fix the problem, and then start it up again. Use the scancel command for this. Note that in the output of the squeue command above, my run had a job-ID equal to 645170. I could kill the job like this:
+Sometimes it is clear that an analysis is not going to do what you wanted it to. Suppose that just after you press the Enter key to start an analysis, you realize that you forgot to put in a savetrees command in your paup block (so in the end you will not be able to see the results of the search). In such situations, you really want to just kill the job, fix the problem, and then start it up again. Use the `scancel` command for this. Note that in the output of the `squeue` command above, my run had a job-ID equal to 645170. I could kill the job like this:
 
     scancel 645170
 
@@ -316,18 +317,18 @@ Be sure to delete any output files that have already been created before startin
 
 ####  While PAUP* is running 
 
-While PAUP* is running, you can use cat to look at the log file:
+While PAUP* is running, you can use `cat` to look at the log file:
 
     cd pauprun
     cat algae.output.txt
 
 ####   Using Cyberduck to download the log file and the tree file 
 
-When PAUP* finishes, squeue will no longer list your process. At this point, you need to use Cyberduck to get the log and tree files that were saved back to your local computer. Assuming you left Cyberduck open and connected to the cluster, double-click on the pauprun directory and locate the files `algae.ml.tre` and  `algae.output.txt`. Select these two files and drag them out of the Cyberduck window and drop them on your desktop. After a flurry of activity, Cyberduck should report that the two files were downloaded successfully, at which point you can close the download status window.
+When PAUP* finishes, `squeue` will no longer list your process. At this point, you need to use Cyberduck or `scp` to get the log and tree files that were saved back to your local computer. Assuming you left Cyberduck open and connected to the cluster, double-click on the _pauprun_ directory and locate the files `algae.ml.tre` and  `algae.output.txt`. Select these two files and drag them out of the Cyberduck window and drop them on your desktop. After a flurry of activity, Cyberduck should report that the two files were downloaded successfully, at which point you can close the download status window.
 
 ####  Using scp to download the log file and the tree file 
 
-You can also use scp to get the log and tree files that were saved back to your local computer, but, again, if you are happy with Cyberduck you can skip this section. In the Terminal app on your Mac (or the Git for Windows BASH session on your Windows PC), type the following (being careful to separate the final dot character from everything else by a blank space):
+You can also use `scp` to get the log and tree files that were saved back to your local computer, but, again, if you are happy with Cyberduck you can skip this section. In the Terminal app on your Mac (or the Git for Windows BASH session on your Windows PC), type the following (being careful to separate the final dot character from everything else by a blank space):
 
     scp xfer:pauprun/algae.output.txt .
     scp xfer:pauprun/algae.ml.tre .
@@ -337,11 +338,11 @@ This assumes you have set up a shortcut: if not, you will need to use the longer
     scp username@transfer.cam.uchc.edu:pauprun/algae.output.txt .
     scp username@transfer.cam.uchc.edu:pauprun/algae.ml.tre .
 
-These scp commands copy the files `algae.output.txt` and `algae.ml.tre` to your current directory (this is what the single dot at the end of each line stands for).
+These `scp` commands copy the files `algae.output.txt` and `algae.ml.tre` to your current directory (this is what the single dot at the end of each line stands for).
 
 ###  Using FigTree to view tree files 
 
-[[File:AlgaeMLtree.png|right|400px|thumb|`algae.ml.tre` file viewed with FigTree]]
+{% include figure.html description="`algae.ml.tre` file viewed with FigTree" url="/assets/img/AlgaeMLtree.png" css="image-right noborder" width="400px" %}
 
 If you do not already have it, download and install the [FigTree](https://tree.bio.ed.ac.uk/software/figtree/) application on your laptop. FigTree is a Java application, so you will also need to install a Java Runtime Environment (JRE) if you don't already have one (just start FigTree and it will tell you if it cannot find a JRE). Once FigTree is running, choose File > Open from the menu to open the `algae.ml.tre` file.
 
@@ -363,11 +364,11 @@ There are many other options that you can discover in FigTree, but one more thin
 
 ####  Why have PAUP* create the log file algae.output.txt? 
 
-In your pauprun directory, SLURM saved the output that PAUP* normally sends to the console to a file named slurm-645170.out (your file will have a different number, however). You will not need this file after the run: the log command in your paup block ends up saving the same output in the file algae.output.txt. Why did we tell PAUP* to start a log file if SGE was going to save the output anyway? The main reason is that you can view the log file during the run, but you cannot view slurm-645170.out until the run is finished. There will come a day when you have a PAUP* run that has been going for several days and want to know whether it is 10% or 90% finished. At this point you will appreciate being able to view the output file!
+In your _pauprun_ directory, SLURM saved the output that PAUP* normally sends to the console to a file named _slurm-645170.out_ (your file will have a different number, however). You will not need this file after the run: the log command in your paup block ends up saving the same output in the file _algae.output.txt_. Why did we tell PAUP* to start a log file if SGE was going to save the output anyway? The main reason is that you can view the log file during the run, but you cannot view _slurm-645170.out_ until the run is finished. There will come a day when you have a PAUP* run that has been going for several days and want to know whether it is 10% or 90% finished. At this point you will appreciate being able to view the output file!
 
 ####  Delete the slurm-xxxx.out file using the rm command 
 
-Because you do not need the slurm-xxxxx.out file (where the xxxx are placeholders for the job number), delete it using the rm command (the -f stands for force; i.e. don't ask if it is ok, just do it!):
+Because you do not need the _slurm-xxxxx.out_ file (where _xxxx_ is a placeholder for the job number), delete it using the `rm` command (the `-f` stands for force; i.e. don't ask if it is ok, just do it!):
 
     cd
     cd pauprun
@@ -392,11 +393,11 @@ You can often get away with only typing the first few letters of a filename; try
 
     cat alg<TAB>
 
-If algae.nex is the only file in the directory in which the first three letters are alg, then the command interpreter will type in the rest of the file name for you.
+If _algae.nex_ is the only file in the directory in which the first three letters are alg, then the command interpreter will type in the rest of the file name for you.
 
 ####  Wildcards 
 
-I've already mentioned this tip, but it bears repeating. When using most UNIX commands that accept filenames (e.g. ls, rm, mv, cp), you can place an asterisk inside the filename to stand in for any number of letters. So
+I've already mentioned this tip, but it bears repeating. When using most UNIX commands that accept filenames (e.g. `ls`, `rm`, `mv`, `cp`), you can place an asterisk inside the filename to stand in for any number of letters. So
 
     ls algae*
 
@@ -406,11 +407,11 @@ will produce output like this
 
 ####  Man pages 
 
-If you want to learn more options for any of the UNIX commands, you can use the man command to see the manual for that command. For example, here's how to see the manual describing the ls command:
+If you want to learn more options for any of the UNIX commands, you can use the `man` command to see the manual for that command. For example, here's how to see the manual describing the ls command:
 
     man ls
 
-It is important to know how to escape from a man page! The way to get out is to type the letter q. You can page down using Ctrl-f, page up through a man page using Ctrl-b, go to the end using Shift-g and return to the very beginning using 1,Shift-g (that is, type a 1, release it, then type Shift-g). You can also move line by line in a man page using the down and up arrows, and page by page using the PgUp and PgDn keys.
+It is important to know how to escape from a man page! The way to get out is to type the letter `q`. You can page down using Ctrl-f, page up through a man page using Ctrl-b, go to the end using Shift-g and return to the very beginning using 1,Shift-g (that is, type a 1, release it, then type Shift-g). You can also move line by line in a man page using the down and up arrows, and page by page using the PgUp and PgDn keys.
 
 ####  Xanadu information 
 
