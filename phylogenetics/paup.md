@@ -3,7 +3,15 @@ layout: page
 title: Introduction to PAUP*
 permalink: /paup/
 ---
-##  Using PAUP to create a NEXUS data file 
+PAUP* is software for conducting phylogenetic analyses under a variety of optimality criteria and providing a diversity of search methods. PAUP* (the acronym PAUP originally stood for "Phylogenetic Analysis Using Parsimony"; the asterisk was added to indicate that it is no longer restricted to parsimony analyses). PAUP* was originally written (by [David L. Swofford](https://scholar.google.com/citations?user=H1jbCPkAAAAJ&hl=en)) in the 1980s, it gained a graphical user interface (GUI) in 1993 with version 3, and now is available either with or without a Windows or Mac GUI at the [Phylosolutions](https://paup.phylosolutions.com) web site. 
+
+We will use a version of PAUP* installed on the cluster, but you can download and install it on your laptop as well if you like. Don't be put off by the "alpha test version" status: many papers have cited an alpha test version of the program. 
+
+##  Record your answers
+
+Each week in lab I ask you to turn in something for your lab participation points. This is just a heads-up that, as you work through this lab, you should copy the questions that begin with the "thinking" emoji (:thinking:) into a text file, separating multiple questions so that there is only one question per line, and provide your answers in the same file after each question. Attach this file to an email to us. (Please create a text file, **not** a Word file or Pages document. You can use [Notepad++](https://notepad-plus-plus.org/downloads/) on Windows to create such a file, or [BBEdit](https://www.barebones.com/products/bbedit/) on a Mac).
+
+##  Using PAUP* to create a NEXUS data file 
 
 First, download the file [angio35.txt](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/angio35.txt) to the cluster ([instructions](/xanadu/#downloading-files-to-the-cluster)).
 
@@ -18,7 +26,7 @@ Once the system has moved you to a compute node, type the following commands to 
     module load paup/4.0a-166
     paup
 
-Now type in the following (PAUP) command:
+Now type in the following (PAUP*) command:
 
     tonexus from=angio35.txt to=angio35.nex datatype=nucleotide format=text;
 
@@ -42,7 +50,7 @@ Create a sets block comprising the following three charset commands:
 * The third charset should be named atpB and include sites 3284 through 4811
 This block should be placed after the assumptions block. Look at the [description of the sets block](/nexus/#sets-block) and try to do this part on your own.
 
-After saving the file in nano, start paup specifying the data file name on the command line:
+After saving the file in nano, start PAUP*, specifying the data file name on the command line:
 
     paup angio35.nex
 
@@ -135,4 +143,4 @@ That's all for today. The only thing left to do is to close the log file you ope
     log stop;
     quit;
 
-You can use `Ctrl-d` (or type `exit`) to quit your session on the cluster.
+You can use `Ctrl-d` (or type `exit`) to quit your session on the cluster. Don't forget to send in your answers to the questions posed.
