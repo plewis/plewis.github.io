@@ -329,7 +329,6 @@ Here is an explanation of each of the lines in _gopaup_:
 Now you are ready to start the analysis. Type these commands to start your run:
 
     cd
-    cd pauprun
     sbatch gopaup
 
 ###  Checking status using **squeue**
