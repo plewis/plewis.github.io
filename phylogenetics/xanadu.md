@@ -382,7 +382,7 @@ These `scp` commands copy the files `algae.output.txt` and `algae.ml.tre` to you
 
 {% include figure.html description="`algae.ml.tre` file viewed with FigTree" url="/assets/img/AlgaeMLtree.png" css="image-right noborder" width="400px" %}
 
-If you do not already have it, download and install the [FigTree](https://tree.bio.ed.ac.uk/software/figtree/) application on your laptop. FigTree is a Java application, so you will also need to install a Java Runtime Environment (JRE) if you don't already have one (just start FigTree and it will tell you if it cannot find a JRE). Once FigTree is running, choose File > Open from the menu to open the `algae.ml.tre` file.
+If you do not already have it, download and install the [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) application on your laptop. FigTree is a Java application, so you will also need to install a Java Runtime Environment (JRE) if you don't already have one (just start FigTree and it will tell you if it cannot find a JRE). Once FigTree is running, choose File > Open from the menu to open the `algae.ml.tre` file.
 
 #### Adjusting taxon label font 
 
