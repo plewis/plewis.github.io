@@ -77,6 +77,10 @@ Type `set ?` to get a listing of the general settings. PAUP* has four "settings"
 
 > :thinking: From the output of the set command, can you determine which optimality criterion PAUP* would use if we were to do a search at this point?
 
+{% comment %}
+parsimony
+{% endcomment %}
+
 ##  Performing a parsimony search 
 
 To perform a parsimony search, first try the `alltrees` command. This command asks PAUP* to calculate the optimality criterion for every possible tree:
@@ -85,11 +89,20 @@ To perform a parsimony search, first try the `alltrees` command. This command as
 
 > :thinking: What was PAUP*'s response to this request?
 
+{% comment %}
+Error(#531): Exhaustive search is not allowed for more than 12 taxa (unrooted trees). The number of trees would exceed the maximum that can be represented as a 32-bit integer value.
+{% endcomment %}
+
 Now try heuristic searching. This approach does not attempt to look at all possible trees, but instead only examines trees that are in the realm of possibility (which can still be a lot of trees!):
 
     hsearch;
 
 > :thinking: What is the parsimony score of the best tree found during the search? (Write down this score somewhere for later reference.) How many trees were examined (look at "Total number of rearrangements tried")?
+
+{% comment %}
+5689: best tree found has parsimony score 
+9805: rearrangements tried
+{% endcomment %}
 
 ##  Showing and saving trees 
 
@@ -118,6 +131,13 @@ These commands ask PAUP* to simply evaluate the likelihood score of the trees in
 
 > :thinking: What is the likelihood score of the best tree? (As for parsimony, write this number down for later comparison.) Is the likelihood score the same for all 5 trees? Which tree is best?
 
+{% comment %}
+Tree             1           2           3           4           5
+------------------------------------------------------------------
+-ln L    38601.620   38612.462   38602.372   38613.245   38616.348
+           (best)
+{% endcomment %}
+
 **Important:** PAUP* reports the _negative_ of the natural logarithm of the likelihood score. This means that **smaller numbers are better**, as smaller numbers represent higher likelihoods. Why does PAUP* do this? For the sake of consistency: in PAUP*, the minimum score is always the best score. You should always report log-likelihoods as negative numbers, however.
 
 ##  Comparing NJ to parsimony and likelihood 
@@ -135,6 +155,12 @@ Now compute the parsimony score of the NJ tree using the `pscores` command:
     pscores all;
 
 > :thinking: According to the parsimony criterion, is the NJ tree better than any of the trees found by parsimony? According to the likelihood criterion, is the NJ tree better than the best tree you have found thus far? Based on the work you have done, is it possible to say definitively whether the NJ tree is better or worse (according to the likelihood criterion) than the maximum likelihood tree?
+
+{% comment %}
+5718: parsimony score of the NJ tree (worse than tree found by parsimony 5689)
+-37364.653: likelihood score of NJ tree (worse than likelihood score (-37266.208) of the parsimony tree)
+can definitively say that NJ is worse than the ML tree because it is worse than a tree that is not as good as the ML tree
+{% endcomment %}
 
 ##  Closing down 
 
