@@ -13,6 +13,8 @@ convergent evolution in morphology associated with transitions to
 selective zooplanktivory in butterfly fishes in the lab of [Peter
 Wainwright](https://fishlab.ucdavis.edu).
 
+[Analisa's web site](https://amilkey1.github.io)
+
 ## Paul O. Lewis ##
 Paul is a Professor of [Ecology and Evolutionary
 Biology](https://eeb.uconn.edu) at the [University of
@@ -70,6 +72,8 @@ After leaving UConn, Suman was a postdoctoral researcher in [Josef Uyeda's labor
 Virginia Tech](http://www.uyedalab.com/). Suman began a tenure-track position 
 in the Biology Department at [Murray State University](https://www.murraystate.edu) in Fall 2020. 
 
+[Suman's web site](https://sumanneupane1.weebly.com)
+
 ### Karolina Fučíková ###
 
 Karolina Fučíková obtained her Ph.D. in the UConn EEB department
@@ -82,6 +86,8 @@ on the Bayesian Phylogenetic Information Content project.
 
 Karolina is now an [Assistant Professor in Biology at Assumption College](https://www.assumption.edu/faculty-profile/dr-karolina-fu%C4%8D%C3%ADkov%C3%A1)
 in Worcester, Massachusetts. You can reach her at [karolina.fucikova@gmail.com](karolina.fucikova@gmail.com).
+
+[Karolina's web site](https://euastrum.wordpress.com)
 
 ### Yu (Daniel) Fan ###
 
@@ -98,6 +104,8 @@ Wang’s lab](http://faculty.mdanderson.org/Wenyi_Wang/Default.asp?SNID=13473623
 He is currently at [Philips Research North America](https://www.philips.com/a-w/research/locations/cambridge-north-america.html) in Cambridge, MA. You
 can reach him at [daniel.y.fan@gmail.com](daniel.y.fan@gmail.com).
 
+[Daniel's Google Scholar page](https://scholar.google.com/citations?user=4r17VZEAAAAJ&hl=en)
+
 ### Mark Holder ###
 
 Mark was a postdoctoral research associate in the lab for 2 years. Mark
@@ -105,7 +113,9 @@ received his Ph.D. from the University of Texas, Austin, in 2001, and
 moved on to a postdoctoral position with David Swofford (then at Florida
 State University) in 2003. He is now an Associate Professor in the
 [Department of Ecology and Evolutionary Biology](http://www2.ku.edu/~eeb/) at the University of
-Kansas. See [Mark’s web site](http://phylo.bio.ku.edu/) for more information.
+Kansas. 
+
+[Mark’s web site](http://phylo.bio.ku.edu/)
 
 
 
