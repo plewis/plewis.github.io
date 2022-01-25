@@ -7,7 +7,7 @@ Zach will try to create ~10 questions for each lecture. These questions are opti
 
 ## Lecture 3 - 25 Jan 2022
 
-### Concensus Trees
+### Consensus Trees
 *	What are the differences between strict, semi-strict, and majority rule consensus trees? 
 * What is a rogue taxon, and what do rogue taxa have to do with maximum agreement subtrees?
 
