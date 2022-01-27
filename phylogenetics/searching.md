@@ -270,7 +270,8 @@ What is wrong with this picture? Why is the minimum evolution score of the heuri
 {% endcomment %}
 
 Once you have figured out what is going on (ask us for help if you are stumped), fix your paup block and re-execute the file. You may need to get PAUP to help you with the criterion setting; type the following to get PAUP to spit out the current settings, then look for criterion near the top of the list:
- set ?
+
+    set ?
 
 In your reanalysis, you should find that the heuristic search starting with the NJ tree found a better tree using the same optimality criterion (minimum evolution) being used by NJ. That is not to say that NJ does not find a good tree, and it might even find the true tree, but it usually will not find the best tree. NJ is an excellent way to obtain a starting tree for an heuristic search, however.
 
