@@ -249,7 +249,7 @@ Create a new file using nano containing the following lines. Note that we are ag
 
     paup <filename>
     
-(Of course, replace <filename> with the actual name of the file you just created.) 
+(Of course, replace `<filename>` with the actual name of the file you just created.) 
 
 > :thinking: What is the minimum evolution score for the NJ tree? (scroll down from the beginning of the PAUP* output looking for the phrase "ME-score" right above the point where the comment `*** NJ score above ***` was printed)
 
