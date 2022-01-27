@@ -246,7 +246,9 @@ Create a new file using nano containing the following lines. Note that we are ag
     end;
     
 (Reminder: the text surrounded by square brackets is a comment, and the initial exclamation point ! tells PAUP that you would like this comment to appear in the output.) Run this file in paup by typing the following at the linux prompt:
- paup <filename>
+
+    paup <filename>
+    
 (Of course, replace <filename> with the actual name of the file you just created.) 
 
 > :thinking: What is the minimum evolution score for the NJ tree? (scroll down from the beginning of the PAUP* output looking for the phrase "ME-score" right above the point where the comment `*** NJ score above ***` was printed)
