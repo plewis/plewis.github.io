@@ -18,7 +18,7 @@ Date        |  Lecture topic  |  Lab/homework
 Tuesday Jan. 18         | **Introduction**<br/>The jargon of phylogenetics (edges, vertices, leaves, degree, split, polytomy, taxon, clade); types of genealogies; rooted vs. unrooted trees; newick descriptions; monophyletic, paraphyletic, and polyphyletic groups [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/1_Intro.pdf)] | **Homework 1**: [Trees From Splits](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw1_TreeFromSplits.pdf)
 Thursday Jan. 20        | **Optimality criteria, search strategies, consensus trees**<br/>Exhaustive enumeration, branch-and-bound search, algorithmic methods (star decomposition, stepwise addition, NJ), heuristic search strategies (NNI, SPR, TBR), evolutionary algorithms; consensus trees [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/SearchingConsensus.pdf)] | **Lab 1**: [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
 Tuesday Jan. 25         | **The parsimony criterion**<br/>Strict, semi-strict, and majority-rule consensus trees; maximum agreement subtrees; Camin-Sokal, Wagner, Fitch, Dollo, and transversion parsimony; step matrices and generalized parsimony [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Parsimony.pdf)] [[study questions](/study_questions.md#lecture-3---25-jan-2022)] | **Homework 2**: [Parsimony](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw2-parsimony.pdf)
-Thursday Jan 27         | **Distance methods**<br/>Distance methods: least squares criterion, minimum evolution criterion, neighbor-joining | **Lab 2**: [Searching](/searching/)
+Thursday Jan 27         | **Distance methods**<br/>Distance methods: least squares criterion, minimum evolution criterion, neighbor-joining [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Distances.pdf)]| **Lab 2**: [Searching](/searching/)
 Tuesday Feb. 1          | **Substitution models**<br/>Instantaneous rates, expected number of substitutions, equilibrium frequencies, JC69 model. | **Homework 3**: Least squares distances (working through the [Python Primer](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_Python_Primer) first will make this homework much easier)
 Thursday Feb. 3         | **Maximum likelihood criterion**<br/>JC distance formula; common substitution models: K2P, F81, F84, HKY85, and GTR; likelihood: the probability of data given a model, likelihood of a “tree” with just one vertex and no edges, why likelihoods are always on the log scale, likelihood ratio tests. \[[Transition Probability Applet](/applets/jc-transition-probabilities/)\] | **Lab 3**: Likelihood
 Tuesday Feb. 8         | **Maximum likelihood (cont.)**<br/> Likelihood of a tree with 2 vertices connected by one edge, transition probabilities, maximum likelihood estimates (MLEs) of model parameters, likelihood of a tree. | **Homework 4**: Site likelihoods
@@ -95,13 +95,15 @@ Akaike, H. 1973. Information theory as an extension of the maximum likelihood pr
 
 Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
 
+:hibiscus: Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. Mitochondrial DNA sequences of primates, tempo and mode of evolution. Journal of Molecular Evolution 18:225-239.
+
 Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates. Systematic Biology, 59(2), 145–161.
 
-Buneman, M. 1971. The recovery of trees from measurements of dissimilarity. Pp. 387-395 in Mathematics in the Archeological and Historical Sciences (Hodson, F. R. , Kendall, D. G., and Tautu, P., eds.), Edinburgh Univ. Press, Edinburgh.
+:hibiscus: Buneman, M. 1971. The recovery of trees from measurements of dissimilarity. Pp. 387-395 in Mathematics in the Archeological and Historical Sciences (Hodson, F. R. , Kendall, D. G., and Tautu, P., eds.), Edinburgh Univ. Press, Edinburgh.
 
 :hibiscus: Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences in phylogeny. Evolution 19:311-326. (irreversible parsimony)
 
-Cavalli-Sforza, L. L., and A. W. F. Edwards. 1967. Evolution 32:550-570.
+:hibiscus: Cavalli-Sforza, L. L., and A. W. F. Edwards. 1967. Evolution 32:550-570.
 
 :hibiscus: Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London.
 
@@ -137,7 +139,7 @@ Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood a
 
 :hibiscus: Felsenstein, J. 2004. Inferring phylogenies. Sinauer Associates, Sunderland, MA.
 
-Fitch, W. M., and E. Margoliash. 1967. Science 155:279-284.
+:hibiscus: Fitch, W. M., and E. Margoliash. 1967. Science 155:279-284.
 
 :hibiscus: Fitch, W. 1971. Toward Defining the Course of Evolution: Minimum Change for a Specific Tree Topology. Systematic Zoology 20:406-416.
 
@@ -167,11 +169,13 @@ Huelsenbeck, J. P., Jain, S., Frost, S., and Pond, S. 2006. A Dirichlet process 
 
 Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommodating and testing across-site rate variation. Systematic Biology 56:975–987. (DP model for among site rate heterogeneity)
 
+:hibiscus: Huson, D. H., and D. Bryant. 2006. Application of phylogenetic networks in evolutionary studies. Mol. Biol. Evol. 23:254-267. (SplitsTree)
+
 Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of mutation data matrices from protein sequences. Comput Applic Biosci, 8, 275–282. (JTT amino acid model)
 
 Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model)
 
-Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. Phylogenetic analysis: concepts and methods. American Journal of Human Genetics 23: 235-252.
+:hibiscus: Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. Phylogenetic analysis: concepts and methods. American Journal of Human Genetics 23: 235-252.
 
 Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model)
 
@@ -235,7 +239,7 @@ Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid site
 
 Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., & Rasnitsyn, A. P. 2012. A total-evidence approach to dating with fossils, applied to the early radiation of the hymenoptera. Systematic Biology 61(6):973–999. (Tip dating)
 
-Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375.
+:hibiscus: Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375.
 
 Saitou, N., and M. Nei. 1987. The neighbor-joining method: a new method for reconstructing phylogenetic trees. Molecular Biology and Evolution 4: 406-425. (Neighbor joining method)
 
