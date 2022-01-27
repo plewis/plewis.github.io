@@ -81,7 +81,7 @@ Before you start the NNI search, use the `showtree` command to show you the tree
 
 Draw this tree as an **unrooted** tree on a piece of paper, abbreviating the taxa as **E** for _Ephedra_, ***P*** for _Pinus_, ***W*** for _Welwitschia_, ***Gg*** for _Gnetum_ gnemon, and ***Gb*** for _Ginkgo biloba_.
 
-Draw the 4 possible NNI rearrangements (refer to the description of NNI in your lecture notes if you've forgotten) and label them with the tree number from the PAUP* output (which you shall obtain shortly).
+Draw the 4 possible NNI rearrangements (refer to the [description of NNI in your lecture notes (slide 13)](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/SearchingConsensus.pdf) if you've forgotten) and label them with the tree number from the PAUP* output (which you shall obtain shortly).
 
 ## Perform an NNI search
 
