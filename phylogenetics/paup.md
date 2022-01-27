@@ -3,6 +3,8 @@ layout: page
 title: Introduction to PAUP*
 permalink: /paup/
 ---
+[Up to the Phylogenetics main page](/phylogenetics2022/)
+
 PAUP* is software for conducting phylogenetic analyses under a variety of optimality criteria and providing a diversity of search methods. PAUP* (the acronym PAUP originally stood for "Phylogenetic Analysis Using Parsimony"; the asterisk was added to indicate that it is no longer restricted to parsimony analyses). PAUP* was originally written (by [David L. Swofford](https://scholar.google.com/citations?user=H1jbCPkAAAAJ&hl=en)) in the 1980s, it gained a graphical user interface (GUI) in 1993 with version 3, and now is available either with or without a Windows or Mac GUI at the [Phylosolutions](https://paup.phylosolutions.com) web site. 
 
 We will use a version of PAUP* installed on the cluster, but you can download and install it on your laptop as well if you like. Don't be put off by the "alpha test version" status: many papers have cited an alpha test version of the program. 

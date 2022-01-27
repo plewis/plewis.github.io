@@ -3,6 +3,8 @@ layout: page
 title: The NEXUS file format
 permalink: /nexus/
 ---
+[Up to the Phylogenetics main page](/phylogenetics2022/)
+
 ###  NEXUS blocks 
 
 PAUP* uses a data file format known as NEXUS. This file format is now shared among several programs. NEXUS data files always begin with the characters `#NEXUS` but are otherwise organized into major units known as _'blocks_'. Some blocks are recognized by most of the programs using the NEXUS file format, whereas other blocks are private blocks (recognized by only one program). A NEXUS block has the following basic structure:

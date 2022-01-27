@@ -3,6 +3,8 @@ layout: page
 title: Searching through treespace
 permalink: /searching/
 ---
+[Up to the Phylogenetics main page](/phylogenetics2022/)
+
 This lab explores different search strategies under the parsimony criterion.
 
 ## Getting started

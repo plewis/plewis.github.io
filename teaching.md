@@ -8,7 +8,7 @@ permalink: /teaching/
 
 ---
 
-### Phylogenetics (EEB 5349) ###
+### [Phylogenetics (EEB 5349)](/phylogenetics2022/)
 
 {% include figure.html description="A seaweed phylogeny" url="/assets/img/seaweed-phylogeny.png" css="image-left" width="300px" targeturl="https://phylogeny.uconn.edu/courses/" %}
 

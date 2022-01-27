@@ -3,6 +3,8 @@ layout: page
 title: Using the UConn Xanadu cluster 
 permalink: /xanadu/
 ---
+[Up to the Phylogenetics main page](/phylogenetics2022/)
+
 The UConn [Computational Biology Core](http://bioinformatics.uconn.edu) is part of the [Center for Genome Innovation (CGI)](http://cgi.uconn.edu/). We will use the Xanadu computing cluster located at the UConn Health Center for most of the data crunching we will do in this course. By now, you should have an account on the cluster, and today you will learn how to start analyses remotely (i.e. from your laptop), check on their status, and download the results when your analysis is finished.
 
 ## Make note of your username
