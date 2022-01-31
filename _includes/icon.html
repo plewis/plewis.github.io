@@ -1,0 +1,9 @@
+<div class="{{ include.css }}"><figure>
+{% if include.height %}
+    <img class="{{ include.css }}" src="{{ site.baseurl }}{{ include.url }}" alt="{{ include.description }}" height="{{ include.height }}">
+{% elsif include.width %}
+    <img class="{{ include.css }}" src="{{ site.baseurl }}{{ include.url }}" alt="{{ include.description }}" width="{{ include.width }}">
+{% else %}
+    <img class="{{ include.css }}" src="{{ site.baseurl }}{{ include.url }}" alt="{{ include.description }}" width="200px">
+{% endif %}
+</figure></div>

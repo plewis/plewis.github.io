@@ -19,8 +19,8 @@ Tuesday Jan. 18         | **Introduction**<br/>The jargon of phylogenetics (edge
 Thursday Jan. 20        | **Optimality criteria, search strategies, consensus trees**<br/>Exhaustive enumeration, branch-and-bound search, algorithmic methods (star decomposition, stepwise addition, NJ), heuristic search strategies (NNI, SPR, TBR), evolutionary algorithms; consensus trees [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/SearchingConsensus.pdf)] | **Lab 1**: [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
 Tuesday Jan. 25         | **The parsimony criterion**<br/>Strict, semi-strict, and majority-rule consensus trees; maximum agreement subtrees; Camin-Sokal, Wagner, Fitch, Dollo, and transversion parsimony; step matrices and generalized parsimony [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Parsimony.pdf)] [[study questions](/study_questions.md#lecture-3---25-jan-2022)] | **Homework 2**: [Parsimony](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw2-parsimony.pdf)
 Thursday Jan 27         | **Distance methods**<br/>Distance methods: least squares criterion, minimum evolution criterion, neighbor-joining [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Distances.pdf)]| **Lab 2**: [Searching](/searching/)
-Tuesday Feb. 1          | **Substitution models**<br/>Instantaneous rates, expected number of substitutions, equilibrium frequencies, JC69 model. | **Homework 3**: Least squares distances (working through the [Python Primer](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_Python_Primer) first will make this homework much easier)
-Thursday Feb. 3         | **Maximum likelihood criterion**<br/>JC distance formula; common substitution models: K2P, F81, F84, HKY85, and GTR; likelihood: the probability of data given a model, likelihood of a “tree” with just one vertex and no edges, why likelihoods are always on the log scale, likelihood ratio tests. \[[Transition Probability Applet](/applets/jc-transition-probabilities/)\] | **Lab 3**: Likelihood
+Tuesday Feb. 1          | **Substitution models**<br/>Instantaneous rates, expected number of substitutions, equilibrium frequencies, JC69 model. Textbook: Ch. 2 (pp. 19-30); Ch. 3 (pp. 35-38). [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Models.pdf)] | **Homework 3**: Least squares distances (working through the [Python Primer](/python) first will make this homework much easier)
+Thursday Feb. 3         | **Maximum likelihood criterion**<br/>JC distance formula; common substitution models: K2P, F81, F84, HKY85, and GTR; likelihood: the probability of data given a model, likelihood of a “tree” with just one vertex and no edges, why likelihoods are always on the log scale, likelihood ratio tests. \[[Transition Probability Applet](/applets/jc-transition-probabilities/)\] Textbook: Ch. 5 (pp. 57-75) | **Lab 3**: Likelihood
 Tuesday Feb. 8         | **Maximum likelihood (cont.)**<br/> Likelihood of a tree with 2 vertices connected by one edge, transition probabilities, maximum likelihood estimates (MLEs) of model parameters, likelihood of a tree. | **Homework 4**: Site likelihoods
 Thursday Feb. 10        | **Bootstrapping, rate heterogeneity**<br/>Non-parametric bootstrapping, ultrafast bootstrapping<br/>**Rate heterogeneity**<br/>Invariable sites model, Discrete gamma model, site-specific rates, mixture models. | **Lab 4**: IQ-TREE tutorial
 Tuesday Feb. 15	        | **Simulation**<br/>How to simulate nucleotide sequence data, and why it’s done | **Homework 5**: Rate heterogeneity (python program to modify)
@@ -153,7 +153,7 @@ Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent dat
 
 Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 326:119-157. (first phylogenetic regression model)
 
-Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model)
+:hibiscus: Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model)
 
 Hastings, W. K. 1970. Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109. (Hastings ratio)
 
@@ -173,19 +173,19 @@ Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommod
 
 Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of mutation data matrices from protein sequences. Comput Applic Biosci, 8, 275–282. (JTT amino acid model)
 
-Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model)
+:hibiscus: Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model)
 
 :hibiscus: Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. Phylogenetic analysis: concepts and methods. American Journal of Human Genetics 23: 235-252.
 
-Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model)
+:hibiscus: Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model)
 
-Kishino, H., and M. Hasegawa. 1989. Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea. Journal of Molecular Evolution 29: 170-179. (F84 model, KH test)
+:hibiscus: Kishino, H., and M. Hasegawa. 1989. Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea. Journal of Molecular Evolution 29: 170-179. (F84 model, KH test)
 
 :hibiscus: Kluge, A. G., and J. S. Farris. 1969. Quantitative phyletics and the evolution of anurans. Systematic Zoology 18:1-32.
 
 Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heterotachy improves phylogenetic accuracy. Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
 
-Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model)
+:hibiscus: Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model)
 
 Larget, B., and D. L. Simon. 1999. Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees. Molecular Biology and Evolution 16: 750-759. (see also Holder et al. 2005)
 

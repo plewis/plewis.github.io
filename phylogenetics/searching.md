@@ -71,6 +71,20 @@ This analysis should finish very quickly because you now have only 5 taxa. The `
 
 > :thinking: How many separate tree topologies did PAUP* examine? What is the parsimony treelength of the best tree? The worst tree? How many steps separate the best tree from the next best? (consult the bar chart to determine the answer)
 
+{% comment %}
+How many separate tree topologies did PAUP* examine? 
+15
+
+What is the parsimony treelength of the best tree? 
+1110
+
+The worst tree? 
+1247
+
+How many steps separate the best tree from the next best?
+13 = 1123 - 1110
+{% endcomment %}
+
 ## Determine NNI rearrangements 
 
 Because we performed an exhaustive enumeration, we now know which tree is the globally most parsimonious tree. We are thus guaranteed to never find a better tree were we to start an heuristic search with this tree. 
@@ -129,7 +143,9 @@ The `describe all` command plots the 5 trees currently in memory. The reason we 
 > :thinking: Which tree was the original tree? Which trees correspond to NNI rearrangments of which internal edges on the original tree?
 
 {% comment %}
-Which tree was the original tree? 1
+Which tree was the original tree? 
+1
+
 Which trees correspond to NNI rearrangments of which internal edges on the original tree?
 Edge 36-38: tree 2 (Gn <-> E), tree 3 (W <-> E)
 Edge 37-38: tree 4 (Gb <-> E), tree 5 (P <-> E)
@@ -176,9 +192,14 @@ Remember you can comment out portions of your Nexus file if you don't want to lo
 > :thinking: How many tree islands were found? How long did the search take? How many rearrangements were tried?
 
 {% comment %}
-How many tree islands were found? 51
-How long did the search take? 0.75 secs
-How many rearrangements were tried? 151704
+How many tree islands were found? 
+51
+
+How long did the search take? 
+0.75 secs
+
+How many rearrangements were tried? 
+151704
 {% endcomment %}
 
 ## Conduct a second search with SPR swapping 
@@ -188,10 +209,17 @@ Construct another heuristic search using SPR branch swapping. Be sure to reset t
 > :thinking: How many tree islands were found? What are the scores of the trees in each island? How long did the search take this time? How many rearrangements were tried?
 
 {% comment %}
-How many tree islands were found? 3
-What are the scores of the trees in each island? 5689, 5689, and 5697
-How long did the search take this time? 4.11 secs
-How many rearrangements were tried? 4011561
+How many tree islands were found? 
+3
+
+What are the scores of the trees in each island? 
+5689, 5689, and 5697
+
+How long did the search take this time? 
+4.11 secs
+
+How many rearrangements were tried? 
+4011561
 {% endcomment %}
 
 ## Now conduct a third search with TBR swapping
@@ -199,13 +227,26 @@ How many rearrangements were tried? 4011561
 > :thinking: How many tree islands were found? What are the scores of the trees in each island? How long did the search take this time? How many rearrangements were tried? How many trees are currently in memory (use the `treeinfo` command)? Has PAUP saved trees from all islands discovered during this search? (Hint: compare "Number of trees retained" to the sum of the "Size" column in the Tree-island profile.) Explain why PAUP saved the number of trees it did.
 
 {% comment %}
-How many tree islands were found? 3
-What are the scores of the trees in each island? 5689, 5689, 5697
-How long did the search take this time? 4.97 secs
-How many rearrangements were tried? 10465462
-How many trees are currently in memory? 2
-Has PAUP saved trees from all islands discovered during this search? no
-Explain why PAUP saved the number of trees it did. It saved the best trees, but one island contained suboptimal trees and therefore none of these trees were saved.
+How many tree islands were found? 
+3
+
+What are the scores of the trees in each island? 
+5689, 5689, 5697
+
+How long did the search take this time? 
+4.97 secs
+
+How many rearrangements were tried? 
+10465462
+
+How many trees are currently in memory? 
+2
+
+Has PAUP saved trees from all islands discovered during this search? 
+no
+
+Explain why PAUP saved the number of trees it did. 
+It saved the best trees, but one island contained suboptimal trees and therefore none of these trees were saved.
 {% endcomment %}
 
 Wondering about this warning?
@@ -217,9 +258,15 @@ When PAUP encounters a new island, it will find all trees composing that particu
 > :thinking: Of the three types of branch swapping (NNI, SPR, TBR), which is the most thorough? Least thorough? How many TBR rearrangements can PAUP examine on the computer you are using in one second (on average)? Based on this, how long (in billions of years) would it take to examine all possible unrooted tree topologies if only 22 sequences were included?
 
 {% comment %}
-Of the three types of branch swapping (NNI, SPR, TBR), which is the most thorough? SPR is 26 times more thorough than NNI, TBR is 69 times more thorough than NNI and 2.6 times more thorough than SPR.
-Least thorough? NNI
-How many TBR rearrangements can PAUP examine on the computer you are using in one second (on average)? 10465462/4.97 = 2,105,727
+Of the three types of branch swapping (NNI, SPR, TBR), which is the most thorough? 
+SPR is 26 times more thorough than NNI, TBR is 69 times more thorough than NNI and 2.6 times more thorough than SPR.
+
+Least thorough? 
+NNI
+
+How many TBR rearrangements can PAUP examine on the computer you are using in one second (on average)? 
+10465462/4.97 = 2,105,727
+
 Based on this, how long (in billions of years) would it take to examine all possible unrooted tree topologies if only 22 sequences were included? 
 54.1220796428 <-- pc "lgamma(2*22-5+1) - (22-3)*log(2) - lgamma(22-3+1)"
 bya = (exp(54.1220796428) trees)*(4.97 secs/10465462 trees)*(1 min/60 secs)*(1 hour/60 mins)*(1 day/24 hours)*(1 year/365 days)*(1 bya/1000000000 years)
@@ -254,19 +301,22 @@ Create a new file using nano containing the following lines. Note that we are ag
 > :thinking: What is the minimum evolution score for the NJ tree? (scroll down from the beginning of the PAUP* output looking for the phrase "ME-score" right above the point where the comment `*** NJ score above ***` was printed)
 
 {% comment %}
-What is the minimum evolution score for the NJ tree? 1.15452
+What is the minimum evolution score for the NJ tree? 
+1.15452
 {% endcomment %}
 
 > :thinking: What is the minimum evolution score for the tree found by heuristic search starting with the NJ tree? (Look just above the comment `*** Heuristic search score above ***`)
 
 {% comment %}
-What is the minimum evolution score for the tree found by heuristic search starting with the NJ tree? 1.17026
+What is the minimum evolution score for the tree found by heuristic search starting with the NJ tree? 
+1.17026
 {% endcomment %}
 
 > :thinking: What is wrong with this picture? Why is the minimum evolution score of the heuristic search worse than that of the starting tree? (Hint: take a look at the "Heuristic search settings" section of the output.)
 
 {% comment %}
-What is wrong with this picture? Why is the minimum evolution score of the heuristic search worse than that of the starting tree? using parsimony criterion, not distance. The tree with the better parsimony score has a worse ME score.
+What is wrong with this picture? Why is the minimum evolution score of the heuristic search worse than that of the starting tree? 
+We were using the parsimony criterion, not distance. The tree with the better parsimony score has a worse ME score.
 {% endcomment %}
 
 Once you have figured out what is going on (ask us for help if you are stumped), fix your paup block and re-execute the file. You may need to get PAUP to help you with the criterion setting; type the following to get PAUP to spit out the current settings, then look for criterion near the top of the list:
