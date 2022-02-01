@@ -21,3 +21,31 @@ Zach will try to create ~10 questions for each lecture. These questions are opti
 *	What is a constant site and how does it differ from an variable site? What does this have to do with parsimony?
 *	Make sure you can explain how parsimony works with a small tree. What do steps have to do with parsimony, and what is the principle of parsimony?
 * What do transitions and transversions have to do with a nucleotide substitution matrix? (this is something we'll learn more about next week) 
+
+## Lecture 4 - 27 Jan 2022
+
+### Review
+* Make sure you can make phylogentic trees from splits (Re: Homework 1)
+
+### Parsimony Continued
+*	What would a step matrix look like if we don’t count transitions, but we weight transversions from purines to pyrimidines 2 times more than transversions from pyrimidines to purines. 
+*	What are the differences between synapomorphic, autapomorphic, and symplesiomorphic character states? Draw a simple tree and indicate in which taxa the above characters states would be present. 
+*	Can you think of another word from evolution which describes homoplasy?
+* What are the consistency and retention indexes? How are they used in the context of parsimony trees? 
+
+### Distance Methods (Least Squares and Minimum Evolution)
+* If you perform a distance analysis (LS/ME), will your restults (tree length) be specific to a given tree topology, a given character, or both?
+* How does SplitsTree differ from a normal phylogenetic tree? What can this tell you about the tree?
+
+## Lecture 5 - 01 Feb 2022
+
+### Review (from lab)
+* What is a star tree, and what does it have to do with a neighbor joining tree? 
+
+### Exploring Models
+* Why do we use models? Be able to complain model complexity and model fit. 
+
+### Jukes-Cantor 1969
+* How many parameters does this model have? What are the model parameter(s) and what are the assumptions we invoke when we use this model? Can you make a substitution matrix for this model?
+* What do branch lengths (edge lengeths) represent? What parameters do we use to calculate the them – why is it impossible to calculate these parameters *de novo*?
+* Say we are calculating a transition probability for a nucleotide subsitution on a site from a G to a T. Before this site had a G nucleotide, the nucleotide was an A. How does this change how we go about calculating transition probabilities when using a Markov model?
