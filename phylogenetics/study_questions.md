@@ -34,7 +34,7 @@ Zach will try to create ~10 questions for each lecture. These questions are opti
 * What are the consistency and retention indexes? How are they used in the context of parsimony trees? 
 
 ### Distance Methods (Least Squares and Minimum Evolution)
-* If you perform a distance analysis (LS/ME), will your restults (tree length) be specific to a given tree topology, a given character, or both?
+* If you perform a distance analysis (LS/ME), will your results (tree length) be specific to a given tree topology, a given character, or both?
 * How does SplitsTree differ from a normal phylogenetic tree? What can this tell you about the tree?
 
 ## Lecture 5 - 01 Feb 2022
@@ -47,5 +47,5 @@ Zach will try to create ~10 questions for each lecture. These questions are opti
 
 ### Jukes-Cantor 1969
 * How many parameters does this model have? What are the model parameter(s) and what are the assumptions we invoke when we use this model? Can you make a substitution matrix for this model?
-* What do branch lengths (edge lengeths) represent? What parameters do we use to calculate the them – why is it impossible to calculate these parameters *de novo*?
-* Say we are calculating a transition probability for a nucleotide subsitution on a site from a G to a T. Before this site had a G nucleotide, the nucleotide was an A. How does this change how we go about calculating transition probabilities when using a Markov model?
+* What do branch lengths (edge lengths) represent? What parameters do we use to calculate them – why is it impossible to calculate these parameters *de novo*?
+* Say we are calculating a transition probability for a nucleotide substitution on a site from a G to a T. Before this site had a G nucleotide, the nucleotide was an A. How does this change how we go about calculating transition probabilities when using a Markov model?
