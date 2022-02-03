@@ -7,8 +7,13 @@ permalink: /applets/jc-transition-probabilities/
 ## Jukes-Cantor Model Transition Probability applet
 Written by Paul O. Lewis (4-Feb-2020)
 
-One sequence of length 500 (50 sites/row, 10 rows) starts either with all A at time 0. 
-Use the slider to see the sequence at different times. If a site never experiences any substitution, As will remain red, so a black A means that the original A has changed to something else and then back again. Uncheck the box to start with all not-A. Regardless of the starting state, the proportion of A approaches 1/4 given a sufficient number of substitutions.
+One sequence of length 500 (50 sites/row, 10 rows) starts either with **all A** or **no A** at time 0. 
+
+Use the slider to see the sequence at different times. 
+
+If a site never experiences any substitution, its A will remain <span style="color:magenta">magenta</span>, so a **black** A means that the original A has changed to something else and then back again. 
+
+**Uncheck the box** to start with a sequence containing **only C, G, and T**. Regardless of the starting state, the proportion of A approaches 1/4 given a sufficient number of substitutions.
 
 <div id="arbitrary"></div>
 <div id="details"></div>
@@ -50,7 +55,7 @@ Use the slider to see the sequence at different times. If a site never experienc
     var tmax = 10;          // maximum time along x-axis
     var nincr = 200;        // number of points that slider can visit along x-axis
     var tincr = tmax/nincr; // amount by which t changes each increment
-    //console.log("tincr = " + tincr);
+    console.log("tincr = " + tincr);
 
     // Select DIV element already created (see above) to hold SVG
     var plot_div = d3.select("div#arbitrary");
@@ -191,7 +196,7 @@ Use the slider to see the sequence at different times. If a site never experienc
     var nucleotide_text_height = 16;
     var nucleotide_text_height_pixels = nucleotide_text_height + "px";
     var base_lookup = ["A", "C", "G", "T"];
-    var base_color  = ["red", "blue", "green", "gray", "black", "blue", "green", "gray"];
+    var base_color  = ["magenta", "orange", "green", "gray", "black", "orange", "green", "gray"];
     var nrows = 10;
     var ncols = 50;
     var xseqs0 = 200;
@@ -262,11 +267,12 @@ Use the slider to see the sequence at different times. If a site never experienc
                 var probsame = 0.25 + 0.75*Math.exp(-4.0*beta*tincr);
                 var probdiff = 1.0 - probsame;
                 var u = lot.random(0,1);
-                if (u < probdiff) {
-                    //  1.0        2.0        3.0        4.0        5.0
-                    //  |          |          |          |          |
-                    //  1--------->2--------->3--------->4--------->5          
-                    var x = Math.floor(lot.uniform(1,5));
+                if (u <= probdiff) {
+                    //  1.0        2.0        3.0        4.0
+                    //  |          |          |          |
+                    //  1--------->2--------->3--------->4
+                    let uu = lot.uniform(1,4); 
+                    let x = Math.floor(uu);
                     b = (b + x) % 4;
                     changed[k] = true;
                 }
@@ -307,6 +313,7 @@ Use the slider to see the sequence at different times. If a site never experienc
         .attr("class", "nucleotide")
         .attr("x", function(d) {return seqxscale(d.x)})
         .attr("y", function(d) {return seqyscale(d.y)})
+        .attr("fill", function(d) {return base_color[d.color]})
         .attr("stroke", function(d) {return base_color[d.color]})
         .style("pointer-events", "none")   // don't intercept drag events
         .attr("font-family", "Verdana")
@@ -381,6 +388,7 @@ Use the slider to see the sequence at different times. If a site never experienc
             copyDataForTime(t);
             sequences_group.selectAll("text.nucleotide")
                 .data(seqdata)
+                .attr("fill", function(d) {return base_color[d.color]})
                 .attr("stroke", function(d) {return base_color[d.color]})
                 .text(function(d) {return base_lookup[d.base]});
             vertical_dotted_line
@@ -395,7 +403,7 @@ Use the slider to see the sequence at different times. If a site never experienc
                 .attr("y2", yscale(pA(beta, t)));
             afrac_text
                 .text("fraction A = " + d3.format(".2f")(piA[tindex])); // pi is \u03C0
-            //console.log("slider at time " + t);
+            //console.log("slider at time " + d3.format(".3f")(t) + ", pA = " +  d3.format(".3f")(pA(beta, t)));
         })
         .on("end", function(d) {
             var dx = d3.event.x - x_at_drag_start;
@@ -410,6 +418,7 @@ Use the slider to see the sequence at different times. If a site never experienc
             copyDataForTime(time);
             sequences_group.selectAll("text.nucleotide")
                 .data(seqdata)
+                .attr("fill", function(d) {return base_color[d.color]})
                 .attr("stroke", function(d) {return base_color[d.color]})
                 .text(function(d) {return base_lookup[d.base]});
             d3.select(this).classed("dragging", false);
@@ -437,6 +446,7 @@ Use the slider to see the sequence at different times. If a site never experienc
         copyDataForTime(time);
         sequences_group.selectAll("text.nucleotide")
             .data(seqdata)
+            .attr("fill", function(d) {return base_color[d.color]})
             .attr("stroke", function(d) {return base_color[d.color]})
             .text(function(d) {return base_lookup[d.base]});
         vertical_dotted_line
@@ -480,6 +490,7 @@ Use the slider to see the sequence at different times. If a site never experienc
         copyDataForTime(time);
         sequences_group.selectAll("text.nucleotide")
             .data(seqdata)
+            .attr("fill", function(d) {return base_color[d.color]})
             .attr("stroke", function(d) {return base_color[d.color]})
             .text(function(d) {return base_lookup[d.base]});
         vertical_dotted_line
