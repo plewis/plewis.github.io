@@ -235,7 +235,7 @@ Base frequencies:
 -3348.341
 {% endcomment %}
 
-> :thinking: How many parameters are being estimated using the F81 model? (Don't forget to include edge length parameters!)
+> :thinking: What parameters are being estimated using the F81 model? (Don't forget to include edge length parameters!)
 
 {% comment %}
 16: 3 base frequencies plus 13 branch lengths
@@ -273,7 +273,7 @@ Switch to the HKY85 model now and estimate the transition/transversion ratio alo
 -3268.856
 {% endcomment %}
 
-> :thinking: How many parameters are being estimated using the HKY85 model? 
+> :thinking: What parameters are being estimated using the HKY85 model? 
 
 {% comment %}
 17: 3 base frequencies, 1 rate ratio and 13 branch lengths
@@ -325,7 +325,7 @@ It is possible for a site to show no change if the substitution rate is small bu
 -3174.729
 {% endcomment %}
 
-> :thinking: How many parameters are being estimated using the HKY85+I model? 
+> :thinking: What parameters are being estimated using the HKY85+I model? 
 
 {% comment %}
 18: 3 base frequencies, 1 rate ratio, 1 proportion of invariable sites, and 13 edge lengths
@@ -352,7 +352,7 @@ The HKY85 model with among-site rate heterogeneity modeled using the discrete ga
 -3171.551
 {% endcomment %}
 
-> :thinking: How many parameters are being estimated using the HKY85+G model? 
+> :thinking: What parameters are being estimated using the HKY85+G model? 
 
 {% comment %}
 18: 3 base frequencies, 1 rate ratio, 1 gamma shape, and 13 edge lengths
@@ -387,16 +387,17 @@ The discrete gamma rate heterogeneity now needs to account only for the heteroge
 -3171.495
 {% endcomment %}
 
-> :thinking: How many parameters are being estimated using the HKY85+I+G model? 
+> :thinking: What parameters are being estimated using the HKY85+I+G model? 
 
 {% comment %}
 19: 3 base frequencies, 1 rate ratio, 1 proportion of invariable sites, 1 gamma shape, and 13 edge lengths
 {% endcomment %}
 
-== Likelihood ratio tests==
+## Likelihood ratio tests
+
 In this section, you will perform some simple likelihood ratio tests to decide which of the models used in the previous section does the best job of explaining the data while keeping the number of parameters used to a minimum.
 
-## Determining significance
+### Determining significance
 
 A model having k parameters can always attain a higher likelihood than any model having fewer than k parameters that is nested within it (you should be able to explain why this is true), so the question we will be asking is whether more complex (i.e. more parameter-rich) models fit _significantly_ better than simpler nested models. To do this we will assume that the likelihood ratio test statistic LR (equal to twice the difference in log-likelihoods) has the same distribution as a chi-squared random variable with degrees of freedom (d.f.) equal to the difference in the number of estimated parameters in the two models. (A parameter whose value is fixed or which can be determined from the values of other parameters doesn't count as an estimated parameter.)
 
@@ -425,7 +426,7 @@ To find the critical value, you can use the `qchisq` (chi-squared quantile) comm
     
 This tells us the specific value that we have to exceed in order to be significant. In this case (when d.f.=1), it is 3.841459.
 
-## What parameters make the fit of the model significantly better?
+### What parameters make the fit of the model significantly better?
 
 The model with which we will begin is the F81 model with estimated base freqencies. Compare this F81 model to the HKY85 model, which differs from the F81 model only in the fact that it allows transitions and transversions to occur at different rates.
 
