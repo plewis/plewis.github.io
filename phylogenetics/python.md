@@ -13,30 +13,21 @@ Python is one of a number of different high-level computing languages in common 
 
 Python is a good language to learn first because it is relatively simple (not many words or punctuation rules to learn) and is much more forgiving than other languages. It is in a class of languages known as **scripting languages** because the program is interpreted as it is read by the computer program known as the python interpreter. Languages such as C require two additional steps (compiling and linking) before they can be run.
 
-Note that while you can use Python on the cluster, the instructions for installing Python below are written as if you plan to use Python on your own local laptop/desktop computer. You will not need to install Python if you choose to use it on the cluster. Just use the appropriate `module` command on the cluster: e.g. 
-
-    module load 
-
 ## Installing Python
 
 ### Mac
 
 {% include icon.html url="/assets/img/Mac_logo.png" description="MacIntosh logo" css="image-left" height="87px" %}
 
-If you have a Mac, then Python is already installed on your computer because it is used in many parts of the Mac OS X operating system. To verify this, and to see what version of Python you have, start your Terminal program (in the _Applications/Utilities_ folder), then type the following at the unix prompt (<tt>$</tt>):
+If you have a Mac, start your Terminal program (in the _Applications/Utilities_ folder), then type the following at the unix prompt (<tt>$</tt>):
 
-    python -V
+    python3
     
-The <tt>-V</tt> option does not leave you in the python environment, so go ahead and type just `python` at the unix prompt to start python in interactive mode:
+If you get an error saying that python3 cannot be found, the easiest thing to do is login to the cluster, type 
 
-    python
+    srun --partition=mcbstudent --qos=mcbstudent --pty bash 
     
-You should see something like the following. The important thing is that the last line should be three greater-than symbols in a row (this is the Python prompt):
-
-    Python 2.7.5 (default, Aug 25 2013, 00:04:04)
-    [GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.0.68)] on darwin
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>>
+to become interactive on a free compute node, use `module load python/3.8.1` to load the python3 module, and then simply type `python3` to start python. Alternatively, visit the [Python](https://www.python.org/downloads/) web site and download and install the latest version of Python 3.  
 
 ### Windows
 
@@ -46,7 +37,7 @@ If you have Windows, the easiest thing to do is login to the cluster, type
 
     srun --partition=mcbstudent --qos=mcbstudent --pty bash 
     
-to become interactive on a free compute node, and then simply type `python` to start python. Alternatively, you can download and install Python on your Windows computer from the [Python web site](http://www.python.org/download/). Note that there are two current versions of Python. I recommend you install the latest version of Python 3 that is available.
+to become interactive on a free compute node, use `module load python/3.8.1` to load the python3 module, and then simply type `python3` to start python. Alternatively, you can download and install Python on your Windows computer from the [Python web site](http://www.python.org/download/). I recommend you install the latest version of Python 3 that is available.
 
 Once you have Python installed, you can invoke it in Windows using _Start > All Programs > Python 3.x > Python (command line)_. The console window that opens should show the version at the top, and you should see the python prompt, which consists of three greater-than symbols in a row: >>>. You can also choose Start > All Programs > Python 3.x > IDLE (Python GUI) if you prefer the look and feel of the IDLE python interpreter over the windows console.
 
@@ -82,13 +73,14 @@ You can see what is stored in a variable by simply typing the variable and hitti
 **Floats** are numbers with an implicit or explicit decimal point. Assign the float <tt>9.5</tt> to the variable <tt>f</tt>:
 
     >>> f = 9.5
-    
-A little warning is in order about types of numbers. I would use float for all calculations. You can get yourself into trouble using integers. For example, type the following, which divides the integer 2 by the integer 4:
+
+{% comment %}    
+A little warning is in order about types of numbers. I expect that you are using Python 3 for this tutorial, but **if you are using Python 2.x**, then the following division of the integer 2 by the integer 4 yields 0, not 0.5 as you might expect:
 
     >>> 2/4
     0
     
-Not what you expected? Now do the same thing, except use floats instead of integers:
+In Python 2.x, you must use floats instead of integers if you don't want to be surprised (in a bad way) by divisions:
 
     >>> 2./4.
     0.5
@@ -98,6 +90,7 @@ The problem is that 2/4 gives you the number of times 4 can cleanly divide into 
     >>> n = 2
     >>> float(n)/4.0
     0.5
+{% endcomment %}    
     
 Later on you will learn how to read data from a file. When numbers are read from a file, they start out as strings. If you want these strings to be used as numbers, you will need to convert them to integers or floats. Here is how to convert a string (<tt>'5'</tt>) to an integer:
 
@@ -152,7 +145,7 @@ Change the last value in the list to "G'day":
 
 This last example illustrates two things. First, the elements can be accessed by counting backward from the number of elements. Hence, <tt>L[-1]</tt> refers to the same element as <tt>L[3-1] = L[2]</tt> (i.e., the last element). Second, you can embed an apostrophe inside a string by using double quotes to surround the string, and you could embed double quotes inside a string by using single quotes to surround it.
 
-    >>> print 'This is a "useful" string'
+    >>> print('This is a "useful" string')
     This is a "useful" string
 
 You can find out how many elements are in the list using the <tt>len()</tt> function:
@@ -220,9 +213,17 @@ Raise 2 to the power 3:
 
 Divide the integer 6 by the integer 2:
 
-    >>> x = 6/2
+    >>> x = 6//2
     >>> x
     3
+    
+Using `//` instead of `/` for division causes the result to be an integer (i.e. any decimal component is dropped). Try 
+
+    >>> x = 6//4
+    >>> x
+    1
+    
+The result equals 1 because 6.0/4.0 = 1.5, which equals the integer 1 if the decimal component 0.5 is ignored.
 
 Divide the float 6.0 by the float 2.0:
 
@@ -234,19 +235,19 @@ Divide the float 6.0 by the float 2.0:
 
 In the following expression, the multiplication is done before the division because operations with equal precedence are evaluated from left to right:
 
-    >>> x = 6*7/3
+    >>> x = 6*7//3
     >>> x
-    14
+    14.0
 
 If you want the division to be done first, use parentheses:
 
-    >>> x = 6*(7/3)
+    >>> x = 6*(7//3)
     >>> x
     12
 
-Why does the order matter? It wouldn't in this case if you had used floats, but (once again), note that 7/3 yields 2, not 2.33333 because an integer divided by another integer yields an integer, and integers cannot have a fractional component (the value is truncated, not rounded). If this is not what you wanted, you need to use floats, which you can do by inserting a decimal point after each whole number:
+Why does the order matter? It wouldn't in this case if you had used floats, but (once again), note that 7//3 yields 2, not 2.33333 because an integer divided by another integer (using the `//` operator) yields an integer, and integers cannot have a fractional component (the value is truncated, not rounded). If this is not what you wanted, you need to use the `/` operator:
 
-    >>> x = 6.*(7./3.)
+    >>> x = 6*(7/3)
     >>> x
     14.0
 
@@ -284,9 +285,9 @@ The min and max functions make it easy to find the extreme values in a list:
 
 #### Creative ways of creating lists
 
-The <tt>range(x,y,z)</tt> function generates a list of integers starting with <tt>x</tt>, ending just before <tt>y</tt> (<tt>y</tt> itself will not be included in the list), and skipping <tt>z</tt> integers between each one included:
+The <tt>range(x,y,z)</tt> function can be used to generate a list of integers starting with <tt>x</tt>, ending just before <tt>y</tt> (<tt>y</tt> itself will not be included in the list), and skipping <tt>z</tt> integers between each one included:
 
-    >>> odd_numbers = range(1,10,2)
+    >>> odd_numbers = list(range(1,10,2))
     >>> odd_numbers
     [1, 3, 5, 7, 9]
 
@@ -309,8 +310,9 @@ The first step in an upcoming homework assignment is to compute p-distances (the
     >>> x = 293    # store number of differences between taxon1 and taxon2 in x
     >>> p = x/n    # do the division
     >>> p
-    0
+    0.08557242990654206
 
+{% comment %}
 Ok, you know that's not the right answer, so what went wrong? We divided one integer by another integer to produce a third integer, but instead of storing the number 0.085572429906542055 in p, it stored 0 because that is the whole number part of 0.085572429906542055. Sorry to beat this point into the ground, but it is **hard to stess too much that you should be using floats when doing calculations!** Here is how to be sure you are working with floats:
 
     >>> p = float(x)/float(n)
@@ -334,6 +336,7 @@ You can, however make the variables involved into floats when you first assign v
     0.085572429906542055
 
 This time <tt>p</tt> is a float because you divided one float by another.
+{% endcomment %}
 
 ### Computing a JC distance from a p-distance
 
@@ -382,9 +385,9 @@ An important component of any programming language is the ability to do the same
     >>> jc
     [0.090860500068600705, 0.085604236767267153, 0.1024886399705747, 0.082663697169458011, 0.11090623674796182, 0.11090623674796182]
 
-You may be curious about <tt>range(6)</tt>. We saw the range function earlier, but there I told you it required three values: start, stop, and step. It turns out that if you only supply one value, python interprets that value as the stop value, assuming start = 0 and step = 1. The <tt>range(n)</tt> function thus produces a list of integers starting with 0 and ending with n-1. Try typing the range function by itself to verify this:
+You may be curious about <tt>range(6)</tt>. We saw the range function earlier, but there I told you it required three values: start, stop, and step. It turns out that if you only supply one value, python interprets that value as the stop value, assuming start = 0 and step = 1. The <tt>range(n)</tt> function thus yields integers starting with 0 and ending with n-1. Try converting the output of the range function to a list to verify this:
 
-    >>> range(10)
+    >>> list(range(10))
     [0,1,2,3,4,5,6,7,8,9]
 
 Your <tt>for i in range(6):</tt> loop could therefore have been written like this and the result would be exactly the same:
@@ -430,9 +433,9 @@ Here is what you should type into your new <tt>first.py</tt> file:
     x = [293.0, 277.0, 328.0, 268.0, 353.0, 353.0]
     jc = []
     for i in range(6):
-     p = x[i]/n
-     d = -0.75*log(1.0 - 4.0*p/3.0)
-     jc.append(d)
+        p = x[i]/n
+        d = -0.75*log(1.0 - 4.0*p/3.0)
+        jc.append(d)
     print(jc)
 
 Note that I have used the <tt>print</tt> function on the last line. This is because our little trick of getting Python to tell us the value of a variable by placing the variable's name on a line by itself only works when you are using Python _interactively_. We are now switching to programming mode, where an entire script is given to the Python interpreter, and a print statement must be used in this context. The result should be the same.
