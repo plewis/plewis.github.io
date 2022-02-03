@@ -111,7 +111,7 @@ Thus, there **should be a branch** in the tree separating all taxa from the **tw
 
 ## Obtain the maximum likelihood tree under the F81 model
 
-The first goal is to learn how to obtain maximum likelihood estimates of the parameters in several different substitution models. Use PAUP* to answer the following questions. Start by obtaining the maximum likelihood tree under the F81 model. Create a _run.nex_ file and save in it the following:
+The first goal is to learn how to obtain maximum likelihood estimates of the parameters in several different substitution models. Use PAUP* to answer the following questions. Start by obtaining the maximum likelihood tree under the F81 model. Create a _run.nex_ file and save it with the following contents:
 
     #nexus
 
@@ -207,7 +207,7 @@ I would like to recommend that, instead of typing commands at the `paup>` prompt
 
 You'll notice that I've commented out [using square brackets] everything from the `hsearch` command through saving the tree file. We need not do the search over again every time we run this file because the tree and branch lengths resulting from this search are already saved in the file _f81.tre_.
 
-You will also notice that I added a quit command at the end. This causes PAUP* to quit after executing all the commands in the paup block, , saving you the trouble of typing `quit` in order to edit the _run.nex_ file in preparation for the next step.
+You will also notice that I added a quit command at the end. This causes PAUP* to quit after executing all the commands in the paup block, saving you the trouble of typing `quit` in order to edit the _run.nex_ file in preparation for the next step.
 
 This method (building up a paup block) has the advantage that you always have a document that provides a record of everything you've done. It is very easy to perform an analysis and not be able to repeat it later because you've forgotten some setting you changed along the way.
 
@@ -428,7 +428,7 @@ This tells us the specific value that we have to exceed in order to be significa
 
 ### What parameters make the fit of the model significantly better?
 
-The model with which we will begin is the F81 model with estimated base freqencies. Compare this F81 model to the HKY85 model, which differs from the F81 model only in the fact that it allows transitions and transversions to occur at different rates.
+The model with which we will begin is the F81 model with estimated base frequencies. Compare this F81 model to the HKY85 model, which differs from the F81 model only in the fact that it allows transitions and transversions to occur at different rates.
 
 **To calculate the likelihood ratio test statistic LR, subtract the log-likelihood of the less complex model from that of the more complex model and multiply by 2**. This will give you a positive number. If you ever get a negative LR statistic, it means you have the models in the wrong order.
 
@@ -477,13 +477,13 @@ yes!
 3.841459 = qchisq(0.95, df=1) 
 {% endcomment %}
 
-> :thinking: Does the HKY85+I model explain the data signficantly better than an equal rates HKY85 model?
+> :thinking: Does the HKY85+I model explain the data significantly better than an equal rates HKY85 model?
 
 {% comment %}
 yes! 
 {% endcomment %}
 
-> :thinking: Does the HKY85+G model explain the data signficantly better than an equal rates HKY85 model? 
+> :thinking: Does the HKY85+G model explain the data significantly better than an equal rates HKY85 model? 
 
 {% comment %}
 yes! 194.61 = 2.*((-3171.551)-(-3268.856))
@@ -496,7 +496,7 @@ a. yes: -3171.551 (HKY+G) > -3174.729 (HKY+I)
 b. the two models are not nested
 {% endcomment %}
 
-> :thinking: Does the HKY85+I+G model explain the data signficantly better than either HKY85+I or HKY85+G alone? 
+> :thinking: Does the HKY85+I+G model explain the data significantly better than either HKY85+I or HKY85+G alone? 
 
 {% comment %}
 I+G signif. better than I alone but not better than G alone
@@ -508,7 +508,7 @@ HKY+I+G vs. HKY+G: 0.112 = 2.*((-3171.495)-(-3171.551))
 
 Earlier in the lab, you found that the F81 model with empirical base frequencies did not produce the expected tree separating chlorophyll-b organisms from the two (_Anacystis_ and _Olithodiscus_) that lack chlorophyll-b. Would a new search under a better model have the same result?
 
-Using the simplest model that you can defend (of the five we have examined: F81, HKY85, HKY85+I, HKY85+G, HKY85+I+G), perform an heuristic search under the maximum likelihood criterion. To make the analysis go faster, we will ask PAUP* to **not** re-estimate all the model parameters for every tree it examines during the search. To do this, first use the `lset` command to set up the model you are planning to use (be sure to specify `estimate` for all relevant parameters: base frequencies, shape, tratio, etc.). Use the `lscores` command to force PAUP* to re-estimate all of the parameters of your selected model on some tree (the tree just needs to be something reasonable, such as a NJ tree or the F81 tree you have been using). 
+Using the simplest model that you can defend (of the five we have examined: F81, HKY85, HKY85+I, HKY85+G, HKY85+I+G), perform a heuristic search under the maximum likelihood criterion. To make the analysis go faster, we will ask PAUP* to **not** re-estimate all the model parameters for every tree it examines during the search. To do this, first use the `lset` command to set up the model you are planning to use (be sure to specify `estimate` for all relevant parameters: base frequencies, shape, tratio, etc.). Use the `lscores` command to force PAUP* to re-estimate all of the parameters of your selected model on some tree (the tree just needs to be something reasonable, such as a NJ tree or the F81 tree you have been using). 
 
 Now, re-issue the `lset` command but, for every parameter that you estimated, change the word `estimate` to `previous`. After executing this new `lset` command, start a search using just `hsearch`. PAUP* will fix the parameters at the previous values (i.e. the estimates you just forced it to calculate) and use these same values for every tree examined during the search.
 
@@ -522,7 +522,8 @@ This lab is already a bit long, so we will not take time to do it now, but I hop
 
 {% comment %}
 ## A challenge
-I have simulated a data set under one of the following models: JC69, F81, K80, or HKY85. The data file can be downloaded using the following link: [http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/simdata.nex simdata.nex].
+I have simulated a data set under one of the following models: JC69, F81, K80, or HKY85. The data file can be 
+ed using the following link: [http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/simdata.nex simdata.nex].
 
 All of the sites either evolved at the same rate, or rate heterogeneity was added in the form of gamma distributed relative rates with or without some invariable sites. Can you identify which of the four basic models was used, and in addition tell me how much rate heterogeneity was added? 
 
