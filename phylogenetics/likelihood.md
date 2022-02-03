@@ -522,8 +522,7 @@ This lab is already a bit long, so we will not take time to do it now, but I hop
 
 {% comment %}
 ## A challenge
-I have simulated a data set under one of the following models: JC69, F81, K80, or HKY85. The data file can be 
-ed using the following link: [http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/simdata.nex simdata.nex].
+I have simulated a data set under one of the following models: JC69, F81, K80, or HKY85. The data file can be downloaded using the following link: [http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/simdata.nex simdata.nex].
 
 All of the sites either evolved at the same rate, or rate heterogeneity was added in the form of gamma distributed relative rates with or without some invariable sites. Can you identify which of the four basic models was used, and in addition tell me how much rate heterogeneity was added? 
 
