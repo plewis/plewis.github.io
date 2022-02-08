@@ -3,7 +3,7 @@ layout: page
 title: Study Questions
 permalink: /study_questions/
 ---
-Zach will *try* to create and post ~10 questions after each lecture. These questions are optional, and are tools you can use to gauge your understanding of the material from lecture and help guide your studying. 
+Zach will *try* to create and post some questions after each lecture. These questions are optional, and are tools you can use to gauge your understanding of the material from lecture and help guide your studying. 
 
 ## Lecture 3 - 25 Jan 2022
 
