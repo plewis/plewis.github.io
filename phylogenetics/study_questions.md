@@ -49,3 +49,10 @@ Zach will *try* to create and post ~10 questions after each lecture. These quest
 * How many parameters does this model have? What are the model parameter(s) and what are the assumptions we invoke when we use this model? Can you make a substitution matrix for this model?
 * What do branch lengths (edge lengths) represent? What parameters do we use to calculate them – why is it impossible to calculate these parameters *de novo*?
 * Say we are calculating a transition probability for a nucleotide substitution on a site from a G to a T. Before this site had a G nucleotide, the nucleotide was an A. How does this change how we go about calculating transition probabilities when using a Markov model?
+
+## Lecture 6 - 03 Feb 2022
+
+#### Models
+* What are the differences between the different models (JC69, K80(K2P), F81, HKY85, GTR). How many paramaters do they have, what are they?
+* Be able to explain the concept of nested models. When comparing models, why would the nexted nature of models be important?
+* What is a basic explaination of rate heterogeneity? (Will be explained in greater detail later in the semester)
