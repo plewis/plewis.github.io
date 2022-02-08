@@ -45,9 +45,9 @@ The executable file is now in the
     
 directory, where **~** means "home directory" and is a synonym of <tt>$HOME</tt>, which is itself a synonym of the actual path of your home directory (something like _/home/CAM/plewis_). To make the new version of iqtree easy to access, and to give it a name consistent with the name used in the tutorial, execute this command:
 
-    alias iqtreebeta="$HOME/iqtree-2.0.6-Linux/bin/bin/iqtree"
+    alias iqtreebeta="$HOME/iqtree-2.0.6-Linux/bin/iqtree2"
  
-This will create an alias named _iqtreebeta_ so that when you type <tt>iqtreebeta</TT> on the command line it will be replaced by _~/iqtree-2.0.6-Linux/bin/iqtree_. This alias will only be available to you while you are logged in; it will be lost when you logout. If you want it to be permanent, edit (using nano) the file _~/.bash_profile_ and place the alias command anywhere in the file (but on a line by itself. Now the alias will be automatically recreated every time you login.
+This will create an alias named _iqtreebeta_ so that when you type <tt>iqtreebeta</TT> on the command line it will be replaced by _~/iqtree-2.0.6-Linux/bin/iqtree2_. This alias will only be available to you while you are logged in; it will be lost when you logout. If you want it to be permanent, edit (using nano) the file _~/.bash_profile_ and place the alias command anywhere in the file (but on a line by itself. Now the alias will be automatically recreated every time you login.
 
 ## Start the tutorial 
 
