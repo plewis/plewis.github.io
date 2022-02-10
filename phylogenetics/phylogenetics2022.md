@@ -20,9 +20,9 @@ Thursday Jan. 20        | **Optimality criteria, search strategies, consensus tr
 Tuesday Jan. 25         | **The parsimony criterion**<br/>Strict, semi-strict, and majority-rule consensus trees; maximum agreement subtrees; Camin-Sokal, Wagner, Fitch, Dollo, and transversion parsimony; step matrices and generalized parsimony [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Parsimony.pdf)] [[study questions](/study_questions.md#lecture-3---25-jan-2022)] | **Homework 2**: [Parsimony](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw2-parsimony.pdf)
 Thursday Jan 27         | **Distance methods**<br/>Distance methods: least squares criterion, minimum evolution criterion, neighbor-joining [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Distances.pdf)]  [[study questions](/study_questions.md#lecture-4---27-jan-2022)]| **Lab 2**: [Searching](/searching/)
 Tuesday Feb. 1          | **Substitution models**<br/>Instantaneous rates, expected number of substitutions, equilibrium frequencies, JC69 model. Textbook: Ch. 2 (pp. 19-30); Ch. 3 (pp. 35-38). [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Models.pdf)]  [[study questions](/study_questions.md#lecture-5---01-feb-2022)]| **Homework 3**: [Least squares distances](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw3.pdf) (working through the [Python Primer](/python) first will make this homework much easier)
-Thursday Feb. 3         | **Maximum likelihood criterion**<br/>JC distance formula; common substitution models: K2P, F81, F84, HKY85, and GTR; likelihood: the probability of data given a model, likelihood of a “tree” with just one vertex and no edges, why likelihoods are always on the log scale, likelihood ratio tests. \[[Transition Probability Applet](/applets/jc-transition-probabilities/)\] Textbook: Ch. 5 (pp. 57-75) [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Models2.pdf)]  [[study questions](/study_questions.md#lecture-6---03-feb-2022)]| **Lab 3**: [Likelihood](/likelihood/) [[slide](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Likelihood-lab-notes.pdf)]
+Thursday Feb. 3         | **Maximum likelihood criterion**<br/>JC distance formula; common substitution models: K2P, F81, F84, HKY85, and GTR; likelihood: the probability of data given a model, likelihood of a “tree” with just one vertex and no edges, why likelihoods are always on the log scale, likelihood ratio tests. \[[Transition Probability Applet](/applets/jc-transition-probabilities/)\] Textbook: Ch. 5 (pp. 57-75) [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Models2.pdf)] [[study questions](/study_questions.md#lecture-6---03-feb-2022)]| **Lab 3**: [Likelihood](/likelihood/) [[slide](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Likelihood-lab-notes.pdf)]
 Tuesday Feb. 8         | **Maximum likelihood (cont.)**<br/> Likelihood of a tree with 2 vertices connected by one edge, transition probabilities, maximum likelihood estimates (MLEs) of model parameters, likelihood of a tree. [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Likelihood.pdf)] | **Homework 4**: [Site likelihoods](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw4-likelihood.pdf)
-Thursday Feb. 10        | **Bootstrapping, rate heterogeneity**<br/>Non-parametric bootstrapping, ultrafast bootstrapping<br/>**Rate heterogeneity**<br/>Invariable sites model, Discrete gamma model, site-specific rates, mixture models. | **Lab 4**: IQ-TREE tutorial
+Thursday Feb. 10        | **Bootstrapping, rate heterogeneity**<br/>Non-parametric bootstrapping [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Bootstrapping.pdf)]<br/>**Rate heterogeneity**<br/>Invariable sites model, Discrete gamma model, site-specific rates (partitioned) models, mixture models. [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RateHet.pdf)] | **Lab 4**: [IQ-TREE tutorial](/iqtree/)
 Tuesday Feb. 15	        | **Simulation**<br/>How to simulate nucleotide sequence data, and why it’s done | **Homework 5**: Rate heterogeneity (python program to modify)
 Thursday Feb. 17        | **Long branch attraction, topology tests**<br/>Statistical consistency, long branch attraction, KH test, SH test, and AU test. | **Lab 5**: Simulating sequence data using PAUP*
 Tuesday Feb. 22         | **Codon, secondary structure, and amino acid models**<br/>Nonsynonymous vs. synonymous rates, codon models, RNA stem/loop structure, compensatory substitutions, stem models, empirical amino acid rate matrices (PAM, JTT, WAG, LE) | **Homework 6**: Simulation
@@ -131,7 +131,7 @@ Felsenstein, J. 1981. Evolutionary trees from DNA sequences: a maximum likelihoo
 
 Felsenstein, J. 1983. Statistical inference of phylogenies. Journal of the Royal Statistical Society A 146:246-272. (LRT of molecular clock)
 
-Felsenstein, J. 1985a. Confidence intervals on phylogenies: an approach using the bootstrap. Evolution 39:783-791. (nonparametric bootstrapping)
+:hibiscus: Felsenstein, J. 1985a. Confidence intervals on phylogenies: an approach using the bootstrap. Evolution 39:783-791. (nonparametric bootstrapping)
 
 Felsenstein, J. 1985b. Phylogenies and the comparative method. American Naturalist 125:1-15. (independent contrasts)
 
@@ -235,7 +235,7 @@ Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspeci
 
 Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior)
 
-Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model)
+:hibiscus: Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model)
 
 Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., & Rasnitsyn, A. P. 2012. A total-evidence approach to dating with fossils, applied to the early radiation of the hymenoptera. Systematic Biology 61(6):973–999. (Tip dating)
 
@@ -273,9 +273,9 @@ Whelan, S., and N. Goldman. 2001. A general empirical model of protein evolution
 
 Xie, W.G., P.O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal Likelihood Estimation for Bayesian Phylogenetic Model Selection. Systematic Biology 60(2):150-160. (Stepping-stone marginal likelihood estimation)
 
-Yang, Z. 1993. Maximum-likelihood estimation of phylogeny from DNA sequences when substitution rates differ over sites. Molecular Biology and Evolution 10:1396-1401.
+:hibiscus: Yang, Z. 1993. Maximum-likelihood estimation of phylogeny from DNA sequences when substitution rates differ over sites. Molecular Biology and Evolution 10:1396-1401.
 
-Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences with variable rates over sites: approximate methods. Journal of Molecular Evolution 39:306-314. (+G among-site rate heterogeneity model)
+:hibiscus: Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences with variable rates over sites: approximate methods. Journal of Molecular Evolution 39:306-314. (+G among-site rate heterogeneity model)
 
 Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
 
