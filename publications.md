@@ -7,6 +7,8 @@ permalink: /publications/
 
 ([Jump to key to symbols](#key-to-symbols))
 
+J Barido-Sottani, JA Justison, R Borges, JM Brown, W Dismukes,B do Rosario Petrucci, LG Fabreti, S Höhna, MJ Landis, PO Lewis, MR May, FK Mendes, W Pett, BD Redelings, CM Tribble, AM Wright, R Zenil-Ferguson, and TA Heath. 2022. Lessons learned from organizing and teaching virtual phylogenetics workshops. The Bulletin of the Society of Systematic Biologists (accepted manuscript). 
+
 W Shi, MH Chen, L Kuo, and PO Lewis. 2021. [Bayesian information and dissonance.](https://doi.org/10.1214/21-BA1277) Bayesian Analysis (advance publication). &diams;
 
 D Shi, MH Chen, L Kuo, and PO Lewis. 2021. [New partition based measures for data compatibility and information gain.](https://doi.org/10.1002/sim.8982) Statistics in Medicine 40:3560-3581. &diams;
