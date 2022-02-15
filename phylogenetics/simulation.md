@@ -66,7 +66,7 @@ Return to the _simlab_ directory now, where your _seq-gen_ executable is located
 
 Using nano, create a file named _tree.txt_ that contains the following single line:
 
-    (A:1.0,B:1.0,((C:1.0,D:1.0):1.0,(E:1.0,F:1.0):1.0))
+    (A:1.0,B:1.0,((C:1.0,D:1.0):1.0,(E:1.0,F:1.0):1.0):1.0)
     
 Now, create a file named _sg.sh_ containing the following:
 
@@ -88,7 +88,7 @@ Now, create a file named _sg.sh_ containing the following:
     #
     # tree.txt
     #
-    # (A:1.0,B:1.0,((C:1.0,D:1.0):1.0,(E:1.0,F:1.0):1.0))
+    # (A:1.0,B:1.0,((C:1.0,D:1.0):1.0,(E:1.0,F:1.0):1.0):1.0)
     
 Most of the contents of this file are comments (lines starting with <tt>#</tt>). I included those as a sort of cheat-sheet for using seq-gen to save having to look some things up in the manual.
 
