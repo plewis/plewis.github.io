@@ -21,9 +21,9 @@ Tuesday Jan. 25         | **The parsimony criterion**<br/>Strict, semi-strict, a
 Thursday Jan 27         | **Distance methods**<br/>Distance methods: least squares criterion, minimum evolution criterion, neighbor-joining [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Distances.pdf)]  [[study questions](/study_questions.md#lecture-4---27-jan-2022)]| **Lab 2**: [Searching](/searching/)
 Tuesday Feb. 1          | **Substitution models**<br/>Instantaneous rates, expected number of substitutions, equilibrium frequencies, JC69 model. Textbook: Ch. 2 (pp. 19-30); Ch. 3 (pp. 35-38). [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Models.pdf)]  [[study questions](/study_questions.md#lecture-5---01-feb-2022)]| **Homework 3**: [Least squares distances](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw3.pdf) (working through the [Python Primer](/python) first will make this homework much easier)
 Thursday Feb. 3         | **Maximum likelihood criterion**<br/>JC distance formula; common substitution models: K2P, F81, F84, HKY85, and GTR; likelihood: the probability of data given a model, likelihood of a “tree” with just one vertex and no edges, why likelihoods are always on the log scale, likelihood ratio tests. \[[Transition Probability Applet](/applets/jc-transition-probabilities/)\] Textbook: Ch. 5 (pp. 57-75) [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Models2.pdf)] [[study questions](/study_questions.md#lecture-6---03-feb-2022)]| **Lab 3**: [Likelihood](/likelihood/) [[slide](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Likelihood-lab-notes.pdf)]
-Tuesday Feb. 8         | **Maximum likelihood (cont.)**<br/> Likelihood of a tree with 2 vertices connected by one edge, transition probabilities, maximum likelihood estimates (MLEs) of model parameters, likelihood of a tree. [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Likelihood.pdf)] | **Homework 4**: [Site likelihoods](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw4-likelihood.pdf)
-Thursday Feb. 10        | **Bootstrapping, rate heterogeneity**<br/>Non-parametric bootstrapping [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Bootstrapping.pdf)]<br/>**Rate heterogeneity**<br/>Invariable sites model, Discrete gamma model, site-specific rates (partitioned) models, mixture models. [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RateHet.pdf)] | **Lab 4**: [IQ-TREE tutorial](/iqtree/)
-Tuesday Feb. 15	        | **Simulation**<br/>How to simulate nucleotide sequence data, and why it’s done | **Homework 5**: Rate heterogeneity (python program to modify)
+Tuesday Feb. 8         | **Maximum likelihood (cont.)**<br/> Likelihood of a tree with 2 vertices connected by one edge, transition probabilities, maximum likelihood estimates (MLEs) of model parameters, likelihood of a tree. [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Likelihood.pdf)] Textbook: Ch. 4: pp. 47-53 | **Homework 4**: [Site likelihoods](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw4-likelihood.pdf)
+Thursday Feb. 10        | **Bootstrapping, rate heterogeneity**<br/>Non-parametric bootstrapping [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Bootstrapping.pdf)]<br/>**Rate heterogeneity**<br/>Invariable sites model, Discrete gamma model, site-specific rates (partitioned) models, mixture models. Textbook: Ch. 6: pp. 81-92. [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RateHet.pdf)] | **Lab 4**: [IQ-TREE tutorial](/iqtree/)
+Tuesday Feb. 15	        | **Simulation**<br/>How to simulate nucleotide sequence data, and why it’s done [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Simulation.pdf)] Textbook: Ch. 6: pp. 93-96. | **Homework 5**: [Rate heterogeneity (python program to modify)](/hw5/)
 Thursday Feb. 17        | **Long branch attraction, topology tests**<br/>Statistical consistency, long branch attraction, KH test, SH test, and AU test. | **Lab 5**: Simulating sequence data using PAUP*
 Tuesday Feb. 22         | **Codon, secondary structure, and amino acid models**<br/>Nonsynonymous vs. synonymous rates, codon models, RNA stem/loop structure, compensatory substitutions, stem models, empirical amino acid rate matrices (PAM, JTT, WAG, LE) | **Homework 6**: Simulation
 Thursday Feb. 24        | **Bayes' Rule**<br/> Joint, conditional, and marginal probabilities, and how they interact to create Bayes’ Rule; calculating the expected number of substitutions per site; rate matrices to transition probability matrices \[[Eigenvector/eigenvalue applet](/applets/diagonalization/)\] | **Lab 6**: Using HyPhy to test hypotheses
@@ -127,6 +127,11 @@ Fan, Y., Wu, R., Chen, M.-H., Kuo, L., and Lewis, P. O. 2011. Molecular Biology 
 
 :hibiscus: Felsenstein, J. 1973. Maximum likelihood estimation of evolutionary trees from continuous characters. American Journal of Human Genetics 25:471-492.
 
+:hibiscus: Felsenstein, J. 1978. Cases in which parsimony or compatibility methods will be positively misleading. Systematic Biology 27:401-410. (Characterized the long branch attraction problem; origin of the term Felsenstein Zone)
+{% comment %}
+https://doi.org/10.1093/sysbio/27.4.401
+{% endcomment %}
+
 Felsenstein, J. 1981. Evolutionary trees from DNA sequences: a maximum likelihood approach. Journal of Molecular Evolution 17:368-376. (F81 model, pruning algorithm, origin of likelihood-based phylogenetics)
 
 Felsenstein, J. 1983. Statistical inference of phylogenies. Journal of the Royal Statistical Society A 146:246-272. (LRT of molecular clock)
@@ -164,6 +169,11 @@ Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from mu
 :hibiscus: Hennig, W. 1966. Phylogenetic systematics. University of Illinois Press, Urbana.
 
 Holder, M. T., Lewis, P. O., Swofford, D. L., and Larget, B. (2005). Hastings ratio of the LOCAL proposal used in Bayesian phylogenetics. Systematic Biology, 54(6), 961–965.
+
+:hibiscus: Huelsenbeck, J. P., and D. M. Hillis. 1993. Success of phylogenetic methods in the four taxon case. Systematic Biology 42:247-264. (popularized the term Felsenstein Zone)
+{% comment %}
+https://doi.org/10.1093/sysbio/27.4.401
+{% endcomment %}
 
 Huelsenbeck, J. P., Jain, S., Frost, S., and Pond, S. 2006. A Dirichlet process model for detecting positive selection in protein-coding DNA sequences. Proceedings of the National Academy USA 103:6263–6268. (DP mixture model for omega)
 
@@ -229,7 +239,7 @@ Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discr
 
 Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo. Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
 
-Pettigrew, J. D. 1991. Wings or Brain? Convergent Evolution in the Origins of Bats. Systematic Zoology, 40(2), 199-216.
+:hibiscus: Pettigrew, J. D. 1991. Wings or Brain? Convergent Evolution in the Origins of Bats. Systematic Zoology, 40(2), 199-216.
 
 Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
 
@@ -265,7 +275,7 @@ Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolu
 
 Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
 
-Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis. Molecular Phylogenetics and Evolution, 10(3), 408–416.
+:hibiscus: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis. Molecular Phylogenetics and Evolution, 10(3), 408–416.
 
 Whelan, S., and N. Goldman. 2001. A general empirical model of protein evolution derived from multiple protein families using a maximum likelihood approach. Molecular Biology and Evolution, 18, 691-699. (WAG amino acid model)
 
