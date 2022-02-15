@@ -209,7 +209,7 @@ Execute _paupsimFZ.nex_, then `cat` the new _resultsFZ.txt_ file and consider th
 ML-JC
 {% endcomment %}
 
-Change the <tt>simdata nchar=10000;</tt> line to <tt>simdata nchar=(10 100 1000 10000);</tt> and change <tt>output=allreps</tt> to <tt>output=meansonly</tt>. Now PAUP* will simulate data sets of four different sequence lengths and summarize the results rather than spitting out a line for every simulation replicate.
+Change the <tt>simdata nchar=10000;</tt> line to <tt>simdata nchar=(100 1000 10000);</tt> and change <tt>output=allreps</tt> to <tt>output=meansonly</tt>. Now PAUP* will simulate data sets of four different sequence lengths and summarize the results rather than spitting out a line for every simulation replicate.
 
 > :thinking: Which (parsimony or ML) appears to be statistically consistent? Why?
 
