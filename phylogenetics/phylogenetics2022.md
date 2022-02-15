@@ -127,10 +127,7 @@ Fan, Y., Wu, R., Chen, M.-H., Kuo, L., and Lewis, P. O. 2011. Molecular Biology 
 
 :hibiscus: Felsenstein, J. 1973. Maximum likelihood estimation of evolutionary trees from continuous characters. American Journal of Human Genetics 25:471-492.
 
-:hibiscus: Felsenstein, J. 1978. Cases in which parsimony or compatibility methods will be positively misleading. Systematic Biology 27:401-410. (Characterized the long branch attraction problem; origin of the term Felsenstein Zone)
-{% comment %}
-https://doi.org/10.1093/sysbio/27.4.401
-{% endcomment %}
+:hibiscus: Felsenstein, J. 1978. [Cases in which parsimony or compatibility methods will be positively misleading.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 27:401-410. (Characterized the long branch attraction problem)
 
 Felsenstein, J. 1981. Evolutionary trees from DNA sequences: a maximum likelihood approach. Journal of Molecular Evolution 17:368-376. (F81 model, pruning algorithm, origin of likelihood-based phylogenetics)
 
@@ -147,6 +144,8 @@ Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood a
 :hibiscus: Fitch, W. M., and E. Margoliash. 1967. Science 155:279-284.
 
 :hibiscus: Fitch, W. 1971. Toward Defining the Course of Evolution: Minimum Change for a Specific Tree Topology. Systematic Zoology 20:406-416.
+
+:hibiscus: Gaut, B. S., and P. O. Lewis. 1995. [Success of maximum likelihood phylogeny inference in the four-taxon case.](https://doi.org/10.1093/oxfordjournals.molbev.a040183) Molecular Biology and Evolution 12(1):152-162.
 
 Goldman, N., and Z. Yang. 1994. A codon-based model of nucleotide substitution for protein-coding DNA sequences. Molecular Biology and Evolution, 11, 725-736. (Goldman-Yang codon model)
 
@@ -170,10 +169,7 @@ Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from mu
 
 Holder, M. T., Lewis, P. O., Swofford, D. L., and Larget, B. (2005). Hastings ratio of the LOCAL proposal used in Bayesian phylogenetics. Systematic Biology, 54(6), 961–965.
 
-:hibiscus: Huelsenbeck, J. P., and D. M. Hillis. 1993. Success of phylogenetic methods in the four taxon case. Systematic Biology 42:247-264. (popularized the term Felsenstein Zone)
-{% comment %}
-https://doi.org/10.1093/sysbio/27.4.401
-{% endcomment %}
+:hibiscus: Huelsenbeck, J. P., and D. M. Hillis. 1993. [Success of phylogenetic methods in the four taxon case.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 42:247-264. (coined the term Felsenstein Zone)
 
 Huelsenbeck, J. P., Jain, S., Frost, S., and Pond, S. 2006. A Dirichlet process model for detecting positive selection in protein-coding DNA sequences. Proceedings of the National Academy USA 103:6263–6268. (DP mixture model for omega)
 
