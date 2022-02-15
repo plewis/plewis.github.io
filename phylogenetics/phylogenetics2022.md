@@ -235,7 +235,9 @@ Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discr
 
 Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo. Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
 
-:hibiscus: Pettigrew, J. D. 1991. Wings or Brain? Convergent Evolution in the Origins of Bats. Systematic Zoology, 40(2), 199-216.
+:hibiscus: Pettigrew, J. D. 1991. Wings or brain? convergent evolution in the origins of bats. Systematic Zoology, 40(2):199-216.
+
+:hibiscus: Pettigrew, J. D. 1994. [Genomic evolution: flying DNA.](https://doi.org/10.1016/S0960-9822(00)00065-8) Current Biology 4(3):277-280.
 
 Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
 
