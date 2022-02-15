@@ -150,7 +150,7 @@ Create an empty text file named _paupsim.nex_:
         set nowarntsave;
         quit;
     end;
-The <tt>trees</tt> block contains the description of the true tree that we will use to simulate data. By default, trees are considered unrooted, but the obscure <tt>[&R]</tt> says that this tree is rooted.
+The <tt>trees</tt> block contains the description of the true tree that we will use to simulate data. By default, trees are considered unrooted.
 
 The <tt>beginsim...endsim</tt> loop in the <tt>dnasim</tt> block tells PAUP* to simulate 100 nucleotide data sets (<tt>nreps=100</tt>). 
 
