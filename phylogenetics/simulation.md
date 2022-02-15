@@ -62,7 +62,7 @@ Type Q to quit when you've seen enough.
 
 ### Using seq-gen
 
-You should be in the _simlab_ directory now where your _seq-gen_ executable is located. 
+Return to the _simlab_ directory now, where your _seq-gen_ executable is located. 
 
 Using nano, create a file named _tree.txt_ that contains the following single line:
 
@@ -70,7 +70,7 @@ Using nano, create a file named _tree.txt_ that contains the following single li
     
 Now, create a file named _sg.sh_ containing the following:
 
-    $HOME/sg134/seq-gen -mHKY -l10000 -n1 -p1 -t2.0 -on < tree.txt > simdata.nex
+    $HOME/simlab/seq-gen -mHKY -l10000 -n1 -p1 -t2.0 -on < tree.txt > simdata.nex
 
     # -mHKY                       use the HKY substitution model
     #                             (HKY, F84, GTR, JTT, WAG, PAM, BLOSUM, MTREV, CPREV or GENERAL)
@@ -98,11 +98,11 @@ You will need to execute the command at the top of this file, and the easiest wa
     
 The initial dot tells the bash interpreter to simply issue the commands found in the following "shell script" file as if you typed them into the console. You could skip the creation of _sg.sh_ in the first place by simply issuing the command on the command line, like this:
 
-    $HOME/sg134/seq-gen -mHKY -l10000 -n1 -p1 -t2.0 -a0.5 -on < tree.txt > simdata.nex
+    $HOME/simlab/seq-gen -mHKY -l10000 -n1 -p1 -t2.0 -a0.5 -on < tree.txt > simdata.nex
     
 I showed you how to store the command in a file because that provides a record of what you did and allows you to easily modify the command and run it again.
 
-> :thinking: Take a look at the file seq-gen generated. Can you explain why nearly every site show evidence of substitution? (hint: look at the branch lengths specified in the true tree)
+> :thinking: Take a look at the file seq-gen generated. Can you explain why nearly every site show evidence of substitution? (hint1: look at the branch lengths specified in the true tree)
 
 {% comment %}
 all 9 branch lengths are 1, which means that, on average, there will be 9 substitutions at every site over the entire tree, so it is not surprising that there are no constant sites.
@@ -226,7 +226,7 @@ changed "rates=equal" to "rates=gamma shape=0.01" in the "lset" command
 added "lset rates=equal" after "set criterion=likelihood" in the likelihood section of the beginsim...endsim section
 {% endcomment %}
 
-> :thinking: Is ML statistically consistent when the model is violated in this way? Why?
+> :thinking: Is ML statistically consistent when the model is violated in this way? Why? (hint: think about which data are hard to model accurately with high heterogeneity) 
 
 {% comment %}
 no, assuming rate homogeneity results in underestimation of edge lengths, which in turn makes it easier for ML to misinterpret convergent similarity as similarity due to inheritance from the common ancestor.
@@ -319,12 +319,12 @@ which generates all 105 possible trees and tests them all using the SH test. To 
 
 > :thinking: How many of the 105 trees were not significant using the SH test for 500 sites? 5000 sites?
 
-{% comment %}
+{% comment %} There were only two trees non-significant trees using the SH test for 5000 sites, while there were 14 non-significant trees using the SH test for 500 sites.
 {% endcomment %}
 
 > :thinking: Does the AU test produce a different result?
 
-{% comment %}
+{% comment %} The AU test has only two trees non-significant trees for both 500 and 5000 sites. 
 {% endcomment %}
 
 ## Literature Cited
