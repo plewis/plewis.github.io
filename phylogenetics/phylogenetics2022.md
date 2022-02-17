@@ -24,7 +24,7 @@ Thursday Feb. 3         | **Maximum likelihood criterion**<br/>JC distance formu
 Tuesday Feb. 8         | **Maximum likelihood (cont.)**<br/> Likelihood of a tree with 2 vertices connected by one edge, transition probabilities, maximum likelihood estimates (MLEs) of model parameters, likelihood of a tree. [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Likelihood.pdf)] Textbook: Ch. 4: pp. 47-53 | **Homework 4**: [Site likelihoods](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/homeworks/2022/hw4-likelihood.pdf)
 Thursday Feb. 10        | **Bootstrapping, rate heterogeneity**<br/>Non-parametric bootstrapping [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Bootstrapping.pdf)]<br/>**Rate heterogeneity**<br/>Invariable sites model, Discrete gamma model, site-specific rates (partitioned) models, mixture models. Textbook: Ch. 6: pp. 81-92. [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RateHet.pdf)] | **Lab 4**: [IQ-TREE tutorial](/iqtree/)
 Tuesday Feb. 15	        | **Simulation**<br/>How to simulate nucleotide sequence data, and why it’s done [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Simulation.pdf)] Textbook: Ch. 6: pp. 93-96. | **Homework 5**: [Rate heterogeneity (python program to modify)](/hw5/)
-Thursday Feb. 17        | **Long branch attraction, topology tests**<br/>Statistical consistency, long branch attraction, KH test, SH test, and AU test. | **Lab 5**: Simulating sequence data using PAUP*
+Thursday Feb. 17        | **Long branch attraction, topology tests**<br/>Statistical consistency, long branch attraction, testing the molecular clock, nonparametric bootstrap topology tests (KH/SH/AU), and parametric bootstrapping tests (SOWH). [[LBA slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/LBA.pdf)]  [[Topology test slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/TopologyTests.pdf)] | **Lab 5**: [Simulating sequences](/simulation/)
 Tuesday Feb. 22         | **Codon, secondary structure, and amino acid models**<br/>Nonsynonymous vs. synonymous rates, codon models, RNA stem/loop structure, compensatory substitutions, stem models, empirical amino acid rate matrices (PAM, JTT, WAG, LE) | **Homework 6**: Simulation
 Thursday Feb. 24        | **Bayes' Rule**<br/> Joint, conditional, and marginal probabilities, and how they interact to create Bayes’ Rule; calculating the expected number of substitutions per site; rate matrices to transition probability matrices \[[Eigenvector/eigenvalue applet](/applets/diagonalization/)\] | **Lab 6**: Using HyPhy to test hypotheses
 Tuesday Mar. 1          | **Bayesian statistics, MCMC**<br/> Probability vs. probability density, Metropolis-Hastings algorithm, mixing, burn-in, trace plots.\[Archery priors applet](https://phylogeny.uconn.edu/archery-priors/)\] \[[MCMC robot applet](/applets/mcmc-robot/)\] | **Homework 7**: MCMC
@@ -147,6 +147,8 @@ Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood a
 
 :hibiscus: Gaut, B. S., and P. O. Lewis. 1995. [Success of maximum likelihood phylogeny inference in the four-taxon case.](https://doi.org/10.1093/oxfordjournals.molbev.a040183) Molecular Biology and Evolution 12(1):152-162.
 
+:hibiscus: Goldman, N., J. P. Anderson, and A. G. Rodrigo. 2000. Likelihood-based tests of topologies in phylogenetics. Systematic Biology 49:652-670.
+
 Goldman, N., and Z. Yang. 1994. A codon-based model of nucleotide substitution for protein-coding DNA sequences. Molecular Biology and Evolution, 11, 725-736. (Goldman-Yang codon model)
 
 Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent data. Pages 156-163 in Computing Science and Statistics (E. Keramidas, ed.). (Metropolis-coupled MCMC a.k.a. heated chains)
@@ -255,9 +257,11 @@ Saitou, N., and M. Nei. 1987. The neighbor-joining method: a new method for reco
 
 Schwarz, G. E. 1978. Estimating the dimension of a model. Ann Stat. 6:461–464. (BIC model selection criterion)
 
-Shimodaira, H., and M. Hasegawa. 1999. Multiple comparisons of log-likelihoods with applications to phylogenetic inference. Molecular Biology and Evolution 16: 1114-1116. (SH topology test)
+:hibiscus: Shimodaira, H., and M. Hasegawa. 1999. Multiple comparisons of log-likelihoods with applications to phylogenetic inference. Molecular Biology and Evolution 16: 1114-1116. (SH topology test)
 
-Shimodaira H. 2002. An approximately unbiased test of phylogenetic tree selection. Systematic Biology. 51:492–508. (AU topology test)
+:hibiscus: Shimodaira H. 2002. An approximately unbiased test of phylogenetic tree selection. Systematic Biology. 51:492–508. (AU topology test)
+
+:hibiscus: Siddall, M. E. 1998. Success of parsimony in the four-taxon case: long-branch repulsion by likelihood in the Farris Zone. Cladistics 14:209-220.
 
 Stamatakis, A. 2006. Phylogenetic models of rate heterogeneity: a high performance computing perspective. Proceedings 20th. IEEE International Parallel and Distributed Processing Symposium.
 
@@ -265,7 +269,7 @@ Studier, J. A., and K. J. Keppler. 1988. A note on the neighbor-joining algorith
 
 Swofford, D. L., G. J. Olsen, P. J. Waddell, and D. M. Hillis. 1996. Phylogenetic inference. Pages 407-514 in Molecular Systematics (D. M. Hillis, C. Moritz, and B. K. Mable, eds.). Sinauer Associates, Sunderland, Massachusetts. (SOWH topology test)
 
-Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O., and Rogers, J. S. 2001. Bias in Phylogenetic Estimation and Its Relevance to the Choice between Parsimony and Likelihood Methods. Systematic Biology, 50(4), 525–539.
+:hibiscus: Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O., and Rogers, J. S. 2001. Bias in Phylogenetic Estimation and Its Relevance to the Choice between Parsimony and Likelihood Methods. Systematic Biology, 50(4), 525–539.
 
 :hibiscus: Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup)
 
