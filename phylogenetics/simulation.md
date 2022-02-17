@@ -235,7 +235,7 @@ no, assuming rate homogeneity results in underestimation of edge lengths, which 
 
 ## Saving Simulated Data
 
-Can you figure out how to change your NEXUS file so that PAUP* simulates one data set and exports it to a file? Start PAUP* and use 
+Can you figure out how to change your orignal paupsim.nex file (with no rate heterogenity) so that PAUP* simulates one data set and exports it to a file? Start PAUP* and use 
 
     export ?
     
