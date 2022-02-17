@@ -127,7 +127,7 @@ Create an empty text file named _paupsim.nex_:
     #nexus
 
     begin trees;
-        tree 1 = ((A:0.1,B:0.1):0.1,(C:0.1,D:0.1));
+        tree 1 = ((A:0.1,B:0.1):0.1,(C:0.1,D:0.1):0);
     end;
 
     begin dnasim;
