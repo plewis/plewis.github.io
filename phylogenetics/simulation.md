@@ -210,7 +210,7 @@ Execute _paupsimFZ.nex_, then `cat` the new _resultsFZ.txt_ file and consider th
 ML-JC
 {% endcomment %}
 
-Change the <tt>simdata nchar=10000;</tt> line to <tt>simdata nchar=(100 1000 10000);</tt> and change <tt>output=allreps</tt> to <tt>output=meansonly</tt>. Now PAUP* will simulate data sets of four different sequence lengths and summarize the results rather than spitting out a line for every simulation replicate.
+Change the <tt>simdata nchar=10000;</tt> line to <tt>simdata nchar=(100 1000 10000);</tt> and change <tt>output=allreps</tt> to <tt>output=meansonly</tt>. Now PAUP* will simulate data sets of 3 different sequence lengths and summarize the results rather than spitting out a line for every simulation replicate.
 
 > :thinking: Which (parsimony or ML) appears to be statistically consistent? Why?
 
@@ -218,7 +218,7 @@ Change the <tt>simdata nchar=10000;</tt> line to <tt>simdata nchar=(100 1000 100
 ML because it has convergence as an explanation for similarity whereas parsimony can only explain similarity by inhertitance
 {% endcomment %}
 
-Add substantial rate heterogeneity (e.g. gamma shape = 0.01) to the simulated data and analyze the data under both parsimony and ML (using a model that assumes rate homogeneity). 
+Add substantial rate **HETERO**geneity (e.g. gamma shape = 0.01) to the simulated data and analyze the data under both parsimony and ML (using a model that assumes rate **HOMO**geneity). 
 
 > :thinking: How did you modify your paupsimFZ.nex file in order to accomplish this?
 
