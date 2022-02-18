@@ -127,7 +127,7 @@ Create an empty text file named _paupsim.nex_:
     #nexus
 
     begin trees;
-        tree 1 = ((A:0.1,B:0.1):0.1,(C:0.1,D:0.1));
+        tree 1 = ((A:0.1,B:0.1):0.1,(C:0.1,D:0.1):0);
     end;
 
     begin dnasim;
@@ -235,7 +235,7 @@ no, assuming rate homogeneity results in underestimation of edge lengths, which 
 
 ## Saving Simulated Data
 
-Can you figure out how to change your NEXUS file so that PAUP* simulates one data set and exports it to a file? Start PAUP* and use 
+Can you figure out how to change your orignal paupsim.nex file (with no rate heterogenity) so that PAUP* simulates one data set and exports it to a file? Start PAUP* and use 
 
     export ?
     
