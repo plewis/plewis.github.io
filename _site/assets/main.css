@@ -245,7 +245,7 @@ div.image-center { text-align: center; margin-bottom: 2rem; background-color: wh
 
 img.image-center { margin-left: auto; margin-right: auto; border: 1px solid black; }
 
-img.image-center-noborder { margin-left: auto; margin-right: auto; border: 0; }
+img.image-center.noborder { margin-left: auto; margin-right: auto; border: 0; }
 
 div.image-right { text-align: center; display: inline-block; float: right; margin-left: 2rem; margin-bottom: 2rem; background-color: white; }
 

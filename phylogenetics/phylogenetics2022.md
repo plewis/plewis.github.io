@@ -89,7 +89,7 @@ Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sin
 
 ## Literature cited in lecture
 
-:hibiscus: indicates that paper was cited in Spring 2022 semester
+:hibiscus: indicates that paper was cited in Spring 2022 semester (either in lecture or lab)
 
 Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
 
@@ -277,9 +277,11 @@ Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolu
 
 Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
 
-:hibiscus: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis. Molecular Phylogenetics and Evolution, 10(3), 408–416.
+:hibiscus: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416.
 
 Whelan, S., and N. Goldman. 2001. A general empirical model of protein evolution derived from multiple protein families using a maximum likelihood approach. Molecular Biology and Evolution, 18, 691-699. (WAG amino acid model)
+
+:hibiscus: Wickett, N. J., Y. Fan, P. Lewis, and B. Goffinet. 2008. [Distribution and evolution of pseudogenes, gene losses, and a gene rearrangement in the plastid genome of the nonphotosynthetic liverwort, _Aneura mirabilis_ (Metzgeriales, Jungermanniopsida).](http://dx.doi.org/10.1007/s00239-008-9133-1) Journal of Molecular Evolution 67:111-122.
 
 :hibiscus: Wiley, E. O. 1981. Phylogenetics: the theory and practice of phylogenetic systematics. John Wiley and Sons, New York.
 
