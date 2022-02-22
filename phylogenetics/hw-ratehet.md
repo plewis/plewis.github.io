@@ -130,9 +130,9 @@ The relative rates that you need are in the right-most column of the table at th
 
 You can (and should) check your answer using PAUP\*. You can get the data for this homework into PAUP\* by creating a nexus file named _hw5.nex_ (see the data block example in the [nexus lab](/nexus/#data-block)). The number of taxa will be 4 and the number of characters will be 2. Create a trees block (see the trees block example in the [nexus lab](/nexus/#trees-block)) below your data block containing the tree definition. Finally, add a paup block containing the commands necessary to compute the likelihood under a JC+G model. The <tt>lscores</tt> command in your paup block should look like this:
 
-    lscores 1 / sitelike;
+    lscores 1 / sitelike userbrlen;
     
-Including the option <tt>sitelike</tt> will tell PAUP* to output not only the overall likelihood but also the site likelihoods.
+Including the option <tt>sitelike</tt> will tell PAUP* to output not only the overall likelihood but also the site likelihoods. Including the option <tt>userbrlen</tt> tells PAUP* to use the branch lengths you specified in your tree and not to estimate them (you did specify branch lengths in your tree, didn't you?).
 
 ## What do I turn in?
 
