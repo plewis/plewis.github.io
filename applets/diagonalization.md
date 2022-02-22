@@ -1494,7 +1494,7 @@ The applet shows that premultiplying a vector of relative state frequencies by t
 
 ## Acknowledgements
 
-This applet makes use of the excellent [d3js](https://d3js.org/) javascript library.
+This applet makes use of the excellent [d3js](https://d3js.org/) javascript library. I am also endebted to Grant Sanderson and his excellent [3Blue1Brown web site](https://www.3blue1brown.com/), where a much better explanation of eigenvectors and eigenvalues can be found in the Linear Algebra section, and to Mark Holder for showing me this amazing web site.
 
 ## Licence
 
