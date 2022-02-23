@@ -88,6 +88,8 @@ state |           probability               |     $$u$$ in range
   G   | $$\frac{\pi_G}{1-\pi_A} = 0.4/0.9$$ |   0.33333 to 0.77778     
   T   | $$\frac{\pi_T}{1-\pi_A} = 0.2/0.9$$ |   0.77778 to 1.00000
   
+**Note added in proof: The rows in tables like this should specify nucleotide states in alphabetical order: A, C, G, T.** Using a different ordering will still yield a valid simulation, but homeworks will be much easier for me to check if we all do the same thing!
+  
 If the next random number $$u$$ is between 0.0 and 0.33333, then you would change the current state from A to C. If $$u$$ is between 0.33333 and 0.77778, you would change A to G. Finally, if $$u$$ is greater than 0.77778, you would change A to T. Simulate along the edges of the tree in the order indicated on the figure so that we will all get the same result. Remember that you don't need to use excess chunks of edge length that extend beyond the node at the end of an edge. Once you determine the state at the far end of an edge, just start simulating from a clean slate using that state as your starting state for the next edge on the tree.
 
 ## What to turn in
