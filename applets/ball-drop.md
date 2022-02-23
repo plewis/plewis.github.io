@@ -4,7 +4,7 @@ title: Ball Drop
 permalink: /applets/ball-drop/
 ---
 
-## Can you do better than random mutation (and natural selection)?
+## Can you do better than random mutation and natural selection?
 
 <div id="control"></div>
 <div id="canvas"></div>
@@ -450,8 +450,10 @@ permalink: /applets/ball-drop/
         let label_color = "black";
         let you_pct = 100.0*placed_area/bucket_area;
         let sel_pct = 100.0*best.fitness/bucket_area;
-        addLabel(plot_svg, "summary", label_color, "your area = " + placed_area.toFixed(1) + " (" + you_pct.toFixed(1) + "%)", label_x - 20, label_y, "end", 14);
-        addLabel(plot_svg, "summary", label_color, "best area = " + best.fitness.toFixed(1) + " (" + sel_pct.toFixed(1) + "%)", label_x + 20, label_y, "start", 14);
+        //addLabel(plot_svg, "summary", label_color, "your area = " + placed_area.toFixed(1) + " (" + you_pct.toFixed(1) + "%)", label_x - 20, label_y, "end", 14);
+        //addLabel(plot_svg, "summary", label_color, "best area = " + best.fitness.toFixed(1) + " (" + sel_pct.toFixed(1) + "%)", label_x + 20, label_y, "start", 14);
+        addLabel(plot_svg, "summary", label_color, "your solution = " + you_pct.toFixed(1) + "%", label_x - 20, label_y, "end", 14);
+        addLabel(plot_svg, "summary", label_color, "natural selection = " + sel_pct.toFixed(1) + "%", label_x + 20, label_y, "start", 14);
         }
         
     //###################################################################
@@ -1047,3 +1049,18 @@ permalink: /applets/ball-drop/
     //    showDisplay(which_display == 0 ? 1 : 0);
     //    }, "150px", false);
 </script>
+
+## Mutation and natural selection
+
+Before you start choosing balls to drop, the applet creates a "population" of 50 "individuals" each of which has a "chromosome" that stores the balls in a random order.
+
+This population is allowed to evolve by natural selection for 50 generations. Each generation, each individual undergoes a mutation in which the positions of two balls chosen randomly are swapped. The "fitness" of each individual is measured as the percentage of area that they can capture by dropping the balls in the order specified by their chromosome.
+
+The top 10 of the 50 individuals are allowed to reproduce, each according to its relative fitness, but the best individual each generation is retained and not allowed to accidentally be extirpated (admittedly, an advantage not enjoyed by real populations!).
+
+## What I hope you will get out of playing this game
+
+You should find it difficult to come up with a better solution (that is, choose an ordering of balls that fills a higher percentage of the pit area) than that found by natural selection in a small population for a small number of generations. 
+
+Although natural selection begins with purely random solutions, its power lies in the fact that each incremental improvement is retained and not lost. While the odds against hitting on the best ordering of balls by chance is (for 18 balls) some 6,402,373,705,730,000 to 1, it is possible to get there quickly if you can ratchet your way there by preserving small improvements!
+ 
