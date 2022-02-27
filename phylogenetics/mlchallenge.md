@@ -5,7 +5,7 @@ permalink: /mlchallenge/
 ---
 ## Goals
 
-The goal of this lab is to challenge you to use the method of maximum likelihood along with a substitution model to learn what you can about a the evolutionary process leading to an unusual (but actual) dataset.
+The goal of this lab is to challenge you to use the method of maximum likelihood along with a substitution model to learn what you can about the evolutionary process leading to an unusual (but empirical) dataset.
 
 The data comprises two short genes, genes A and B (I'm using "gene" here to just mean a particular portion of a genome, not necessarily a complete protein-coding or RNA gene). 
 
