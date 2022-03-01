@@ -130,9 +130,9 @@ Slack to Zach the answers to these questions:
 
 > :thinking: Can the data for gene B tolerate the concatenated topology? 
 
-> :thinking: Can the data for gene A tolerate the gene B topology? 
+> :thinking: Can the data for gene A tolerate the gene B **ML** topology? 
 
-> :thinking: Can the data for gene B tolerate the gene A topology? 
+> :thinking: Can the data for gene B tolerate the gene A **ML** topology? 
 
 > :thinking: Based on your findings, how confident are you that one tree topology underlies both gene A and gene B? 
 
