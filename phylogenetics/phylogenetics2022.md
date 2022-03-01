@@ -26,8 +26,8 @@ Thursday Feb. 10        | **Bootstrapping, rate heterogeneity**<br/>Non-parametr
 Tuesday Feb. 15	        | **Simulation**<br/>How to simulate nucleotide sequence data, and why it’s done [[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Simulation.pdf)] Textbook: Ch. 6: pp. 93-96. | **Homework 5**: [Rate heterogeneity (python program to modify)](/hw5/)
 Thursday Feb. 17        | **Long branch attraction, topology tests**<br/>Statistical consistency, long branch attraction, testing the molecular clock, nonparametric bootstrap topology tests (KH/SH/AU), and parametric bootstrapping tests (SOWH). [[LBA slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/LBA.pdf)]  [[Topology test slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/TopologyTests.pdf)] | **Lab 5**: [Simulating sequences](/simulation/)
 Tuesday Feb. 22         | **Codon, secondary structure, and amino acid models**<br/>Nonsynonymous vs. synonymous rates, codon models, RNA stem/loop structure, compensatory substitutions, stem models, empirical amino acid rate matrices (PAM, JTT, WAG, LE) \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/AminoAcidRNACodonModels.pdf)\] \[[Diagonalization applet](https://plewis.github.io/applets/diagonalization/)\] | **Homework 6**: [Simulation](/hw6/)
-Thursday Feb. 24        | **Bayes' Rule**<br/> Joint, conditional, and marginal probabilities, and how they interact to create Bayes’ Rule; Probability vs. probability density. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianIntro.pdf)\] \[[MCMC robot applet](/applets/mcmc-robot/)\] Textbook: Ch. 7 (Bayes' Rule; pp. 101-116) | **Lab 6**: [Using R to explore probability distributions and plot trees](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_R_Primer)
-Tuesday Mar. 1          | **Bayesian statistics, MCMC**<br/> Metropolis-Hastings algorithm; mixing, burn-in, trace plots. | **Homework 7**: [MCMC](/hw7/)
+Thursday Feb. 24        | **Bayes' Rule**<br/> Joint, conditional, and marginal probabilities, and how they interact to create Bayes’ Rule; Probability vs. probability density. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianIntro.pdf)\] Textbook: Ch. 7 (Bayes' Rule; pp. 101-116) | **Lab 6**: [Using R to explore probability distributions and plot trees](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_R_Primer)
+Tuesday Mar. 1          | **Bayesian statistics, MCMC**<br/> Metropolis-Hastings algorithm; mixing, burn-in, trace plots. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MCMC.pdf)\] \[[MCMC robot applet](/applets/mcmc-robot/)\] | **Homework 7**: [MCMC](/hw7/)
 Thursday Mar. 3         | **Heated chains, topology proposals**<br/> Metropolis-coupled MCMC (i.e. “heated chains”), algorithms (a.k.a. updaters, moves, operators, proposals) for updating parameters and trees during MCMC. | **Lab 7**: Synthesis
 Tuesday Mar. 8         | **Prior distributions used in phylogenetics**<br/> Discrete Uniform (topology), Gamma (kappa, omega), Beta (pinvar), Dirichlet (base frequencies, GTR exchangeabilities); Tree length prior; induced split prior. | **Homework 8**: TBD
 Thursday Mar. 10        | **Priors**<br/> continued. | **Lab 8**: RevBayes
@@ -151,7 +151,7 @@ Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood a
 
 :hibiscus: Goldman, N., and Z. Yang. 1994. A codon-based model of nucleotide substitution for protein-coding DNA sequences. Molecular Biology and Evolution, 11, 725-736. (Goldman-Yang codon model)
 
-Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent data. Pages 156-163 in Computing Science and Statistics (E. Keramidas, ed.). (Metropolis-coupled MCMC a.k.a. heated chains)
+:hibiscus: Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent data. Pages 156-163 in Computing Science and Statistics (E. Keramidas, ed.). (Metropolis-coupled MCMC a.k.a. heated chains)
 
 :hibiscus: Gogarten, J. P., H. Kibak, P. Dittrich, L. Taiz, E. J. Bowman, B. J. Bowman, M. F. Manolson, R. J. Poole, T. Date, T. Oshima, J. Konishi, K. Denda, and M. Yoshida. 1989. Evolution of the vacuolar H+-ATPase: Implications for the origin of eukaryotes PNAS 86:6661-6665.
 
@@ -161,7 +161,7 @@ Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the 
 
 :hibiscus: Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model)
 
-Hastings, W. K. 1970. Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109. (Hastings ratio)
+:hibiscus: Hastings, W. K. 1970. Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109. (Hastings ratio)
 
 Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. The fossilized birth–death process for coherent calibration of divergence-time estimates. PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
 
@@ -195,7 +195,7 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 
 :hibiscus: Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model)
 
-Larget, B., and D. L. Simon. 1999. Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees. Molecular Biology and Evolution 16: 750-759. (see also Holder et al. 2005)
+:hibiscus: Larget, B., and D. L. Simon. 1999. Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees. Molecular Biology and Evolution 16: 750-759. (see also Holder et al. 2005)
 
 Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra)
 
@@ -217,7 +217,7 @@ Maddison, W. P., and FitzJohn, R. G. 2015. The unsolved challenge to phylogeneti
 
 Martins, E. P., and T. F. Hansen. 1997. Phylogenies and the comparative method: a general approach to incorporating phylogenetic information into the analysis of interspecific data. The American Naturalist 149:646-667. (PGLS)
 
-Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. Equation of state calculations by fast computing machines. J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC)
+:hibiscus: Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. Equation of state calculations by fast computing machines. J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC)
 
 :hibiscus: Michener, C. D., and R. R. Sokal. 1957. A Quantitative Approach to a Problem in Classification. Evolution 11:130-162
 
