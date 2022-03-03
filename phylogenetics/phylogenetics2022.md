@@ -27,9 +27,9 @@ Tuesday Feb. 15	        | **Simulation**<br/>How to simulate nucleotide sequence
 Thursday Feb. 17        | **Long branch attraction, topology tests**<br/>Statistical consistency, long branch attraction, testing the molecular clock, nonparametric bootstrap topology tests (KH/SH/AU), and parametric bootstrapping tests (SOWH). [[LBA slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/LBA.pdf)]  [[Topology test slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/TopologyTests.pdf)] | **Lab 5**: [Simulating sequences](/simulation/)
 Tuesday Feb. 22         | **Codon, secondary structure, and amino acid models**<br/>Nonsynonymous vs. synonymous rates, codon models, RNA stem/loop structure, compensatory substitutions, stem models, empirical amino acid rate matrices (PAM, JTT, WAG, LE) \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/AminoAcidRNACodonModels.pdf)\] \[[Diagonalization applet](https://plewis.github.io/applets/diagonalization/)\] | **Homework 6**: [Simulation](/hw6/)
 Thursday Feb. 24        | **Bayes' Rule**<br/> Joint, conditional, and marginal probabilities, and how they interact to create Bayes’ Rule; Probability vs. probability density. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianIntro.pdf)\] Textbook: Ch. 7 (Bayes' Rule; pp. 101-116) | **Lab 6**: [Using R to explore probability distributions and plot trees](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_R_Primer)
-Tuesday Mar. 1          | **Bayesian statistics, MCMC**<br/> Metropolis-Hastings algorithm; mixing, burn-in, trace plots. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MCMC.pdf)\] \[[MCMC robot applet](/applets/mcmc-robot/)\] | **Homework 7**: [MCMC](/hw7/)
-Thursday Mar. 3         | **Heated chains, topology proposals**<br/> Metropolis-coupled MCMC (i.e. “heated chains”), algorithms (a.k.a. updaters, moves, operators, proposals) for updating parameters and trees during MCMC. Textbook: Ch. 8 (MCMC; pp. 121-146) | **Lab 7**: [To concatenate or not to concatenate, that is the question](/mlchallenge/)
-Tuesday Mar. 8         | **Prior distributions used in phylogenetics**<br/> Discrete Uniform (topology), Gamma (kappa, omega), Beta (pinvar), Dirichlet (base frequencies, GTR exchangeabilities); Tree length prior; induced split prior. | **Homework 8**: TBD
+Tuesday Mar. 1          | **Bayesian statistics, MCMC**<br/> Metropolis-Hastings algorithm; mixing, burn-in, trace plots, heated chains, topology proposals, Updating parameters during MCMC. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MCMC.pdf)\] \[[MCMC robot applet](/applets/mcmc-robot/)\] | **Homework 7**: [MCMC](/hw7/)
+Thursday Mar. 3         | **Prior distributions used in phylogenetics**<br/>  Discrete Uniform (topology), Gamma or Lognormal (kappa, omega), Beta (pinvar), Dirichlet (base frequencies, GTR exchangeabilities); Tree length prior. \[[Dirichlet applet](/applets/dirichlet-prior/)\] \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PriorDistributions.pdf)\] Textbook: Ch. 8 (MCMC; pp. 121-146) | **Lab 7**: [To concatenate or not to concatenate, that is the question](/mlchallenge/)
+Tuesday Mar. 8         | **Prior distributions (cont.)**<br/> Running on empty, prior fences, induced priors, hierarchical models, empirical Bayes. | **Homework 8**: TBD
 Thursday Mar. 10        | **Priors**<br/> continued. | **Lab 8**: RevBayes
 Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
@@ -247,7 +247,7 @@ Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference b
 
 Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
 
-Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior)
+:hibiscus: Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior)
 
 :hibiscus: Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model)
 
@@ -270,6 +270,8 @@ Schwarz, G. E. 1978. Estimating the dimension of a model. Ann Stat. 6:461–464.
 Stamatakis, A. 2006. Phylogenetic models of rate heterogeneity: a high performance computing perspective. Proceedings 20th. IEEE International Parallel and Distributed Processing Symposium.
 
 Studier, J. A., and K. J. Keppler. 1988. A note on the neighbor-joining algorithm of Saitou and Nei. Molecular Biology and Evolution 5: 729-731. (Neighbor joining speedup)
+
+:hibiscus: Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. Bayesian selection of continuous-time Markov chain evolutionary models. Molecular Biology and Evolution 18:1001-1013.
 
 Swofford, D. L., G. J. Olsen, P. J. Waddell, and D. M. Hillis. 1996. Phylogenetic inference. Pages 407-514 in Molecular Systematics (D. M. Hillis, C. Moritz, and B. K. Mable, eds.). Sinauer Associates, Sunderland, Massachusetts. (SOWH topology test)
 
@@ -297,3 +299,4 @@ Xie, W.G., P.O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal L
 
 :hibiscus: Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
 
+:hibiscus: Zwickl, D., and M. T. Holder. 2004. Model parameterization, prior distributions, and the general time-reversible model in Bayesian phylogenetics. Systematic Biology 53: 877-888.
