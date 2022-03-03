@@ -1,6 +1,6 @@
 ---
 layout: applet
-title: Correlation
+title: Density Rain
 permalink: /applets/density-rain/
 ---
 
