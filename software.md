@@ -16,6 +16,7 @@ Developing these applets helped me understand concepts, and I hope they are usef
 
 ### Statistics ###
 
+* [Density Rain](/applets/density-rain/)
 * [MCMC](/applets/mcmc-robot/)
 * [Dirichlet Process Prior](/applets/dpp/)
 
