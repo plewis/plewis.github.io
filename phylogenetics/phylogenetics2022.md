@@ -30,7 +30,7 @@ Thursday Feb. 24        | **Bayes' Rule**<br/> Joint, conditional, and marginal 
 Tuesday Mar. 1          | **Bayesian statistics, MCMC**<br/> Metropolis-Hastings algorithm; mixing, burn-in, trace plots, heated chains, topology proposals, Updating parameters during MCMC. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MCMC.pdf)\] \[[MCMC robot applet](/applets/mcmc-robot/)\] | **Homework 7**: [MCMC](/hw7/)
 Thursday Mar. 3         | **Prior distributions used in phylogenetics**<br/>  Discrete Uniform (topology), Gamma or Lognormal (kappa, omega), Beta (pinvar), Dirichlet (base frequencies, GTR exchangeabilities); Tree length prior. \[[Dirichlet applet](/applets/dirichlet-prior/)\] \[[Density rain applet](/applets/density-rain/)\] \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PriorDistributions.pdf)\] Textbook: Ch. 8 (MCMC; pp. 121-146) | **Lab 7**: [To concatenate or not to concatenate, that is the question](/mlchallenge/)
 Tuesday Mar. 8         | **Prior distributions (cont.)**<br/> Running on empty, prior fences, induced priors, hierarchical models, empirical Bayes. | **Homework 8**: [Larget-Simon Local Move](/hw8/)
-Thursday Mar. 10        | **Priors**<br/> continued. | **Lab 8**: RevBayes
+Thursday Mar. 10        | **Priors**<br/> continued. | **Lab 8**: [MrBayes](/mrbayes/)
 Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
 Tuesday Mar.  22        | **Bayesian phylogenetics (continued)**<br/> Dirichlet process priors, credible vs. confidence intervals. \[[CI applet](/applets/ci/)\] \[[Stick-breaking applet](/applets/stickbreaking/)\] | **Homework 9**: TBD

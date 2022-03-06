@@ -3,6 +3,8 @@ layout: page
 title: Simulation Lab
 permalink: /simulation/
 ---
+[Up to the Phylogenetics main page](/phylogenetics2022/)
+
 ## Goals
 
 The goal of this lab is to gain experience simulating DNA sequence data, which can be useful in testing null hypotheses of interest (parametric bootstrapping) as well as testing the robustness of models to violations of their assumptions and testing the correctness of software and algorithms. The workhorse for DNA simulations in phylogenetics is Andrew Rambaut's program [seq-gen](http://tree.bio.ed.ac.uk/software/seqgen/), which still available (and still as useful as it always was!). I will also show you how to perform simulation experiments with PAUP*, which we will use to demonstrate long branch attraction.

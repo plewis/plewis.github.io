@@ -3,6 +3,8 @@ layout: page
 title: HyPhy Lab
 permalink: /hyphy/
 ---
+[Up to the Phylogenetics main page](/phylogenetics2022/)
+
 ## Goals
 
 The goal of this lab exercise is to show you how to use the [HyPhy](http://www.hyphy.org/) program for data exploration and hypothesis testing within a maximum likelihood framework. Although much can be done with PAUP* and IQ-TREE, HyPhy lets you to do some interesting and useful things that these programs cannot, such as allowing the model of evolution to change across a tree.

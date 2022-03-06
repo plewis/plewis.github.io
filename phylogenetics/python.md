@@ -3,7 +3,7 @@ layout: page
 title: Python primer
 permalink: /python/
 ---
-[Back to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2022/)
 
 ## What is Python?
 

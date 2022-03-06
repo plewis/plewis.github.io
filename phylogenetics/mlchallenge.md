@@ -3,6 +3,8 @@ layout: page
 title: Maximum Likelihood Challenge
 permalink: /mlchallenge/
 ---
+[Up to the Phylogenetics main page](/phylogenetics2022/)
+
 ## Goals
 
 The goal of this lab is to challenge you to use the method of maximum likelihood along with a substitution model to learn what you can about the evolutionary process leading to an unusual (but empirical) dataset.

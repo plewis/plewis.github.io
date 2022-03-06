@@ -3,6 +3,8 @@ layout: page
 title: Likelihood Lab
 permalink: /likelihood/
 ---
+[Up to the Phylogenetics main page](/phylogenetics2022/)
+
 ## Goals
 
 The goal of this lab exercise is to show you how to conduct maximum likelihood analyses in PAUP* using several models, and to decide among competing models using likelihood ratio tests.

@@ -3,6 +3,8 @@ layout: page
 title: IQ-TREE Lab
 permalink: /iqtree/
 ---
+[Up to the Phylogenetics main page](/phylogenetics2022/)
+
 ## Goals
 
 Today you will continue learning about maximum likelihood inference and will learn to use a program known for its speed and ability to handle large-scale phylogenetic analyses. 
