@@ -29,7 +29,7 @@ Tuesday Feb. 22         | **Codon, secondary structure, and amino acid models**<
 Thursday Feb. 24        | **Bayes' Rule**<br/> Joint, conditional, and marginal probabilities, and how they interact to create Bayes’ Rule; Probability vs. probability density. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianIntro.pdf)\] Textbook: Ch. 7 (Bayes' Rule; pp. 101-116) | **Lab 6**: [Using R to explore probability distributions and plot trees](http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_R_Primer)
 Tuesday Mar. 1          | **Bayesian statistics, MCMC**<br/> Metropolis-Hastings algorithm; mixing, burn-in, trace plots, heated chains, topology proposals, Updating parameters during MCMC. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MCMC.pdf)\] \[[MCMC robot applet](/applets/mcmc-robot/)\] | **Homework 7**: [MCMC](/hw7/)
 Thursday Mar. 3         | **Prior distributions used in phylogenetics**<br/>  Discrete Uniform (topology), Gamma or Lognormal (kappa, omega), Beta (pinvar), Dirichlet (base frequencies, GTR exchangeabilities); Tree length prior. \[[Dirichlet applet](/applets/dirichlet-prior/)\] \[[Density rain applet](/applets/density-rain/)\] \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PriorDistributions.pdf)\] Textbook: Ch. 8 (MCMC; pp. 121-146) | **Lab 7**: [To concatenate or not to concatenate, that is the question](/mlchallenge/)
-Tuesday Mar. 8         | **Prior distributions (cont.)**<br/> Running on empty, prior fences, induced priors, hierarchical models, empirical Bayes. | **Homework 8**: TBD
+Tuesday Mar. 8         | **Prior distributions (cont.)**<br/> Running on empty, prior fences, induced priors, hierarchical models, empirical Bayes. | **Homework 8**: [Larget-Simon Local Move](/hw8/)
 Thursday Mar. 10        | **Priors**<br/> continued. | **Lab 8**: RevBayes
 Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
@@ -169,7 +169,7 @@ Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from mu
 
 :hibiscus: Hennig, W. 1966. Phylogenetic systematics. University of Illinois Press, Urbana.
 
-Holder, M. T., Lewis, P. O., Swofford, D. L., and Larget, B. (2005). Hastings ratio of the LOCAL proposal used in Bayesian phylogenetics. Systematic Biology, 54(6), 961–965.
+:hibiscus: Holder, M. T., Lewis, P. O., Swofford, D. L., and Larget, B. (2005). Hastings ratio of the LOCAL proposal used in Bayesian phylogenetics. Systematic Biology, 54(6), 961–965.
 
 :hibiscus: Huelsenbeck, J. P., and D. M. Hillis. 1993. [Success of phylogenetic methods in the four taxon case.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 42:247-264. (coined the term Felsenstein Zone)
 
