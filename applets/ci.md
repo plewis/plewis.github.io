@@ -627,7 +627,8 @@ Note how the Beta prior affects the posterior, which in turn affects the credibl
 
     // Function that modifies the domain of xscale
     function rescaleXAxis() {
-        xmax = (nheads == 5 ? 0.4 : 1.0);
+        //xmax = (nheads == 5 ? 0.4 : 1.0); // 2022-03-08: using 0.4 does not work well for some choices of prior
+        xmax = 1.0;
         xscale.domain([0, xmax]);
         gxaxis.call(xaxis);
     }
