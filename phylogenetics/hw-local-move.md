@@ -35,6 +35,10 @@ I will refer to these 7 pseudorandom numbers by name; e.g. u0, u1, ..., u6 (insi
 
 Scroll down to the end of this page and copy the questions there to a blank text file. As you follow the instructions below, record results in this "worksheet" as instructed.
 
+### Data set
+
+Download this dataset to use when computing likelihoods: [green5.nex](/assets/data/green5.nex)
+
 ### Starting tree
 
 {% include figure.html description=" " url="/assets/img/local-move-starting-tree.png" css="image-center noborder" width="600px" %}
@@ -92,7 +96,7 @@ Create a newick tree description with edge lengths and record in the worksheet. 
 
 ### Calculate the log-kernel for the proposed tree
 
-Create a nexus file that you can use with PAUP* to compute the log-likelihood of the proposed tree. Use the JC+G model again with fixed shape = 0.3. Be sure to specify userbrlens when computing the log-likelihood so that PAUP* will not try to estimate edge lengths.
+Create a nexus file that, when executed in PAUP*, computes the log-likelihood of the proposed tree. Use the JC+G model again with fixed shape = 0.3. Be sure to specify userbrlens when computing the log-likelihood so that PAUP* will not try to estimate edge lengths.
 
 Recompute the log joint prior using the modified edge lengths.
 
