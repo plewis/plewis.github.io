@@ -93,6 +93,8 @@ Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sin
 
 Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
 
+:hibiscus: Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. Bayesian estimation of concordance among gene trees. Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy)
+
 Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
 
 :hibiscus: Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. Mitochondrial DNA sequences of primates, tempo and mode of evolution. Journal of Molecular Evolution 18:225-239.
@@ -173,9 +175,9 @@ Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from mu
 
 :hibiscus: Huelsenbeck, J. P., and D. M. Hillis. 1993. [Success of phylogenetic methods in the four taxon case.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 42:247-264. (coined the term Felsenstein Zone)
 
-Huelsenbeck, J. P., Jain, S., Frost, S., and Pond, S. 2006. A Dirichlet process model for detecting positive selection in protein-coding DNA sequences. Proceedings of the National Academy USA 103:6263–6268. (DP mixture model for omega)
+:hibiscus: Huelsenbeck, J. P., Jain, S., Frost, S., and Pond, S. 2006. A Dirichlet process model for detecting positive selection in protein-coding DNA sequences. Proceedings of the National Academy USA 103:6263–6268. (DP mixture model for omega)
 
-Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommodating and testing across-site rate variation. Systematic Biology 56:975–987. (DP model for among site rate heterogeneity)
+:hibiscus: Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommodating and testing across-site rate variation. Systematic Biology 56:975–987. (DP model for among site rate heterogeneity)
 
 :hibiscus: Huson, D. H., and D. Bryant. 2006. Application of phylogenetic networks in evolutionary studies. Mol. Biol. Evol. 23:254-267. (SplitsTree)
 
@@ -197,7 +199,7 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 
 :hibiscus: Larget, B., and D. L. Simon. 1999. Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees. Molecular Biology and Evolution 16: 750-759. (see also Holder et al. 2005)
 
-Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra)
+:hibiscus: Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra)
 
 Lartillot, N., and H. Philippe. 2006. Computing bayes factors using thermodynamic integration. Systematic Biology 55(2): 195-207. (Thermodynamic integration (a.k.a. path sampling) marginal likelihood estimation)
 
