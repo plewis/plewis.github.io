@@ -52,10 +52,10 @@ To quit MrBayes, type <tt>quit</tt> at the "MrBayes>" prompt. You will need to q
 Create a MRBAYES block in your Nexus data file. MrBayes does not have a built-in editor, so you will need to use the nano editor to edit the _algaemb.nex_ data file. Use Ctrl-/, Ctrl-v to jump to the bottom of the file in nano, then add the following at the very bottom of the file to begin creating the MRBAYES block:
 
     begin mrbayes;
-        set autoclose=yes;
+        set autoclose=yes seed=12345 swapseed=12345;
     end;
 
-Note that I refer to this block as a MRBAYES block (upper case), but the MrBayes program does not care about case, so using mrbayes (lower case) works just fine. The <tt>autoclose=yes</tt> statement in the <tt>set</tt> command tells MrBayes that we will not want to continue the run beyond the 10,000 generations that we will specify. If you leave this out, MrBayes will ask you whether you wish to continue running the chains after the specified number of generations is finished.
+Note that I refer to this block as a MRBAYES block (upper case), but the MrBayes program does not care about case, so using mrbayes (lower case) works just fine. The <tt>autoclose=yes</tt> statement in the <tt>set</tt> command tells MrBayes that we will not want to continue the run beyond the 10,000 generations that we will specify. If you leave this out, MrBayes will ask you whether you wish to continue running the chains after the specified number of generations is finished. The <tt>seed=12345</tt> and <tt>swapseed=12345</tt> statements will set a seed for your mcmc and swapping between your heated and cold chains. If you don't specify a seed, MrBayes will generate random seeds. Specifying a seed will allow you to get the same results each time you run the analysis. Note that in practice you can chaneg you seed to be any integer, but we'll all use 12345 for this lab.
 
 Add subsequent commands (described below) after the <tt>set</tt> command and before the <tt>end;</tt> line. Note that commands in MrBayes are (intentionally) similar to those in PAUP*, but the differences can be frustrating. For instance, <tt>lset ?</tt> in PAUP* gives you information about the current likelihood settings, but this does not work in MrBayes. Instead, you type <tt>help lset</tt>. Also, the <tt>lset</tt> command in MrBayes has many options not present in PAUP*, and vice versa.
 
@@ -64,7 +64,7 @@ Add subsequent commands (described below) after the <tt>set</tt> command and bef
 {% include figure.html description="Exponential(10) density function" url="/assets/img/exp10pdf.png" css="image-right noborder" width="300px" %}
 
     begin mrbayes;
-        set autoclose=yes;
+        set autoclose=yes seed=12345 swapseed=12345;
         prset brlenspr=unconstrained:exp(10.0);
     end;
 
@@ -77,7 +77,7 @@ The <tt>prset</tt> command above specifies that branch lengths are to be unconst
 {% include figure.html description="Exponential(1) density function" url="/assets/img/exp1pdf.png" css="image-right noborder" width="300px" %}
 
     begin mrbayes;
-        set autoclose=yes;
+        set autoclose=yes seed=12345 swapseed=12345;
         prset brlenspr=unconstrained:exp(10.0);
         prset shapepr=exp(1.0);
     end;
@@ -89,7 +89,7 @@ The second <tt>prset</tt> command specifies an exponential distribution with mea
 {% include figure.html description="(a) Beta(1,1) density function; (b) BetaPrime(1,1) density function" url="/assets/img/beta-vs-betaprime.png" css="image-center noborder" width="600px" %}
 
     begin mrbayes;
-        set autoclose=yes;
+        set autoclose=yes seed=12345 swapseed=12345;
         prset brlenspr=unconstrained:exp(10.0);
         prset shapepr=exp(1.0);
         prset tratiopr=beta(1.0,1.0);
@@ -106,7 +106,7 @@ The Beta Prime distribution is somewhat peculiar, however, when both parameters 
 ### Specifying a prior on base frequencies
 
     begin mrbayes;
-        set autoclose=yes;
+        set autoclose=yes seed=12345 swapseed=12345;
         prset brlenspr=unconstrained:exp(10.0);
         prset shapepr=exp(1.0);
         prset tratiopr=beta(1.0,1.0);
@@ -118,7 +118,7 @@ The above command states that a flat Dirichlet distribution is to be used for ba
 ### The lset command
 
     begin mrbayes;
-        set autoclose=yes;
+        set autoclose=yes seed=12345 swapseed=12345;
         prset brlenspr=unconstrained:exp(10.0);
         prset shapepr=exp(1.0);
         prset tratiopr=beta(1.0,1.0);
@@ -131,7 +131,7 @@ We are finished setting priors now, so the <tt>lset</tt> command above finishes 
 ### Specifying MCMC options
 
     begin mrbayes;
-        set autoclose=yes;
+        set autoclose=yes seed=12345 swapseed=12345;
         prset brlenspr=unconstrained:exp(10.0);
         prset shapepr=exp(1.0);
         prset tratiopr=beta(1.0,1.0);
@@ -157,7 +157,7 @@ Finally, <tt>savebrlens=yes</tt> tells MrBayes that we would like it to save bra
 ### Specifying an outgroup
 
     begin mrbayes;
-        set autoclose=yes;
+        set autoclose=yes seed=12345 swapseed=12345;
         prset brlenspr=unconstrained:exp(10.0);
         prset shapepr=exp(1.0);
         prset tratiopr=beta(1.0,1.0);
@@ -219,17 +219,17 @@ Below is the acceptance information for my run:
 
     Acceptance rates for the moves in the "cold" chain:
        With prob.   (last 100)   chain accepted proposals by move
-          28.6 %     ( 29 %)     Dirichlet(Tratio)
-           NA           NA       Dirichlet(Pi)
-           NA           NA       Slider(Pi)
-          55.0 %     ( 52 %)     Multiplier(Alpha)
-           7.1 %     (  1 %)     ExtSPR(Tau,V)
-           6.9 %     (  6 %)     ExtTBR(Tau,V)
-           9.9 %     ( 12 %)     NNI(Tau,V)
-           9.4 %     (  8 %)     ParsSPR(Tau,V)
-          47.2 %     ( 47 %)     Multiplier(V)
-          30.4 %     ( 24 %)     Nodeslider(V)
-          16.0 %     ( 19 %)     TLMultiplier(V)
+         35.2 %     ( 36 %)     Dirichlet(Tratio)
+          NA           NA       Dirichlet(Pi)
+          NA           NA       Slider(Pi)
+         51.5 %     ( 51 %)     Multiplier(Alpha)
+          7.0 %     ( 10 %)     ExtSPR(Tau,V)
+          6.0 %     (  5 %)     ExtTBR(Tau,V)
+         10.6 %     (  9 %)     NNI(Tau,V)
+         10.6 %     (  7 %)     ParsSPR(Tau,V)
+         49.4 %     ( 44 %)     Multiplier(V)
+         28.5 %     ( 39 %)     Nodeslider(V)
+         17.6 %     ( 15 %)     TLMultiplier(V)
          
 In the above table, 55.0% of proposals to change the gamma shape parameter (denoted Alpha by MrBayes) were accepted. This makes it sounds as if the gamma shape parameter was changed quite often, but to get the full picture, you need to scroll up to the beginning of the output and examine this section:
 
@@ -261,7 +261,7 @@ This says that an attempt to change the gamma shape parameter will only be made 
 
 The fact that MrBayes modified the gamma shape parameter only about 100 times out of a run involving 10000 iterations brings up a couple of important points. First, in each iteration, MrBayes chooses a move (i.e. proposal) at random to try. Each move is associated with a "Rel. prob." (relative probability). Using the <tt>showmoves</tt> command shows the following list of moves that were used in this particular analysis:
 
-    Moves that will be used by MCMC sampler (rel. proposal prob. > 0.0):
+   Moves that will be used by MCMC sampler (rel. proposal prob. > 0.0):
 
       1 -- Move        = Dirichlet(Tratio)
            Type        = Dirichlet proposal
@@ -276,8 +276,8 @@ The fact that MrBayes modified the gamma shape parameter only about 100 times ou
            Parameter   = Pi [param. 2] (Stationary state frequencies)
            Tuningparam = alpha (Dirichlet parameter)
                  alpha = 100.000  [chain 1]
-                         100.000  [chain 2]
-                         101.005  [chain 3]
+                         101.005  [chain 2]
+                         100.000  [chain 3]
            Targetrate  = 0.250
            Rel. prob.  = 0.5
 
@@ -295,9 +295,7 @@ The fact that MrBayes modified the gamma shape parameter only about 100 times ou
            Type        = Multiplier
            Parameter   = Alpha [param. 3] (Shape of scaled gamma distribution of site rates)
            Tuningparam = lambda (Multiplier tuning parameter)
-                lambda = 0.819  [chain 1]
-                         0.819  [chain 2]
-                         0.827  [chain 3]
+                lambda = 0.819
            Targetrate  = 0.250
            Rel. prob.  = 1.0
 
@@ -345,9 +343,7 @@ The fact that MrBayes modified the gamma shape parameter only about 100 times ou
            Type        = Random brlen hit with multiplier
            Parameter   = V [param. 6] (Branch lengths)
            Tuningparam = lambda (Multiplier tuning parameter)
-                lambda = 1.987  [chain 1]
-                         2.007  [chain 2]
-                         2.027  [chain 3]
+                lambda = 2.007
            Targetrate  = 0.250
            Rel. prob.  = 20.0
 
@@ -362,9 +358,12 @@ The fact that MrBayes modified the gamma shape parameter only about 100 times ou
            Type        = Whole treelength hit with multiplier
            Parameter   = V [param. 6] (Branch lengths)
            Tuningparam = lambda (Multiplier tuning parameter)
-                lambda = 1.319
+                lambda = 1.319  [chain 1]
+                         1.345  [chain 2]
+                         1.345  [chain 3]
            Targetrate  = 0.250
            Rel. prob.  = 3.0
+
 
 Summing the 11 relative probabilities yields 1 + 0.5 + 0.5 + 1 + 5 + 5 + 5 + 5 + 20 + 7 + 3 = 53. To get the probability of using one of these moves in any particular iteration, MrBayes divides the relative probability for the move by this sum. Thus, move 4, whose job is to update the gamma shape parameter (called Alpha by MrBayes) will be chosen with probability 1/53 = 0.01886792. This is where the "1.89 % Multiplier(Alpha)" line comes from in the move probability table spit out just before the run started.
 
@@ -408,12 +407,12 @@ sampled only every 10th iteration, which yields 1000 samples; the 1 additional s
 
 > :thinking: Which value in the parameter column had the largest effective sample size (ESS)?
 {% comment %}
-alpha (for me, but your results may vary)
+pi(G)
 {% endcomment %}
 
 > :thinking: Would you conclude from the ESS column that a longer run is necessary?
 {% comment %}
-yes, I found that none of the parameters have ESS values greater than 100
+yes, I found that only one of the parameters pi(G) had a ESS value greater than 100
 {% endcomment %}
 
 ## The sumt command
@@ -450,24 +449,24 @@ Click the Estimates tab again at the top, then click the row labeled kappa on th
 
 > :thinking: What is the posterior mean of kappa?
 {% comment %}
-4.9942
+4.9144
 {% endcomment %}
 
 > :thinking: What is the 95% HPD credible interval for kappa?
 {% comment %}
-3.7176 to 5.9178
+3.9442 to 5.9349
 {% endcomment %}
 
 Click the row labeled alpha on the left. This is the shape parameter of the gamma distribution governing rates across sites.
 
 > :thinking: What is the posterior mean of alpha?
 {% comment %}
-0.2464
+0.2381
 {% endcomment %}
 
 > :thinking: What is the 95% credible interval for alpha?
 {% comment %}
-0.1961 to 0.3138
+0.1710 to 0.3008
 {% endcomment %}
 
 > :thinking: Is there rate heterogeneity among sites, or are all sites evolving at nearly the same rate?
@@ -479,7 +478,7 @@ Click on the row labeled TL on the left (the Tree Length).
 
 > :thinking: What is the posterior mean tree length?
 {% comment %}
-0.6501
+0.6462
 {% endcomment %}
 
 ### Scatterplots of pairs of parameters
