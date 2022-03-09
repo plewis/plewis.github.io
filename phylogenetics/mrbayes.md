@@ -432,7 +432,7 @@ Type <tt>quit</tt> (or just <tt>q</tt>), to quit MrBayes now.
 
 ## Using Tracer to summarize MCMC results
 
-The Java program [Tracer](http://tree.bio.ed.ac.uk/software/tracer/) is very useful for summarizing the results of Bayesian phylogenetic analyses. Tracer was written to accompany the program [Beast](http://tree.bio.ed.ac.uk/software/beast/), but it works well with the output file produced by MrBayes as well. This lab was written using Tracer version 1.6.
+The Java program [Tracer](https://github.com/beast-dev/tracer/releases) is very useful for summarizing the results of Bayesian phylogenetic analyses. Tracer was written to accompany the program [Beast](https://github.com/beast-dev/beast-mcmc), but it works well with the output file produced by MrBayes as well. This lab was written using Tracer version 1.7.1.
 
 To use Tracer on your own computer to view files created on the cluster, you need to get the file on the cluster downloaded to your laptop. Download the file _algaemb.nex.p_ (using Cyberduck, FileZilla, Fugu, scp, or whatever has been working).
 
