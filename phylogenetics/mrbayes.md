@@ -218,171 +218,171 @@ proposals are not bold enough and tend to propose places very close to the curre
 Below is the acceptance information for my run:
 
     Acceptance rates for the moves in the "cold" chain:
-     With prob.   (last 100)   chain accepted proposals by move
-        38.3 %     ( 32 %)     Dirichlet(Tratio)
-        21.7 %     ( 18 %)     Dirichlet(Pi)
-         NA           NA       Slider(Pi)
-        49.3 %     ( 52 %)     Multiplier(Alpha)
-         9.0 %     ( 14 %)     ExtSPR(Tau,V)
-         2.3 %     (  5 %)     ExtTBR(Tau,V)
-        10.3 %     ( 17 %)     NNI(Tau,V)
-         9.8 %     (  8 %)     ParsSPR(Tau,V)
-        46.3 %     ( 39 %)     Multiplier(V)
-        29.8 %     ( 28 %)     Nodeslider(V)
-        19.6 %     ( 22 %)     TLMultiplier(V)
-
-In the above table, 49.3% of proposals to change the gamma shape parameter (denoted Alpha by MrBayes) were accepted. This makes it sounds as if the gamma shape parameter was changed quite often, but to get the full picture, you need to scroll up to the beginning of the output and examine this section:
+       With prob.   (last 100)   chain accepted proposals by move
+          28.6 %     ( 29 %)     Dirichlet(Tratio)
+           NA           NA       Dirichlet(Pi)
+           NA           NA       Slider(Pi)
+          55.0 %     ( 52 %)     Multiplier(Alpha)
+           7.1 %     (  1 %)     ExtSPR(Tau,V)
+           6.9 %     (  6 %)     ExtTBR(Tau,V)
+           9.9 %     ( 12 %)     NNI(Tau,V)
+           9.4 %     (  8 %)     ParsSPR(Tau,V)
+          47.2 %     ( 47 %)     Multiplier(V)
+          30.4 %     ( 24 %)     Nodeslider(V)
+          16.0 %     ( 19 %)     TLMultiplier(V)
+         
+In the above table, 55.0% of proposals to change the gamma shape parameter (denoted Alpha by MrBayes) were accepted. This makes it sounds as if the gamma shape parameter was changed quite often, but to get the full picture, you need to scroll up to the beginning of the output and examine this section:
 
     The MCMC sampler will use the following moves:
-     With prob.  Chain will use move
-        2.00 %   Dirichlet(Tratio)
-        1.00 %   Dirichlet(Pi)
-        1.00 %   Slider(Pi)
-        2.00 %   Multiplier(Alpha)
-       10.00 %   ExtSPR(Tau,V)
-       10.00 %   ExtTBR(Tau,V)
-       10.00 %   NNI(Tau,V)
-       10.00 %   ParsSPR(Tau,V)
-       40.00 %   Multiplier(V)
-       10.00 %   Nodeslider(V)
-        4.00 %   TLMultiplier(V)
-
-This says that an attempt to change the gamma shape parameter will only be made in 2% of the iterations.
+       With prob.  Chain will use move
+          1.89 %   Dirichlet(Tratio)
+          0.94 %   Dirichlet(Pi)
+          0.94 %   Slider(Pi)
+          1.89 %   Multiplier(Alpha)
+          9.43 %   ExtSPR(Tau,V)
+          9.43 %   ExtTBR(Tau,V)
+          9.43 %   NNI(Tau,V)
+          9.43 %   ParsSPR(Tau,V)
+         37.74 %   Multiplier(V)
+         13.21 %   Nodeslider(V)
+          5.66 %   TLMultiplier(V)
+         
+This says that an attempt to change the gamma shape parameter will only be made in fewer than 2% of the iterations.
 
 > :thinking: How many times did MrBayes attempt to modify the gamma shape parameter?
 {% comment %}
-2% 0f 10000 is 200 times
+1.89% 0f 10000 is 189 times
 {% endcomment %}
 
 > :thinking: How many times did MrBayes actually modify the gamma shape parameter?
 {% comment %}
-49.3% of 2% 0f 10000 is 99 times
+55.0% of 1.89% 0f 10000 is 104 times
 {% endcomment %}
 
-The fact that MrBayes modified the gamma shape parameter fewer than 100 times out of a run involving 10000 iterations brings up a couple of important points. First, in each iteration, MrBayes chooses a move (i.e. proposal) at random to try. Each move is associated with a "Rel. prob." (relative probability). Using the <tt>showmoves</tt> command shows the following list of moves that were used in this particular analysis:
+The fact that MrBayes modified the gamma shape parameter only about 100 times out of a run involving 10000 iterations brings up a couple of important points. First, in each iteration, MrBayes chooses a move (i.e. proposal) at random to try. Each move is associated with a "Rel. prob." (relative probability). Using the <tt>showmoves</tt> command shows the following list of moves that were used in this particular analysis:
 
-    1 -- Move        = Dirichlet(Tratio)
-      Type        = Dirichlet proposal
-      Parameter   = Tratio [param. 1] (Transition and transversion rates)
-      Tuningparam = alpha (Dirichlet parameter)
-            alpha = 49.010  [chain 1]
-                    49.502  [chain 2]
-                    49.502  [chain 3]
-      Targetrate  = 0.250
-      Rel. prob.  = 1.0
+    Moves that will be used by MCMC sampler (rel. proposal prob. > 0.0):
 
-    2 -- Move        = Dirichlet(Pi)
-      Type        = Dirichlet proposal
-      Parameter   = Pi [param. 2] (Stationary state frequencies)
-      Tuningparam = alpha (Dirichlet parameter)
-            alpha = 101.005  [chain 1]
-                    101.005  [chain 2]
-                    100.000  [chain 3]
-      Targetrate  = 0.250
-      Rel. prob.  = 0.5
+      1 -- Move        = Dirichlet(Tratio)
+           Type        = Dirichlet proposal
+           Parameter   = Tratio [param. 1] (Transition and transversion rates)
+           Tuningparam = alpha (Dirichlet parameter)
+                 alpha = 49.502
+           Targetrate  = 0.250
+           Rel. prob.  = 1.0
 
-    3 -- Move        = Slider(Pi)
-      Type        = Sliding window
-      Parameter   = Pi [param. 2] (Stationary state frequencies)
-      Tuningparam = delta (Sliding window size)
-            delta = 0.202  [chain 1]
-                    0.202  [chain 2]
-                    0.200  [chain 3]
-      Targetrate  = 0.250
-      Rel. prob.  = 0.5
+      2 -- Move        = Dirichlet(Pi)
+           Type        = Dirichlet proposal
+           Parameter   = Pi [param. 2] (Stationary state frequencies)
+           Tuningparam = alpha (Dirichlet parameter)
+                 alpha = 100.000  [chain 1]
+                         100.000  [chain 2]
+                         101.005  [chain 3]
+           Targetrate  = 0.250
+           Rel. prob.  = 0.5
 
-    4 -- Move        = Multiplier(Alpha)
-      Type        = Multiplier
-      Parameter   = Alpha [param. 3] (Shape of scaled gamma distribution of site rates)
-      Tuningparam = lambda (Multiplier tuning parameter)
-           lambda = 0.827  [chain 1]
-                    0.827  [chain 2]
-                    0.819  [chain 3]
-      Targetrate  = 0.250
-      Rel. prob.  = 1.0
+      3 -- Move        = Slider(Pi)
+           Type        = Sliding window
+           Parameter   = Pi [param. 2] (Stationary state frequencies)
+           Tuningparam = delta (Sliding window size)
+                 delta = 0.200  [chain 1]
+                         0.202  [chain 2]
+                         0.200  [chain 3]
+           Targetrate  = 0.250
+           Rel. prob.  = 0.5
 
-    5 -- Move        = ExtSPR(Tau,V)
-      Type        = Extending SPR
-      Parameters  = Tau [param. 5] (Topology)
-                    V [param. 6] (Branch lengths)
-      Tuningparam = p_ext (Extension probability)
-                    lambda (Multiplier tuning parameter)
-            p_ext = 0.500
-           lambda = 0.098
-      Rel. prob.  = 5.0
+      4 -- Move        = Multiplier(Alpha)
+           Type        = Multiplier
+           Parameter   = Alpha [param. 3] (Shape of scaled gamma distribution of site rates)
+           Tuningparam = lambda (Multiplier tuning parameter)
+                lambda = 0.819  [chain 1]
+                         0.819  [chain 2]
+                         0.827  [chain 3]
+           Targetrate  = 0.250
+           Rel. prob.  = 1.0
 
-    6 -- Move        = ExtTBR(Tau,V)
-      Type        = Extending TBR
-      Parameters  = Tau [param. 5] (Topology)
-                    V [param. 6] (Branch lengths)
-      Tuningparam = p_ext (Extension probability)
-                    lambda (Multiplier tuning parameter)
-            p_ext = 0.500
-           lambda = 0.098
-      Rel. prob.  = 5.0
+      5 -- Move        = ExtSPR(Tau,V)
+           Type        = Extending SPR
+           Parameters  = Tau [param. 5] (Topology)
+                         V [param. 6] (Branch lengths)
+           Tuningparam = p_ext (Extension probability)
+                         lambda (Multiplier tuning parameter)
+                 p_ext = 0.500
+                lambda = 0.098
+           Rel. prob.  = 5.0
 
-    7 -- Move        = NNI(Tau,V)
-      Type        = NNI move
-      Parameters  = Tau [param. 5] (Topology)
-                    V [param. 6] (Branch lengths)
-      Rel. prob.  = 5.0
+      6 -- Move        = ExtTBR(Tau,V)
+           Type        = Extending TBR
+           Parameters  = Tau [param. 5] (Topology)
+                         V [param. 6] (Branch lengths)
+           Tuningparam = p_ext (Extension probability)
+                         lambda (Multiplier tuning parameter)
+                 p_ext = 0.500
+                lambda = 0.098
+           Rel. prob.  = 5.0
 
-    8 -- Move        = ParsSPR(Tau,V)
-      Type        = Parsimony-biased SPR
-      Parameters  = Tau [param. 5] (Topology)
-                    V [param. 6] (Branch lengths)
-      Tuningparam = warp (parsimony warp factor)
-                    lambda (multiplier tuning parameter)
-                    r (reweighting probability)
-             warp = 0.100
-           lambda = 0.098
-                r = 0.050
-      Rel. prob.  = 5.0
+      7 -- Move        = NNI(Tau,V)
+           Type        = NNI move
+           Parameters  = Tau [param. 5] (Topology)
+                         V [param. 6] (Branch lengths)
+           Rel. prob.  = 5.0
 
-    9 -- Move        = Multiplier(V)
-      Type        = Random brlen hit with multiplier
-      Parameter   = V [param. 6] (Branch lengths)
-      Tuningparam = lambda (Multiplier tuning parameter)
-           lambda = 2.048
-      Targetrate  = 0.250
-      Rel. prob.  = 20.0
+      8 -- Move        = ParsSPR(Tau,V)
+           Type        = Parsimony-biased SPR
+           Parameters  = Tau [param. 5] (Topology)
+                         V [param. 6] (Branch lengths)
+           Tuningparam = warp (parsimony warp factor)
+                         r (reweighting probability)
+                         v_t (typical branch length)
+                         lambda (multiplier tuning parameter)
+                  warp = 0.100
+                     r = 0.050
+                   v_t = 0.030
+                lambda = 0.098
+           Rel. prob.  = 5.0
 
-    10 -- Move        = Nodeslider(V)
-      Type        = Node slider (uniform on possible positions)
-      Parameter   = V [param. 6] (Branch lengths)
-      Tuningparam = lambda (Multiplier tuning parameter)
-           lambda = 0.191
-      Rel. prob.  = 5.0
+      9 -- Move        = Multiplier(V)
+           Type        = Random brlen hit with multiplier
+           Parameter   = V [param. 6] (Branch lengths)
+           Tuningparam = lambda (Multiplier tuning parameter)
+                lambda = 1.987  [chain 1]
+                         2.007  [chain 2]
+                         2.027  [chain 3]
+           Targetrate  = 0.250
+           Rel. prob.  = 20.0
 
-    11 -- Move        = TLMultiplier(V)
-      Type        = Whole treelength hit with multiplier
-      Parameter   = V [param. 6] (Branch lengths)
-      Tuningparam = lambda (Multiplier tuning parameter)
-           lambda = 1.332  [chain 1]
-                    1.345  [chain 2]
-                    1.332  [chain 3]
-      Targetrate  = 0.250
-      Rel. prob.  = 2.0
+     10 -- Move        = Nodeslider(V)
+           Type        = Node slider (uniform on possible positions)
+           Parameter   = V [param. 6] (Branch lengths)
+           Tuningparam = lambda (Multiplier tuning parameter)
+                lambda = 0.191
+           Rel. prob.  = 7.0
 
-    Use 'Showmoves allavailable=yes' to see a list of all available moves
+     11 -- Move        = TLMultiplier(V)
+           Type        = Whole treelength hit with multiplier
+           Parameter   = V [param. 6] (Branch lengths)
+           Tuningparam = lambda (Multiplier tuning parameter)
+                lambda = 1.319
+           Targetrate  = 0.250
+           Rel. prob.  = 3.0
 
-Summing the 11 relative probabilities yields 1 + 0.5 + 0.5 + 1 + 5 + 5 + 5 + 5 + 20 + 5 + 2 = 50. To get the probability of using one of these moves in any particular iteration, MrBayes divides the relative probability for the move by this sum. Thus, move 4, whose job is to update the gamma shape parameter (called Alpha by MrBayes) will be chosen with probability 1/50 = 0.02. This is where the "2.00 % Multiplier(Alpha)" line comes from in the move probability table spit out just before the run started.
+Summing the 11 relative probabilities yields 1 + 0.5 + 0.5 + 1 + 5 + 5 + 5 + 5 + 20 + 7 + 3 = 53. To get the probability of using one of these moves in any particular iteration, MrBayes divides the relative probability for the move by this sum. Thus, move 4, whose job is to update the gamma shape parameter (called Alpha by MrBayes) will be chosen with probability 1/53 = 0.01886792. This is where the "1.89 % Multiplier(Alpha)" line comes from in the move probability table spit out just before the run started.
 
-Second, note that MrBayes places a lot of emphasis on modifying the tree topology and branch lengths (in this case 94% of proposals), but puts little effort (in this case only 6%) into updating other model parameters. You can change the percent effort for a particular move using the <tt>propset</tt> command. For example, to increase the effort devoted to updating the gamma shape parameter, you could (but don't do this now!) issue the following command either at the MrBayes prompt or in a MRBAYES block:
+Second, note that MrBayes places a lot of emphasis on modifying the tree topology and branch lengths (in this case 100*(5+5+5+5+20+7+3)/53 = 94% of proposals), but puts little effort (in this case only 6%) into updating other model parameters. You can change the percent effort for a particular move using the <tt>propset</tt> command. For example, to increase the effort devoted to updating the gamma shape parameter, you could (but don't do this now!) issue the following command either at the MrBayes prompt or in a MRBAYES block:
 
-    propset Multiplier(Alpha)$prob=10
+    propset Multiplier(Alpha)$prob=10   [*** don't type this ***]
 
-This will change the relative probability of the "Multiplier(Alpha)" move from its default value 1 to the value you specified (10). You can also change tuning parameters for moves using the <tt>propset</tt> command. Before doing that, however, we need to see if the boldness of any moves needs to be changed.
+This would change the relative probability of the "Multiplier(Alpha)" move from its default value 1 to the value you specified (10). You can also change tuning parameters for moves using the <tt>propset</tt> command. Before doing that, however, we need to see if the boldness of any moves needs to be changed.
 
 ## The sump command
 
 MrBayes saves information in several files. Only two of these will concern us today. One of them will be called _algaemb.nex.p_. This is the file in which the sampled parameter values were saved. This file is saved as a tab-delimited text file so it is possible to read it into a variety of programs that can be used for summarization or plotting. We will examine this file graphically in a moment, but first let's get MrBayes to summarize its contents for us.
 
-At the MrBayes prompt, type the command <tt>sump</tt>. This will generate a crude graph showing the log-likelihood as a function of time. Note that the log-likelihood starts out low on the left (you started from a random tree, remember), then quickly climbs to a range of values just below -3176.
+At the MrBayes prompt, type the command <tt>sump</tt>. This will generate a crude graph showing the log-likelihood as a function of time. Note that the log-likelihood bounces around between -3183 and -3176. The fact that it is bouncing around is a sign that the MCMC simulation is mixing well.
 
 Below the graph, MrBayes provides the arithmetic mean and harmonic mean of the marginal likelihood. The harmonic mean has been often used in estimating Bayes factors, which are in turn useful for deciding which among different models fits the data best on average. We will talk about how to use this value in lecture, where you will also get some dire warnings about Bayes factors calculated in this way.
 
-The table at the end is quite useful. It shows the posterior mean, median, variance and 95% credible interval for each parameter in your model based on the samples taken during the run. The credible interval shows the range of values of a parameter that account for the middle 95% of its marginal posterior distribution. If the credible interval for kappa is 3.8 to 6.8, then you can say that there is a 95% chance that kappa is between 3.8 and 6.8 given your data and the assumed model. The parameter TL represents the sum of all the branch lengths. Rather than report every branch length individually, MrBayes just keeps track of their sum.
+The table at the end is quite useful. It shows the (marginal) posterior mean, median, variance and 95% credible interval for each parameter in your model based on the samples taken during the run. The credible interval shows the range of values of a parameter that account for the middle 95% of its marginal posterior distribution. If the credible interval for kappa is 3.7 to 5.9, then you can say that there is a 95% chance that kappa is between 3.7 and 5.9 given your data and the assumed model. The parameter TL represents the sum of all the branch lengths. Rather than report every branch length individually, MrBayes just keeps track of their sum.
 
 Look at the output of the <tt>sump</tt> command and answer these questions:
 
@@ -408,23 +408,25 @@ sampled only every 10th iteration, which yields 1000 samples; the 1 additional s
 
 > :thinking: Which value in the parameter column had the largest effective sample size (ESS)?
 {% comment %}
-TL
+alpha (for me, but your results may vary)
 {% endcomment %}
 
 > :thinking: Would you conclude from the ESS column that a longer run is necessary?
 {% comment %}
-yes, I found that only 2 parameters have ESS values greater than 100
+yes, I found that none of the parameters have ESS values greater than 100
 {% endcomment %}
 
 ## The sumt command
 
 Now type the command <tt>sumt</tt>. This will summarize the trees that have been saved in the file _algaemb.nex.t_.
 
-The output of this command includes a bipartition (split) table, showing posterior probabilities for every split found in any tree sampled during the run. After the bipartition table is shown a majority-rule consensus tree (labeled Clade credibility values) containing all splits that had posterior probability 0.5 or above.
+The output of this command includes a bipartition (split) table, showing posterior probabilities for every split found in any tree sampled during the run. After the bipartition table is shown a majority-rule consensus tree (labeled "Clade credibility values") containing all splits that had posterior probability 0.5 or above.
 
 If you chose to save branch lengths (and we did), MrBayes shows a second tree (labeled Phylogram) in which each branch is displayed in such a way that branch lengths are proportional to their posterior mean. MrBayes keeps a running sum of the branch lengths for particular splits it finds in trees as it reads the file _algaemb.nex.t_. Before displaying this tree, it divides the sum for each split by the total number of times it encountered the split to get a simple average branch length for each split. It then draws the tree so that branch lengths are proportional to these mean branch lengths.
 
-Finally, the last thing the <tt>sumt</tt> command does is tell you how many tree topologies are in credible sets of various sizes. For example, in my run, it said that the 99% credible set contained 16 trees. What does this tell us? MrBayes orders tree topologies from most frequent to least frequent (where frequency refers to the number of times they appear in _algaemb.nex.t_). To construct the 99% credible set of trees, it begins by adding the most frequent tree to the set. If that tree accounts for 99% or more of the posterior probability (i.e. at least 99% of all the trees in the _algaemb.nex.t_ file have this topology), then MrBayes would say that the 99% credible set contains 1 tree. If the most frequent tree topology was not that frequent, then MrBayes would add the next most frequent tree topology to the set. If the combined posterior probability of both trees was at least 0.99, it would say that the 99% credible set contains 2 trees. In our case, it had to add the top 16 trees to get the total posterior probability up to 99%.
+Finally, the last thing the <tt>sumt</tt> command does is tell you how many tree topologies are in credible sets of various sizes. For example, in my run, it said that the 99% credible set contained 14 trees. What does this tell us? MrBayes orders tree topologies from most frequent to least frequent (where frequency refers to the number of times they appear in _algaemb.nex.t_). To construct the 99% credible set of trees, it begins by adding the most frequent tree to the set. If that tree accounts for 99% or more of the posterior probability (i.e. at least 99% of all the trees in the _algaemb.nex.t_ file have this topology), then MrBayes would say that the 99% credible set contains 1 tree. If the most frequent tree topology was not that frequent, then MrBayes would add the next most frequent tree topology to the set. If the combined posterior probability of both trees was at least 0.99, it would say that the 99% credible set contains 2 trees. In my case, it had to add the top 14 trees to get the total posterior probability up to 99%. 
+
+Note that the credible set sizes may be different for your run because we did not specify a pseudorandom number seed and thus all our runs will differ from each other.
 
 Type <tt>quit</tt> (or just <tt>q</tt>), to quit MrBayes now.
 
@@ -434,7 +436,7 @@ The Java program [Tracer](http://tree.bio.ed.ac.uk/software/tracer/) is very use
 
 To use Tracer on your own computer to view files created on the cluster, you need to get the file on the cluster downloaded to your laptop. Download the file _algaemb.nex.p_ (using Cyberduck, FileZilla, Fugu, scp, or whatever has been working).
 
-After starting Tracer, choose _File > Import Trace File..._ to choose a parameter sample file to display (you can also do this by clicking the + button under the list of trace files in the upper left corner of the main window). Select the _algaemb.nex.p_ in your working folder, then click the Open button to read it.
+After starting Tracer, choose _File > Import Trace File..._ to choose a parameter sample file to display (you can also do this by clicking the + button under the list of trace files in the upper left corner of the main window). Select the _algaemb.nex.p_ file in your working folder, then click the Open button to read it.
 
 You should now see 9 rows of values in the table labeled Traces on the left side of the main window. The first row (LnL) is selected by default, and Tracer shows a histogram of log-likelihood values on the right, with summary statistics above the histogram.
 
@@ -442,52 +444,30 @@ A histogram is perhaps not the most useful plot to make with the LnL values. Cli
 
 Tracer determines the burn-in period using an undocumented algorithm. You may wish to be more conservative than Tracer. Opinions vary about burn-in. Some Bayesians feel it is important to exclude the first few samples because it is obvious that the chains have not reached stationarity at this point. Other Bayesians feel that if you are worried about the effect of the earliest samples, then you definitely have not run your chains long enough! You might be interested in reading [Charlie Geyer's rant on burn-in](http://users.stat.umn.edu/~geyer/mcmc/burn.html) some time.
 
-Because our MrBayes run was just to learn how to run MrBayes and not to do a serious analysis, the trace plot of the log-likelihood will reflect the fact that in this case the burn-in period should be at least 20% of the run! A longer run is also indicated by all the ESS values shown in red in the Traces panel. Tracer shows an ESS in red if it is less than 200, which it treats as the minimal effective sample size.
-
-> :thinking: What is the effective sample size for TL?
-{% comment %}
-around 140
-{% endcomment %}
-
-> :thinking: What did MrBayes report as the effective sample size for TL?
-{% comment %}
-155.18
-{% endcomment %}
-
-> :thinking: Why is there a difference? Hint: compare the burn-in for both.
-{% comment %}
-Tracer excluded 10% of samples as burn-in, while MrBayes excluded 25%
-{% endcomment %}
-
-> :thinking: Explain why the ESS reported by MrBayes is higher than that reported by Tracer even though fewer samples were included by MrBayes.
-{% comment %}
-MrBayes cut out all of the initial climb out of randomness, leaving only samples that were much less autocorrelated
-{% endcomment %}
-
-**Before going further!!!** Change the burn-in used by Tracer from 1000 to 2500 so that the burn-in includes all of the initial climb out of randomness evident in the trace plot of LnL.
+Our MrBayes run was just to learn how to run MrBayes and not to do a serious analysis. The fact that a longer run is needed is indicated by all the ESS values shown in red in the Traces panel. Tracer shows an ESS in red if it is less than 200, which it treats as the minimal reasonable effective sample size.
 
 Click the Estimates tab again at the top, then click the row labeled kappa on the left.
 
 > :thinking: What is the posterior mean of kappa?
 {% comment %}
-4.8487
+4.9942
 {% endcomment %}
 
-> :thinking: What is the 95% credible interval for kappa?
+> :thinking: What is the 95% HPD credible interval for kappa?
 {% comment %}
-3.8506 to 5.8384
+3.7176 to 5.9178
 {% endcomment %}
 
 Click the row labeled alpha on the left. This is the shape parameter of the gamma distribution governing rates across sites.
 
 > :thinking: What is the posterior mean of alpha?
 {% comment %}
-0.2498
+0.2464
 {% endcomment %}
 
 > :thinking: What is the 95% credible interval for alpha?
 {% comment %}
-0.1663 to 0.3145
+0.1961 to 0.3138
 {% endcomment %}
 
 > :thinking: Is there rate heterogeneity among sites, or are all sites evolving at nearly the same rate?
@@ -499,12 +479,7 @@ Click on the row labeled TL on the left (the Tree Length).
 
 > :thinking: What is the posterior mean tree length?
 {% comment %}
-0.646
-{% endcomment %}
-
-> :thinking: What is the mean edge length? (Hint: divide the tree length by the number of edges, which is 2n-3 if n is the number of taxa.)
-{% comment %}
-0.646 divided by 13 equals 0.0496
+0.6501
 {% endcomment %}
 
 ### Scatterplots of pairs of parameters
@@ -517,11 +492,9 @@ Try selecting all four base frequencies and then clicking the Marginal Prob Dist
 
 ## Running MrBayes with no data
 
-Why would you want to run MrBayes with no data? Here's a possible reason. You discover by reading the text that results from typing <tt>help prset</tt> that MrBayes assumes, by default, the following branch length prior: <tt>exp(10)</tt>. What does the 10 mean here? Is this an exponential distribution with mean 10 or is 10 the "rate" parameter (a common way to parameterize the exponential distribution)? If 10 is correctly interpreted as the rate parameter, then the mean of the distribution is 1/rate, or 0.1. Even good documentation such as that provided for MrBayes does not explicitly spell out everything you might want to know, but running MrBayes without data can provide answers, at least to questions concerning prior distributions.
+Running a Bayesian MCMC program without data is a good way to make sure you know what priors you are actually placing on the quantities of interest. It provides an easy sanity check to ensure that the priors were set the way you thought, and a way to see induced priors for quantities for which you could not explicitly assign a prior distribution, such as tree length (TL) and particular splits of interest.
 
-Also, it is not possible to place prior distributions directly on some quantities of interest. For example, while you can specify a flat prior on topologies, it is not possible to place a prior on a particular split you are interested in. This is because the prior distribution of splits is _induced_ by the prior you place on topologies. You can't specify a flat prior on topologies and also get a flat prior on splits, and vice versa. Running a Bayesian MCMC program without data is a good way to make sure you know what priors you are actually placing on the quantities of interest.
-
-If there is no information in the data, the posterior distribution equals the prior distribution. An MCMC analysis in such cases provides an approximation of the prior. MrBayes makes it easy to run the MCMC analysis without data. (For programs that don't make it easy, simply create a data set containing just one site for which each taxon has missing data.)
+If there is no information in the data, the posterior distribution equals the prior distribution. An MCMC analysis in this case provides an approximation of the prior. MrBayes makes it easy to run the MCMC analysis without data. (For programs that don't make it easy, simply create a data set containing just one site for which each taxon has missing data.)
 
 Start by moving the output from the earlier run of the _algaemb.nex_ data file to a directory named _saved_:
 
@@ -551,14 +524,14 @@ yes, the log-likelihood is 0.0, which corresponds to a likelihood equal to 1.0
 
 Import the output file _algaemb.nex.p_ in Tracer. Look first at the histogram of alpha, the shape parameter of the gamma distribution.
 
-> :thinking: What is the mean you expected for alpha based on the prset shapepr=exp(1.0) command in the blank.nex file? 
+> :thinking: What is the mean you expected for alpha based on the prset shapepr=exp(1.0) command in the algaemb.nex file? 
 {% comment %}
 1.0
 {% endcomment %}
 
 > :thinking: What is the posterior mean actually estimated by MrBayes (and presented by Tracer)? 
 {% comment %}
-0.9856
+0.9974
 {% endcomment %}
 
 > :thinking: An exponential distribution always starts high and approaches zero as you move to the right along the x-axis. The highest point of the exponential density function is 1/mean. If you look at the approximated density plot (click on the Marginal Density tab), does it appear to approach 1/mean at the value alpha=0.0? 
@@ -587,7 +560,7 @@ no, it has a mode to the right of 1 whereas an exponential distribution peaks at
 
 The second and third questions are a bit tricky, so I'll just give you the explanation. Please make sure this explanation makes sense to you, however, and ask us to explain further if it doesn't make sense. We told MrBayes to place an exponential prior with mean 0.1 on each branch. There are 13 branches in a 8-taxon, unrooted tree. Thus, 13 times 0.1 equals 1.3, which should be close to the posterior mean you obtained for TL. That part is fairly straightforward.
 
-The marginal distribution of TL does not look at all like an exponential distribution, despite the fact that TL should be the sum of 13 exponential distributions. It turns out that the sum of $$n$$ independent Exponential($$\lambda$$) distributions is a Gamma($$n$$, $$1/\lambda$$) distribution. In our case the tree length distribution is a sum of 13 independent Exponential(10) distributions, which equals a Gamma(13, 0.1) distribution. Such a Gamma distribution would have a mean of 1.3 and a peak (mode) at 1.2. 
+The marginal distribution of TL does not look at all like an exponential distribution, despite the fact that TL should be the sum of 13 exponential distributions. It turns out that the sum of $$n$$ independent Exponential($$\lambda$$) distributions is a Gamma($$n$$, $$1/\lambda$$) distribution. In our case the tree length distribution is a sum of 13 independent Exponential(10) distributions, which equals a Gamma(13, 0.1) distribution. Such a Gamma distribution would have a mean of (13)(0.1) = 1.3 and a variance of (13)(.1)(.1) = 0.13.
 
 To visualize this, fire up RStudio and type the following command:
 
