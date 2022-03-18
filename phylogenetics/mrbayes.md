@@ -256,7 +256,7 @@ This says that an attempt to change the gamma shape parameter will only be made 
 
 > :thinking: How many times did MrBayes actually modify the gamma shape parameter?
 {% comment %}
-51.5% of 1.89% 0f 10000 is 104 times
+51.5% of 1.89% 0f 10000 is 97 times
 {% endcomment %}
 
 The fact that MrBayes modified the gamma shape parameter only about 100 times out of a run involving 10000 iterations brings up a couple of important points. First, in each iteration, MrBayes chooses a move (i.e. proposal) at random to try. Each move is associated with a "Rel. prob." (relative probability). Using the <tt>showmoves</tt> command shows the following list of moves that were used in this particular analysis:
