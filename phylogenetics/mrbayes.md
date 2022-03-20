@@ -231,7 +231,7 @@ Below is the acceptance information for my run:
          28.5 %     ( 39 %)     Nodeslider(V)
          17.6 %     ( 15 %)     TLMultiplier(V)
          
-In the above table, 55.0% of proposals to change the gamma shape parameter (denoted Alpha by MrBayes) were accepted. This makes it sounds as if the gamma shape parameter was changed quite often, but to get the full picture, you need to scroll up to the beginning of the output and examine this section:
+In the above table, 51.5% of proposals to change the gamma shape parameter (denoted Alpha by MrBayes) were accepted. This makes it sounds as if the gamma shape parameter was changed quite often, but to get the full picture, you need to scroll up to the beginning of the output and examine this section:
 
     The MCMC sampler will use the following moves:
        With prob.  Chain will use move
@@ -256,7 +256,7 @@ This says that an attempt to change the gamma shape parameter will only be made 
 
 > :thinking: How many times did MrBayes actually modify the gamma shape parameter?
 {% comment %}
-55.0% of 1.89% 0f 10000 is 104 times
+51.5% of 1.89% 0f 10000 is 97 times
 {% endcomment %}
 
 The fact that MrBayes modified the gamma shape parameter only about 100 times out of a run involving 10000 iterations brings up a couple of important points. First, in each iteration, MrBayes chooses a move (i.e. proposal) at random to try. Each move is associated with a "Rel. prob." (relative probability). Using the <tt>showmoves</tt> command shows the following list of moves that were used in this particular analysis:
@@ -381,7 +381,7 @@ At the MrBayes prompt, type the command <tt>sump</tt>. This will generate a crud
 
 Below the graph, MrBayes provides the arithmetic mean and harmonic mean of the marginal likelihood. The harmonic mean has been often used in estimating Bayes factors, which are in turn useful for deciding which among different models fits the data best on average. We will talk about how to use this value in lecture, where you will also get some dire warnings about Bayes factors calculated in this way.
 
-The table at the end is quite useful. It shows the (marginal) posterior mean, median, variance and 95% credible interval for each parameter in your model based on the samples taken during the run. The credible interval shows the range of values of a parameter that account for the middle 95% of its marginal posterior distribution. If the credible interval for kappa is 3.7 to 5.9, then you can say that there is a 95% chance that kappa is between 3.7 and 5.9 given your data and the assumed model. The parameter TL represents the sum of all the branch lengths. Rather than report every branch length individually, MrBayes just keeps track of their sum.
+The table at the end is quite useful. It shows the (marginal) posterior mean, median, variance and 95% credible interval for each parameter in your model based on the samples taken during the run. The credible interval shows the range of values of a parameter that account for the middle 95% of its marginal posterior distribution. If the credible interval for kappa is 3.9 to 5.9, then you can say that there is a 95% chance that kappa is between 3.9 and 5.9 given your data and the assumed model. The parameter TL represents the sum of all the branch lengths. Rather than report every branch length individually, MrBayes just keeps track of their sum.
 
 Look at the output of the <tt>sump</tt> command and answer these questions:
 
@@ -423,15 +423,13 @@ The output of this command includes a bipartition (split) table, showing posteri
 
 If you chose to save branch lengths (and we did), MrBayes shows a second tree (labeled Phylogram) in which each branch is displayed in such a way that branch lengths are proportional to their posterior mean. MrBayes keeps a running sum of the branch lengths for particular splits it finds in trees as it reads the file _algaemb.nex.t_. Before displaying this tree, it divides the sum for each split by the total number of times it encountered the split to get a simple average branch length for each split. It then draws the tree so that branch lengths are proportional to these mean branch lengths.
 
-Finally, the last thing the <tt>sumt</tt> command does is tell you how many tree topologies are in credible sets of various sizes. For example, in my run, it said that the 99% credible set contained 14 trees. What does this tell us? MrBayes orders tree topologies from most frequent to least frequent (where frequency refers to the number of times they appear in _algaemb.nex.t_). To construct the 99% credible set of trees, it begins by adding the most frequent tree to the set. If that tree accounts for 99% or more of the posterior probability (i.e. at least 99% of all the trees in the _algaemb.nex.t_ file have this topology), then MrBayes would say that the 99% credible set contains 1 tree. If the most frequent tree topology was not that frequent, then MrBayes would add the next most frequent tree topology to the set. If the combined posterior probability of both trees was at least 0.99, it would say that the 99% credible set contains 2 trees. In my case, it had to add the top 14 trees to get the total posterior probability up to 99%. 
-
-Note that the credible set sizes may be different for your run because we did not specify a pseudorandom number seed and thus all our runs will differ from each other.
+Finally, the last thing the <tt>sumt</tt> command does is tell you how many tree topologies are in credible sets of various sizes. For example, in my run, it said that the 99% credible set contained 16 trees. What does this tell us? MrBayes orders tree topologies from most frequent to least frequent (where frequency refers to the number of times they appear in _algaemb.nex.t_). To construct the 99% credible set of trees, it begins by adding the most frequent tree to the set. If that tree accounts for 99% or more of the posterior probability (i.e. at least 99% of all the trees in the _algaemb.nex.t_ file have this topology), then MrBayes would say that the 99% credible set contains 1 tree. If the most frequent tree topology was not that frequent, then MrBayes would add the next most frequent tree topology to the set. If the combined posterior probability of both trees was at least 0.99, it would say that the 99% credible set contains 2 trees. In my case, it had to add the top 16 trees to get the total posterior probability up to 99%. 
 
 Type <tt>quit</tt> (or just <tt>q</tt>), to quit MrBayes now.
 
 ## Using Tracer to summarize MCMC results
 
-The Java program [Tracer](https://github.com/beast-dev/tracer/releases) is very useful for summarizing the results of Bayesian phylogenetic analyses. Tracer was written to accompany the program [Beast](https://github.com/beast-dev/beast-mcmc), but it works well with the output file produced by MrBayes as well. This lab was written using Tracer version 1.7.1.
+The Java program [Tracer](https://github.com/beast-dev/tracer/releases) is very useful for summarizing the results of Bayesian phylogenetic analyses. Tracer was written to accompany the program [Beast](https://github.com/beast-dev/beast-mcmc), but it works well with the output file produced by MrBayes as well. This lab was written using Tracer version 1.7.1, and works with version 1.7.2.
 
 To use Tracer on your own computer to view files created on the cluster, you need to get the file on the cluster downloaded to your laptop. Download the file _algaemb.nex.p_ (using Cyberduck, FileZilla, Fugu, scp, or whatever has been working).
 
