@@ -3,11 +3,21 @@ layout: page
 title: Publications
 permalink: /publications/
 ---
-{% include figure.html description="Combinability" url="/assets/img/systbiol-68-5-sep2019.png" css="image-right" width="200px" targeturl="https://doi.org/10.1093/sysbio/syz007" %}
-
 ([Jump to key to symbols](#key-to-symbols))
 
+YB Wang, A Milkey, A Li, MH Chen, L Kuo, and PO Lewis. 2022. LoRaD: marginal likelihood from a single posterior sample. Submitted to Systematic Biology.
+{% comment %}
+Manuscript ID: USYB-2022-066, submitted 2-Mar-2022.
+{% endcomment %}
+
+EM Clifton, PO Lewis, E Jockusch, and E Adams. 2022. an experimental test of Lanchester’s models of combat in the neotropical termite _Nasutitermes corniger_ (Blattodea: Termitidae). Submitted to Proceedings of the Royal Society B: Biological Sciences.
+{% comment %}
+Manuscript ID: RSPB-2022-0343, submitted 22-Feb-2022.
+{% endcomment %}
+
 J Barido-Sottani, JA Justison, R Borges, JM Brown, W Dismukes,B do Rosario Petrucci, LG Fabreti, S Höhna, MJ Landis, PO Lewis, MR May, FK Mendes, W Pett, BD Redelings, CM Tribble, AM Wright, R Zenil-Ferguson, and TA Heath. 2022. Lessons learned from organizing and teaching virtual phylogenetics workshops. The Bulletin of the Society of Systematic Biologists (accepted manuscript). 
+
+{% include figure.html description="Neupane et al. 2019" url="/assets/img/systbiol-68-5-sep2019.png" css="image-right" width="200px" targeturl="https://doi.org/10.1093/sysbio/syz007" %}
 
 W Shi, MH Chen, L Kuo, and PO Lewis. 2021. [Bayesian information and dissonance.](https://doi.org/10.1214/21-BA1277) Bayesian Analysis (advance publication). &diams;
 
@@ -21,7 +31,7 @@ Ayres, D. L., M. P. Cummings, G. Baele, A. E. Darling, P. O. Lewis, D. L. Swoffo
 
 Wang, Y.-B., M.-H. Chen, L. Kuo, and P. O. Lewis. 2019. [Partition weighted approach for estimating marginal posterior density with applications](https://doi.org/10.1080/10618600.2018.1529600). Journal of Computational and Graphical Statistics 28:334-349. &diams; 
 
-{% include figure.html description="Information" url="/assets/img/systbiol-65-6-nov2016.png" css="image-right" width="200px" targeturl="https://doi.org/10.1093/sysbio/syw042" %}
+{% include figure.html description="Lewis et al. 2016" url="/assets/img/systbiol-65-6-nov2016.png" css="image-right" width="200px" targeturl="https://doi.org/10.1093/sysbio/syw042" %}
 
 Neupane, S., K. Fučíková, L. A. Lewis, L. Kuo, M.-H. Chen, and P. O. Lewis. 2019. [Assessing combinability of phylogenomic data using Bayes factors](https://doi.org/10.1093/sysbio/syz007). Systematic Biology 68:523–532. &diams; 
 
@@ -35,7 +45,7 @@ Mitchell, N., P. O. Lewis, E. M. Lemmon, A. R. Lemmon, and K. E. Holsinger. 2017
 
 Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65(6):1009-1023. &diams; &clubs;
 
-{% include figure.html description="Koshicola" url="/assets/img/ajb-103-5-may2016.png" css="image-right" width="200px" targeturl="https://doi.org/10.3732/ajb.1500481" %}
+{% include figure.html description="Watanabe et al. 2016" url="/assets/img/ajb-103-5-may2016.png" css="image-right" width="200px" targeturl="https://doi.org/10.3732/ajb.1500481" %}
 
 Watanabe, S., K. Fučíková, L. A. Lewis, and P. O. Lewis. 2016. [Hiding in plain sight: Koshicola spirodelophila gen. et sp. nov. (Chaetopeltidales, Chlorophyceae), a novel green alga associated with the aquatic angiosperm Spirodela polyrhiza.](https://doi.org/10.3732/ajb.1500481) American Journal of Botany 103:865–875. &clubs;
 
