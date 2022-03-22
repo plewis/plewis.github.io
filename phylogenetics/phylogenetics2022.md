@@ -33,7 +33,7 @@ Tuesday Mar. 8         | **Prior distributions (cont.) and CIs**<br/> Running on
 Thursday Mar. 10        | **Dirichlet Process Prior**<br/> Bayesian non-parametric clustering: examples include BUCKy (genes clustered by topology); PhyloBayes (amino-acid sites clustered by frequency spectra) \[[Stick-breaking applet](/applets/stickbreaking/)\] \[[DPP applet](/applets/dpp/)\] \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/DirichletProcessPriors.pdf)\] | **Lab 8**: [MrBayes](/mrbayes/)
 Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
-Tuesday Mar.  22        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood, BIC vs. AIC | **Homework 9**: [Dirichlet Process Priors](/hw9/)
+Tuesday Mar.  22        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood, BIC vs. AIC \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianModelSelection.pdf)\] | **Homework 9**: [Dirichlet Process Priors](/hw9/)
 Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. | **Lab 9**: Introduction to RevBayes
 Tuesday Mar. 29         | **TBA**<br/>  | **Homework 10**: TBD
 Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | **Lab 10**: BayesTraits
@@ -91,7 +91,7 @@ Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sin
 
 :hibiscus: indicates that paper was cited in Spring 2022 semester (either in lecture or lab)
 
-Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
+:hibiscus: Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
 
 :hibiscus: Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. Bayesian estimation of concordance among gene trees. Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy)
 
@@ -121,7 +121,7 @@ Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to r
 
 :hibiscus: Edwards, A. W. F., and L. L. Cavalli-Sforza. 1964. Reconstruction of evolutionary trees. pp. 67-76 in Phenetic and phylogenetic classification, ed. V. H. Heywood and J. McNeill. Systematics Association Publ. No. 6, London.
 
-Fan, Y., Wu, R., Chen, M.-H., Kuo, L., and Lewis, P. O. 2011. Molecular Biology and Evolution 28(1):523-532. (Generalized stepping-stone marginal likelihood estimation)
+:hibiscus: Fan, Y., Wu, R., Chen, M.-H., Kuo, L., and Lewis, P. O. 2011. Molecular Biology and Evolution 28(1):523-532. (Generalized stepping-stone marginal likelihood estimation)
 
 :hibiscus: Farris, J. S. 1974. Formal definitions of paraphyly and polyphyly. Systematic Zoology 23: 548-554.
 
@@ -201,7 +201,7 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 
 :hibiscus: Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra)
 
-Lartillot, N., and H. Philippe. 2006. Computing bayes factors using thermodynamic integration. Systematic Biology 55(2): 195-207. (Thermodynamic integration (a.k.a. path sampling) marginal likelihood estimation)
+:hibiscus: Lartillot, N., and H. Philippe. 2006. Computing bayes factors using thermodynamic integration. Systematic Biology 55(2): 195-207. (Thermodynamic integration (a.k.a. path sampling) marginal likelihood estimation)
 
 :hibiscus: Le, S. Q., and Gascuel, O. 2008. An improved general amino acid replacement matrix. Molecular Biology and Evolution, 25(7):1307-1320. (LG amino acid model)
 
@@ -228,6 +228,8 @@ Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection
 :hibiscus: Muse, S. 1995. evolutionary analyses of DNA sequences subject to constraints on secondary structure. Genetics, 139(3), 1429–1439. (secondary structure model)
 
 :hibiscus: Muse, S. V., and B. S. Gaut. 1994. A likelihood approach for comparing synonymous and nonsynonymous substitution rates, with application to the chloroplast genome. Molecular Biology and Evolution, 11, 715-724.
+
+:hibiscus: Newton, M. A., and A. E. Raftery. 1994. Approximate Bayesian inference with the weighted likelihood bootstrap (with discussion). J. Roy. Statist. Soc. B 56:3-48. [Harmonic mean method for estimating marginal likelihood]
 
 Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Appropriate likelihood ratio tests and marginal distributions for evolutionary tree models with constraints on parameters. Molecular Biology and Evolution 17:798-803. (LRT border case correction)
 
@@ -293,7 +295,7 @@ Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substit
 
 :hibiscus: Wiley, E. O. 1981. Phylogenetics: the theory and practice of phylogenetic systematics. John Wiley and Sons, New York.
 
-Xie, W.G., P.O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal Likelihood Estimation for Bayesian Phylogenetic Model Selection. Systematic Biology 60(2):150-160. (Stepping-stone marginal likelihood estimation)
+:hibiscus: Xie, W.G., P. O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal Likelihood Estimation for Bayesian Phylogenetic Model Selection. Systematic Biology 60(2):150-160. (Stepping-stone marginal likelihood estimation)
 
 :hibiscus: Yang, Z. 1993. Maximum-likelihood estimation of phylogeny from DNA sequences when substitution rates differ over sites. Molecular Biology and Evolution 10:1396-1401.
 
