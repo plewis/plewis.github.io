@@ -33,10 +33,10 @@ Tuesday Mar. 8         | **Prior distributions (cont.) and CIs**<br/> Running on
 Thursday Mar. 10        | **Dirichlet Process Prior**<br/> Bayesian non-parametric clustering: examples include BUCKy (genes clustered by topology); PhyloBayes (amino-acid sites clustered by frequency spectra) \[[Stick-breaking applet](/applets/stickbreaking/)\] \[[DPP applet](/applets/dpp/)\] \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/DirichletProcessPriors.pdf)\] | **Lab 8**: [MrBayes](/mrbayes/)
 Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
-Tuesday Mar.  22        | **Bayesian phylogenetics (continued)**<br/>  | **Homework 9**: [Dirichlet Process Priors](/hw9/)
-Thursday Mar. 24        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood. | **Lab 9**: Morphology and partitioning in RevBayes
-Tuesday Mar. 29         | **Discrete morphological models**<br/> Dirichlet process prior models revisited; introduction to discrete morphological models; Mk model; conditioning on variability. | **Homework 10**: TBD
-Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> BIC; Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | **Lab 10**: BayesTraits
+Tuesday Mar.  22        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood, BIC vs. AIC | **Homework 9**: [Dirichlet Process Priors](/hw9/)
+Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. | **Lab 9**: Introduction to RevBayes
+Tuesday Mar. 29         | **TBA**<br/>  | **Homework 10**: TBD
+Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | **Lab 10**: BayesTraits
 Tuesday Apr. 5          | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. | **Homework 11**: TBD
 Thursday Apr. 7         | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | **Lab 11**: TBD
 Tuesday Apr. 12         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[OU applet](/applets/ou/)\] | **Homework 12**: TBD
