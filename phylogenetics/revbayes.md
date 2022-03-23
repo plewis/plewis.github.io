@@ -7,17 +7,19 @@ permalink: /revbayes/
 
 ## Goals
 
-This lab exercise will introduce you [RevBayes](https://revbayes.github.io), the successor to MrBayes. We will be using RevBayes v1.0.13 on the cluster in this lab. 
+This lab exercise will introduce you [RevBayes](https://revbayes.github.io), the successor to MrBayes. We will be using RevBayes v1.1.1 on the cluster in this lab. 
 
-This lab will parallel the [MrBayes lab](/mrbayes/) you explored just before Spring Break. You will find that, compared to MrBayes, RevBayes is quite different in terms of setting up analyses. You will need to specify every detail explicitly in your RevBayes script, including the model, the moves (i.e. algorithms used to choose new parameter values), and the monitors (output saved to the screen or file). This level of detail is, albeit, a bit tedious, but the flexibility that it provides is one of RevBayes strengths. RevBayes is not limited to canned analyses; it is possible for you do to analyses using RevBayes that no one has done before!
+This lab will parallel the [MrBayes lab](/mrbayes/) you explored just before Spring Break. You will find that, compared to MrBayes, RevBayes is quite different in terms of setting up analyses. You will need to specify every detail explicitly in your RevBayes script, including the model, the moves (i.e. algorithms used to choose new parameter values), and the monitors (output saved to the screen or file). This level of detail is, albeit, a bit tedious, but the flexibility that it provides is one of RevBayes strengths. RevBayes is not limited to canned analyses; it is possible for you do to analyses in RevBayes using models that no one has used before!
 
 ## Getting started
 
 Login to your account on the Health Center (Xanadu) cluster, then issue
 
-    srun --qos=mcbstudent --partition=mcbstudent --pty bash
+    srun --qos=mcbstudent --partition=mcbstudent --mem=5G --pty bash
     
 to start a session on a node that is not currently running jobs. 
+
+**Important** The <tt>--mem=5G</tt> part is important for this lab, as RevBayes uses more than the default amount (128 MB) of memory sometimes.
 
 {% comment %}
 Once you see the prompt, type
@@ -34,43 +36,24 @@ Use the unix <tt>mkdir</tt> command to create a directory to play in today:
     cd
     mkdir rblab
 
+## Load the RevBayes module 
 
-## Load singularity
+You will need to load the RevBayes/1.1.1 module in order to use RevBayes:
 
-Ordinarily, we'd load a RevBayes module at this point, but the only version of RevBayes that is installed on the cluster is too old and buggy for our purposes. We will instead download a version that can be run in a Singularity container. You will first need to load the singularity module:
+    module load RevBayes/1.1.1
 
-    module load singularity/3.9.2
+You can now type either **RevBayes** or just **rb** to start the program:
+
+    bash-4.2$ rb
     
-## Download RevBayes
-    
-Now download the RevBayes singularity image (I'm assuming you are inside your home directory):
+    RevBayes version (1.1.1)
+    Build from tags/1.1.1 (rapture-588-gae00cc) on Wed Mar 23 17:16:21 UTC 2022
 
-    curl -LO https://github.com/revbayes/revbayes/releases/download/1.1.1/RevBayes_Singularity_1.1.1.simg
-    
-I'm assuming the _RevBayes_Singularity_1.1.1.simg_ file is now in your home directory (if not, you'll need to alter the path to point to where the singularity image is). 
+    Visit the website www.RevBayes.com for more information about RevBayes.
 
-To avoid having to type so much to start up RevBayes, let's make an alias:
+    RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
 
-    alias rb="singularity run --app rb RevBayes_Singularity_1.1.1.simg"
-    
-## Making your alias permanent
-
-If you want to avoid having to load the singularity module and create this alias each time you login (and, yes, we will be using RevBayes in future labs), add these commands to your _~/.bashrc_ and _~/.bash_profile_ files:
-
-    nano ~/.bashrc
-    
-Add these two lines and save:
-
-    module load singularity/3.9.2
-    alias rb="singularity run --app rb ~/RevBayes_Singularity_1.1.1.simg"
-    
-Now add the same two lines to _~/.bash_profile_. The _~/.bash_profile_ file is executed when you first login and _~/.bashrc_ is executed when you create a new shell (e.g. using _srun_).
-    
-Hereafter, every time you login or use <tt>srun</tt> these two lines will be executed automatically!
-    
-If <tt>singularity/3.9.2</tt> is listed after running the command below, you know it worked.
-
-    module list
+    To quit RevBayes type 'quit()' or 'q()'.
 
 ## Download and save the data file
 
@@ -88,7 +71,7 @@ If you've wiped out your folder from lab time, you can easily get the data file 
     
 ## Creating a RevBayes script
 
-RevBayes (unlike MrBayes) does not define its own block type for use inside #NEXUS data files. You will need to instead create a plain text file containing RevBayes commands called a RevBayes script. RevBayes scripts use a computer language (similar to R) for conducting phylogenetic analyses.
+RevBayes (unlike MrBayes) does not define its own block type for use inside #NEXUS data files. You will need to instead **create a plain text file** containing RevBayes commands called a **RevBayes script**. RevBayes scripts use a computer language (similar to R) for conducting phylogenetic analyses.
 
 Let's create a RevBayes script to carry out an MCMC analysis. 
 
@@ -121,11 +104,11 @@ Now run this script in RevBayes as follows:
 
     rb jc.Rev
     
-Note that the **rb** above is being substituted by **singularity run --app rb ~/RevBayes_Singularity_1.1.1.simg** as a result of your alias. Saves a lot of typing!
+Note that the **rb** above is being substituted by **RevBayes** as a result of your alias.
     
-You can place comments inside your RevScript by starting the line with a hash character (<tt>#</tt>) character. RevBayes will completely ignore anything on a line after a hash, so use comments to make notes. You will thank yourself later.
+Lines that begin with a **hash (<tt>#</tt>) character** are comments. RevBayes will completely ignore anything on a line after a hash, so use comments to make notes. You will thank yourself later.
 
-You can use the print function to show what is contained in a particular variable. Good for sanity checks to make sure everything is going how you thought.
+You can use the **print function** to show what is contained in a particular variable. Good for sanity checks to make sure everything is going how you thought.
 
 ### Create a substitution model
 
@@ -140,7 +123,7 @@ Append the following to your script (above the line containing <tt>quit()</tt>, 
 
     print("Q matrix: ", Qmatrix)
     
-This tells RevBayes to create a Jukes-Cantor instantaneous rate matrix with 4 states and store it in the variable <tt>Qmatrix</tt>. Note that you can use any variable name you want, but the symbol Q is commonly used for instantaneous rate matrices.
+This tells RevBayes to create a Jukes-Cantor instantaneous rate matrix with 4 states and store it in the variable <tt>Qmatrix</tt>. Note that you can use any variable name you want; I've used Qmatrix here because the letter Q is commonly used for instantaneous rate matrices.
 
 Run your revised script in RevBayes now.
 
@@ -228,7 +211,7 @@ When RevBayes has finished running, use <tt>cat</tt> to view the _mymodel.dot_ f
 
     cat mymodel.dot
     
-Copy the entire contents of the file _mymodel.dot_ to your clipboard, open the [GraphvizFiddle web page](https://stamm-wilbrandt.de/GraphvizFiddle/), and **paste** what you have on your clipboard into the DOT input box. Now **press the Draw button** and scroll down.
+Copy the entire contents of the file _mymodel.dot_ to your clipboard, open the [GraphvizFiddle web page](https://stamm-wilbrandt.de/GraphvizFiddle/), and **paste** what you have on your clipboard into the DOT input box (be sure to completely replace the text already present in the box). Now **press the Draw button** and scroll down.
 
 GraphvizFiddle should now show a graphical depiction of your model as it currently exists. Note that stochastic nodes (i.e. model parameters) are displayed as **solid ovals**, constant nodes are shown with **solid boxes**, and deterministic nodes are shown in **dashed ovals**.
 
@@ -313,23 +296,11 @@ Add these lines just before the <tt>quit()</tt> line.
     # Calculate the MAP tree
     map_tree = mapTree(treetrace,"output/algae-map.tree")
     
-**Important** we don't want to rerun the MCMC analysis, so, before running it, **comment out** the line containing the call to the **mymcmc.run** function. To comment out a line, simply place a hash character (<tt>#</tt>) at the beginning of the line.
+**Important** Unless you want to waste some time and rerun the MCMC analysis, **comment out** the line containing the call to the **mymcmc.run** function. To comment out a line, simply place a hash character (<tt>#</tt>) at the beginning of the line to convert the line to a comment.
 
     # mymcmc.run(generations=10000, tuningInterval=100)
 
 Run RevBayes again now to summarize the sampled trees. 
-
-**If RevBayes gets stuck partway through**, use Ctrl-C to kill it and try analyzing the samples from just one run rather than the combined samples. That is, change this line:
-
-    treetrace = readTreeTrace("output/algae.trees", treetype="non-clock")
-
-to this:
-
-    treetrace = readTreeTrace("output/algae_run_1.trees", treetype="non-clock")
-    
-**If not even that works,** use Ctrl-C to kill it and then Ctrl-D to exit the shell. This will take you back to the head node. Navigate into the _rblab_ directory and try running it one more time using the head node. It is not nice to run analyses on the head node, but very short analyses (such as this one) will not get you in hot water with other users. Once RevBayes has finished, type the following to move off the head node:
-
-    srun --qos=mcbstudent --partition=mcbstudent --pty bash
 
 After running RevBayes, you should find the file _algae-map.tree_ in your output directory. Bring that file back to your laptop and open it in FigTree. 
 
@@ -392,7 +363,7 @@ Now run RevBayes again (being sure to **uncomment the mcmc.run line first!**).
 > :thinking: What is the posterior probability of the chlorophyll b clade now that we've accommodated rate heterogeneity?
 
 {% comment %}
-0.1539795
+0.1379816
 {% endcomment %}
 
 ## GTR+I+G model
@@ -445,12 +416,38 @@ Now run RevBayes again, this time providing the _gtr.Rev_ script
 
     rb gtr.Rev
     
-Note that you may need to comment out your mcmc.run command and back out to the head node in order to get the last part to work.
+There is a very high probability that RevBayes will report an error at this point. If you get
+
+    Missing Variable:	Variable moves does not exist
+    Error:	Problem processing line 20 in file "gtr.Rev"
+    
+type <tt>q()</tt> to get out of the program, then open your _gtr.Rev_ script in nano and go to line 20 (or whatever line is indicated) by typing Ctrl-<hyphen> and typing in the line number. See if you can figure out what is bothering RevBayes. Hint: the solution will involve relocating the line that says "moves = VectorMoves()" (this is line 45 in my version).
 
 > :thinking: What is the posterior probability of the chlorophyll b clade under the GTR+I+G model?
 
 {% comment %}
-0.9054793
+0.8813492
+{% endcomment %}
+
+## An optional challenge if there's time
+
+We've been applying an Exponential(10) prior to each edge length. As we've discussed in lecture, this sometimes induces an unreasonable tree length prior. How would you change your script so that the **tree length** has an Exponential(10) prior and the **edge proportions** have a flat Dirichlet prior?
+
+{% comment %}
+# Edge length prior
+#for (i in 1:nedges) {
+#    edge_length[i] ~ dnExponential(10.0)
+#    moves.append( mvScale(edge_length[i]) )
+#}
+#TL := sum(edge_length)
+
+TL ~ dnExponential(10)
+moves.append( mvScale(TL) )
+
+edge_proportions ~ dnDirichlet( v(1,1,1,1,1,1,1,1,1,1,1,1,1) ) # can also use rep(1,nedges)
+moves.append( mvBetaSimplex(edge_proportions, weight=nedges) )
+moves.append( mvDirichletSimplex(edge_proportions, weight=nedges/10) )
+edge_length := edge_proportions * TL
 {% endcomment %}
 
 ## What to turn in
