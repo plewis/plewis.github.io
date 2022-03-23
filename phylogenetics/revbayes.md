@@ -26,6 +26,14 @@ Once you see the prompt, type
  
 to load the necessary modules. (Remember: the command <tt>module avail</tt> shows a list of all available modules.)
 {% endcomment %}
+    
+## Create a directory
+
+Use the unix <tt>mkdir</tt> command to create a directory to play in today:
+
+    cd
+    mkdir rblab
+
 
 ## Load singularity
 
@@ -35,11 +43,11 @@ Ordinarily, we'd load a RevBayes module at this point, but the only version of R
     
 ## Download RevBayes
     
-Now download the RevBayes singularity image (I'm assuming you are still inside _rblab_):
+Now download the RevBayes singularity image (I'm assuming you are inside your home directory):
 
     curl -LO https://github.com/revbayes/revbayes/releases/download/1.1.1/RevBayes_Singularity_1.1.1.simg
     
-I'm assuming the _RevBayes_Singularity_1.1.1.simg_ file is now in your home directory. 
+I'm assuming the _RevBayes_Singularity_1.1.1.simg_ file is now in your home directory (if not, you'll need to alter the path to point to where the singularity image is). 
 
 To avoid having to type so much to start up RevBayes, let's make an alias:
 
@@ -54,20 +62,15 @@ If you want to avoid having to load the singularity module and create this alias
 Add these two lines and save:
 
     module load singularity/3.9.2
-    alias rb="singularity run --app rb RevBayes_Singularity_1.1.1.simg"
+    alias rb="singularity run --app rb ~/RevBayes_Singularity_1.1.1.simg"
     
 Now add the same two lines to _~/.bash_profile_. The _~/.bash_profile_ file is executed when you first login and _~/.bashrc_ is executed when you create a new shell (e.g. using _srun_).
     
 Hereafter, every time you login or use <tt>srun</tt> these two lines will be executed automatically!
     
-If <tt>singularity/3.9.2</tt> is listed, you know it worked.
-    
-## Create a directory
+If <tt>singularity/3.9.2</tt> is listed after running the command below, you know it worked.
 
-Use the unix <tt>mkdir</tt> command to create a directory to play in today:
-
-    cd
-    mkdir rblab
+    module list
 
 ## Download and save the data file
 
@@ -118,7 +121,7 @@ Now run this script in RevBayes as follows:
 
     rb jc.Rev
     
-Note that the **rb** above is being substituted by **singularity run --app rb RevBayes_Singularity_1.1.1.simg** as a result of your alias. Saves a lot of typing!
+Note that the **rb** above is being substituted by **singularity run --app rb ~/RevBayes_Singularity_1.1.1.simg** as a result of your alias. Saves a lot of typing!
     
 You can place comments inside your RevScript by starting the line with a hash character (<tt>#</tt>) character. RevBayes will completely ignore anything on a line after a hash, so use comments to make notes. You will thank yourself later.
 
