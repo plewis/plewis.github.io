@@ -34,11 +34,11 @@ Thursday Mar. 10        | **Dirichlet Process Prior**<br/> Bayesian non-parametr
 Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
 Tuesday Mar.  22        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood, BIC vs. AIC \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianModelSelection.pdf)\] | **Homework 9**: [Dirichlet Process Priors](/hw9/)
-Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. | **Lab 9**: Introduction to RevBayes
+Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MorphModels.pdf)\] | **Lab 9**: Introduction to RevBayes
 Tuesday Mar. 29         | **TBA**<br/>  | **Homework 10**: TBD
-Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | **Lab 10**: BayesTraits
+Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | **Lab 10**: [RevBayes (discrete morphology analyses)](https://revbayes.github.io/tutorials/morph_tree/)
 Tuesday Apr. 5          | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. | **Homework 11**: TBD
-Thursday Apr. 7         | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | **Lab 11**: TBD
+Thursday Apr. 7         | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | **Lab 11**: BayesTraits
 Tuesday Apr. 12         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[OU applet](/applets/ou/)\] | **Homework 12**: TBD
 Thursday Apr. 14        | **Phylogenetic signal in comparative data**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[Pagel transformation applet](/applets/pagel/)\]<br/>**[Introduction to the coalescent**<br/>Just enough coalescent theory to understand the multispecies coalescent used to estimate species trees given possibly conflicting gene trees. | **Lab 12**: APE
 Tuesday Apr. 19         | **Species Tree Estimation (cont.)**<br/> Deep coalescence, incomplete lineage sorting, gene tree discordance due to ILS, estimating species trees using the multispecies coalescent. The SVDQuartets and ASTRAL species tree methods. | **Homework 13**: TBD
@@ -95,7 +95,7 @@ Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sin
 
 :hibiscus: Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. Bayesian estimation of concordance among gene trees. Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy)
 
-Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
+:hibiscus: Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
 
 :hibiscus: Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. Mitochondrial DNA sequences of primates, tempo and mode of evolution. Journal of Molecular Evolution 18:225-239.
 
@@ -131,15 +131,15 @@ Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to r
 
 :hibiscus: Felsenstein, J. 1978. [Cases in which parsimony or compatibility methods will be positively misleading.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 27:401-410. (Characterized the long branch attraction problem)
 
-Felsenstein, J. 1981. Evolutionary trees from DNA sequences: a maximum likelihood approach. Journal of Molecular Evolution 17:368-376. (F81 model, pruning algorithm, origin of likelihood-based phylogenetics)
+:hibiscus: Felsenstein, J. 1981. Evolutionary trees from DNA sequences: a maximum likelihood approach. Journal of Molecular Evolution 17:368-376. (F81 model, pruning algorithm, origin of likelihood-based phylogenetics)
 
-Felsenstein, J. 1983. Statistical inference of phylogenies. Journal of the Royal Statistical Society A 146:246-272. (LRT of molecular clock)
+:hibiscus: Felsenstein, J. 1983. Statistical inference of phylogenies. Journal of the Royal Statistical Society A 146:246-272. (LRT of molecular clock)
 
 :hibiscus: Felsenstein, J. 1985a. Confidence intervals on phylogenies: an approach using the bootstrap. Evolution 39:783-791. (nonparametric bootstrapping)
 
 Felsenstein, J. 1985b. Phylogenies and the comparative method. American Naturalist 125:1-15. (independent contrasts)
 
-Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood approach. Evolution 46:159-173. (conditioning on variability in discrete trait likelihood calculations)
+:hibiscus: Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood approach. Evolution 46:159-173. (conditioning on variability in discrete trait likelihood calculations)
 
 :hibiscus: Felsenstein, J. 2004. Inferring phylogenies. Sinauer Associates, Sunderland, MA.
 
@@ -185,6 +185,8 @@ Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from mu
 
 :hibiscus: Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model)
 
+:hibiscus: Holder, M. T., P. O. Lewis, and D. L. Swofford. 2010. The Akaike Information Criterion will not choose the no common mechanism model. Systematic Biology 59:477-485.
+
 :hibiscus: Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. Phylogenetic analysis: concepts and methods. American Journal of Human Genetics 23: 235-252.
 
 :hibiscus: Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model)
@@ -207,13 +209,13 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 
 :hibiscus: Si Quang, L., O. Gascuel, and N. Lartillot. 2008. Empirical profile mixture models for phylogenetic reconstruction. 
 
-Lewis, P. O. 2001a. A likelihood approach to estimating phylogeny from discrete morphological character data. Systematic Biology 50:913-925.
+:hibiscus: Lewis, P. O. 2001a. A likelihood approach to estimating phylogeny from discrete morphological character data. Systematic Biology 50:913-925.
 
 :hibiscus: Lewis, P. O. 2001b. Phylogenetic systematics turns over a new leaf. Trends in Ecology and Evolution 16:30-37.
 
 Maddison, W. P. 1997. Gene trees in species trees. Systematic Biology 46: 523–536.
 
-Maddison, D. R., Swofford, D. L., and Maddison, W. P. 1997. NEXUS: An extensible file format for systematic information. Systematic Biology 46:590–617. (NEXUS file format)
+:hibiscus: Maddison, D. R., Swofford, D. L., and Maddison, W. P. 1997. NEXUS: An extensible file format for systematic information. Systematic Biology 46:590–617. (NEXUS file format)
 
 Maddison, W. P., and FitzJohn, R. G. 2015. The unsolved challenge to phylogenetic correlation tests for categorical characters. Systematic Biology 64:127–136. (need for true replication in comparative studies)
 
@@ -233,7 +235,7 @@ Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection
 
 Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Appropriate likelihood ratio tests and marginal distributions for evolutionary tree models with constraints on parameters. Molecular Biology and Evolution 17:798-803. (LRT border case correction)
 
-Pagel, M. 1994. Detecting correlated evolution on phylogenies: a general method for the comparative analysis of discrete characters. Proceedings of the Royal Society of London B 255:37-45. (assessing evolutionary correlation between two discrete traits)
+:hibiscus: Pagel, M. 1994. Detecting correlated evolution on phylogenies: a general method for the comparative analysis of discrete characters. Proceedings of the Royal Society of London B 255:37-45. (assessing evolutionary correlation between two discrete traits)
 
 Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scripta 26:331–348. (introduced kappa scaling factor used in comparative analyses)
 
@@ -249,7 +251,7 @@ Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference b
 
 :hibiscus: Pettigrew, J. D. 1994. [Genomic evolution: flying DNA.](https://doi.org/10.1016/S0960-9822(00)00065-8) Current Biology 4(3):277-280.
 
-Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
+:hibiscus: Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
 
 :hibiscus: Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior)
 
@@ -259,11 +261,13 @@ Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., &
 
 :hibiscus: Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375.
 
-Saitou, N., and M. Nei. 1987. The neighbor-joining method: a new method for reconstructing phylogenetic trees. Molecular Biology and Evolution 4: 406-425. (Neighbor joining method)
+:hibiscus: Saitou, N., and M. Nei. 1987. The neighbor-joining method: a new method for reconstructing phylogenetic trees. Molecular Biology and Evolution 4: 406-425. (Neighbor joining method)
 
 :hibiscus: Sankoff, D. 1975. Minimal Mutation Trees of Sequences. SIAM Journal on Applied Mathematics 28:35-42. (generalized parsimony, step matrices)
 
-Schwarz, G. E. 1978. Estimating the dimension of a model. Ann Stat. 6:461–464. (BIC model selection criterion)
+:hibiscus: Schluter, D., T. Price, A. Ø. Mooers, and D. Ludwig. 1997. Likelihood of ancestor states in adaptive radiation. Evolution 51:1699-1711.
+
+:hibiscus: Schwarz, G. E. 1978. Estimating the dimension of a model. Ann Stat. 6:461–464. (BIC model selection criterion)
 
 :hibiscus: Shimodaira, H., and M. Hasegawa. 1999. Multiple comparisons of log-likelihoods with applications to phylogenetic inference. Molecular Biology and Evolution 16: 1114-1116. (SH topology test)
 
@@ -285,6 +289,8 @@ Swofford, D. L., G. J. Olsen, P. J. Waddell, and D. M. Hillis. 1996. Phylogeneti
 
 Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
 
+:hibiscus: Tuffley, C., and M. Steel. 1997. Links between maximum likelihood and maximum parsimony under a simple model of substitution. Bulletin of Mathematical Biology 59:581-607
+
 Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
 
 :hibiscus: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416.
@@ -294,6 +300,8 @@ Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substit
 :hibiscus: Wickett, N. J., Y. Fan, P. Lewis, and B. Goffinet. 2008. [Distribution and evolution of pseudogenes, gene losses, and a gene rearrangement in the plastid genome of the nonphotosynthetic liverwort, _Aneura mirabilis_ (Metzgeriales, Jungermanniopsida).](http://dx.doi.org/10.1007/s00239-008-9133-1) Journal of Molecular Evolution 67:111-122.
 
 :hibiscus: Wiley, E. O. 1981. Phylogenetics: the theory and practice of phylogenetic systematics. John Wiley and Sons, New York.
+
+:hibiscus: Wright, A. M., Lloyd, G. T., & Hillis, D. M. (2015). [Modeling character change heterogeneity in phylogenetic analyses of morphology through the use of priors.](https://doi.org/10.1093/sysbio/syv122) Systematic Biology 65:602–611. 
 
 :hibiscus: Xie, W.G., P. O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal Likelihood Estimation for Bayesian Phylogenetic Model Selection. Systematic Biology 60(2):150-160. (Stepping-stone marginal likelihood estimation)
 
