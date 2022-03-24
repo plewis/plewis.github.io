@@ -201,6 +201,10 @@ An equal sign (<tt>=</tt>) is used for assignments that do not fall into any of 
 
 A directed, acyclic graph (DAG) can be used to portray a statistical model. Add these lines to your RevBayes script (again, just above <tt>quit()</tt>) and run it again.
 
+    #########################
+    # Create and plot model #
+    #########################
+    
     # Create model 
     mymodel = model(psi)
     
@@ -244,7 +248,7 @@ There are 3 deterministic nodes in the graph.
 
 <tt>dnPhyloCTMC</tt> is a probability distribution (hence the tilde used in the assignment) for the data conditional on the model. The <tt>clamp</tt> function assigns data to each leaf in the tree. Remember that the variable <tt>data</tt> was created in the first non-comment line of our script from the contents of the _algaemb.nex_ file.
 
-**Important** Make sure that the <tt>mymodel = model(psi)</tt> and the <tt>mymodel.graph(...)</tt> lines come last (right before <tt>quit()</tt>), otherwise <tt>mymodel</tt> will not include the likelihood and your MCMC analysis will just explore the prior. 
+**Important** Make sure that the <tt>mymodel = model(psi)</tt> and the <tt>mymodel.graph(...)</tt> lines come last (right before <tt>quit()</tt>), otherwise <tt>mymodel</tt> will not include the likelihood and your MCMC analysis will just explore the prior. In other words, add the <tt>PhyloCTMC</tt> section before the <tt>create and plot model</tt> section in your jc.Rev script.
 
 Run RevBayes again to create an updated _mymodel.dot_ file.
 
@@ -263,7 +267,7 @@ We've now completely specified the model, so all that's left is to create some m
     monitors.append( mnModel(filename="output/algae.log", printgen=1) )
 
     # Start the MCMC analsis
-    mymcmc = mcmc(mymodel, moves, monitors, nruns=2, combine="sequential")
+    mymcmc = mcmc(mymodel, moves, monitors, nruns=4, combine="sequential")
     mymcmc.run(generations=10000, tuningInterval=100)
     
 **Three monitors** were created and added to an initially-empty vector. The first is a **Screen monitor**: this just shows progress on the screen every 100 iterations. The second monitor is a **File monitor** that stores trees sampled during the run (every one of the 10000 steps will be saved because we specified <tt>printgen=1</tt>). Finally, we added a **Model monitor** that saves the parameter values at each of the 10000 generations.
@@ -276,10 +280,10 @@ Run your file in RevBayes now. It will stop after it finishes the 10000th iterat
 
 Open the file _algae.log_ in Tracer and **look at the trace for the Posterior**. (Note that you will need to get the file from the cluster back to your laptop in order to open it in tracer.) This file contains the combined output from the four separate files _algae_run_1.log_, _algae_run_2.log_, _algae_run_3.log_, and _algae_run_4.log_.
 
-> :thinking: Explain the downward spike you see in the middle of the posterior trace? (Note: there are actually two such spikes, but the first is difficult to see because it is right at the left edge of the plot.)
+> :thinking: Explain the downward spikes you see in the posterior trace? (Note: there are actually four such spikes, but the first is difficult to see because it is right at the left edge of the plot.)
 
 {% comment %}
-This trace combines the two separate runs, each of which began with a random tree topology and edge lengths. Thus, both runs start from a really low point on the posterior surface but quickly climb up to the same place. Those spikes thus represent the points at which each run begins.
+This trace combines the four separate runs, each of which began with a random tree topology and edge lengths. Thus, each run starts from a really low point on the posterior surface but quickly climb up to the same place. Those spikes thus represent the points at which each run begins.
 {% endcomment %}
 
 ### Calculating the MAP (Maximum A-Posteriori) tree
@@ -308,7 +312,7 @@ After running RevBayes, you should find the file _algae-map.tree_ in your output
 
 Remember from the [Likelihood lab](/likelihood/) that **the accepted phylogeny** (based on much evidence besides these data) **places all the chlorophyll-b-containing plastids together** (Lockhart, Steel, Hendy, and Penny, 1994). 
 
-Thus, there **should be an edge** in the tree separating the **two taxa that do not have chlorophyll b**, namely the cyanobacterium **_Anacystis_** (which has chlorophyll a and phycobilin accessory pigments) and the chromophyte **_Anacystis_** (which has chlorophylls a and c) from the 6 other taxa (which all have chlorophylls a and b).
+Thus, there **should be an edge** in the tree separating the **two taxa that do not have chlorophyll b**, namely the cyanobacterium **_Anacystis_** (which has chlorophyll a and phycobilin accessory pigments) and the chromophyte **_Olithodiscus_** (which has chlorophylls a and c) from the 6 other taxa (which all have chlorophylls a and b).
 
 > :thinking: Are the chlorophyll b taxa together in the map tree?
 
