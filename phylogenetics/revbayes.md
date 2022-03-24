@@ -248,7 +248,7 @@ There are 3 deterministic nodes in the graph.
 
 <tt>dnPhyloCTMC</tt> is a probability distribution (hence the tilde used in the assignment) for the data conditional on the model. The <tt>clamp</tt> function assigns data to each leaf in the tree. Remember that the variable <tt>data</tt> was created in the first non-comment line of our script from the contents of the _algaemb.nex_ file.
 
-**Important** Make sure that the <tt>mymodel = model(psi)</tt> and the <tt>mymodel.graph(...)</tt> lines come last (right before <tt>quit()</tt>), otherwise <tt>mymodel</tt> will not include the likelihood and your MCMC analysis will just explore the prior. In other words, add the <tt>PhyloCTMC</tt> section before the create and <tt>plot model</tt> section in your jc.Rev script.
+**Important** Make sure that the <tt>mymodel = model(psi)</tt> and the <tt>mymodel.graph(...)</tt> lines come last (right before <tt>quit()</tt>), otherwise <tt>mymodel</tt> will not include the likelihood and your MCMC analysis will just explore the prior. In other words, add the <tt>PhyloCTMC</tt> section before the <tt>create and plot model</tt> section in your jc.Rev script.
 
 Run RevBayes again to create an updated _mymodel.dot_ file.
 
