@@ -3,6 +3,8 @@ layout: page
 title: Phylogenetics (EEB 5349)
 permalink: /phylogenetics2022/
 ---
+[Scroll straight to today in the schedule](#today)
+
 This is a graduate-level course in phylogenetics, emphasizing primarily maximum likelihood and Bayesian approaches to estimating phylogenies, which are genealogies at or above the species level. A primary goal is to provide an accessible introduction to the theory so that by the end of the course students should be able to understand much of the primary literature on modern phylogenetic methods and know how to intelligently apply these methods to their own problems. The laboratory provides hands-on experience with several important phylogenetic software packages (PAUP*, IQ-TREE, RevBayes, BayesTraits, and others) and introduces students to the use of remote high performance computing resources to perform phylogenetic analyses.
 
 **Semester:** Spring 2022 <br/>
@@ -34,9 +36,9 @@ Thursday Mar. 10        | **Dirichlet Process Prior**<br/> Bayesian non-parametr
 Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
 Tuesday Mar.  22        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood, BIC vs. AIC \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianModelSelection.pdf)\] | **Homework 9**: [Dirichlet Process Priors](/hw9/)
-Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MorphModels.pdf)\] | **Lab 9**: Introduction to RevBayes
+<a name="today"/>Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MorphModels.pdf)\] | **Lab 9**: [Introduction to RevBayes](/revbayes/)
 Tuesday Mar. 29         | **TBA**<br/>  | **Homework 10**: TBD
-Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | **Lab 10**: [RevBayes (discrete morphology analyses)](https://revbayes.github.io/tutorials/morph_tree/)
+Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | **Lab 10**: RevBayes (discrete morphology analyses) {% comment %}(https://revbayes.github.io/tutorials/morph_tree/) {% endcomment%}
 Tuesday Apr. 5          | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. | **Homework 11**: TBD
 Thursday Apr. 7         | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | **Lab 11**: BayesTraits
 Tuesday Apr. 12         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[OU applet](/applets/ou/)\] | **Homework 12**: TBD
