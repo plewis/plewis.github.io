@@ -36,10 +36,10 @@ Thursday Mar. 10        | **Dirichlet Process Prior**<br/> Bayesian non-parametr
 Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
 Tuesday Mar.  22        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood, BIC vs. AIC \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianModelSelection.pdf)\] | **Homework 9**: [Dirichlet Process Priors](/hw9/)
-<a name="today"/>Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MorphModels.pdf)\] | **Lab 9**: [Introduction to RevBayes](/revbayes/)
-Tuesday Mar. 29         | **TBA**<br/>  | **Homework 10**: TBD
-Thursday Mar. 31         | **Testing for evolutionary dependence**<br/> Pagel’s (1994) test for correlated evolution among discrete traits; reversible-jump MCMC. | **Lab 10**: RevBayes (discrete morphology analyses) {% comment %}(https://revbayes.github.io/tutorials/morph_tree/) {% endcomment%}
-Tuesday Apr. 5          | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. | **Homework 11**: TBD
+Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MorphModels.pdf)\] | **Lab 9**: [Introduction to RevBayes](/revbayes/)
+<a name="today"/>Tuesday Mar. 29         | **Polytomies; Pagel's test**<br/> Polytomies and the star tree paradox; reversiblep-jump MCMC; Pagel’s (1994) test for correlated evolution. \[[polytomy slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Polytomies.pdf)\] \[[Pagel slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Pagel.pdf)\]| **Homework 10**: [Mk model and conditioning on variability](/hw10/)
+Thursday Mar. 31         | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. | **Lab 10**: [RevBayes (discrete morphology analyses)](https://revbayes.github.io/tutorials/morph_tree/)
+Tuesday Apr. 5          | **TBA**<br/>  | **Homework 11**: TBD
 Thursday Apr. 7         | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | **Lab 11**: BayesTraits
 Tuesday Apr. 12         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[OU applet](/applets/ou/)\] | **Homework 12**: TBD
 Thursday Apr. 14        | **Phylogenetic signal in comparative data**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[Pagel transformation applet](/applets/pagel/)\]<br/>**[Introduction to the coalescent**<br/>Just enough coalescent theory to understand the multispecies coalescent used to estimate species trees given possibly conflicting gene trees. | **Lab 12**: APE
@@ -157,6 +157,8 @@ Felsenstein, J. 1985b. Phylogenies and the comparative method. American Naturali
 
 :hibiscus: Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent data. Pages 156-163 in Computing Science and Statistics (E. Keramidas, ed.). (Metropolis-coupled MCMC a.k.a. heated chains)
 
+:hibiscus: Green, P. J. 1995. Reversible jump Markov chain Monte Carlo computation and Bayesian model determination. Biometrika 82:711-732.
+
 :hibiscus: Gogarten, J. P., H. Kibak, P. Dittrich, L. Taiz, E. J. Bowman, B. J. Bowman, M. F. Manolson, R. J. Poole, T. Date, T. Oshima, J. Konishi, K. Denda, and M. Yoshida. 1989. Evolution of the vacuolar H+-ATPase: Implications for the origin of eukaryotes PNAS 86:6661-6665.
 
 :hibiscus: Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts.
@@ -214,6 +216,8 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 :hibiscus: Lewis, P. O. 2001a. A likelihood approach to estimating phylogeny from discrete morphological character data. Systematic Biology 50:913-925.
 
 :hibiscus: Lewis, P. O. 2001b. Phylogenetic systematics turns over a new leaf. Trends in Ecology and Evolution 16:30-37.
+
+:hibiscus: Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian phylogenetic inference. Systematic Biology 54:241–253.
 
 Maddison, W. P. 1997. Gene trees in species trees. Systematic Biology 46: 523–536.
 
@@ -303,7 +307,7 @@ Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substit
 
 :hibiscus: Wiley, E. O. 1981. Phylogenetics: the theory and practice of phylogenetic systematics. John Wiley and Sons, New York.
 
-:hibiscus: Wright, A. M., Lloyd, G. T., & Hillis, D. M. (2015). [Modeling character change heterogeneity in phylogenetic analyses of morphology through the use of priors.](https://doi.org/10.1093/sysbio/syv122) Systematic Biology 65:602–611. 
+:hibiscus: Wright, A. M., Lloyd, G. T., & Hillis, D. M. (2016). [Modeling character change heterogeneity in phylogenetic analyses of morphology through the use of priors.](https://doi.org/10.1093/sysbio/syv122) Systematic Biology 65:602–611. 
 
 :hibiscus: Xie, W.G., P. O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal Likelihood Estimation for Bayesian Phylogenetic Model Selection. Systematic Biology 60(2):150-160. (Stepping-stone marginal likelihood estimation)
 
