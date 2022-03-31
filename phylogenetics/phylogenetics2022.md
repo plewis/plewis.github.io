@@ -37,12 +37,12 @@ Tuesday Mar. 15         | **SPRING BREAK** |
 Thursday Mar. 17        | **SPRING BREAK** |
 Tuesday Mar.  22        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood, BIC vs. AIC \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianModelSelection.pdf)\] | **Homework 9**: [Dirichlet Process Priors](/hw9/)
 Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MorphModels.pdf)\] | **Lab 9**: [Introduction to RevBayes](/revbayes/)
-<a name="today"/>Tuesday Mar. 29         | **Polytomies; Pagel's test**<br/> Polytomies and the star tree paradox; reversiblep-jump MCMC; Pagel’s (1994) test for correlated evolution. \[[polytomy slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Polytomies.pdf)\] \[[Pagel slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Pagel.pdf)\]| **Homework 10**: [Mk model and conditioning on variability](/hw10/)
-Thursday Mar. 31         | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. | **Lab 10**: [RevBayes (discrete morphology analyses)](/morph/)
-Tuesday Apr. 5          | **TBA**<br/>  | **Homework 11**: TBD
-Thursday Apr. 7         | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | **Lab 11**: BayesTraits
-Tuesday Apr. 12         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[OU applet](/applets/ou/)\] | **Homework 12**: TBD
-Thursday Apr. 14        | **Phylogenetic signal in comparative data**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[Pagel transformation applet](/applets/pagel/)\]<br/>**[Introduction to the coalescent**<br/>Just enough coalescent theory to understand the multispecies coalescent used to estimate species trees given possibly conflicting gene trees. | **Lab 12**: APE
+Tuesday Mar. 29         | **Polytomies; Pagel's test**<br/> Polytomies and the star tree paradox; reversiblep-jump MCMC; Pagel’s (1994) test for correlated evolution. \[[polytomy slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Polytomies.pdf)\] \[[Pagel slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Pagel.pdf)\]| **Homework 10**: [Mk model and conditioning on variability](/hw10/)
+<a name="today"/>Thursday Mar. 31         | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. | **Lab 10**: [RevBayes (discrete morphology analyses)](/morph/)
+Tuesday Apr. 5          | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | **Homework 11**: TBD
+Thursday Apr. 7         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[OU applet](/applets/ou/)\] | **Lab 11**: BayesTraits
+Tuesday Apr. 12         | **Phylogenetic signal in comparative data**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[Pagel transformation applet](/applets/pagel/)\] | **Homework 12**: TBD
+Thursday Apr. 14        | **[Introduction to the coalescent**<br/>Just enough coalescent theory to understand the multispecies coalescent used to estimate species trees given possibly conflicting gene trees. | **Lab 12**: APE
 Tuesday Apr. 19         | **Species Tree Estimation (cont.)**<br/> Deep coalescence, incomplete lineage sorting, gene tree discordance due to ILS, estimating species trees using the multispecies coalescent. The SVDQuartets and ASTRAL species tree methods. | **Homework 13**: TBD
 Thursday Apr. 21        | **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. | **Lab 13**: Divergence time estimation
 Tuesday Apr. 26         | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants); BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | **Homework 14**:TBD
@@ -177,9 +177,14 @@ Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from mu
 
 :hibiscus: Holder, M. T., Lewis, P. O., Swofford, D. L., and Larget, B. (2005). Hastings ratio of the LOCAL proposal used in Bayesian phylogenetics. Systematic Biology, 54(6), 961–965.
 
+:hibiscus: Holder, M. T., P. O. Lewis, and D. L. Swofford. 2010. The Akaike Information Criterion will not choose the no common mechanism model. Systematic Biology 59:477-485.
+
 :hibiscus: Huelsenbeck, J. P., and D. M. Hillis. 1993. [Success of phylogenetic methods in the four taxon case.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 42:247-264. (coined the term Felsenstein Zone)
 
 :hibiscus: Huelsenbeck, J. P., Jain, S., Frost, S., and Pond, S. 2006. A Dirichlet process model for detecting positive selection in protein-coding DNA sequences. Proceedings of the National Academy USA 103:6263–6268. (DP mixture model for omega)
+
+:hibiscus: Huelsenbeck, J. P., R. Nielsen, and J. P. Bollback. 2003. Stochastic mapping of morphological 
+characters. Systematic Biology 52(2): 131-158.
 
 :hibiscus: Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommodating and testing across-site rate variation. Systematic Biology 56:975–987. (DP model for among site rate heterogeneity)
 
@@ -188,8 +193,6 @@ Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from mu
 :hibiscus: Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of mutation data matrices from protein sequences. Comput Applic Biosci, 8, 275–282. (JTT amino acid model)
 
 :hibiscus: Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model)
-
-:hibiscus: Holder, M. T., P. O. Lewis, and D. L. Swofford. 2010. The Akaike Information Criterion will not choose the no common mechanism model. Systematic Biology 59:477-485.
 
 :hibiscus: Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. Phylogenetic analysis: concepts and methods. American Journal of Human Genetics 23: 235-252.
 
@@ -238,6 +241,8 @@ Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection
 :hibiscus: Muse, S. V., and B. S. Gaut. 1994. A likelihood approach for comparing synonymous and nonsynonymous substitution rates, with application to the chloroplast genome. Molecular Biology and Evolution, 11, 715-724.
 
 :hibiscus: Newton, M. A., and A. E. Raftery. 1994. Approximate Bayesian inference with the weighted likelihood bootstrap (with discussion). J. Roy. Statist. Soc. B 56:3-48. [Harmonic mean method for estimating marginal likelihood]
+
+:hibiscus: Nielsen, R. 2002. Mapping mutations on phylogenies. Systematic Biology 51(5): 729-739.
 
 Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Appropriate likelihood ratio tests and marginal distributions for evolutionary tree models with constraints on parameters. Molecular Biology and Evolution 17:798-803. (LRT border case correction)
 

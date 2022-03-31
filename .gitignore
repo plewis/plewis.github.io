@@ -1,3 +1,5 @@
+.Rhistory
+.bundle
 .sass-cache
 .tweet-cache
 Gemfile.lock
