@@ -3,4 +3,5 @@
 .sass-cache
 .tweet-cache
 Gemfile.lock
-_site
+_site/
+vendor/
