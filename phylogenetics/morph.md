@@ -186,7 +186,7 @@ We will now see what effect conditioning on variability makes. When the Mk model
 
 Use the **exclude** (exclude character) command in PAUP\* to determine how many variable characters are present in the data set we are using:
 
-    module import paup/4.0a-166
+    module load paup/4.0a-166
     paup bears.nex
     paup> exclude constant
     paup> quit
@@ -219,7 +219,7 @@ Now open _mkv.Rev_ in nano and change all the output file names as follows:
 | output/mk.map.tre     | output/mkv.map.tre     |
 | output/mk.majrule.tre | output/mkv.majrule.tre |
 
-Note that there are only 4 file names listed here but **there are 5 lines you need to change**.
+Note that there are only 4 file names listed here but **there are 5 lines you need to change and all are in the MCMC Analysis section**.
 
 The only change we need to make to cause RevBayes to condition on variability is to add **coding="variable"** to our PhyloCTMC call:
 
