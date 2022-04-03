@@ -66,7 +66,7 @@ The data and trees were not made available in the online supplementary materials
 
 Here's how to curl these files into your _btlab_ folder
 
-    cd
+    cd ~/btlab
     curl -O https://plewis.github.io/assets/data/pelly.txt
     curl -O https://plewis.github.io/assets/data/pelly.tre
     
@@ -449,7 +449,7 @@ You should see this output showing the options selected:
 I got -163.043380
 {% endcomment %}
 
-> :thinking: Which is the better model (dependent or independent) according to these estimates of marginal likelihood?_
+> :thinking: Which is the better model (dependent or independent) according to these estimates of marginal likelihood?
 
 {% comment %}
 The dependent model has a slightly higher marginal likelihood and is thus preferred
@@ -473,9 +473,9 @@ You could copy the "spreadsheet" part of the output file into Excel and sort by 
     module load python/3.8.1
     python3 btsummary.py
     
-This should produce counts of model strings. (If it doesn't, check to make sure your output file is named _rjmcmc-dependent.txt</tt> because _btsummary.py_ tries to open a file by that name.)   Answer the following questions using the counts provided by _btsummary.py_:
+This should produce counts of model strings. (If it doesn't, check to make sure your output file is named _rjmcmc-dependent.txt_ because _btsummary.py_ tries to open a file by that name.)   Answer the following questions using the counts provided by _btsummary.py_:
 
-> :thinking: Which model string is most common?_ 
+> :thinking: Which model string is most common? 
 
 {% comment %}
 I got 0 0 Z 0 0 0 0 0 with count 968
