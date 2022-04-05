@@ -38,8 +38,8 @@ Thursday Mar. 17        | **SPRING BREAK** |
 Tuesday Mar.  22        | **Bayes factors and Bayesian model selection**<br/> Bayes factors, steppingstone estimation of marginal likelihood, BIC vs. AIC \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/BayesianModelSelection.pdf)\] | **Homework 9**: [Dirichlet Process Priors](/hw9/)
 Thursday Mar. 24        | **Discrete morphological models**<br/>Introduction to discrete morphological models; Mk model; conditioning on variability. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MorphModels.pdf)\] | **Lab 9**: [Introduction to RevBayes](/revbayes/)
 Tuesday Mar. 29         | **Polytomies; Pagel's test**<br/> Polytomies and the star tree paradox; reversiblep-jump MCMC; Pagel’s (1994) test for correlated evolution. \[[polytomy slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Polytomies.pdf)\] \[[Pagel slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Pagel.pdf)\]| **Homework 10**: [Mk model and conditioning on variability](/hw10/)
-<a name="today"/>Thursday Mar. 31         | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/StochasticMapping.pdf)\] | **Lab 10**: [RevBayes (discrete morphology analyses)](/morph/)
-Tuesday Apr. 5          | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts and Phylogenetic Generalized Least Squares (PGLS). | **Homework 11**: TBD
+Thursday Mar. 31         | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/StochasticMapping.pdf)\] | **Lab 10**: [RevBayes (discrete morphology analyses)](/morph/)
+<a name="today"/>Tuesday Apr. 5          | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/IndependentContrasts.pdf)\] \[[Brownian Motion applet](/applets/ou/)\] and Phylogenetic Generalized Least Squares (PGLS). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PGLS1.pdf)\] | **Homework 11**: [Maddison and Fitzjohn 2015](/hw11/)
 Thursday Apr. 7         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[OU applet](/applets/ou/)\] | **Lab 11**: BayesTraits
 Tuesday Apr. 12         | **Phylogenetic signal in comparative data**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[Pagel transformation applet](/applets/pagel/)\] | **Homework 12**: TBD
 Thursday Apr. 14        | **[Introduction to the coalescent**<br/>Just enough coalescent theory to understand the multispecies coalescent used to estimate species trees given possibly conflicting gene trees. | **Lab 12**: APE
@@ -99,11 +99,13 @@ Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sin
 
 :hibiscus: Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
 
+:hibiscus: Blomberg, S. P., J. G. Lefevre, J. A. Wells, and M. Waterhouse. 2012. [Independent contrasts and PGLS regression estimators are equivalent.](https://doi.org/10.1093/sysbio/syr118) Systematic Biology 61:382–391.
+
 :hibiscus: Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. Mitochondrial DNA sequences of primates, tempo and mode of evolution. Journal of Molecular Evolution 18:225-239.
 
-Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates. Systematic Biology, 59(2), 145–161.
+Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates. Systematic Biology 59:145–161.
 
-:hibiscus: Buneman, M. 1971. The recovery of trees from measurements of dissimilarity. Pp. 387-395 in Mathematics in the Archeological and Historical Sciences (Hodson, F. R. , Kendall, D. G., and Tautu, P., eds.), Edinburgh Univ. Press, Edinburgh.
+:hibiscus: Buneman, M. 1971. The recovery of trees from measurements of dissimilarity. Pp. 387-395 in Mathematics in the Archeological and Historical Sciences (Hodson, F. R., Kendall, D. G., and Tautu, P., eds.), Edinburgh Univ. Press, Edinburgh.
 
 :hibiscus: Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences in phylogeny. Evolution 19:311-326. (irreversible parsimony)
 
@@ -139,7 +141,7 @@ Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to r
 
 :hibiscus: Felsenstein, J. 1985a. Confidence intervals on phylogenies: an approach using the bootstrap. Evolution 39:783-791. (nonparametric bootstrapping)
 
-Felsenstein, J. 1985b. Phylogenies and the comparative method. American Naturalist 125:1-15. (independent contrasts)
+:hibiscus: Felsenstein, J. 1985b. Phylogenies and the comparative method. American Naturalist 125:1-15. (independent contrasts)
 
 :hibiscus: Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood approach. Evolution 46:159-173. (conditioning on variability in discrete trait likelihood calculations)
 
@@ -222,13 +224,13 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 
 :hibiscus: Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian phylogenetic inference. Systematic Biology 54:241–253.
 
-Maddison, W. P. 1997. Gene trees in species trees. Systematic Biology 46: 523–536.
+:hibiscus: Maddison, W. P. 1997. Gene trees in species trees. Systematic Biology 46:523–536.
 
 :hibiscus: Maddison, D. R., Swofford, D. L., and Maddison, W. P. 1997. NEXUS: An extensible file format for systematic information. Systematic Biology 46:590–617. (NEXUS file format)
 
-Maddison, W. P., and FitzJohn, R. G. 2015. The unsolved challenge to phylogenetic correlation tests for categorical characters. Systematic Biology 64:127–136. (need for true replication in comparative studies)
+:hibiscus: Maddison, W. P., and FitzJohn, R. G. 2015. The unsolved challenge to phylogenetic correlation tests for categorical characters. Systematic Biology 64:127–136. (need for true replication in comparative studies)
 
-Martins, E. P., and T. F. Hansen. 1997. Phylogenies and the comparative method: a general approach to incorporating phylogenetic information into the analysis of interspecific data. The American Naturalist 149:646-667. (PGLS)
+:hibiscus: Martins, E. P., and T. F. Hansen. 1997. Phylogenies and the comparative method: a general approach to incorporating phylogenetic information into the analysis of interspecific data. The American Naturalist 149:646-667. (PGLS)
 
 :hibiscus: Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. Equation of state calculations by fast computing machines. J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC)
 
@@ -254,7 +256,7 @@ Pagel, M. 1999. Inferring the historical patterns of biological evolution. Natur
 
 Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting pattern-heterogeneity in gene sequence or character-state data. Systematic Biology 53:571-581. (mixture of Q-matrices model)
 
-Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discrete characters by reversible-jump Markov chain Monte Carlo. American Naturalist 167:808-825. (rjMCMC for discrete character correlation)
+:hibiscus: Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discrete characters by reversible-jump Markov chain Monte Carlo. American Naturalist 167:808-825. (rjMCMC for discrete character correlation)
 
 Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo. Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
 

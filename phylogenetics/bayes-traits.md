@@ -469,7 +469,7 @@ The reversible-jump approach carries out an MCMC analysis in which the number of
 
 You could copy the "spreadsheet" part of the output file into Excel and sort by the model string column, but let's instead use Python to summarize the output file. Download (e.g. using curl) the file _btsummary.py_ and run it as follows:
 
-    curl -O http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/btsummary.py
+    curl -O https://plewis.github.io/assets/scripts/btsummary.py
     module load python/3.8.1
     python3 btsummary.py
     
