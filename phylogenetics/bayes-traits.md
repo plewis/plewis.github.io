@@ -478,7 +478,7 @@ This should produce counts of model strings. (If it doesn't, check to make sure 
 > :thinking: Which model string is most common? 
 
 {% comment %}
-I got 0 0 Z 0 0 0 0 0 with count 968
+I got 0 0 Z 0 0 0 0 0 with a count of 968
 {% endcomment %}
 
 > :thinking: What does this model imply?
