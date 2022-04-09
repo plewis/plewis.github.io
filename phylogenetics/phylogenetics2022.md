@@ -89,7 +89,7 @@ Page, R., and Holmes, E. 1998. **Molecular evolution: a phylogenetic approach.**
 
 Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sinauer Associates, Sunderland. Chapters 11 (**Phylogenetic inference**) and 12 (**Applications of molecular systematics**). (Still a very valuable compendium of pre-Bayesian-era phylogenetic methods.)
 
-## Literature cited in lecture
+## Literature cited
 
 :hibiscus: indicates that paper was cited in Spring 2022 semester (either in lecture or lab)
 
@@ -261,6 +261,8 @@ Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting patter
 :hibiscus: Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discrete characters by reversible-jump Markov chain Monte Carlo. American Naturalist 167:808-825. (rjMCMC for discrete character correlation)
 
 Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo. Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
+
+:hibiscus: Paradis, E. 2006. Analysis of phylogenetics and evolution with R. Springer. ISBN: 0-387-32914-5.
 
 :hibiscus: Pettigrew, J. D. 1991. Wings or brain? convergent evolution in the origins of bats. Systematic Zoology, 40(2):199-216.
 
