@@ -41,8 +41,8 @@ Tuesday Mar. 29         | **Polytomies; Pagel's test**<br/> Polytomies and the s
 Thursday Mar. 31         | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/StochasticMapping.pdf)\] \[[additional slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/StochasticMapping2.pdf)\] | **Lab 10**: [RevBayes (discrete morphology analyses)](/morph/)
 <a name="today"/>Tuesday Apr. 5          | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/IndependentContrasts.pdf)\] \[[Brownian Motion applet](/applets/ou/)\] and Phylogenetic Generalized Least Squares (PGLS). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PGLS1.pdf)\] | **Homework 11**: [Maddison and Fitzjohn 2015](/hw11/)
 Thursday Apr. 7         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PGLS2.pdf)\] \[[OU applet](/applets/ou/)\] | **Lab 11**: [BayesTraits](/bayes-traits/)
-Tuesday Apr. 12         | **Phylogenetic signal in comparative data**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[Pagel transformation applet](/applets/pagel/)\] | **Homework 12**: TBD
-Thursday Apr. 14        | **[Introduction to the coalescent**<br/>Just enough coalescent theory to understand the multispecies coalescent used to estimate species trees given possibly conflicting gene trees. | **Lab 12**: APE
+Tuesday Apr. 12         | **Phylogenetic signal in continuous traits**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/traitsignal.pdf)\] \[[Pagel transformation applet](/applets/pagel/)\] <br/>**[Introduction to the coalescent**<br/>Introduction to coalescent theory \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/coalescent1.pdf)\] | **Homework 12**: [Brownian motion model](/hw12/)
+Thursday Apr. 14        | **[Multispecies coalescent model**<br/>The multispecies coalescent used to estimate species trees given possibly conflicting gene trees due to deep coalescence and incomplete lineage sorting (ILS). | **Lab 12**: Continuous trait analses in R
 Tuesday Apr. 19         | **Species Tree Estimation (cont.)**<br/> Deep coalescence, incomplete lineage sorting, gene tree discordance due to ILS, estimating species trees using the multispecies coalescent. The SVDQuartets and ASTRAL species tree methods. | **Homework 13**: TBD
 Thursday Apr. 21        | **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. | **Lab 13**: Divergence time estimation
 Tuesday Apr. 26         | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants); BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | **Homework 14**:TBD
@@ -81,6 +81,8 @@ Garamszegi, L. Z. 2014. **[Modern phylogenetic comparative methods and their app
 
 Hall, B. G. 2011. **Phylogenetic trees made easy: a how-to manual (4th edition).** Sinauer Associates, Sunderland. (A guide to running some of the most important phylogenetic software packages.)
 
+:hibiscus: Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population history. Trends Ecol. Evol. 24:86-93.
+
 Lemey, P., Salemi, M., and Vandamme, A.-M. 2009. **The phylogenetic handbook: a practical approach to phylogenetic analysis and hypothesis testing (2nd edition).** Cambridge University Press, Cambridge, UK (Chapters on theory are paired with practical chapters on software related to the theory.)
 
 Felsenstein, J. 2004. **Inferring phylogenies.** Sinauer Associates, Sunderland. (Comprehensive overview of both history and methods of phylogenetics.)
@@ -98,6 +100,8 @@ Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sin
 :hibiscus: Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. Bayesian estimation of concordance among gene trees. Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy)
 
 :hibiscus: Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
+
+:hibiscus: Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic signal in comparative data: behavioral traits are more labile. Evolution 57(4):717-745.
 
 :hibiscus: Blomberg, S. P., J. G. Lefevre, J. A. Wells, and M. Waterhouse. 2012. [Independent contrasts and PGLS regression estimators are equivalent.](https://doi.org/10.1093/sysbio/syr118) Systematic Biology 61:382–391.
 
@@ -254,7 +258,7 @@ Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Approp
 
 Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scripta 26:331–348. (introduced kappa scaling factor used in comparative analyses)
 
-Pagel, M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877–884. (introduced the delta and lambda scaling factors used in comparative analyses)
+:hibiscus: Pagel, M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877–884. (introduced the delta and lambda scaling factors used in comparative analyses)
 
 Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting pattern-heterogeneity in gene sequence or character-state data. Systematic Biology 53:571-581. (mixture of Q-matrices model)
 
