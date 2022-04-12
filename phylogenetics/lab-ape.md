@@ -34,10 +34,10 @@ If you haven't used APE before, you will need to install it as well as some deri
      
 Assuming you are connected to the internet, R should locate these packages and install them for you. After they are installed, you will need to load them into R in order to use them (note that no quotes are used this time):
 
-     ibrary(ape)
-     ibrary(phytools)
-     ibrary(caper)
-     ibrary(geiger)
+     library(ape)
+     library(phytools)
+     library(caper)
+     library(geiger)
      
 You should never again need to issue the <tt>install.packages</tt> command for this package again, but you will need to use the <tt>library</tt> command to load them whenever you want to use them.
 
@@ -45,7 +45,7 @@ You should never again need to issue the <tt>install.packages</tt> command for t
 
 Download the file _yule.tre_ into a new, empty folder somewhere on your computer. If you are using a Mac or Linux (or if you are using Windows but you have opened a Git for Windows Bash terminal), you can use curl as follows:
 
-    curl -o https://plewis.github.io/assets/data/yule.tre
+    curl -O https://plewis.github.io/assets/data/yule.tre
     
 Tell R where this folder is using the <tt>setwd</tt> (set working directory) command. For example, I created a folder named <tt>apelab</tt> on my desktop, so I typed this to make that folder my working directory:
 
@@ -603,7 +603,7 @@ The last line above sets the names of the rows equal to the species names that c
         
 Read in the tree:
 
-    barbet_tree <- read.nexus("barbet.tre")
+    barbet_tree <- read.tree("barbet.tre")
     
 Plot the tree using the phytools plotTree function:
 
@@ -620,7 +620,7 @@ You should see a warning in red that some data were dropped when compiling the c
     
 If you show all but the first column of <tt>barbet_data</tt> (which just contains the species names), you can see that the species that were dropped were those that had missing data for the <tt>Note_Length</tt> and <tt>Dominant_frequency</tt> characters:
 
-    berbet_data[c(-1)]
+    barbet_data[c(-1)]
     
 Now it's time to do PGLS on the remaining data
     
@@ -633,13 +633,13 @@ Now it's time to do PGLS on the remaining data
 Yes, the P value is 0.01949.
 {% endcomment %}
 
-> :thinking: Is body size postively or negatively associated with the length of notes in songs? (Hint: look at the estimated coefficient for Note_Length.)
+> :thinking: Is body size positively or negatively associated with the length of notes in songs? (Hint: look at the estimated coefficient for Note_Length.)
 
 {% comment %}
 Positively, the regression coefficient for Note_Length was 0.44828.
 {% endcomment %}
 
-> :thinking: Is body size postively or negatively associated with the frequency of songs? (Hint: look at the estimated coefficient for Dominant_frequency.)
+> :thinking: Is body size positively or negatively associated with the frequency of songs? (Hint: look at the estimated coefficient for Dominant_frequency.)
 
 {% comment %}
 Negatively, the regression coefficient for Dominant_frequency was -0.15813.
