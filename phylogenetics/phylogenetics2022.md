@@ -41,8 +41,8 @@ Tuesday Mar. 29         | **Polytomies; Pagel's test**<br/> Polytomies and the s
 Thursday Mar. 31         | **Stochastic character mapping**<br/> An alternative to Pagel’s (1994) test for assessing whether correlation among characters goes beyond what is expected from inheritance alone. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/StochasticMapping.pdf)\] \[[additional slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/StochasticMapping2.pdf)\] | **Lab 10**: [RevBayes (discrete morphology analyses)](/morph/)
 Tuesday Apr. 5          | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/IndependentContrasts.pdf)\] \[[Brownian Motion applet](/applets/ou/)\] and Phylogenetic Generalized Least Squares (PGLS). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PGLS1.pdf)\] | **Homework 11**: [Maddison and Fitzjohn 2015](/hw11/)
 Thursday Apr. 7         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PGLS2.pdf)\] \[[OU applet](/applets/ou/)\] | **Lab 11**: [BayesTraits](/bayes-traits/)
-<a name="today"/>Tuesday Apr. 12         | **Phylogenetic signal in continuous traits**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/traitsignal.pdf)\] \[[Pagel transformation applet](/applets/pagel/)\] <br/>**[Introduction to the coalescent**<br/>Introduction to coalescent theory \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/coalescent1.pdf)\] | **Homework 12**: [Brownian motion model](/hw12/)
-Thursday Apr. 14        | **[Multispecies coalescent model**<br/>The multispecies coalescent used to estimate species trees given possibly conflicting gene trees due to deep coalescence and incomplete lineage sorting (ILS). | **Lab 12**: Continuous trait analses in R
+Tuesday Apr. 12         | **Phylogenetic signal in continuous traits**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/traitsignal.pdf)\] \[[Pagel transformation applet](/applets/pagel/)\] <br/>**[Introduction to the coalescent**<br/>Introduction to coalescent theory \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/coalescent1.pdf)\] | **Homework 12**: [Brownian motion model](/hw12/)
+<a name="today"/>Thursday Apr. 14        | **[Multispecies coalescent model**<br/>The multispecies coalescent used to estimate species trees given possibly conflicting gene trees due to deep coalescence and incomplete lineage sorting (ILS). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/mscoalescent-astral-svd.pdf)\] | **Lab 12**: [Continuous trait analses in R](/ape/)
 Tuesday Apr. 19         | **Species Tree Estimation (cont.)**<br/> Deep coalescence, incomplete lineage sorting, gene tree discordance due to ILS, estimating species trees using the multispecies coalescent. The SVDQuartets and ASTRAL species tree methods. | **Homework 13**: TBD
 Thursday Apr. 21        | **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. | **Lab 13**: Divergence time estimation
 Tuesday Apr. 26         | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants); BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | **Homework 14**:TBD
@@ -115,11 +115,13 @@ Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees
 
 :hibiscus: Cavalli-Sforza, L. L., and A. W. F. Edwards. 1967. Evolution 32:550-570.
 
+:hibiscus: Chifman, J., and Kubatko, L. S. 2014. [Quartet Inference from SNP Data Under the Coalescent Model.](http://doi.org/10.1093/bioinformatics/btu530) Bioinformatics 30(23):3317-3324. 
+
 :hibiscus: Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London.
 
 :hibiscus: Dayhoff, M.O., Schwartz, R.M., Orcutt, B.C. 1978. A model for evolutionary change in proteins. Atlas of Protein Sequence and Structure, 5, 345–352. (PAM amino acid model)
 
-Degnan, J. H., and N. A. Rosenberg. 2006. Discordance of species trees with their most likely gene trees. PLoS Genetics 2:e68. (The anomaly zone)
+:hibiscus: Degnan, J. H., and N. A. Rosenberg. 2006. [Discordance of species trees with their most likely gene trees.](http://doi.org/10.1371/journal.pgen.0020068) PLoS Genetics 2:e68. (The anomaly zone)
 
 Drummond, A. J., S. Y. W. Ho, M. J. Phillips, A. Rambaut. 2006. Relaxed phylogenetics and dating with confidence. PLoS Biology 4(5): e88 (Uncorrelated relaxed clocks)
 
@@ -177,7 +179,7 @@ Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to r
 
 Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. The fossilized birth–death process for coherent calibration of divergence-time estimates. PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
 
-Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from multilocus data. Molecular Biology and Evolution 27:570-580. (Bayesian species tree estimation)
+:hibiscus: Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from multilocus data. Molecular Biology and Evolution 27:570-580. (Bayesian species tree estimation)
 
 :hibiscus: Hennig, W. 1966. Phylogenetic systematics. University of Illinois Press, Urbana.
 
@@ -243,6 +245,8 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 :hibiscus: Michener, C. D., and R. R. Sokal. 1957. A Quantitative Approach to a Problem in Classification. Evolution 11:130-162
 
 Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection of likelihood models for phylogeny estimation. Systematic Biology 52:674–683. (DTmodsel model selection criterion)
+
+:hibiscus: Mirarab, S., and T. Warnow. 2015. [ASTRAL-II: coalescent-based species tree estimation with many hundreds of taxa and thousands of genes.](https://doi.org/10.1093/bioinformatics/btv234) Bioinformatics 31(12):i44–52.  
 
 :hibiscus: Muse, S. 1995. evolutionary analyses of DNA sequences subject to constraints on secondary structure. Genetics, 139(3), 1429–1439. (secondary structure model)
 
