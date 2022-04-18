@@ -271,13 +271,13 @@ I got (0.9986, 1.0216), and yes, it includes the true value 1.0
 I got (0.6306,4.1727); yes, the true rate was 2.6, which is close to the middle of the credible interval
 {% endcomment %}
 
-> :thinking: Using the Marginal Density tab in Tracer, and selecting all 6 exchangeabilities, do these densities make sense given what you know about the model used? 
+> :thinking: Using the Marginal Density tab in Tracer, and selecting all 6 exchangeabilities, what about these densities makes sense given what you know about the true model used to simulate the data? 
 
 {% comment %}
 yes, the 2 transition relative rates are about 0.358, which is 5.04 times higher than the other 4, which average 0.071
 {% endcomment %}
 
-> :thinking: Using the Marginal Density tab in Tracer, and selecting all 4 state_freqs, do these densities make sense given what you know about the model used?
+> :thinking: Using the Marginal Density tab in Tracer, and selecting all 4 state_freqs, what about these densities make sense given what you know about the true model used to simulate the data?
 
 {% comment %}
 yes, they are centered over 0.1, 0.2, 0.3, and 0.4, which are the values we specified when simulating the data using evolver
@@ -333,9 +333,11 @@ You'll also need to substitute **<tt>branch_rates</tt>** for **<tt>clock_rate</t
 
     phySeq ~ dnPhyloCTMC(tree=timetree, Q=Q, branchRates=branch_rates, nSites=n_sites, type="DNA")
 
-The model has suddenly gotten a lot more complicated, hasn't it? We now have a rate parameter for every edge in the tree, so we've added $$(2)(20) - 2 = 38$$ more parameters to the model. Each of these edge rate parameters has a lognormal prior, and the 2 parameters of that distribution represent hyperparameters in what is now a hierarchical model, so we've increased the model from 10 parameters (1 **<tt>clock_rate</tt>**, 1 <tt>birth_rate</tt>, 3 **<tt>state_freqs</tt>**, 5 **<tt>exchangeabilities</tt>**) to 50 parameters (the original 10 plus 38 edge rates and 2 hyperparameters **<tt>ucln_mu</tt>** and **<tt>ucln_sigma</tt>**).
+The model has suddenly gotten a lot more complicated, hasn't it? We now have a rate parameter for every edge in the tree, so we've added $$(2)(20) - 2 = 38$$ more parameters to the model. Each of these edge rate parameters has a lognormal prior, and the 2 parameters of that distribution represent hyperparameters in what is now a hierarchical model, so we've increased the model from 10 parameters (1 **<tt>clock_rate</tt>**, 1 **<tt>birth_rate</tt>**, 3 **<tt>state_freqs</tt>**, 5 **<tt>exchangeabilities</tt>**) to 50 parameters (the original 10 plus 38 edge rates and 2 hyperparameters **<tt>ucln_mu</tt>** and **<tt>ucln_sigma</tt>**).
 
-To the right is a figure (click the thumbnail to enlarge) that shows the relationship between the lognormal distribution (left) and the normal distribution (right). The lognormal distribution is tricky in that its two parameters (mu and sigma) are _not_ the mean and standard deviation of the lognormally-distributed variable, as you might be led to assume if you are used to mu and sigma used with normal distributions. In a Lognormal distribution, mu and sigma are, instead, the mean and standard deviation of the _log_ of the lognormally-distributed variable! 
+{% include figure.html description="Lognormal Distribution" url="/assets/img/lognormal.png" css="image-right noborder" width="400px" %}
+
+To the right is a slide (from the March 3, 2022, lecture) that shows the relationship between the lognormal distribution (left) and the normal distribution (right). The lognormal distribution is tricky in that its two parameters (mu and sigma) are _not_ the mean and standard deviation of the lognormally-distributed variable, as you might be led to assume if you are used to mu and sigma used with normal distributions. In a Lognormal distribution, mu and sigma are, instead, the mean and standard deviation of the _log_ of the lognormally-distributed variable! 
 
 Note this line:
 
