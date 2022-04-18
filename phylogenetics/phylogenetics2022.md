@@ -42,11 +42,11 @@ Thursday Mar. 31         | **Stochastic character mapping**<br/> An alternative 
 Tuesday Apr. 5          | **Evolutionary Correlation: Continuous Traits**<br/> Independent Contrasts \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/IndependentContrasts.pdf)\] \[[Brownian Motion applet](/applets/ou/)\] and Phylogenetic Generalized Least Squares (PGLS). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PGLS1.pdf)\] | **Homework 11**: [Maddison and Fitzjohn 2015](/hw11/)
 Thursday Apr. 7         | **PGLS (cont.)**<br/> Estimating ancestral states in PGLS. Ornstein-Uhlenbeck model vs. Brownian motion. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/PGLS2.pdf)\] \[[OU applet](/applets/ou/)\] | **Lab 11**: [BayesTraits](/bayes-traits/)
 Tuesday Apr. 12         | **Phylogenetic signal in continuous traits**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/traitsignal.pdf)\] \[[Pagel transformation applet](/applets/pagel/)\] <br/>**[Introduction to the coalescent**<br/>Introduction to coalescent theory \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/coalescent1.pdf)\] | **Homework 12**: [Brownian motion model](/hw12/)
-<a name="today"/>Thursday Apr. 14        | **[Multispecies coalescent model**<br/>The multispecies coalescent used to estimate species trees given possibly conflicting gene trees due to deep coalescence and incomplete lineage sorting (ILS). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/mscoalescent-astral-svd.pdf)\] | **Lab 12**: [Continuous trait analyses in R](/ape/)
-Tuesday Apr. 19         | **Species Tree Estimation (cont.)**<br/> Deep coalescence, incomplete lineage sorting, gene tree discordance due to ILS, estimating species trees using the multispecies coalescent. The SVDQuartets and ASTRAL species tree methods. | **Homework 13**: TBD
-Thursday Apr. 21        | **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. | **Lab 13**: Divergence time estimation
-Tuesday Apr. 26         | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants); BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | **Homework 14**:TBD
-Thursday Apr. 28        | **TBA**<br/> I'm sure I will be behind at this point! | **Lab 14**: TBD
+Thursday Apr. 14        | **Multispecies coalescent and species tree estimation**<br/>The multispecies coalescent used to estimate species trees given possibly conflicting gene trees due to deep coalescence, incomplete lineage sorting, and the anomaly zone. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MSCoalescent.pdf)\] | **Lab 12**: [Continuous trait analyses in R](/ape/)
+<a name="today"/>Tuesday Apr. 19 |  **Fast species tree methods**<br/> The SVDQuartets and ASTRAL species tree methods. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Astral-SVDQuartets.pdf)\]<br/> **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. [slides coming soon] | **Homework 13**: TBD
+Thursday Apr. 21        | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants) | **Lab 13**: Divergence time estimation
+Tuesday Apr. 26         | **Diversification (cont.)**<br/> BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | **Homework 14**:TBD
+Thursday Apr. 28        | **Heterotachy and other topics**<br/> What is heterotachy and how to detect/model it | **Lab 14**: TBD
 
 ## Grading
 
@@ -67,7 +67,7 @@ At least | Less than | Letter grade
    60%   |     63%   |      D-
     0%   |     60%   |      F
 
-## Books on phylogenetics
+## Books (and book chapters) on phylogenetics
 
 This is a list of books that you should know about, but none are required texts for this course. Listed in reverse chronological order.
 
@@ -81,15 +81,15 @@ Garamszegi, L. Z. 2014. **[Modern phylogenetic comparative methods and their app
 
 Hall, B. G. 2011. **Phylogenetic trees made easy: a how-to manual (4th edition).** Sinauer Associates, Sunderland. (A guide to running some of the most important phylogenetic software packages.)
 
-:hibiscus: Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population history. Trends Ecol. Evol. 24:86-93.
-
 Lemey, P., Salemi, M., and Vandamme, A.-M. 2009. **The phylogenetic handbook: a practical approach to phylogenetic analysis and hypothesis testing (2nd edition).** Cambridge University Press, Cambridge, UK (Chapters on theory are paired with practical chapters on software related to the theory.)
 
 Felsenstein, J. 2004. **Inferring phylogenies.** Sinauer Associates, Sunderland. (Comprehensive overview of both history and methods of phylogenetics.)
 
 Page, R., and Holmes, E. 1998. **Molecular evolution: a phylogenetic approach.** Blackwell Science (Very nice and accessible pre-Bayesian-era introduction to the field.)
 
-Hillis, D., Moritz, C., and Mable, B. 1996. Molecular systematics (2nd ed.). Sinauer Associates, Sunderland. Chapters 11 (**Phylogenetic inference**) and 12 (**Applications of molecular systematics**). (Still a very valuable compendium of pre-Bayesian-era phylogenetic methods.)
+Hillis, D., Moritz, C., and Mable, B. 1996. **Molecular systematics** (2nd ed.). Sinauer Associates, Sunderland. Chapter 12: Applications of molecular systematics. (Still a very valuable compendium of pre-Bayesian-era phylogenetic methods.)
+
+Swofford, D. L., G. J. Olsen, P. J. Waddell, and D. M. Hillis. 1996. Chapter 11: Phylogenetic inference. Pages 407-514 in **Molecular Systematics** (D. M. Hillis, C. Moritz, and B. K. Mable, eds.). Sinauer Associates, Sunderland, Massachusetts. (SOWH topology test)
 
 ## Literature cited
 
@@ -123,9 +123,9 @@ Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees
 
 :hibiscus: Degnan, J. H., and N. A. Rosenberg. 2006. [Discordance of species trees with their most likely gene trees.](http://doi.org/10.1371/journal.pgen.0020068) PLoS Genetics 2:e68. (The anomaly zone)
 
-Drummond, A. J., S. Y. W. Ho, M. J. Phillips, A. Rambaut. 2006. Relaxed phylogenetics and dating with confidence. PLoS Biology 4(5): e88 (Uncorrelated relaxed clocks)
+:hibiscus: Drummond, A. J., S. Y. W. Ho, M. J. Phillips, A. Rambaut. 2006. Relaxed phylogenetics and dating with confidence. PLoS Biology 4(5): e88 (Uncorrelated relaxed clocks)
 
-Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to rule them all. BMC Biol. 8:114. (Random local clocks)
+:hibiscus: Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to rule them all. BMC Biol. 8:114. (Random local clocks)
 
 :hibiscus: Eck, R. V., and M. O. Dayhoff. 1966. Atlas of protein sequence and structure. National Biomedical Research Foundation. Silver Spring, Maryland.
 
@@ -177,7 +177,7 @@ Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to r
 
 :hibiscus: Hastings, W. K. 1970. Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109. (Hastings ratio)
 
-Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. The fossilized birth–death process for coherent calibration of divergence-time estimates. PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
+:hibiscus: Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. [The fossilized birth–death process for coherent calibration of divergence-time estimates.](http://doi.org/10.1073/pnas.1319091111) PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
 
 :hibiscus: Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from multilocus data. Molecular Biology and Evolution 27:570-580. (Bayesian species tree estimation)
 
@@ -208,7 +208,11 @@ characters. Systematic Biology 52(2): 131-158.
 
 :hibiscus: Kishino, H., and M. Hasegawa. 1989. Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea. Journal of Molecular Evolution 29: 170-179. (F84 model, KH test)
 
+:hibiscus: Kishino, H., J. L. Thorne, and W. J. Bruno. 2001. Performance of a divergence time estimation method under a probabilistic model of rate evolution. Molecular Biology and Evolution 18:352-361.
+
 :hibiscus: Kluge, A. G., and J. S. Farris. 1969. Quantitative phyletics and the evolution of anurans. Systematic Zoology 18:1-32.
+
+:hibiscus: Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population history. Trends Ecol. Evol. 24:86-93.
 
 Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heterotachy improves phylogenetic accuracy. Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
 
@@ -223,6 +227,8 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 :hibiscus: Le, S. Q., and Gascuel, O. 2008. An improved general amino acid replacement matrix. Molecular Biology and Evolution, 25(7):1307-1320. (LG amino acid model)
 
 :hibiscus: Si Quang, L., O. Gascuel, and N. Lartillot. 2008. Empirical profile mixture models for phylogenetic reconstruction. 
+
+:hibiscus: Lewis, L. A., B. D. Mishler, and R. Vilgalys. 1997. [Phylogenetic relationships of the liverworts (Hepaticae), a basal embryophyte lineage, inferred from nucleotide sequence data of the chloroplast gene _rbc_L](https://doi.org/10.1006/mpev.1996.0395) Molecular Phylogenetics and Evolution 7:377-393.
 
 :hibiscus: Lewis, P. O. 2001a. A likelihood approach to estimating phylogeny from discrete morphological character data. Systematic Biology 50:913-925.
 
@@ -282,7 +288,7 @@ Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference b
 
 :hibiscus: Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model)
 
-Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., & Rasnitsyn, A. P. 2012. A total-evidence approach to dating with fossils, applied to the early radiation of the hymenoptera. Systematic Biology 61(6):973–999. (Tip dating)
+:hibiscus: Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
 
 :hibiscus: Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375.
 
@@ -306,13 +312,11 @@ Studier, J. A., and K. J. Keppler. 1988. A note on the neighbor-joining algorith
 
 :hibiscus: Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. Bayesian selection of continuous-time Markov chain evolutionary models. Molecular Biology and Evolution 18:1001-1013.
 
-Swofford, D. L., G. J. Olsen, P. J. Waddell, and D. M. Hillis. 1996. Phylogenetic inference. Pages 407-514 in Molecular Systematics (D. M. Hillis, C. Moritz, and B. K. Mable, eds.). Sinauer Associates, Sunderland, Massachusetts. (SOWH topology test)
-
 :hibiscus: Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O., and Rogers, J. S. 2001. Bias in Phylogenetic Estimation and Its Relevance to the Choice between Parsimony and Likelihood Methods. Systematic Biology, 50(4), 525–539.
 
 :hibiscus: Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup)
 
-Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
+:hibiscus: Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
 
 :hibiscus: Tuffley, C., and M. Steel. 1997. Links between maximum likelihood and maximum parsimony under a simple model of substitution. Bulletin of Mathematical Biology 59:581-607
 
@@ -335,5 +339,7 @@ Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substit
 :hibiscus: Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences with variable rates over sites: approximate methods. Journal of Molecular Evolution 39:306-314. (+G among-site rate heterogeneity model)
 
 :hibiscus: Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
+
+:hibiscus: Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [Total-evidence dating under the fossilized birth–death process.](https://doi.org/10.1093/sysbio/syv080) Systematic Biology 65:228–249. 
 
 :hibiscus: Zwickl, D., and M. T. Holder. 2004. Model parameterization, prior distributions, and the general time-reversible model in Bayesian phylogenetics. Systematic Biology 53: 877-888.
