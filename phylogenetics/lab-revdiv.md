@@ -393,7 +393,7 @@ No, they are all very close to 1.0
 I got 0.0116 for ucln_mu and 0.01828 for ucln_sigma
 {% endcomment %}
 
-> :thinking: What do these values translate to on the linear scale (consult the figure)?
+> :thinking: What do these values translate to on the linear scale (use the formulas in the figure from lecture to do the calculation)?
 
 {% comment %}
 Mean equals 1.0118, standard deviation equals 0.01850
