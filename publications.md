@@ -10,12 +10,12 @@ YB Wang, A Milkey, A Li, MH Chen, L Kuo, and PO Lewis. 2022. LoRaD: marginal lik
 Manuscript ID: USYB-2022-066, submitted 2-Mar-2022.
 {% endcomment %}
 
-EM Clifton, PO Lewis, E Jockusch, and E Adams. 2022. an experimental test of Lanchester’s models of combat in the neotropical termite _Nasutitermes corniger_ (Blattodea: Termitidae). Submitted to Proceedings of the Royal Society B: Biological Sciences.
+EM Clifton, PO Lewis, E Jockusch, and E Adams. 2022. an experimental test of Lanchester’s models of combat in the neotropical termite _Nasutitermes corniger_ (Blattodea: Termitidae). Proceedings of the Royal Society B: Biological Sciences (accepted manuscript).
 {% comment %}
-Manuscript ID: RSPB-2022-0343, submitted 22-Feb-2022.
+Manuscript ID: RSPB-2022-0343, submitted 22-Feb-2022, revision submitted 13-Apr-2022, accepted 19-Apr-2022.
 {% endcomment %}
 
-J Barido-Sottani, JA Justison, R Borges, JM Brown, W Dismukes,B do Rosario Petrucci, LG Fabreti, S Höhna, MJ Landis, PO Lewis, MR May, FK Mendes, W Pett, BD Redelings, CM Tribble, AM Wright, R Zenil-Ferguson, and TA Heath. 2022. Lessons learned from organizing and teaching virtual phylogenetics workshops. The Bulletin of the Society of Systematic Biologists (accepted manuscript). 
+J Barido-Sottani, JA Justison, R Borges, JM Brown, W Dismukes,B do Rosario Petrucci, LG Fabreti, S Höhna, MJ Landis, PO Lewis, MR May, FK Mendes, W Pett, BD Redelings, CM Tribble, AM Wright, R Zenil-Ferguson, and TA Heath. 2022. [Lessons learned from organizing and teaching virtual phylogenetics workshops.](https://doi.org/10.32942/osf.io/kp8sz) The Bulletin of the Society of Systematic Biologists (accepted manuscript). 
 
 {% include figure.html description="Neupane et al. 2019" url="/assets/img/systbiol-68-5-sep2019.png" css="image-right" width="200px" targeturl="https://doi.org/10.1093/sysbio/syz007" %}
 
