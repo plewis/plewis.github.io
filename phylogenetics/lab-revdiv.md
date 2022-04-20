@@ -271,7 +271,7 @@ I got (0.9986, 1.0216), and yes, it includes the true value 1.0
 I got (0.6306,4.1727); yes, the true rate was 2.6, which is close to the middle of the credible interval
 {% endcomment %}
 
-> :thinking: Using the Marginal Density tab in Tracer, and selecting all 6 exchangeabilities, what about these densities makes sense given what you know about the true model used to simulate the data? 
+> :thinking: Using the Marginal Density tab in Tracer, and select all 6 exchangeabilities. What do these values represent, and what about these densities makes sense given what you know about the true model used to simulate the data? 
 
 {% comment %}
 yes, the 2 transition relative rates are about 0.358, which is 5.04 times higher than the other 4, which average 0.071
@@ -501,7 +501,7 @@ Change the MCMC burnin and run commands to include <tt>underPrior=TRUE</tt>, and
 
 Now run the file as usual:
 
-    rv divprior.Rev
+    rb divprior.Rev
 
 Open both _divpriorMAP.tre_ and _divtimeMAP.tre_ and make the node bars equal the 95% HPD intervals in each.
 
@@ -517,5 +517,5 @@ If you need to estimate divergence times, and especially if you have fossils tha
 
 ## What to turn in
 
-Use FigTree to create a PDF figure of your _divtimeMAP.tre_ with credible intervals indicated by bars and turn that in to get credit.
+Use FigTree to create a PDF figure of your _divtimeMAP.tre_ with credible intervals indicated by bars and turn that in along with your thinking questions to get credit.
 
