@@ -44,7 +44,7 @@ Thursday Apr. 7         | **PGLS (cont.)**<br/> Estimating ancestral states in P
 Tuesday Apr. 12         | **Phylogenetic signal in continuous traits**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/traitsignal.pdf)\] \[[Pagel transformation applet](/applets/pagel/)\] <br/>**[Introduction to the coalescent**<br/>Introduction to coalescent theory \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/coalescent1.pdf)\] | **Homework 12**: [Brownian motion model](/hw12/)
 Thursday Apr. 14        | **Multispecies coalescent and species tree estimation**<br/>The multispecies coalescent used to estimate species trees given possibly conflicting gene trees due to deep coalescence, incomplete lineage sorting, and the anomaly zone. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MSCoalescent.pdf)\] | **Lab 12**: [Continuous trait analyses in R](/ape/)
 Tuesday Apr. 19 |  **Fast species tree methods**<br/> The SVDQuartets and ASTRAL species tree methods. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Astral-SVDQuartets.pdf)\]<br/> **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RelaxedClocks1.pdf)\] | **Homework 13**: [Heterotachy](/hw13/)
-<a name="today"/>Thursday Apr. 21        | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants) \[[relaxed clocks part 2 slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RelaxedClocks2.pdf)\] [diversification slides soon] | **Lab 13**: [Divergence time estimation](/revdiv/)
+<a name="today"/>Thursday Apr. 21        | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants) \[[relaxed clocks part 2 slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RelaxedClocks2.pdf)\] \[[diversification slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Diversification.pdf)\] | **Lab 13**: [Divergence time estimation](/revdiv/)
 Tuesday Apr. 26         | **Diversification (cont.)**<br/> BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | **Homework 14**:TBD
 Thursday Apr. 28        | **Heterotachy and other topics**<br/> What is heterotachy and how to detect/model it | **Lab 14**: TBD
 
@@ -266,7 +266,9 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 
 Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection of likelihood models for phylogeny estimation. Systematic Biology 52:674–683. (DTmodsel model selection criterion)
 
-:hibiscus: Mirarab, S., and T. Warnow. 2015. [ASTRAL-II: coalescent-based species tree estimation with many hundreds of taxa and thousands of genes.](https://doi.org/10.1093/bioinformatics/btv234) Bioinformatics 31(12):i44–52.  
+:hibiscus: Mirarab, S., and T. Warnow. 2015. [ASTRAL-II: coalescent-based species tree estimation with many hundreds of taxa and thousands of genes.](https://doi.org/10.1093/bioinformatics/btv234) Bioinformatics 31(12):i44–52. 
+
+:hibiscus: Moore, B. R., S. Hohna, M. R. May, B. Rannala, and J. P. Huelsenbeck. 2016. [Critically evaluating the theory and performance of Bayesian analysis of macroevolutionary mixtures.](https://doi.org/10.1073/pnas.1518659113) PNAS 113:9569-9574. 
 
 :hibiscus: Muse, S. 1995. evolutionary analyses of DNA sequences subject to constraints on secondary structure. Genetics, 139(3), 1429–1439. (secondary structure model)
 
@@ -300,7 +302,13 @@ Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference b
 
 :hibiscus: Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
 
+:hibiscus: Rabosky, D. L., F. Santini, J. Eastman, S. A. Smith, B. Sidlauskas, J, Chang, and M. E. Alfaro. 2013. [Rates of speciation and morphological evolution are correlated across the largest vertebrate radiation.](https://doi.org/10.1038/ncomms2958) Nature Communications 4:1958.
+
 :hibiscus: Rabosky, D. L. 2014. Automatic detection of key innovations, rate shifts, and diversity-dependence on phylogenetic trees. PLoS One 9(2):e89543.
+
+:hibiscus: Rabosky, D. L., S. C. Donnellan, M. Grundler, and I. J. Lovette. 2014. [Analysis and visualization of complex macroevolutionary dynamics: an example from Australian scincid lizards.](https://doi.org/10.1093/sysbio/syu025) Systematic Biology 63:610-627.
+
+:hibiscus: Rabosky, D. L., J. S. Mitchell, and J. Chang. 2017. [Is BAMM flawed? Theoretical and practical concerns in the analysis of multi-rate diversification models.](https://doi.org/10.1093/sysbio/syx037) Systematic Biology 66:477-498.
 
 :hibiscus: Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior)
 
@@ -321,6 +329,8 @@ Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference b
 :hibiscus: Schluter, D., T. Price, A. Ø. Mooers, and D. Ludwig. 1997. Likelihood of ancestor states in adaptive radiation. Evolution 51:1699-1711.
 
 :hibiscus: Schwarz, G. E. 1978. Estimating the dimension of a model. Ann Stat. 6:461–464. (BIC model selection criterion)
+
+:hibiscus: Shi, J. J., and D. L. Rabosky. 2015. [Speciation dynamics during the global radiation of extant bats.](https://doi.org/10.1111/evo.12681) Evolution 69:1528-1545.
 
 :hibiscus: Shimodaira, H., and M. Hasegawa. 1999. Multiple comparisons of log-likelihoods with applications to phylogenetic inference. Molecular Biology and Evolution 16: 1114-1116. (SH topology test)
 
