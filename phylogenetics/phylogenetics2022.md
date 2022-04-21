@@ -44,7 +44,7 @@ Thursday Apr. 7         | **PGLS (cont.)**<br/> Estimating ancestral states in P
 Tuesday Apr. 12         | **Phylogenetic signal in continuous traits**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/traitsignal.pdf)\] \[[Pagel transformation applet](/applets/pagel/)\] <br/>**[Introduction to the coalescent**<br/>Introduction to coalescent theory \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/coalescent1.pdf)\] | **Homework 12**: [Brownian motion model](/hw12/)
 Thursday Apr. 14        | **Multispecies coalescent and species tree estimation**<br/>The multispecies coalescent used to estimate species trees given possibly conflicting gene trees due to deep coalescence, incomplete lineage sorting, and the anomaly zone. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MSCoalescent.pdf)\] | **Lab 12**: [Continuous trait analyses in R](/ape/)
 Tuesday Apr. 19 |  **Fast species tree methods**<br/> The SVDQuartets and ASTRAL species tree methods. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Astral-SVDQuartets.pdf)\]<br/> **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RelaxedClocks1.pdf)\] | **Homework 13**: [Heterotachy](/hw13/)
-<a name="today"/>Thursday Apr. 21        | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants) \[[relaxed clocks part 2 slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RelaxedClocks2.pdf)\] | **Lab 13**: Divergence time estimation
+<a name="today"/>Thursday Apr. 21        | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants) \[[relaxed clocks part 2 slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RelaxedClocks2.pdf)\] [diversification slides soon] | **Lab 13**: [Divergence time estimation](/revdiv/)
 Tuesday Apr. 26         | **Diversification (cont.)**<br/> BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | **Homework 14**:TBD
 Thursday Apr. 28        | **Heterotachy and other topics**<br/> What is heterotachy and how to detect/model it | **Lab 14**: TBD
 
@@ -100,6 +100,8 @@ Swofford, D. L., G. J. Olsen, P. J. Waddell, and D. M. Hillis. 1996. Chapter 11:
 :hibiscus: Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. Bayesian estimation of concordance among gene trees. Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy)
 
 :hibiscus: Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
+
+:hibiscus: Beaulieu, J. M., and B. C. O'Meara. 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic Biology 65:583-601.
 
 :hibiscus: Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic signal in comparative data: behavioral traits are more labile. Evolution 57(4):717-745.
 
@@ -157,7 +159,13 @@ Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees
 
 :hibiscus: Fitch, W. 1971. Toward Defining the Course of Evolution: Minimum Change for a Specific Tree Topology. Systematic Zoology 20:406-416.
 
+:hibiscus: FitzJohn, R. G. 2010. Quantitative traits and diversification. Systematic Biology 59:619–633.
+
+:hibiscus: Fitzjohn, R. G. 2012. [Diversitree: comparative phylogenetic analyses of diversification in R.](https://doi.org/10.1111/j.2041-210X.2012.00234.x) Methods in Ecology and Evolution 3:1084-1092.
+
 :hibiscus: Gaut, B. S., and P. O. Lewis. 1995. [Success of maximum likelihood phylogeny inference in the four-taxon case.](https://doi.org/10.1093/oxfordjournals.molbev.a040183) Molecular Biology and Evolution 12(1):152-162.
+
+:hibiscus: Goldberg, E. E., L. T. Lancaster, and R. H. Ree. 2011. Phylogenetic inference of reciprocal effects between geographic range evolution and diversification. Systematic Biology 60:451–465
 
 :hibiscus: Goldman, N., J. P. Anderson, and A. G. Rodrigo. 2000. Likelihood-based tests of topologies in phylogenetics. Systematic Biology 49:652-670.
 
@@ -172,6 +180,8 @@ Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees
 :hibiscus: Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts.
 
 :hibiscus: Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 326:119-157. (first phylogenetic regression model)
+
+:hibiscus: Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evolution 48:523-529.
 
 :hibiscus: Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model)
 
@@ -236,9 +246,13 @@ Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heter
 
 :hibiscus: Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian phylogenetic inference. Systematic Biology 54:241–253.
 
+:hibiscus: Lovette, I. J., and E. Bermingham. 1999. Explosive speciation in the New World Dendroica warblers. Proc. R. Soc. Lond. B 266:1629-1636. 
+
 :hibiscus: Maddison, W. P. 1997. Gene trees in species trees. Systematic Biology 46:523–536.
 
 :hibiscus: Maddison, D. R., Swofford, D. L., and Maddison, W. P. 1997. NEXUS: An extensible file format for systematic information. Systematic Biology 46:590–617. (NEXUS file format)
+
+:hibiscus: Maddison W. P., Midford P. E., Otto S. P. 2007. Estimating a binary character’s effect on speciation and extinction. Systematic Biology 56:701–710.
 
 :hibiscus: Maddison, W. P., and FitzJohn, R. G. 2015. The unsolved challenge to phylogenetic correlation tests for categorical characters. Systematic Biology 64:127–136. (need for true replication in comparative studies)
 
@@ -282,11 +296,19 @@ Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference b
 
 :hibiscus: Pettigrew, J. D. 1994. [Genomic evolution: flying DNA.](https://doi.org/10.1016/S0960-9822(00)00065-8) Current Biology 4(3):277-280.
 
+:hibiscus: Pybus, O. G., and P. H. Harvey. 2000. Testing macro-evolutionary models using incomplete molecular phylogenies. Proc. R. Soc. Lond. B 267:2267-2272.
+
 :hibiscus: Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
+
+:hibiscus: Rabosky, D. L. 2014. Automatic detection of key innovations, rate shifts, and diversity-dependence on phylogenetic trees. PLoS One 9(2):e89543.
 
 :hibiscus: Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior)
 
+:hibiscus: Ree, R. H. 2005. [Detecting the historical signature of key innovations using stochastic models of character evolution and cladogenesis](https://doi.org/10.1111/j.0014-3820.2005.tb00986.x) Evolution 59:257-265.
+
 :hibiscus: Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model)
+
+:hibiscus: Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610.
 
 :hibiscus: Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
 
