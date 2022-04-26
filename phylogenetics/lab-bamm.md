@@ -55,7 +55,7 @@ Use the unix <tt>mkdir</tt> command to create a directory to play in today:
 
 ## A test using a simulated Yule tree
 
-The BAMM web site documentation walks you through an analysis of a real data set on whale phylogeny, which you are welcome to explore on your own if you are interested, but today in lab we will explore the simplest possible case: a simulated pure-birth tree. We will give BAMM the benefit of our prior knowledge on the simulation conditions by forcing the extinction rate to be fixed at zero. Can BAMM nail the diversification regime for this simplest case? You will find that BAMM does quite well by some measures, but it is not a slam dunk in every respect.
+The BAMM web site documentation walks you through an analysis of a real data set on a whale phylogeny, which you are welcome to explore on your own if you are interested, but today in lab we will explore the simplest possible case: a simulated pure-birth tree. We will give BAMM the benefit of our prior knowledge on the simulation conditions by forcing the extinction rate to be fixed at zero. Can BAMM nail the diversification regime for this simplest case? You will find that BAMM does quite well by some measures, but it is not a slam dunk in every respect.
 
 ### Simulate a tree in RStudio on your local laptop
 
