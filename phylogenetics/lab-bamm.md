@@ -157,14 +157,14 @@ Most of this section of the lab exercise today comes from the web page [Analyzin
     
 ### Loading the sampled event data
 
-You should have these files in your current working directory on your local computer:
+Transfer the following files from the *bammlab* directory on the cluster to your local laptop: *mcmc_out.txt*, *event_data.txt*, and _yule.txt_ 
+
+You should now have these files in your current working directory on your local computer:
 
     BAMM.Rmd
     mcmc_out.txt
     event_data.txt
     yule.txt
-    
-The *mcmc_out.txt*, *event_data.txt*, and _yule.txt_ files will need to be moved from the cluster to your local laptop.
     
 ### Trace plot
 
