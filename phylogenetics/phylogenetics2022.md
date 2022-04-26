@@ -44,8 +44,8 @@ Thursday Apr. 7         | **PGLS (cont.)**<br/> Estimating ancestral states in P
 Tuesday Apr. 12         | **Phylogenetic signal in continuous traits**<br/> Measuring the amount of phylogenetic information in continuous traits (Pagel’s lambda, Blomberg’s K). \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/traitsignal.pdf)\] \[[Pagel transformation applet](/applets/pagel/)\] <br/>**[Introduction to the coalescent**<br/>Introduction to coalescent theory \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/coalescent1.pdf)\] | **Homework 12**: [Brownian motion model](/hw12/)
 Thursday Apr. 14        | **Multispecies coalescent and species tree estimation**<br/>The multispecies coalescent used to estimate species trees given possibly conflicting gene trees due to deep coalescence, incomplete lineage sorting, and the anomaly zone. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/MSCoalescent.pdf)\] | **Lab 12**: [Continuous trait analyses in R](/ape/)
 Tuesday Apr. 19 |  **Fast species tree methods**<br/> The SVDQuartets and ASTRAL species tree methods. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Astral-SVDQuartets.pdf)\]<br/> **Divergence time estimation**<br/> Strict vs. relaxed clocks, correlated vs. uncorrelated relaxed clocks, calibrating the clock using fossils. \[[slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RelaxedClocks1.pdf)\] | **Homework 13**: [Heterotachy](/hw13/)
-<a name="today"/>Thursday Apr. 21        | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants) \[[relaxed clocks part 2 slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RelaxedClocks2.pdf)\] \[[diversification slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Diversification.pdf)\] | **Lab 13**: [Divergence time estimation](/revdiv/)
-Tuesday Apr. 26         | **Diversification (cont.)**<br/> BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | **Homework 14**:TBD
+Thursday Apr. 21        | **Diversification rate evolution**<br/> State-dependent diversification models (BiSSE and its descendants) \[[relaxed clocks part 2 slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/RelaxedClocks2.pdf)\] \[[diversification slides](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/Diversification.pdf)\] | **Lab 13**: [Divergence time estimation](/revdiv/)
+<a name="today"/>Tuesday Apr. 26         | **Diversification (cont.)**<br/> BAMM: estimating the number of shifts in diversification regime and where these occur on the tree. | no homework assignment
 Thursday Apr. 28        | **Heterotachy and other topics**<br/> What is heterotachy and how to detect/model it | **Lab 14**: TBD
 
 ## Grading
@@ -157,6 +157,8 @@ Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees
 
 :hibiscus: Fitch, W. M., and E. Margoliash. 1967. Science 155:279-284.
 
+:hibiscus: Fitch, W. M., and E. Markowitz. 1970. An improved method for determining codon variability in a gene and its application to the rate of fixation of mutations in evolution. Biochemical Genetics 4: 579–593.
+
 :hibiscus: Fitch, W. 1971. Toward Defining the Course of Evolution: Minimum Change for a Specific Tree Topology. Systematic Zoology 20:406-416.
 
 :hibiscus: FitzJohn, R. G. 2010. Quantitative traits and diversification. Systematic Biology 59:619–633.
@@ -224,7 +226,9 @@ characters. Systematic Biology 52(2): 131-158.
 
 :hibiscus: Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population history. Trends Ecol. Evol. 24:86-93.
 
-Kolaczkowski, B., and J. W. Thornton. 2008. A mixed branch length model of heterotachy improves phylogenetic accuracy. Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
+:hibiscus: Kolaczkowski, B., and J. W. Thornton. 2004. Performance of maximum parsimony and likelihood phylogenetics when evolution is heterogeneous. Nature 431:980-984.
+
+:hibiscus: Kolaczkowski, B., and J. W. Thornton. 2008. [A mixed branch length model of heterotachy improves phylogenetic accuracy.](https://doi.org/10.1093/molbev/msn042) Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
 
 :hibiscus: Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model)
 
@@ -286,11 +290,11 @@ Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scr
 
 :hibiscus: Pagel, M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877–884. (introduced the delta and lambda scaling factors used in comparative analyses)
 
-Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting pattern-heterogeneity in gene sequence or character-state data. Systematic Biology 53:571-581. (mixture of Q-matrices model)
+:hibiscus: Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting pattern-heterogeneity in gene sequence or character-state data. Systematic Biology 53:571-581. (mixture of Q-matrices model)
 
 :hibiscus: Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discrete characters by reversible-jump Markov chain Monte Carlo. American Naturalist 167:808-825. (rjMCMC for discrete character correlation)
 
-Pagel, M., and A. Meade. 2008. Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo. Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
+:hibiscus: Pagel, M., and A. Meade. 2008. [Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo.](https://doi.org/10.1098/rstb.2008.0178) Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
 
 :hibiscus: Paradis, E. 2006. Analysis of phylogenetics and evolution with R. Springer. ISBN: 0-387-32914-5.
 
@@ -352,7 +356,7 @@ Studier, J. A., and K. J. Keppler. 1988. A note on the neighbor-joining algorith
 
 :hibiscus: Tuffley, C., and M. Steel. 1997. Links between maximum likelihood and maximum parsimony under a simple model of substitution. Bulletin of Mathematical Biology 59:581-607
 
-Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
+:hibiscus: Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
 
 :hibiscus: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416.
 
@@ -373,5 +377,7 @@ Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substit
 :hibiscus: Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
 
 :hibiscus: Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [Total-evidence dating under the fossilized birth–death process.](https://doi.org/10.1093/sysbio/syv080) Systematic Biology 65:228–249. 
+
+:hibiscus: Zhou, Y., H. Brinkmann, N. Rodrigue, N. Lartillot, and H. Philippe. 2010. A Dirichlet Process covarion mixture model and its assessments using posterior predictive discrepency tests. Molecular Biology and Evolution 27:371-384.
 
 :hibiscus: Zwickl, D., and M. T. Holder. 2004. Model parameterization, prior distributions, and the general time-reversible model in Bayesian phylogenetics. Systematic Biology 53: 877-888.
