@@ -301,7 +301,7 @@ The plot above is a heat map that represents a mean across all of your post-burn
     addBAMMshifts(best, cex=2)
     ```
     
-This single best (according to posterior probability) shift scenario shows a gradual cooling in speciation rate from root to tip, but (as you can tell from commenting out the addBAMMshifts command and seeing no change) there are no core shifts in this configuation. 
+This single best (according to posterior probability) shift scenario shows a gradual cooling in speciation rate from root to tip, but (as you can tell from commenting out the addBAMMshifts command and seeing no change) there are no core shifts in this configuration. 
 
 ## What to turn in
 
