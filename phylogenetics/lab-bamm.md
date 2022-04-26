@@ -281,14 +281,14 @@ The **credibleShiftSet** function allows you to enumerate those shift configurat
 0 core shifts were identified, and this makes sense because there should not be any shifts on a Yule tree with constant speciation rate.
 {% endcomment %}
 
-There is only one shift configuration listed and every post-burnin sample belongs to that configuration as indicated by the probability (1.0). Plot a summary of the mean speciation rate across the tree as follows:
+In my data, there was only one shift configuration listed and every post-burnin sample belongs to that configuration as indicated by the probability (1.0). Your results may vary.  Plot a summary of the mean speciation rate across the tree as follows:
 
     ## Plot the 95% credible set
     ``` {r}
     plot.credibleshiftset(css)
     ```
 
-The <tt>f = 1</tt> at the top indicates that the single configuration plotted accounts for all of the samples. Note that there are some apparent hot spots near the present day; however, because there are no circles on the edges none of these hot spots are considered core shifts.
+The <tt>f = </tt> at the top of your trees indicates the frequency of a given rate regime among all of your posterior samples (post burnin). You will likely note some apparent hot spots near the present day, which may or may not have circles on the edges. Circles on edges are considered core shifts.
 
 ### Best configuration
 
