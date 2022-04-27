@@ -288,11 +288,11 @@ In my data, there was only one shift configuration listed and every post-burnin 
     plot.credibleshiftset(css)
     ```
 
-The <tt>f = </tt> at the top of your trees indicates the frequency of a given rate regime among all of your posterior samples (post burnin). You will likely note some apparent hot spots near the present day, which may or may not have circles on the edges. Circles on edges are considered core shifts.
+The <tt> f =  </tt> at the top of your trees indicates the frequency of a given rate regime among all of your posterior samples (post burnin). You will likely note some apparent hot spots near the present day, which may or may not have circles on the edges. Circles on edges are considered core shifts.
 
 ### Best configuration
 
-The plot above is a heat map that represents a mean across all of your post-burnin samples. Which of the 991 post burnin samples is best, and what does that configuration look like if converted to a heat map?
+The code above generates a heat map that represents a mean across *all* of your post-burnin samples. It might be nice to know which of the 991 post burnin samples is best, and what does that configuration look like if converted to a heat map?
 
     ## Plot the single best configuration
     ``` {r}
@@ -301,8 +301,8 @@ The plot above is a heat map that represents a mean across all of your post-burn
     addBAMMshifts(best, cex=2)
     ```
     
-This single best (according to posterior probability) shift scenario shows a gradual cooling in speciation rate from root to tip, but (as you can tell from commenting out the addBAMMshifts command and seeing no change) there are no core shifts in this configuration. 
+Your results will likely vary, but my single best (according to posterior probability) shift scenario showed a gradual cooling in speciation rate from root to tip, but (as you can tell from commenting out the addBAMMshifts command and seeing no change) there are (likely) no core shifts in this configuration. 
 
 ## What to turn in
 
-Choose _Knit to HTML_ from the _Knit_ dropdown at the top of your BAMM.Rmd window. This will generate a BAMM.html file in your directory. Please send that file to Zach for your lab participation points for today.
+Choose _Knit to HTML_ from the _Knit_ dropdown at the top of your BAMM.Rmd window. This will generate a BAMM.html file in your directory. Please send that file to Zach for your lab participation points for today. Also send Zach the final plot with the heatmap for your single best shift senario. 
