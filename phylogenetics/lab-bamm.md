@@ -55,7 +55,7 @@ Use the unix <tt>mkdir</tt> command to create a directory to play in today:
 
 ## A test using a simulated Yule tree
 
-The BAMM web site documentation walks you through an analysis of a real data set on whale phylogeny, which you are welcome to explore on your own if you are interested, but today in lab we will explore the simplest possible case: a simulated pure-birth tree. We will give BAMM the benefit of our prior knowledge on the simulation conditions by forcing the extinction rate to be fixed at zero. Can BAMM nail the diversification regime for this simplest case? You will find that BAMM does quite well by some measures, but it is not a slam dunk in every respect.
+The BAMM web site documentation walks you through an analysis of a real data set on a whale phylogeny, which you are welcome to explore on your own if you are interested, but today in lab we will explore the simplest possible case: a simulated pure-birth tree. We will give BAMM the benefit of our prior knowledge on the simulation conditions by forcing the extinction rate to be fixed at zero. Can BAMM nail the diversification regime for this simplest case? You will find that BAMM does quite well by some measures, but it is not a slam dunk in every respect.
 
 ### Simulate a tree in RStudio on your local laptop
 
@@ -157,14 +157,14 @@ Most of this section of the lab exercise today comes from the web page [Analyzin
     
 ### Loading the sampled event data
 
-You should have these files in your current working directory on your local computer:
+Transfer the following files from the *bammlab* directory on the cluster to your local laptop: *mcmc_out.txt*, *event_data.txt*, and _yule.txt_ 
+
+You should now have these files in your current working directory on your local computer:
 
     BAMM.Rmd
     mcmc_out.txt
     event_data.txt
     yule.txt
-    
-The *mcmc_out.txt*, *event_data.txt*, and _yule.txt_ files will need to be moved from the cluster to your local laptop.
     
 ### Trace plot
 
@@ -281,18 +281,18 @@ The **credibleShiftSet** function allows you to enumerate those shift configurat
 0 core shifts were identified, and this makes sense because there should not be any shifts on a Yule tree with constant speciation rate.
 {% endcomment %}
 
-There is only one shift configuration listed and every post-burnin sample belongs to that configuration as indicated by the probability (1.0). Plot a summary of the mean speciation rate across the tree as follows:
+In my data, there was only one shift configuration listed and every post-burnin sample belongs to that configuration as indicated by the probability (1.0). Your results may vary.  Plot a summary of the mean speciation rate across the tree as follows:
 
     ## Plot the 95% credible set
     ``` {r}
     plot.credibleshiftset(css)
     ```
 
-The <tt>f = 1</tt> at the top indicates that the single configuration plotted accounts for all of the samples. Note that there are some apparent hot spots near the present day; however, because there are no circles on the edges none of these hot spots are considered core shifts.
+The <tt> f =  </tt> at the top of your trees indicates the frequency of a given rate regime among all of your posterior samples (post burnin). You will likely note some apparent hot spots near the present day, which may or may not have circles on the edges. Circles on edges are considered core shifts.
 
 ### Best configuration
 
-The plot above is a heat map that represents a mean across all of your post-burnin samples. Which of the 991 post burnin samples is best, and what does that configuration look like if converted to a heat map?
+The code above generates a heat map that represents a mean across *all* of your post-burnin samples. It might be nice to know which of the 991 post burnin samples is best, and what does that configuration look like if converted to a heat map?
 
     ## Plot the single best configuration
     ``` {r}
@@ -301,8 +301,8 @@ The plot above is a heat map that represents a mean across all of your post-burn
     addBAMMshifts(best, cex=2)
     ```
     
-This single best (according to posterior probability) shift scenario shows a gradual cooling in speciation rate from root to tip, but (as you can tell from commenting out the addBAMMshifts command and seeing no change) there are no core shifts in this configuation. 
+Your results will likely vary, but my single best (according to posterior probability) shift scenario showed a gradual cooling in speciation rate from root to tip, but (as you can tell from commenting out the addBAMMshifts command and seeing no change) there are (likely) no core shifts in this configuration. 
 
 ## What to turn in
 
-Choose _Knit to HTML_ from the _Knit_ dropdown at the top of your BAMM.Rmd window. This will generate a BAMM.html file in your directory. Please send that file to Zach for your lab participation points for today.
+Choose _Knit to HTML_ from the _Knit_ dropdown at the top of your BAMM.Rmd window. This will generate a BAMM.html file in your directory. Please send that file to Zach for your lab participation points for today. Also send Zach the final plot with the heatmap for your single best shift senario. 
