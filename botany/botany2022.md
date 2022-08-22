@@ -14,7 +14,7 @@ This is a freshman-level introdution to the science of plants, emphasizing the a
 
 ### Lecture
 
-**Time:** Tuesday/Thursday 10:10-11:00 <br/>
+**Time:** Monday/Wednesday/Friday 10:10-11:00 <br/>
 **Place:** AUST 103 <br/>
 **Instructor** [Paul O. Lewis](mailto:paul.lewis@uconn.edu)
 
