@@ -121,13 +121,14 @@ Final exam     | 100
  
 Laboratory     | Points
 :------------- | :---------------
-Quizes         | 80
+Quizes         | 50
 Transpiration  | 10
 Photosynthesis | 10
 Selection      | 30
 Hormones       | 30
 Climate change | 10
 Lab practical  | 30
+Participation  | 30
 
 ### Grading scale
 
