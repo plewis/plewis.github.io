@@ -148,10 +148,24 @@ Percentage | Letter grade
 62% | D
 60% | D-
 
-Note that you can find out where you stand at any point in the course using the [Grade Center in HuskyCT](https://huskyct.uconn.edu). **No adjustments will be made to your grade at the end of the semester**, and **no extra credit work** will be allowed. It is thus very important to do as well as you can on every test and every assignment.
+Note that you can find out where you stand at any point in the course using the [Grade Center in HuskyCT](https://huskyct.uconn.edu). **No adjustments will be made to your grade at the end of the semester**, and there is **no extra credit** to make up for poor exam/lab-report performance. It is thus very important to do as well as you can on every test and every assignment.
 
 #### Final exam information
 
 You can obtain the date and time of the final exam by following the directions on the [Registrar’s web site](https://registrar.uconn.edu/final-exam-schedule/).
 You are required to be available for your exam and/or complete an assessment during the time stated in the Registrar's Office Schedule. If you have a conflict with this time you must visit the Office of Student Services and Advocacy to discuss the possibility of rescheduling this assessment.
 
+### Other Important Information
+
+* [Students with Disabilities](students-with-disabilities)
+* [Resources for Students Experiencing Distress](resources-for-students-experiencing-distress)
+* [Accommodations for Illness and Extended Absences](illness)
+* [Recording lectures](recording)
+* [Student Responsibilities and Resources](responsibilities)
+* [Technology Help](technology-help)
+* [Evaluation of Course Experience](evaluations)
+* NOTE: This course has NOT been designed for use with mobile devices.
+
+### Privacy Statement
+
+For information on managing your privacy at the University of Connecticut, visit the [University’s Privacy page](https://privacy.uconn.edu). 
