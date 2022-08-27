@@ -157,13 +157,13 @@ You are required to be available for your exam and/or complete an assessment dur
 
 ### Other Important Information
 
-* [Students with Disabilities](students-with-disabilities)
-* [Resources for Students Experiencing Distress](resources-for-students-experiencing-distress)
-* [Accommodations for Illness and Extended Absences](illness)
-* [Recording lectures](recording)
-* [Student Responsibilities and Resources](responsibilities)
-* [Technology Help](technology-help)
-* [Evaluation of Course Experience](evaluations)
+* [Students with Disabilities](/students-with-disabilities/)
+* [Resources for Students Experiencing Distress](/resources-for-students-experiencing-distress/)
+* [Accommodations for Illness and Extended Absences](/illness/)
+* [Recording lectures](/recording/)
+* [Student Responsibilities and Resources](/responsibilities/)
+* [Technology Help](/technology-help/)
+* [Evaluation of Course Experience](/evaluations/)
 * NOTE: This course has NOT been designed for use with mobile devices.
 
 ### Privacy Statement
