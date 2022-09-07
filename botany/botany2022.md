@@ -6,7 +6,7 @@ permalink: /botany2022/
 ### Syllabus for Fall Semester 2022
 _Last updated August 19, 2022_
 
-[Scroll straight to today in the schedule](#today)
+[Scroll straight to this week in the schedule](#today)
 
 ### Description of the course 
 
@@ -27,14 +27,12 @@ This is a freshman-level introdution to the science of plants, emphasizing the a
 
 ## Schedule
 
-<a name="today"/>
-
 Day         | Date      |  Lecture topic    |  Lab topic
 :---------: | :-------: | :---------------  | :------------
 Monday    | Aug. 29     | **Introduction, plant cells**<br/>Chapter 5                   | 
 Wednesday | Aug. 31     | **Plant cell types and tissues types**<br/>Chapters 5, 9, 10  | **Microscope use and plant cells**
 Friday    | Sep. 2      | **Leaves and stems**<br/>Chapters 9,10,12                     | 
-Monday    | Sep. 5      | **LABOR DAY**                                                 | 
+Monday    | Sep. 5      | **LABOR DAY**                                                 | <a name="today"/>
 Wednesday | Sep. 7      | **Stems and roots**<br/>Chapters 9,10,11                      | **Plant anatomy I**
 Friday    | Sep. 9      | **Woody dicot stems, water**<br/>Chapter 10                   | 
 Monday    | Sep. 12     | **Water potential, transpiration**<br/>Chapter 12             | 
