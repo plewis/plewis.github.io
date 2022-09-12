@@ -32,10 +32,10 @@ Day         | Date      |  Lecture topic    |  Lab topic
 Monday    | Aug. 29     | **Introduction, plant cells**<br/>Chapter 5                   | 
 Wednesday | Aug. 31     | **Plant cell types and tissues types**<br/>Chapters 5, 9, 10  | **Microscope use and plant cells**
 Friday    | Sep. 2      | **Leaves and stems**<br/>Chapters 9,10,12                     | 
-Monday    | Sep. 5      | **LABOR DAY**                                                 | <a name="today"/>
+Monday    | Sep. 5      | **LABOR DAY**                                                 |
 Wednesday | Sep. 7      | **Stems and roots**<br/>Chapters 9,10,11                      | **Plant anatomy I**
 Friday    | Sep. 9      | **Woody dicot stems, water**<br/>Chapter 10                   | 
-Monday    | Sep. 12     | **Water potential, transpiration**<br/>Chapter 12             | 
+Monday    | Sep. 12     | **Water potential, transpiration**<br/>Chapter 12             | <a name="today"/> 
 Wednesday | Sep. 14     | **Food transport**<br/>Chapters 4,12                          | **Plant anatomy II**
 Friday    | Sep. 16     | **Membranes, proteins, enzymes**<br/>Chapters 4,6             | 
 Monday    | Sep. 19     | **Photosynthesis**<br/>Chapter 6                              | 
