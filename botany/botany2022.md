@@ -35,15 +35,15 @@ Friday    | Sep. 2      | **Leaves and stems**<br/>Chapters 9,10,12             
 Monday    | Sep. 5      | **LABOR DAY**                                                 |
 Wednesday | Sep. 7      | **Stems and roots**<br/>Chapters 9,10,11                      | **Plant anatomy I**
 Friday    | Sep. 9      | **Woody dicot stems, water**<br/>Chapter 10                   | 
-Monday    | Sep. 12     | **Water potential, transpiration**<br/>Chapter 12             | <a name="today"/> 
+Monday    | Sep. 12     | **Water potential, transpiration**<br/>Chapter 12             | 
 Wednesday | Sep. 14     | **Food transport**<br/>Chapters 4,12                          | **Plant anatomy II** (quiz)
 Friday    | Sep. 16     | **Membranes, proteins, enzymes**<br/>Chapters 4,6             | 
-Monday    | Sep. 19     | **Photosynthesis**<br/>Chapter 6                              | 
+Monday    | Sep. 19     | **Photosynthesis**<br/>Chapter 6                              | <a name="today"/> 
 Wednesday | Sep. 21     | **Photosynthesis, CAM, C4**<br/>Chapter 6                     | **Transpiration**
 Friday    | Sep. 23     | **Life cycles, endosymbiosis**<br/>Chapter 20                 | 
 Monday    | Sep. 26     | **Phylogeny, cyanobacteria, red algae**<br/>Chapters 18,19,20 | 
 Wednesday | Sep. 28     | **Heterokonts, green algae**<br/>Chapter 20                   | **Photosynthesis** (quiz)
-Friday    | Sep. 30     | **EXAM I**<br/>up to and including lecture on 9/21)           | 
+Friday    | Sep. 30     | **EXAM I**<br/>up to and including lecture on 9/23)           | 
 Monday    | Oct. 3      | **Bryophytes**<br/>Chapter 22                                 | 
 Wednesday | Oct. 5      | **Lycophytes, heterospory**<br/>Chapter 22                    | **Selection ("Week 1" measure and perform crosses)**
 Friday    | Oct. 7      | **Pteridophytes**<br/>Chapter 22                              | 
