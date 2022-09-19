@@ -2,6 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// to use, follow paragraph with line containing only {:.pozor} tag
 .pozor {
     font-size:large;
     color:red;
