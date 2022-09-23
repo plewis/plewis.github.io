@@ -35,44 +35,44 @@ Friday    | Sep. 2      | **Leaves and stems**<br/>Chapters 9,10,12             
 Monday    | Sep. 5      | **LABOR DAY**                                                 |
 Wednesday | Sep. 7      | **Stems and roots**<br/>Chapters 9,10,11                      | **Plant anatomy I**
 Friday    | Sep. 9      | **Woody dicot stems, water**<br/>Chapter 10                   | 
-Monday    | Sep. 12     | **Water potential, transpiration**<br/>Chapter 12             | 
-Wednesday | Sep. 14     | **Food transport**<br/>Chapters 4,12                          | **Plant anatomy II** (quiz)
-Friday    | Sep. 16     | **Membranes, proteins, enzymes**<br/>Chapters 4,6             | 
-Monday    | Sep. 19     | **Photosynthesis**<br/>Chapter 6                              | <a name="today"/> 
-Wednesday | Sep. 21     | **Photosynthesis, CAM, C4**<br/>Chapter 6                     | **Transpiration**
-Friday    | Sep. 23     | **Life cycles, endosymbiosis**<br/>Chapter 20                 | 
-Monday    | Sep. 26     | **Phylogeny, cyanobacteria, red algae**<br/>Chapters 18,19,20 | 
-Wednesday | Sep. 28     | **Heterokonts, green algae**<br/>Chapter 20                   | **Photosynthesis** (quiz)
-Friday    | Sep. 30     | **EXAM I**<br/>up to and including lecture on 9/23)           | 
-Monday    | Oct. 3      | **Bryophytes**<br/>Chapter 22                                 | 
-Wednesday | Oct. 5      | **Lycophytes, heterospory**<br/>Chapter 22                    | **Selection ("Week 1" measure and perform crosses)**
-Friday    | Oct. 7      | **Pteridophytes**<br/>Chapter 22                              | 
-Monday    | Oct. 10     | **Seed plants**<br/>Chapter 23                                | 
-Wednesday | Oct. 12     | **Gymnosperms**<br/>Chapter 23                                | **Leaf "photography"<br/>Hormones (plant peas)** (quiz)
-Friday    | Oct. 14     | **Angiosperms (flowers)**<br/>Chapter 24                      | 
-Monday    | Oct. 17     | **Angiosperms (inflorescences)**<br/>Chapter 24               | 
-Wednesday | Oct. 19     | **Angiosperms (fruits)**<br/>Chapter 24                       | **Cyanobacteria and algae**
-Friday    | Oct. 21     | **Angiosperms (pollination)**<br/>Chapter 25                  | 
-Monday    | Oct. 24     | **Fungi and fermentation**<br/>Chapter 21                     | 
-Wednesday | Oct. 26     | **Fungi and fermentation (cont.)**<br/>Chapters 6,21          | **Seedless plants**<br/>**Hormones (measure/treat)**<br/>**Selection ("Week 4" plant)** (quiz)
+Monday    | Sep. 12     | **Water potential**<br/>Chapter 12                            | 
+Wednesday | Sep. 14     | **Transpiration**<br/>Chapters 4,12                           | **Plant anatomy II** (quiz)
+Friday    | Sep. 16     | **Food transport**<br/>Chapters 4,12                          | 
+Monday    | Sep. 19     | **Membranes, proteins<br/>Chapters 4,6                        | 
+Wednesday | Sep. 21     | **Enzymes, ATP, NADPH**<br/>Chapters 4,6                      | **Transpiration**
+Friday    | Sep. 23     | **Photosynthesis**<br/>Chapter 6                              | 
+Monday    | Sep. 26     | **Photorespiration, CAM, C4**<br/>Chapter 6                   | <a name="today"/> 
+Wednesday | Sep. 28     | **Life cycles, endosymbiosis**<br/>Chapter 20                 | **Photosynthesis** (quiz)
+Friday    | Sep. 30     | **EXAM I**<br/>up to and including lecture on 9/26)           | 
+Monday    | Oct. 3      | **Phylogeny, cyanobacteria, red algae**<br/>Chapters 18,19,20 | 
+Wednesday | Oct. 5      | **Heterokonts, green algae**<br/>Chapter 20                   | **Selection ("Week 1" measure and perform crosses)**
+Friday    | Oct. 7      | **Bryophytes**<br/>Chapter 22                                 | 
+Monday    | Oct. 10     | **Lycophytes, heterospory**<br/>Chapter 22                    | 
+Wednesday | Oct. 12     | **Pteridophytes**<br/>Chapter 22                              | **Leaf "photography"<br/>Hormones (plant peas)** (quiz)
+Friday    | Oct. 14     | **Seed plants**<br/>Chapter 23                                | 
+Monday    | Oct. 17     | **Gymnosperms**<br/>Chapter 23                                | 
+Wednesday | Oct. 19     | **Angiosperms (flowers)**<br/>Chapter 24                      | **Cyanobacteria and algae**
+Friday    | Oct. 21     | **Angiosperms (inflorescences)**<br/>Chapter 24               | 
+Monday    | Oct. 24     | **Angiosperms (fruits)**<br/>Chapter 24                       | 
+Wednesday | Oct. 26     | **Angiosperms (pollination)**<br/>Chapter 25                  | **Seedless plants**<br/>**Hormones (measure/treat)**<br/>**Selection ("Week 4" plant)** (quiz)
 Friday    | Oct. 28     | **EXAM II**<br/>lecture material from 9/23 through 10/21      | 
-Monday    | Oct. 31     | **Tropisms and auxin**<br/>Chapter 13                         | 
-Wednesday | Nov. 2      | **Hormones (cont.)**<br/>Chapter 13                           | **Gymnosperms and fossils**<br/>**Hormones (measure)**<br/>**Selection ("Week 5" thin)**
-Friday    | Nov. 4      | **Phytochrome**<br/>Chapter 13                                | 
-Monday    | Nov. 7      | **Nutrient cycles**<br/>Chapter 26                            | 
-Wednesday | Nov. 9      | **Mitosis and meiosis**<br/>Chapter 14                        | **Selection ("Week 6" measure)**<br/>**Hormones (final measurements)** (quiz)
-Friday    | Nov. 11     | **Genomes, alleles**<br/>Chapter 14                           | 
-Monday    | Nov. 14     | **Mendelian genetics**<br/>Chapter 15                         | 
-Wednesday | Nov. 16     | **Mendelian genetics (cont.)**<br/>Chapter 15                 | **Angiosperms and flowers**
-Friday    | Nov. 18     | **Recombination**<br/>Chapter 15                              | 
+Monday    | Oct. 31     | **Fungi and fermentation**<br/>Chapter 21                     | 
+Wednesday | Nov. 2      | **Fungi and fermentation (cont.)**<br/>Chapters 6,21          | **Gymnosperms and fossils**<br/>**Hormones (measure)**<br/>**Selection ("Week 5" thin)**
+Friday    | Nov. 4      | **Tropisms and auxin**<br/>Chapter 13                         | 
+Monday    | Nov. 7      | **Hormones (cont.)**<br/>Chapter 13                           | 
+Wednesday | Nov. 9      | **Phytochrome**<br/>Chapter 13                                | **Selection ("Week 6" measure)**<br/>**Hormones (final measurements)** (quiz)
+Friday    | Nov. 11     | **Nutrient cycles**<br/>Chapter 26                            | 
+Monday    | Nov. 14     | **Mitosis and meiosis**<br/>Chapter 14                        | 
+Wednesday | Nov. 16     | **Genomes, alleles**<br/>Chapter 14                           | **Angiosperms and flowers**
+Friday    | Nov. 18     | **Mendelian genetics**<br/>Chapter 15                         | 
 Monday    | Nov. 21     | **THANKSGIVING BREAK**                                        | 
-Wednesday | Nov. 23     | **THANKSGIVING BREAK**                                        | 
+Wednesday | Nov. 23     | **THANKSGIVING BREAK**                                        | (no lab Thanksgiving break week)
 Friday    | Nov. 25     | **THANKSGIVING BREAK**                                        | 
-Monday    | Nov. 28     | **Population genetics**<br/>Chapter 17                        | 
-Wednesday | Nov. 30     | **Natural selection**<br/>Chapter 17                          | **Climate change** (quiz)
-Friday    | Dec. 2      | **Speciation in flowering plants**<br/>Chapter 17             | 
-Monday    | Dec. 5      | **Yet To Be Determined**                                      | 
-Wednesday | Dec. 7      | **Yet To Be Determined**                                      | **Lab practical exam**
+Monday    | Nov. 28     | **Mendelian genetics (cont.)**<br/>Chapter 15                 | 
+Wednesday | Nov. 30     | **Recombination**<br/>Chapter 15                              | **Climate change** (quiz)
+Friday    | Dec. 2      | **Population genetics**<br/>Chapter 17                        | 
+Monday    | Dec. 5      | **Natural selection**<br/>Chapter 17                          | 
+Wednesday | Dec. 7      | **Speciation in flowering plants**<br/>Chapter 17             | **Lab practical exam**
 Friday    | Dec. 9      | **Review for final**                                          | 
 
 ### Learning goals

@@ -77,7 +77,10 @@ Here are the terms I've introduced thus far. You should be able to briefly expla
 * light-dependent vs. light-independent reactions
 * light-dependent reactions of photosynthesis: light and water in, oxygen, ATP, and NADPH out
 * light-independent reactions of photosynthesis: ATP, NADPH, CO2 in, sugar out
-* photosystems (PSI and PSII), NADP+ reductase enzyme, cytochrome
+* photosystems (PSI and PSII), NADP+ reductase enzyme, cytochrome, ATP synthase enzyme
+* H+ concentration gradient provides energy to power ATP synthase
+* H2O provides the oxygen we (as well as plants) breathe (oxygen is a byproduct of providing electrons to PSII)
+* Calvin cycle = light-independent reactions, RuBP (5 carbons), CO2 (1 carbon), PGA (3 carbons), PGAL (3 carbons)
 
 ## Make and label drawings
 
@@ -89,10 +92,12 @@ Making drawings (on scrap paper, iPad, etc.) and labeling them without looking a
 * monocot vs. eudicot stem in cross section (label pith, cortex, cambium, bundles, epidermis, etc.)
 * draw a diagram of a biological membrane in cross section showing phospholipids and an integral membrane protein. What parts are water molecules clinging to?
 * draw a thylakoid membrane with PSII, cytochrome, PSI, NADP+ reductase, and ATP synthase. Explain to yourself or a study partner how the light-dependent reactions work, where electron pairs originate, where they end up, and how ATP and NADPH are produced.
+* start with 3 RuBP molecules and 3 CO2 molecules and show how 1 extra PGAL can be produced; where is ATP and NADPH used?
 
 ## Look around you!
 
 * Can you find leaves on trees around campus that show different leaf arrangements, venation patterns, complexities? Can you find the lateral buds?
 * Look for natural wood doors and floors and try to tell what type of section you are looking at (radial vs. tangential). Can you find rays, vessels?
 * Can you find lenticels on trees around campus. These may only be visible on younger twigs. Can you see leaf scars and terminal bud scars on older parts of twigs?
-* Without falling in, visit Swan Lake (front of Chemistry building) or Mirror Lake (lake with island along Route 195) and look for oxygen bubbles in algae
+* Being careful not to fall in, visit Swan Lake (front of Chemistry building) or Mirror Lake (lake with island along Route 195) and look for oxygen bubbles in algae along the lake margin
+* Take a deep breath and think about the oxygen spewing from the leaves of all the algae, grass, and trees around you!
