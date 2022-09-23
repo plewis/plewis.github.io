@@ -68,7 +68,16 @@ Here are the terms I've introduced thus far. You should be able to briefly expla
 * levels of protein structure: primary (sequence), secondary (helices, sheets), tertiary (disulfide bridges between cysteins), quaternary (number of polypeptide subunits)
 * biological membranes: lipid bilayer, phospholipids, hydrophylic head, hydrophobic tail
 * membrane proteins: peripheral, integral
-* enzyme: proteins that catalyze chemical reactions, activation energy
+* enzyme: proteins that catalyze chemical reactions, activation energy, names end in "-ase"
+* ATP from ADP plus P plus energy, A in ATP is adenosine (one of the monomers making up DNA and RNA)
+* NADPH from NADP+ plus H+ plus 2 e-, reduction (charge reduced) vs. oxidation (the reverse reaction)
+* visble light, 400-700nm, wavelength, light energy: higher for shorter wavelengths, ultraviolet, infrared
+* light-absorbing pigments in leaves: chlorophyll-a, chlorophyll-b, carotenoids (many kinds)
+* choroplasts: stroma, thylakoids, thylakoid membrane separates stroma from space inside thylakoid, granum = stack of thylakoids
+* light-dependent vs. light-independent reactions
+* light-dependent reactions of photosynthesis: light and water in, oxygen, ATP, and NADPH out
+* light-independent reactions of photosynthesis: ATP, NADPH, CO2 in, sugar out
+* photosystems (PSI and PSII), NADP+ reductase enzyme, cytochrome
 
 ## Make and label drawings
 
@@ -79,9 +88,11 @@ Making drawings (on scrap paper, iPad, etc.) and labeling them without looking a
 * a leaf in cross section showing epidermis, mesophyll layers, vascular bundle (with xylem and phloem in correct orientation), stomata
 * monocot vs. eudicot stem in cross section (label pith, cortex, cambium, bundles, epidermis, etc.)
 * draw a diagram of a biological membrane in cross section showing phospholipids and an integral membrane protein. What parts are water molecules clinging to?
+* draw a thylakoid membrane with PSII, cytochrome, PSI, NADP+ reductase, and ATP synthase. Explain to yourself or a study partner how the light-dependent reactions work, where electron pairs originate, where they end up, and how ATP and NADPH are produced.
 
 ## Look around you!
 
 * Can you find leaves on trees around campus that show different leaf arrangements, venation patterns, complexities? Can you find the lateral buds?
 * Look for natural wood doors and floors and try to tell what type of section you are looking at (radial vs. tangential). Can you find rays, vessels?
 * Can you find lenticels on trees around campus. These may only be visible on younger twigs. Can you see leaf scars and terminal bud scars on older parts of twigs?
+* Without falling in, visit Swan Lake (front of Chemistry building) or Mirror Lake (lake with island along Route 195) and look for oxygen bubbles in algae
