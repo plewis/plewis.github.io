@@ -81,18 +81,20 @@ Here are the terms I've introduced thus far. You should be able to briefly expla
 * H+ concentration gradient provides energy to power ATP synthase
 * H2O provides the oxygen we (as well as plants) breathe (oxygen is a byproduct of providing electrons to PSII)
 * Calvin cycle = light-independent reactions, RuBP (5 carbons), CO2 (1 carbon), PGA (3 carbons), PGAL (3 carbons)
+* photorespiration, malate, PEP, PEP carboxylase, pyruvate, C3, C4, Crassulacean Acid Metabolism (CAM)
 
 ## Make and label drawings
 
 Making drawings (on scrap paper, iPad, etc.) and labeling them without looking at your notes is an excellent way to tell how much you know and what you need to work on. Here are some possible drawings you could make. For each, how many of the terms above can you use to label your drawing?
 
-* plant body with root, stem, leaves, buds
-* a cell showing primary and secondary cell wall, pits, plasmodesmata, organelles, etc.
-* a leaf in cross section showing epidermis, mesophyll layers, vascular bundle (with xylem and phloem in correct orientation), stomata
-* monocot vs. eudicot stem in cross section (label pith, cortex, cambium, bundles, epidermis, etc.)
-* draw a diagram of a biological membrane in cross section showing phospholipids and an integral membrane protein. What parts are water molecules clinging to?
-* draw a thylakoid membrane with PSII, cytochrome, PSI, NADP+ reductase, and ATP synthase. Explain to yourself or a study partner how the light-dependent reactions work, where electron pairs originate, where they end up, and how ATP and NADPH are produced.
-* start with 3 RuBP molecules and 3 CO2 molecules and show how 1 extra PGAL can be produced; where is ATP and NADPH used?
+* Plant body with root, stem, leaves, buds
+* A cell showing primary and secondary cell wall, pits, plasmodesmata, organelles, etc.
+* A leaf in cross section showing epidermis, mesophyll layers, vascular bundle (with xylem and phloem in correct orientation), stomata
+* Monocot vs. eudicot stem in cross section (label pith, cortex, cambium, bundles, epidermis, etc.)
+* Draw a diagram of a biological membrane in cross section showing phospholipids and an integral membrane protein. What parts are water molecules clinging to?
+* Draw a thylakoid membrane with PSII, cytochrome, PSI, NADP+ reductase, and ATP synthase. Explain to yourself or a study partner how the light-dependent reactions work, where electron pairs originate, where they end up, and how ATP and NADPH are produced.
+* Start with 3 RuBP molecules and 3 CO2 molecules and show how 1 extra PGAL can be produced; where is ATP and NADPH used?
+* Make a drawing including a circle representing a bundle sheath cell of a C4 plant and a second circle depicting a normal mesophyll cell. Add malate, PEP, pyruvate, ATP, and CO2 to this figure with arrows between them showing the C4 pathway and black dots indicating the number of carbon atoms in each molecule.
 
 ## Look around you!
 
@@ -101,3 +103,4 @@ Making drawings (on scrap paper, iPad, etc.) and labeling them without looking a
 * Can you find lenticels on trees around campus. These may only be visible on younger twigs. Can you see leaf scars and terminal bud scars on older parts of twigs?
 * Being careful not to fall in, visit Swan Lake (front of Chemistry building) or Mirror Lake (lake with island along Route 195) and look for oxygen bubbles in algae along the lake margin
 * Take a deep breath and think about the oxygen spewing from the leaves of all the algae, grass, and trees around you!
+* Do you have any houseplants with thick leaves or stems? Look up the name of the houseplant using your web browser and see if it is in the plant family Crassulaceae. If not, is it in another plant family known for CAM (e.g. cactus family Cactaceae)?
