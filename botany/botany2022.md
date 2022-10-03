@@ -41,10 +41,10 @@ Friday    | Sep. 16     | **Proteins, enzymes**<br/>Chapters 4,12               
 Monday    | Sep. 19     | **Membranes, ATP, NADPH**<br/>Chapters 4,6                    | 
 Wednesday | Sep. 21     | **Photosynthesis**<br/>Chapters 4,6                           | **Transpiration**
 Friday    | Sep. 23     | **Photosynthesis (cont.)**<br/>Chapter 6                      | 
-Monday    | Sep. 26     | **Photorespiration, CAM, C4**<br/>Chapter 6                   | <a name="today"/> 
+Monday    | Sep. 26     | **Photorespiration, CAM, C4**<br/>Chapter 6                   |  
 Wednesday | Sep. 28     | **Life cycles, endosymbiosis**<br/>Chapter 20                 | **Photosynthesis** (quiz)
 Friday    | Sep. 30     | **EXAM I**<br/>up to and including lecture on 9/26)           | 
-Monday    | Oct. 3      | **Phylogeny, cyanobacteria, red algae**<br/>Chapters 18,19,20 | 
+Monday    | Oct. 3      | **Phylogeny, cyanobacteria, red algae**<br/>Chapters 18,19,20 | <a name="today"/>
 Wednesday | Oct. 5      | **Heterokonts, green algae**<br/>Chapter 20                   | **Selection ("Week 1" measure and perform crosses)**
 Friday    | Oct. 7      | **Bryophytes**<br/>Chapter 22                                 | 
 Monday    | Oct. 10     | **Lycophytes, heterospory**<br/>Chapter 22                    | 
@@ -55,7 +55,7 @@ Wednesday | Oct. 19     | **Angiosperms (flowers)**<br/>Chapter 24              
 Friday    | Oct. 21     | **Angiosperms (inflorescences)**<br/>Chapter 24               | 
 Monday    | Oct. 24     | **Angiosperms (fruits)**<br/>Chapter 24                       | 
 Wednesday | Oct. 26     | **Angiosperms (pollination)**<br/>Chapter 25                  | **Seedless plants**<br/>**Hormones (measure/treat)**<br/>**Selection ("Week 4" plant)** (quiz)
-Friday    | Oct. 28     | **EXAM II**<br/>lecture material from 9/23 through 10/21      | 
+Friday    | Oct. 28     | **EXAM II**<br/>lecture material from 10/3 through 10/24      | 
 Monday    | Oct. 31     | **Fungi and fermentation**<br/>Chapter 21                     | 
 Wednesday | Nov. 2      | **Fungi and fermentation (cont.)**<br/>Chapters 6,21          | **Gymnosperms and fossils**<br/>**Hormones (measure)**<br/>**Selection ("Week 5" thin)**
 Friday    | Nov. 4      | **Tropisms and auxin**<br/>Chapter 13                         | 
