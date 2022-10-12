@@ -33,24 +33,24 @@ Monday    | Aug. 29     | **Introduction, plant cells**<br/>Chapter 5           
 Wednesday | Aug. 31     | **Plant cell types and tissues types**<br/>Chapters 5, 9, 10  | **Microscope use and plant cells**
 Friday    | Sep. 2      | **Leaves and stems**<br/>Chapters 9,10,12                     | 
 Monday    | Sep. 5      | **LABOR DAY**                                                 |
-Wednesday | Sep. 7      | **Stems and roots**<br/>Chapters 9,10,11                      | **Plant anatomy I**
-Friday    | Sep. 9      | **Woody dicot stems, water**<br/>Chapter 10                   | 
-Monday    | Sep. 12     | **Water potential, transpiration**<br/>Chapter 12             | 
-Wednesday | Sep. 14     | **Food transport**<br/>Chapters 4,12                          | **Plant anatomy II** (quiz)
-Friday    | Sep. 16     | **Proteins, enzymes**<br/>Chapters 4,12                       | 
+Wednesday | Sep. 7      | **Stems, Roots**<br/>Chapters 9,10,11                      | **Plant anatomy I**
+Friday    | Sep. 9      | **Woody Dicot Stems, Water**<br/>Chapter 10                   | 
+Monday    | Sep. 12     | **Water Potential, transpiration**<br/>Chapter 12             | 
+Wednesday | Sep. 14     | **Food Transport**<br/>Chapters 4,12                          | **Plant anatomy II** (quiz)
+Friday    | Sep. 16     | **Proteins, Enzymes**<br/>Chapters 4,12                       | 
 Monday    | Sep. 19     | **Membranes, ATP, NADPH**<br/>Chapters 4,6                    | 
 Wednesday | Sep. 21     | **Photosynthesis**<br/>Chapters 4,6                           | **Transpiration**
 Friday    | Sep. 23     | **Photosynthesis (cont.)**<br/>Chapter 6                      | 
 Monday    | Sep. 26     | **Photorespiration, CAM, C4**<br/>Chapter 6                   |  
-Wednesday | Sep. 28     | **Life cycles, endosymbiosis**<br/>Chapter 20                 | **Photosynthesis** (quiz)
+Wednesday | Sep. 28     | **Question/answer session**                                   | **Photosynthesis** (quiz)
 Friday    | Sep. 30     | **EXAM I**<br/>up to and including lecture on 9/26)           | 
-Monday    | Oct. 3      | **Phylogeny, cyanobacteria, red algae**<br/>Chapters 18,19,20 | <a name="today"/>
-Wednesday | Oct. 5      | **Heterokonts, green algae**<br/>Chapter 20                   | **Selection ("Week 1" measure and perform crosses)**
-Friday    | Oct. 7      | **Bryophytes**<br/>Chapter 22                                 | 
-Monday    | Oct. 10     | **Lycophytes, heterospory**<br/>Chapter 22                    | 
-Wednesday | Oct. 12     | **Pteridophytes**<br/>Chapter 22                              | **Leaf "photography"<br/>Hormones (plant peas)** (quiz)
-Friday    | Oct. 14     | **Seed plants**<br/>Chapter 23                                | 
-Monday    | Oct. 17     | **Gymnosperms**<br/>Chapter 23                                | 
+Monday    | Oct. 3      | **Phylogeny, Life Cycles, Endosymbiosis**<br/>Chapters 18,19,20| 
+Wednesday | Oct. 5      | **Cyanobacteria, Red Algae**<br/>Chapter 20                   | **Selection ("Week 1" measure and perform crosses)**
+Friday    | Oct. 7      | **Heterokonts, Chlorophyte Green Algae**<br/>Chapter 20       | 
+Monday    | Oct. 10     | **Streptophyte Green Algae**<br/>Chapter 20                   | <a name="today"/>
+Wednesday | Oct. 12     | **Bryophytes (Hornworts, Mosses, Liverworts)**<br/>Chapter 22 | **Leaf "photography"<br/>Hormones (plant peas)** (quiz)
+Friday    | Oct. 14     | **Vascular plants, Lycophytes, heterospory**<br/>Chapter 23   | 
+Monday    | Oct. 17     | **Pteridophytes, Seed plants, Gymnosperms**<br/>Chapter 23    | 
 Wednesday | Oct. 19     | **Angiosperms (flowers)**<br/>Chapter 24                      | **Cyanobacteria and algae**
 Friday    | Oct. 21     | **Angiosperms (inflorescences)**<br/>Chapter 24               | 
 Monday    | Oct. 24     | **Angiosperms (fruits)**<br/>Chapter 24                       | 
