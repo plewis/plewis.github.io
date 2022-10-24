@@ -17,6 +17,7 @@ This is a freshman-level introdution to the science of plants, emphasizing the a
 **Time:** Monday/Wednesday/Friday 10:10-11:00 <br/>
 **Place:** AUST 103 <br/>
 **Instructor** [Paul O. Lewis](mailto:paul.lewis@uconn.edu)
+**Office hours** I'm happy to meet with you; just email me to set up a time
 
 ### Lab
 **Time (section 1):** Wednesday 12:20-3:20 <br/>
@@ -33,7 +34,7 @@ Monday    | Aug. 29     | **Introduction, plant cells**<br/>Chapter 5           
 Wednesday | Aug. 31     | **Plant cell types and tissues types**<br/>Chapters 5, 9, 10  | **Microscope use and plant cells**
 Friday    | Sep. 2      | **Leaves and stems**<br/>Chapters 9,10,12                     | 
 Monday    | Sep. 5      | **LABOR DAY**                                                 |
-Wednesday | Sep. 7      | **Stems, Roots**<br/>Chapters 9,10,11                      | **Plant anatomy I**
+Wednesday | Sep. 7      | **Stems, Roots**<br/>Chapters 9,10,11                         | **Plant anatomy I**
 Friday    | Sep. 9      | **Woody Dicot Stems, Water**<br/>Chapter 10                   | 
 Monday    | Sep. 12     | **Water Potential, transpiration**<br/>Chapter 12             | 
 Wednesday | Sep. 14     | **Food Transport**<br/>Chapters 4,12                          | **Plant anatomy II** (quiz)
@@ -50,11 +51,11 @@ Friday    | Oct. 7      | **Heterokonts, Chlorophyte Green Algae**<br/>Chapter 2
 Monday    | Oct. 10     | **Streptophyte Green Algae**<br/>Chapter 20                   | 
 Wednesday | Oct. 12     | **Bryophytes (Hornworts, Mosses, Liverworts)**<br/>Chapter 22 | **Leaf "photography"<br/>Hormones (plant peas)** (quiz)
 Friday    | Oct. 14     | **Vascular plants, Lycophytes, heterospory**<br/>Chapter 22   | 
-Monday    | Oct. 17     | **Pteridophytes**<br/>Chapter 22                              | <a name="today"/>
-Wednesday | Oct. 19     | **Seed plants, Gymnosperms**<br/>Chapter 23                   | **Cyanobacteria and algae**
-Friday    | Oct. 21     | **Angiosperms (flowers)**<br/>Chapter 24                      | 
-Monday    | Oct. 24     | **Angiosperms (inflorescences)**<br/>Chapter 24               | 
-Wednesday | Oct. 26     | **Angiosperms (fruits)**<br/>Chapter 24                       | **Seedless plants**<br/>**Hormones (measure/treat)**<br/>**Selection ("Week 4" plant)** (quiz)
+Monday    | Oct. 17     | **Pteridophytes**<br/>Chapter 22                              | 
+Wednesday | Oct. 19     | **Seed plants**<br/>Chapter 23                                | **Cyanobacteria and algae**
+Friday    | Oct. 21     | **Gymnosperms**<br/>Chapter 23                                | 
+Monday    | Oct. 24     | **Angiosperms (flowers)**<br/>Chapter 24                      | <a name="today"/>
+Wednesday | Oct. 26     | **Angiosperms (inflorescences, fruits)**<br/>Chapter 24       | **Seedless plants**<br/>**Hormones (measure/treat)**<br/>**Selection ("Week 4" plant)** (quiz)
 Friday    | Oct. 28     | **EXAM II**<br/>lecture material from 10/3 through 10/24      | 
 Monday    | Oct. 31     | **Angiosperms (pollination)**<br/>Chapter 25                  | 
 Wednesday | Nov. 2      | **Fungi and fermentation**<br/>Chapters 6,21                  | **Gymnosperms and fossils**<br/>**Hormones (measure)**<br/>**Selection ("Week 5" thin)**
