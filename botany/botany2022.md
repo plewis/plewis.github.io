@@ -55,9 +55,9 @@ Monday    | Oct. 17     | **Pteridophytes**<br/>Chapter 22                      
 Wednesday | Oct. 19     | **Seed plants**<br/>Chapter 23                                | **Cyanobacteria and algae**
 Friday    | Oct. 21     | **Gymnosperms**<br/>Chapter 23                                | 
 Monday    | Oct. 24     | **Angiosperms (flowers)**<br/>Chapter 24                      | <a name="today"/>
-Wednesday | Oct. 26     | **Angiosperms (inflorescences, fruits)**<br/>Chapter 24       | **Seedless plants**<br/>**Hormones (measure/treat)**<br/>**Selection ("Week 4" plant)** (quiz)
+Wednesday | Oct. 26     | **Review session (bring questions)**<br/>Chapter 24           | **Seedless plants**<br/>**Hormones (measure/treat)**<br/>**Selection ("Week 4" plant)** (quiz)
 Friday    | Oct. 28     | **EXAM II**<br/>lecture material from 10/3 through 10/24      | 
-Monday    | Oct. 31     | **Angiosperms (pollination)**<br/>Chapter 25                  | 
+Monday    | Oct. 31     | **Angiosperms (continued)**<br/>Chapter 25                    | 
 Wednesday | Nov. 2      | **Fungi and fermentation**<br/>Chapters 6,21                  | **Gymnosperms and fossils**<br/>**Hormones (measure)**<br/>**Selection ("Week 5" thin)**
 Friday    | Nov. 4      | **Tropisms and auxin**<br/>Chapter 13                         | 
 Monday    | Nov. 7      | **Hormones (cont.)**<br/>Chapter 13                           | 
