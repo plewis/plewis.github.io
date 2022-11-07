@@ -57,21 +57,21 @@ Friday    | Oct. 21     | **Gymnosperms**<br/>Chapter 23                        
 Monday    | Oct. 24     | **Angiosperms (flowers)**<br/>Chapter 24                      | 
 Wednesday | Oct. 26     | **Review session (bring questions)**<br/>Chapter 24           | **Seedless plants** (quiz)
 Friday    | Oct. 28     | **EXAM II**<br/>lecture material from 10/3 through 10/24      | 
-Monday    | Oct. 31     | **Angiosperms (inflorescences)**<br/>Chapter 25               | <a name="today"/>
+Monday    | Oct. 31     | **Angiosperms (inflorescences)**<br/>Chapter 25               | 
 Wednesday | Nov. 2      | **Angiosperms (fruits)**<br/>Chapters 25                      | **Gymnosperms and fossils**<br/>**Hormones (Day 1): measure/treat)**<br/>**Selection ("Week 4" harvest)**
 Friday    | Nov. 4      | **Angiosperms (pollination)**<br/>Chapter 25                  | **Hormones (Day 3: measure)**
-Monday    | Nov. 7      | **Tropisms and auxin**<br/>Chapter 13                         | **Hormones (Day 6: measure)**
-Wednesday | Nov. 9      | **Hormones (cont.)**<br/>Chapter 13                           | **Selection ("Week 5" thin)**<br/>**Hormones (Day 8: measure)** (quiz)
+Monday    | Nov. 7      | **Tropisms and auxin**<br/>Chapter 13                         | **Hormones (Day 6: measure)**<a name="today"/>
+Wednesday | Nov. 9      | **Hormones (cont.)**<br/>Chapter 13                           | **Angiosperms and flowers**<br/>**Hormones (Day 8: measure)** (quiz)
 Friday    | Nov. 11     | **Phytochrome (or how plants tell time)**<br/>Chapter 26      | **Hormones (Day 10: measure)**
-Monday    | Nov. 14     | **Nutrient cycles**<br/>Chapter 14                            | **Hormones (Day 13: measure)**
-Wednesday | Nov. 16     | **Mitosis and meiosis**<br/>Chapter 14                        | **Angiosperms and flowers**<br/>**Hormones (Day 15: final measurements)**<br/>**Selection ("Week 6": measure)
-Friday    | Nov. 18     | **Mendelian genetics**<br/>Chapter 15                         | 
+Monday    | Nov. 14     | **Mitosis and meiosis**<br/>Chapter 14                        | **Hormones (Day 13: measure)**
+Wednesday | Nov. 16     | **Mendelian genetics**<br/>Chapter 15                         | **Mitosis and Meiosis**<br/>**Hormones (Day 15: final measurements)**<br/>**Selection ("Week 6": measure)
+Friday    | Nov. 18     | **Mendelian genetics (cont.)**<br/>Chapter 15                 | 
 Monday    | Nov. 21     | **THANKSGIVING BREAK**                                        | 
 Wednesday | Nov. 23     | **THANKSGIVING BREAK**                                        | (no lab Thanksgiving break week)
 Friday    | Nov. 25     | **THANKSGIVING BREAK**                                        | 
-Monday    | Nov. 28     | **Mendelian genetics (cont.)**<br/>Chapter 15                 | 
-Wednesday | Nov. 30     | **Recombination**<br/>Chapter 15                              | **Climate change** (quiz)
-Friday    | Dec. 2      | **Population genetics**<br/>Chapter 17                        | 
+Monday    | Nov. 28     | **Recombination**<br/>Chapter 15                              | 
+Wednesday | Nov. 30     | **Nutrient cycles**<br/>Chapter 14                            | **Climate change** (quiz)
+Friday    | Dec. 2      | **Population genetics<br/>Chapter 17                          | 
 Monday    | Dec. 5      | **Natural selection**<br/>Chapter 17                          | 
 Wednesday | Dec. 7      | **Speciation in flowering plants**<br/>Chapter 17             | **Lab practical exam**
 Friday    | Dec. 9      | **Review for final**                                          | 
