@@ -70,10 +70,10 @@ Monday    | Nov. 21     | **THANKSGIVING BREAK**                                
 Wednesday | Nov. 23     | **THANKSGIVING BREAK**                                        | (no lab Thanksgiving break week)
 Friday    | Nov. 25     | **THANKSGIVING BREAK**                                        | <a name="today"/>
 Monday    | Nov. 28     | **Recombination**<br/>Chapter 15                              | 
-Wednesday | Nov. 30     | **Natural selection**<br/>Chapter 17                          | **Climate change**<br/>**Selection (final measurements)** (quiz)
+Wednesday | Nov. 30     | **Natural selection**<br/>Chapter 17                          | **Selection (final measurements)**
 Friday    | Dec. 2      | **Population genetics<br/>Chapter 17                          | 
 Monday    | Dec. 5      | **Speciation in flowering plants**<br/>Chapter 17             | 
-Wednesday | Dec. 7      | **Nutrient cycles**<br/>Chapter 14                            | **Lab practical exam**
+Wednesday | Dec. 7      | **Nutrient cycles**<br/>Chapter 14                            | **Climate change** (quiz)
 Friday    | Dec. 9      | **Review for final**                                          | 
 
 ### Learning goals
