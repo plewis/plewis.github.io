@@ -68,13 +68,14 @@ Wednesday | Nov. 16     | **Mendelian genetics**<br/>Chapter 15                 
 Friday    | Nov. 18     | **Mendelian genetics (cont.)**<br/>Chapter 15                 | 
 Monday    | Nov. 21     | **THANKSGIVING BREAK**                                        | 
 Wednesday | Nov. 23     | **THANKSGIVING BREAK**                                        | (no lab Thanksgiving break week)
-Friday    | Nov. 25     | **THANKSGIVING BREAK**                                        | <a name="today"/>
+Friday    | Nov. 25     | **THANKSGIVING BREAK**                                        | 
 Monday    | Nov. 28     | **Recombination**<br/>Chapter 15                              | 
 Wednesday | Nov. 30     | **Natural selection**<br/>Chapter 17                          | **Selection (final measurements)**
 Friday    | Dec. 2      | **Population genetics**<br/>Chapter 17                        | 
-Monday    | Dec. 5      | **Speciation in flowering plants**<br/>Chapter 17             | 
-Wednesday | Dec. 7      | **Nutrient cycles**<br/>Chapter 14                            | **Climate change** (quiz)
+Monday    | Dec. 5      | **Speciation in flowering plants**<br/>Chapter 17             | <a name="today"/>
+Wednesday | Dec. 7      | **Nutrient cycles**<br/>Chapter 26                            | **Climate change** (quiz)
 Friday    | Dec. 9      | **Review for final**                                          | 
+Friday    | Dec. 16     | **[FINAL EXAM (8-10am, AUST 103)](https://registrar.uconn.edu/exams/)**                             | 
 
 ### Learning goals
 
@@ -151,7 +152,7 @@ Note that you can find out where you stand at any point in the course using the 
 
 #### Final exam information
 
-You can obtain the date and time of the final exam by following the directions on the [Registrar’s web site](https://registrar.uconn.edu/final-exam-schedule/).
+You can obtain the date and time of the final exam by following the directions on the [Registrar’s web site](https://registrar.uconn.edu/exams/).
 You are required to be available for your exam and/or complete an assessment during the time stated in the Registrar's Office Schedule. If you have a conflict with this time you must visit the Office of Student Services and Advocacy to discuss the possibility of rescheduling this assessment.
 
 ### Other Important Information
