@@ -10,7 +10,7 @@ _Last updated August 19, 2022_
 
 ### Description of the course 
 
-This is a freshman-level introdution to the science of plants, emphasizing the anatomy, physiology, diversity, genetics, and evolution of green plants (ncluding green algae). Because it is a general education course, there is considerable attention given to how science works, from hypothesis generation to design of experiments to test the predictions arising from hypotheses. As is traditional in introductory botany courses, some time is devoted to fungi, cyanobacteria, red algae, brown algae and diatoms, and slime molds, even though these organisms are now known to be distantly related to green plants.
+This is a freshman-level introdution to the science of plants, emphasizing the anatomy, physiology, diversity, genetics, and evolution of green plants (including green algae). Because it is a general education course, there is considerable attention given to how science works, from hypothesis generation to design of experiments to test the predictions arising from hypotheses. As is traditional in introductory botany courses, some time is devoted to fungi, cyanobacteria, red algae, brown algae and diatoms, and slime molds, even though these organisms are now known to be distantly related to green plants.
 
 ### Lecture
 
@@ -111,13 +111,15 @@ The purpose of the assigned textbook reading is to give you the material from a 
 
 _Note: this section may change before the semester begins_
 
-The total number of points you can earn is 500. The lecture component accounts for 300 points and the lab accounts for the remaining 200.
+The total number of points you can earn is 370. The lecture component accounts for 200 points and the lab accounts for the remaining 170.
 
 Lecture        | Points
 :------------- | :---------------
 Exam 1         | 100
 Exam 2         | 100
 Final exam     | 100
+ 
+The 2 highest scores from the 3 exams will be counted. If you missed an exam (for any reason) and were not able to make it up before the answer key was posted, that will be the exam that is dropped. Note that you **must take the final exam** (even if you did well on the first two exams).
  
 Laboratory     | Points
 :------------- | :---------------
@@ -127,7 +129,6 @@ Photosynthesis | 10
 Selection      | 30
 Hormones       | 30
 Climate change | 10
-Lab practical  | 30
 Participation  | 30
 
 ### Grading scale
