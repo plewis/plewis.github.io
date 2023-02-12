@@ -5,9 +5,9 @@ permalink: /publications/
 ---
 ([Jump to key to symbols](#key-to-symbols))
 
-YB Wang, A Milkey, A Li, MH Chen, L Kuo, and PO Lewis. 2022. LoRaD: marginal likelihood from a single posterior sample. Submitted to Systematic Biology.
+YB Wang, A Milkey, A Li, MH Chen, L Kuo, and PO Lewis. 2023. LoRaD: marginal likelihood estimation with haste (but no waste). Systematic Biology (in press).
 {% comment %}
-Manuscript ID: USYB-2022-066, submitted 2-Mar-2022.
+Manuscript ID: USYB-2022-066 submitted 2-Mar-2022. USYB-2022-066.R1 accepted 7-Feb-2023. USYB-2022-066.R2 submitted 11-Feb-2023.
 {% endcomment %}
 
 EM Clifton, PO Lewis, E Jockusch, and E Adams. 2022. [An experimental test of Lanchester’s models of combat in the neotropical termite _Nasutitermes corniger_ (Blattodea: Termitidae).](https://doi.org/10.1098/rspb.2022.0343) Proceedings of the Royal Society B: Biological Sciences 289:20220343.

@@ -8,6 +8,14 @@ permalink: /teaching/
 
 ---
 
+### Evolution (EEB 2245) ###
+
+{% include figure.html description="Aposematic coloration in milkweed bugs" url="/assets/img/milkweed-bugs.jpg" css="image-left" width="300px" targeturl="https://uconneeb.github.io/evolution/" %}
+
+This is a sophomore-level 3-credit undergraduate course that satisfies the [Evolution Core Requirement of the BIOL major](https://biology.uconn.edu/biological-sciences/) as well as one of the [Core Requirements of the EEB major](https://biology.uconn.edu/eeb/). In this course, you will learn how natural selection and other processes lead to evolutionary change in organisms across generations, and about key turning points in history that have led to the diversity of organisms we now see on Earth. You will learn _tree thinking_ that will allow you to understand and correctly interpret evolutionary trees in scientific literature.
+
+[Link to Spring 2023 course web site](https://uconneeb.github.io/evolution/)
+
 ### [Introduction to Botany (BIOL 1110)](/botany2022/) ###
 
 {% include figure.html description="Liverwort, Woods Hole, MA." url="/assets/img/liverwort.jpg" css="image-left" width="300px" targeturl="https://en.wikipedia.org/wiki/Marchantiophyta" %}
@@ -27,13 +35,5 @@ This graduate course explains models and methods used in maximum-likelihood and 
 [Link to Spring 2022 lecture/lab schedule](/phylogenetics2022/)
 
 ---
-
-### Evolution (EEB 2245) ###
-
-{% include figure.html description="Aposematic coloration in milkweed bugs" url="/assets/img/milkweed-bugs.jpg" css="image-left" width="300px" targeturl="https://uconneeb.github.io/evolution/" %}
-
-This is a sophomore-level 3-credit undergraduate course that satisfies the [Evolution Core Requirement of the BIOL major](https://biology.uconn.edu/biological-sciences/) as well as one of the [Core Requirements of the EEB major](https://biology.uconn.edu/eeb/). In this course, you will learn how natural selection and other processes lead to evolutionary change in organisms across generations, and about key turning points in history that have led to the diversity of organisms we now see on Earth. You will learn _tree thinking_ that will allow you to understand and correctly interpret evolutionary trees in scientific literature.
-
-[Link to Spring 2021 course web site](https://uconneeb.github.io/evolution/)
 
 <p class="sectionbreak"/>
