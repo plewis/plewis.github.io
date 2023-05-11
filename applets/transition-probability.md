@@ -5,7 +5,6 @@ author: Paul O. Lewis
 permalink: /applets/jc-transition-probabilities/
 ---
 ## Jukes-Cantor Model Transition Probability applet
-Written by Paul O. Lewis (4-Feb-2020)
 
 One sequence of length 500 (50 sites/row, 10 rows) starts either with **all A** or **no A** at time 0. 
 

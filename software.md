@@ -13,12 +13,15 @@ Developing these applets helped me understand concepts, and I hope they are usef
 * [Pagel's lambda, delta, and kappa](/applets/pagel/)
 * [Ornstein-Uhlenbeck vs. Brownian Motion](/applets/ou/)
 * [Dirichlet base frequency distribution](/applets/dirichlet-prior/)
+* [Jukes-Cantor transition probabilities](/applets/jc-transition-probabilities/)
+* [Geometry of tree space](/applets/bhvspace/)
 
 ### Statistics ###
 
 * [Density Rain](/applets/density-rain/)
 * [MCMC](/applets/mcmc-robot/)
 * [Dirichlet Process Prior](/applets/dpp/)
+* [Eigenvectors, eigenvalues, and diagonalization](/applets/diagonalization/)
 
 ### Natural Selection ###
 
