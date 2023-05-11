@@ -11,7 +11,10 @@ obtained her B.S. in Biological Sciences at the University of
 California, Davis, in June 2020. While at UC Davis, Analisa studied
 convergent evolution in morphology associated with transitions to
 selective zooplanktivory in butterfly fishes in the lab of [Peter
-Wainwright](https://fishlab.ucdavis.edu).
+Wainwright](https://fishlab.ucdavis.edu). Analisa became a Ph.D. candidate 
+on April 13, 2023, by passing her general oral exam. Her advisory committee 
+comprises Paul Lewis (advisor), Elizabeth Jockush, Kent Holsinger, and Jill Wegrzyn.
+Chris Simon served as an outside member of the oral exam committee.
 
 [Analisa's web site](https://amilkey1.github.io)
 

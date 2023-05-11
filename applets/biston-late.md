@@ -11,35 +11,23 @@ assumes that the melanic form is selected against with selection coefficient <em
 Can you find a single value of <em>s</em> that matches the points, which measure the 
 frequency of the melanic form each year in a single place ([West Kirby, near Liverpool, 
 England](https://goo.gl/maps/h9QniAYgzRr)). You may find that allowing the selection coefficient to change in 1976 helps 
-in fitting the model to the empirical measurements. Does the best fitting model assume a 
-constant selection coefficient, increasing selection against the melanic form, or 
-decreasing selection against the melanic form?
+in fitting the model to the empirical measurements. 
+
+{% comment %}
+Why does 1976 seem important? Does this sentence from the [Wikipedia article on Liverpool](https://en.wikipedia.org/wiki/Liverpool#20th_century) provide a clue?
+> From the mid-1970s onwards, Liverpool's docks and traditional manufacturing industries declined due to restructuring of shipping and heavy industry...
+{% endcomment %}
+
+Does the best fitting model assume a 
+* constant selection coefficient, 
+* increasing selection against the melanic form, or 
+* decreasing selection against the melanic form?
+
+---
 
 <div id="ctrl"></div>
 <div id="plot"></div>
 <script type="text/javascript">
-    // The MIT License (MIT)
-    // 
-    // Copyright (c) 2018 Paul O. Lewis
-    // 
-    // Permission is hereby granted, free of charge, to any person obtaining a copy
-    // of this software and associated documentation files (the “Software”), to deal
-    // in the Software without restriction, including without limitation the rights
-    // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    // copies of the Software, and to permit persons to whom the Software is
-    // furnished to do so, subject to the following conditions:
-    // 
-    // The above copyright notice and this permission notice shall be included in all
-    // copies or substantial portions of the Software.
-    // 
-    // THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    // SOFTWARE.
-    // 
     // written by Paul O. Lewis 22-Mar-2019
     
     // Data from Clarke, Cyril A., Bruce Grant, Frieda M. M. Clarke, and 
@@ -395,6 +383,8 @@ decreasing selection against the melanic form?
 
 </script>
 
+## Details
+
 The data for the points are from Clarke, Cyril A., Bruce Grant, Frieda M. M. Clarke, and 
 Takahiro Asami. 1994. A long term assessment of _Biston betularia_ (L.) in one UK locality 
 (Caldy Common near West Kirby, Wirral), 1959-1993, and glimpses elsewhere. The Linnean 10(2):18-26.
@@ -402,3 +392,17 @@ Only data from mercury vapor lights was used from Appendix I. Values after 1993 
 eye-balling Figure 2 in Cook, Laurence M. 2003. The rise and fall of 
 the _carbonaria_ form of the peppered moth. Quarterly Review of Biology 
 78(4):399-417.
+
+## Acknowledgements
+
+This applet makes use of the excellent [d3js](https://d3js.org/) javascript library. Please see the 
+[GitHub site](https://github.com/plewis/plewis.github.io/assets/js) 
+for details about licensing of other libraries that may have been used in the 
+source code for this applet.
+
+## Licence
+
+Creative Commons Attribution 4.0 International.
+License (CC BY 4.0). To view a copy of this license, visit
+[http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/) or send a letter to Creative Commons, 559
+Nathan Abbott Way, Stanford, California 94305, USA.

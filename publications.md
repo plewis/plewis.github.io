@@ -5,7 +5,7 @@ permalink: /publications/
 ---
 ([Jump to key to symbols](#key-to-symbols))
 
-YB Wang, A Milkey, A Li, MH Chen, L Kuo, and PO Lewis. 2023. LoRaD: marginal likelihood estimation with haste (but no waste). Systematic Biology (in press).
+YB Wang, A Milkey, A Li, MH Chen, L Kuo, and PO Lewis. 2023. [LoRaD: marginal likelihood estimation with haste (but no waste).](https://doi.org/10.1093/sysbio/syad007) Systematic Biology (advance access).
 {% comment %}
 Manuscript ID: USYB-2022-066 submitted 2-Mar-2022. USYB-2022-066.R1 accepted 7-Feb-2023. USYB-2022-066.R2 submitted 11-Feb-2023.
 {% endcomment %}

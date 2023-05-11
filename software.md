@@ -25,11 +25,14 @@ Developing these applets helped me understand concepts, and I hope they are usef
 * [Natural selection ball-drop game](/applets/ball-drop/)
 * [Biston betularia (1848-1898)](/applets/biston-early/)
 * [Biston betularia (1959-2003)](/applets/biston-late/)
+* [Selective Sweep](/applets/sweep/)
 
 ### Population Genetics ###
 
 * [Selfing](/applets/selfing/)
+* [Genetic Drift](/applets/drift/)
 * [Fst](/applets/fst/)
+* [Coalescence](/applets//applets/coalescence//)
 
 ## C++ Bayesian phylogenetics software tutorial
 

@@ -9,28 +9,6 @@ permalink: /applets/ball-drop/
 <div id="control"></div>
 <div id="canvas"></div>
 <script type="text/javascript">
-    // The MIT License (MIT)
-    // 
-    // Copyright (c) 2018 Paul O. Lewis
-    // 
-    // Permission is hereby granted, free of charge, to any person obtaining a copy
-    // of this software and associated documentation files (the “Software”), to deal
-    // in the Software without restriction, including without limitation the rights
-    // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    // copies of the Software, and to permit persons to whom the Software is
-    // furnished to do so, subject to the following conditions:
-    // 
-    // The above copyright notice and this permission notice shall be included in all
-    // copies or substantial portions of the Software.
-    // 
-    // THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    // SOFTWARE.
-    // 
     // written by Paul O. Lewis 20-Dec-2018
     
     var debugging = true;   // spits out info to console if true
@@ -1064,3 +1042,16 @@ You should find it difficult to come up with a better solution (that is, choose 
 
 Although natural selection begins with purely random solutions, its power lies in the fact that each incremental improvement is retained and not lost. While the odds against hitting on the best ordering of balls by chance is (for 18 balls) some 6,402,373,705,730,000 to 1, it is possible to get there quickly if you can ratchet your way there by preserving small improvements!
  
+ ## Acknowledgements
+
+This applet makes use of the excellent [d3js](https://d3js.org/) javascript library. Please see the 
+[GitHub site](https://github.com/plewis/plewis.github.io/assets/js) 
+for details about licensing of other libraries that may have been used in the 
+source code for this applet.
+
+## Licence
+
+Creative Commons Attribution 4.0 International.
+License (CC BY 4.0). To view a copy of this license, visit
+[http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/) or send a letter to Creative Commons, 559
+Nathan Abbott Way, Stanford, California 94305, USA.

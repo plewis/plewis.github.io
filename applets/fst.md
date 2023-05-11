@@ -7,37 +7,23 @@ permalink: /applets/fst/
 ## Fst and genetic drift in small populations
 
 Key to genotype colors:
+* AA (yellow)
+* Aa (orange)
+* aa (red)
+
+{% comment %}
+no longer works
+Key to genotype colors:
 * ![](https://via.placeholder.com/20.png/FEFF0B/000000?text=+) AA (yellow)
 * ![](https://via.placeholder.com/20.png/F08D08/000000?text=+) Aa (orange)
 * ![](https://via.placeholder.com/20.png/FF0000/FFFFFF?text=+) aa (red)
+{% endcomment %}
 
 The frequency of allele **A** used at the start is _p_ = 0.5 for all populations. Refresh your browser to start over.
 Scroll down for more details.
 
 <div id="arbitrary"></div>
 <script type="text/javascript">
-    // The MIT License (MIT)
-    // 
-    // Copyright (c) 2019 Paul O. Lewis
-    // 
-    // Permission is hereby granted, free of charge, to any person obtaining a copy
-    // of this software and associated documentation files (the “Software”), to deal
-    // in the Software without restriction, including without limitation the rights
-    // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    // copies of the Software, and to permit persons to whom the Software is
-    // furnished to do so, subject to the following conditions:
-    // 
-    // The above copyright notice and this permission notice shall be included in all
-    // copies or substantial portions of the Software.
-    // 
-    // THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    // SOFTWARE.
-    // 
     // written by Paul O. Lewis 16-April-2019
     
     // Colors
@@ -100,7 +86,7 @@ Scroll down for more details.
 
     // Initialize frequency of A allele in all subpopulations
     var Ho = 0.0;
-    var He = 0.0;
+    var He = 0.5;
     var heterozygosity = [];
     var freqA = [];
     var pbar = 0.0;
@@ -108,7 +94,7 @@ Scroll down for more details.
         for (let j = 0; j < popcols; j++) {
             let tmp = {"i":i, "j":j, "freq":0.5};
             freqA.push(tmp);
-            heterozygosity.push({"i":i, "j":j, "heterozygosity":0.0});
+            heterozygosity.push({"i":i, "j":j, "heterozygosity":0.5});
         }
     }
     
@@ -209,8 +195,35 @@ Scroll down for more details.
         return freqplot_h + fstbar_h + hcell*(poprow*indivrows + indivrow + 0.5);
     }       
 
+    function recalcFst() {
+        let sumsq = 0.0;
+        let sum = 0.0;
+        let n = freqA.length;
+        for (let i = 0; i < n; i++) {
+            let x = freqA[i].freq;
+            sum += x;
+            sumsq += x*x;
+        }
+        let mean = sum/n;
+        let variance = (sumsq - n*mean*mean)/n;
+        
+        // X = 1 with probability p
+        // X = 0 with probability 1-p
+        // E[X] = (0)(1-p) + (1)(p) = p
+        // Var(X) = E[X^2] - (E[X])^2
+        //        = (0^2)(1-p) + (1^2)(p) - p^2
+        //        = p - p^2
+        //        = p(1-p)
+        let maxvar = mean*(1-mean);
+        Fst = variance/maxvar;
+    }
+
+    function getStatusText() {
+        return "g = " + ngens + ", pmean = " + pbar.toFixed(3) + ", Ho = " + Ho.toFixed(3) + ", He = " + He.toFixed(3) + ", Fst = " + Fst.toFixed(3);
+    }
+
     // Data for individuals is stored as list of objects containing information about each individual
-    function initializePops() {
+    function initializePops(start = false) {
         ngens = 0;
         indiv_data = [];
         Ho = 0.0;
@@ -233,27 +246,40 @@ Scroll down for more details.
         }
         Ho /= (poprows*popcols);
         pbar /= (poprows*popcols);
-    }
-    initializePops();
+        He = 2.0*pbar*(1.0 - pbar);
+        recalcFst();
+        
+        if (!start) {
+            // update gold colored Fst bar
+            d3.select("rect#fst")
+                .attr("width", grid_w*Fst)
+                .attr("fill", fstbar_color);  
+                  
+            // update blue frequency histogram
+            d3.selectAll("rect.hist")
+                .attr("x", function(d) {return d.bin*grid_w/freqplot_bars;})
+                .attr("y", function(d) {return freqplot_h - d.freq*freqplot_h/npops;})
+                .attr("height", function(d) {return d.freq*freqplot_h/npops;})
+                .attr("fill", freqplot_color);
 
-    function getStatusText() {
-        return "g = " + ngens + ", pmean = " + pbar.toFixed(3) + ", Ho = " + Ho.toFixed(3) + ", He = " + He.toFixed(3) + ", Fst = " + Fst.toFixed(3);
-    }
-
-    function recalcFst() {
-        let sumsq = 0.0;
-        let sum = 0.0;
-        let n = freqA.length;
-        for (let i = 0; i < n; i++) {
-            let x = freqA[i].freq;
-            sum += x;
-            sumsq += x*x;
+            // reset circles representing individuals
+            plot_svg.selectAll("circle.indiv")
+                .data(indiv_data)
+                .enter()
+                .append("circle")
+                .attr("class", "indiv")
+                .attr("cx", function(d) {return d.x;})
+                .attr("cy", function(d) {return d.y;})
+                .attr("r", rindiv)
+                .attr("fill", function(d) {return genotype_color[d.genotype];})
+                .attr("stroke", genotype_stroke);
+                
+            // refresh status bar text
+            d3.select("text#status")
+                .text(getStatusText())
         }
-        let mean = sum/n;
-        let variance = (sumsq - n*mean*mean)/n;
-        let maxvar = mean*(1-mean);
-        Fst = variance/maxvar;
     }
+    initializePops(true);
 
     function nextGeneration() {
         ngens++;
@@ -280,6 +306,8 @@ Scroll down for more details.
         pbar /= (poprows*popcols);
         He = 2.0*pbar*(1.0 - pbar);
         recalcFst();
+
+        // update plot
         d3.select("rect#fst")
             .attr("width", grid_w*Fst)
             .attr("fill", fstbar_color);
@@ -363,16 +391,6 @@ Scroll down for more details.
             
             d3.selectAll("circle.indiv").remove();
             initializePops();
-            plot_svg.selectAll("circle.indiv")
-                .data(indiv_data)
-                .enter()
-                .append("circle")
-                .attr("class", "indiv")
-                .attr("cx", function(d) {return d.x;})
-                .attr("cy", function(d) {return d.y;})
-                .attr("r", rindiv)
-                .attr("fill", function(d) {return genotype_color[d.genotype];})
-                .attr("stroke", genotype_stroke);
         }
     }
     d3.select("body")
@@ -451,6 +469,8 @@ Scroll down for more details.
     CenterTextInRect(status_text, 0, freqplot_h, grid_w, fstbar_h);                 
 </script>
 
+## Details
+
 The following keys do something:
 * 'n' advances to the next generation
 * 's' toggles between 4 and 16 diploid individuals per population
@@ -469,3 +489,17 @@ With each new generation, drift increases the variance of _p_ across populations
 increases **Fst** (indicated by the fraction of the status bar filled with **orange**) until, eventually, 
 all populations are fixed for either the **A** or the **a** allele, the variance of _p_ is 
 as large as it can get, and **Fst** equals 1.
+
+## Acknowledgements
+
+This applet makes use of the excellent [d3js](https://d3js.org/) javascript library. Please see the 
+[GitHub site](https://github.com/plewis/plewis.github.io/assets/js) 
+for details about licensing of other libraries that may have been used in the 
+source code for this applet.
+
+## Licence
+
+Creative Commons Attribution 4.0 International.
+License (CC BY 4.0). To view a copy of this license, visit
+[http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/) or send a letter to Creative Commons, 559
+Nathan Abbott Way, Stanford, California 94305, USA.

@@ -13,8 +13,6 @@ A description of this applet is provided below the plot.
 <div id="controls" style="display:inline-block; vertical-align:top;"></div>
 <script type="text/javascript">
     // written by Paul O. Lewis 27-Mar-2020
-    // See https://developer.mozilla.org/en-US/docs/Web/SVG/Element
-    // See https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
 
     const lot = new Random(1234);
     
@@ -1118,10 +1116,10 @@ Notes:
 
 ## Acknowledgements
 
-This applet makes use of [d3js](https://d3js.org/) and the lgamma function from [John D. Cook](https://www.johndcook.com/blog/stand_alone_code/).
-Please see the 
-[GitHub site](https://github.com/molevolworkshop/molevolworkshop.github.io/tree/master/assets/js) 
-for details about licensing.
+This applet makes use of the excellent [d3js](https://d3js.org/) javascript library. Please see the 
+[GitHub site](https://github.com/plewis/plewis.github.io/assets/js) 
+for details about licensing of other libraries that may have been used in the 
+source code for this applet.
 
 ## Licence
 

@@ -22,28 +22,6 @@ a new tree using a pure birth model scaled to have total height 100.
 <div id="details"></div>
 <div class="container" style="clear: both"></div>
 <script type="text/javascript">
-    // The MIT License (MIT)
-    //
-    // Copyright (c) 2020 Paul O. Lewis
-    // 
-    // Permission is hereby granted, free of charge, to any person obtaining a copy
-    // of this software and associated documentation files (the “Software”), to deal
-    // in the Software without restriction, including without limitation the rights
-    // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    // copies of the Software, and to permit persons to whom the Software is
-    // furnished to do so, subject to the following conditions:
-    //
-    // The above copyright notice and this permission notice shall be included in all
-    // copies or substantial portions of the Software.
-    //
-    // THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    // SOFTWARE.
-    
     // Written by Paul O. Lewis 15-Apr-2020
 
     let details_div = d3.select("div#details").attr("class", "detailsbox");
@@ -719,7 +697,10 @@ M Pagel. 1999. Inferring the historical patterns of biological evolution. Nature
 
 ## Acknowledgements
 
-This applet makes use of the excellent [d3js](https://d3js.org/) javascript library.
+This applet makes use of the excellent [d3js](https://d3js.org/) javascript library. Please see the 
+[GitHub site](https://github.com/plewis/plewis.github.io/assets/js) 
+for details about licensing of other libraries that may have been used in the 
+source code for this applet.
 
 ## Licence
 

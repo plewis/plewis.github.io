@@ -17,8 +17,7 @@ Scroll down below the applet for more background and details.
 <div id="arbitrary"></div>
 <script type="text/javascript">
     // written by Paul O. Lewis 30-Aug-2019
-    // See https://developer.mozilla.org/en-US/docs/Web/SVG/Element
-    // See https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
+
     var lot = new Random(1234);
 
     // width and height of svg
@@ -515,7 +514,10 @@ $$p(x) = \int p(x,y) dy $$
 
 ## Acknowledgements
 
-This applet makes use of the excellent [d3js](https://d3js.org/) javascript library.
+This applet makes use of the excellent [d3js](https://d3js.org/) javascript library. Please see the 
+[GitHub site](https://github.com/plewis/plewis.github.io/assets/js) 
+for details about licensing of other libraries that may have been used in the 
+source code for this applet.
 
 ## Licence
 
