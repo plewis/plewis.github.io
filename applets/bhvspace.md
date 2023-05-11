@@ -7,7 +7,7 @@ permalink: /applets/bhvspace/
 
 An illustration of the space of phylogenetic trees described in the following paper:
 
-> LJ Billera, SP Holmes, and K Vogtmann. 2001. Geometry of the space of phylogenetic trees. Advances in Applied Mathematics 27:733-767.
+> LJ Billera, SP Holmes, and K Vogtmann. 2001. Geometry of the space of phylogenetic trees. Advances in Applied Mathematics 27:733-767. DOI:[10.1006/aama.2001.0759](https://doi.org/10.1006/aama.2001.0759)
 
 See the Details section below the plot for further explanation.
 
@@ -745,7 +745,7 @@ See the Details section below the plot for further explanation.
 
 ## Details
 
-Drag the black solid dots at the ends of the path and press the space key to start an animation in which the phylogeny shown in the upper left panel changes as the path is traversed. Note that you cannot place either dot in the upper left panel because that would involve an impossible combination of splits. (This fact makes it an ideal place to display the tree!) Note that the upper left panel is similar to a building that prevents one from walking in a straight line from the starting point to the ending point.
+Drag the black solid dots at the ends of the path and press the space key (or Option/Alt-space to avoid scrolling to the bottom of the page) to start an animation in which the phylogeny shown in the upper left panel changes as the path is traversed. Note that you cannot place either dot in the upper left panel because that would involve an impossible combination of splits. (This fact makes it an ideal place to display the tree!) Note that the upper left panel is similar to a building that prevents one from walking in a straight line from the starting point to the ending point.
 
 ## Acknowledgements
 
