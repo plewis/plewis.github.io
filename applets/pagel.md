@@ -697,10 +697,8 @@ M Pagel. 1999. Inferring the historical patterns of biological evolution. Nature
 
 ## Acknowledgements
 
-This applet makes use of the excellent [d3js](https://d3js.org/) javascript library. Please see the 
-[GitHub site](https://github.com/plewis/plewis.github.io/assets/js) 
-for details about licensing of other libraries that may have been used in the 
-source code for this applet.
+This applet makes use of the excellent [d3js](https://d3js.org/) javascript library. 
+Please see the [GitHub site](https://github.com/plewis/plewis.github.io/tree/master/assets/js) for details about licensing of other libraries that may have been used in the source code for this applet.
 
 ## Licence
 

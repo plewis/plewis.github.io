@@ -32,7 +32,7 @@ Developing these applets helped me understand concepts, and I hope they are usef
 * [Selfing](/applets/selfing/)
 * [Genetic Drift](/applets/drift/)
 * [Fst](/applets/fst/)
-* [Coalescence](/applets//applets/coalescence//)
+* [Coalescence](/applets/coalescence/)
 
 ## C++ Bayesian phylogenetics software tutorial
 

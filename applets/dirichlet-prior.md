@@ -954,9 +954,7 @@ Drag right-to-left (or left-to-right) with mouse to rotate view. Use controls be
 ## Acknowledgements
 
 This applet makes use of [d3js](https://d3js.org/) and Erik Bernhardsson's very useful [D3-3D code](https://github.com/erikbern/d3-3d).
-Please see the 
-[GitHub site](https://github.com/molevolworkshop/molevolworkshop.github.io/tree/master/assets/js) 
-for details about licensing.
+Please see the [GitHub site](https://github.com/plewis/plewis.github.io/tree/master/assets/js) for details about licensing of other libraries that may have been used in the source code for this applet.
 
 ## Licence
 
