@@ -6,7 +6,7 @@ permalink: /applets/mcmc-robot/
 ---
 ## MCMC Robot applet
 
-[Markov chain Monte Carlo (MCMC)](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) is a form of computer simulation that can be used to create a topographical map of a probability density surface. This applet allows you to create your own two-dimensional "landscape" composed of a mixture of bivariate normal "hills". A metaphorical "MCMC robot" walks around on this surface, and the rules that it follows about where to step next end up causing it to spend an amount of time in any one spot that is proportional to the probability density of that spot. 
+[Markov chain Monte Carlo (MCMC)](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) is a form of computer simulation that can be used to create a "topographical map" of a probability density surface. This applet allows you to create your own two-dimensional "landscape" composed of a mixture of bivariate normal "hills". A metaphorical "MCMC robot" walks around on this surface, and the rules that it follows about where to step next end up causing it to spend an amount of time in any one spot that is proportional to the probability density of that spot. 
 
 <div id="mcmcrobot"></div>
 <script type="text/javascript">
@@ -1167,6 +1167,20 @@ permalink: /applets/mcmc-robot/
         .on("keydown", function() {robot_panel.keydown(d3.event.keyCode);});
 
 </script>
+
+## Things to try
+
+Here is the sequence of activities I normally use when demonstrating MCMC using this applet.
+
+1 **Start far off** Click on the default hill and move it to the bottom left corner. Click near the upper right corner to choose a starting point as far away from the hill as possible. Click Run to show that the robot can quickly find its way to to base of the hill. Turn off trajectories and fails to see the burnin trail.
+2 **Fails usually point away from hill** because those are downhill moves that are not automatically accepted.
+3 **Summary statistics** After clicking Run a few times, click Stats to summarize. The percent inside inner circle should be about 50 and within the outer circle should be about 95.
+4 **Baby steps** Clear and then choose step length mean equal to 1. Press run a few times to show that the robot heads toward the hill but using tiny steps. Clearly this step size would not lead to good mixing. Note that there are very few fails, however. Most steps succeed because none are "off a cliff".
+5 **Giant leaps** Clear and then choose step length mean equal to 500. Press run a couple of times to show that there are many fails because the robot often proposes steps far away (and thus likely way downhill) from where it is currently.
+6 **Metropolis within Gibbs** Reset step length mean to 50 and click Metropolis within Gibbs to show that alternating the dimension updated works well, despite the very rectangular paths taken.
+7 **Hide trajectory** Hide both fails and trajectory to just see the distribution of points.
+8 **Multimodal landscape** Move the main hill to the lower left corner and create two smaller hills elsewhere, one between starting point and the main hill. Shows that robot gets stuck on the nearest hill to the starting point.
+9 **Multiple chains** Switch to using 4 chains and repeat previous run (showing just the cold chain) to see the extensive swapping. Turn off trajetories and fails to see that mixing is much better.
 
 ## Acknowledgements
 

@@ -77,24 +77,44 @@ Wednesday | Dec. 7      | **Nutrient cycles**<br/>Chapter 26                    
 Friday    | Dec. 9      | **Review for final**                                          | 
 Friday    | Dec. 16     | **[FINAL EXAM (8-10am, AUST 103)](https://registrar.uconn.edu/exams/)**                             | 
 
-### Learning goals
+### Course Learning Objectives
 
-BIOL 1110 is a General Education CA3-lab course. Along with other CA3 courses, it has these learning objectives (paraphrased from the [GEOC Assessment and Learning Outcomes web page](https://geoc.uconn.edu/ca3-assessment-and-learning-outcomes/)):
+At the completion of this course, students will be able to:
 
-* know basic concepts and vocabulary of an area of science and the importance of this to society
-* familiarity with current scientific methods and how they are applied to gain knowledge
-* understand the scientific method
-* understand the difference between science and pseudoscience
-* be able to describe a scientific experiment and explain how it applies the scientific method
-* be familiar with some unresolved scientific questions
-* be able to analyze debates about the role science plays in shaping human society
-* acquire skills associated with scientific inquiry
+* (LO1) apply hypothetico-deductive reasoning (i.e. scientific method) to ascertain objective truths about the natural world
+* (LO2) explain basic anatomy (cell types, tissue systems, and organs of primary and secondary growth) of vascular plants
+* (LO3) explain basic physiology (photosynthesis, water and food transport, photoperiodism, and the roles of major plant hormones) of vascular plants
+* (LO4) compare and contrast the life cycles of exemplars from different groups (fungi, green algae, bryophytes, ferns, gymnoperms, angiosperms, etc.)
+* (LO5) summarize the diversity and evolutionary history of plants (including green algae, bryophytes, seedless vascular plants, gymnosperms, and angiosperms) and identify evidence supporting an endosymbiotic origin of chloroplasts from cyanobacteria
+* (LO6) explain why organisms traditionally consider plant-like (fungi, slime molds, seaweeds) are no longer considered plants
+* (LO7) identify and describe major evolutionary innovations (embryos, branching sporophytes, vascular tissues, seeds, pollen, and carpels) that resulted in the diversity of plants today
+* (LO8) explain nutrient and water cycles and, in particular, how plants have affected the global carbon cycle and the implications for climate change
+* (LO9) conduct, analyze, and report and discuss results of experiments to test hypotheses about the physiology of plants (specifically transpiration, photosynthesis, and hormones)
+
+### Common Curriculum Alignment
+
+The Common Curriculum prepares students to tackle 21st-century challenges by combining coursework across disciplines to expand their worldviews, enhance their range of skills, and develop into critical, creative, emotionally intelligent, and interdisciplinary thinkers. The Curriculum is designed to help students learn to be versatile in a rapidly changing world; combine knowledge in innovative ways; apply learning strategies to new contexts, including their major; see local and global patterns and the interconnectedness of intellectual work; and appreciate how we need each other to tackle today’s challenges.
+
+The University has defined student learning objective (what a student should know, be able to do, or attitudes/beliefs they should possess by the end of the course) for each Topic of Inquiry in the Common Curriculum. Each Common Curriculum course aligns to one or more of those objectives. The course’s student learning objectives align to the Common Curriculum objectives; course assessment (assignments, exams/quizzes, etc) align to both the course learning objectives and the Common Curriculum objectives.
+
+BIOL 1110 satisfies the Common Curriculum [Scientific and Empirical Inquiry](https://commoncurriculum.senate.uconn.edu/scientific-and-empirical-inquiry/) Topic of Inquiry (TOI-6-lab). The following table lists specific learning objectives of TOI-6 (lab) courses and how they align to the learning objectives of, and assessments used in, this course.
+
+| Topic of Inquiry | Common Curriculum Objective | Course student learning objective(s) | Course assessment(s) |
+| :--------------- | :-------------------------- | :----------------------------------- | :------------------  |
+| TOI-6            | 1. Students will be able to explain and appropriately use basic scientific language and concepts | LO2,LO3,LO4,LO5,LO6,LO7,LO8 | Laboratory quizzes, lecture exams |
+| TOI-6            | 2. Students will be able to design or conduct an experiment or analysis suitable to test a scientific hypothesis and be able to interpret the results | LO1,LO9 | Laboratory exercises/reports |
+| TOI-6            | 3. Students will be able to solve problems described verbally, graphically, symbolically, or numerically | LO2,LO3,LO4,LO5,LO9 | Laboratory reports, lecture exams |
+| TOI-6 lab        | Through application-based experiences using the scientific method, students will be able to identify problems, make observations, analyze data, interpret data, and develop models or explanations | LO1, LO9 | Laboratory experiments and reports |
 
 BIOL 1110 is also a **majors** course. It can be substituted for the core course BIOL 1108 in, for example, the EEB major. Thus, if you are not a science major, please do not expect this course to be taught at a non-majors level.
 
 ### Attendance in lab and lecture
 
 Attending all lectures and labs is important because this is the only way to obtain the material on which you will be tested. 
+
+### Due dates and late policy
+
+You are expected to be present for all quizzes and exams and to turn in assignments on the dates listed in the course schedule above. Late assignments will be penalized 20% for every day beyond the deadline unless an extension is arranged at least 24 hours before the deadline. Makeup exams will only be given in cases of family emergencies or illness, and the lecture instructor must be consulted prior to the exam.
 
 ### Exams
 
