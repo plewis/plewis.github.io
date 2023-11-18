@@ -13,10 +13,4 @@ topologies that allow for polytomies, which increases efficiency of Bayesian inf
 when there are few substitutions, and (3) ways to measure the amount of information 
 in data, either about the tree topology or continuous model parameters.
 
-<div class='jekyll-twitter-plugin' align="center">
-    <div class="jekyll-twitter-plugin">
-    <a class="twitter-timeline" data-width="500" data-tweet-limit="5" href="https://twitter.com/polewis?ref_src=twsrc%5Etfw">Tweets by polewis</a>
-    <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-</div>
 
