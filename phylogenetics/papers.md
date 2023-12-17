@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Literature cited in 2022 (EEB 5349)
-permalink: /papers2022/
+title: Literature cited in 2024 (EEB 5349)
+permalink: /papers2024/
 ---
-Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2022/).
+Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2024/).
 
-These 140 papers were cited in the Spring 2022 version of the course. 
+These papers were cited in the Spring 2024 version of the course. 
 
+{% comment %}
 Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
 
 Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. Bayesian estimation of concordance among gene trees. Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy)
@@ -20,6 +21,8 @@ Bergthorsson U., Adams K. L., Thomason B., Palmer J. D. 2003. Widespread horizon
 Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic signal in comparative data: behavioral traits are more labile. Evolution 57(4):717-745.
 
 Blomberg, S. P., J. G. Lefevre, J. A. Wells, and M. Waterhouse. 2012. [Independent contrasts and PGLS regression estimators are equivalent.](https://doi.org/10.1093/sysbio/syr118) Systematic Biology 61:382–391.
+
+Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates. Systematic Biology 59:145–161.
 
 Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. Mitochondrial DNA sequences of primates, tempo and mode of evolution. Journal of Molecular Evolution 18:225-239.
 
@@ -181,6 +184,8 @@ Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller.
 
 Michener, C. D., and R. R. Sokal. 1957. A Quantitative Approach to a Problem in Classification. Evolution 11:130-162
 
+Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection of likelihood models for phylogeny estimation. Systematic Biology 52:674–683. (DTmodsel model selection criterion)
+
 Mirarab, S., and T. Warnow. 2015. [ASTRAL-II: coalescent-based species tree estimation with many hundreds of taxa and thousands of genes.](https://doi.org/10.1093/bioinformatics/btv234) Bioinformatics 31(12):i44–52. 
 
 Moore, B. R., S. Hohna, M. R. May, B. Rannala, and J. P. Huelsenbeck. 2016. [Critically evaluating the theory and performance of Bayesian analysis of macroevolutionary mixtures.](https://doi.org/10.1073/pnas.1518659113) PNAS 113:9569-9574. 
@@ -193,7 +198,11 @@ Newton, M. A., and A. E. Raftery. 1994. Approximate Bayesian inference with the 
 
 Nielsen, R. 2002. Mapping mutations on phylogenies. Systematic Biology 51(5): 729-739.
 
+Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Appropriate likelihood ratio tests and marginal distributions for evolutionary tree models with constraints on parameters. Molecular Biology and Evolution 17:798-803. (LRT border case correction)
+
 Pagel, M. 1994. Detecting correlated evolution on phylogenies: a general method for the comparative analysis of discrete characters. Proceedings of the Royal Society of London B 255:37-45. (assessing evolutionary correlation between two discrete traits)
+
+Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scripta 26:331–348. (introduced kappa scaling factor used in comparative analyses)
 
 Pagel, M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877–884. (introduced the delta and lambda scaling factors used in comparative analyses)
 
@@ -251,6 +260,10 @@ Siddall, M. E. 1998. Success of parsimony in the four-taxon case: long-branch re
 
 Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. Bayesian selection of continuous-time Markov chain evolutionary models. Molecular Biology and Evolution 18:1001-1013.
 
+Stamatakis, A. 2006. Phylogenetic models of rate heterogeneity: a high performance computing perspective. Proceedings 20th. IEEE International Parallel and Distributed Processing Symposium.
+
+Studier, J. A., and K. J. Keppler. 1988. A note on the neighbor-joining algorithm of Saitou and Nei. Molecular Biology and Evolution 5: 729-731. (Neighbor joining speedup)
+
 Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O., and Rogers, J. S. 2001. Bias in Phylogenetic Estimation and Its Relevance to the Choice between Parsimony and Likelihood Methods. Systematic Biology, 50(4), 525–539.
 
 Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup)
@@ -286,28 +299,5 @@ Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [To
 Zhou, Y., H. Brinkmann, N. Rodrigue, N. Lartillot, and H. Philippe. 2010. A Dirichlet Process covarion mixture model and its assessments using posterior predictive discrepency tests. Molecular Biology and Evolution 27:371-384.
 
 Zwickl, D., and M. T. Holder. 2004. Model parameterization, prior distributions, and the general time-reversible model in Bayesian phylogenetics. Systematic Biology 53: 877-888.
-
-{% comment %}
-Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates. Systematic Biology 59:145–161.
-{% endcomment %}
-
-{% comment %}
-Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection of likelihood models for phylogeny estimation. Systematic Biology 52:674–683. (DTmodsel model selection criterion)
-{% endcomment %}
-
-{% comment %}
-Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Appropriate likelihood ratio tests and marginal distributions for evolutionary tree models with constraints on parameters. Molecular Biology and Evolution 17:798-803. (LRT border case correction)
-{% endcomment %}
-
-{% comment %}
-Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scripta 26:331–348. (introduced kappa scaling factor used in comparative analyses)
-{% endcomment %}
-
-{% comment %}
-Stamatakis, A. 2006. Phylogenetic models of rate heterogeneity: a high performance computing perspective. Proceedings 20th. IEEE International Parallel and Distributed Processing Symposium.
-{% endcomment %}
-
-{% comment %}
-Studier, J. A., and K. J. Keppler. 1988. A note on the neighbor-joining algorithm of Saitou and Nei. Molecular Biology and Evolution 5: 729-731. (Neighbor joining speedup)
 {% endcomment %}
 
