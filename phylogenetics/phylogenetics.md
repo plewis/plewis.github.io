@@ -70,7 +70,7 @@ This is a list of books that you should know about, but none are required texts 
 
 LJ Revell and LJ Harmon. 2022. Phylogenetic comparative methods in R. Princeton University Press. [ISBN:978-0-691-21903-5](https://press.princeton.edu/books/paperback/9780691219035/phylogenetic-comparative-methods-in-r)
 
-L Harmon. 2019. **[Phylogenetic comparative methods.](https://lukejharmon.github.io/pcm/)** (Version 1.4, released 15 March 2019). Published online by the author.
+L Harmon. 2019. Phylogenetic comparative methods. (Version 1.4, released 15 March 2019). Published online by the author. [ISBN:978-1-7195-8446-3](https://lukejharmon.github.io/pcm/)
 
 AJ Drummond and RR Bouckaert. 2015. Bayesian evolutionary analysis with BEAST, Cambridge University Press. [ISBN:978-1-139-09511-2](https://doi.org/10.1017/CBO9781139095112)
 

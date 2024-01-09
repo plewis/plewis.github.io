@@ -25,7 +25,7 @@ Warning: This schedule will most likely change quite a few times during the seme
 Date               |  Lecture topic                                                |  Lab/homework
 :----------------: | :------------------------------------------------------------ | :------------------------
 Tuesday Jan. 16    | **Introduction**                                              | **Homework 1**
-Thursday Jan. 18   | **Optimality criteria, search strategies, consensus trees**   | **Lab 1**
+Thursday Jan. 18   | **Optimality criteria, search strategies, consensus trees**   | **Lab 1** [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
 Tuesday Jan. 23    | **The parsimony criterion**                                   | **Homework 2**
 Thursday Jan 25    | **Distance methods**                                          | **Lab 2**
 Tuesday Jan. 30    | **Substitution models**                                       | **Homework 3**
@@ -46,8 +46,10 @@ Thursday Mar. 21   | **Discrete morphological models**                          
 Tuesday Mar. 26    | **Polytomies; Pagel's test**                                  | **Homework 10**
 Thursday Mar. 28   | **Stochastic character mapping**                              | **Lab 10**
 Tuesday Apr. 2     | **Evolutionary Correlation: Continuous Traits**               | **Homework 11**
+Thursday Apr. 4    | **PGLS regression**                                           | **Lab 11**
 Tuesday Apr. 9     | **Phylogenetic signal in continuous traits**                  | **Homework 12**
 Thursday Apr. 11   | **Multispecies coalescent and species tree estimation**       | **Lab 12**
+Tuesday Apr. 16    | **Network models**                                            | **Homework 13**
 Thursday Apr. 18   | **Diversification rate evolution**                            | **Lab 13**
 Tuesday Apr. 23    | **Diversification (cont.), Heterotachy, and Covarion models** | no homework assignment
 Thursday Apr. 25   | **Species delimitation and information**                      | **Lab 14**
