@@ -25,7 +25,7 @@ Warning: This schedule will most likely change quite a few times during the seme
 Date               |  Lecture topic                                                |  Lab/homework
 :----------------: | :------------------------------------------------------------ | :------------------------
 Tuesday Jan. 16    | **Introduction**                                              | **Homework 1**
-Thursday Jan. 18   | **Optimality criteria, search strategies, consensus trees**   | **Lab 1**
+Thursday Jan. 18   | **Optimality criteria, search strategies, consensus trees**   | **Lab 1** [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
 Tuesday Jan. 23    | **The parsimony criterion**                                   | **Homework 2**
 Thursday Jan 25    | **Distance methods**                                          | **Lab 2**
 Tuesday Jan. 30    | **Substitution models**                                       | **Homework 3**
@@ -46,8 +46,10 @@ Thursday Mar. 21   | **Discrete morphological models**                          
 Tuesday Mar. 26    | **Polytomies; Pagel's test**                                  | **Homework 10**
 Thursday Mar. 28   | **Stochastic character mapping**                              | **Lab 10**
 Tuesday Apr. 2     | **Evolutionary Correlation: Continuous Traits**               | **Homework 11**
+Thursday Apr. 4    | **PGLS regression**                                           | **Lab 11**
 Tuesday Apr. 9     | **Phylogenetic signal in continuous traits**                  | **Homework 12**
 Thursday Apr. 11   | **Multispecies coalescent and species tree estimation**       | **Lab 12**
+Tuesday Apr. 16    | **Network models**                                            | **Homework 13**
 Thursday Apr. 18   | **Diversification rate evolution**                            | **Lab 13**
 Tuesday Apr. 23    | **Diversification (cont.), Heterotachy, and Covarion models** | no homework assignment
 Thursday Apr. 25   | **Species delimitation and information**                      | **Lab 14**
@@ -70,7 +72,7 @@ This is a list of books that you should know about, but none are required texts 
 
 LJ Revell and LJ Harmon. 2022. Phylogenetic comparative methods in R. Princeton University Press. [ISBN:978-0-691-21903-5](https://press.princeton.edu/books/paperback/9780691219035/phylogenetic-comparative-methods-in-r)
 
-L Harmon. 2019. Phylogenetic comparative methods. (Version 1.4, released 15 March 2019). Published online by the author. [ISBN:978-1-7195-8446-3](https://lukejharmon.github.io/pcm/)
+L Harmon. 2019. **[Phylogenetic comparative methods.](https://lukejharmon.github.io/pcm/)** (Version 1.4, released 15 March 2019). Published online by the author.
 
 AJ Drummond and RR Bouckaert. 2015. Bayesian evolutionary analysis with BEAST, Cambridge University Press. [ISBN:978-1-139-09511-2](https://doi.org/10.1017/CBO9781139095112)
 
