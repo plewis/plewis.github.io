@@ -11,13 +11,18 @@ The UConn [Computational Biology Core](http://bioinformatics.uconn.edu) is part 
 
 Name       | Username
 :--------- | :----------
-Alyssa M.  | eeb5349usr1
-Analisa M. | eeb5349usr2
-Scott K.   | eeb5349usr3
-Frank M.   | eeb5349usr4
-Dan P.     | eeb5349usr5
-Vikas S.   | eeb5349usr6
-Nick V.    | eeb5349usr7
+Akriti     | eeb5349usr1
+Brenden    | eeb5349usr2
+Chelsea    | eeb5349usr3
+Crystal    | eeb5349usr4
+Danielle   | eeb5349usr5
+Elena      | eeb5349usr6
+Ellie      | eeb5349usr7
+Jensen     | eeb5349usr8
+Mandy      | eeb5349usr9
+Maurice    | eeb5349usr10
+Noah       | eeb5349usr11
+Savanna    | eeb5349usr12
 
 I will let you know the password at the beginning of lab.
 
