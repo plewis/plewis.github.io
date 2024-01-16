@@ -39,6 +39,7 @@ Thursday Feb. 22   | **Bayes' Rule**                                            
 Tuesday Feb. 27    | **Bayesian statistics, MCMC**                                 | **Homework 7**
 Thursday Feb. 29   | **Prior distributions used in phylogenetics**                 | **Lab 7**
 Tuesday Mar. 5     | **Prior distributions (cont.) and CIs**                       | **Homework 8**
+Thursday Mar. 7    | **TBA**                                                       | **Lab 8**
 Tuesday Mar. 12    | **SPRING BREAK**                                              |
 Thursday Mar. 14   | **SPRING BREAK**                                              |
 Tuesday Mar.  19   | **Bayes factors and Bayesian model selection**                | **Homework 9**
