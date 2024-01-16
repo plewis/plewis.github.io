@@ -7,6 +7,14 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2024/).
 
 These papers were cited in the Spring 2024 version of the course. 
 
+Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London. (Jan-16)
+
+Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts. (Jan-16)
+
+Farris, J. S. 1974. Formal definitions of paraphyly and polyphyly. Systematic Zoology 23: 548-554. (Jan-16)
+
+Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup) (Jan-16)
+
 {% comment %}
 Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
 
@@ -34,8 +42,6 @@ Cavalli-Sforza, L. L., and A. W. F. Edwards. 1967. Evolution 32:550-570.
 
 Chifman, J., and Kubatko, L. S. 2014. [Quartet Inference from SNP Data Under the Coalescent Model.](http://doi.org/10.1093/bioinformatics/btu530) Bioinformatics 30(23):3317-3324. 
 
-Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London.
-
 Dayhoff, M.O., Schwartz, R.M., Orcutt, B.C. 1978. A model for evolutionary change in proteins. Atlas of Protein Sequence and Structure, 5, 345–352. (PAM amino acid model)
 
 Degnan, J. H., and N. A. Rosenberg. 2006. [Discordance of species trees with their most likely gene trees.](http://doi.org/10.1371/journal.pgen.0020068) PLoS Genetics 2:e68. (The anomaly zone)
@@ -49,8 +55,6 @@ Eck, R. V., and M. O. Dayhoff. 1966. Atlas of protein sequence and structure. Na
 Edwards, A. W. F., and L. L. Cavalli-Sforza. 1964. Reconstruction of evolutionary trees. pp. 67-76 in Phenetic and phylogenetic classification, ed. V. H. Heywood and J. McNeill. Systematics Association Publ. No. 6, London.
 
 Fan, Y., Wu, R., Chen, M.-H., Kuo, L., and Lewis, P. O. 2011. Molecular Biology and Evolution 28(1):523-532. (Generalized stepping-stone marginal likelihood estimation)
-
-Farris, J. S. 1974. Formal definitions of paraphyly and polyphyly. Systematic Zoology 23: 548-554.
 
 Farris, J. S. 1989. The retention index and the rescaled consistency index. Cladistics 5: 417-419.
 
@@ -93,8 +97,6 @@ Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent dat
 Green, P. J. 1995. Reversible jump Markov chain Monte Carlo computation and Bayesian model determination. Biometrika 82:711-732.
 
 Gogarten, J. P., H. Kibak, P. Dittrich, L. Taiz, E. J. Bowman, B. J. Bowman, M. F. Manolson, R. J. Poole, T. Date, T. Oshima, J. Konishi, K. Denda, and M. Yoshida. 1989. Evolution of the vacuolar H+-ATPase: Implications for the origin of eukaryotes PNAS 86:6661-6665.
-
-Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts.
 
 Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 326:119-157. (first phylogenetic regression model)
 
@@ -265,8 +267,6 @@ Stamatakis, A. 2006. Phylogenetic models of rate heterogeneity: a high performan
 Studier, J. A., and K. J. Keppler. 1988. A note on the neighbor-joining algorithm of Saitou and Nei. Molecular Biology and Evolution 5: 729-731. (Neighbor joining speedup)
 
 Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O., and Rogers, J. S. 2001. Bias in Phylogenetic Estimation and Its Relevance to the Choice between Parsimony and Likelihood Methods. Systematic Biology, 50(4), 525–539.
-
-Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup)
 
 Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
 
