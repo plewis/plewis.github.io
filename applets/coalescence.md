@@ -21,8 +21,8 @@ Some experiments to try:
 <div id="plot"></div>
 <div id="settings"></div>
 <script type="text/javascript">
-    // written by Paul O. Lewis Jan. 20, 2023, revised Mar. 1, 2023
-    
+    // written by Paul O. Lewis Jan. 20, 2023
+    // modified Jan. 17, 2024, to allow hiding sampled lineages
     var rnseed = Math.floor(10000*Math.random())
     var lot = new Random(rnseed);
     
@@ -71,6 +71,7 @@ Some experiments to try:
     var unsampled_line_color = "silver";
     var unsampled_line_thickness = 2;
 
+    var genetree_showing = true; // if true, lines and nodes comprising gene history are shown; if false, they are hidden
     var untangled = true; // if true, untangle lines so they don't cross from one gen to the next
     var nodes_labeled = false; // if true, number of each node is displayed
 
@@ -84,7 +85,7 @@ Some experiments to try:
 
     var T_cutoff = 20; // sampled_node_radius reduced if T > T_cutoff
     var T_choices = [20,50];
-    var T_index = 1; // index of value selected at start
+    var T_index = 0; // index of value selected at start
     var T = T_choices[T_index];  // number of generations
 
     var plotw = w - lm - rm;    // plot width
@@ -434,6 +435,24 @@ Some experiments to try:
     }
     replot();
     
+    var toggleHideShow = function() {
+        // added 2024-01-17 by POL
+        if (genetree_showing) {
+            genetree_showing = false;
+            d3.selectAll('line.ibd.sampled')
+                .attr('stroke', unsampled_line_color)
+                .attr("stroke-width", unsampled_line_thickness);
+            d3.selectAll('circle.gene.sampled')
+                .attr('stroke', unsampled_node_color)
+                .attr("fill", unsampled_node_color)
+                .attr("r", unsampled_node_radius);
+        }
+        else {
+            genetree_showing = true;
+            refresh();
+        }
+    }            
+    
     // Listen and react to keystrokes
     // key      code  key code  key code  key code  key code
     // -------------  --------  --------  --------  --------
@@ -452,7 +471,7 @@ Some experiments to try:
     //                                      m   77    z   90
     function keyDown() {
         if (d3.event.keyCode == 84) {
-            console.log("You pressed the T key");
+            console.log("You pressed the T key to toggle tangle/untangle lines");
             if (untangled) {
                 untangled = false;
                 let sampled_node_numbers = clearSample();
@@ -467,8 +486,11 @@ Some experiments to try:
             }
             refresh();
         }
+        else if (d3.event.keyCode == 72) {
+            toggleHideShow();
+        }
         else if (d3.event.keyCode == 76) {
-            console.log("You pressed the L key");
+            console.log("You pressed the L key to toggle hide/show node labels");
             if (nodes_labeled) {
                 nodes_labeled = false;
                 d3.selectAll('text.gene').style('visibility', 'hidden');
@@ -479,7 +501,7 @@ Some experiments to try:
             }
         }
         else if (d3.event.keyCode == 83) {
-            console.log("You pressed the S key");
+            console.log("You pressed the S key to resample");
             resample();
             refresh();
         }
@@ -529,21 +551,25 @@ Some experiments to try:
             replot();
         });
 
-        //addDropdown(settings_div, "generations", "T", T_choices, T_index, function() {
-        //    var selected_index = d3.select(this).property('selectedIndex');
-        //    T = T_choices[selected_index];
-        //    tincr = ploth/(T+1);
-        //    console.log("new T chosen: " + T);
-        //    replot();
-        //});
-
-        //addButton(settings_div, "Resample", function() {
-        //    resample();
-        //    refresh();
-        //});
-            
-        addButton(settings_div, "Refresh", function() {
+        addDropdown(settings_div, "generations", "T", T_choices, T_index, function() {
+            var selected_index = d3.select(this).property('selectedIndex');
+            T = T_choices[selected_index];
+            tincr = ploth/(T+1);
+            console.log("new T chosen: " + T);
             replot();
+        });
+
+        addButton(settings_div, "Rewrite History", function() {
+            replot();
+        });
+        
+        addButton(settings_div, "Resample", function() {
+            resample();
+            refresh();
+        });
+            
+        addButton(settings_div, "Hide", function() {
+            toggleHideShow();
         });
             
     }
