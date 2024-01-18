@@ -19,7 +19,7 @@ First, download the file [angio35.txt](https://hydrodictyon.eeb.uconn.edu/people
 
 Now login to the cluster (`ssh username@xanadu-submit-ext.cam.uchc.edu`) and type the following command:
 
-    srun --partition=mcbstudent --qos=mcbstudent --pty bash
+    srun --partition=general --qos=general --pty bash
 
 This will find a node that is not currently fully loaded with jobs and allow you to play with programs without bogging down the head node (the node everyone uses to access the cluster). You should always use `srun` if you are planning to do any computation interactively, as we will do today.
 
