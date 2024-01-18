@@ -3,7 +3,7 @@ layout: page
 title: Introduction to PAUP*
 permalink: /paup/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics20224/)
 
 PAUP* is software for conducting phylogenetic analyses under a variety of optimality criteria and providing a diversity of search methods. PAUP* (the acronym PAUP originally stood for "Phylogenetic Analysis Using Parsimony"; the asterisk was added to indicate that it is no longer restricted to parsimony analyses). PAUP* was originally written (by [David L. Swofford](https://scholar.google.com/citations?user=H1jbCPkAAAAJ&hl=en)) in the 1980s, it gained a graphical user interface (GUI) in 1993 with version 3, and now is available either with or without a Windows or Mac GUI at the [Phylosolutions](https://paup.phylosolutions.com) web site. 
 
@@ -46,10 +46,11 @@ These numbers represent nucleotide sites that are either missing a lot of data o
 
 ##  Defining sets of sites 
 
-Create a sets block comprising the following three charset commands:
+Create a **sets** block comprising the following three charset commands:
 * The first charset should be named 18S and include sites 1 through 1855
 * The second charset should be named rbcL and include sites 1856 through 3283
 * The third charset should be named atpB and include sites 3284 through 4811
+
 This block should be placed after the assumptions block. Look at the [description of the sets block](/nexus/#sets-block) and try to do this part on your own.
 
 After saving the file in nano, start PAUP*, specifying the data file name on the command line:

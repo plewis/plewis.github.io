@@ -3,7 +3,7 @@ layout: page
 title: The NEXUS file format
 permalink: /nexus/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics20224/)
 
 ###  NEXUS blocks 
 

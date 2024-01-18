@@ -3,7 +3,7 @@ layout: page
 title: Using the UConn Xanadu cluster 
 permalink: /xanadu/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 The UConn [Computational Biology Core](http://bioinformatics.uconn.edu) is part of the [Center for Genome Innovation (CGI)](http://cgi.uconn.edu/). We will use the Xanadu computing cluster located at the UConn Health Center for most of the data crunching we will do in this course. By now, you should have an account on the cluster, and today you will learn how to start analyses remotely (i.e. from your laptop), check on their status, and download the results when your analysis is finished.
 
@@ -337,8 +337,10 @@ Here is an explanation of each of the lines in _gopaup_:
 
 Now you are ready to start the analysis. Type these commands to start your run:
 
-    cd
+    cd ~/pauprun
     sbatch gopaup
+    
+(The `cd ~/pauprun` is there just to ensure that you are in the correct directory.)
 
 ###  Checking status using **squeue**
 
