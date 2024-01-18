@@ -207,8 +207,8 @@ Once you have entered everything, use `^X` to exit. Nano will ask if you want to
 Now use nano to create a second file named _gopaup_ in your _pauprun_ directory. To do this, type `pwd` to make sure you are in the _pauprun_ directory, then type `nano gopaup`. This file should contain this text:
 
     #!/bin/bash
-    #SBATCH --partition=mcbstudent
-    #SBATCH --qos=mcbstudent
+    #SBATCH --partition=general
+    #SBATCH --qos=general
     #SBATCH --job-name=pauprun
     #SBATCH --mail-type=END
     #SBATCH --mail-user=<your name here>@uconn.edu
@@ -312,11 +312,11 @@ The next tutorial you will explore in lab today will introduce you to the softwa
 * use srun to start an interactive session
 You would normally use the interactive session approach if you are just experimenting or are making sure that a program will start successfully. For a phylogenetic analysis that may take some time, you almost always want to submit it as a batch job (see below). The beauty of batch jobs is that you can close down your connection to the cluster and reconnect later (after the system sends you an email telling you that your run is finished).
 
-If you've been following the directions in sequence, you now have two files (_algae.nex_ and _run.nex_) in your `$HOME/pauprun` directory on the cluster, whereas the _gopaup_ file should be in `$HOME`. Use the `cd` command to make sure you are in your home directory, then the `cat gopaup` command to look at the contents of the _gopaup_ file you created earlier. You should see the following (except that `<your name here>@uconn.edu` should now be your UConn email address): 
+If you've been following the directions in sequence, you now have three files (_algae.nex_, _run.nex_, and _gopaup_) in your `$HOME/pauprun` directory on the cluster. Use the `pwd` command to make sure you are in the `$HOME/pauprun` directory (use the `cd` command to get there if not), then the `cat gopaup` command to look at the contents of the _gopaup_ file you created earlier. You should see the following (except that `<your name here>@uconn.edu` should now be your UConn email address): 
 
     #!/bin/bash
-    #SBATCH --partition=mcbstudent
-    #SBATCH --qos=mcbstudent
+    #SBATCH --partition=general
+    #SBATCH --qos=general
     #SBATCH --job-name=pauprun
     #SBATCH --mail-type=END
     #SBATCH --mail-user=<your name here>@uconn.edu
@@ -328,7 +328,7 @@ This file will be used by software called SLURM to start your run. SLURM provide
 
 Here is an explanation of each of the lines in _gopaup_:
 * The 1st line specifies the command interpreter to use (just include this in your scripts verbatim).
-* The 2nd, 3rd, and 4th lines begin with `#SBATCH` and are interpreted as commands by SLURM itself. In this case, the first and second `#SBATCH` commands tell SLURM to use the general partition (`--partition=mcbstudent`) and the general quality of service (`--qos=mcbstudent`). You should always include these two lines verbatim. The last `#SBATCH` line gives a name to your job (`--job-name=pauprun`). You could change `pauprun` here to something else, but keep your job names short and without embedded spaces or punctuation. The job name will help you identify your run when checking status.
+* The 2nd, 3rd, and 4th lines begin with `#SBATCH` and are interpreted as commands by SLURM itself. In this case, the first and second `#SBATCH` commands tell SLURM to use the general partition (`--partition=general`) and the general quality of service (`--qos=general`). You should always include these two lines verbatim. The last `#SBATCH` line gives a name to your job (`--job-name=pauprun`). You could change `pauprun` here to something else, but keep your job names short and without embedded spaces or punctuation. The job name will help you identify your run when checking status.
 * The 5th line is simply a `cd` command that changes the present working directory to the _pauprun_ directory you created earlier. This will ensure that anything saved by PAUP* ends up in this directory rather than in your home directory. 
 * The 6th line informs the system that you want to use a particular version of paup. If you left this line out, the command on the last line might not work at all, or might run an older version of paup. You can get a list of all available modules using the command `module avail`.
 * The 7th and last line starts up PAUP* and executes the _run.nex_ file. The `-n` flag tells PAUP* that no human is going to be listening or answering questions, so it should just use default answers to any questions it needs to ask during the run.
