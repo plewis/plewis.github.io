@@ -7,17 +7,43 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2024/).
 
 The following topics were covered in lecture in the Spring 2024 version of EEB 5349 (Phylogenetics). Please refer to the [schedule](/phylogenetics2024/) to find links to the slides for the dates indicated.
 
+branch-and-bound, Jan-18 
+
+consensus trees, Jan-18 
+
+exhaustive search, Jan-18 
+
+likelihood criterion, Jan-18 
+
+maximum agreement subtree, Jan-18 
+
 monohyly, Jan-16 
+
+nearest-neighbor interchange (NNI) branch swapping, Jan-18 
 
 newick trees, Jan-16 
 
-paraphyly, Jan-16 
+paraphyly, Jan-18 
 
-polyphyly, Jan-16 
+parsimony criterion, Jan-18 
+
+polyphyly, Jan-18 
 
 splits, Jan-16 
 
-ultrametric, Jan-16 
+reconnection limit, Jan-18 
+
+star decomposition, Jan-18 
+
+stepwise addition, Jan-18 
+
+subtree-pruning-regrafting (SPR) branch swapping, Jan-18 
+
+tree islands, Jan-18 
+
+tree-bisection-reconnection (TBR) branch swapping, Jan-18 
+
+ultrametric, Jan-18 
 
 {% comment %}
 additivity of distances, Jan-27 
@@ -72,8 +98,6 @@ birth-death process, Apr-19
 
 Blomberg's K, Apr-12 
 
-branch-and-bound, Jan-20 
-
 brownian motion model, Apr-5  
 
 C20 protein mixture model, Feb-22 
@@ -95,8 +119,6 @@ conditional probabilities, Feb-3
 conditioning on variability, Mar-24 
 
 confidence interval, Mar-8  
-
-consensus trees, Jan-20 
 
 consistency index, Jan-25
 
@@ -143,8 +165,6 @@ estrus advertisement example, Mar-29
 evolutionary distances, Feb-3  
 
 exchangeabilty mixture model, Apr-26 
-
-exhaustive search, Jan-20 
 
 expected bootstrap support, Mar-29 
 
@@ -226,8 +246,6 @@ Larget-Simon proposal, Mar-1
 
 least-squares criterion, Jan-27 
 
-likelihood criterion, Jan-20 
-
 likelihood of an evolutionary distance, Feb-3  
 
 likelihood of an isolated vertex, Feb-3  
@@ -268,8 +286,6 @@ matrix inverse, Feb-22
 
 matrix multiplication, Feb-22 
 
-maximum agreement subtree, Jan-20 
-
 maximum likelihood estimate (MLE), Feb-3  
 
 MCMC proposal distribution, Mar-1  
@@ -301,8 +317,6 @@ multistate morphology model, Mar-24
 
 MUSSE, Apr-21 
 
-nearest-neighbor interchange (NNI) branch swapping, Jan-20 
-
 neighbor joining, Jan-27 
 
 no common mechanism model, Mar-24 
@@ -330,8 +344,6 @@ Pagel's lambda, Apr-12
 PAM matrix, Feb-22 
 
 parametric bootstrapping, Mar-29 
-
-parsimony criterion, Jan-20 
 
 parsimony steps, Jan-25 
 
@@ -377,8 +389,6 @@ QuaSSE, Apr-21
 
 rare disease example, Feb-24 
 
-reconnection limit, Jan-20 
-
 regression explained, Apr-5  
 
 RELL method, Feb-17 
@@ -419,8 +429,6 @@ split decomposition, Jan-27
 
 split prior, Mar-3  
 
-star decomposition, Jan-20 
-
 star tree paradox, Mar-29 
 
 StarBEAST species tree method, Apr-14 
@@ -429,8 +437,6 @@ step matrix, Jan-25
 
 steppingstone method, Mar-22 
 
-stepwise addition, Jan-20 
-
 Steven Farris, Jan-25 
 
 stick-breaking metaphor (for DPP), Mar-10 
@@ -438,8 +444,6 @@ stick-breaking metaphor (for DPP), Mar-10
 stochastic mapping, Mar-31 
 
 strict molecular clock, Apr-19 
-
-subtree-pruning-regrafting (SPR) branch swapping, Jan-20 
 
 subway map model metaphor, Feb-1  
 
@@ -467,11 +471,7 @@ transition-transversion ratio, Feb-1
 
 transversion parsimony, Jan-25 
 
-tree islands, Jan-20 
-
 tree space, Mar-1  
-
-tree-bisection-reconnection (TBR) branch swapping, Jan-20 
 
 turnover, Apr-21 
 

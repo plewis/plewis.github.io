@@ -271,6 +271,12 @@ Based on this, how long (in billions of years) would it take to examine all poss
 54.1220796428 <-- pc "lgamma(2*22-5+1) - (22-3)*log(2) - lgamma(22-3+1)"
 bya = (exp(54.1220796428) trees)*(4.97 secs/10465462 trees)*(1 min/60 secs)*(1 hour/60 mins)*(1 day/24 hours)*(1 year/365 days)*(1 bya/1000000000 years)
 4.8 bya = pc "exp(54.1220796428)*(4.97/10465462)*(1./60)*(1./60)*(1./24)*(1./365)*(1./1000000000)"
+4.816282079145918 bya = pc "exp(54.1220796428 + log(4.97) - log(10465462) - log(60) - log(60) - log(24) - log(365) - log(1000000000))"
+
+What about 23 sequences? 
+57.83565170950931 <-- pc "lgamma(2*23-5+1) - (23-3)*log(2) - lgamma(23-3+1)"
++bya = (exp(57.83565170950931) trees)*(4.97 secs/10465462 trees)*(1 min/60 secs)*(1 hour/60 mins)*(1 day/24 hours)*(1 year/365 days)*(1 bya/1000000000 years)
+197.46756524596992 bya = pc "exp(57.83565170950931 + log(4.97) - log(10465462) - 2.*log(60) - log(24) - log(365) - log(1000000000))"
 {% endcomment %}
 
 ## Compare NJ with a comparable heuristic search

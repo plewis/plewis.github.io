@@ -25,7 +25,7 @@ Warning: This schedule will most likely change quite a few times during the seme
 Date               |  Lecture topic                                                |  Lab/homework
 :----------------: | :------------------------------------------------------------ | :------------------------
 Tuesday Jan. 16    | **[Introduction](https://gnetum.eeb.uconn.edu/courses/phylogenetics/1_Intro-annotated.pdf)**  | **[Homework 1](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw1-TreeFromSplits.pdf)**
-Thursday Jan. 18   | **Optimality criteria, search strategies, consensus trees**   | **Lab 1** [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
+Thursday Jan. 18   | **[Optimality criteria, search strategies, consensus trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/SearchingConsensus.pdf)**   | **Lab 1** [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
 Tuesday Jan. 23    | **The parsimony criterion**                                   | **Homework 2**
 Thursday Jan 25    | **Distance methods**                                          | **Lab 2**
 Tuesday Jan. 30    | **Substitution models**                                       | **Homework 3**
