@@ -19,6 +19,8 @@ Then type:
     
 This asks the scheduler to find a node (computer) in the cluster that is currently not busy. It should transfer your session from the head node to a different node. The reason we are using `srun` today is that some of the analyses we are going to run take more than a few seconds to complete. If all of us ran long jobs on the head node simultaneously, users would notice significant slowdown in response time, which is very annoying to other users. Thus, we will start developing good habits and will use `srun` to perform our interactive analyses on a node that no one else is currently using.
 
+If the `srun` command above fails to find a node for you, it may be because there is another class running at the same time and that class is occupying all the nodes assigned to the partition `mcbstudent`. If that happens, try using `--partition=general --qos=general` instead.
+
 Once you see the prompt, type
 
     module load paup/4.0a-166
@@ -29,7 +31,7 @@ This will make the most recent installed version available to you. Without this 
 
 If you have not already downloaded the  [angio35.nex](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/angio35.nex) file, you can recreate it in your current directory as follows:
 
-    curl -Ok https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/angio35.nex
+    curl -Ok https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/angio35.nex
 
 ## Create a command file
 
