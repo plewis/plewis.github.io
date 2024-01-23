@@ -19,16 +19,20 @@ The course will be to some degree "flipped" in that I will assign reading from t
 
 ## Due Dates and Late Policy
 
-Because there are no formal exams, term papers, or projects, it is important to not skip or get behind on the homework assignments. You will be given 1 week to complete a homework assignment. You are allowed to be up to one week late on at most 2 homework assignments during the semester without penalty; you will be given a zero on any homework assignment turned in more than 2 weeks after it is assigned.
+Because there are no formal exams, term papers, or projects, it is important to not skip or get behind on the homework assignments. You will be given 1 week to complete a homework assignment (i.e. until midnight on the Tuesday after it is assigned).
 
+Every day after that you will lose 1 point on the homework assignment (so 10 days late means 0 for that assignment). For example, if you turn in your homework at any time on the Wednesday following the Tuesday due date, you will lose 1 point.
+
+It is best to turn in your answers to lab exercises on the day of lab, but, if you don't get finished during the allotted lab time, you can turn them in as late as midnight on the Sunday following the Thursday lab. After that, 1 point will be deducted for each day. For example, if you turn in your lab assignment on the Monday following the lab, you will have 1 point deducted.
 
 ## Points
 
-| Percentage |  Description               |
-| :--------: |  :-----------------------: |
-|    70      |  Homework assignments      | 
-|    20      |  Lab activities            |
-|    10      |  Lab participation         |
+| Percentage  |  Points  | Description               |
+| :---------: |  :----:  | :-----------------------: |
+|    70.6     |    120   | Homeworks (10 each)       |
+|    21.2     |     36   | Lab activities (3 each)   |
+|     8.2     |     14   | Participation             |
+|   100.0     |    170   | Total
 
 ## Grading scale
 
