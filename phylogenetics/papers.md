@@ -9,9 +9,13 @@ These papers were cited in the Spring 2024 version of the course.
 
 Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London. (Jan-16)
 
+Fitch, W. 1971. Toward defining the course of evolution: minimum change for a specific tree topology. Systematic Zoology 20:406-416. (Jan 23)
+
 Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts. (Jan-16)
 
 Farris, J. S. 1974. Formal definitions of paraphyly and polyphyly. Systematic Zoology 23: 548-554. (Jan-16)
+
+Sankoff, D. 1975. Minimal mutation trees of sequences. SIAM Journal on Applied Mathematics 28:35-42. (generalized parsimony, step matrices) (Jan 23)
 
 Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup) (Jan-16)
 
@@ -77,8 +81,6 @@ Felsenstein, J. 2004. Inferring phylogenies. Sinauer Associates, Sunderland, MA.
 Fitch, W. M., and E. Margoliash. 1967. Science 155:279-284.
 
 Fitch, W. M., and E. Markowitz. 1970. An improved method for determining codon variability in a gene and its application to the rate of fixation of mutations in evolution. Biochemical Genetics 4: 579–593.
-
-Fitch, W. 1971. Toward Defining the Course of Evolution: Minimum Change for a Specific Tree Topology. Systematic Zoology 20:406-416.
 
 FitzJohn, R. G. 2010. Quantitative traits and diversification. Systematic Biology 59:619–633.
 
@@ -245,8 +247,6 @@ Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., a
 Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375.
 
 Saitou, N., and M. Nei. 1987. The neighbor-joining method: a new method for reconstructing phylogenetic trees. Molecular Biology and Evolution 4: 406-425. (Neighbor joining method)
-
-Sankoff, D. 1975. Minimal Mutation Trees of Sequences. SIAM Journal on Applied Mathematics 28:35-42. (generalized parsimony, step matrices)
 
 Schluter, D., T. Price, A. Ø. Mooers, and D. Ludwig. 1997. Likelihood of ancestor states in adaptive radiation. Evolution 51:1699-1711.
 
