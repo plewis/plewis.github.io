@@ -10,7 +10,7 @@ permalink: /phylogenetics2024/
 This is a graduate-level course in phylogenetics, emphasizing primarily maximum likelihood and Bayesian approaches to estimating phylogenies, which are genealogies at or above the species level. A primary goal is to provide an accessible introduction to the theory so that by the end of the course students should be able to understand much of the primary literature on modern phylogenetic methods and know how to intelligently apply these methods to their own problems. The laboratory provides hands-on experience with several important phylogenetic software packages (PAUP*, IQ-TREE, RevBayes, BayesTraits, and others) and introduces students to the use of remote high performance computing resources to perform phylogenetic analyses.
 
 **Semester:** Spring 2024 <br/>
-**Lecture:** Tuesday/Thursday 11:00-12:15 ([Paul O. Lewis](mailto:paul.lewis@uconn.edu), office hours by appointment) <br/>
+**Lecture:** Tuesday/Thursday 11:00-12:15 ([Paul O. Lewis](mailto:paul.lewis@uconn.edu), office hours W 11-noon or by appointment) <br/>
 **Lab:** Thursday 1:25-3:20 ([Analisa Milkey](mailto:analisa.milkey@uconn.edu), office hours: M 1:30-2:30, F 12-1 in Gant W420) <br/>
 **Room:** Torrey Life Science (TLS) 181, Storrs Campus <br/>
 **Text:** Lewis, P. O. 2024. _Getting Rooted in Bayesian Phylogenetics_ (unfinished, but some chapters are ready)
@@ -24,9 +24,9 @@ Warning: This schedule will most likely change quite a few times during the seme
 
 Date               |  Lecture topic                                                |  Lab/homework
 :----------------: | :------------------------------------------------------------ | :------------------------
-Tuesday Jan. 16    | **[Introduction](https://gnetum.eeb.uconn.edu/courses/phylogenetics/1_Intro-annotated.pdf)**  | **[Homework 1](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw1-TreeFromSplits.pdf)** due 2024-01-23
-Thursday Jan. 18   | **[Optimality criteria, search strategies, consensus trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2024-01-18-searching-annotated.pdf)**   | **Lab 1** [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
-Tuesday Jan. 23    | **[The parsimony criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2024-01-23-parsimony.pdf)**                                             | **[Homework 2](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw2-parsimony.pdf)** due 2024-01-30
+Tuesday Jan. 16    | **[Introduction](https://gnetum.eeb.uconn.edu/courses/phylogenetics/01-intro-annotated.pdf)**  | **[Homework 1](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw1-TreeFromSplits.pdf)** due 2024-01-23
+Thursday Jan. 18   | **[Optimality criteria, search strategies, consensus trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/02-searching-annotated.pdf)**   | **Lab 1** [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
+Tuesday Jan. 23    | **[The parsimony criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/03-parsimony-annotated-pdf)**                                             | **[Homework 2](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw2-parsimony.pdf)** due 2024-01-30
 Thursday Jan 25    | **Distance methods**                                          | **Lab 2** [Searching](/searching/)
 Tuesday Jan. 30    | **Substitution models**                                       | **Homework 3**
 Thursday Feb. 1    | **Maximum likelihood criterion**                              | **Lab 3**
