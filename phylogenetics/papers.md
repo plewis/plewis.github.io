@@ -7,13 +7,29 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2024/).
 
 These papers were cited in the Spring 2024 version of the course. 
 
+Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. Mitochondrial DNA sequences of primates, tempo and mode of evolution. Journal of Molecular Evolution 18:225-239. (Jan 25)
+
+Buneman, M. 1971. The recovery of trees from measurements of dissimilarity. Pp. 387-395 in Mathematics in the Archeological and Historical Sciences (Hodson, F. R., Kendall, D. G., and Tautu, P., eds.), Edinburgh Univ. Press, Edinburgh. (Jan 25)
+
+Cavalli-Sforza, L. L., and A. W. F. Edwards. 1967. Evolution 32:550-570. (Jan 25)
+
 Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London. (Jan-16)
+
+Farris, J. S. 1974. Formal definitions of paraphyly and polyphyly. Systematic Zoology 23: 548-554. (Jan-16)
+
+Fitch, W. M., and E. Margoliash. 1967. Science 155:279-284. (Jan 25)
 
 Fitch, W. 1971. Toward defining the course of evolution: minimum change for a specific tree topology. Systematic Zoology 20:406-416. (Jan 23)
 
 Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts. (Jan-16)
 
-Farris, J. S. 1974. Formal definitions of paraphyly and polyphyly. Systematic Zoology 23: 548-554. (Jan-16)
+Huson, D. H., and D. Bryant. 2006. Application of phylogenetic networks in evolutionary studies. Mol. Biol. Evol. 23:254-267. (SplitsTree) (jan 25)
+
+Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. Phylogenetic analysis: concepts and methods. American Journal of Human Genetics 23: 235-252. (Jan 25)
+
+Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375. (Jan 25)
+
+Saitou, N., and M. Nei. 1987. The neighbor-joining method: a new method for reconstructing phylogenetic trees. Molecular Biology and Evolution 4: 406-425. (Neighbor joining method) (Jan 25)
 
 Sankoff, D. 1975. Minimal mutation trees of sequences. SIAM Journal on Applied Mathematics 28:35-42. (generalized parsimony, step matrices) (Jan 23)
 
@@ -36,13 +52,7 @@ Blomberg, S. P., J. G. Lefevre, J. A. Wells, and M. Waterhouse. 2012. [Independe
 
 Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates. Systematic Biology 59:145–161.
 
-Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. Mitochondrial DNA sequences of primates, tempo and mode of evolution. Journal of Molecular Evolution 18:225-239.
-
-Buneman, M. 1971. The recovery of trees from measurements of dissimilarity. Pp. 387-395 in Mathematics in the Archeological and Historical Sciences (Hodson, F. R., Kendall, D. G., and Tautu, P., eds.), Edinburgh Univ. Press, Edinburgh.
-
 Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences in phylogeny. Evolution 19:311-326. (irreversible parsimony)
-
-Cavalli-Sforza, L. L., and A. W. F. Edwards. 1967. Evolution 32:550-570.
 
 Chifman, J., and Kubatko, L. S. 2014. [Quartet Inference from SNP Data Under the Coalescent Model.](http://doi.org/10.1093/bioinformatics/btu530) Bioinformatics 30(23):3317-3324. 
 
@@ -77,8 +87,6 @@ Felsenstein, J. 1985b. Phylogenies and the comparative method. American Naturali
 Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood approach. Evolution 46:159-173. (conditioning on variability in discrete trait likelihood calculations)
 
 Felsenstein, J. 2004. Inferring phylogenies. Sinauer Associates, Sunderland, MA.
-
-Fitch, W. M., and E. Margoliash. 1967. Science 155:279-284.
 
 Fitch, W. M., and E. Markowitz. 1970. An improved method for determining codon variability in a gene and its application to the rate of fixation of mutations in evolution. Biochemical Genetics 4: 579–593.
 
@@ -126,13 +134,9 @@ Huelsenbeck, J. P., R. Nielsen, and J. P. Bollback. 2003. Stochastic mapping of 
 
 Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommodating and testing across-site rate variation. Systematic Biology 56:975–987. (DP model for among site rate heterogeneity)
 
-Huson, D. H., and D. Bryant. 2006. Application of phylogenetic networks in evolutionary studies. Mol. Biol. Evol. 23:254-267. (SplitsTree)
-
 Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of mutation data matrices from protein sequences. Comput Applic Biosci, 8, 275–282. (JTT amino acid model)
 
 Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model)
-
-Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. Phylogenetic analysis: concepts and methods. American Journal of Human Genetics 23: 235-252.
 
 Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model)
 
@@ -243,10 +247,6 @@ Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid site
 Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610.
 
 Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
-
-Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375.
-
-Saitou, N., and M. Nei. 1987. The neighbor-joining method: a new method for reconstructing phylogenetic trees. Molecular Biology and Evolution 4: 406-425. (Neighbor joining method)
 
 Schluter, D., T. Price, A. Ø. Mooers, and D. Ludwig. 1997. Likelihood of ancestor states in adaptive radiation. Evolution 51:1699-1711.
 
