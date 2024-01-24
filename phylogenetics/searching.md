@@ -11,33 +11,33 @@ This lab explores different search strategies under the parsimony criterion.
 
 Please copy the questions in the template below into a plain text file (i.e., use Notepad++ on Windows or BBEdit on Mac). The questions below correspond to the sections in the lab tutorial starting with the "thinking" emoji. As you work through the lab, replace the underscores with your answers to these questions. After the lab, send your text file to Analisa via a Slack DM.
 
-* ____ How many separate tree topologies did PAUP* examine? 
-* ____ What is the parsimony treelength of the best tree? 
-* ____ The worst tree? 
-* ____ How many steps separate the best tree from the next best?
-* ____ Which tree was the original tree? 
-* ____ Which trees correspond to NNI rearrangments of which internal edges on the original tree?
-* ____ How many tree islands were found? 
-* ____ What are the scores of the trees on the islands with the best parsimony score? 
-* ____ How long did the search take? 
-* ____ How many rearrangements were tried?
-* ____ How many tree islands were found? 
-* ____ What are the scores of the trees in each island? 
-* ____ How long did the search take this time? 
-* ____ How many rearrangements were tried?
-* ____ How many tree islands were found? 
-* ____ What are the scores of the trees in each island? 
-* ____ How long did the search take this time? 
-* ____ How many rearrangements were tried? 
-* ____ How many trees are currently in memory? 
-* ____ Has PAUP saved trees from all islands discovered during this search?
-* ____ Explain why PAUP saved the number of trees it did.
-* ____ Of the three types of branch swapping (NNI, SPR, TBR), which is most thorough? 
-* ____ Least thorough? 
-* ____ What is the minimum evolution score for the NJ tree?
-* ____ What is the minimum evolution score for the tree found by heuristic search starting with the NJ tree?
-* ____ What is wrong with this picture? 
-* ____ Why is the minimum evolution score of the heuristic search worse than that of the starting tree? 
+    ____ How many separate tree topologies did PAUP* examine? 
+    ____ What is the parsimony treelength of the best tree? 
+    ____ The worst tree? 
+    ____ How many steps separate the best tree from the next best?
+    ____ Which tree was the original tree? 
+    ____ Which trees correspond to NNI rearrangments of which internal edges on the original tree?
+    ____ How many tree islands were found? 
+    ____ What are the scores of the trees on the islands with the best parsimony score? 
+    ____ How long did the search take? 
+    ____ How many rearrangements were tried?
+    ____ How many tree islands were found? 
+    ____ What are the scores of the trees in each island? 
+    ____ How long did the search take this time? 
+    ____ How many rearrangements were tried?
+    ____ How many tree islands were found? 
+    ____ What are the scores of the trees in each island? 
+    ____ How long did the search take this time? 
+    ____ How many rearrangements were tried? 
+    ____ How many trees are currently in memory? 
+    ____ Has PAUP saved trees from all islands discovered during this search?
+    ____ Explain why PAUP saved the number of trees it did.
+    ____ Of the three types of branch swapping (NNI, SPR, TBR), which is most thorough? 
+    ____ Least thorough? 
+    ____ What is the minimum evolution score for the NJ tree?
+    ____ What is the minimum evolution score for the tree found by heuristic search starting with the NJ tree?
+    ____ What is wrong with this picture? 
+    ____ Why is the minimum evolution score of the heuristic search worse than that of the starting tree? 
 
 ## Getting started
 
