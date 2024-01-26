@@ -104,7 +104,9 @@ The initial dot tells the bash interpreter to simply issue the commands found in
     
 I showed you how to store the command in a file because that provides a record of what you did and allows you to easily modify the command and run it again.
 
-> :thinking: Take a look at the file seq-gen generated. Can you explain why nearly every site show evidence of substitution? (hint1: look at the branch lengths specified in the true tree)
+The `HOME` part is an environmental variable that substitutes in your home directory where it is invoked (by preceding it with `$`). For example, `$HOME` would be replaced with `/home/FCAM/eeb5349/usr14` for me since I am using the `eeb5349usr14` account. You can see what `HOME` holds by typing the command `echo $HOME`. 
+
+> :thinking: Take a look at the file seq-gen generated. Can you explain why nearly every site shows evidence of substitution? (hint1: look at the branch lengths specified in the true tree)
 
 {% comment %}
 all 9 branch lengths are 1, which means that, on average, there will be 9 substitutions at every site over the entire tree, so it is not surprising that there are no constant sites.
