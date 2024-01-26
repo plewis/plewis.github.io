@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Jessica Week 2
+title: Week 2
 permalink: /jcweek2/
 ---
 
