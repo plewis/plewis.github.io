@@ -3,7 +3,7 @@ layout: page
 title: Likelihood Lab
 permalink: /likelihood/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Goals
 
@@ -27,7 +27,121 @@ to load the paup module.
 
 ## Create a text file in which to save answers
 
-You will be submitting your answers to the questions posed in the boxes labeled with the :thinking: emoji, so create a text file on your local computer using either BBEdit (if you are a Mac user) or Notepad++ (if you are a Windows user). Record both questions as well as answers, and please place each question on a separate line and separate question/answer pairs with a blank line to make it easier for us to read.
+You will be submitting your answers to the questions posed in the boxes labeled with the :thinking: emoji, so create a text file on your local computer using either BBEdit (if you are a Mac user) or Notepad++ (if you are a Windows user) and **paste the text below into the new text file**. Please place your answer below the line containing the question, and separate your answer from the next question by a blank line to make it easier for us to review.
+
+    Are chlorophyll-b taxa together in the F81 tree?
+    answer:
+    
+    What are the empirical base frequencies for this data set? 
+    answer:
+    
+    What is the log likelihood of this tree under this "empirical base frequencies" version of the F81 model?
+    answer:
+    
+    What proportion of sites are constant? 
+    answer:
+    
+    What are the maximum likelihood estimates (MLEs) of the base frequencies? 
+    answer:
+    
+    What is the log likelihood of this tree under the "estimated base frequencies" version of the F81 model? 
+    answer:
+    
+    What parameters are being estimated using the F81 model?
+    answer:
+    
+    Does this model fit the data better than the "empirical base frequencies" version of the F81 model? 
+    answer:
+    
+    What is the MLE of the transition/transversion ratio under the HKY85 model? 
+    answer:
+    
+    What is the MLE of the transition/transversion _rate_ ratio under the HKY85 model? 
+    answer:
+    
+    What is the log likelihood of this tree under the HKY85 model? 
+    answer:
+    
+    What parameters are being estimated using the HKY85 model? 
+    answer:
+    
+    Does the HKY model fit the data better than the F81 model? 
+    answer:
+    
+    The transition/transversion rate ratio (kappa) is the ___ divided by the ___.
+    answer:
+    
+    The transition/transversion ratio (tratio) is the ___ divided by the ___.
+    answer:
+    
+    What is the MLE of pinvar under the HKY85+I model? 
+    answer:
+    
+    Is the MLE of pinvar larger or smaller than the proportion of constant sites? 
+    answer:
+    
+    Why are these two proportions different? That is, how can a site be constant but not invariable?
+    answer:
+    
+    What is the log likelihood of this tree under the HKY85+I model? 
+    answer:
+    
+    What parameters are being estimated using the HKY85+I model? 
+    answer:
+    
+    What is the MLE of the gamma shape parameter under the HKY85+G model? 
+    answer:
+    
+    What is the log likelihood of this tree under the HKY85+G model? 
+    answer:
+    
+    What parameters are being estimated using the HKY85+G model? 
+    answer:
+    
+    What is the MLE of the gamma shape parameter under the HKY85+I+G model? 
+    answer:
+    
+    What is the MLE of the pinvar parameter under the HKY85+I+G model? 
+    answer:
+    
+    Is the MLE of the shape parameter higher or lower under the HKY85+I+G model compared to the HKY85+G model? Explain why this is so. 
+    answer:
+    
+    What is the log likelihood of this tree under the HKY85+I+G model? 
+    answer:
+    
+    What parameters are being estimated using the HKY85+I+G model? 
+    answer:
+    
+    How many degrees of freedom for this test? 
+    answer:
+    
+    What is the significance (P-value) for this test? 
+    answer:
+    
+    Does allowing for a transition/transversion bias make a significant difference? 
+    answer:
+    
+    What is the likelihood ratio test statistic for a comparison of HKY+I to HKY?
+    answer:
+    
+    What is the critical value for this likelihood ratio test (of HKY vs HKY+I)? That is, what is the smallest likelihood ratio test statistic that would be significant at the 0.05 level?
+    answer:
+    
+    Does the HKY85+I model explain the data significantly better than an equal rates HKY85 model?
+    answer:
+    
+    Does the HKY85+G model explain the data significantly better than an equal rates HKY85 model? 
+    answer:
+    
+    Does the HKY85+G model explain the data better than HKY85+I? Why can't you use a likelihood ratio test to compare these two models?
+    answer:
+    
+    Does the HKY85+I+G model explain the data significantly better than either HKY85+I or HKY85+G alone? 
+    answer:
+    
+    Does the model you have selected place all the chlorophyll-b organisms together?
+    answer:
 
 {% comment %}
 ## Part A: Using PAUP* to check your answers for homework #3
@@ -105,7 +219,7 @@ Because we have to exit PAUP* anyways in order to proceed with the rest of the l
 
 Download the data file [algae.nex](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/algae.nex) using the following curl command on the cluster:
 
-    curl -Ok http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/algae.nex
+    curl -Ok https://gnetum.eeb.uconn.edu/courses/phylogenetics/algae.nex
     
 If you remember from lecture, adding more parameters to a model to account for different aspects of nucleotide and sequence evolution can -- but does not necessarily -- improve the explanatory ability of a model, or its ability to produce a correct phylogeny. Our goal for this lab will be to see if we can tease apart which aspects of sequence evolution are most important for getting the tree correct. **The accepted phylogeny** (based on much evidence besides these data) **places all the chlorophyll-b-containing plastids together** (Lockhart, Steel, Hendy, and Penny, 1994). 
 
