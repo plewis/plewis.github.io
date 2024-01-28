@@ -3,15 +3,18 @@ layout: page
 title: Python primer
 permalink: /python/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## What is Python?
 
-[Python](http://www.python.org/) is one of two programming languages that we will use this semester (the other being R). One might make the case that programs like PAUP* and RevBayes that have their own unique command language also represent programming languages; however, Python and R are different in being general purpose (i.e. not written specifically for phylogenetics).
+[Python](http://www.python.org/) is one of two programming languages that we will use this semester (the other being R). 
 
-Python is one of a number of different high-level computing languages in common use. All of the software we use is written in one of these languages. PAUP* is written entirely in the C language, BEAST is written in Java, and RevBayes is written in C++. Knowing a little bit of computer programming can save you immense amounts of time by allowing you to automate things. You will begin realizing these savings doing homework for this class. While it is possible to do all the homework assignments by hand using a calculator, you will find that using Python will save you time and is more accurate because, once you have it programmed, you can do the same calculation with many different input values without making a mistake. 
+{%comment%}
+One might make the case that programs like PAUP* and RevBayes that have their own unique command language also represent programming languages; however, Python and R are different in being general purpose (i.e. not written specifically for phylogenetics).
+{%endcomment%}
+Python is one of a number of different high-level computing languages in common use. All of the software we use is written in one of these languages. PAUP* is written entirely in the C language, BEAST uses both Java and C, and RevBayes is written in C++. Knowing a little bit of computer programming can save you immense amounts of time by allowing you to automate things. You will begin realizing these savings doing homework for this class. While it is possible to do all the homework assignments by hand using a calculator, you will find that using Python will save you time and is more accurate because, once you have it programmed, you can do the same calculation with many different input values without making a mistake. 
 
-Python is a good language to learn first because it is relatively simple (not many words or punctuation rules to learn) and is much more forgiving than other languages. It is in a class of languages known as **scripting languages** because the program is interpreted as it is read by the computer program known as the python interpreter. Languages such as C require two additional steps (compiling and linking) before they can be run.
+Python is a good language to learn first because it is relatively simple (not many words or punctuation rules to learn) and is much more forgiving than other languages. It is in a class of languages known as **scripting languages** because the program is interpreted as it is read by the computer program known as the python interpreter. Languages such as C and C++ require two additional steps (compiling and linking) before they can be run.
 
 ## Installing Python
 
@@ -23,11 +26,13 @@ If you have a Mac, start your Terminal program (in the _Applications/Utilities_ 
 
     python3
     
-If you get an error saying that python3 cannot be found, the easiest thing to do is login to the cluster, type 
+If you get an error saying that python3 cannot be found, the easiest thing to do is to use python3 on the cluster. To take this approach, login to the cluster and type 
 
     srun --partition=mcbstudent --qos=mcbstudent --pty bash 
     
-to become interactive on a free compute node, use `module load python/3.8.1` to load the python3 module, and then simply type `python3` to start python. Alternatively, visit the [Python](https://www.python.org/downloads/) web site and download and install the latest version of Python 3.  
+to become interactive on a free compute node, use `module load python/3.8.1` to load the python3 module, and then simply type `python3` to start python. 
+
+Alternatively, visit the [Python](https://www.python.org/downloads/) web site and download and install the latest version of Python 3 on your Mac.  
 
 ### Windows
 
@@ -49,7 +54,7 @@ It is possible to [download the documentation](http://docs.python.org/download.h
 
 ## Python basics
 
-This is the briefest of introductions, designed to get you just to the point where you can do the majority of your homework assignments using Python. If you get stuck trying to write a Python program, I have found the Tutorial and Global Index to be the most useful parts of the Python documentation.
+This is the briefest of introductions, designed to get you just to the point where you can do the majority of your homework assignments using Python. If you get stuck trying to write a Python program, I have found the Tutorial and Global Index to be the most useful parts of the Python documentation. Feel free to ask us for help as well!
 
 ### Kinds of information you can store in Python variables
 
@@ -159,16 +164,30 @@ Here is a **tuple** consisting of the integer, the float and the string we just 
     >>> t
     (9, 9.5, 'Have a nice day')
 
-Note that we used square brackets to define a list but parentheses to define a tuple. Try changing the first element of the tuple (this will generate an ugly error message because tuples cannot be modified):
+Note that we used **square brackets** to define a **list** but **parentheses** to define a **tuple**. Try changing the first element of the tuple (this will generate an ugly error message because tuples cannot be modified):
 
     >>> t[0] = 5
     Traceback (most recent call last):
     ...
     TypeError: 'tuple' object does not support item assignment
 
-To eliminate possible ambiguities, every tuple must have at least one comma, even if it only has just one element!
+To eliminate possible ambiguities, **every tuple must have at least one comma**, even if it only has just one element!
 
     >>> t = (1.2,)
+    >>> t
+    (1.2,)
+    >>> type(t)
+    <class 'tuple'>
+    
+Now try this:
+
+    >>> t = (1.2)
+    >>> t
+    1.2
+    >>> type(t)
+    <class 'float'>
+
+In the second case, you set the variable `t` to a float value, not a tuple, because you did not include any commas. 
     
 If <tt>t =(1,2,3,4)</tt>, you can assign the 4 elements of the tuple <tt>t</tt> to the 4 variables <tt>a</tt>, <tt>b</tt>, <tt>c</tt>, and <tt>d</tt> like this:
 
@@ -265,19 +284,19 @@ I strongly encourage you to use parentheses, however, to make the order of calcu
     >>> x
     16
 
-Multiplication and division, in turn, have higher precedence than addition or subtraction. For the full operator precedence table, scroll to the bottom of the [expressions documentation](http://docs.python.org/reference/expressions.html)
+Multiplication and division, in turn, have higher precedence than addition or subtraction. For the full operator precedence table, scroll to the bottom of the [expressions documentation](http://docs.python.org/reference/expressions.html).
 
 #### Sum, min, and max
 
-The sum function makes it easy to sum the elements of a list:
+The sum function makes it easy to sum the elements of a list or tuple:
 
     >>> x = sum([1,2,3,4])
     >>> x
     10
 
-The min and max functions make it easy to find the extreme values in a list:
+The min and max functions make it easy to find the extreme values in a list or tuple:
 
-    >>> z = [1,2,3,4]
+    >>> z = (1,2,3,4)
     >>> max(z)
     4
     >>> min(z)
@@ -349,7 +368,7 @@ To compute the JC distance, we need some capabilities (e.g. the ability to take 
     >>> jc
     0.090860500068600705
 
-In the <tt>import math</tt> statement, the <tt>math</tt> part is known as a Python **module**. To see a list of all modules (and documentation for them), check out the [Global Module List](http://docs.python.org/2/py-modindex.html) in the Python documentation.
+In the <tt>import math</tt> statement, the <tt>math</tt> part is known as a Python **module**. To see a list of all modules (and documentation for them), check out the [Global Module List](https://docs.python.org/3/py-modindex.html) in the Python documentation.
 
 Note that using <tt>import math</tt> requires us to use the prefix <tt>math.</tt> in front of every function imported. You can save some typing by being explicit about what functions you want to import from the math module:
 
@@ -385,7 +404,7 @@ An important component of any programming language is the ability to do the same
     >>> jc
     [0.090860500068600705, 0.085604236767267153, 0.1024886399705747, 0.082663697169458011, 0.11090623674796182, 0.11090623674796182]
 
-You may be curious about <tt>range(6)</tt>. We saw the range function earlier, but there I told you it required three values: start, stop, and step. It turns out that if you only supply one value, python interprets that value as the stop value, assuming start = 0 and step = 1. The <tt>range(n)</tt> function thus yields integers starting with 0 and ending with n-1. Try converting the output of the range function to a list to verify this:
+You may be curious about <tt>range(6)</tt>. We saw the range function earlier, but there I told you it required three values: start, stop, and step. It turns out that, if you only supply one value, python interprets that value as the stop value, assuming start = 0 and step = 1. The <tt>range(n)</tt> function thus yields integers starting with 0 and ending with n-1. Try converting the output of the range function to a list to verify this:
 
     >>> list(range(10))
     [0,1,2,3,4,5,6,7,8,9]
@@ -410,7 +429,7 @@ Fortunately, there are free (and really good) text editors for both Windows and 
 
 {% include icon.html url="/assets/img/Mac_logo.png" description="MacIntosh logo" css="image-left" height="87px" %}
 
-If you have a Mac, download [BBEdit](http://www.barebones.com/products/bbedit/download.html). Once you get BBEdit installed, start it up and create a file with the contents shown below (after the instructions for Windows users). Save the file using the name <tt>first.py</tt> in a convenient location (e.g. _Documents/scripts_), then navigate to that folder in your Terminal window using the command
+If you have a Mac, download [BBEdit](http://www.barebones.com/products/bbedit/download.html). Once you get BBEdit installed, start it up and create a file with the contents shown below in the section entitled "Your first Python script" (after the instructions for Windows users). Save the file using the name <tt>first.py</tt> in a convenient location (e.g. _Documents/scripts_), then navigate to that folder in your Terminal window using the command
 
     cd $HOME/Documents/scripts
     
@@ -420,7 +439,7 @@ If you don't want to download BBEdit, you can use the TextEdit app that came wit
 
 {% include icon.html url="/assets/img/Win_logo.png" description="Windows logo" css="image-left" height="87px" %}
 
-If you have Windows, but you are using Python on the cluster, you should just use the `nano` editor to create and modify your python script files. If, however, you installed Python on your Windows machine, download [Notepad++](http://notepad-plus.sourceforge.net/uk/site.htm). Once you get Notepad++ installed, start it up and create a file with the contents shown below. Save the file using the name _first.py_ in a convenient location (e.g. _C:\scripts_), then navigate to that folder in your command console using the command 
+If you have Windows, but you are using Python on the cluster, you should just use the `nano` editor to create and modify your python script files. If, however, you installed Python on your Windows machine, download [Notepad++](http://notepad-plus.sourceforge.net/uk/site.htm). Once you get Notepad++ installed, start it up and create a file with the contents shown below in the section entitled "Your first Python script". Save the file using the name _first.py_ in a convenient location (e.g. _C:\scripts_), then navigate to that folder in your command console using the command 
 
     cd C:\scripts
 
@@ -452,7 +471,7 @@ When Python was installed, it should have associated the <tt>.py</tt> file name 
 
 Try running your script by typing the following at your operating system prompt (i.e. get out of Python if you are already in it by typing Ctrl-d):
 
-    python first.py
+    python3 first.py
 
 ## Fancier print statements
 
@@ -537,7 +556,7 @@ Suppose you wanted to read in the six values that we've been storing in the vari
     353.0
     353.0
 
-To read these values, add these five lines to your _ss1.py_ file and comment out the line that currently defines <tt>x</tt> (place a pound sign #<tt>#</tt> in front of the <tt>x</tt>):
+To read these values, add the five lines below to your _ss1.py_ file and comment out the line that currently defines <tt>x</tt> (place a pound sign <tt>#</tt> in front of the <tt>x</tt>):
 
     lines = open('ss1.txt','r').readlines()
     x = []
