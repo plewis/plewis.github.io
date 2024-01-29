@@ -32,7 +32,11 @@ _Comments_ can be placed in a NEXUS file using square brackets. Comments can be 
 
 If you would like your comment printed out in the output when PAUP* executes the data file, just insert an exclamation point (!) as the first character inside the opening left square bracket:
 
-    [is the data file used for my dissertation](!This)
+    [!This is the data file used for my dissertation]
+    
+I often insert a few asterisks at the beginning of printed comments so that it is easy to find my comments inside a sea of output:
+
+    [!********** using empirical base frequencies starting here **********]
 
 ###  Commonly-used NEXUS blocks 
 
