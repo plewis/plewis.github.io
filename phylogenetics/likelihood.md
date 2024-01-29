@@ -215,11 +215,21 @@ In part A, we told PAUP* to use user-defined branch lengths and output site like
 Because we have to exit PAUP* anyways in order to proceed with the rest of the lab, exit PAUP* instead of issuing the `factory` command.
 {% endcomment %}
 
+## Create a directory for this lab
+
+Create a new directory to use for this lab as follows:
+
+    cd
+    mkdir likelab
+    cd likelab
+    
+(The first `cd` all by itself is just to ensure that you are in your home directory before you create the new `likelab` directory.) Creating a directory just for this lab will avoid overwriting (or accidentally using) files from previous labs.
+
 ## Download the data file algae.nex
 
-Download the data file [algae.nex](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/algae.nex) using the following curl command on the cluster:
+Download the data file [algae.nex](https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/algae.nex) using the following curl command on the cluster:
 
-    curl -Ok https://gnetum.eeb.uconn.edu/courses/phylogenetics/algae.nex
+    curl -Ok https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/algae.nex
     
 If you remember from lecture, adding more parameters to a model to account for different aspects of nucleotide and sequence evolution can -- but does not necessarily -- improve the explanatory ability of a model, or its ability to produce a correct phylogeny. Our goal for this lab will be to see if we can tease apart which aspects of sequence evolution are most important for getting the tree correct. **The accepted phylogeny** (based on much evidence besides these data) **places all the chlorophyll-b-containing plastids together** (Lockhart, Steel, Hendy, and Penny, 1994). 
 
@@ -240,7 +250,7 @@ The first goal is to learn how to obtain maximum likelihood estimates of the par
 
 The `nst=1` tells PAUP* that we want a model having just one substitution rate parameter (the JC69 and F81 models both fall in this category). The `basefreq=empirical` tells PAUP* that we want to use simple estimates of the base frequencies. The empirical frequency of the base G, for example, is the value you would get if you simply counted up all the Gs in your entire data matrix and divided by the total number of nucleotides. The empirical frequencies are not usually the same as the maximum likelihood estimates (MLEs) of the base frequencies, but they are quick to calculate and often very close to the corresponding MLEs.
 
-Execute _run.nex_ in PAUP* and issue the following command to show the tree:
+Execute _run.nex_ in PAUP* (i.e. type `paup run.nex` on the command line). Because there is no `quit` command in the paup block, PAUP* will stay around, produce a `paup>` prompt, and wait for you to type a command. Issue the following command to show the tree:
 
     showtrees;
 
@@ -329,11 +339,13 @@ This method (building up a paup block) has the advantage that you always have a 
 
 ## Estimate base frequencies
 
-Now estimate the base frequencies on this tree with maximum likelihood by adding the following 3 lines to your paup block just above the quit command (you can replace the [add new commands here] comment). Note how the `lscores` command is used to force PAUP* to recompute the likelihood (under the revised model) and spit out the parameter estimates. 
+Now estimate the base frequencies on this tree with maximum likelihood by adding the following 3 lines to your paup block just above the quit command (you can replace the `[add new commands here]` comment). Note how the `lscores` command is used to force PAUP* to recompute the likelihood (under the revised model) and spit out the parameter estimates. 
 
     [F81 model with estimated base frequencies]
     lset basefreq=estimate;
     lscores 1;
+    
+Note: the new `lset` command will reset the previous one (which specified `basefreq=empirical`). This will allow you to see the difference in likelihood when using empirical vs estimated base frequencies. The first `lscores 1` command will use empirical frequencies and the second `lscores 1` command will use estimated frequencies. You may wish to make the comment `[F81 model with estimated base frequencies]` into a [printed comment](/nexus/#nexus-comments) so that you have some explanation in the output describing what base frequency setting is being used.
 
 > :thinking: What are the maximum likelihood estimates (MLEs) of the base frequencies? 
 
