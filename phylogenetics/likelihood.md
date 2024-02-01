@@ -113,6 +113,9 @@ You will be submitting your answers to the questions posed in the boxes labeled 
     What parameters are being estimated using the HKY85+I+G model? 
     answer:
     
+    What is the likelihood ratio test statistic for F81 vs. HKY85? 
+    answer:
+    
     How many degrees of freedom for this test? 
     answer:
     
@@ -636,9 +639,40 @@ HKY+I+G vs. HKY+G: 0.112 = 2.*((-3171.495)-(-3171.551))
 
 Earlier in the lab, you found that the F81 model with empirical base frequencies did not produce the expected tree separating chlorophyll-b organisms from the two (_Anacystis_ and _Olithodiscus_) that lack chlorophyll-b. Would a new search under a better model have the same result?
 
-Using the simplest model that you can defend (of the five we have examined: F81, HKY85, HKY85+I, HKY85+G, HKY85+I+G), perform a heuristic search under the maximum likelihood criterion. To make the analysis go faster, we will ask PAUP* to **not** re-estimate all the model parameters for every tree it examines during the search. To do this, first use the `lset` command to set up the model you are planning to use (be sure to specify `estimate` for all relevant parameters: base frequencies, shape, tratio, etc.). Use the `lscores` command to force PAUP* to re-estimate all of the parameters of your selected model on some tree (the tree just needs to be something reasonable, such as a NJ tree or the F81 tree you have been using). 
+Using the simplest model that you can defend (of the five we have examined: F81, HKY85, HKY85+I, HKY85+G, HKY85+I+G), perform a heuristic search under the maximum likelihood criterion. Use the template below, but make changes necessary to match the model you have chosen to use. 
+
+The next two paragraphs provide some explanation of the commands used in the template.
+
+To make the analysis go faster, we will ask PAUP* to **not** re-estimate all the model parameters for every tree it examines during the search. To do this, first use the `lset` command to set up the model you are planning to use (be sure to specify `estimate` for all relevant parameters: base frequencies, shape, tratio, etc.). Use the `lscores` command to force PAUP* to re-estimate all of the parameters of your selected model on some tree (the tree just needs to be something reasonable, such as a NJ tree or the F81 tree you have been using). 
 
 Now, re-issue the `lset` command but, for every parameter that you estimated, change the word `estimate` to `previous`. After executing this new `lset` command, start a search using just `hsearch`. PAUP* will fix the parameters at the previous values (i.e. the estimates you just forced it to calculate) and use these same values for every tree examined during the search.
+
+**Template** Supposing you decided that HKY85+I+G was the best model, here is how your `run.nex` file should be set up:
+
+    #nexus
+
+    begin paup;
+        execute algae.nex;
+        set criterion=likelihood;
+        
+        [Estimate HKY85+I+G arameters on a neighbor-joining tree]
+        lset nst=2 basefreq=estimate tratio=estimate rates=gamma shape=estimate pinvar=estimate;
+        nj;
+        lscores 1;
+        
+        [Fix parameters at their estimated values]
+        lset nst=2 basefreq=previous tratio=previous rates=gamma shape=previous pinvar=previous;
+        
+        [Perform heuristic search under the HKY85+I+G model]
+        hsearch;
+        
+        [Show and save resulting tree]
+        outgroup Anacystis_nidulans;
+        showtrees;
+        describe 1 / plot=phylogram;
+        savetrees file=hky85ig.tre brlens replace;
+        quit;
+    end;
 
 > :thinking: Does the model you have selected place all the chlorophyll-b organisms together?
 
