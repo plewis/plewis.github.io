@@ -29,7 +29,7 @@ Thursday Jan. 18   | **[Optimality criteria, search strategies, consensus trees]
 Tuesday Jan. 23    | **[The parsimony criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/03-parsimony-annotated.pdf)** | **[Homework 2](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw2-parsimony.pdf)** due 2024-01-30
 Thursday Jan 25    | **[Distance methods](https://gnetum.eeb.uconn.edu/courses/phylogenetics/04-distances-annotated.pdf)** | **Lab 2** [Searching](/searching/)
 Tuesday Jan. 30    | **[Substitution models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/05-models-annotated.pdf)** | **[Homework 3](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw3-distance.pdf)** [Python primer](https://plewis.github.io/python/)
-Thursday Feb. 1    | **Maximum likelihood criterion**                              | **Lab 3**
+Thursday Feb. 1    | **Maximum likelihood criterion**                              | **Lab 3** [Estimating parameters using likelihood](/likelihood/)
 Tuesday Feb. 6     | **Maximum likelihood (cont.)**                                | **Homework 4**
 Thursday Feb. 8    | **Bootstrapping, rate heterogeneity**                         | **Lab 4**
 Tuesday Feb. 13	   | **Simulation**                                                | **Homework 5**
