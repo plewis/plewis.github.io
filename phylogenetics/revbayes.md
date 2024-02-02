@@ -189,13 +189,27 @@ The Jukes-Cantor has no parameters other than edge lengths, so nothing in the Q 
 
 You may have noticed that different symbols are used when making different kinds of assignments. 
 
-The tilde (<tt>~</tt>) is used to **assign a probability distribution** to a variable. Thus, <tt>edge_length[i] ~ dnExponential(10.0)</tt> says to assign the probability distribution Exponential(10) to the ith edge length parameter. This type of assignment creates a **stochastic node** in the model graph, which I will describe next.
+The tilde (<tt>~</tt>) is used to **assign a probability distribution** to a variable. Thus, <tt>edge_length[i] ~ dnExponential(10.0)</tt> says to assign the probability distribution Exponential(10) to the ith edge length parameter. This type of assignment creates a **stochastic node** in the model graph, which I will describe soon.
 
 A **deterministic node** in the model graph (model graphs are explained below) is created using the operator <tt>:=</tt>. For example, we defined <tt>TL := sum(edge_length)</tt>, which says that the variable <tt>TL</tt> is **not itself a model parameter** but is instead a **function of model parameters** (in this case, a function of all edge length parmeters). Note that the value of <tt>TL</tt> will change automatically whenever any edge length changes. Variables created using <tt>:=</tt> should never be assigned moves or priors because they themselves are not model parameters, only functions of model parameters.
 
 An arrow symbol (<tt><-</tt>) is used for assignments that create a **constant node**. We used this assignment operator when we created the instantaneous rate matrix variable <tt>Qmatrix</tt>. <tt>Qmatrix</tt> is not a stochastic node because it is not a parameter (its elements never change). It is not a deterministic node because it does not represent a function of any model parameters. It is instead a constant part of the infrastructure of the model, much like the constant 10 used in defining the Exponential prior for edge lengths.
 
 An equal sign (<tt>=</tt>) is used for assignments that do not fall into any of the categories above. For example, we created an empty vector to hold moves using <tt>moves = VectorMoves()</tt> and specified an outgroup taxon for purposes of displaying trees using <tt>out_group = clade("Anacystis_nidulans")</tt>.
+
+### The PhyloCTMC node puts everything together
+
+    #############
+    # PhyloCTMC #
+    #############
+
+    # Specify the probability distribution of the data given the model
+    likelihood ~ dnPhyloCTMC(tree=psi, Q=Qmatrix, type="RNA")
+
+    # Attach the data
+    likelihood.clamp(data)
+
+<tt>dnPhyloCTMC</tt> is a probability distribution (hence the tilde used in the assignment) for the data conditional on the model. The <tt>clamp</tt> function assigns data to each leaf in the tree. Remember that the variable <tt>data</tt> was created in the first non-comment line of our script from the contents of the _algaemb.nex_ file.
 
 ### The model graph (DAG)
 
@@ -230,23 +244,7 @@ There are 3 deterministic nodes in the graph.
 3. TL is a function of all edge length parameters.
 {% endcomment %}
 
-### The PhyloCTMC node puts everything together
-
-    #############
-    # PhyloCTMC #
-    #############
-
-    # Specify the probability distribution of the data given the model
-    likelihood ~ dnPhyloCTMC(tree=psi, Q=Qmatrix, type="RNA")
-
-    # Attach the data
-    likelihood.clamp(data)
-
-<tt>dnPhyloCTMC</tt> is a probability distribution (hence the tilde used in the assignment) for the data conditional on the model. The <tt>clamp</tt> function assigns data to each leaf in the tree. Remember that the variable <tt>data</tt> was created in the first non-comment line of our script from the contents of the _algaemb.nex_ file.
-
 **Important** Make sure that the <tt>mymodel = model(psi)</tt> and the <tt>mymodel.graph(...)</tt> lines come last (right before <tt>quit()</tt>), otherwise <tt>mymodel</tt> will not include the likelihood and your MCMC analysis will just explore the prior. In other words, add the <tt>PhyloCTMC</tt> section before the <tt>create and plot model</tt> section in your _jc.Rev_ script.
-
-Run RevBayes again to create an updated _mymodel.dot_ file.
 
 ### Ready for MCMC
 
@@ -263,14 +261,15 @@ We've now completely specified the model, so all that's left is to create some m
     monitors.append( mnModel(filename="output/algae.log", printgen=1) )
 
     # Start the MCMC analsis
-    mymcmc = mcmc(mymodel, moves, monitors, nruns=4, combine="sequential")
-    mymcmc.run(generations=10000, tuningInterval=100)
+    mymcmc = mcmc(mymodel, monitors, moves, nruns=4, combine="sequential")
+    mymcmc.burnin(generations=10000, tuningInterval=100)
+    mymcmc.run(generations=10000)
     
 **Three monitors** were created and added to an initially-empty vector. The first is a **Screen monitor**: this just shows progress on the screen every 100 iterations. The second monitor is a **File monitor** that stores trees sampled during the run (every one of the 10000 steps will be saved because we specified <tt>printgen=1</tt>). Finally, we added a **Model monitor** that saves the parameter values at each of the 10000 generations.
 
 We next created an **mcmc variable** named <tt>mymcmc</tt>. We provided it the model (<tt>mymodel</tt>), a vector of moves (<tt>moves</tt>), a vector of monitors (<tt>monitors</tt>), the number of independent MCMC analyses to perform (<tt>nruns=4</tt>), and instructions about how to combine the output from the 4 independent runs into a single file (<tt>combine="sequential"</tt>).
 
-Finally, we **called the <tt>run</tt> function** of our <tt>mymcmc</tt> object. This is what starts the ball rolling, so to speak. We told it to run for 10000 iterations (=steps=generations) and tune its moves every 100.
+Finally, we **called the <tt>burnin</tt> and <tt>run</tt> functions** of our <tt>mymcmc</tt> object. This is what starts the ball rolling, so to speak. We told it to run for 10000 iterations (=steps=generations) and tune its moves every 100 during the burnin period, then run for another 10000 iterations to generate the posterior sample.
 
 Run your file in RevBayes now. It will stop after it finishes the 10000th iteration. Note that it saved the output in a directory named _output_, which it generated because you included <tt>output/</tt> in each of the output file paths.
 
