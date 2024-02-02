@@ -3,7 +3,7 @@ layout: page
 title: RevBayes Lab
 permalink: /revbayes/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Goals
 
