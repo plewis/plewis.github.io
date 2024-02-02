@@ -10,7 +10,7 @@ The goal this week is to learn how to use RevBayes to perform a Bayesian analysi
 
 ## Simulate 4 data sets using Seq-Gen
 
-Using seq-gen, generate 3 data sets with scaling factors 0.00001, 0.01, and 1.0. If you copy the following into your `sg.sh` file, you can generate all three data sets at once:
+Using seq-gen, generate 4 data sets with scaling factors 0.00001, 0.01, and 1.0. If you copy the following into your `sg.sh` file, you can generate all 4 data sets at once:
 
     $HOME/simlab/seq-gen -mHKY -l10000 -n1 -p1 -t0.5 -on -s0.00001 < tree.txt > slow.nex
     $HOME/simlab/seq-gen -mHKY -l10000 -n1 -p1 -t0.5 -on -s0.01 < tree.txt > medium.nex
@@ -100,7 +100,7 @@ Some things to keep in mind when doing this part:
 
 When you get the map tree file generated, use Cyberduck to download it to your laptop and open that file in FigTree. Check the box beside "Branch Labels", then expand that section of options and choose "posterior" for "Display". Save the tree as a PNG file using File > Export PNG... The numbers on the branches are posterior probabilities: these represent the probability that that branch exists in the true tree given the data you have and the model you used. We use the same model to generate the data as we used to analyze it. so the model assumption is pretty safe in this case! You should find that, for the `mesium.nex` data, the posterior probabilities are all very high (with 1.0 being the highest possible value and 0.0 being the lowest).
 
-Now repeat the analysis with the `slow.nex` and `fast.nex` data sets. You can save time by copying the RevBayes file you created for `medium.nex` into the other directories...
+Now repeat the analysis with the `slow.nex`, `fast.nex`, and `fast500.nex` data sets. You can save time by copying the RevBayes file you created for `medium.nex` into the other directories...
 
     cp ~/week3/medium/medium.Rev ~/week3/fast/fast.Rev
     cp ~/week3/medium/medium.Rev ~/week3/fast500/fast500.Rev
