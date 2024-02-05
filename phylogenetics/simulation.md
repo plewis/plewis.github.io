@@ -13,23 +13,81 @@ As always, start by logging into the Xanadu cluster and grabbing a node on the c
 
     srun --qos=mcbstudent --partition=mcbstudent --pty bash
 
-{% comment %}
-## Introduction
-
-The development of models and algorithms of any kind requires testing to see how they perform. All models and algorithms make assumptions: they take the infinite complexity of nature and distill them into few components that the maker of the model/algorithm assumes are important. With models of DNA evolution and phylogenetic inference algorithms, **one important way of testing** the capability of a model/algorithm is by simulating DNA sequence data based on a known phylogeny, and seeing how the model/algorithm performs. If the model/algorithm allows for the recovery of the known or "true" phylogeny then we can rest assured that our model/algorithm is relatively accurate in its distillation of the complexity of the processes it attempts to capture.
-{% endcomment %}
-
-## Using Seq-Gen to simulate sequence data
-
-### Compiling seq-gen
-
-There is no module for seq-gen on the Xanadu cluster, so you will need to download the source code and compile it yourself. In the [IQ-TREE lab](/iqtree/), you learned how to download and unpack an _executable_ file, but seq-gen is different in that what you will download is the _source code_ (written in the computing language C), which needs to be compiled into an executable file before it can be used.
+## Create a directory for this exercise
 
 First, create a directory to use for this lab and navigate into that directory:
 
     mkdir simlab
     cd simlab
     
+## Template
+
+Here is a template with the questions asked below. Copy this into a text file and turn
+it in with your answers after the lab.
+
+    Can you explain why nearly every site shows evidence of substitution?
+    answer:
+    
+    How many sites would you expect to look at before seeing one that shows evidence of substitution? 
+    answer:
+    
+    What substitution model will PAUP* use?
+    answer:
+    
+    Did both optimality criteria get the tree correct most of the time?
+    answer: 
+    
+    Which optimality criterion performed best at recovering the true tree?
+    answer: 
+
+    Which (parsimony or ML) appears to be statistically consistent? Why?
+    answer: 
+
+    How did you modify your paupsimFZ.nex file in order to accomplish this?
+    answer: 
+
+    Is ML statistically consistent when the model is violated in this way? Why? 
+    answer: 
+
+    Make all branches in the true tree long (e.g. 10). 
+    What is the proportion of constant sites? 
+    answer: 
+
+    How many substitutions are simulated, on average, per 
+    site over the entire tree?
+    answer: 
+
+    Make all branches in the true tree short (e.g. 0.001). 
+    What is the proportion of constant sites? 
+    answer: 
+
+    How many substitutions are simulated, on average, per 
+    site over the entire tree?
+    answer: 
+
+    Make all branches in the true tree 10 but add significant 
+    rate heterogeneity (gamma shape 0.01). What about the
+    proportion of constant sites now? 
+    answer: 
+
+    How many substitutions are simulated, on average, per site 
+    over the entire tree? 
+    answer: 
+
+    To which of the previous 2 simulated data sets is this data 
+    set most similar in terms of the proportion of constant sites? 
+    answer: 
+
+    What fraction of sites are essentially invariable?
+    answer: 
+
+    
+## Using Seq-Gen to simulate sequence data
+
+### Compiling seq-gen
+
+There is no module for seq-gen on the Xanadu cluster, so you will need to download the source code and compile it yourself. In the [IQ-TREE lab](/iqtree/), you learned how to download and unpack an _executable_ file, but seq-gen is different in that what you will download is the _source code_ (written in the computing language C), which needs to be compiled into an executable file before it can be used.
+
 Download the seq-gen source code from GitHub using the following curl command:
 
     curl -LO https://github.com/rambaut/Seq-Gen/archive/refs/tags/1.3.4.tar.gz
@@ -299,44 +357,6 @@ Start PAUP* (without specifying a data file) and use the <tt>gammaplot shape=0.0
 {% comment %}
 75 percent of sites (3 of the 4 categories) are expected to have rate essentially 0.0 when shape = 0.01.
 {% endcomment %}
-
-##  Strimmer and Rambaut (2002) Study
-
-Download this paper, which I'll refer to as SR from now on:
-
-> [Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.](https://doi.org/10.1098/rspb.2001.1862)
-
-{% include figure.html description="SR Fig. 1" url="/assets/img/SR1.png" css="image-right noborder" width="400px" %}
-
-SR simulated data on the tree shown in Figure 1 of their paper and expected the SH (Shimodaira and Hasegawa, 1999) test to reveal that all three possible resolutions of the polytomy were equally supported by the data. Makes sense, doesn't it? What they found instead was that (unless they simulated 4000 sites or more) all 15 (rooted) trees for the four taxa A, B, C, and D were considered equal by the SH test. They concluded that the SH test has a bias making it overly conservative and this bias dissipates as sequence lengths increase. This result motivated Shimodaira to create the AU (Approximately Unbiased) test (Shimodaira, 2002).
-
-Can you recreate SR's results for 500 and 5000 sites (see their Table 3)? 
-
-To do this, start with the original _paupsim.nex_ file shown above in the "Simulation template" section. You will need to make your true tree equal the tree SR show in their Figure 1, and you need to make the simulation model equal to the one they used (see the bottom right part of SR p. 140). You can delete all the commands and comments inside the <tt>beginsim...endsim</tt> loop, replacing these with
-
-    set maxtrees=105;
-    generatetrees all model=equiprobable;
-    lscores all / shtest autest RELL bootreps=1000;
-    
-which generates all 105 possible trees and tests them all using the SH test. To see the output, you'll need to say <tt>monitor=yes</tt> in your <tt>beginsim</tt> command, and you can delete the <tt>resultsfile</tt> statement.
-
-(Note: look at the column labeled <tt>SH</tt>, not the column labeled <tt>wtd-SH</tt>.)
-
-> :thinking: How many of the 105 trees were not significant using the SH test for 500 sites? 5000 sites?
-
-{% comment %} There were only two trees non-significant trees using the SH test for 5000 sites, while there were 14 non-significant trees using the SH test for 500 sites.
-{% endcomment %}
-
-> :thinking: Does the AU test produce a different result?
-
-{% comment %} The AU test has only two trees non-significant trees for both 500 and 5000 sites. 
-{% endcomment %}
-
-## Literature Cited
-
-H Shimodaira and M Hasegawa. 1999. Multiple comparisons of log-likelihoods with applications to phylogenetic inference. Molelcular Biology and Evolution 16:1114–1116.
-
-H Shimodaira. 2002. An Approximately Unbiased Test of Phylogenetic Tree Selection. Systematic Biology 51:492–508.
 
 ## Acknowledgements
 

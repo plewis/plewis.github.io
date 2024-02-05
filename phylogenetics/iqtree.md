@@ -17,10 +17,11 @@ Login to your account on the Health Center (Xanadu) cluster
     
 to start a session on a node that is not currently running jobs. Once you see the prompt, type
 
-    module load iqtree/1.6.10
+    module load iqtree/2.2.2
  
-to load the iqtree module. (How did I know to type "iqtree/1.6.10"? Use the command "module avail" to see a list of all modules.)
+to load the iqtree module. (How did I know to type "iqtree/2.2.2"? Use the command "module avail" to see a list of all modules.)
 
+{% comment %}
 ## Download the beta version too
 
 The tutorial we will be using today requires a later version of IQ-TREE than any version currently installed on the Xanadu cluster. The proper thing to do under most circumstances is to use the software request form from the _Contact Us_ section of the [Computational Biology Core](https://bioinformatics.uconn.edu/) site to request that it be installed for everyone to use (it would become a new module that anyone could load). However, sometimes you need to just get an analysis done and would prefer to have access to the software immediately (perhaps to just see if it is useful). For this reason, it is good to know how to install and run software in your own home directory, accessible only by you.
@@ -29,9 +30,7 @@ Download version 2.0-rc1 of IQ-TREE as follows from your home directory on Xanad
 
     curl -LO https://github.com/Cibiv/IQ-TREE/releases/download/v2.0.6/iqtree-2.0.6-Linux.tar.gz
 
-{% comment %}
 curl -LO https://github.com/Cibiv/IQ-TREE/releases/download/v2.0-rc1/iqtree-2.0-rc1-Linux.tar.gz
-{% endcomment %}
 
 The curl ("copy url") command is a convenient way to download files from a web site into your current directory on the cluster. The **L** switch may not be necessary, but sometimes helps if the URL is an indirect reference to the file. The **O** (capital letter o, not zero) switch tells curl to save the file using the original file name (i.e. the name at the end of the URL, in this case _iqtree-2.0.6-Linux.tar.gz_).
 
@@ -50,12 +49,21 @@ directory, where **~** means "home directory" and is a synonym of <tt>$HOME</tt>
     alias iqtree-beta="$HOME/iqtree-2.0.6-Linux/bin/iqtree2"
  
 This will create an alias named _iqtreebeta_ so that when you type <tt>iqtree-beta</TT> on the command line it will be replaced by _~/iqtree-2.0.6-Linux/bin/iqtree2_. This alias will only be available to you while you are logged in; it will be lost when you logout. If you want it to be permanent, edit (using nano) the file _~/.bash_profile_ and place the alias command anywhere in the file (but on a line by itself. Now the alias will be automatically recreated every time you login.
+{% endcomment %}
 
 ## Start the tutorial 
 
-We will be using the IQ-TREE tutorial written by Bui Minh (one of the main developers of IQ-TREE) for the 2019 Woods Hole Workshop in Molecular Evolution. The tutorial begins by having you download a couple of files (_turtle.fa_ and _turtle.nex_). Can you figure out how to do this using curl?
+We will be using the IQ-TREE tutorial written by Bui Minh (one of the main developers of IQ-TREE) for the 2023 Woods Hole Workshop in Molecular Evolution. 
 
-Here is the link to the tutorial:
+**Important** The workshop that this tutorial was written for used version 2.2.2.6 and included some instructions in section "1) Input data" that don't apply to us. Just use the links provided to download the data files (_turtle.fa_ and _turtle.nex_) directly. You can either use the `curl` command to download these files directly to the Xanadu cluster or, alteratively, download the files to your laptop and use Cyberduck to move them to Xanadu.
 
-[http://www.iqtree.org/workshop/molevol2019](http://www.iqtree.org/workshop/molevol2019)
+## Create a directory for today
+
+Create a new directory named, for example, `iqtreelab` to store data and output files for today's lab.
+
+## Go through the IQ-TREE tutorial
+
+Here is the link:
+
+[http://www.iqtree.org/workshop/molevol2023](http://www.iqtree.org/workshop/molevol2023)
 
