@@ -31,7 +31,7 @@ Thursday Jan 25    | **[Distance methods](https://gnetum.eeb.uconn.edu/courses/p
 Tuesday Jan. 30    | **[Substitution models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/05-models-annotated.pdf)** | **[Homework 3](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw3-distance.pdf)** [Python primer](https://plewis.github.io/python/)
 Thursday Feb. 1    | **Substitution models (cont.)**                              | **Lab 3** [Estimating parameters using likelihood](/likelihood/)
 Tuesday Feb. 6     | **[Maximum likelihood criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/06-likelihood-annotated.pdf)**                                | **[Homework 4](https://gnetum.eeb.uconn.edu/courses/phylogenetics/04-hw4-k80beta.pdf)**
-Thursday Feb. 8    | **Bootstrapping, rate heterogeneity**                         | **Lab 4** [Simulating sequence data](/simulation/)
+Thursday Feb. 8    | **[Rate heterogeneity](https://gnetum.eeb.uconn.edu/courses/phylogenetics/07-ratehet.pdf)** | **Lab 4** [Simulating sequence data](/simulation/)
 Tuesday Feb. 13	   | **Simulation**                                                | **Homework 5**
 Thursday Feb. 15   | **Long branch attraction, topology tests**                    | **Lab 5**
 Tuesday Feb. 20    | **Codon, secondary structure, and amino acid models**         | **Homework 6**
