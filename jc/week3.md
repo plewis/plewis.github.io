@@ -93,12 +93,12 @@ Some things to keep in mind when doing this part:
 
 * Take note of the `srun` command in the "Getting started" section: it is important to add the `--mem=5G`, otherwise, RevBayes will hang and never finish because it has run out of memory
 * Note that the analyses might take a few minutes; it will be much slower than the PAUP* runs you did last week, expecially for the `fast.nex` data set
-* The tutorial uses a file named `algaemd.nex`, but you will be using `medium.nex` instead. So, where `algaeme.nex` appears, substituted `medium.nex`
-* The tutotial specifies several other files, such as `algae.log`, `algae.tree`, etc. You should replace `algae` in these file names with `medium` to reflect the data set you are analyzing
+* The tutorial uses a file named `algaemd.nex`, but you will be using `medium.nex` instead. So, where `algaeme.nex` appears, substitute `medium.nex`
+* The tutorial specifies several other files, such as `algae.log`, `algae.tree`, etc. You should replace `algae` in these file names with `medium` to reflect the data set you are analyzing
 * At one point the tutorial specifies the datatype as "RNA", but you should change this to "DNA" because the data you simulated were DNA sequences
-* The tutorial suggests making the outgroup `Anacystis_nidulans`, but the taxa in your `medium.nex` data file are named `A`, `B`, `C`. `D`. `E`, and `F`, so use one of those instead (it doesn't really matter which)
+* The tutorial suggests making the outgroup `Anacystis_nidulans`, but the taxa in your `medium.nex` data file are named `A`, `B`, `C`, `D`, `E`, and `F`, so use one of those instead (it doesn't really matter which)
 
-When you get the map tree file generated, use Cyberduck to download it to your laptop and open that file in FigTree. Check the box beside "Branch Labels", then expand that section of options and choose "posterior" for "Display". Save the tree as a PNG file using File > Export PNG... The numbers on the branches are posterior probabilities: these represent the probability that that branch exists in the true tree given the data you have and the model you used. We use the same model to generate the data as we used to analyze it. so the model assumption is pretty safe in this case! You should find that, for the `mesium.nex` data, the posterior probabilities are all very high (with 1.0 being the highest possible value and 0.0 being the lowest).
+When you get the map tree file generated, use Cyberduck to download it to your laptop and open that file in FigTree. Check the box beside "Branch Labels", then expand that section of options and choose "posterior" for "Display". Save the tree as a PNG file using File > Export PNG... The numbers on the branches are posterior probabilities: these represent the probability that that branch exists in the true tree given the data you have and the model you used. We use the same model to generate the data as we used to analyze it. so the model assumption is pretty safe in this case! You should find that, for the `medium.nex` data, the posterior probabilities are all very high (with 1.0 being the highest possible value and 0.0 being the lowest).
 
 Now repeat the analysis with the `slow.nex`, `fast.nex`, and `fast500.nex` data sets. You can save time by copying the RevBayes file you created for `medium.nex` into the other directories...
 
