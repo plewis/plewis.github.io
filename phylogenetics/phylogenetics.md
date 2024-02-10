@@ -32,17 +32,17 @@ Tuesday Jan. 30    | **[Substitution models](https://gnetum.eeb.uconn.edu/course
 Thursday Feb. 1    | **Substitution models (cont.)**                              | **Lab 3** [Estimating parameters using likelihood](/likelihood/)
 Tuesday Feb. 6     | **[Maximum likelihood criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/06-likelihood-annotated.pdf)**                                | **[Homework 4](https://gnetum.eeb.uconn.edu/courses/phylogenetics/04-hw4-k80beta.pdf)**
 Thursday Feb. 8    | **[Rate heterogeneity](https://gnetum.eeb.uconn.edu/courses/phylogenetics/07-ratehet-annotated.pdf)** | **Lab 4** [Simulating sequence data](/simulation/)
-Tuesday Feb. 13	   | **Simulation**                                                | **Homework 5**
-Thursday Feb. 15   | **Long branch attraction, topology tests**                    | **Lab 5**
-Tuesday Feb. 20    | **Codon, secondary structure, and amino acid models**         | **Homework 6**
-Thursday Feb. 22   | **Bayes' Rule**                                               | **Lab 6**
-Tuesday Feb. 27    | **Bayesian statistics, MCMC**                                 | **Homework 7**
-Thursday Feb. 29   | **Prior distributions used in phylogenetics**                 | **Lab 7**
-Tuesday Mar. 5     | **Prior distributions (cont.) and CIs**                       | **Homework 8**
-Thursday Mar. 7    | **TBA**                                                       | **Lab 8**
+Tuesday Feb. 13	   | **Simulation, Bayes' Rule**                                   | **Homework 5**
+Thursday Feb. 15   | **Bayesian statistics, MCMC**                                 | **Lab 5**
+Tuesday Feb. 20    | **Prior distributions used in phylogenetics**                 | **Homework 6**
+Thursday Feb. 22   | **Prior distributions (cont.) and credible intervals**        | **Lab 6**
+Tuesday Feb. 27    | **Bayes factors and Bayesian model selection**                | **Homework 7**
+Thursday Feb. 29   | **Coalescence**                                               | **Lab 7**
+Tuesday Mar. 5     | **Gene trees vs. species trees**                              | **Homework 8**
+Thursday Mar. 7    | **Species tree estimation**                                   | **Lab 8**
 Tuesday Mar. 12    | **SPRING BREAK**                                              |
 Thursday Mar. 14   | **SPRING BREAK**                                              |
-Tuesday Mar.  19   | **Bayes factors and Bayesian model selection**                | **Homework 9**
+Tuesday Mar.  19   | **Codon, secondary structure, and amino acid models**         | **Homework 9**
 Thursday Mar. 21   | **Discrete morphological models**                             | **Lab 9**
 Tuesday Mar. 26    | **Polytomies; Pagel's test**                                  | **Homework 10**
 Thursday Mar. 28   | **Stochastic character mapping**                              | **Lab 10**
@@ -54,6 +54,10 @@ Tuesday Apr. 16    | **Network models**                                         
 Thursday Apr. 18   | **Diversification rate evolution**                            | **Lab 13**
 Tuesday Apr. 23    | **Diversification (cont.), Heterotachy, and Covarion models** | no homework assignment
 Thursday Apr. 25   | **Species delimitation and information**                      | **Lab 14**
+
+{% comment %}
+Long branch attraction, topology tests
+{% endcomment %}
 
 ## Index to major topics
 
