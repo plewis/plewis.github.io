@@ -29,16 +29,16 @@ Thursday Jan. 18   | **[Optimality criteria, search strategies, consensus trees]
 Tuesday Jan. 23    | **[The parsimony criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/03-parsimony-annotated.pdf)** | **[Homework 2](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw2-parsimony.pdf)** due 2024-01-30
 Thursday Jan 25    | **[Distance methods](https://gnetum.eeb.uconn.edu/courses/phylogenetics/04-distances-annotated.pdf)** | **Lab 2** [Searching](/searching/)
 Tuesday Jan. 30    | **[Substitution models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/05-models-annotated.pdf)** | **[Homework 3](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw3-distance.pdf)** [Python primer](https://plewis.github.io/python/)
-Thursday Feb. 1    | **Substitution models (cont.)**                              | **Lab 3** [Estimating parameters using likelihood](/likelihood/)
+Thursday Feb. 1    | **Substitution models (cont.)**                               | **Lab 3** [Estimating parameters using likelihood](/likelihood/)
 Tuesday Feb. 6     | **[Maximum likelihood criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/06-likelihood-annotated.pdf)**                                | **[Homework 4](https://gnetum.eeb.uconn.edu/courses/phylogenetics/04-hw4-k80beta.pdf)**
 Thursday Feb. 8    | **[Rate heterogeneity](https://gnetum.eeb.uconn.edu/courses/phylogenetics/07-ratehet-annotated.pdf)** | **Lab 4** [Simulating sequence data](/simulation/)
-Tuesday Feb. 13	   | **Simulation, Bayes' Rule**                                   | **Homework 5**
-Thursday Feb. 15   | **Bayesian statistics, MCMC**                                 | **Lab 5**
-Tuesday Feb. 20    | **Prior distributions used in phylogenetics**                 | **Homework 6**
-Thursday Feb. 22   | **Prior distributions (cont.) and credible intervals**        | **Lab 6**
-Tuesday Feb. 27    | **Bayes factors and Bayesian model selection**                | **Homework 7**
-Thursday Feb. 29   | **Coalescence**                                               | **Lab 7**
-Tuesday Mar. 5     | **Gene trees vs. species trees**                              | **Homework 8**
+Tuesday Feb. 13	   | **SNOW DAY (no class)**                                       | **Homework 5[Site Likelihood](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw5-likelihood.pdf)**
+Thursday Feb. 15   | **Bootstrapping, Simulation**                                 | **Lab 5**
+Tuesday Feb. 20    | **Bayes' Rule and Bayesian statistics**                       | **Homework 6**
+Thursday Feb. 22   | **Markov chain Monte Carlo (MCMC)**                           | **Lab 6**
+Tuesday Feb. 27    | **Prior distributions**                                       | **Homework 7**
+Thursday Feb. 29   | **Bayes factors and Bayesian model selection**                | **Lab 7**
+Tuesday Mar. 5     | **Coalescence and gene trees vs. species trees**              | **Homework 8**
 Thursday Mar. 7    | **Species tree estimation**                                   | **Lab 8**
 Tuesday Mar. 12    | **SPRING BREAK**                                              |
 Thursday Mar. 14   | **SPRING BREAK**                                              |
