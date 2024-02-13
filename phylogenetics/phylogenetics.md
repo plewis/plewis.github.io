@@ -32,8 +32,8 @@ Tuesday Jan. 30    | **[Substitution models](https://gnetum.eeb.uconn.edu/course
 Thursday Feb. 1    | **Substitution models (cont.)**                               | **Lab 3** [Estimating parameters using likelihood](/likelihood/)
 Tuesday Feb. 6     | **[Maximum likelihood criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/06-likelihood-annotated.pdf)**                                | **[Homework 4](https://gnetum.eeb.uconn.edu/courses/phylogenetics/04-hw4-k80beta.pdf)**
 Thursday Feb. 8    | **[Rate heterogeneity](https://gnetum.eeb.uconn.edu/courses/phylogenetics/07-ratehet-annotated.pdf)** | **Lab 4** [Simulating sequence data](/simulation/)
-Tuesday Feb. 13	   | **SNOW DAY (no class)**                                       | **Homework 5[Site Likelihood](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw5-likelihood.pdf)**
-Thursday Feb. 15   | **Bootstrapping, Simulation**                                 | **Lab 5**
+Tuesday Feb. 13	   | **SNOW DAY (no class)**                                       | **Homework 5 [Site Likelihood](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw5-likelihood.pdf)**
+Thursday Feb. 15   | **Bootstrapping, Simulation**                                 | **Lab 5 [Maximum likelihood analyses with IQ-TREE](/iqtree/)**
 Tuesday Feb. 20    | **Bayes' Rule and Bayesian statistics**                       | **Homework 6**
 Thursday Feb. 22   | **Markov chain Monte Carlo (MCMC)**                           | **Lab 6**
 Tuesday Feb. 27    | **Prior distributions**                                       | **Homework 7**

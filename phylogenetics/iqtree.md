@@ -46,6 +46,7 @@ Starting in the `iqlab` directory...
 
     cd iqtree-2.2.2.6-Linux/bin
     mv iqtree2 ../..
+    cd ../..
 
 You can now delete the tar file and the directory that was created when we extracted it:
 
@@ -192,7 +193,7 @@ By specifying `-nt AUTO` ("nt = number of threads"), IQ-TREE will use as many co
 
 The `-B` setting tells IQ-TREE to assess support for individual edges (splits) using **ultrafast bootstrapping**. We will discuss what bootstrapping is in lecture (and how ultrafast bootstrapping differs from standard bootstrapping), but, for now, just know that this option will end up assigning a value to each edge in the summary consensus tree that tells you how plausible that edge is. Edges with ultrafast bootstraps > 95 are strongly supported, values smaller than that are more questionable.
 
-This analysis will take awhile (most of the time is spent figuring out which substitution model is best), so you might use the time to read on past the next couple of questions to get some background. Once the unpartitioned analysis finishes, view the output file `turtle.fa.iqtree` in your favorite text editor (nano, BBEdit, Notepad++, etc.) and answer these questions:
+This analysis will take awhile (most of the time is spent figuring out which substitution model is best), so you might use the time to read on past the next couple of questions to get some background. Once the unpartitioned analysis finishes, view the output file `unpart.iqtree` in your favorite text editor (nano, BBEdit, Notepad++, etc.) and answer these questions:
 
 > :thinking: How many substitution models were tested in the unpartitioned analysis?
 
@@ -224,7 +225,7 @@ CT
 232826.2711
 {% endcomment %}
 
-You can answer the following question from looking at the text-based depiction of the tree in `turtle.fa.iqtree` or you can download `turtle.fa.treefile` to your laptop and open it in FigTree for a graphical depiction. To see the bootstrap support, type `ufboot` when it asks for `label` upon opening the file, then check the "Branch labels" check box, expand that tab, and specify `ufboot` for "Display". When FigTree opens, if there is some information about nodes or edges that is encoded in the tree description, it asks you what you want to call it. I told you to call it `ufboot` but you could have typed something else. Whatever you type will show up in the "Display" dropdown control.
+You can answer the following question from looking at the text-based depiction of the tree in `unpart.iqtree` or you can download `unpart.treefile` to your laptop and open it in FigTree for a graphical depiction. To see the bootstrap support, type `ufboot` when it asks for `label` upon opening the file, then check the "Branch labels" check box, expand that tab, and specify `ufboot` for "Display". When FigTree opens, if there is some information about nodes or edges that is encoded in the tree description, it asks you what you want to call it. I told you to call it `ufboot` but you could have typed something else. Whatever you type will show up in the "Display" dropdown control.
 
 > :thinking: What is the ultrafast bootstrap support for this hypothesis in the unpartitioned ML tree?
 
@@ -240,7 +241,7 @@ Create a directory named `fullpart` under `iqlab` that is at the same level as y
 
 Enter this command to run IQ-TREE:
 
-../iqtree2 -s ../turtle.fa -p ../turtle.nex -B 1000 -nt AUTO --prefix fullpart
+    ../iqtree2 -s ../turtle.fa -p ../turtle.nex -B 1000 -nt AUTO --prefix fullpart
 
 Some of these options you saw before, but here is a key to all of them anyway:
     
@@ -333,7 +334,7 @@ Finally, add one more line telling R to create a bar plot showing these 29 diffe
 
     barplot(diffs)
     
-Your final `turtle.R` file should now look like this (but, again, with no ellipses):
+Your final `locuscomp.R` file should now look like this (but, again, with no ellipses):
 
     Tree1 <- c(-5082.67, -3414.03, -3626.37, -4298.16, ..., -4394.24)
     Tree2 <- c(-5086.25, -3415.55, -3609.85, -4288.83, ..., -4389.8)
@@ -344,7 +345,7 @@ Load the R module so that you can use R to run this file:
 
     module load R/3.6.1
     
-Now execute your `turtle.R` file in R:
+Now execute your `locuscomp.R` file in R:
 
     R --no-save < locuscomp.R
     
@@ -391,6 +392,11 @@ Copy the `turtle.nex` file from the parent directory into your new `final` direc
 Edit the `finalpart.nex`, removing the two lines corresponding to the two paralogous loci.
     
 Edit the `finalunpart.nex` file to remove the two problematic loci and pool sites from all other loci into a single big subset. Your `finalunpart.nex` file should look like this:
+
+    #nexus
+    begin sets;
+        charset allorthologs = 1-9822 10369-12795 13243-20820;
+    end;
 
 Run IQ-TREE to estimate an ML tree for the unpartitioned data:
 
