@@ -428,7 +428,7 @@ The type is specified to be a lower case L character here (L for line). For othe
 
     > help(plot)
 
-I nearly always want the lines in my plots to be thicker. Here is how to triple the thickness of the plotted line using the `lwd"` (line width) setting:
+I nearly always want the lines in my plots to be thicker. Here is how to triple the thickness of the plotted line using the `lwd` (line width) setting:
 
     > plot(x,y,type="l", lwd=3)
     
@@ -593,7 +593,7 @@ Here are some basic facts about Beta distributions:
 | Shape parameter 2   | $b$                          |
 | Mean                | $\frac{a}{a+b}$              |
 | Variance            | $\frac{ab}{(a+b)^2 (a+b+1)}$ |
-| Density function    | $p(x) = \frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} x^{a-1} (1-x)^{b-1} |
+| Density function    | $p(x) = \frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} x^{a-1} (1-x)^{b-1}$ |
 
 The $\Gamma$ function above is the same one used in the Gamma distribution.
 
@@ -694,7 +694,7 @@ Here are some basic facts about the Dirichlet($a$,$b$,$c$,$d$) distribution, spe
 | Sum of shape parameters                        | $s = a + b + c + d$                      |
 | Mean of $\pi_A$, $\pi_C$, $\pi_G$, and $\pi_T$ | $\frac{a}{s}$, $\frac{b}{s}$, $\frac{c}{s}$, and $\frac{d}{s}$ |
 | Variance of $\pi_A$, $\pi_C$, $\pi_G$, and $\pi_T$ | $\frac{a(s-a)}{s^2 (s+1)}$, $\frac{b(s-b)}{s^2 (s+1)}$, $\frac{c(s-c)}{s^2 (s+1)}$, and $\frac{d(s-d)}{s^2 (s+1)}$ |
-| Density function    | $p(\pi_A, \pi_C, \pi_G, \pi_T) = \frac{\Gamma(s)}{\Gamma(a) \Gamma(b) \Gamma(c) \Gamma(d)} \pi_A^{a-1} \pi_C^{b-1} \pi_G^{c-1} \pi_T^{d-1} |
+| Density function    | $p(\pi_A, \pi_C, \pi_G, \pi_T) = \frac{\Gamma(s)}{\Gamma(a) \Gamma(b) \Gamma(c) \Gamma(d)} \pi_A^{a-1} \pi_C^{b-1} \pi_G^{c-1} \pi_T^{d-1}$ |
 
 ### Relationship to the Gamma distribution
 
@@ -800,7 +800,7 @@ We can visualize these samples better by plotting them. Below is an R function t
      lines(1:1000, d[,4],col="black")
     }
     
-The `1:1000` in the `plot` and `lines` commands is shorthand for `seq(1, 1000, 1)` (i.e., a sequence of values starting at 1, ending at 1000, with a step size of 1. Also, `d[,1]` means "the first column of `d`", `d[,2]` means "the second column of `d`, etc.
+The `1:1000` in the `plot` and `lines` commands is shorthand for `seq(1, 1000, 1)` (i.e., a sequence of values starting at 1, ending at 1000, with a step size of 1. Also, `d[,1]` means "the first column of `d`", `d[,2]` means "the second column of `d`", etc.
 
 Now plot a few Dirichlet distributions:
 

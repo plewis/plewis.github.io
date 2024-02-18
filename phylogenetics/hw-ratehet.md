@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Homework 5
-permalink: /hw5/
+title: Homework 6
+permalink: /hw6/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Compute the JC likelihood
 
@@ -11,7 +11,7 @@ The python program below will be modified by you to compute the likelihood of a 
 
 Be sure to [ask for help](mailto:paul.lewis@uconn.edu) if you get stuck.
 
-Login to your student account on the cluster and create a file named _hw5.py_ containing the text below:
+Login to your student account on the cluster and create a file named _hw6.py_ containing the text below:
 
     from math import exp, log
 
@@ -74,11 +74,11 @@ Login to your student account on the cluster and create a file named _hw5.py_ co
 
 Ensure that you have access to python3 on the cluster by loading this module:
 
-    module load python/3.8.1
+    module load python/3.10.1
 
 Run this program as follows to compute the site log-likelihoods for the two sites whose data is shown on the tree in Figure 1:
 
-    python3 hw5.py
+    python3 hw6.py
     
 You should see output like that shown below:
 
@@ -89,7 +89,7 @@ You should see output like that shown below:
 
 ### The sitelike function
 
-Near the top of your hw5.py file is the definition of a function named <tt>sitelike</tt>. The function <tt>sitelike</tt> has 3 parameters. The first,
+Near the top of your _hw6.py_ file is the definition of a function named <tt>sitelike</tt>. The function <tt>sitelike</tt> has 3 parameters. The first,
 <tt>same_list</tt>, is a list of 16 numbers representing the number
 of branches (of the 5 total) in which the state is the same
 at both ends. There are 16 such values because there are 16
@@ -110,7 +110,7 @@ function. Note that <tt>sitelike</tt> function computes the site likelihood, **n
 
 ## Compute the JC+I likelihood
 
-Now modify your Python program to compute the site log-likelihoods under a JC+I model (proportion of invariable sites = pinvar = 0.4).The likelihood for each site must take account of two relative rates: r1 = 0.0 and r2 = 1/(1 − pinvar). Note that the function <tt>sitelike</tt> does all the hard work for you and you will not need to modify it! Pass in the rate you want to use as the last argument to compute the site likelihood given that rate. Here is the general formula for a mixture model with two categories:
+Now modify your Python program to compute the site log-likelihoods under a JC+I model (proportion of invariable sites = $p_{\mbox{invar}}$ = 0.4).The likelihood for each site must take account of two relative rates: $r_1 = 0.0$ and $r_2 = 1/(1 − p_{\mbox{invar}})$. Note that the function <tt>sitelike</tt> does all the hard work for you and you will not need to modify it! Pass in the rate you want to use as the last argument to compute the site likelihood given that rate. Here is the general formula for a mixture model with two categories:
 
 ![Likelihood for site i](/assets/img/JCIsitelike.png)
 
@@ -120,7 +120,12 @@ Note that I've done <tt>like1</tt> for you. Compare that line with the above for
 
 Modify the Python program again to uncomment the remaining lines in the section labeled "Results for JC+G model" and fill in the code needed to compute the site log-likelihoods under a JC+G model (gamma shape=0.2, 4 categories). 
 
-You can use PAUP* to obtain the 4 relative rates. Start PAUP\* **interactively** (i.e. do not specify a file name when starting PAUP\*) and then issue the command 
+You can use PAUP* to obtain the 4 relative rates. Start PAUP\* **interactively** (i.e. do not specify a file name when starting PAUP\*) 
+
+    module load paup/4.0a-166
+    paup
+
+and then issue the command 
 
     gammaplot shape=0.2 ncat=4
 
@@ -128,7 +133,7 @@ The relative rates that you need are in the right-most column of the table at th
 
 ### Checking your answer
 
-You can (and should) check your answer using PAUP\*. You can get the data for this homework into PAUP\* by creating a nexus file named _hw5.nex_ (see the data block example in the [nexus lab](/nexus/#data-block)). The number of taxa will be 4 and the number of characters will be 2. Create a trees block (see the trees block example in the [nexus lab](/nexus/#trees-block)) below your data block containing the tree definition. Finally, add a paup block containing the commands necessary to compute the likelihood under a JC+G model. The <tt>lscores</tt> command in your paup block should look like this:
+You can (and should) check your answer using PAUP\*. You can get the data for this homework into PAUP\* by creating a nexus file named _hw6.nex_ (see the data block example in the [nexus lab](/nexus/#data-block)). The number of taxa will be 4 and the number of characters will be 2. Create a trees block (see the trees block example in the [nexus lab](/nexus/#trees-block)) below your data block containing the tree definition. Finally, add a paup block containing the commands necessary to compute the likelihood under a JC+G model. The <tt>lscores</tt> command in your paup block should look like this:
 
     lscores 1 / sitelike userbrlen;
     
@@ -136,5 +141,5 @@ Including the option <tt>sitelike</tt> will tell PAUP* to output not only the ov
 
 ## What do I turn in?
 
-Please email me ([paul.lewis@uconn.edu](mailto:paul.lewis@uconn.edu)) and attach your python program _hw5.py_ as well as your _hw5.nex_ file to the email.
+Please email me ([paul.lewis@uconn.edu](mailto:paul.lewis@uconn.edu)) and attach your python program _hw6.py_ as well as your _hw6.nex_ file to the email.
 
