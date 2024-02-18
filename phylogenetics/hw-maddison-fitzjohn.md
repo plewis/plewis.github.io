@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Homework 11 (Maddison and Fitzjohn 2015)
-permalink: /hw11/
+permalink: /hwmandf/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2022/)
 

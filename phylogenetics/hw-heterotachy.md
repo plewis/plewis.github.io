@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Simulate data with topology homogeneity but edge length heterogeneity
-permalink: /hw13/
+permalink: /hwheterotachy/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2022/)
 

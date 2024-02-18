@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Homework 9 (Dirichlet Process Prior)
-permalink: /hw9/
+permalink: /hwdpp/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2022/)
 

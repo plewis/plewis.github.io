@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Homework 7 (MCMC)
-permalink: /hw7/
+permalink: /hwmcmc/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2022/)
 

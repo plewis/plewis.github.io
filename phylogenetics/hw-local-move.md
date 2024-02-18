@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Homework 8 (Local Move)
-permalink: /hw8/
+permalink: /hwlocalmove/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2022/)
 

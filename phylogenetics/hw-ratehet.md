@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Homework 6
-permalink: /hw6/
+permalink: /hwratehet/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2024/)
 

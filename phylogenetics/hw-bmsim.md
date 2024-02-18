@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Simulate a trait on a tree using the Brownian motion model
-permalink: /hw12/
+permalink: /hwbmsim/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2022/)
 

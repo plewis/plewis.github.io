@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Homework 10
-permalink: /hw10/
+permalink: /hwcondvar/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2022/)
 
