@@ -306,3 +306,52 @@ variance = alpha * beta^2 = mean * beta, so beta = variance/mean = 4/2 = 2.
 {% comment %}
 variance = alpha * beta^2 = alpha * 4, so alpha = 4/4 = 1.
 {% endcomment %}
+
+### Creating a Histogram
+
+Type the following command into the R console to generate 1000 random numbers (deviates) from a Gamma distribution with shape=0.5 and scale=2.0 and store them in the variable `x`:
+
+    > x <- rgamma(1000, shape=0.5, scale=2.0)
+    
+The `r` in `rgamma` stands for "random". There is a corresponding "r" command for all the common probability distributions (e.g. rbeta, rbinom, rchisq, rexp, rnorm, runif) and in each case it allows you to draw a sample of values from that distribution (e.g. the beta, binomial, chi-square, exponential, normal and uniform distributions, respectively).
+
+It may appear that nothing has happened, but you can view the 1000 values stored in the variable `x` by typing `x` at the prompt.
+
+You can get the sample mean, sample variance, and sample standard deviation using:
+
+    > mean(x)
+    > variance(x)
+    > sd(x)
+    
+You can get more summary statistics using:
+
+    > summary(x)
+
+Creating a basic histogram from these 1000 values is easy:
+
+    > hist(x)
+    
+Now refine the histogram by asking R to give you 50 bars:
+
+    > hist(x, breaks=50)
+    
+Note that breaks represents a suggestion only. R will often be passive-aggressive and not give you exactly as many bars as you want.
+
+Create a histogram with approximately 40 bars from 10000 deviates from a Gamma(shape=10, scale=0.1) distribution.
+
+> :thinking: Compute the sample mean of the values you generated from a Gamma(0.5, 2) distribution, does it appear that the mean is correct?
+
+{% comment %}
+Yes, the sample mean is close to the true mean 1.
+{% endcomment %}
+
+Create a histogram with 30 bars from 10000 deviates from a Gamma distribution in which the mean is 2 and the variance is 1 Assuming you have stored the 10000 deviates in the variable `x`, type `summary(x)` to get the sample mean, median, etc.
+
+> :thinking: How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 10000? 
+
+Draw another sample with 1 million random deviates and summarize.
+
+> :thinking: How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 1000000?
+
+The results above make sense: the variance of one Gamma random variate is $\alpha \beta^2$, but the variance of the _mean_ of $n$ Gamma random deviates is $\alpha \beta^2/n$. The variance of the mean is thus inversely proportional to the sample size, so the mean of 1 million Gamma deviates was much closer to the expected value 2 than the mean of only 10000 deviates.
+
