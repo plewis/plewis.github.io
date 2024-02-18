@@ -20,13 +20,13 @@ Copy the text below into a text file to record you answers to questions posed in
     1. What is the value of beta if alpha is known and the mean must be 1.0? 
     answer: 
 
-    2. 
+    2. Why is the scale parameter beta never estimated when using the Gamma distribution to model among-site rate heterogeneity? 
     answer: 
 
-    3. 
+    3. What is the value of the scale parameter beta if mean = 2 and variance = 4?
     answer: 
 
-    4. 
+    4. What is the value of the shape parameter alpha if mean = 2 and variance = 4 (hint: use the value of beta you just calculated)? 
     answer: 
 
     5. 
@@ -133,7 +133,7 @@ Common values for `pch` include 19 (solid dot), 20 (bullet), 21 (circle), 22 (sq
     
 See the help topic on `points` for more info:
 
-> help(points)
+    > help(points)
 
 ### Plot type
 
@@ -266,18 +266,24 @@ The Gamma distribution has two parameters that govern its shape (parameter $\alp
 
 Here are some basic facts about Gamma distributions:
 
-Shape parameter	$\alpha$
-Scale parameter	$\beta$
-Mean	$\alpha \; \beta$
-Variance	$\alpha \; \beta^2$
-Density function	$f(x) = \frac{x^{\alpha - 1} e^{-x/\beta}}{\beta^{\alpha} \Gamma(\alpha)}$
+| ---------------: | :------------------ | 
+| Shape parameter  | $\alpha$            |
+| Scale parameter  | $\beta$             |
+| Mean             | $\alpha \; \beta$   |
+| Variance         | $\alpha \; \beta^2$ |
+| Density function | $p(x) = \frac{x^{\alpha - 1} e^{-x/\beta}}{\beta^{\alpha} \Gamma(\alpha)}$ |
+
 Note that $\Gamma(\alpha)$ in the density function refers to the gamma _function_ (which is distinct from the Gamma _distribution_). The gamma function is easy to calculate when its argument is a positive integer:
 
 $\Gamma(x) = (x-1)!$
 
-For example, the gamma function for the value 10 evaluates to $9! = 9*8*7*6*5*4*3*2*1 = 362880$ (you will use this fact a few minutes from now). When, however, the argument is an arbitrary positive real number (which is the usual situation for $\alpha$), then computing it gets more complicated. Fortunately, R handles details like this for us!
+For example, 
 
->  :thinking: What is the value of $\beta$ if $\alpha$ is known and the mean must be 1.0? 
+$\Gamma(10) = 9! = (9)(8)(7)(6)(5)(4)(3)(2)(1) = 362880$
+
+(you will use this fact a few minutes from now). When, however, the argument is an arbitrary positive real number (which is the usual situation for $\alpha$), then computing it gets more complicated. Fortunately, R handles details like this for us!
+
+> :thinking: What is the value of $\beta$ if $\alpha$ is known and the mean must be 1.0? 
 
 {% comment %}
 1/alpha
