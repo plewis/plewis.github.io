@@ -18,35 +18,71 @@ After completing this lab, you will be able to...
 Copy the text below into a text file to record you answers to questions posed in this lab.
 
     1. What is the value of beta if alpha is known and the mean must be 1.0? 
-    answer: 
-
+    answer
+     
     2. Why is the scale parameter beta never estimated when using the Gamma distribution to model among-site rate heterogeneity? 
-    answer: 
-
+    answer
+     
     3. What is the value of the scale parameter beta if mean = 2 and variance = 4?
-    answer: 
-
+    answer
+     
     4. What is the value of the shape parameter alpha if mean = 2 and variance = 4 (hint: use the value of beta you just calculated)? 
-    answer: 
-
-    5. 
-    answer: 
-
-    6. 
-    answer: 
-
-    7. 
-    answer: 
-
-    8. 
-    answer: 
-
-    9. 
-    answer: 
-
-    10. 
-    answer: 
-
+    answer
+     
+    5. Compute the sample mean of the values you generated from a Gamma(0.5, 2) distribution, does it appear that the mean is correct?
+    answer
+     
+    6. How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 10000? 
+    answer
+     
+    7. How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 1000000?
+    answer
+     
+    8. Why are the histograms for x and y so different? (hint: use help(rgamma) to read about the rgamma function) 
+    answer
+     
+    9. What are the true means of x and y?
+    answer
+     
+    10. Calculate the Gamma probability density for the value 0.99 assuming shape alpha=10 and scale beta = 0.1 (use the formula labeled "Density function" in the table above)
+    answer
+     
+    11. Use the `pgamma` command to compute the probability that a value drawn from a Gamma(shape=2,scale=0.5) distribution would fall between 0.5 and 4.5? Hint: you will need to either invoke the command twice or provide it with a vector containing two values, then do some subtraction with the results. 
+    answer
+     
+    12. What value x produces an interval (0,x) that accounts for 95% of the values drawn from a Gamma(shape=2,scale=0.5) distribution?
+    answer
+     
+    13. What pair of values (x,y) produces an interval that accounts for the middle 95% of the values drawn from a Gamma(shape=2, scale=0.5) distribution (by middle, I mean that 2.5% of the distribution should be less than x and 2.5% greater than y)?
+    answer
+     
+    14. Is the height of the density at x=0 related to the rate parameter?
+    answer
+     
+    15. Which of these two densities has the larger mean? (Try to answer this question first by looking at the plot, then compute the numbers to check your intuition.) 
+    answer
+     
+    16. Which of these two densities has the larger variance? (Again, answer the question first by looking at the plot.) 
+    answer
+     
+    17. What fraction of the Exponential(10) distribution is less than 1? (Hint: use the `pexp` command.)
+    answer
+     
+    18. What fraction of the Exponential(0.1) distribution is less than 1?
+    answer
+     
+    19. Fill in the blank: 95% of the Exponential(0.1) distribution is less than _____. (Hint: use the `qexp` command.)
+    answer
+     
+    20. Which distribution -- Beta(1,1) or Beta(0.1, 0.1) -- would be most appropriate as a prior distribution for a parameter representing the chances of a coin coming up heads on any given flip if you believed strongly that the world was full of trick coins (two-headed or two-tailed coins)?
+    answer
+     
+    21. What is the effect of increasing the magnitude of all four parameters from 1 to 100 to 1 million? 
+    answer
+     
+    22. Which of these three Dirichlet distributions comes closest to the assumptions made by the JC69 model?
+    answer
+ 
 ## Installing R and RStudio on your laptop
 
 [R computing language](http://www.r-project.org/) is one of two general-purpose programming languages that we will use this semester (the other being [Python](https://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_Python_Primer)). While R and Python share many similarities, R excels in tasks that involve statistics and creating plots. While a spreadsheet program like Excel can create charts, it is often easier to create the plot you need in R. The purpose of this lab is to introduce you to R by showing you how to make various plots related to probability distributions. This will also enable you to learn about several important probability distributions that serve as prior distributions in Bayesian phylogenetics. This introduction to R will serve us well later in the course when we make use of phylogenetic packages that are written in the R language.
