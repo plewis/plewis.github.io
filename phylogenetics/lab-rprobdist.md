@@ -11,7 +11,12 @@ This lab represents an introduction to the [R computing language](http://www.r-p
 
 ## Objectives
 
-After completing this lab, you will be able to...
+After completing this lab, you will be able to use R...
+
+* to plot density functions corresponding to common probability distributions used as prior distributions in Bayesian phylogenetics
+* "p*" functions to compute the cumulative probability distribution for common probability distributions
+* "q*" functions to compute quantiles for common probability distributions
+* "r*" functions to draw random samples from common probability distributions
 
 ## Copy the template
 
@@ -89,7 +94,7 @@ Copy the text below into a text file to record you answers to questions posed in
 
 ### Installing R
 
-Install R (if you haven't already) by going to the [R project website](http://www.r-project.org/) and following the download instructions for your platform. You will be doing this lab on your own laptop, not the cluster, because much of this lab involves plots, which are most easily generated and displayed on your own laptop. I have installed the latest version of R (which, at this moment, is version 4.3.2, nicknamed "Eye Holes"), but these instructions should work with slightly older versions of R.
+Install R (if you haven't already) by going to the [R project website](http://www.r-project.org/) and following the download instructions for your platform. **You will be doing this lab on your own laptop, not the cluster**, because much of this lab involves plots, which are most easily generated and displayed on your own laptop. I have installed the latest version of R (which, at this moment, is version 4.3.2, nicknamed "Eye Holes"), but these instructions should work with slightly older versions of R.
 
 ### Installing RStudio
 
@@ -356,7 +361,7 @@ It may appear that nothing has happened, but you can view the 1000 values stored
 You can get the sample mean, sample variance, and sample standard deviation using:
 
     > mean(x)
-    > variance(x)
+    > var(x)
     > sd(x)
     
 You can get more summary statistics using:
@@ -672,10 +677,10 @@ If $a$ is not equal to $b$, Beta densities are skewed to the right or left and a
 
 Try plotting these Beta densities: Beta(1,100), Beta(100,1), Beta(2,5), and Beta(5,2).
 
-    curve(dbeta(x, 1, 100)
-    curve(dbeta(x, 100, 1)
-    curve(dbeta(x, 2, 5)
-    curve(dbeta(x, 5, 2)
+    curve(dbeta(x, 1, 100))
+    curve(dbeta(x, 100, 1))
+    curve(dbeta(x, 2, 5))
+    curve(dbeta(x, 5, 2))
 
 Plot a Beta(20,50) density in blue, then a Beta(2,5) density in red on top of the Beta(20,50) density.
 
