@@ -378,7 +378,7 @@ Now refine the histogram by asking R to give you 50 bars:
     
 Note that breaks represents a suggestion only. R will often be passive-aggressive and not give you exactly as many bars as you want.
 
-Create a histogram with approximately 40 bars from 10000 deviates from a Gamma(shape=10, scale=0.1) distribution.
+Create a histogram with approximately 40 bars from 10000 deviates from a Gamma(shape=0.5, scale=2) distribution.
 
 > :thinking: Compute the sample mean of the values you generated from a Gamma(0.5, 2) distribution, does it appear that the mean is correct?
 
