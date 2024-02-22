@@ -35,7 +35,7 @@ Thursday Feb. 8    | **[Rate heterogeneity](https://gnetum.eeb.uconn.edu/courses
 Tuesday Feb. 13	   | **SNOW DAY (no class)**                                       | **Homework 5** [Site likelihood](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw5-likelihood.pdf) due 2024-02-20
 Thursday Feb. 15   | **[Rate het. (finish up)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/07-ratehet2-annotated.pdf), [Bootstrapping](https://gnetum.eeb.uconn.edu/courses/phylogenetics/08-bootstrapping-annotated.pdf), [bootstrap demo in R](https://gnetum.eeb.uconn.edu/courses/phylogenetics/bootstrap.Rmd), [Simulation](https://gnetum.eeb.uconn.edu/courses/phylogenetics/08-simulation-annotated.pdf)**                                 | **Lab 5 [Maximum likelihood analyses with IQ-TREE](/iqtree/)**
 Tuesday Feb. 20    | **[Bayes' Rule and Bayesian statistics](https://gnetum.eeb.uconn.edu/courses/phylogenetics/09-bayesrule-annotated.pdf)** | **Homework 6** [Rate heterogeneity](/hwratehet/) due 2024-02-27
-Thursday Feb. 22   | **[Markov chain Monte Carlo (MCMC)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/10-mcmc.pdf)** | **Lab 6** [Using R to explore probability distributions](/rprobdist/)
+Thursday Feb. 22   | **[Markov chain Monte Carlo (MCMC)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/10-mcmc-annotated.pdf)** | **Lab 6** [Using R to explore probability distributions](/rprobdist/)
 Tuesday Feb. 27    | **Prior distributions**                                       | **Homework 7**
 Thursday Feb. 29   | **Bayes factors and Bayesian model selection**                | **Lab 7**
 Tuesday Mar. 5     | **Coalescence and gene trees vs. species trees**              | **Homework 8**
