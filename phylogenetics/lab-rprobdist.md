@@ -120,11 +120,11 @@ That last one will generate a confusing list of topics, some of which do not app
 
 ## Creating a histogram
 
-Drawing 1000 standard normal deviates and creating a histogram is as easy as:
+Drawing 1000 standard normal variates and creating a histogram is as easy as:
 
     > y <- rnorm(1000, 0, 1)
     
-In this case, y will be a list of 1000 random normal (mean 0, std. dev. 1) deviates (a **deviate** is just one draw from the distribution). Note that `<-` means "assign to". You can also use an equal sign here, but the `<-` is preferred, saving `=` for specifying values for arguments in function calls (you will see examples of this below). 
+In this case, y will be a list of 1000 random normal (mean 0, std. dev. 1) variates (a **variate** is just one draw from the distribution). Note that `<-` means "assign to". You can also use an equal sign here, but the `<-` is preferred, saving `=` for specifying values for arguments in function calls (you will see examples of this below). 
 
 To view the values in the variable `y`, just type the name of the variable:
 
@@ -350,7 +350,7 @@ variance = alpha * beta^2 = alpha * 4, so alpha = 4/4 = 1.
 
 ### Creating a Histogram
 
-Type the following command into the R console to generate 1000 random numbers (deviates) from a Gamma distribution with shape=0.5 and scale=2.0 and store them in the variable `x`:
+Type the following command into the R console to generate 1000 random numbers (variates) from a Gamma distribution with shape=0.5 and scale=2.0 and store them in the variable `x`:
 
     > x <- rgamma(1000, shape=0.5, scale=2.0)
     
@@ -378,7 +378,7 @@ Now refine the histogram by asking R to give you 50 bars:
     
 Note that breaks represents a suggestion only. R will often be passive-aggressive and not give you exactly as many bars as you want.
 
-Create a histogram with approximately 40 bars from 10000 deviates from a Gamma(shape=0.5, scale=2) distribution.
+Create a histogram with approximately 40 bars from 10000 variates from a Gamma(shape=0.5, scale=2) distribution.
 
 > :thinking: Compute the sample mean of the values you generated from a Gamma(0.5, 2) distribution, does it appear that the mean is correct?
 
@@ -386,7 +386,7 @@ Create a histogram with approximately 40 bars from 10000 deviates from a Gamma(s
 Yes, the sample mean is close to the true mean 1.
 {% endcomment %}
 
-Create a histogram with 30 bars from 10000 deviates from a Gamma distribution in which the mean is 2 and the variance is 1 Assuming you have stored the 10000 deviates in the variable `x`, type `summary(x)` to get the sample mean, median, etc.
+Create a histogram with 30 bars from 10000 variates from a Gamma distribution in which the mean is 2 and the variance is 1 Assuming you have stored the 10000 variates in the variable `x`, type `summary(x)` to get the sample mean, median, etc.
 
 > :thinking: How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 10000? 
 
@@ -394,7 +394,7 @@ Create a histogram with 30 bars from 10000 deviates from a Gamma distribution in
 I got mean 1.9880, which is 0.012 from the true mean
 {% endcomment %}
 
-Draw another sample with 1 million random deviates and summarize.
+Draw another sample with 1 million random variates and summarize.
 
 > :thinking: How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 1000000?
 
@@ -402,7 +402,7 @@ Draw another sample with 1 million random deviates and summarize.
 I got mean 2.0020, which is 0.002 from the true mean
 {% endcomment %}
 
-The results above make sense: the variance of one Gamma random variate is $\alpha \beta^2$, but the variance of the _mean_ of $n$ Gamma random deviates is $\alpha \beta^2/n$. The variance of the mean is thus inversely proportional to the sample size, so the mean of 1 million Gamma deviates was much closer to the expected value 2 than the mean of only 10000 deviates.
+The results above make sense: the variance of one Gamma random variate is $\alpha \beta^2$, but the variance of the _mean_ of $n$ Gamma random variates is $\alpha \beta^2/n$. The variance of the mean is thus inversely proportional to the sample size, so the mean of 1 million Gamma variates was much closer to the expected value 2 than the mean of only 10000 variates.
 
 ### Don't confuse rate with scale!
 
