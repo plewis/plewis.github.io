@@ -3,11 +3,11 @@ layout: page
 title: Homework 7 (MCMC)
 permalink: /hwmcmc/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Markov chain Monte Carlo (MCMC)
 
-In this homework assignment you will cause a metaphorical "MCMC robot" to move several steps on the landscape shown below. The landscape that your robot will be walking on is the posterior kernel, which is, at every point along the x-axis, the likelihood **multiplied by** the prior probability density. Because the numbers are so small, we will keep all the calculations on the log scale, in which case the log posterior kernel equals, for every point (edge length), the log prior density **plus** the log likelihood.
+In this homework assignment you will cause a metaphorical "MCMC robot" to move several steps on the landscape shown below. The landscape that your robot will be walking on is the **posterior kernel**, which is, at every point along the x-axis, the **likelihood _multiplied by_ the prior probability density**. Because the numbers are so small, we will keep all the calculations on the log scale, in which case the **log posterior kernel** equals, for every point (edge length), the **log prior density _plus_ the log likelihood**.
 
 {% include figure.html description=" " url="/assets/img/mcmc.png" css="image-center noborder" width="500px" %}
 
@@ -33,9 +33,11 @@ which means that the _log_ prior density is
 
 $$\log p(v) = \log(100) - 100 v.$$
 
+**Important!** Be careful to use _natural_ logarithms for these calculations. The natural logarithm of $2.71828183$ will be 1, whereas the _common_ logarithm (base 10) of $2.71828183$ is about 0.4343, so use this fact to check to ensure you are using the correct logarithm function on your calculator, python, R, etc.). In most calculators, you must use the `ln` function to get natural logarithms; the `log` function calculates the common logarithm. Python and R both use `log` to mean natural logarithm and use `log10` to compute common logarithms.
+
 ### Starting point
 
-Start your MCMC "robot" at the value $$v=0.1$$.
+Start your MCMC "robot" at the value $v=0.1$.
 
 ### Proposal distribution
 
@@ -57,9 +59,11 @@ This proposed value is negative, and is therefore not a valid value for an edge 
 
 ### What do I turn in?
 
-Please turn in the filled-in worksheet (link to PDF file below) or email me ([paul.lewis@uconn.edu](mailto:paul.lewis@uconn.edu)) a photo of the filled in worksheet.
+Please turn in the filled-in worksheet (link to PDF file below) or email/Slack me ([paul.lewis@uconn.edu](mailto:paul.lewis@uconn.edu)) a photo of the filled in worksheet.
 
 [Worksheet in PDF format](/assets/pdf/mcmc-worksheet.pdf)
+
+Note that you should start by writing in 0.1 in the $v$ column for the row corresponding to iteration 1.
 
 ### What to do
 
@@ -71,7 +75,7 @@ If the python script below is saved as _hw7.py_, it can be called like this:
 
     python3 hw7.py 0.05
     
-The _hw7.py_ script will compute the log-likelihood, log-prior-density, and log-posterior-kernel for the supplied edge length (0.05 in the example above).
+The _hw7.py_ script will compute the log-likelihood, log-prior-density, and log-posterior-kernel for the supplied edge length (i.e. the 0.05 in `python3 hw7.py 0.05`).
 
     import math, random, sys
 
@@ -92,6 +96,12 @@ The _hw7.py_ script will compute the log-likelihood, log-prior-density, and log-
     print('log(likelihood)       = %12.5f' % logLikelihood(v))
     print('log(prior)            = %12.5f' % logPrior(v))
     print('log(posterior kernel) = %12.5f' % logPosteriorKernel(v))
+    
+Thus, the `hw7.py` program will calculate every quantity you need except for the proposed edge length. The uniform random variates you need to choose the proposed edge length given the current edge length are provided (so that you will get the same answer as me, making it much easier for me to grade!). 
+
+Even though `hw7.py` spits out the log-likelihood and log-prior, the only quantity you need is the log-posterior-kernel. The posterior kernel is the height of the "landscape" that the "robot" is exploring.
+
+Note that $\log(R)$ equals the log-posterior-kernel of the proposed edge length minus the log-posterior-kernel of the current point. The value of $\log(R)$ will be negative if the "robot" is proposing to go downhill and will be positive if it is proposing to go uphill.
 
 {% comment %}
 Here are the random uniform deviates in list form:
