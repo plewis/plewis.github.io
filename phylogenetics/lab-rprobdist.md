@@ -11,12 +11,20 @@ This lab represents an introduction to the [R computing language](http://www.r-p
 
 ## Objectives
 
-After completing this lab, you will be able to use R...
+After completing this lab, you will be able to...
 
-* to plot density functions corresponding to common probability distributions used as prior distributions in Bayesian phylogenetics
-* "p*" functions to compute the cumulative probability distribution for common probability distributions
-* "q*" functions to compute quantiles for common probability distributions
-* "r*" functions to draw random samples from common probability distributions
+* plot density functions corresponding to common probability distributions used as prior distributions in Bayesian phylogenetics
+* use R's "p*" functions to compute the cumulative probability distribution for common probability distributions
+* use R's "q*" functions to compute quantiles for common probability distributions
+* use R's "r*" functions to draw random samples from common probability distributions
+* use R's "curve" function to plot a density curve
+* calculate the correct $\mu$ and $\sigma$ parameters for a Lognormal prior distribution given the desired mean and standard deviation
+* explain how an Exponential distribution is a special case of a Gamma distribution
+* explain how a Beta distribution is a special case of a Dirichlet distribution
+* list 3 probability distributions that would be appropriate for an edge length or kappa parameter
+* list 1 probability distribution that would be appropriate for the proportion of invariable sites parameter
+* list 1 probability distribution that would be appropriate for equilibrium nucleotide relative frequencies
+* list 1 probability distribution that would be appropriate for the GTR exchangeability parameters
 
 ## Copy the template
 
@@ -78,14 +86,35 @@ Copy the text below into a text file to record you answers to questions posed in
      
     19. Fill in the blank: 95% of the Exponential(0.1) distribution is less than _____. (Hint: use the `qexp` command.)
     answer
+    
+    20. What is the sample mean of your 1 million Lognormal(1,2) random variates?
+    answer
+    
+    21. What is the sample standard deviation of your 1 million Lognormal(1,2) random variates?
+    answer
+    
+    22. What is the sample mean of the _logarithm_ of your 1 million Lognormal(1,2) random variates?
+    answer
+    
+    23. What is the sample standard deviation of the _logarithm_ of your 1 million Lognormal(1,2) random variates?
+    answer
+    
+    24. What is the median of a Lognormal(1,2) distribution? (Hint: look up Lognormal distribution in Wikipedia)
+    answer
+    
+    25. What is the sample median of the 1 million Lognormal(1,2) variates that you generated at the beginning of this section?
+    answer
+    
+    26. What would mu and sigma be if you wanted the mean to be 0.1 and the standard deviation 0.5?
+    answer    
      
-    20. Which distribution -- Beta(1,1) or Beta(0.1, 0.1) -- would be most appropriate as a prior distribution for a parameter representing the chances of a coin coming up heads on any given flip if you believed strongly that the world was full of trick coins (two-headed or two-tailed coins)?
+    27. Which distribution -- Beta(1,1) or Beta(0.1, 0.1) -- would be most appropriate as a prior distribution for a parameter representing the chances of a coin coming up heads on any given flip if you believed strongly that the world was full of trick coins (two-headed or two-tailed coins)?
     answer
      
-    21. What is the effect of increasing the magnitude of all four parameters from 1 to 100 to 1 million? 
+    28. What is the effect of increasing the magnitude of all four parameters from 1 to 100 to 1 million? 
     answer
      
-    22. Which of these three Dirichlet distributions comes closest to the assumptions made by the JC69 model?
+    29. Which of these three Dirichlet distributions comes closest to the assumptions made by the JC69 model?
     answer
  
 ## Installing R and RStudio on your laptop
@@ -388,7 +417,7 @@ Yes, the sample mean is close to the true mean 1.
 
 Create a histogram with 30 bars from 10000 variates from a Gamma distribution in which the mean is 2 and the variance is 1 Assuming you have stored the 10000 variates in the variable `x`, type `summary(x)` to get the sample mean, median, etc.
 
-> :thinking: How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 10000? 
+> :thinking: How close is the sample mean to the expected mean 2 with sample size 10000? 
 
 {% comment %}
 I got mean 1.9880, which is 0.012 from the true mean
@@ -396,7 +425,7 @@ I got mean 1.9880, which is 0.012 from the true mean
 
 Draw another sample with 1 million random variates and summarize.
 
-> :thinking: How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 1000000?
+> :thinking: How close is the sample mean to the expected mean 2 with sample size 1000000?
 
 {% comment %}
 I got mean 2.0020, which is 0.002 from the true mean
@@ -622,6 +651,102 @@ pexp(1, 0.1) = 0.09516258
 {% comment %}
 qexp(0.95, 0.1) = 29.95732
 {% endcomment %}
+
+## Lognormal distribution
+
+The Lognormal distribution fills a similar niche to the Gamma distribution. Like the Gamma distribution, it has **support** (the interval in which its density is greater than 0) from 0 to $\infty$, making it suitable as a prior for edge lengths, rate ratios, and other parameters that must necessarily be positive but do not have an upper bound on their possible values. One difference between Lognormal and Gamma distributions is that Lognormal distributions always have density 0.0 at the value 0.0, whereas Gamma distributions with shape parameter less than 1 have infinite density at the value 0.0. So if zero is really not an option, a Lognormal prior may be a better choice than a Gamma distribution.
+
+The Lognormal distribution has two parameters: $\mu$ and $\sigma$. The names of these parameters may be familiar to you as the mean and standard deviation parameters of a Normal distribution. Let's generate 1 million random variates from a Lognormal distribution and ask what the sample mean and standard deviation are:
+
+    library(stats)
+    z <- rlnorm(1000000, 1, 2)
+    mean(z)
+    sd(z)
+
+> :thinking: What is the sample mean of your 1 million Lognormal(1,2) random variates?
+
+{% comment %}
+I got 19.86141
+{% endcomment %}
+
+> :thinking: What is the sample standard deviation of your 1 million Lognormal(1,2) random variates?
+
+{% comment %}
+I got 131.0158
+{% endcomment %}
+
+If the mean and standard deviation were not what you expected, it is because $\mu$ and $\sigma$ do **not** represent the mean and standard deviation of a Lognormal distribution! Let me show you what these parameters actually represent:
+
+    logz <- log(z)
+    mean(logz)
+    sd(logz)
+    
+> :thinking: What is the sample mean of the _logarithm_ of your 1 million Lognormal(1,2) random variates?
+
+{% comment %}
+I got 0.998603
+{% endcomment %}
+
+> :thinking: What is the sample standard deviation of the _logarithm_ of your 1 million Lognormal(1,2) random variates?
+
+{% comment %}
+I got 1.999756
+{% endcomment %}
+
+Create a density plot of the `logz` values:
+
+    plot(density(logz), type="l", col="blue", lwd=2, xlim=c(-10,10))
+    
+and compare that to a Normal(1,2) density:
+
+    x <- seq(-10, 10, 0.1)
+    lines(x, dnorm(x, 1, 2), col="red", lwd=5, lty="dotted", xlim=c(-10,10))
+
+So it appears that $\mu$ and $\sigma$ parameters actually represent the mean and standard deviation of the _normal distribution_ that results when you take the logarithm of a Lognormal random variate! Now you know why it is called a Lognormal distribution.
+
+What is the mean of a Lognormal distribution? The mean equals $e^{\mu + \sigma^2/2}$. For the example above, the mean would thus equal $e^{1 + 2^2/2} = e^{3} = 20.09$, which should be close to the sample mean you obtained.
+
+> :thinking: What is the median of a Lognormal(1,2) distribution? (Hint: look up Lognormal distribution in Wikipedia)
+
+{% comment %}
+It is exp(mu), which equals exp(1) = 2.71828183
+{% endcomment %}
+
+> :thinking: What is the sample median of the 1 million Lognormal(1,2) variates that you generated at the beginning of this section?
+
+{% comment %}
+I got 2.70887
+{% endcomment %}
+
+To see what this Lognormal(1,2) density function looks like, plot it as follows:
+
+    x <- seq(0, 5, 0.1)
+    plot(x, dlnorm(x, 1, 2), type="l", col="navy", lwd=2, xlim=c(0, 5))
+    
+Note that a Lognormal distribution looks nothing like a Normal distribution. While a Normal distribution is symmetric, the Lognormal distribution is very asymmetric. Normal distributions have a tail that extends to the left out to $-\infty$ and to the right out to $\infty$, whereas Lognormal variates are strictly positive.
+
+### Calculating $\mu$ and $\sigma$ from mean and standard deviation
+
+If you want to use a Lognormal distribution as a prior, you probably know the mean (`m`) and standard devation (`sd`) that you want to use. How do you obtain the $\mu$ and $\sigma$ parameters needed to specify the Lognormal prior distribution? First calculate the coefficient of variation (`cv`), which is the ratio of the standard deviation to the mean, then use that to calculate `mu` and `sigma`:
+
+    cv <- sd/m
+    variance <- log(1 + cv^2)
+    sigma <- sqrt(variance)
+    mu <- log(m) - variance/2
+    
+> :thinking: What would mu and sigma be if you wanted the mean to be 0.1 and the standard deviation 0.5?
+
+{% comment %}
+cv = .5/.1 = 5, variance = log(1+5^2) = 3.25809654, sigma = 1.80501982, mu = log(.1) - 3.25809654/2 = -3.93163336
+{% endcomment %}
+
+You can confirm that you calculated $\mu$ and $\sigma$ correctly by simulating, say, 10 million values from a Lognormal(mu, sigma) distribution and checking that the mean and standard deviation are 0.1 and 0.5, respectively:
+
+    x <- rlnorm(1000000, mu, sigma)
+    mean(x)
+    sd(x)
+
+(Note: even with a sample size of 10 million, you will not be able to nail the standard deviation perfectly, but you should be within about .02 from it.)
 
 ## Beta distribution
 
@@ -861,7 +986,7 @@ If some of the four parameters differ from the others, Dirichlet($a$,$b$,$c$,$d$
 
 ### Another way to view Dirichlet samples
 
-Check out this approach (which I showed in class) to viewing 4-parameter Dirichlet distributions suitable for modeling nucleotide frequencies:
+Check out this applet, which allows you to view 4-parameter Dirichlet distributions suitable for modeling nucleotide frequencies:
 
 [Dirichlet nucleotide frequencies prior applet](/applets/dirichlet-prior/)
 
