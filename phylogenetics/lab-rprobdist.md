@@ -654,7 +654,7 @@ qexp(0.95, 0.1) = 29.95732
 
 ## Lognormal distribution
 
-The Lognormal distribution fills a similar niche to the Gamma distribution. Like the Gamma distribution, it has **support** (the interval in which its density is greater than 0) from 0 to $\infty$, making it suitable as a prior for edge lengths, rate ratios, and other parameters that must necessarily be positive but do not have an upper bound on their possible values. One difference between Lognormal and Gamma distributions is that Lognormal distributions always have density 0.0 at the value 0.0, whereas Gamma distributions with shape parameter less than 1 have infinite density at the value 0.0. So if zero is really not an option, a Lognormal prior may be a better choice than a Gamma distribution.
+The Lognormal distribution fills a similar niche as the Gamma distribution. Like the Gamma distribution, it has **support** (the interval in which its density is greater than 0) from 0 to $\infty$, making it suitable as a prior for edge lengths, rate ratios, and other parameters that must necessarily be positive but do not have an upper bound on their possible values. One difference between Lognormal and Gamma distributions is that Lognormal distributions always have density 0.0 at the value 0.0, whereas Gamma distributions with shape parameter less than 1 have infinite density at the value 0.0. So if zero is really not an option, a Lognormal prior may be a better choice than a Gamma distribution.
 
 The Lognormal distribution has two parameters: $\mu$ and $\sigma$. The names of these parameters may be familiar to you as the mean and standard deviation parameters of a Normal distribution. Let's generate 1 million random variates from a Lognormal distribution and ask what the sample mean and standard deviation are:
 
@@ -702,7 +702,7 @@ and compare that to a Normal(1,2) density:
     x <- seq(-10, 10, 0.1)
     lines(x, dnorm(x, 1, 2), col="red", lwd=5, lty="dotted", xlim=c(-10,10))
 
-So it appears that $\mu$ and $\sigma$ parameters actually represent the mean and standard deviation of the _normal distribution_ that results when you take the logarithm of a Lognormal random variate! Now you know why it is called a Lognormal distribution.
+So it appears that $\mu$ and $\sigma$ parameters actually represent the mean and standard deviation of the _normal distribution_ that results when you take the _logarithm_ of a Lognormal random variate! Now you know why it is called a Lognormal distribution.
 
 What is the mean of a Lognormal distribution? The mean equals $e^{\mu + \sigma^2/2}$. For the example above, the mean would thus equal $e^{1 + 2^2/2} = e^{3} = 20.09$, which should be close to the sample mean you obtained.
 
@@ -723,7 +723,7 @@ To see what this Lognormal(1,2) density function looks like, plot it as follows:
     x <- seq(0, 5, 0.1)
     plot(x, dlnorm(x, 1, 2), type="l", col="navy", lwd=2, xlim=c(0, 5))
     
-Note that a Lognormal distribution looks nothing like a Normal distribution. While a Normal distribution is symmetric, the Lognormal distribution is very asymmetric. Normal distributions have a tail that extends to the left out to $-\infty$ and to the right out to $\infty$, whereas Lognormal variates are strictly positive.
+Note that a Lognormal distribution looks nothing like a Normal distribution. While a Normal distribution is symmetric, the Lognormal distribution is very asymmetric. Normal distributions have a left tail that extends out to $-\infty$ (and also a right tail that extends out to $+\infty$), whereas Lognormal variates are strictly positive.
 
 ### Calculating $\mu$ and $\sigma$ from mean and standard deviation
 
@@ -746,11 +746,11 @@ You can confirm that you calculated $\mu$ and $\sigma$ correctly by simulating, 
     mean(x)
     sd(x)
 
-(Note: even with a sample size of 10 million, you will not be able to nail the standard deviation perfectly, but you should be within about .02 from it.)
+(Note: even with a sample size of 10 million, you will not be able to nail the standard deviation with as much accuracy as you might expect, but your sample standard deviation should be within about 0.02-0.05 from the true value.)
 
 ## Beta distribution
 
-The Beta distribution differs from the Gamma distribution in that Beta random variables have an upper bound (1.0) as well as a lower bound (0.0). Two parameters (a and b, but often referred to as $\alpha$ and, perversely, $\beta$) govern the shape of the Beta distribution. Beta distributions are natural priors for parameters such as the proportion of invariable sites (and the proportion of heads parameter in coin flipping examples), which are restricted to the [0.0, 1.0] interval.
+The Beta distribution differs from the Gamma distribution in that Beta random variables have an upper bound (1.0) as well as a lower bound (0.0). Two parameters (a and b, but often referred to as $\alpha$ and, perversely, $\beta$) govern the shape of the Beta distribution. Beta distributions have support on the interval [0,1] and thus are natural priors for parameters such as the proportion of invariable sites (and the proportion of heads parameter in coin flipping examples), which are restricted to the [0,1] interval.
 
 Here are some basic facts about Beta distributions:
 
