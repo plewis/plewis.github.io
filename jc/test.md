@@ -4,7 +4,7 @@ title: Testing Page
 permalink: /test/
 ---
 
-New schedule design:
+## New _schedule_ design:
 
 <table>
 <tr><th>Date</th> <th>Lecture topic</th> <th>Lab/homework</th></tr>
