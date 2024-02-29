@@ -155,6 +155,9 @@ If I've blocked you from using the copy of `galax` in `bin`, you can download it
 
     cd ~/week6
     curl -LO https://gnetum.eeb.uconn.edu/courses/phylogenetics/jc/galax
+    chmod +x galax
+    
+(Note: the `chmod +x galax` line was added after you emailed me to alert me to the permissions problem.)
     
 If it is in your `week6` directory, you should invoke it this way:
 
