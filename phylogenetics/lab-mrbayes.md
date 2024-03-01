@@ -3,11 +3,11 @@ layout: page
 title: MrBayes Lab
 permalink: /mrbayes/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Goals
 
-This lab exercise will introduce you to one of the most important computer programs for conducting Bayesian phylogenetic analyses, MrBayes. We will be using MrBayes v3.2.7 on the cluster in this lab. You will learn how to set up MrBayes to conduct an MCMC analysis, including how to set the prior distributions used for parameters in the model. You will learn how to use the program Tracer to summarize the posterior distribution sampled by the MCMC simulation. Finally, you will learn how to run MrBayes without data to explore the prior distribution.
+This lab exercise will introduce you to one of the most popular computer programs for conducting Bayesian phylogenetic analyses, MrBayes. We will be using MrBayes v3.2.7 on the cluster in this lab. You will learn how to set up MrBayes to conduct an MCMC analysis, including how to set the prior distributions used for parameters in the model. You will learn how to use the program Tracer to summarize the posterior distribution sampled by the MCMC simulation. Finally, you will learn how to run MrBayes without data to explore the prior distribution.
 
 ## Getting started
 
@@ -19,45 +19,51 @@ to start a session on a node that is not currently running jobs. Once you see th
 
     module load MrBayes/3.2.7
  
-to load the necessary modules. (Remember: the command <tt>module avail</tt> shows a list of all modules.)
+to load the necessary modules. (Remember: the command `module avail` shows a list of all modules.)
 
+## Questions
+
+Here is the template to use for recording your answers to the :thinking: questions:
+
+    1. TODO
+    
 ## Create a directory
 
-Use the unix <tt>mkdir</tt> command to create a directory to play in today:
+Use the unix `mkdir` command to create a directory to play in today:
 
     cd
     mkdir mblab
 
 ## Download and save the data file
 
-Save the contents of the file _algaemb.nex_ to a file in the _mblab_ folder. One easy way to do this is to <tt>cd</tt> into the _mblab_ folder, then use the <tt>curl</tt> command ("Copy URL") to download the file:
+Save the contents of the file _algaemb.nex_ to a file in the _mblab_ folder. One easy way to do this is to `cd` into the _mblab_ folder, then use the `curl` command ("Copy URL") to download the file:
 
     cd ~/mblab
-    curl -O http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/algaemb.nex
+    curl -O https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/algaemb.nex
     
 Use nano to look at this file. This is the same 16S data you have used before, but the original file had to be changed to accommodate MrBayes' eccentricities. While MrBayes does a fair job of reading Nexus files, it chokes on certain constructs. The information about what I had to change in order to get it to work is in a comment at the top of the file (this might be helpful in converting other nexus files to work with MrBayes in the future).
 
 ## Creating a MRBAYES block
 
-The next step is to set up an MCMC analysis. There are three commands in particular that you will need to know about in order to set up a typical run: <tt>lset</tt>, <tt>prset</tt> and <tt>mcmc</tt>. The command <tt>mcmcp</tt> is identical to <tt>mcmc</tt> except that it does not actually start a run. For each of these commands you can obtain online information by typing <tt>help</tt> followed by the command name: for example, <tt>help prset</tt>. Start MrBayes interactively by simply typing <tt>mb</tt> to see how to get help:
+The next step is to set up an MCMC analysis. There are three commands in particular that you will need to know about in order to set up a typical run: `lset`, `prset` and `mcmc`. The command `mcmcp` is identical to `mcmc` except that it does not actually start a run. For each of these commands you can obtain online information by typing `help` followed by the command name: for example, `help prset`. Start MrBayes interactively by simply typing `mb` to see how to get help:
 
     mb
     
-This will start MrBayes. At the <tt>MrBayes></tt> prompt, type help:
+This will start MrBayes. At the `MrBayes>` prompt, type help:
 
     MrBayes> help
     
-To quit MrBayes, type <tt>quit</tt> at the "MrBayes>" prompt. You will need to quit MrBayes in order to build up the MRBAYES block in your data file.
+To quit MrBayes, type `quit` at the "MrBayes>" prompt. You will need to quit MrBayes in order to build up the MRBAYES block in your data file.
 
-Create a MRBAYES block in your Nexus data file. MrBayes does not have a built-in editor, so you will need to use the nano editor to edit the _algaemb.nex_ data file. Use Ctrl-/, Ctrl-v to jump to the bottom of the file in nano, then add the following at the very bottom of the file to begin creating the MRBAYES block:
+Create a MRBAYES block at the bottom of your `algaemb.nex` data file. MrBayes does not have a built-in editor, so you will need to use the nano editor to edit the _algaemb.nex_ data file. Use Ctrl-/, Ctrl-v to jump to the bottom of the file in nano, then add the following at the very bottom of the file to begin creating the MRBAYES block:
 
     begin mrbayes;
         set autoclose=yes seed=12345 swapseed=12345;
     end;
 
-Note that I refer to this block as a MRBAYES block (upper case), but the MrBayes program does not care about case, so using mrbayes (lower case) works just fine. The <tt>autoclose=yes</tt> statement in the <tt>set</tt> command tells MrBayes that we will not want to continue the run beyond the 10,000 generations that we will specify. If you leave this out, MrBayes will ask you whether you wish to continue running the chains after the specified number of generations is finished. The <tt>seed=12345</tt> and <tt>swapseed=12345</tt> statements will set a seed for your mcmc and swapping between your heated and cold chains. If you don't specify a seed, MrBayes will generate random seeds. Specifying a seed will allow you to get the same results each time you run the analysis. Note that in practice you can chaneg you seed to be any integer, but we'll all use 12345 for this lab.
+Note that I refer to this block as a `MRBAYES` block (upper case), but the MrBayes program does not care about case, so using `mrbayes` (lower case) works just fine. The `autoclose=yes` statement in the `set` command tells MrBayes that we will not want to continue the run beyond the 10,000 generations that we will specify. If you leave this out, MrBayes will ask you whether you wish to continue running the chains after the specified number of generations is finished. The `seed=12345` and `swapseed=12345` statements will set a seed for your MCMC and swapping between your heated and cold chains, respectively. If you don't specify a seed, MrBayes will generate random seeds. You should always explicitly set a seed in order to preserve your ability to late recreate the analysis exactly (or tell others how to recreate it). Note that, in practice, you can change the seed to be any integer, but we'll all use 12345 for this lab.
 
-Add subsequent commands (described below) after the <tt>set</tt> command and before the <tt>end;</tt> line. Note that commands in MrBayes are (intentionally) similar to those in PAUP*, but the differences can be frustrating. For instance, <tt>lset ?</tt> in PAUP* gives you information about the current likelihood settings, but this does not work in MrBayes. Instead, you type <tt>help lset</tt>. Also, the <tt>lset</tt> command in MrBayes has many options not present in PAUP*, and vice versa.
+Add subsequent commands (described below) after the `set` command and before the `end;` line. Note that commands in MrBayes are (intentionally) similar to those in PAUP*, but the differences can be frustrating. For instance, `lset ?` in PAUP* gives you information about the current likelihood settings, but this does not work in MrBayes. Instead, you type `help lset`. Also, the `lset` command in MrBayes has many options not present in PAUP*, and vice versa.
 
 ### Specifying the prior on branch lengths
 
@@ -68,7 +74,7 @@ Add subsequent commands (described below) after the <tt>set</tt> command and bef
         prset brlenspr=unconstrained:exp(10.0);
     end;
 
-The <tt>prset</tt> command above specifies that branch lengths are to be unconstrained (i.e. a molecular clock is not assumed) and the prior distribution to be applied to each branch length is an exponential distribution with mean 1/10. Note that the value you specify for <tt>unconstrained:exp</tt> is the **rate**, which is the inverse of the mean.
+The `prset` command above specifies that branch lengths are to be unconstrained (i.e. a molecular clock is not assumed) and the prior distribution to be applied to each branch length is an exponential distribution with mean 1/10. Note that the value you specify for `unconstrained:exp` is the **rate**, which is the inverse of the mean.
 
 **Note that you should only have one mrbayes block in your file at this point. We will be adding to this one mrbayes block as each prior is discussed.**
 
@@ -82,7 +88,7 @@ The <tt>prset</tt> command above specifies that branch lengths are to be unconst
         prset shapepr=exp(1.0);
     end;
 
-The second <tt>prset</tt> command specifies an exponential distribution with mean 1.0 for the shape parameter of the gamma distribution we will use to model rate heterogeneity. Note that we have not yet told MrBayes that we wish to assume that substitution rates are variable; we will do that using the <tt>lset</tt> command below.
+The second `prset` command specifies an exponential distribution with mean 1.0 for the shape parameter of the gamma distribution we will use to model rate heterogeneity. Note that we have not yet told MrBayes that we wish to assume that substitution rates are variable; we will do that using the `lset` command below.
 
 ### Specifying the prior on kappa
 
@@ -126,7 +132,7 @@ The above command states that a flat Dirichlet distribution is to be used for ba
         lset nst=2 rates=gamma ngammacat=4;
     end;
 
-We are finished setting priors now, so the <tt>lset</tt> command above finishes our specification of the model by telling MrBayes that we would like a 2-parameter substitution matrix (i.e. the rate matrix has only two substitution rates, the transition rate and the transversion rate). It also specifies that we would like rates to vary across sites according to a gamma distribution with 4 categories.
+We are finished setting priors now, so the `lset` command above finishes our specification of the model by telling MrBayes that we would like a 2-parameter substitution matrix (i.e. the rate matrix has only two substitution rates, the transition rate and the transversion rate). It also specifies that we would like rates to vary across sites according to a gamma distribution with 4 categories.
 
 ### Specifying MCMC options
 
@@ -140,19 +146,19 @@ We are finished setting priors now, so the <tt>lset</tt> command above finishes 
         mcmcp ngen=10000 samplefreq=10 printfreq=100 nruns=1 nchains=3 savebrlens=yes;
     end;
 
-The <tt>mcmcp</tt> command above specifies most of the remaining details of the analysis.
+The `mcmcp` command above specifies most of the remaining details of the analysis.
 
-<tt>ngen=10000</tt> tells MrBayes that its MCMC robots should each take 10,000 steps. You should ordinarily use much larger values for <tt>ngen</tt> than this (the default is 1 million steps). We're keeping it small here because we do not have a lot of time and the purpose of this lab is to learn how to use MrBayes, not produce a publishable result.
+`ngen=10000` tells MrBayes that its MCMC robots should each take 10,000 steps. You should ordinarily use much larger values for `ngen` than this (the default is 1 million steps). We're keeping it small here because we do not have a lot of time and the purpose of this lab is to learn how to use MrBayes, not produce a publishable result.
 
-<tt>samplefreq=10</tt> says to only save parameter values and the tree topology every 10 steps.
+`samplefreq=10` says to only save parameter values and the tree topology every 10 steps.
 
-<tt>printfreq=100</tt> says that we would like a progress report every 100 steps.
+`printfreq=100` says that we would like a progress report every 100 steps.
 
-<tt>nruns=1</tt> says to just do one independent run. MrBayes performs two separate analyses by default.
+`nruns=1` says to just do one independent run. MrBayes performs two separate analyses by default.
 
-<tt>nchains=3</tt> says that we would like to have 2 heated chains running in addition to the cold chain. MrBayes uses 4 chains by default.
+`nchains=3` says that we would like to have 2 heated chains running in addition to the cold chain. MrBayes uses 4 chains by default.
 
-Finally, <tt>savebrlens=yes</tt> tells MrBayes that we would like it to save branch lengths when it saves the sampled tree topologies.
+Finally, `savebrlens=yes` tells MrBayes that we would like it to save branch lengths when it saves the sampled tree topologies.
 
 ### Specifying an outgroup
 
@@ -175,7 +181,7 @@ Now save the file and start MrBayes (from within the _mblab_ directory) by typin
 
     mb
     
-Once it starts, type the following at the <tt>MrBayes></tt> prompt
+Once it starts, type the following at the `MrBayes>` prompt
 
     exe algaemb.nex
     
@@ -183,27 +189,27 @@ Alternatively, you could both start MrBayes and execute the data file like this:
 
     mb -i algaemb.nex
 
-The <tt>-i</tt> tells MrBayes to wait for further commands (i.e. be interactive).
+The `-i` tells MrBayes to wait for further commands (i.e. be interactive).
 
-Once MrBayes has finished executing the data file, type the following at the <tt>MrBayes></tt> prompt:
+Once MrBayes has finished executing the data file, type the following at the `MrBayes>` prompt:
 
     mcmc
     
-This command starts the run. While MrBayes runs, it shows one-line progress reports. The first column is the iteration (generation) number. The next three columns show the log-likelihoods of the separate chains that are running, with the cold chain indicated by square brackets rather than parentheses. The last complete column is a prediction of the time remaining until the run completes. The columns consisting of only <tt>--</tt> are simply separators, they have no meaning.
+This command starts the run. While MrBayes runs, it shows one-line progress reports. The first column is the iteration (generation) number. The next three columns show the log-likelihoods of the separate chains that are running, with the cold chain indicated by square brackets rather than parentheses. The last complete column is a prediction of the time remaining until the run completes. The columns consisting of only `--` are simply separators, they have no meaning.
 
 > :thinking: Do you see evidence that the 3 chains are swapping with each other?
 {% comment %}
 yes, the square brackets move around from line to line, indicating that the cold chain is swapping with other chains
 {% endcomment %}
 
-The section entitled <tt>Chain swap information:</tt> reports the number of times each of the three chains attempted to swap with one of the other chains (three values in lower left, below the main diagonal) and the proportion of time such attempts were successful (three values in upper right, above the main diagonal).
+The section entitled `Chain swap information:` reports the number of times each of the three chains attempted to swap with one of the other chains (three values in lower left, below the main diagonal) and the proportion of time such attempts were successful (three values in upper right, above the main diagonal).
 
 > :thinking: How many times did MrBayes attempt to swap chains per generation? Use the information in the lower diagonal of the chain swap information table for this, in conjunction with the number of total generations you specified in the MRBAYES block.
 {% comment %}
 MrBayes attempts to swap a random pair of chains once per generation, as indicated by the fact that the total number of swap attempts equals the number of generations
 {% endcomment %}
 
-When the run has finished, MrBayes will report (in the section entitled <tt>Acceptance rates for the moves in the "cold" chain:</tt>) various statistics about the run, such as the percentage of time it was able to accept proposed changes of various sorts. These percentages should, ideally, all be between about 20% and 50%, but as long as they are not extreme (e.g. 1% or 99%) then things went well. Even if there are low acceptance rates for some proposal types, this may not be important if there are other proposal types that operate on the same parameters. For example, note that ExtSPR, ExtTBR, NNI and PrsSPR all operate on Tau, which is the tree topology. As long as these proposals are collectively effective, the fact that one of them is accepting at a very low rate is not of concern.
+When the run has finished, MrBayes will report (in the section entitled `Acceptance rates for the moves in the "cold" chain:`) various statistics about the run, such as the percentage of time it was able to accept proposed changes of various sorts. These percentages should, ideally, all be between about 20% and 50%, but as long as they are not extreme (e.g. 1% or 99%) then things went well. Even if there are low acceptance rates for some proposal types, this may not be important if there are other proposal types that operate on the same parameters. For example, note that ExtSPR, ExtTBR, NNI and PrsSPR all operate on Tau, which is the tree topology. As long as these proposals are collectively effective, the fact that one of them is accepting at a very low rate is not of concern.
 
 > :thinking: What explanation could you offer if the acceptance rate was very low, e.g. 1%?
 {% comment %}
@@ -259,7 +265,7 @@ This says that an attempt to change the gamma shape parameter will only be made 
 51.5% of 1.89% 0f 10000 is 97 times
 {% endcomment %}
 
-The fact that MrBayes modified the gamma shape parameter only about 100 times out of a run involving 10000 iterations brings up a couple of important points. First, in each iteration, MrBayes chooses a move (i.e. proposal) at random to try. Each move is associated with a "Rel. prob." (relative probability). Using the <tt>showmoves</tt> command shows the following list of moves that were used in this particular analysis:
+The fact that MrBayes modified the gamma shape parameter only about 100 times out of a run involving 10000 iterations brings up a couple of important points. First, in each iteration, MrBayes chooses a move (i.e. proposal) at random to try. Each move is associated with a "Rel. prob." (relative probability). Using the `showmoves` command shows the following list of moves that were used in this particular analysis:
 
    Moves that will be used by MCMC sampler (rel. proposal prob. > 0.0):
 
@@ -367,23 +373,23 @@ The fact that MrBayes modified the gamma shape parameter only about 100 times ou
 
 Summing the 11 relative probabilities yields 1 + 0.5 + 0.5 + 1 + 5 + 5 + 5 + 5 + 20 + 7 + 3 = 53. To get the probability of using one of these moves in any particular iteration, MrBayes divides the relative probability for the move by this sum. Thus, move 4, whose job is to update the gamma shape parameter (called Alpha by MrBayes) will be chosen with probability 1/53 = 0.01886792. This is where the "1.89 % Multiplier(Alpha)" line comes from in the move probability table spit out just before the run started.
 
-Second, note that MrBayes places a lot of emphasis on modifying the tree topology and branch lengths (in this case 100*(5+5+5+5+20+7+3)/53 = 94% of proposals), but puts little effort (in this case only 6%) into updating other model parameters. You can change the percent effort for a particular move using the <tt>propset</tt> command. For example, to increase the effort devoted to updating the gamma shape parameter, you could (but don't do this now!) issue the following command either at the MrBayes prompt or in a MRBAYES block:
+Second, note that MrBayes places a lot of emphasis on modifying the tree topology and branch lengths (in this case 100*(5+5+5+5+20+7+3)/53 = 94% of proposals), but puts little effort (in this case only 6%) into updating other model parameters. You can change the percent effort for a particular move using the `propset` command. For example, to increase the effort devoted to updating the gamma shape parameter, you could (but don't do this now!) issue the following command either at the MrBayes prompt or in a MRBAYES block:
 
     propset Multiplier(Alpha)$prob=10   [*** don't type this ***]
 
-This would change the relative probability of the "Multiplier(Alpha)" move from its default value 1 to the value you specified (10). You can also change tuning parameters for moves using the <tt>propset</tt> command. Before doing that, however, we need to see if the boldness of any moves needs to be changed.
+This would change the relative probability of the "Multiplier(Alpha)" move from its default value 1 to the value you specified (10). You can also change tuning parameters for moves using the `propset` command. Before doing that, however, we need to see if the boldness of any moves needs to be changed.
 
 ## The sump command
 
 MrBayes saves information in several files. Only two of these will concern us today. One of them will be called _algaemb.nex.p_. This is the file in which the sampled parameter values were saved. This file is saved as a tab-delimited text file so it is possible to read it into a variety of programs that can be used for summarization or plotting. We will examine this file graphically in a moment, but first let's get MrBayes to summarize its contents for us.
 
-At the MrBayes prompt, type the command <tt>sump</tt>. This will generate a crude graph showing the log-likelihood as a function of time. Note that the log-likelihood bounces around between -3183 and -3176. The fact that it is bouncing around is a sign that the MCMC simulation is mixing well.
+At the MrBayes prompt, type the command `sump`. This will generate a crude graph showing the log-likelihood as a function of time. Note that the log-likelihood bounces around between -3183 and -3176. The fact that it is bouncing around is a sign that the MCMC simulation is mixing well.
 
 Below the graph, MrBayes provides the arithmetic mean and harmonic mean of the marginal likelihood. The harmonic mean has been often used in estimating Bayes factors, which are in turn useful for deciding which among different models fits the data best on average. We will talk about how to use this value in lecture, where you will also get some dire warnings about Bayes factors calculated in this way.
 
 The table at the end is quite useful. It shows the (marginal) posterior mean, median, variance and 95% credible interval for each parameter in your model based on the samples taken during the run. The credible interval shows the range of values of a parameter that account for the middle 95% of its marginal posterior distribution. If the credible interval for kappa is 3.9 to 5.9, then you can say that there is a 95% chance that kappa is between 3.9 and 5.9 given your data and the assumed model. The parameter TL represents the sum of all the branch lengths. Rather than report every branch length individually, MrBayes just keeps track of their sum.
 
-Look at the output of the <tt>sump</tt> command and answer these questions:
+Look at the output of the `sump` command and answer these questions:
 
 > :thinking: What is the total number of samples saved from the posterior distribution?
 {% comment %}
@@ -417,15 +423,15 @@ yes, I found that only one of the parameters pi(G) had a ESS value greater than 
 
 ## The sumt command
 
-Now type the command <tt>sumt</tt>. This will summarize the trees that have been saved in the file _algaemb.nex.t_.
+Now type the command `sumt`. This will summarize the trees that have been saved in the file _algaemb.nex.t_.
 
 The output of this command includes a bipartition (split) table, showing posterior probabilities for every split found in any tree sampled during the run. After the bipartition table is shown a majority-rule consensus tree (labeled "Clade credibility values") containing all splits that had posterior probability 0.5 or above.
 
 If you chose to save branch lengths (and we did), MrBayes shows a second tree (labeled Phylogram) in which each branch is displayed in such a way that branch lengths are proportional to their posterior mean. MrBayes keeps a running sum of the branch lengths for particular splits it finds in trees as it reads the file _algaemb.nex.t_. Before displaying this tree, it divides the sum for each split by the total number of times it encountered the split to get a simple average branch length for each split. It then draws the tree so that branch lengths are proportional to these mean branch lengths.
 
-Finally, the last thing the <tt>sumt</tt> command does is tell you how many tree topologies are in credible sets of various sizes. For example, in my run, it said that the 99% credible set contained 16 trees. What does this tell us? MrBayes orders tree topologies from most frequent to least frequent (where frequency refers to the number of times they appear in _algaemb.nex.t_). To construct the 99% credible set of trees, it begins by adding the most frequent tree to the set. If that tree accounts for 99% or more of the posterior probability (i.e. at least 99% of all the trees in the _algaemb.nex.t_ file have this topology), then MrBayes would say that the 99% credible set contains 1 tree. If the most frequent tree topology was not that frequent, then MrBayes would add the next most frequent tree topology to the set. If the combined posterior probability of both trees was at least 0.99, it would say that the 99% credible set contains 2 trees. In my case, it had to add the top 16 trees to get the total posterior probability up to 99%. 
+Finally, the last thing the `sumt` command does is tell you how many tree topologies are in credible sets of various sizes. For example, in my run, it said that the 99% credible set contained 16 trees. What does this tell us? MrBayes orders tree topologies from most frequent to least frequent (where frequency refers to the number of times they appear in _algaemb.nex.t_). To construct the 99% credible set of trees, it begins by adding the most frequent tree to the set. If that tree accounts for 99% or more of the posterior probability (i.e. at least 99% of all the trees in the _algaemb.nex.t_ file have this topology), then MrBayes would say that the 99% credible set contains 1 tree. If the most frequent tree topology was not that frequent, then MrBayes would add the next most frequent tree topology to the set. If the combined posterior probability of both trees was at least 0.99, it would say that the 99% credible set contains 2 trees. In my case, it had to add the top 16 trees to get the total posterior probability up to 99%. 
 
-Type <tt>quit</tt> (or just <tt>q</tt>), to quit MrBayes now.
+Type `quit` (or just `q`), to quit MrBayes now.
 
 ## Using Tracer to summarize MCMC results
 

@@ -63,10 +63,10 @@ Copy the text below into a text file to record you answers to questions posed in
     11. Use the `pgamma` command to compute the probability that a value drawn from a Gamma(shape=2,scale=0.5) distribution would fall between 0.5 and 4.5? Hint: you will need to either invoke the command twice or provide it with a vector containing two values, then do some subtraction with the results. 
     answer
      
-    12. What value x produces an interval (0,x) that accounts for 95% of the values drawn from a Gamma(shape=2,scale=0.5) distribution?
+    12. What value $x_r$ produces an interval (0,$x_r$) that accounts for 95% of the values drawn from a Gamma(shape=2,scale=0.5) distribution?
     answer
      
-    13. What pair of values (x,y) produces an interval that accounts for the middle 95% of the values drawn from a Gamma(shape=2, scale=0.5) distribution (by middle, I mean that 2.5% of the distribution should be less than x and 2.5% greater than y)?
+    13. What pair of values ($x_l$,$x_r$) produces an interval that accounts for the middle 95% of the values drawn from a Gamma(shape=2, scale=0.5) distribution (by middle, I mean that 2.5% of the distribution should be less than $x_l$ and 2.5% greater than $x_r$)?
     answer
      
     14. Is the height of the density at x=0 related to the rate parameter?

@@ -118,20 +118,20 @@ tells RevBayes to run for 10000 generations, and this line (a little bit before 
     
 tells RevBayes to save a tree to the file `slow.trees` every generation (`printgen=1`). This means you will end up with a file containing 10000 trees. Because you specified `nruns=4`, RevBayes will actually carry out 4 independent runs, each one generating 10000 trees, so 40000 trees total.
 
-There are 945 possible rooted tree topologies for 6 taxa, so a sample of 40000 should allow us to sample every possible tree about 40000/945 = 42.3 times if everything is working correctly. That should be enough sampling to estimate the information content quite well. 
+There are 105 possible unrooted tree topologies for 6 taxa, so a sample of 40000 should allow us to sample every possible tree about 380 times if everything is working correctly. That should be enough sampling to estimate the information content quite well. 
 
-In case you are interested, the number of rooted trees can be calculated as follows:
+In case you are interested, the number of unrooted trees can be calculated as follows:
 
-    taxa     rooted trees
-       2     1
-       3     1*3 = 3
-       4     1*3*5 = 15
-       5     1*3*5*7 = 105
-       6     1*3*5*7*9 = 945
-       7     1*3*5*7*9*11 = 10395
-       8     1*3*5*7*9*11*13 = 135135
-       9     1*3*5*7*9*11*13*15 = 2027025
-      10     1*3*5*7*9*11*13*15*17 = 34459425
+    taxa     unrooted trees
+       3     1
+       4     1*3 = 3
+       5     1*3*5 = 15
+       6     1*3*5*7 = 105
+       7     1*3*5*7*9 = 945
+       8     1*3*5*7*9*11 = 10395
+       9     1*3*5*7*9*11*13 = 135135
+      10     1*3*5*7*9*11*13*15 = 2027025
+      11     1*3*5*7*9*11*13*15*17 = 34459425
 
 ### 4. Run Galax to estimate information content
 
