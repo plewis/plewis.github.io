@@ -33,19 +33,9 @@ Commands needed:
 
 ### 3. Run RevBayes to generate a posterior sample
 
-One minor change to step 3. We will tell RevBayes to completely ignore the data when performing MCMC. This will be equivalent to analyzing a data set that truly does not have any information whatsoever.
+I've made some minor changes to step 3. 
 
-To tell RevBayes to ignore the data entirely, change these 2 lines...
-
-    mymcmc.burnin(generations=10000, tuningInterval=100, underPrior=FALSE) 
-    mymcmc.run(generations=10000, underPrior=FALSE)
-
-to this...
-
-    mymcmc.burnin(generations=10000, tuningInterval=100, underPrior=TRUE) 
-    mymcmc.run(generations=10000, underPrior=TRUE)
-
-We must give RevBayes a data file, but setting `underPrior=TRUE` tells RevBayes to ignore the data except for the taxon names.
+#### 3a. Use variables to make changing the script easier
 
 It also makes sense to create some variables at the top of the RevBayes script to store the output file names so that they are easy to change. I've put a complete RevBayes script on the server for you. Just download it to your `week7` directory as follows:
 
@@ -58,17 +48,36 @@ If you open `zeroinfo.Rev` in nano, you will see that it begins like this:
     treefname <- "output/zeroinfo.trees"
     logfname  <- "output/zeroinfo.log"
     mapfname  <- "output/zeroinfo-map.tree"
+    ignore_data <- TRUE
     
     # Read in sequence data for both genes
     data = readDiscreteCharacterData(datafname)
     
-I've created the variables `datafname` (the data file name), `treefname` (output tree file name), `logfname` (output log file), and `mapfname` (output map tree file name). I've used these in the rest of the script (see for example the `data = ` line).
+I've created the variables `datafname` (the data file name), `treefname` (output tree file name), `logfname` (output log file), `mapfname` (output map tree file name), and `ignore_data`. I've used these in the rest of the script (see for example the `data = ` line).
+
+#### 3b. Tell RevBayes to ignore the data
+
+To tell RevBayes to ignore the data entirely when performing its MCMC analysis, I've changed these 2 lines...
+
+    mymcmc.burnin(generations=10000, tuningInterval=100, underPrior=FALSE) 
+    mymcmc.run(generations=10000, underPrior=FALSE)
+
+to this...
+
+    mymcmc.burnin(generations=10000, tuningInterval=100, underPrior=ignore_data) 
+    mymcmc.run(generations=10000, underPrior=ignore_data)
+
+The new version makes use of the `ignore_data` variable I created at the top of the file. Setting that to `TRUE` causes RevBayes to ignore the data except for the taxon names.
+
+#### 3c. Run RevBayes
 
 Run RevBayes using this command:
 
     rb zeroinfo.Rev
     
-This will run really fast (because it is ignoring the data) and will save all the output files to a new directory `~/week7/output`.\
+This will run really fast (because it is ignoring the data) and will save all the output files to a new directory `~/week7/output`.
+
+#### 3d. Correction of mistake in week6 instructions
 
 I changed the following text in the instructions for [last week](/jcweek6/) because I realized that RevBayes is exploring unrooted (not rooted) trees. Here is what that text should say:
 
