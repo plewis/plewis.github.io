@@ -500,6 +500,8 @@ sampled only every 10th iteration, which yields 1000 samples; the 1 additional s
 25%, as indicated by the statement: Based on a total of 751 samples out of a total of 1001 samples
 {% endcomment %}
 
+The ESS (Effective Sample Size) tells you something about autocorrelation in your sample. Imagine drawing 1 variate from a Normal distribution and then copying that value 1000 times. You have, nominally, a sample of 1000 values, but they are all copies of just 1 independent draw. In this case, the ESS would be 1, not 1000. Now imagine drawing 10 values from a Normal distribution and copying each of them 100 times. This time, the ESS would be 10 even though the sample size is 1000. Tracer measures the autocorrelation (how correlated each sampled value is to the previous one, and the one before that, and so on, in order to measure the ESS of your sample. It shows (what it considers) low ESS values in yellow and _really_ low ESS values in red. You should run your MCMC analysis long enough that the ESS is not yellow or red for at least the parameters you care most about (and, ideally, all of the ESS should be out of the danger zone).
+
 > :thinking: Which value in the parameter column had the largest effective sample size (ESS)?
 {% comment %}
 pi(G)
@@ -576,11 +578,11 @@ Click on the row labeled TL on the left (the Tree Length).
 
 ### Scatterplots of pairs of parameters
 
-Note that Tracer lets you easily create scatterplots of combinations of parameters. Simply select two parameters (you will have to hold down the Ctrl or Cmd key to select multiple items) and then click on the Joint-Marginal tab.
+Note that Tracer lets you easily create scatterplots of combinations of parameters. Simply select two parameters (you will have to hold down the Ctrl or Cmd key to select multiple items) and then click on the "Joint-Marginal" tab.
 
 ### Marginal densities
 
-Try selecting all four base frequencies and then clicking the Marginal Prob Distribution tab. This will show (estimated) marginal probability density plots for all four frequencies at once. Note that KDE is selected underneath the plot in the Display drop-down list. KDE stands for "Kernel Density Estimation" and represents a common non-parametric method for smoothing histograms into estimates of probabilty density functions.
+Try selecting all four base frequencies and then clicking the "Marginal Density" tab. This will show (estimated) marginal probability density plots for all four frequencies at once. Note that KDE is selected underneath the plot in the Display drop-down list. KDE stands for "Kernel Density Estimation" and represents a common non-parametric method for smoothing histograms into estimates of probabilty density functions.
 
 ## Running MrBayes with no data
 
@@ -614,7 +616,7 @@ yes, the log-likelihood is 0.0, which corresponds to a likelihood equal to 1.0
 
 ### Checking the shape parameter prior
 
-Import the output file _algaemb.nex.p_ in Tracer. Look first at the histogram of alpha, the shape parameter of the gamma distribution.
+On your local laptop, rename _algaemb.nex.p_ to something like _algaemb-posterior.p_, then download the file _algaemb.nex.p_ to your laptop, renaming it _algaemb-prior.p_. Open _algaemb-prior.p_ in Tracer. Look first at the histogram of alpha, the shape parameter of the gamma distribution.
 
 > :thinking: What is the mean you expected for alpha based on the prset shapepr=exp(1.0) command in the algaemb.nex file? 
 {% comment %}
@@ -626,7 +628,7 @@ Import the output file _algaemb.nex.p_ in Tracer. Look first at the histogram of
 0.9974
 {% endcomment %}
 
-> :thinking: An exponential distribution always starts high and approaches zero as you move to the right along the x-axis. The highest point of the exponential density function is 1/mean. If you look at the approximated density plot (click on the Marginal Density tab), does it appear to approach 1/mean at the value alpha=0.0? 
+> :thinking: An exponential distribution always starts high and approaches zero as you move to the right along the x-axis. The highest point of the exponential density function is 1/mean. If you look at the approximated density plot (click on the "Marginal Density" tab), does it appear to approach 1/mean at the value alpha=0.0? 
 {% comment %}
 yes, but changing Display from KDE to Histogram may make it clearer
 {% endcomment %}
