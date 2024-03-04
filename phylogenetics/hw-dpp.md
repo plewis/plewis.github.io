@@ -9,7 +9,7 @@ In this homework assignment you will use what you know (from the lecture on Marc
 
 Assume that there are 3 genes (A, B, and C), and that a **Dirichlet process prior** governs the clustering of genes according to preferred tree topology. 
 
-One possible configuration seats all 3 genes at the same "table" (using the restaurant metaphor). In this configuration, all 3 genes mush share the same topology.
+One possible configuration seats all 3 genes at the same "table" (using the restaurant metaphor). In this configuration, all 3 genes must share the same topology.
 
 The configuration at the opposite extreme seats each of the 3 genes at its own table, and each table gets its own private tree topology. Note that the same "dish" (tree topology) can be served at different tables, so it is possible that all 3 genes share one topology despite sitting at different tables.
 
