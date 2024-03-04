@@ -17,11 +17,11 @@ Download the following data file (sequence alignment) to your account on the clu
 
     curl -O https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw8.nex
 
-Load the `paup/4.0a-166` module. The analyses you will carry out comprise:
+Load the `paup/4.0a-166` module. The analyses you will carry out comprise the following steps:
 
-* using the `alltrees` command to perform an exhaustive search using maximum likelihood (using the default model, which is HKY85 with trs:trv ratio 2 and empirical nucleotide frequencies);
-* using the `lscores` command to obtain the log likelihood of the best tree; and 
-* using the `bootstrap` command to perform a bootstrap analysis (1000 replicates). 
+* use the `alltrees` command to perform an exhaustive search using maximum likelihood (using the default model, which is HKY85 with trs:trv ratio 2 and empirical nucleotide frequencies);
+* use the `lscores` command to obtain the log likelihood of the best tree; and 
+* use the `bootstrap` command to perform a bootstrap analysis (1000 replicates). 
 
 Do _all_ of the above for _each_ of these three sets of sites:
 
