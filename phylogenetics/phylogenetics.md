@@ -38,8 +38,8 @@ Tuesday Feb. 20    | **[Bayes' Rule and Bayesian statistics](https://gnetum.eeb.
 Thursday Feb. 22   | **[Markov chain Monte Carlo (MCMC)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/10-mcmc-annotated.pdf)**                              | **Lab 6** [Using R to explore probability distributions](/rprobdist/) (Through Exponential, questions 1-19)
 Tuesday Feb. 27    | **[MCMC (cont.)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/11-mcmc2-annotated.pdf)**                                                | **Homework 7** [MCMC](/hwmcmc/) due 2024-03-05
 Thursday Feb. 29   | **[Model selection](https://gnetum.eeb.uconn.edu/courses/phylogenetics/12-model-selection.pdf)**                                             | **Lab 7** [Using R to explore probability distributions](/rprobdist/) (start with Lognormal, questions 20-29)
-Tuesday Mar. 5     | **[Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/13-priors.pdf)**                                                               | **Homework 8** [Bloodroot](/hwbloodroot/)
-Thursday Mar. 7    | **Coalescence and gene trees vs. species trees**                                                                                             | **Lab 8**
+Tuesday Mar. 5     | **[Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/13-priors.pdf)**                                                               | **Homework 8** [Bloodroot](/hwbloodroot/) due 2024-03-19
+Thursday Mar. 7    | **Coalescence and gene trees vs. species trees**                                                                                             | **Lab 8** [MrBayes](/mrbayes/)
 Tuesday Mar. 12    | **SPRING BREAK**                                                                                                                             |
 Thursday Mar. 14   | **SPRING BREAK**                                                                                                                             |
 Tuesday Mar.  19   | **Codon, secondary structure, and amino acid models**                                                                                        | **Homework 9**
