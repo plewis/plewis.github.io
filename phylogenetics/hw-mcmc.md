@@ -104,6 +104,11 @@ Even though `hw7.py` spits out the log-likelihood and log-prior, the only quanti
 Note that $\log(R)$ equals the log-posterior-kernel of the proposed edge length minus the log-posterior-kernel of the current point. The value of $\log(R)$ will be negative if the "robot" is proposing to go downhill and will be positive if it is proposing to go uphill.
 
 {% comment %}
+Data: gibbon-orangutan 32 nucleotides (2 differences) used in lecture to illustrate
+maximum likelihood estimates (MLE is 0.0652585):
+    gorilla   GAAGTCCTTGAGAAATAAACTGCACACACTGG
+    orangutan GGACTCCTTGAGAAATAAACTGCACACACTGG
+    
 Here are the random uniform deviates in list form:
 
     u1    = [0.60454, 0.32287, 0.72840, 0.81114, 
