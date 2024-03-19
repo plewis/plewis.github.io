@@ -1,13 +1,15 @@
 ---
 layout: page
-title: Homework 8 (Local Move)
+title: Homework 9 (Local Move)
 permalink: /hwlocalmove/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Larget-Simon Local Move
 
-In this homework, you will take one step in a phylogenetic MCMC analysis by proposing, then accepting or rejecting, a Larget-Simon move. Here is an overview:
+In this homework, you will take one step in a phylogenetic MCMC analysis by proposing, then accepting or rejecting, a Larget-Simon move. My main learning objective here is to reinforce several topics related to Bayesian phylogenetics covered in lecture so that you could, after completing the exercise, explain how programs like MrBayes and RevBayes propose (and accept or reject) steps in tree space in order to sample from the posterior distribution.
+
+Here is an overview:
 
 * You will be given a starting tree with edge lengths;
 * Use PAUP* to compute the log-likelihood of this tree under the JC+G model using the data provided;
@@ -15,13 +17,13 @@ In this homework, you will take one step in a phylogenetic MCMC analysis by prop
 * Propose a new tree using the Larget-Simon proposal;
 * Compute log-likelihood and log-joint-prior for the proposed tree;
 * Compute the acceptance ratio to see whether the proposed tree should be accepted;
-* Turn in answers to the questions in the last ("What to turn in") section of this assignment.
+* Turn in answers to the questions in the "Worksheet" section of this assignment.
 
 ## Pseudorandom numbers
 
 This time you choose what seed to begin with. That way we will all get a slightly different answer.
 
-Use this python3 script, substituting in your own favorite positive integer for the <tt>xxxxx</tt>:
+Use this python3 script, substituting in your own favorite positive integer (e.g. 12345, your 5-digit zip code, your birth year, etc.) for the <tt>xxxxx</tt>:
 
     from random import random,seed
     seed(xxxxx)
@@ -33,8 +35,59 @@ I will refer to these 7 pseudorandom numbers by name; e.g. u0, u1, ..., u6 (insi
 
 ### Worksheet
 
-Scroll down to the end of this page and copy the questions there to a blank text file. As you follow the instructions below, record results in this "worksheet" as instructed.
+Copy the questions below to a blank text file. As you follow the instructions below, record results in this "worksheet" as instructed, using 5 decimals precision when reporting numbers.
 
+    1. seed used when generating pseudorandom numbers
+    answer:
+    
+    2. log-likelihood of the starting tree assuming shape = 0.3
+    answer:
+    
+    3. log of the joint prior for the starting tree
+    answer: 
+    
+    4. log of the posterior kernel for the starting tree:
+    answer: 
+    
+    5. edge at the center of 3-edge segment: 
+    answer: 
+    
+    6. left edge in 3-edge segment: 
+    answer: 
+    
+    7. right edge in 3-edge segment: 
+    answer: 
+     
+    8. scaling factor m: 
+    answer: 
+     
+    9. subtree to move: 
+    answer: 
+     
+    10. newick description of proposed tree with edge lengths
+    answer: 
+     
+    11. log-likelihood of the proposed tree assuming shape = 0.3:
+    answer: 
+     
+    12. log of the joint prior for the proposed tree:
+    answer: 
+     
+    13. log of the posterior kernel for the proposed tree:
+    answer: 
+     
+    14. log of the acceptance ratio:
+    answer: 
+     
+    15. log of the Hastings ratio:
+    answer: 
+     
+    16. log of the acceptance probability:
+    answer: 
+     
+    17. decision (accept or reject):
+    answer: 
+     
 ### Data set
 
 Download this dataset to use when computing likelihoods: [green5.nex](/assets/data/green5.nex)
@@ -43,7 +96,11 @@ Download this dataset to use when computing likelihoods: [green5.nex](/assets/da
 
 {% include figure.html description=" " url="/assets/img/local-move-starting-tree.png" css="image-center noborder" width="600px" %}
 
-Compute the log-likelihood (using PAUP*, JC+G model, shape fixed at 0.3) as well as the log joint prior and record these values along with their sum (i.e. the log posterior kernel) on the worksheet.
+**Important:** See the "Hints" section near the bottom of this web page before completing this section!
+
+Compute the log-likelihood (using PAUP*, JC69+G model, shape fixed at 0.3) as well as the log joint Exponential(10) prior and record these values along with the log posterior kernel (log likelihood + log joint prior) on the worksheet. 
+
+If you've forgotten how to set up PAUP* to compute likelihoods, revisit the [likelihood lab](https://plewis.github.io/likelihood/). 
 
 ### Choosing a 3-edge segment at random
 
@@ -80,7 +137,7 @@ Before moving to the next step, multiply each of the three edges (left, central,
 
 ### Choose subtree to move
 
-Use u4 to choose which subtree (left or right) to move. If u4 < 0.5, then move the subtree on the left; otherwise move the subtree on the right. What do I mean by left/right subtree? Your 3-edge segment has two "elbows", or branching points. At each of these elbows (left or right), one of the edges is part of your 3-edge segment. The other edge (not part of your 3-edge segment) is the one you would move if chosen using u4.
+Use u4 to choose which subtree (left or right) to move. If u4 < 0.5, then move the subtree on the left; otherwise move the subtree on the right. What do I mean by left/right subtree? Your 3-edge segment has two "elbows", or branching points. At each of these elbows (left or right), 2 of the edges are part of your 3-edge segment. The 3rd edge (not part of your 3-edge segment) is the one you would move if chosen using u4.
 
 For example, if your 3-edge segment is _Iris_ (left), X (center), and _Picea_ (right), then the subtree to move would be _Sphagnum_ if u4 < 0.5 or (_Osmunda_,_Avena_) if u4 >= 0.5.
 
@@ -88,9 +145,9 @@ Record which subtree you chose in the worksheet.
 
 ### Move the chosen subtree
 
-Use u5 to choose where to place the subtree you chose to move. Multiply u5 times the length of your proposed 3-edge segment to produce the value $$z$$. (By proposed 3-edge segment I mean the lengths of the 3 edges after multiply by the scaling factor $$m$$). Starting at the leftmost end of your 3-edge segment, travel left to right along your three edge segment until you've used up an amount of edge length equal to $$z$$.
+Use u5 to choose where to place the subtree you chose to move. Multiply u5 times the length of your proposed 3-edge segment to produce the value $$z$$. (By proposed 3-edge segment I mean the lengths of the 3 edges after multiplying by the scaling factor $$m$$). Starting at the leftmost end of your 3-edge segment, travel left to right along your three edge segment until you've used up an amount of edge length equal to $$z$$.
 
-For example, if your 3-edge segment is _Iris_ (left), X (center), and _Picea_ (right) and $$m=0.7$$, then the proposed lengths of the 3 edges would be 0.007 (left), 0.07 (center), and 0.035 (right). The total length of the proposed 3-edge segment is 0.112. If $$u_4=0.4$$, $$z=(0.4)(0.112)=0.0448$$. The value of $$z$$ is longer than the leftmost edge (0.007) in your proposed 3-edge segment, but not as large as the combined lengths of the left and center edges (0.077), so you would place your detached subtree at a point $$0.0448 - 0.007 = 0.0378$$ from the left end of the central edge.
+For example, if your 3-edge segment is _Iris_ (left), X (center), and _Picea_ (right) and $$m=0.7$$, then the proposed lengths of the 3 edges would be 0.007 (left), 0.07 (center), and 0.035 (right). The total length of the proposed 3-edge segment is 0.112. If $$u_4=0.4$$, $$z=(0.4)(0.112)=0.0448$$. The value of $$z$$ is longer than the leftmost edge (0.007) in your proposed 3-edge segment, but not as large as the combined lengths of the left and center edges (0.077), so you would place your detached subtree at a point $$0.0448 - 0.007 = 0.0378$$ from the left end of the central edge (i.e. internal edge X).
 
 Create a newick tree description with edge lengths and record in the worksheet. Note: you will need to create this newick tree description in order to have PAUP* calculate the log likelihood of the proposed tree.
 
@@ -146,90 +203,59 @@ Note that we do not need to include a prior for the shape parameter because it i
 
 ## What to turn in
 
-Turn in the answers to these questions using 5 decimals precision when reporting numbers.
+Turn in your worksheet on Slack (preferably), email, or via printout in class. 
 
+{% comment %}
 1. seed used when generating pseudorandom numbers:
-{% comment %}
 12345
-{% endcomment %}
 
-1. log-likelihood of the starting tree assuming shape = 0.3:
-{% comment %}
+2. log-likelihood of the starting tree assuming shape = 0.3:
 -4771.79070
-{% endcomment %}
 
-1. log of the joint prior for the starting tree:
-{% comment %}
- 0.71005 = pc "7.*log(10) - 10.*1.27 - log(15)"
-{% endcomment %}
+3. log of the joint prior for the starting tree:
+0.71005 = pc "7.*log(10) - 10.*1.27 - log(15)"
 
-1. log of the posterior kernel for the starting tree:
-{% comment %}
+4. log of the posterior kernel for the starting tree:
 -4771.08065 = -4771.79070 + 0.71005
-{% endcomment %}
 
-1. edge at the center of 3-edge segment: 
-{% comment %}
+5. edge at the center of 3-edge segment: 
 X
-{% endcomment %}
 
-1. left edge in 3-edge segment: 
-{% comment %}
+6. left edge in 3-edge segment: 
 Iris
-{% endcomment %}
 
-1. right edge in 3-edge segment: 
-{% comment %}
+7. right edge in 3-edge segment: 
 Picea
-{% endcomment %}
 
-1. scaling factor $$m$$: 
-{% comment %}
+8. scaling factor $$m$$: 
 0.81762
-{% endcomment %}
 
-1. subtree to move: 
-{% comment %}
+9. subtree to move: 
 Sphagnum
-{% endcomment %}
 
-1. newick description of proposed tree with edge lengths
-{% comment %}
+10. newick description of proposed tree with edge lengths
 ((4:0.02533,1:0.01000):0.06460,3:0.04088,(2:0.05000,5:1.00000):0.05000)
-{% endcomment %}
         
-1. log-likelihood of the proposed tree assuming shape = 0.3:
-{% comment %}
+11. log-likelihood of the proposed tree assuming shape = 0.3:
 -4676.86911
-{% endcomment %}
 
-1. log of the joint prior for the proposed tree:
-{% comment %}
+12. log of the joint prior for the proposed tree:
 1.00195
-{% endcomment %}
 
-1. log of the posterior kernel for the proposed tree:
-{% comment %}
+13. log of the posterior kernel for the proposed tree:
 -4675.86716
-{% endcomment %}
 
-1. log of the acceptance ratio:
-{% comment %}
+14. log of the acceptance ratio:
 95.21349
-{% endcomment %}
 
-1. log of the Hastings ratio:
-{% comment %}
+15. log of the Hastings ratio:
 -0.60408
-{% endcomment %}
 
-1. log of the acceptance probability:
-{% comment %}
+16. log of the acceptance probability:
 1.00000
-{% endcomment %}
 
-1. decision (accept or reject):
-{% comment %}
+17. decision (accept or reject):
 accept
 {% endcomment %}
-
+     answer: 
+     

@@ -39,17 +39,17 @@ Thursday Feb. 22   | **[Markov chain Monte Carlo (MCMC)](https://gnetum.eeb.ucon
 Tuesday Feb. 27    | **[MCMC (cont.)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/11-mcmc2-annotated.pdf)**                                                | **Homework 7** [MCMC](/hwmcmc/) due 2024-03-05
 Thursday Feb. 29   | **[Model selection](https://gnetum.eeb.uconn.edu/courses/phylogenetics/12-model-selection.pdf)**                                             | **Lab 7** [Using R to explore probability distributions](/rprobdist/) (start with Lognormal, questions 20-29)
 Tuesday Mar. 5     | **[Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/13-priors-annotated.pdf)**                                                     | **Homework 8** [Bloodroot](/hwbloodroot/) due 2024-03-19
-Thursday Mar. 7    | **[Coalescence](https://gnetum.eeb.uconn.edu/courses/phylogenetics/14-coalescence-annotated.pdf)**                                                     | **Lab 8** [MrBayes](/mrbayes/)
+Thursday Mar. 7    | **[Coalescence](https://gnetum.eeb.uconn.edu/courses/phylogenetics/14-coalescence-annotated.pdf)**                                           | **Lab 8** [MrBayes](/mrbayes/)
 Tuesday Mar. 12    | **SPRING BREAK**                                                                                                                             |
 Thursday Mar. 14   | **SPRING BREAK**                                                                                                                             |
-Tuesday Mar.  19   | **Codon, secondary structure, and amino acid models**                                                                                        | **Homework 9**
-Thursday Mar. 21   | **Discrete morphological models**                                                                                                            | **Lab 9**
+Tuesday Mar.  19   | **[Species trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/15-species-trees.pdf)**                                                 | **Homework 9** [Taking a step in treespace](/hwlocalmove/)
+Thursday Mar. 21   | **Discrete morphological models**                                                                                                            | **Lab 9** [RevBayes](/revbayes/)
 Tuesday Mar. 26    | **Polytomies; Pagel's test**                                                                                                                 | **Homework 10**
 Thursday Mar. 28   | **Stochastic character mapping**                                                                                                             | **Lab 10**
 Tuesday Apr. 2     | **Evolutionary Correlation: Continuous Traits**                                                                                              | **Homework 11**
 Thursday Apr. 4    | **PGLS regression**                                                                                                                          | **Lab 11**
 Tuesday Apr. 9     | **Phylogenetic signal in continuous traits**                                                                                                 | **Homework 12**
-Thursday Apr. 11   | **Multispecies coalescent and species tree estimation**                                                                                      | **Lab 12**
+Thursday Apr. 11   | **Codon, secondary structure, and amino acid models**                                                                                        | **Lab 12**
 Tuesday Apr. 16    | **Network models**                                                                                                                           | **Homework 13**
 Thursday Apr. 18   | **Diversification rate evolution**                                                                                                           | **Lab 13**
 Tuesday Apr. 23    | **Diversification (cont.), Heterotachy, and Covarion models**                                                                                | no homework assignment

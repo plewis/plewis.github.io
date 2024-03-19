@@ -205,7 +205,7 @@ Add this to your _jc.Rev_ script just above the `quit()` line and re-run it in R
     
 The code above specifies a **discrete uniform prior** on tree topology (every possible tree topology has equal prior probability). 
 
-We've **added two moves** that affect tree topology. First, we **created an empty vector** called, simply, `moves` to hold all the moves we specify. Second, we **added an NNI move** that is similar to the Larget-Simon move you explored using a recent homework assignment. Third, we **added an SPR move** that can take potentially larger steps in tree space than an NNI move. Note that NNI moves will be attempted in proportion to the number of taxa and SPR moves will be attempted twice as often, on average, as NNI moves.
+We've **added two moves** that affect tree topology. First, we **created an empty vector** called, simply, `moves` to hold all the moves we specify. Second, we **added an NNI move** that is similar to the Larget-Simon move disussed in lecture. Third, we **added an SPR move** that can take potentially larger steps in tree space than an NNI move. Note that NNI moves will be attempted in proportion to the number of taxa and SPR moves will be attempted twice as often, on average, as NNI moves.
 
 We've placed an **Exponential(10) prior on each edge length**. Note that, in this section, we're making use of the variables `ntaxa` and `nedges` that we created right after reading in the data. We've also **added a Scale move** for each edge length parameter. 
 
@@ -339,7 +339,7 @@ Add these lines just before the `quit()` line.
     # Calculate the MAP tree
     map_tree = mapTree(treetrace,"output/algae-map.tree")
     
-**Important** Unless you want to waste some time and rerun the MCMC analysis, **comment out** the line containing the call to the **mymcmc.run** function. To comment out a line, simply place a hash character (`#`) at the beginning of the line to convert the line to a comment.
+**Important** Unless you want to waste some time and rerun the MCMC analysis, **comment out** the lines containing the calls to the **mymcmc.run** and **mymcmc.burnin** functions. To comment out a line, simply place a hash character (`#`) at the beginning of the line to convert the line to a comment.
 
     # mymcmc.run(generations=10000, tuningInterval=100)
 
