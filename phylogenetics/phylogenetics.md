@@ -42,7 +42,7 @@ Tuesday Mar. 5     | **[Priors](https://gnetum.eeb.uconn.edu/courses/phylogeneti
 Thursday Mar. 7    | **[Coalescence](https://gnetum.eeb.uconn.edu/courses/phylogenetics/14-coalescence-annotated.pdf)**                                           | **Lab 8** [MrBayes](/mrbayes/)
 Tuesday Mar. 12    | **SPRING BREAK**                                                                                                                             |
 Thursday Mar. 14   | **SPRING BREAK**                                                                                                                             |
-Tuesday Mar.  19   | **[Species trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/15-species-trees.pdf)**                                                 | **Homework 9** [Taking a step in treespace](/hwlocalmove/)
+Tuesday Mar.  19   | **[Species trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/15-species-trees-annotated.pdf)**                                       | **Homework 9** [Taking a step in treespace](/hwlocalmove/)
 Thursday Mar. 21   | **Discrete morphological models**                                                                                                            | **Lab 9** [RevBayes](/revbayes/)
 Tuesday Mar. 26    | **Polytomies; Pagel's test**                                                                                                                 | **Homework 10**
 Thursday Mar. 28   | **Stochastic character mapping**                                                                                                             | **Lab 10**
