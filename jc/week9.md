@@ -53,8 +53,7 @@ and copy the following text into the new file named "test.slurm" and save the fi
     #SBATCH --qos=mcbstudent
     #SBATCH --array=[1-5]%5
     #SBATCH --mail-type=ALL
-    ##SBATCH --mail-user=jessica.chen@uconn.edu
-    #SBATCH --mail-user=paul.lewis@uconn.edu
+    #SBATCH --mail-user=jessica.chen@uconn.edu
     #SBATCH -o %x_%A_%a.out
     #SBATCH -e %x_%A_%a.err
     
@@ -89,7 +88,7 @@ and copy the following text into the new file named "test.slurm" and save the fi
     HSTAR=`cat galax-output.txt | grep "^zeroinfo[.]tre" | cut -c53-64 | tr -d ' '`
 
     # Get the estimated information (Ipct) from "galax-output.txt"
-    PICT=`cat galax-output.txt | grep "^zeroinfo[.]tre" | cut -c79-80 | tr -d ' '`
+    IPCT=`cat galax-output.txt | grep "^zeroinfo[.]tre" | cut -c79-80 | tr -d ' '`
 
     # Calculate the corrected Ipct
     CIPCT=`python3 -c "from math import log; H = log(40000/$COVERAGE); cipct = 100.0*(H - $HSTAR)/H; print(cipct)"`
