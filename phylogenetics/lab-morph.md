@@ -3,13 +3,57 @@ layout: page
 title: RevBayes Morphology Lab
 permalink: /morph/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Goals
 
 This lab exercise will show how to analyze discrete morphological data using [RevBayes](https://revbayes.github.io). We will be using RevBayes v1.1.1 on the cluster in this lab. 
 
 This lab exercise is adapted from the tutorial entitled [Discrete morphology - Tree Inference](https://revbayes.github.io/tutorials/morph_tree/) on the RevBayes web site.
+
+## Answer template
+
+Here is a template in which to save your answers to the :thinking: questions.
+    
+    1. Is brlen_lambda a parameter or a hyperparameter in this model?
+    answer:
+    
+    2. What is the posterior mean tree length for the M2 model using the combined parameter samples from both runs?
+    answer:
+    
+    3. How many total characters are in this data matrix?
+    answer:
+    
+    4. How many characters in this data matrix are variable?
+    answer:
+    
+    5. Do you expect estimated tree length to increase or decrease if we condition on variability? Briefly explain your reasoning.
+    answer:
+    
+    6. What is the posterior mean tree length for the Mkv model?
+    answer:
+    
+    7. Did the Mkv model have the effect you expected?
+    answer:
+    
+    8. In lecture, you were shown simulation results that suggested that estimates of edge lengths would be severely wrong unless the model conditioned on variability. Why did it make so little difference here?
+    answer:
+    
+    9. What do the values in the categ_means vector represent? Note: do not say these are the category means, which you can deduce from the name of the variable. Instead, state how these values are used in the likelihood calculation.
+    answer:
+    
+    10. What do the values in the categ_probs vector represent?
+    answer:
+    
+    11. Of the 3 models, which fits substantially worse than the others?
+    answer:
+    
+    12. Does allowing heterogeneity in state frequency provide substantially better fit than simply assuming equal state frequencies?
+    answer:
+    
+    13. If you were preparing to publish a paper relating to these analyses, you probably would not want to depend on eyeballing box plots of the likelihood in Tracer. What quantity would you estimate to convince reviewers that one of these models fits the data much worse than the other two?
+    answer:
+    
 
 ## Getting started
 
@@ -19,19 +63,19 @@ Login to your account on the Health Center (Xanadu) cluster, then issue
     
 to start a session on a node that is not currently running jobs. 
 
-**Important** The <tt>--mem=5G</tt> part is important for this lab, as RevBayes uses more than the default amount (128 MB) of memory sometimes.
+**Important** The `--mem=5G` part is important for this lab, as RevBayes uses more than the default amount (128 MB) of memory sometimes.
 
 {% comment %}
 Once you see the prompt, type
 
     module load RevBayes/1.0.13
  
-to load the necessary modules. (Remember: the command <tt>module avail</tt> shows a list of all available modules.)
+to load the necessary modules. (Remember: the command `module avail` shows a list of all available modules.)
 {% endcomment %}
     
 ### Create a directory
 
-Use the unix <tt>mkdir</tt> command to create a directory to play in today:
+Use the unix `mkdir` command to create a directory to play in today:
 
     cd
     mkdir morphlab
@@ -46,7 +90,7 @@ You can now type either **RevBayes** or just **rb** to start the program.
 
 ## Download and save the data file
 
-Use the <tt>curl</tt> command ("Copy URL") to download the data file for this tutorial from the RevBayes web site:
+Use the `curl` command ("Copy URL") to download the data file for this tutorial from the RevBayes web site:
 
     cd ~/morphlab
     curl -O https://revbayes.github.io/tutorials/morph_tree/data/bears.nex
@@ -118,7 +162,7 @@ Append the following to your script to specify a substitution model:
     gamma_rate := gamma_shape
     gamma_rates := fnDiscretizeGamma( gamma_shape, gamma_rate, 4 )
     
-This tells RevBayes to create a Jukes-Cantor instantaneous rate matrix with 2 states (also known as a 2-state Mk model) and store it in the variable <tt>Q</tt>. 
+This tells RevBayes to create a Jukes-Cantor instantaneous rate matrix with 2 states (also known as a 2-state Mk, or M2, model) and store it in the variable `Q`. 
 
 ### The PhyloCTMC node puts everything together
 
@@ -149,7 +193,8 @@ We've now completely specified the model, so all that's left is to create some m
 
     # Start the MCMC analsis
     mymcmc = mcmc(mymodel, monitors, moves, nruns=2, combine="mixed")
-    mymcmc.run(generations=20000, tuningInterval=200)
+    mymcmc.burnin(generations=2000, tuningInterval=200)
+    mymcmc.run(generations=20000)
     
     # Check the performance of the moves (also known as operators)
     mymcmc.operatorSummary()
@@ -169,13 +214,13 @@ Run your file in RevBayes now:
 
     rb mk.Rev
     
-Note that it saved the output in a directory named _output_, which it generated because you included <tt>output/</tt> in each of the output file paths.
+Note that it saved the output in a directory named _output_, which it generated because you included `output/` in each of the output file paths.
 
-Open the files _mk_run_1.log_ and _mk_run_2.log_ in Tracer and, select both files in the Trade Files section, click the Marginal Density tab and look through density plots for the Posterior, Likelihood, Prior, brlen_lambda, gamma_shape, and tree_length. The two independent runs should have yielded very similar results.
+Open the files _mk_run_1.log_ and _mk_run_2.log_ in Tracer and, after selecting both files in the _Trace Files_ section, click the _Marginal Density_ tab and look through density plots for the `Posterior`, `Likelihood`, `Prior`, `brlen_lambda`, `gamma_shape`, and `tree_length`. The two independent runs should have yielded very similar results.
 
 Now remove the two independent run log files from Tracer's list (by selecting each of them and pressing the - button below the list), then load the combined log file _mk.log_.
 
-> :thinking: What is the posterior mean tree length for the Mk model using the combined parameter samples from both runs?
+> :thinking: What is the posterior mean tree length for the M2 model using the combined parameter samples from both runs?
  {% comment %}
  3.651
  {% endcomment %}
@@ -234,7 +279,7 @@ Rerun RevBayes using the _mkv.Rev_ script:
 
     rb mkv.Rev
     
-Load the output/mkv.log file into Tracer
+Load the _output/mkv.log_ file into Tracer
 
 > :thinking: What is the posterior mean tree length for the Mkv model?
  {% comment %}
@@ -251,7 +296,7 @@ Load the output/mkv.log file into Tracer
  The results shown in lecture were for a maximum likelihood analysis. Bayesian models include prior distributions that prevent edge lengths from getting too large. The likelihood does not have the only say in a Bayesian analysis.
  {% endcomment %}
 
-## Beta distributed state frequencies
+## Beta-distributed state frequencies
 
 We will try one more modification to our Mk model today. The Mk and Mkv models we've used thus far all assume that the forward substitution rate is equal to the reverse substitution rate. This leads to equal equilibrium state frequencies (i.e. $$\pi_0 = \pi_1 = 0.5$$).
 
@@ -278,7 +323,7 @@ We will model among-character frequency variation in much the same way we model 
 
 The figure above shows a Beta(2,2) density divided into **5 equal-area categories**, with the mean of each category shown using a downward-pointing filled triangle. The likelihood for one character will be calculated using **5 different rate matrices**, each using $$\pi_0$$ from a different category mean. Each component of the mixture will have probability 0.2, as that is the area under the Beta density curve for each category (assuming there are 5 categories).
 
-Thus, we need 5 different Q matrices in our model, one for each category, so **Q in our script will now be a vector of rate matrices** rather than a single rate matrix. The shape parameter **beta_shape** used to determine the symmetric Beta(<tt>beta_shape</tt>,<tt>beta_shape</tt>) distribution used will be allowed to vary during the MCMC run, so the 5 Q matrices must be recalculated each time <tt>beta_shape</tt> changes. This is accomplished by making each element of the Q vector a deterministic node. The recalculation of each rate matrix is accomplished by the <tt>fnDiscretizeBeta</tt> function (just as the <tt>fnDiscretizeGamma</tt> function handles recalculation of relative rates for the discrete gamma rate heterogeneity model as the <tt>gamma_shape</tt> parameter changes).
+Thus, we need 5 different Q matrices in our model, one for each category, so **Q in our script will now be a vector of rate matrices** rather than a single rate matrix. The shape parameter **beta_shape** used to determine the symmetric Beta(`beta_shape`,`beta_shape`) distribution used will be allowed to vary during the MCMC run, so the 5 Q matrices must be recalculated each time `beta_shape` changes. This is accomplished by making each element of the Q vector a deterministic node. The recalculation of each rate matrix is accomplished by the `fnDiscretizeBeta` function (just as the `fnDiscretizeGamma` function handles recalculation of relative rates for the discrete gamma rate heterogeneity model as the `gamma_shape` parameter changes).
 
 Here is the entire Substitution Model section. Everything here has changed except for the last 5 lines, all but the last of which are related to rate heterogeneity and are the same lines we used for the Mkv model.
 
@@ -315,25 +360,25 @@ Here is the entire Substitution Model section. Everything here has changed excep
     
     quit()
     
-Before we continue, let's run this script up to this point so that we can see the output from the two print statements in the code above. We want to stop processing the script right after this block of code, so I've **inserted a quit() command** just after the line that calls <tt>fnDiscretizeGamma</tt>:
+Before we continue, let's run this script up to this point so that we can see the output from the two print statements in the code above. We want to stop processing the script right after this block of code, so I've **inserted a quit() command** just after the line that calls `fnDiscretizeGamma`:
 
     rb mkvbeta.Rev
        
-You can see that we are dividing the Beta distribution into **5 equal chunks** (<tt>num_beta_cats = 5</tt>), providing the beta_shape parameter with a **Lognormal prior distribution** that heavily favors shapes greater than 1 (84%), which is good because shapes less than 1 create U-shaped Beta density functions that place most weight on the extreme values 0 and 1. 
+You can see that we are dividing the Beta distribution into **5 equal chunks** (`num_beta_cats = 5`), providing the beta_shape parameter with a **Lognormal prior distribution** that heavily favors shapes greater than 1 (84%), which is good because shapes less than 1 create U-shaped Beta density functions that place most weight on the extreme values 0 and 1. 
 
-> :thinking: What do the values in the <tt>categ_means</tt> vector represent? Note: do not say these are the category means, which you can deduce from the name of the variable. Instead, state how these values are used in the likelihood calculation.
+> :thinking: What do the values in the `categ_means` vector represent? Note: do not say these are the category means, which you can deduce from the name of the variable. Instead, state how these values are used in the likelihood calculation.
 {% comment %}
 They are the representative values for pi0 in the rate matrix used when computing the component of the character likelihood corresponding to one category.
 {% endcomment %}
 
-Hint: compare them to the figure above. I've used the <tt>setValue</tt> function to ensure that the <tt>beta_shape</tt> parameter is initially equal to 2 (to correspond with the figure).
+Hint: compare them to the figure above. I've used the `setValue` function to ensure that the `beta_shape` parameter is initially equal to 2 (to correspond with the figure).
 
-> :thinking: What do the values in the <tt>categ_probs</tt> vector represent?
+> :thinking: What do the values in the `categ_probs` vector represent?
 {% comment %}
 These are the areas under the Beta density curve within each category. They represent the probability that a particular character falls into a given category.
 {% endcomment %}
 
-We need to do one last thing in order for RevBayes to actually use the above substitution model. We need to inform the PhyloCTMC object that we are using a mixture distribution to model the Q matrix. To do this, add **siteMatrices=categ_probs** to the end of your dnPhyloCTMC function call:
+We need to do one last thing in order for RevBayes to actually use the above substitution model. We need to inform the PhyloCTMC object that we are using a mixture distribution to model the Q matrix. To do this, add `siteMatrices=categ_probs` to the end of your dnPhyloCTMC function call:
 
     likelihood ~ dnPhyloCTMC(tree=phylogeny, siteRates=gamma_rates, Q=Q, type="Standard", coding="variable", siteMatrices=categ_probs)
 
@@ -353,19 +398,11 @@ The plain Mk model
 No, the Mkv model with equal frequencies appears to perform equally well according to the likelihood.
 {% endcomment %}
 
-> :thinking: If you were preparing to publish a paper relating to these analyses, you probably would not want to depend on eyeballing box plots of the likelihood in Tracer. What would you do to convince reviewers that one of these models fits the data much worse than the other two?
+> :thinking: If you were preparing to publish a paper relating to these analyses, you probably would not want to depend on eyeballing box plots of the likelihood in Tracer. What quantity would you estimate to convince reviewers that one of these models fits the data much worse than the other two?
 {% comment %}
 Estimate the marginal likelihood under each model and show that one data set has a substantially lower marginal likelihood than the other two models.
 {% endcomment %}
 
 ## What to turn in
 
-Turn in your answers to the :thinking: thinking questions. Send them to Zach via Slack.
-
-
-
-
-
-
-
-
+Turn in your answers to the :thinking: thinking questions on the template provided above. Send them to Analisa via Slack.

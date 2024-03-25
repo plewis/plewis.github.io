@@ -300,14 +300,14 @@ We've now completely specified the model, so all that's left is to create some m
 
     # Start the MCMC analsis
     mymcmc = mcmc(mymodel, monitors, moves, nruns=4, combine="sequential")
-    mymcmc.burnin(generations=10000, tuningInterval=100)
     mymcmc.run(generations=10000)
     
 **Three monitors** were created and added to an initially-empty vector. The first is a **Screen monitor**: this just shows progress on the screen every 100 iterations. The second monitor is a **File monitor** that stores trees sampled during the run (every one of the 10000 steps will be saved because we specified `printgen=1`). Finally, we added a **Model monitor** that saves the parameter values at each of the 10000 generations.
 
 We next created an **mcmc variable** named `mymcmc`. We provided it the model (`mymodel`), a vector of moves (`moves`), a vector of monitors (`monitors`), the number of independent MCMC analyses to perform (`nruns=4`), and instructions about how to combine the output from the 4 independent runs into a single file (`combine="sequential"`).
 
-Finally, we **called the `burnin` and `run` functions** of our `mymcmc` object. This is what starts the ball rolling, so to speak. We told it to run for 10000 iterations (=steps=generations) and tune its moves every 100 during the burnin period, then run for another 10000 iterations to generate the posterior sample.
+Finally, we **called the `run` function** of our `mymcmc` object. This is what starts the ball rolling, so to speak. We told it to run 
+for 10000 iterations to generate the posterior sample.
 
 Run your file in RevBayes now. It will stop after it finishes the 10000th iteration. Note that it saved the output in a directory named _output_, which it generated because you included `output/` in each of the output file paths.
 
@@ -324,6 +324,19 @@ This trace combines the four separate runs, each of which began with a random tr
 {% comment %}
 combine=mixed
 {% endcomment %}
+
+You can eliminate those spikes by inserting a burn-in period before beginning your sampling. Modify the section entitled "Start the MCMC analsis" by adding a call to the function `burnin`:
+
+    # Start the MCMC analsis
+    mymcmc = mcmc(mymodel, monitors, moves, nruns=4, combine="sequential")
+    mymcmc.burnin(generations=10000, tuningInterval=100)
+    mymcmc.run(generations=10000)
+
+Rename your `output` directory to `no-burnin-output` as follows:
+
+    mv output no-burnin-output
+    
+If you now re-run the analysis, the spikes in your _algae.log_ file will be much less aparent because RevBayes will run initially for 10000 iterations to burn-in the chain, tuning its moves every 100 steps. After that, the "robot" will have reached the main "hill" in the posterior and thus the results of the combined parameter sample will be much more homogeneous, which you can verify by downloading _algae.log_ to your laptop and opening it in Tracer. 
 
 ### Calculating the MAP (Maximum A-Posteriori) tree
 
