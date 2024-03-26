@@ -7,17 +7,161 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2024/).
 
 The following topics were covered in lecture in the Spring 2024 version of EEB 5349 (Phylogenetics). Please refer to the [schedule](/phylogenetics2024/) to find links to the slides for the dates indicated.
 
+Akaike Information Criterion (AIC), Feb-29
+
+among-site state frequency heterogeneity, Mar-21
+
+among-site rate heterogeneity (ASRV), Feb-8
+
+archery priors example, Feb-20
+
+ascertainment bias, Mar-21
+
+autoapomorphy trail, Mar-21
+
+bat monophyly test, Feb-15
+
+Bayes' rule, Feb-20
+
+Bayesian Information Criterion (BIC), Feb-29
+
+bootstrapping (non-parametric), Feb-15
+
+bootstrapping (IQ-TREE ultrafast), Feb-15
+
 branch-and-bound, Jan-18 
+
+coalescence, Mar-7
+
+conditioning on variability, Mar-21
 
 consensus trees, Jan-18 
 
+deep coalescence, Mar-7
+
+density example (gold-to-aluminum brick), Feb-20
+
+discrete Gamma model, Feb-8
+
+distribution, Beta, Mar-5, Mar-21
+
+distribution, Dirichlet, Mar-5
+
+distribution, discrete Uniform, Mar-5
+
+distribution, Gamma, Feb-8, Mar-5
+
+distribution, Gamma-Dirichlet, Mar-5
+
+distribution, Lognormal, Mar-5
+
+distribution, marginal posterior, Feb-27
+
+distribution, proposal (for MCMC), Feb-22
+
+distribution, support, Mar-5
+
+distribution, target (for MCMC), Feb-22
+
+edge length, Jan-30
+
+effective population size (Ne), Mar-19
+
+evolutionary distance, Feb-6
+
 exhaustive search, Jan-18 
+
+expected time to coalescence, Mar-7
+
+Felsenstein (1981) model (F81), Feb-1
+
+Felsenstein (1984) model (F84), Feb-1
+
+fence analogy (truncated priors), Mar-5
+
+free rates model (+R), Feb-15
+
+frequencies (equilibrium nucleotide), Jan-30
+
+frequencies (equilibrium state), Mar-21
+
+gene trees, Mar-7
+
+general time-reversible model (GTR), Feb-1
+
+Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-1
+
+heated chains (MCMC), Feb-22
+
+heterotachy, Feb-8
+
+independence of events, Feb-6
+
+induced prior, Mar-5
+
+integrals, Feb-20
+
+invariable sites model (+I), Feb-8
+
+Jukes-Cantor (1969) model (JC69), Jan-30
+
+kernel density estimation, Feb-27
+
+Kimura (1980) 2-parameter model (K2P, K80), Feb-1
 
 likelihood criterion, Jan-18 
 
-maximum agreement subtree, Jan-18 
+likelihood (single sequence), Feb-6
 
-monohyly, Jan-16 
+likelihood (evolutionary distance), Feb-6
+
+likelihood ratio test, Feb-6
+
+likelihood, vs. probability, Feb-20
+
+marginal likelihood, Feb-20, Feb-29
+
+marginal likelihood (steppingstone method, Feb-29
+
+Markov model, Jan-30
+
+maximum agreement subtree, Jan-18
+ 
+maximum likelihood estimate (MLE), Feb-6
+
+Markov-chain Monte Carlo (MCMC), Feb-22
+
+MCMC robot metaphor, Feb-22
+
+MCMC proposals (local move), Feb-27
+
+MCMC proposals (sliding window move), Feb-27
+
+Metropolis algorithm, Feb-22
+
+Metropolis-Hastings algorithm, Feb-22
+
+mixing (MCMC), Feb-22
+
+goodness-of-fit of a model, Jan-30
+
+Hastings ratio, Feb-22
+
+models (asymmetric), Mar-21
+
+models (discrete morphology), Mar-21
+
+models (empirical Bayesian), Mar-5
+
+models (hierarchical), Mar-5
+
+models (mixture, +I, +G), Feb-8
+
+models (Mk), Mar-21
+
+models (symmetric), Mar-21
+
+monophyly, Jan-16 
 
 nearest-neighbor interchange (NNI) branch swapping, Jan-18 
 
@@ -27,17 +171,95 @@ paraphyly, Jan-18
 
 parsimony criterion, Jan-18 
 
+partitioned models, Feb-8
+
+paternity example, Feb-20
+
 polyphyly, Jan-18 
+
+predictive ability of a model, Jan-30
+
+prior, coalescent tree, Mar-19
+
+prior, distribution, Mar-5
+
+prior, induced, Mar-5
+
+prior, Gamma-Dirichlet, Mar-5
+
+prior, induced split, Mar-5
+
+probability, "and" rule, Feb-6
+
+probability, conditional, Feb-6
+
+probability, density, Feb-20
+
+probability, joint, Feb-6
+
+probability, marginal, Feb-6
+
+probability, mass vs. density, Feb-20
+
+probability, no coalescence, Mar-7
+
+probability, "or" rule, Feb-6
+
+probability, prior, Feb-20
+
+probability, posterior, Feb-20
+
+probability, support, Mar-5
+
+probability, total, Feb-6
+
+probability, vs. likelihood, Feb-20
+
+pruning algorithm, Feb-8
+
+running on empty (MCMC without data), Mar-5
+
+site-specific rates, Feb-8
 
 splits, Jan-16 
 
+steppingstone method (marginal likelihood estimation), Feb-29
+
+subway map model analogy, Jan-30
+
+rare disease example, Feb-20
+
+rate heterogeneity, Feb-8
+
+rate matrix (instantaneous), Feb-1
+
 reconnection limit, Jan-18 
+
+simulation, Feb-15
 
 star decomposition, Jan-18 
 
 stepwise addition, Jan-18 
 
+substitution rate, Jan-30
+
 subtree-pruning-regrafting (SPR) branch swapping, Jan-18 
+
+theta (population genetics parameter), Mar-7
+
+trace plots, Feb-22
+
+traffic accidents Poisson example, Mar-21
+
+transition probabilities, Jan-30
+
+transition (substitution type), Feb-1
+
+transition-transversion rate ratio, Feb-1
+
+transition-transversion ratio, Feb-1
+
+transversion (substitution type), Feb-1
 
 tree islands, Jan-18 
 
@@ -45,439 +267,3 @@ tree-bisection-reconnection (TBR) branch swapping, Jan-18
 
 ultrametric, Jan-18 
 
-{% comment %}
-additivity of distances, Jan-27 
-
-Akaike Information Criterion (AIC), Mar-22 
-
-amino acid models, Feb-22 
-
-among-site rate heterogeneity (ASRV), Feb-10 
-
-AND probability rule, Feb-3  
-
-anomalous gene trees, Apr-14 
-
-Anthony Edwards, Jan-25 
-
-ascertainment bias, Mar-24 
-
-ASRV and LBA, Feb-17 
-
-ASTRAL species tree method, Apr-14 
-
-asymmetric morphology model, Mar-24 
-
-AU topology test, Feb-17 
-
-autapomorphy trail, Mar-24 
-
-bats and the flying DNA hypothesis, Feb-15	
-
-Bayes rule, Feb-24 
-
-Bayesian Analysis of Macroevolutionary Mixtures (BAMM), Apr-26 
-
-Bayesian concordance analysis (BUCKy), Mar-10 
-
-Bayesian Information Criterion (BIC), Mar-22 
-
-Bayesian model selection, Mar-22 
-
-Bayesian phylogenetic information, Apr-28 
-
-Bayesian species delimitation model (BPP), Apr-28 
-
-Beta distribution, Mar-3  
-
-Beta-distributed among character frequency variation, Mar-24 
-
-binary state-dependent speciation-extinction (BISSE) model, Apr-21 
-
-birth-death process, Apr-19 
-
-Blomberg's K, Apr-12 
-
-brownian motion model, Apr-5  
-
-C20 protein mixture model, Feb-22 
-
-calibrated clock, Apr-19 
-
-cladistics, Jan-25 
-
-coalescent process, Apr-12 
-
-coalescent tree prior, Apr-12 
-
-codon models, Feb-22 
-
-compensatory substitutions, Feb-22 
-
-conditional probabilities, Feb-3  
-
-conditioning on variability, Mar-24 
-
-confidence interval, Mar-8  
-
-consistency index, Jan-25
-
-correlated evolution models, Mar-29 
-
-correlated relaxed clock model, Apr-19 
-
-covarion model, Apr-26 
-
-David Sankoff, Jan-25 
-
-deep coalescence, Apr-14 
-
-diagonalization of a matrix, Feb-22 
-
-Dirichlet distribution, Mar-3  
-
-Dirichlet process prior (DPP), Mar-10 
-
-discrete gamma (+G) ASRV model, Feb-10 
-
-discrete morphological data, Mar-24 
-
-Discrete Uniform distribution, Mar-3  
-
-diversification, Apr-21 
-
-DPP covarion model, Apr-26 
-
-DPP protein mixture models (PhyloBayes), Mar-10 
-
-effective population size, Apr-14 
-
-eigenvectors/eigenvalues, Feb-22 
-
-empirical Bayes, Mar-3  
-
-equal-tail-area (ETA) credible interval, Mar-8  
-
-equilibrium frequencies, Feb-1  
-
-estrus advertisement example, Mar-29 
-
-evolutionary distances, Feb-3  
-
-exchangeabilty mixture model, Apr-26 
-
-expected bootstrap support, Mar-29 
-
-expected value of a random variable, Mar-22 
-
-exponential population growth and the coalescent, Apr-12 
-
-F81 model, Feb-1  
-
-F84 model, Feb-1  
-
-fair coin analogy, Mar-29 
-
-Felsenstein Zone, Feb-17 
-
-fossilized birth-death process, Apr-19 
-
-Gamma distribution, Mar-3  
-
-Gamma-Dirichlet edge length prior, Mar-3  
-
-generalized parsimony, Jan-25 
-
-GeoSSE, Apr-21 
-
-goodness-of-fit, Feb-1  
-
-GTR model, Feb-1 
-
-harmonic mean method, Mar-22 
-
-Hastings ratio, Mar-1  
-
-heated chains (Metropolis-coupled MCMC), Mar-1  
-
-Herb Wagner, Jan-25 
-
-heterotachy mixture model, Apr-26 
-
-heterotachy, Feb-10 
-
-hierarchical model, Mar-3  
-
-highest-probability-density (HPD) credible interval, Mar-8  
-
-HISSE, Apr-21
-
-HKY85 model, Feb-1  
-
-homoplasy, Jan-25
-
-incomplete lineage sorting, Apr-14 
-
-independence, Feb-3  
-
-induced prior, Mar-3  
-
-informative prior, Mar-3  
-
-inheritance vs convergence explanations of similarity, Feb-17 
-
-integration of a probability density, Feb-24 
-
-invariable sites (+I) ASRV model, Feb-10 
-
-irreversible parsimony, Jan-25 
-
-JC69 model, Feb-1  
-
-joint posterior, Feb-24 
-
-Joseph Camin, Jan-25 
-
-K80 model, Feb-1  
-
-KH topology test, Feb-17 
-
-Larget-Simon proposal, Mar-1  
-
-least-squares criterion, Jan-27 
-
-likelihood of an evolutionary distance, Feb-3  
-
-likelihood of an isolated vertex, Feb-3  
-
-likelihood of an unrooted tree, Feb-3  
-
-likelihood ratio test (LRT), Feb-3  
-
-lineages through time (LTT) plots, Apr-21 
-
-local clocks relaxed clock model, Apr-19 
-
-log likelihood, Feb-3  
-
-Lognormal distribution, Mar-3  
-
-long branch attraction (LBA), Feb-15	
-
-long branch attraction (LBA), Feb-17 
-
-Margaret Dayhoff, Jan-25 
-
-marginal likelihood estimation, Mar-22 
-
-marginal likelihood, Feb-24 
-
-marginal posterior distribution, Mar-3  
-
-marginal probabilities, Feb-3  
-
-Markov chain Monte Carlo (MCMC), Feb-24 
-
-Markov models, Feb-1 
-
-matrix exponentiation, Feb-22 
-
-matrix inverse, Feb-22 
-
-matrix multiplication, Feb-22 
-
-maximum likelihood estimate (MLE), Feb-3  
-
-MCMC proposal distribution, Mar-1  
-
-MCMC robot metaphor, Feb-24 
-
-measuring associations from joint dwell times, Mar-31 
-
-Metropolis algorithm, Mar-1  
-
-Metropolis-Hastings algorithm, Mar-1  
-
-minimum evolution criterion, Jan-27 
-
-mixing, Mar-1  
-
-mixture models, Feb-10 
-
-molecular clock LRT, Feb-17 
-
-molecules vs. morphology, Mar-24 
-
-
-morphological character mapping, Mar-31 
-
-multispecies coalescent model, Apr-14 
-
-multistate morphology model, Mar-24 
-
-MUSSE, Apr-21 
-
-neighbor joining, Jan-27 
-
-no common mechanism model, Mar-24 
-
-nonparametric bootstrapping, Feb-10 
-
-Ockham's Razor, Jan-25 
-
-OR probability rule, Feb-3  
-
-ordered characters, Jan-25 
-
-Ornstein-Uhlenbeck (OU) model, Apr-7  
-
-overparameterization artifacts/symptoms, Mar-24 
-
-Pagel discrete character correlation, Mar-29 
-
-Pagel's delta, Apr-12 
-
-Pagel's kappa, Apr-12 
-
-Pagel's lambda, Apr-12 
-
-PAM matrix, Feb-22 
-
-parametric bootstrapping, Mar-29 
-
-parsimony steps, Jan-25 
-
-partitioned models, Feb-10 
-
-paternity example, Feb-24 
-
-Pelargonium example, Mar-31 
-
-perfume diffusion metaphor, Feb-1  
-
-PGLS ancestral state estimation, Apr-7  
-
-PGLS regression, Apr-5  
-
-phylogenetic generalized least squares (PGLS), Apr-5  
-
-phylogenetic signal, Apr-12 
-
-phylogenetic variance-covariance matrix, Apr-5  
-
-phylogenetically independent contrasts (PIC), Apr-5  
-
-posterior probability vs bootstrap, Mar-29 
-
-posterior probability, Feb-24 
-
-predictive variance, Feb-1  
-
-prior distribution fails, Mar-3  
-
-prior probability, Feb-24 
-
-probability density, Feb-24 
-
-pruning algorithm, Feb-3
-
-pull of the present, Apr-21 
-
-Pybus and Harvey's gamma, Apr-21 
-
-QuaSSE, Apr-21 
-
-rare disease example, Feb-24 
-
-regression explained, Apr-5  
-
-RELL method, Feb-17 
-
-restaurant analogy (for DPP), Mar-10 
-
-retention index, Jan-25
-
-reversible-jump MCMC (rjMCMC), Mar-29 
-
-rjMCMC discrete character dependence model, Mar-29 
-
-rjMCMC diversification model, Apr-26 
-
-rjMCMC heterotachy model, Apr-26 
-
-rjMCMC polytomy model, Mar-29 
-
-Robert Sokal, Jan-25 
-
-secondary structure models, Feb-22 
-
-SH topology test, Feb-17 
-
-signature of an adaptive radiation, Apr-21 
-
-simulation-based hypothesis testing, Feb-15	
-
-site likelihood, Feb-3  
-
-site-specific rates model, Feb-10 
-
-sojourn vs dwell times, Mar-31 
-
-SOWH topology test, Feb-17 
-
-split decomposition, Jan-27 
-
-split prior, Mar-3  
-
-star tree paradox, Mar-29 
-
-StarBEAST species tree method, Apr-14 
-
-step matrix, Jan-25 
-
-steppingstone method, Mar-22 
-
-Steven Farris, Jan-25 
-
-stick-breaking metaphor (for DPP), Mar-10 
-
-stochastic mapping, Mar-31 
-
-strict molecular clock, Apr-19 
-
-subway map model metaphor, Feb-1  
-
-support of a probability distribution, Mar-3  
-
-SVDQuartets species tree method, Apr-14 
-
-symmetric morphology model, Mar-24 
-
-symplesiomorphy, Jan-25
-
-synapomorphy, Jan-25
-
-theta population-scaled mutation rate parameter, Apr-14 
-
-tip dating, Apr-19 
-
-trace plot, Mar-1  
-
-transition probability, Feb-1  
-
-transition-transversion rate ratio, Feb-1  
-
-transition-transversion ratio, Feb-1  
-
-transversion parsimony, Jan-25 
-
-tree space, Mar-1  
-
-turnover, Apr-21 
-
-uncorrelated relaxed clock model, Apr-19 
-
-Willi Hennig, Jan-25 
-
-Yule pure-birth process, Apr-19 
-{% endcomment %}

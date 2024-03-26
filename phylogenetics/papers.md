@@ -25,6 +25,8 @@ Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, 
 
 Huson, D. H., and D. Bryant. 2006. Application of phylogenetic networks in evolutionary studies. Mol. Biol. Evol. 23:254-267. (SplitsTree) (jan 25)
 
+Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model) (Jan 30)
+
 Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. Phylogenetic analysis: concepts and methods. American Journal of Human Genetics 23: 235-252. (Jan 25)
 
 Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375. (Jan 25)
@@ -135,8 +137,6 @@ Huelsenbeck, J. P., R. Nielsen, and J. P. Bollback. 2003. Stochastic mapping of 
 Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommodating and testing across-site rate variation. Systematic Biology 56:975–987. (DP model for among site rate heterogeneity)
 
 Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of mutation data matrices from protein sequences. Comput Applic Biosci, 8, 275–282. (JTT amino acid model)
-
-Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model)
 
 Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model)
 
