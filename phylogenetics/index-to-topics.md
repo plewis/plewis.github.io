@@ -27,6 +27,8 @@ Bayesian Information Criterion (BIC), Feb-29
 
 bootstrapping (non-parametric), Feb-15
 
+bootstrapping (parametric), Mar-26
+
 bootstrapping (IQ-TREE ultrafast), Feb-15
 
 branch-and-bound, Jan-18 
@@ -40,6 +42,8 @@ consensus trees, Jan-18
 deep coalescence, Mar-7
 
 density example (gold-to-aluminum brick), Feb-20
+
+dependence model, Mar-26
 
 discrete Gamma model, Feb-8
 
@@ -67,11 +71,15 @@ edge length, Jan-30
 
 effective population size (Ne), Mar-19
 
+estrus advertisement example, Mar-26
+
 evolutionary distance, Feb-6
 
 exhaustive search, Jan-18 
 
 expected time to coalescence, Mar-7
+
+evolutionary correlation, Mar-26
 
 Felsenstein (1981) model (F81), Feb-1
 
@@ -131,11 +139,13 @@ maximum likelihood estimate (MLE), Feb-6
 
 Markov-chain Monte Carlo (MCMC), Feb-22
 
-MCMC robot metaphor, Feb-22
+MCMC, robot metaphor, Feb-22
 
-MCMC proposals (local move), Feb-27
+MCMC, local move proposal, Feb-27
 
-MCMC proposals (sliding window move), Feb-27
+MCMC, reversible jump (rjMCMC), Mar-26
+
+MCMC, sliding window proposal, Feb-27
 
 Metropolis algorithm, Feb-22
 
@@ -147,19 +157,23 @@ goodness-of-fit of a model, Jan-30
 
 Hastings ratio, Feb-22
 
-models (asymmetric), Mar-21
+models, asymmetric, Mar-21
 
-models (discrete morphology), Mar-21
+models, dependent, Mar-26
 
-models (empirical Bayesian), Mar-5
+models, discrete morphology, Mar-21
 
-models (hierarchical), Mar-5
+models, empirical Bayesian, Mar-5
 
-models (mixture, +I, +G), Feb-8
+models, hierarchical, Mar-5
 
-models (Mk), Mar-21
+models, independent, Mar-26
 
-models (symmetric), Mar-21
+models, mixture (+I, +G), Feb-8
+
+models, Mk, Mar-21
+
+models, symmetric, Mar-21
 
 monophyly, Jan-16 
 
@@ -183,11 +197,11 @@ prior, coalescent tree, Mar-19
 
 prior, distribution, Mar-5
 
-prior, induced, Mar-5
-
 prior, Gamma-Dirichlet, Mar-5
 
 prior, induced split, Mar-5
+
+prior, polytomy, Mar-26
 
 probability, "and" rule, Feb-6
 
