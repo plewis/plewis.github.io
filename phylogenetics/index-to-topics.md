@@ -33,6 +33,8 @@ bootstrapping (IQ-TREE ultrafast), Feb-15
 
 branch-and-bound, Jan-18 
 
+brownian motion model, Mar-28
+
 coalescence, Mar-7
 
 conditioning on variability, Mar-21
@@ -66,6 +68,8 @@ distribution, proposal (for MCMC), Feb-22
 distribution, support, Mar-5
 
 distribution, target (for MCMC), Feb-22
+
+dwell time, Mar-28
 
 edge length, Jan-30
 
@@ -189,6 +193,8 @@ partitioned models, Feb-8
 
 paternity example, Feb-20
 
+phylogenetically independent contrasts (PIC), Mar-28
+
 polyphyly, Jan-18 
 
 predictive ability of a model, Jan-30
@@ -239,6 +245,8 @@ splits, Jan-16
 
 steppingstone method (marginal likelihood estimation), Feb-29
 
+stochastic character mapping, Mar-28
+
 subway map model analogy, Jan-30
 
 rare disease example, Feb-20
@@ -250,6 +258,8 @@ rate matrix (instantaneous), Feb-1
 reconnection limit, Jan-18 
 
 simulation, Feb-15
+
+sojourn time, Mar-28
 
 star decomposition, Jan-18 
 

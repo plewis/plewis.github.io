@@ -45,12 +45,12 @@ Thursday Mar. 14   | **SPRING BREAK**                                           
 Tuesday Mar.  19   | **[Species trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/15-species-trees-annotated.pdf)**                                       | **Homework 9** [Taking a step in treespace](/hwlocalmove/)
 Thursday Mar. 21   | **[Discrete morphological models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/16-discrete-morph-annotated.pdf)**                      | **Lab 9** [RevBayes](/revbayes/)
 Tuesday Mar. 26    | **[rjMCMC and Polytomies](https://gnetum.eeb.uconn.edu/courses/phylogenetics/17a-rjmcmc-polytomy-annotated.pdf)**; **[Evolutionary Correlation](https://gnetum.eeb.uconn.edu/courses/phylogenetics/17b-evol-correlation-annotated.pdf)** | **Homework 10** [Conditioning on variability](/hwcondvar/)
-Thursday Mar. 28   | **Stochastic character mapping**                                                                                                             | **Lab 10**
-Tuesday Apr. 2     | **Evolutionary Correlation: Continuous Traits**                                                                                              | **Homework 11**
-Thursday Apr. 4    | **PGLS regression**                                                                                                                          | **Lab 11**
-Tuesday Apr. 9     | **Phylogenetic signal in continuous traits**                                                                                                 | **Homework 12**
-Thursday Apr. 11   | **Codon, secondary structure, and amino acid models**                                                                                        | **Lab 12**
-Tuesday Apr. 16    | **Network models**                                                                                                                           | **Homework 13**
+Thursday Mar. 28   | **[Stochastic character mapping](https://gnetum.eeb.uconn.edu/courses/phylogenetics/18a-stochastic-mapping.pdf)**]; **[Independent Contrasts]((https://gnetum.eeb.uconn.edu/courses/phylogenetics/18b-indep-contrasts.pdf)**  | **Lab 10** [Discrete Morphology in RevBayes](/morph/)
+Tuesday Apr. 2     | **PGLS regression**                                                                                                                          | **Homework 11**
+Thursday Apr. 4    | **Phylogenetic signal in continuous traits**                                                                                                 | **Lab 11**
+Tuesday Apr. 9     | **Codon, secondary structure, and amino acid models**                                                                                        | **Homework 12**
+Thursday Apr. 11   | **Divergence time estimation**                                                                                                               | **Lab 12**
+Tuesday Apr. 16    | **Fossilized birth-death model**                                                                                                             | **Homework 13**
 Thursday Apr. 18   | **Diversification rate evolution**                                                                                                           | **Lab 13**
 Tuesday Apr. 23    | **Diversification (cont.), Heterotachy, and Covarion models**                                                                                | no homework assignment
 Thursday Apr. 25   | **Species delimitation and information**                                                                                                     | **Lab 14**
