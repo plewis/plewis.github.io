@@ -107,6 +107,10 @@ heated chains (MCMC), Feb-22
 
 heterotachy, Feb-8
 
+hyperparameter, Mar-5
+
+hyperprior, Mar-5
+
 independence of events, Feb-6
 
 induced prior, Mar-5
