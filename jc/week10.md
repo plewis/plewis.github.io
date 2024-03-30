@@ -154,7 +154,11 @@ The file _zeroinfo.Rev_ is set up (as the name suggests) for running RevBayes wi
 
     cp zeroinfo.Rev hasinfo.Rev
 
-and then edit _hasinfo.Rev_ to change the `ignore_data <- TRUE` to `ignore_data <- FALSE`. You will also need to edit your _test.slurm_ script (or modify a copy of this file) to use _hasinfo.Rev_ rather than _zeroinfo.Rev_. The run will take longer because now RevBayes needs to calculate likelihoods, but we should see the corrected Ipct much higher (e.g. maybe even reaching 100) because there is information in the data about the tree.
+and then edit _hasinfo.Rev_ to change the `ignore_data <- TRUE` to `ignore_data <- FALSE`. 
+
+**Important** You will need to edit your _test.slurm_ script (to use _hasinfo.Rev_ rather than _zeroinfo.Rev_) and also your `summarize.py` script (change `treefname` if necessary). 
+
+The RevBayes run will take longer because now RevBayes needs to calculate likelihoods, but we should see the corrected Ipct much higher (e.g. maybe even reaching 100) because there is information in the data about the tree.
 
 You can also try changing the scaling factor used by seq-gen to lower the amount of information in the data it generates. This would involve changing this line in _test.slurm_:
 
