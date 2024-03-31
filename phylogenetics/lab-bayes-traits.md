@@ -3,12 +3,61 @@ layout: page
 title: BayesTraits Lab
 permalink: /bayes-traits/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Goals
 
 In this lab you will learn how to use the program [BayesTraits](http://www.evolution.reading.ac.uk/BayesTraitsV4.0.0/BayesTraitsV4.0.0.html), written by Andrew Meade and Mark Pagel. BayesTraits can perform several analyses related to evaluating evolutionary correlation and ancestral state reconstruction in discrete morphological traits. 
 
+## Lab answer worksheet
+
+Copy the following text into a text file and use this template to answer the :thinking: questions along the way.
+
+    1. Which occurs at a faster rate: pinnate to palmate, or palmate to pinnate?
+    answer:
+    
+    2. Which occurs at a faster rate: entire to dissected, or dissected to entire?
+    answer:
+    
+    3. What type of joint evolutionary transitions seem to often have very low rates (look for an abundance of zeros in a column)?
+    answer:
+    
+    4. What type of joint evolutionary transitions seem to often have very high rates (look for columns with rates in the hundreds)?
+    answer:
+    
+    5. Why am I suggesting this switch? (Hint: what is the support of a Uniform(0,100) distribution vs. an Exponential(1/29) distribution?)
+    answer:
+    
+    6. Why choose 29? (Hint: the variance of a Uniform(0,100) distribution equals 100^2/12 and the variance of an Exponential(1/29) distribution equals 29^2)
+    answer:
+    
+    7. What is the log marginal likelihood estimated using the stepping-stone method? This value is listed on the last line of the file _mcmc-dependent.Stones.txt_
+    answer:
+    
+    8. What is the estimated log marginal likelihood for this analysis using the stepping-stone method?
+    answer:
+    
+    9. Which is the better model (dependent or independent) according to these estimates of marginal likelihood?
+    answer:
+    
+    10. Which model string is most common? 
+    answer:
+    
+    11. What does this model imply?
+    answer:
+    
+    12. So what is the estimated marginal posterior probability that q21=0?
+    answer:
+    
+    13. Why is the term marginal appropriate here (as in marginal posterior probability)?
+    answer:
+    
+    14. Which state is most common at the xerophyte MRCA node for leaf venation?
+    answer:
+    
+    15. Which state is most common at the xerophyte MRCA node for leaf dissection?
+    answer:
+    
 ## Getting started
 
 Login to your account on the Health Center (Xanadu) cluster, then issue
@@ -22,18 +71,18 @@ to start a session on a node that is not currently running jobs.
 There is no module for BayesTraits, so we will have to download the latest version into your home directory:
 
     cd
-    curl -O http://www.evolution.reading.ac.uk/BayesTraitsV4.0.0/Files/BayesTraitsV4.0.0-Linux.tar.gz
+    curl -O https://www.evolution.reading.ac.uk/BayesTraitsV4.1.1/Files/BayesTraitsV4.1.1-Linux.tar.gz
 
 Now unpack the gzipped "tape archive" (tar) file as follows:
 
-    tar zxvf BayesTraitsV4.0.0-Linux.tar.gz
+    tar zxvf BayesTraitsV4.1.1-Linux.tar.gz
 
-This will create a directory named _BayesTraitsV4.0.0-Linux_ in your home directory. Move the BayesTraits executable from inside _BayesTraitsV4.0.0-Linux_ down one level to your home directory for easier access:
+This will create a directory named _BayesTraitsV4.1.1-Linux_ in your home directory. Move the BayesTraits executable from inside _BayesTraitsV4.1.1-Linux_ down one level to your home directory for easier access:
 
-    cd BayesTraitsV4.0.0-Linux
+    cd BayesTraitsV4.1.1-Linux
     mv BayesTraitsV4 ..
 
-Go back to Mark Pagel's web site and [download the manual](http://www.evolution.reading.ac.uk/BayesTraitsV4.0.0/Files/BayesTraitsV4.0.0-Manual.pdf) for BayesTraits. This is a PDF file and should open in your browser window.
+Go back to Mark Pagel's web site and [download the manual](https://www.evolution.reading.ac.uk/BayesTraitsV4.1.1/Files/BayesTraitsV4.1.1-Manual.pdf) for BayesTraits. This is a PDF file and should open in your browser window.
 
 #### A little aside on tar files
 
@@ -47,7 +96,7 @@ This tar file has been compressed using the program gzip, which adds the gz endi
 
 ### Create a directory
 
-Use the unix <tt>mkdir</tt> command to create a directory to play in today:
+Use the unix `mkdir` command to create a directory to play in today:
 
     mkdir ~/btlab
     cd ~/btlab
@@ -64,7 +113,7 @@ The data and trees were not made available in the online supplementary materials
 
 [pelly.tre](/assets/data/pelly.tre) This is the tree file. It contains 99 trees sampled from an MCMC analysis of DNA sequences.
 
-Here's how to curl these files into your _btlab_ folder
+Here's how to `curl` these files into your _btlab_ folder
 
     cd ~/btlab
     curl -O https://plewis.github.io/assets/data/pelly.txt
@@ -92,11 +141,11 @@ The **leaf venation** trait comprises two states:
 
 We will first use maximum likelihood to estimate the rates at which these two traits evolve under both an independent model (traits assumed to evolve independently) and a dependent model (the rates of change in one trait may differ depending on the state present in the other trait).
 
-To test whether these two traits are correlated, we will carry out Bayesian MCMC analyses and estimate the **marginal likelihood** under two models. The model (independent or dependent) with the higher marginal likelihood will be the preferred model. You will recall that we discussed both of these models in lecture, and also discussed the **stepping-stone method** that BayesTraits uses to evaluate models. You may wish to pull up those lectures to help answer the questions that you will encounter momentarily, as well as the BayesTraits manual.
+To test whether these two traits are correlated, we will carry out Bayesian MCMC analyses and estimate the **marginal likelihood** under two models. The model (independent or dependent) with the higher marginal likelihood will be the preferred model. You will recall that we [discussed both of these models in lecture](https://gnetum.eeb.uconn.edu/courses/phylogenetics/17b-evol-correlation-annotated.pdf), and also discussed the [stepping-stone method](https://gnetum.eeb.uconn.edu/courses/phylogenetics/12-model-selection.pdf) that BayesTraits uses to evaluate models. You may wish to pull up those lectures to help answer the questions that you will encounter momentarily, as well as the BayesTraits manual.
 
 Then we will use reversible-jump MCMC to determine which of several thousand models is best. This method effectively uses marginal likelihoods to choose among models, but has the advantage that you need not specify which models you are interested in comparing beforehand.
 
-Finally, I'll show you how to estimate the m of different ancestral state combinations using BayesTraits.
+Finally, I'll show you how to estimate the marginal posterior probabilities of different ancestral state combinations using BayesTraits.
 
 ## Maximum Likelihood: Independence model 
 
@@ -162,7 +211,7 @@ Press the 1 key and hit enter to select maximum likelihood. Now you should see s
          Sites:                      1
          States:                     4
 
-Now type <tt>run</tt> and hit enter to perform the analysis, which will consist of estimating the parameters of the independent model on each of the 99 trees contained in the _pelly.tre_ file. You will notice that BayesTraits created a new file: _pelly.txt.Log.txt_. 
+Now type `run` and hit enter to perform the analysis, which will consist of estimating the parameters of the independent model on each of the 99 trees contained in the _pelly.tre_ file. You will notice that BayesTraits created a new file: _pelly.txt.Log.txt_. 
 
 **Rename this file** _ml-independent.txt_ so that it will not be overwritten the next time you run BayesTraits:
 
@@ -248,7 +297,7 @@ Run BayesTraits again, this time typing 3 on the first screen to choose the depe
          Sites:                      1
          States:                     4    
            
-Run the analysis. Here is an example of the output produced after you type <tt>run</tt> to start the analysis:
+Run the analysis. Here is an example of the output produced after you type `run` to start the analysis:
 
     Tree No	Lh	q12	q13	q21	q24	q31	q34	q42	q43	Root - P(0,0)	Root - P(0,1)	Root - P(1,0)	Root - P(1,1)
     1	-151.930254	66.451053	37.783888	0.000000	62.220033	23.997490	23.299393	46.110432	36.632979	0.24999	0.249981	0.250026	0.250000
@@ -365,7 +414,7 @@ Also type the following to ask BayesTraits to perform a stepping-stone analysis:
  
 Now run the analysis. This will estimate 100 ratios to brook the gap between posterior and prior, using a sample size of 10000 for each "stone".
 
-Here is an example of the output stored in the file _pelly.txt.Log.txt_ after you type <tt>run</tt> to start the analysis:
+Here is an example of the output stored in the file _pelly.txt.Log.txt_ after you type `run` to start the analysis:
 
     Iteration	Lh	Tree No	q12	q13	q21	q24	q31	q34	q42	q43	Root - P(0,0)	Root - P(0,1)	Root - P(1,0)	Root - P(1,1)
     11000	-155.195365	78	14.423234	34.800270	8.845985	45.927148	12.622435	50.476188	52.844895	32.149168	0.250068	0.249969	0.249994	0.249968
@@ -392,7 +441,7 @@ I got -161.163093 (this will vary across runs however)
 
 ## Bayesian MCMC: Independence model
 
-Run BayesTraits again, this time specifying the Independent model, and again using MCMC, <tt>pa exp 29</tt>, and <tt>stones 100 10000</tt>. Rename the output file from _pelly.txt.log.txt_ to _mcmc-independent.txt_. Also rename _pelly.txt.Stones.txt_ to _mcmc-independent.Stones.txt_:
+Run BayesTraits again, this time specifying the Independent model, and again using MCMC, `pa exp 29`, and `stones 100 10000`. Rename the output file from _pelly.txt.log.txt_ to _mcmc-independent.txt_. Also rename _pelly.txt.Stones.txt_ to _mcmc-independent.Stones.txt_:
 
     mv pelly.txt.Log.txt mcmc-independent.txt
     mv pelly.txt.Stones.txt mcmc-independent.Stones.txt
@@ -461,7 +510,7 @@ Run BayesTraits again, specifying Dependent model, MCMC and, this time, specify 
 
     rj exp 29
  
-The previous command also sets the prior. Type <tt>run</tt> to start, then when it finishes rename the output file _rjmcmc-dependent.txt_:
+The previous command also sets the prior. Type `run` to start, then when it finishes rename the output file _rjmcmc-dependent.txt_:
 
     mv pelly.txt.Log.txt rjmcmc-dependent.txt
 
@@ -491,7 +540,7 @@ Notice that many (but not all) model strings have Z for q21. One way to estimate
 
     model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
  
-The <tt>re.findall</tt> function performs a regular expression search of the text stored in the variable stuff looking for strings that have a series of 8 space-separated characters, each of which is _either_ the character Z _or_ a digit between 0 and 9 (inclusive). Copy this line (in nano, you can do this with Ctrl-K (cut), Ctrl-U (uncut), Ctrl-U (uncut)), then comment out one copy by starting the line with the hash (#) character:
+The `re.findall` function performs a regular expression search of the text stored in the variable stuff looking for strings that have a series of 8 space-separated characters, each of which is _either_ the character Z _or_ a digit between 0 and 9 (inclusive). Copy this line (in nano, you can do this with Ctrl-K (cut), Ctrl-U (uncut), Ctrl-U (uncut)), then comment out one copy by starting the line with the hash (#) character:
 
     #model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
     model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
@@ -527,7 +576,7 @@ Start BayesTraits in the usual way, specifying 1 (Multistate) on the first scree
     addmrca xero xerotag
     run
     
-The **addmrca** command tells BayesTraits to add columns of numbers to the output that display the probabilities of each state for each character in the most recent common ancestor of the taxa listed in the **addtag** command (2 taxa are sufficient to define the MRCA, but more taxa may be included). The column headers for the last four columns of output should be (I've added the comments starting with <tt><--</tt>)
+The **addmrca** command tells BayesTraits to add columns of numbers to the output that display the probabilities of each state for each character in the most recent common ancestor of the taxa listed in the **addtag** command (2 taxa are sufficient to define the MRCA, but more taxa may be included). The column headers for the last four columns of output should be (I've added the comments starting with `<--`)
 
     xero - S(0) - P(0) <-- character 0 (dissection), probability of state 0 (unlobed)
     xero - S(0) - P(1) <-- character 0 (dissection), probability of state 1 (dissected)
@@ -560,7 +609,7 @@ Estimate the marginal likelihood under these 2 models, both using the dependence
 * fossilize the MRCA of the xerophytic (dry-adapted) clade to have pinnate venation
 * fossilize the MRCA of the xerophytic (dry-adapted) clade to have palmate venation
 
-Note: the  <tt>Node01</tt> in the manual is just a name you invent to identify this fossilization constraint; you could call this <tt>xeronode</tt> if you want.
+Note: the  `Node01` in the manual is just a name you invent to identify this fossilization constraint; you could call this `xeronode` if you want.
 
 The main question is: What is the log Bayes Factor for pinnate vs. palmate venation?
 
@@ -575,7 +624,7 @@ Hint: for the last item, use $$e^{\mbox{log-BF}}$$ to convert your log Bayes Fac
 
 ## What to turn in
 
-Turn in your answers to the :thinking: thinking questions. Send them to Zach via Slack.
+Send your answers to the :thinking: thinking questions to Analisa via Slack.
 
 
 
