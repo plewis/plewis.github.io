@@ -7,7 +7,8 @@ stuff = open('rjmcmc-dependent.txt', 'r').read()
 
 # Use a regular expression search to pull out all model strings and store in model_list variable
 # The re.M tells the re module that there may be newlines in stuff (M = multiline)
-# The [Z012] items each say that the searched-for expression has either a Z or a 0 or a 1 or a 2 at that position.
+# The [Z0-9] items each say that the searched-for expression has either a Z or a 
+# digit at that position ("0-9" means "0 to 9").
 model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
 
 # Create a dictionary entry to keep track of the total count for each distinct model string

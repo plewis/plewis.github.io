@@ -66,11 +66,17 @@ Login to your account on the Health Center (Xanadu) cluster, then issue
     
 to start a session on a node that is not currently running jobs. 
     
+### Create a directory
+
+Use the unix `mkdir` command to create a directory to play in today:
+
+    mkdir ~/btlab
+    cd ~/btlab
+
 ### Download BayesTraits
 
 There is no module for BayesTraits, so we will have to download the latest version into your home directory:
 
-    cd
     curl -O https://www.evolution.reading.ac.uk/BayesTraitsV4.1.1/Files/BayesTraitsV4.1.1-Linux.tar.gz
 
 Now unpack the gzipped "tape archive" (tar) file as follows:
@@ -81,6 +87,11 @@ This will create a directory named _BayesTraitsV4.1.1-Linux_ in your home direct
 
     cd BayesTraitsV4.1.1-Linux
     mv BayesTraitsV4 ..
+    cd ..
+    
+The third line above (`cd ..`) should move you back to the `~/bdlab` directory. Check this using the `pwd` command:
+
+    pwd
 
 Go back to Mark Pagel's web site and [download the manual](https://www.evolution.reading.ac.uk/BayesTraitsV4.1.1/Files/BayesTraitsV4.1.1-Manual.pdf) for BayesTraits. This is a PDF file and should open in your browser window.
 
@@ -93,13 +104,6 @@ Data used to be stored on magnetic tape, not hard drives, and the tar (tape arch
 * f = file (this tells tar that the file name is coming next, so don't put f earlier in the list)
 
 This tar file has been compressed using the program gzip, which adds the gz ending to the file name. Most tar files are compressed with gzip or some similar algorithm so that the file requires less time to move across the internet.
-
-### Create a directory
-
-Use the unix `mkdir` command to create a directory to play in today:
-
-    mkdir ~/btlab
-    cd ~/btlab
 
 ### Download the tree and data files 
 
@@ -115,7 +119,6 @@ The data and trees were not made available in the online supplementary materials
 
 Here's how to `curl` these files into your _btlab_ folder
 
-    cd ~/btlab
     curl -O https://plewis.github.io/assets/data/pelly.txt
     curl -O https://plewis.github.io/assets/data/pelly.tre
     
@@ -151,8 +154,8 @@ Finally, I'll show you how to estimate the marginal posterior probabilities of d
 
 Type the following to start the BayesTraits program (assuming you are in the _btlab_ folder):
 
-    ../BayesTraitsV4 pelly.tre pelly.txt
-
+    ./BayesTraitsV4 pelly.tre pelly.txt
+    
 You should see this selection appear:
 
     Please select the model of evolution to use.
@@ -228,6 +231,8 @@ Open the _ml-independent.txt_ file in nano (or bring it back to your laptop and 
     98	-156.647307	52.357626	36.749282	27.270771	13.086248	0.250244	0.249756	0.250244	0.249756 
     99	-156.532925	52.321467	36.641688	27.402067	13.200124	0.250234	0.249767	0.250233	0.249766
  
+(Optional: download the _ml-independent.txt_ file to your laptop, use a text editor to strip the first 33 lines, and open the file in Tracer.)
+
 Answer these questions using the output you have generated. Here's a key to the meaning of each column in the file:
 
 | Column        | Description                                       |
@@ -405,7 +410,7 @@ The support of an Exponential(1/29) distribution matches the domain of the param
 > :thinking: Why choose 29? (Hint: the variance of a Uniform(0,100) distribution equals 100^2/12 and the variance of an Exponential(1/29) distribution equals 29^2)
 
 {% comment %}
-The variance of an Exponential(1/29) distribution is 29^2 = 841, which is similar to the variance of the Uniform(0,100) distribution, which is (100-0)^2/12 = 833.33.
+The variance of an Exponential(1/29) distribution is 29^2 = 841, which is similar to the variance of the Uniform(0,100) distribution, which is (100-0)^2/12 = 833.33. So we're choosing a prior with the same informativeness but which is not arbitrarily truncated at 100, just in case 100 turns out to be a bad choice.
 {% endcomment %}
 
 Also type the following to ask BayesTraits to perform a stepping-stone analysis:
@@ -501,7 +506,7 @@ I got -163.043380
 > :thinking: Which is the better model (dependent or independent) according to these estimates of marginal likelihood?
 
 {% comment %}
-The dependent model has a slightly higher marginal likelihood and is thus preferred
+The dependent model has a slightly higher marginal likelihood and is thus preferred.
 {% endcomment %}
 
 ## Bayesian Reversible-jump MCMC
@@ -536,7 +541,7 @@ I got 0 0 Z 0 0 0 0 0 with a count of 968
 All rates are the same except q21, which is forced to have rate zero. q21 equals 0 implies that entire,palmate leaves never change to entire,pinnate
 {% endcomment %}
 
-Notice that many (but not all) model strings have Z for q21. One way to estimate the marginal posterior probability of the hypothesis that q21=0 is to sum the counts for all model strings that have Z in that third position corresponding to q21. While it is pretty easy to add these numbers in your head, let's modify _btsummary.py_ to do this for us (this might come in useful if you ever encounter results that are more complex): open _btsummary.py_ and locate the line containing the [regular expression](https://en.wikipedia.org/wiki/Regular_expression) search that pulls out all the model strings from the BayesTrait output file:
+Notice that many (but not all) model strings have Z for q21. One way to estimate the marginal posterior probability of the hypothesis that q21=0 is to sum the counts for all model strings that have Z in that third position corresponding to q21. While it is pretty easy to add these numbers in your head, let's modify _btsummary.py_ to do this for us (this might come in useful if you ever encounter results that are more complex): open _btsummary.py_ in nano and locate the line containing the [regular expression](https://en.wikipedia.org/wiki/Regular_expression) search that pulls out all the model strings from the BayesTrait output file:
 
     model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
  
