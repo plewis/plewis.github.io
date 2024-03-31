@@ -3,7 +3,7 @@ layout: page
 title: Simulate a trait on a tree using the Brownian motion model
 permalink: /hwbmsim/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 Your challenge for this homework assignment is to simulate data for a single character under a Brownian motion model on the tree shown below.
 
@@ -41,7 +41,7 @@ Use Python 3.x to draw the states at nodes above the root from a normal distribu
     print("s7 = %12.5f" % s7)
     print("s8 = %12.5f" % s8)
 
-Replace all the **<tt>xxx</tt>** placeholders with either numbers or variable names. The **normalvariate** function takes two arguments. The first argument is the **mean**, the second argument is the **standard deviation**. 
+Replace all the `xxx` placeholders with either numbers or variable names. The **normalvariate** function takes two arguments. The first argument is the **mean**, the second argument is the **standard deviation**. 
 
 You will first need to choose a pseudorandom number seed. This should be a whole number greater than 0. You can use whatever number you like here.
 
@@ -49,4 +49,4 @@ Remember that, in the Brownian motion (BM) model, variance (i.e. uncertainty) ac
 
 ## What to turn in
 
-Please send me (via email or slack) your python3 file that you've modified from the template above.
+Please send me (via slack preferably) your python3 file that you've modified from the template above.
