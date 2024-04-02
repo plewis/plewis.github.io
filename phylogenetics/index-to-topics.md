@@ -33,9 +33,11 @@ bootstrapping (IQ-TREE ultrafast), Feb-15
 
 branch-and-bound, Jan-18 
 
-brownian motion model, Mar-28
+brownian motion model, Apr-2
 
 coalescence, Mar-7
+
+comparative method, Apr-2
 
 conditioning on variability, Mar-21
 
@@ -197,7 +199,9 @@ partitioned models, Feb-8
 
 paternity example, Feb-20
 
-phylogenetically independent contrasts (PIC), Mar-28
+phylogenetically generalized least squares (PGLS), Apr-2
+
+phylogenetically independent contrasts (PIC), Apr-2
 
 polyphyly, Jan-18 
 
@@ -295,3 +299,4 @@ tree-bisection-reconnection (TBR) branch swapping, Jan-18
 
 ultrametric, Jan-18 
 
+variance-covariance matrix, Apr-2
