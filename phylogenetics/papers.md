@@ -9,6 +9,8 @@ These papers were cited in the Spring 2024 version of the course.
 
 Bergthorsson U., Adams K. L., Thomason B., Palmer J. D. 2003. Widespread horizontal transfer of mitochondrial genes in flowering plants. Nature 424:197–201. (Apr 2)
 
+Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic signal in comparative data: behavioral traits are more labile. Evolution 57(4):717-745. (Apr 4)
+
 Blomberg, S. P., J. G. Lefevre, J. A. Wells, and M. Waterhouse. 2012. [Independent contrasts and PGLS regression estimators are equivalent.](https://doi.org/10.1093/sysbio/syr118) Systematic Biology 61:382–391. (Apr 2)
 
 Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. Mitochondrial DNA sequences of primates, tempo and mode of evolution. Journal of Molecular Evolution 18:225-239. (Jan 25)
@@ -95,6 +97,8 @@ Nielsen, R. 2002. Mapping mutations on phylogenies. Systematic Biology 51(5): 72
 
 Pagel, M. 1994. Detecting correlated evolution on phylogenies: a general method for the comparative analysis of discrete characters. Proceedings of the Royal Society of London B 255:37-45. (assessing evolutionary correlation between two discrete traits) (Mar 21)
 
+Pagel, M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877–884. (introduced the delta and lambda scaling factors used in comparative analyses) (Apr 4)
+
 Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discrete characters by reversible-jump Markov chain Monte Carlo. American Naturalist 167:808-825. (rjMCMC for discrete character correlation) (Mar 26)
 
 Pettigrew, J. D. 1991. Wings or brain? convergent evolution in the origins of bats. Systematic Zoology, 40(2):199-216. (Feb 15)
@@ -135,8 +139,6 @@ Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. Bayesian estim
 Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
 
 Beaulieu, J. M., and B. C. O'Meara. 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic Biology 65:583-601.
-
-Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic signal in comparative data: behavioral traits are more labile. Evolution 57(4):717-745.
 
 Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates. Systematic Biology 59:145–161.
 
@@ -241,8 +243,6 @@ Muse, S. V., and B. S. Gaut. 1994. A likelihood approach for comparing synonymou
 Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Appropriate likelihood ratio tests and marginal distributions for evolutionary tree models with constraints on parameters. Molecular Biology and Evolution 17:798-803. (LRT border case correction)
 
 Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scripta 26:331–348. (introduced kappa scaling factor used in comparative analyses)
-
-Pagel, M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877–884. (introduced the delta and lambda scaling factors used in comparative analyses)
 
 Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting pattern-heterogeneity in gene sequence or character-state data. Systematic Biology 53:571-581. (mixture of Q-matrices model)
 

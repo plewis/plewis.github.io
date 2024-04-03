@@ -45,6 +45,8 @@ consensus trees, Jan-18
 
 deep coalescence, Mar-7
 
+delta, Pagel's, Apr-4
+
 density example (gold-to-aluminum brick), Feb-20
 
 dependence model, Mar-26
@@ -123,9 +125,13 @@ invariable sites model (+I), Feb-8
 
 Jukes-Cantor (1969) model (JC69), Jan-30
 
+K, Blomberg's, Apr-4
+
 kernel density estimation, Feb-27
 
 Kimura (1980) 2-parameter model (K2P, K80), Feb-1
+
+lambda, Pagel's, Apr-4
 
 likelihood criterion, Jan-18 
 
