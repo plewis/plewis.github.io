@@ -34,8 +34,8 @@ Login to your student account on the cluster and create a file named _hw10.py_ u
         return like
     
     #        00  01  10  11   <-- ancestral state combinations possible    
-    same1 = [ 5,  2,  2,  1]  <-- no. edges with same state at both ends
-    same2 = [ 3,  4,  0,  3]  <-- in tree 1 (same1) and tree 2 (same2)
+    same1 = [ 5,  2,  2,  1]  #  no. edges with same state at both ends
+    same2 = [ 3,  4,  0,  3]  #  in tree 1 (same1) and tree 2 (same2)
 
     # Compute the site likelihood for each of the two characters
     # by calling the function sitelike (we'll assume v = 0.1 for

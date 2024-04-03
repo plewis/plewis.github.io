@@ -302,7 +302,7 @@ Run BayesTraits again, this time typing 3 on the first screen to choose the depe
          Sites:                      1
          States:                     4    
            
-Run the analysis. Here is an example of the output produced after you type `run` to start the analysis:
+Run the analysis. Here is an example of the output produced (in the file _pelly.txt.Log.txt_) after you type `run` to start the analysis:
 
     Tree No	Lh	q12	q13	q21	q24	q31	q34	q42	q43	Root - P(0,0)	Root - P(0,1)	Root - P(1,0)	Root - P(1,1)
     1	-151.930254	66.451053	37.783888	0.000000	62.220033	23.997490	23.299393	46.110432	36.632979	0.24999	0.249981	0.250026	0.250000
@@ -319,16 +319,16 @@ Run the analysis. Here is an example of the output produced after you type `run`
     
 Here's a key to the rates:
 
-| Rate          | Context               | Transition                             |
-| :------------ | :-------------------- | :------------------------------------- |
-| q12           | margin: 0 (entire)    | venation: 0 (pinnate) -> 1 (palmate)
-| q13           | venation: 0 (pinnate) | margin:   0 (entire) -> 1 (dissected)
-| q21           | margin: 0 (entire)    | venation: 1 (palmate) -> 0 (pinnate)
-| q24           | venation: 1 (palmate) | margin:   0 (entire) -> 1 (dissected)
-| q31           | venation: 0 (pinnate) | margin:   1 (dissected) -> 0 (entire)
-| q34           | margin: 1 (dissected) | venation: 0 (pinnate) -> 1 (palmate)
-| q42           | venation 1 (palmate)  | margin:   1 (dissected) -> 0 (entire)
-| q43           | margin: 1 (dissected) | venation: 1 (palmate) -> 0 (pinnate)
+| Rate          | Context                   | Transition                             |
+| :------------ | :------------------------ | :------------------------------------- |
+| q12           | dissection: 0 (entire)    | venation: 0 (pinnate) -> 1 (palmate)
+| q13           | venation: 0 (pinnate)     | dissection:   0 (entire) -> 1 (dissected)
+| q21           | dissection: 0 (entire)    | venation: 1 (palmate) -> 0 (pinnate)
+| q24           | venation: 1 (palmate)     | dissection:   0 (entire) -> 1 (dissected)
+| q31           | venation: 0 (pinnate)     | dissection:   1 (dissected) -> 0 (entire)
+| q34           | dissection: 1 (dissected) | venation: 0 (pinnate) -> 1 (palmate)
+| q42           | venation 1 (palmate)      | dissection:   1 (dissected) -> 0 (entire)
+| q43           | dissection: 1 (dissected) | venation: 1 (palmate) -> 0 (pinnate)
   
 
 > :thinking: What type of joint evolutionary transitions seem to often have very low rates (look for an abundance of zeros in a column)?
@@ -583,12 +583,12 @@ Start BayesTraits in the usual way, specifying 1 (Multistate) on the first scree
     
 The **addmrca** command tells BayesTraits to add columns of numbers to the output that display the probabilities of each state for each character in the most recent common ancestor of the taxa listed in the **addtag** command (2 taxa are sufficient to define the MRCA, but more taxa may be included). The column headers for the last four columns of output should be (I've added the comments starting with `<--`)
 
-    xero - S(0) - P(0) <-- character 0 (dissection), probability of state 0 (unlobed)
+    xero - S(0) - P(0) <-- character 0 (dissection), probability of state 0 (entire)
     xero - S(0) - P(1) <-- character 0 (dissection), probability of state 1 (dissected)
     xero - S(1) - P(0) <-- character 1 (venation), probability of state 0 (pinnate)
     xero - S(1) - P(1) <-- character 1 (venation), probability of state 1 (palmate)
 
-You can download the output file and view it in Tracer. That way you can use Tracer to tell you the means of the four columns above. Note that you will need to remove the initial text from the file (but keep the column headers) before Tracer will recognize it.
+You can download the output file (_pelly.txt.Log.txt_) and view it in Tracer. That way you can use Tracer to tell you the means of the four columns above. Note that you will need to remove the initial text from the file (but keep the column headers) before Tracer will recognize it.
 
 > :thinking: Which state is most common at the xerophyte MRCA node for leaf venation?
 
