@@ -3,7 +3,7 @@ layout: page
 title: APE (and related tools) Lab
 permalink: /ape/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Goals
 
@@ -17,6 +17,38 @@ Here is an overview of today's themes:
 * [PGLS regression](#phylogenetic-generalized-least-squares-regression) uses the pgls command in caper to compute the intercept and slope for the simple PGLS example we did by hand in lecture
 * [An empirical example](#an-empirical-example) uses the pgls function in caper to examine a real question in a real data file (that is much too big to do by hand!) and uses the phylosig function in phytools to estimate phylogenetic signal with Pagel's lambda and Blomberg's K.
 
+## Template for recording your answers to questions
+
+    1. What is the slope of this line (on log scale)? Is it close to the birth rate 10? 
+    answer:
+    
+    2. What is the death rate estimated by APE? 
+    answer:
+    
+    3. Is the true diversification rate within one standard error of the estimated diversification rate? 
+    answer:
+    
+    4. Are the true diversification and relative extinction values within the profile likelihood 95% confidence intervals? 
+    answer:
+    
+    5. Which elements of the variance-covariance matrix tell you that this matrix represents no phylogenetic information?
+    answer:
+    
+    6. Is the relationship between body size (as measured by wing length) and the two song traits statistically significant once phylogeny is taking into account? What part of the model summary output tells you the answer to this?
+    answer:
+    
+    7. Is body size positively or negatively associated with the length of notes in songs? (Hint: look at the estimated coefficient for Note_Length.)
+    answer:
+    
+    8. Is body size positively or negatively associated with the frequency of songs? (Hint: look at the estimated coefficient for Dominant_frequency.)
+    answer:
+    
+    9. What are the estimated values of Pagel's lambda and Blomberg's K? What does this imply about phylogenetic signal?
+    answer:
+    
+    10. Does this character have more or less signal than Note_Length? Does it have a significant amount of signal?
+    answer:
+    
 ## Installing APE and related packages
 
 **APE** is a package largely written and maintained by [Emmanuel Paradis](http://ape-package.ird.fr/ep/), who has written a very nice book ([Paradis 2006](/phylogenetics2022#literature-cited)) explaining in detail how to use APE. APE is designed to be used inside the [R](http://www.r-project.org/) programming language, which you are no doubt familiar with and was the subject of an earlier lab this semester (see [R primer](https://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_R_Primer) ). APE can do an impressive array of analyses. For example, it is possible to estimate trees using neighbor-joining or maximum likelihood, estimate ancestral states (for either discrete or continuous data), perform Sanderson's penalized likelihood relaxed clock method to estimate divergence times, evaluate Felsenstein's independent contrasts, estimate birth/death rates, perform bootstrapping, and even automatically pull sequences from GenBank given a vector of accession numbers! APE also has impressive tree plotting capabilities, of which we will only scratch the surface today (flip through Chapter 4 of the Paradis book to see what more APE can do).
@@ -39,7 +71,7 @@ Assuming you are connected to the internet, R should locate these packages and i
      library(caper)
      library(geiger)
      
-You should never again need to issue the <tt>install.packages</tt> command for this package again, but you will need to use the <tt>library</tt> command to load them whenever you want to use them.
+You should never again need to issue the `install.packages` command for this package again, but you will need to use the `library` command to load them whenever you want to use them.
 
 ## Exploring tree structure
 
@@ -47,17 +79,17 @@ Download the file _yule.tre_ into a new, empty folder somewhere on your computer
 
     curl -O https://plewis.github.io/assets/data/yule.tre
     
-Tell R where this folder is using the <tt>setwd</tt> (set working directory) command. For example, I created a folder named <tt>apelab</tt> on my desktop, so I typed this to make that folder my working directory:
+Tell R where this folder is using the `setwd` (set working directory) command. For example, I created a folder named `apelab` on my desktop, so I typed this to make that folder my working directory:
 
     setwd("/Users/plewis/Desktop/apelab")
     
 (If you are using R Studio in Windows, you'll need to use the Windows-style path with the backslashes rather than forward slashes.)
 
-Now you should be able to read in the tree using this ape command (the <tt>t</tt> is an arbitrary name I chose for the variable used to hold the tree; you could use <tt>tree</tt> if you want):
+Now you should be able to read in the tree using this ape command (the `t` is an arbitrary name I chose for the variable used to hold the tree; you could use `tree` if you want):
 
     t <- read.nexus("yule.tre")
     
-We use <tt>read.nexus</tt> because the tree at hand is in NEXUS format, but APE has a variety of functions to read in different tree file types. If APE can't read your tree file, then give the package treeio a spin. APE stores trees as an object of type "phylo". 
+We use `read.nexus` because the tree at hand is in NEXUS format, but APE has a variety of functions to read in different tree file types. If APE can't read your tree file, then give the package treeio a spin. APE stores trees as an object of type "phylo". 
 
 ### Getting a tree summary
 
@@ -74,7 +106,7 @@ Some basic information about the tree can be obtained by simply typing the name 
 
 ### Obtaining vectors of tip and internal node labels
 
-The variable <tt>t</tt> has several attributes that can be queried by following the variable name with a dollar sign and then the name of the attribute. For example, the vector of tip labels can be obtained as follows:
+The variable `t` has several attributes that can be queried by following the variable name with a dollar sign and then the name of the attribute. For example, the vector of tip labels can be obtained as follows:
 
     t$tip.label
     [1] "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U"
@@ -84,7 +116,7 @@ The internal node labels, if they exist, can be obtained this way:
     t$node.label
     NULL
     
-The result above means that labels for the internal nodes were not stored with this tree.
+The `NULL` result above means that labels for the internal nodes were not stored with this tree.
 
 ### Obtaining the nodes attached to each edge 
 
@@ -111,9 +143,9 @@ The edge lengths can be printed thusly:
      [28] 0.07015000 0.12596600 0.06999200 0.06797400 0.00201900 0.00201900 0.12462600 0.07128300 0.00004969
      [37] 0.00004969 0.07133200
 
-### About this tree 
+### About the tree 
 
-This tree in the file <tt>yule.tre</tt> was obtained using PAUP from 10,000 nucleotide sites simulated from a Yule tree. The model used to generate the simulated data (HKY model, kappa = 4, base frequencies = 0.3 A, 0.2 C, 0.2 G, and 0.3 T, no rate heterogeneity) was also used in the analysis by PAUP (the final ML tree was made ultrametric by enforcing the clock constraint).
+The tree in the file `yule.tre` was obtained using PAUP from 10,000 nucleotide sites simulated from a Yule tree. The model used to generate the simulated data (HKY model, kappa = 4, base frequencies = 0.3 A, 0.2 C, 0.2 G, and 0.3 T, no rate heterogeneity) was also used in the analysis by PAUP (the final ML tree was made ultrametric by enforcing the clock constraint).
 
 {% comment %}
 I analyzed these data in BEAST for part of a lecture. See slide 22 and beyond in [http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/DivTimeBayesianBEAST.pdf this PDF file] for details.
@@ -121,9 +153,9 @@ I analyzed these data in BEAST for part of a lecture. See slide 22 and beyond in
 
 ### Plotting trees using the PhyTools plotTree command
 
-In the R primer lab, you learned how to plot trees in R using **ggtree**. You can plot trees much more easily using the **plot** command in APE or the **plotTree** command in PhyTools. While ggtree gives you a lot more flexibility, plotTree provides all you need for routine visualization and has a much shallower learning curve.
+You can plot trees easily using the **plot** command in APE or the **plotTree** command in PhyTools. 
 
-You can plot the tree using all defaults with this PhyTools command:
+To plot the tree using all defaults, use this PhyTools command:
 
     plotTree(t)
 
@@ -143,7 +175,7 @@ An edge width of 1 is the default.
 
     plotTree(t, fsize=.5)
 
-The fsize parameter governs relative scaling of the taxon labels, with 1.0 being the default. Thus, the command above makes the taxon labels half the default size.
+The `fsize` parameter governs relative scaling of the taxon labels, with 1.0 being the default. Thus, the command above makes the taxon labels half the default size.
 
 ### Change the orientation
 
@@ -153,20 +185,20 @@ The default direction is "rightwards", but "leftwards", "upwards", and "downward
 
 ### Put a dot at each node
 
-FALSE (F) is the default for the **pts** parameter, but you can add dots by changing it to TRUE (T):
+FALSE (F) is the default for the `pts` parameter, but you can add dots by changing it to TRUE (T):
 
     plotTree(t, pts=T)
     
 ### Change the plotting style
 
-The default for **type** is "phylogram", but "fan" and "cladogram" are options: 
+The default for `type` is "phylogram", but "fan" and "cladogram" are options: 
 
     plotTree(t, type="fan")
     plotTree(t, type="cladogram")
         
 ## Diversification analyses
 
-APE can perform some lineage-through-time type analyses. The tree read in from the file <tt>yule.tre</tt> that you already have in memory is perfect for testing APE's diversification analyses because we know (since it is based on simulated data) that this tree was generated under a pure-birth (Yule) model.
+APE can perform some lineage-through-time type analyses. The tree read in from the file `yule.tre` that you already have in memory is perfect for testing APE's diversification analyses because we know (since it is based on simulated data) that this tree was generated under a pure-birth (Yule) model.
 
 ### Lineage through time plots
 
@@ -178,7 +210,7 @@ LTT plots usually have a log scale for the number of lineages (y-axis), and this
 
     ltt.plot(t, log = "y")
 
-Now add a line extending from the point (t = -0.265, N = 2) to the point (t = 0, N = 20) using the command <tt>segments</tt> (note that the &quot;segments&quot; command is a core R command, not something added by the APE package):
+Now add a line extending from the point (t = -0.265, N = 2) to the point (t = 0, N = 20) using the command `segments` (note that the `segments` command is a core R command, not something added by the APE package):
 
     segments(-0.265, 2, 0, 20, lty="dotted")
 
@@ -194,7 +226,7 @@ If you get something like 68 for the slope, then you probably used _common_ loga
 
 ### Birth/death analysis
 
-Now let's perform a birth/death analysis. APE's <tt>birthdeath</tt> command estimates the birth and death rates using the node ages in a tree:
+Now let's perform a birth/death analysis. APE's `birthdeath` command estimates the birth and death rates using the node ages in a tree:
 
     birthdeath(t)
      Estimation of Speciation and Extinction Rates
@@ -212,7 +244,7 @@ Now let's perform a birth/death analysis. APE's <tt>birthdeath</tt> command esti
            d / b: [-1.193549, 0.5286254]
            b - d: [5.25955, 13.32028]
 
-See the excellent [APE manual](https://cran.r-project.org/web/packages/ape/ape.pdf) to learn more about the <tt>birthdeath</tt> function. 
+See the excellent [APE manual](https://cran.r-project.org/web/packages/ape/ape.pdf) to learn more about the `birthdeath` function. 
 
 > :thinking: What is the death rate estimated by APE? 
 
@@ -232,7 +264,7 @@ yes, one standard error each side of (10-0) is the interval from 8.554 to 11.446
 yes
 {% endcomment %}
 
-A _profile_ likelihood is obtained by varying one parameter in the model and re-estimating all the other parameters conditional on the current value of the focal parameter. Confidence intervals based on the profile likelihood are better when the parameter value is near a hard boundary because the usual method for estimating confidence intervals assumes that the likelihood curve is approximately normal and thus symmetric around the MLE.
+A **profile likelihood** is obtained by varying one parameter in the model and re-estimating all the other parameters conditional on the current value of the focal parameter. Confidence intervals based on the profile likelihood are better than the usual confidence intervals when the parameter value is near a hard boundary because the usual method for estimating confidence intervals assumes that the likelihood curve is approximately normal and thus symmetric around the MLE.
 
 {% comment %}
 > :thinking: What is the correct way to interpret the 95% confidence interval for b - d: [5.25955, 13.32028]? Is it that there is 95% chance that the true value of b - d is in that interval? 
@@ -256,7 +288,7 @@ The apTreeshape package (as the name applies) lets you perform analyses of tree 
 
     ts <- as.treeshape(t)
     
-Here, I'm assuming that <tt>t</tt> still refers to the tree you read in from the file <tt>yule.tre</tt> using the APE command <tt>read.nexus</tt>. We can now obtain a measure of **tree imbalance** known as Colless's index:
+Here, I'm assuming that `t` still refers to the tree you read in from the file `yule.tre` using the APE command `read.nexus`. We can now obtain a measure of **tree imbalance** known as Colless's index:
 
     c <- colless(ts)
     c
@@ -276,7 +308,7 @@ This generates 1000 trees from a Yule process and compares the Colless index fro
 
 I got 0.288 so no, the Yule process can easily generate trees with the same level of imbalance as our tree
 
-You can also test one other model with the <tt>colless</tt> function: the "proportional to distinguishable" (or PDA) model. This null model produces random trees by starting with three taxa joined to a single internal node, then building upon that by adding new taxa to randomly-chosen (discrete uniform distribution) edges that already exist in the (unrooted) tree. The edge to which a new taxon is added can be an internal edge as well as a terminal edge, which causes this process to produce trees with a different distribution of shapes than the Yule process, which only adds new taxa to the tips of a growing rooted tree.
+You can also test one other model with the `colless` function: the "proportional to distinguishable" (or PDA) model. This null model produces random trees by starting with three taxa joined to a single internal node, then building upon that by adding new taxa to randomly-chosen (discrete uniform distribution) edges that already exist in the (unrooted) tree. The edge to which a new taxon is added can be an internal edge as well as a terminal edge, which causes this process to produce trees with a different distribution of shapes than the Yule process, which only adds new taxa to the tips of a growing rooted tree.
 
     colless.test(ts, model = "pda", alternative="greater", n.mc = 1000)
     
@@ -301,7 +333,7 @@ You might want to see a histogram of the Colless index like that used to determi
 
     rtreeshape(10,20,model="yule")
     
-That spits out a summary of the 10 trees created, but what we really wanted was to know the Colless index for each of the trees generated. To do this, use the R command <tt>sapply</tt> to call the apTreeshape command <tt>colless</tt> for each tree generated by the <tt>rtreeshape</tt> command:
+That spits out a summary of the 10 trees created, but what we really wanted was to know the Colless index for each of the trees generated. To do this, use the R command `sapply` to call the apTreeshape command `colless` for each tree generated by the `rtreeshape` command:
 
     sapply(rtreeshape(10,20,model="yule"),FUN=colless)
       [1] 38 92 85 91 73 71 94 75 72 93
@@ -310,7 +342,7 @@ That spits out a summary of the 10 trees created, but what we really wanted was 
 
 In a Yule model, the time between speciation events is determined by drawing random numbers from an exponential distribution. If we all started with the same initial (seed) random number, then our Colless indices would be identical.
 
-That's more like it! Now, generate 1000 Yule trees instead of just 10, and create a histogram using the standard R command <tt>hist</tt>:
+That's more like it! Now, generate 1000 Yule trees instead of just 10, and create a histogram using the standard R command `hist`:
 
     yulecolless <- sapply(rtreeshape(1000,20,model="yule"),FUN=colless)
     hist(yulecolless)
@@ -329,7 +361,7 @@ Use the following to compare the mean Colless index for the PDA trees to the Yul
 
 Yule trees are more balanced, with mean Colless index 39 versus 81 for PDA
 
-apTreeshape provides one more function (<tt>likelihood.test</tt>) that performs a likelihood ratio test of the PDA model against the Yule model null hypothesis. This test says that we cannot reject the null hypothesis of a Yule model in favor of the PDA model:
+apTreeshape provides one more function (`likelihood.test`) that performs a likelihood ratio test of the PDA model against the Yule model null hypothesis. This test says that we cannot reject the null hypothesis of a Yule model in favor of the PDA model:
 
     likelihood.test(ts)
     
@@ -342,7 +374,7 @@ I got 0.4095684, so no, our tree is consistent with a Yule tree
 
 APE can compute Felsenstein's independent contrasts, as well as several other methods for assessing phylogenetically-corrected correlations between traits that I did not discuss in lecture (autocorrelation, generalized least squares, mixed models and variance partitioning, and the very interesting Ornstein-Uhlenbeck model, which can be used to assess the correlation between a continuous character and a discrete habitat variable).
 
-Today, however, we will just play with independent contrasts and phylogenetic generalized least squares (PGLS) regression. Let's try to use APE's <tt>pic</tt> command to reproduce the Independent Contrasts example from lecture:
+Today, however, we will just play with independent contrasts and phylogenetic generalized least squares (PGLS) regression. Let's try to use APE's `pic` command to reproduce the [Independent Contrasts example from lecture](https://gnetum.eeb.uconn.edu/courses/phylogenetics/19a-indep-contrasts-annotated.pdf):
 
 |       |   X  |    Y  | Var  |   X*   |   Y*   |  
 | :---: | ---: | ----: | ---: | -----: | -----: |
@@ -358,14 +390,14 @@ Start by entering the tree:
 
     t <- read.tree(text="((A:1,B:1)E:10,(C:1,D:1)F:10)G;")
     
-The attribute <tt>text</tt> is needed because we are entering the Newick tree description in the form of a string, not supplying a file name. Note that I have labeled the root node G and the two interior nodes E (ancestor of A and B) and F (ancestor of C and D).
+The attribute `text` is needed because we are entering the Newick tree description in the form of a string, not supplying a file name. Note that I have labeled the root node G and the two interior nodes E (ancestor of A and B) and F (ancestor of C and D).
 
 Plot the tree to make sure the tree definition worked:
 
     plot(t, show.node.label=T)
     axisPhylo()
     
-Here we're using APE's **plot** command (earlier we used PhyTools' **plotTree** command). axisPhylo is also an APE command. You can find out which package this (or some other) command is in using either 
+Here we're using APE's `plot` command (earlier we used PhyTools' `plotTree` command). `axisPhylo` is also an APE command. You can find out which package this (or some other) command is in using either 
 
     ?axisPhylo
     
@@ -396,7 +428,7 @@ If you want to avoid repetition, you can enter the names for both x and y simult
 
 ### Compute independent contrasts
 
-Now compute the contrasts with the APE function <tt>pic</tt>:
+Now compute the contrasts with the APE function `pic`:
 
     cx <- pic(x,t)
     cy <- pic(y,t)
@@ -420,9 +452,9 @@ APE makes it fairly easy to label the tree with the contrasts:
     nodelabels(round(cx,3), adj=c(0,-1), frame="n")
     nodelabels(round(cy,3), adj=c(0,+1), frame="n")
     
-In the nodelabels command, we supply the numbers with which to label the nodes. The vectors cx and cy contain information about the nodes to label, so APE knows from this which numbers to place at which nodes in the tree. The <tt>round</tt> command simply rounds the contrasts to 3 decimal places. The <tt>adj</tt> setting adjusts the spacing so that the contrasts for X are not placed directly on top of the contrasts for Y. The command <tt>adj=c(0,-1)</tt> causes the labels to be horizontally displaced 0 lines and vertically displaced one line up (the -1 means go up 1 line) from where they would normally be plotted. The contrasts for Y are displaced vertically one line down from where they would normally appear. Finally, the <tt>frame="n"</tt> just says to not place a box or circle around the labels.
+In the nodelabels command, we supply the numbers with which to label the nodes. The vectors `cx` and `cy` contain information about the nodes to label, so APE knows from this which numbers to place at which nodes in the tree. The `round` command simply rounds the contrasts to 3 decimal places. The `adj` setting adjusts the spacing so that the contrasts for X are not placed directly on top of the contrasts for Y. The command `adj=c(0,-1)` causes the labels to be horizontally displaced 0 lines and vertically displaced one line up (the -1 means go up 1 line) from where they would normally be plotted. The contrasts for Y are displaced vertically one line down from where they would normally appear. Finally, the `frame="n"` just says to not place a box or circle around the labels.
 
-You should find that the contrasts are the same as those shown as X* and Y* in the table above (as well as the summary slide (slide 13) in the [Independent Contrasts lecture](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/lectures/2022/IndependentContrasts.pdf)). 
+You should find that the contrasts are the same as those shown as X* and Y* in the table above (as well as the summary slide (slide 13) in the [Independent Contrasts](https://gnetum.eeb.uconn.edu/courses/phylogenetics/19a-indep-contrasts-annotated.pdf) lecture. 
 
 Computing the correlation coefficient is as easy as:
 
@@ -431,7 +463,7 @@ Computing the correlation coefficient is as easy as:
 
 ## Phylogenetic Generalized Least Squares regression
 
-Let's reproduce the PGLS regression example given in lecture using the caper package. Here are the data we used:
+Let's reproduce the [PGLS regression example given in lecture](https://gnetum.eeb.uconn.edu/courses/phylogenetics/19b-pgls-regression-annotated.pdf) using the **caper** package. Here are the data we used:
 
 |       |   X   |   Y   |
 | :---: | :---: | :---: |
@@ -450,10 +482,10 @@ Create a data frame to hold the data:
     row.names(df) <- df[[1]]
     names(df) <- c("Species", "X", "Y")
 
-The above code creates 3 vectors and then creates a data frame named df out of them. The row names are set using the first column of the data frame (these are the species names). The column names are specified in the last line.
+The above code creates 3 vectors and then creates a data frame named `df` out of them. The row names are set using the first column of the data frame (these are the species names). The column names are specified in the last line.
 
 {% comment %}
-In order to carry out generalized least squares regression, we will need the <tt>gls</tt> command, which is part of the <tt>nlme</tt> R package. Thus, you will need to load this package before you can use the <tt>gls</tt> command:
+In order to carry out generalized least squares regression, we will need the `gls` command, which is part of the `nlme` R package. Thus, you will need to load this package before you can use the `gls` command:
 
     library(nlme)
 
@@ -464,7 +496,7 @@ Let's first do an ordinary linear regression for comparison:
     
 The command name **gls** stands for generalized least squares. The **least squares** part means that it finds the regression line that minimizes the sum of squared residuals. The **generalized** part means that it allows you to specify a variance-covariance matrix to use for the residuals, which is important when we want to incorporate the phylogeny. Right now, however, the **generalized part is not being used** because we have not specified a variance-covariance matrix.
 
-The <tt>y ~ x</tt> part says to regress y on x. That is, let the variable x be the independent variable and y the dependent variable in the regression. 
+The `y ~ x` part says to regress y on x. That is, let the variable x be the independent variable and y the dependent variable in the regression. 
 
 > :thinking: What is the estimate of the intercept? 
 
@@ -497,7 +529,7 @@ The caper package uses a comparative data object to combine the tree with the da
 
     comp.data <- comparative.data(t, df, names.col="Species", vcv.dim=2, warn.dropped=TRUE)
 
-Here, the tree (t) and data (df) are provided to the caper comparative.data function. **names.col** specifies the column in the data frame that contains the names that are used in the tree. **vcv.dim** specifies the type of variance-covariance matrix to construct from the tree. **warn.dropped=TRUE** causes caper to warn us if there are missing data for any taxon in the tree.
+Here, the tree (t) and data (df) are provided to the caper `comparative.data` function. `names.col` specifies the column in the data frame that contains the names that are used in the tree. `vcv.dim` specifies the type of variance-covariance matrix to construct from the tree. `warn.dropped=TRUE` causes caper to warn us if there are missing data for any taxon in the tree.
 
 We can now conduct a PGLS analysis:
 
@@ -512,7 +544,6 @@ You can see that this is the same matrix we built during lecture.
 Here is a summary of the results:
 
     summary(m1)
-
 
 {% comment %}
 You are ready to estimate the parameters of the PGLS regression model:
@@ -536,27 +567,27 @@ Note that this time we are using the generalized part of generalized least squar
 {% endcomment %}
 
 {% comment %}
-> :thinking: The <tt>corBrownian</tt> function specified for the correlation in the gls command comes from the APE package. What does <tt>corBrownian</tt> do? You might want to check out the excellent [APE manual](https://cran.r-project.org/web/packages/ape/ape.pdf) 
+> :thinking: The `corBrownian` function specified for the correlation in the gls command comes from the APE package. What does `corBrownian` do? You might want to check out the excellent [APE manual](https://cran.r-project.org/web/packages/ape/ape.pdf) 
 
 it computes the variance-covariance matrix from the tree t assuming a Brownian motion model
 
-> :thinking: In <tt>corBrownian(1,t)</tt>, t is the tree, but what do you think the 1 signifies? 
+> :thinking: In `corBrownian(1,t)`, t is the tree, but what do you think the 1 signifies? 
 
 It is the variance per unit time for the Brownian motion model
 {% endcomment %}
 
 ### Using Pagel's lambda to modify the variance-covariance matrix
 
-The caper package allows you to specify a value for Pagel's lambda, so let's specify 0.0. This will have the effect of removing the information provided by the phylogeny so that our subsequent PGLS analysis will be just a naive least squares regression (i.e. without the "generalized" part). By default, caper sets the lower bound for lambda to 0.000001, so if we want it to use exactly 0.0, we need to reset the bounds too.
+The caper package allows you to specify a value for Pagel's lambda, so let's specify 0.0. This will have the effect of removing the information provided by the phylogeny so that our subsequent PGLS analysis will be just a naïve least squares regression (i.e. without the "generalized" part). By default, caper sets the lower bound for lambda to 0.000001, so if we want it to use exactly 0.0, we need to reset the bounds too.
 
     m0 <- pgls(Y ~ X, data=comp.data, lambda=0.0, bounds=list(lambda=c(0,1)))
     m0$Vt
     summary(m0)
     
-> :thinking: Is the variance-covariance matrix used consistent with no phylogenetic information? Briefly explain why (or why not).
+> :thinking: Which elements of the variance-covariance matrix tell you that this matrix represents no phylogenetic information?
 
 {% comment %}
-Yes, it is consistent with a star tree. The only non-zero entries are variances. All covariances are zero.
+The fact that the off-diagonal elements are all zero meana that no two lineages share any of their history.
 {% endcomment %}
 
 ### Plot both regression lines and the data
@@ -581,7 +612,7 @@ The data we will use come from the following paper on Asian birds called [barbet
 
 [A Gonzalez-Voyer, R-J Den Tex, A Castello and JA Leonard. 2013. Evolution of acoustic and visual signals in Asian barbets. Journal of Evolutionary Biology 26:647-659](https://doi.org/10.1111/jeb.12084)
 
-In these songbirds, larger birds sing at a lower frequency that smaller birds (**song frequency** is significantly **negatively** correlated with **body size**). This has to do with syrinx mass (a larger syrinx can generate a lower frequency).
+In these songbirds, larger birds sing at a lower frequency than smaller birds (**song frequency** is significantly **negatively** correlated with **body size**). This has to do with syrinx mass (a larger syrinx can generate a lower frequency).
 
 Larger birds also create longer notes than do smaller birds (**note length** is significantly **positively** correlated with **body size**). This has to do with lung capacity.
 
@@ -589,7 +620,7 @@ Note length and song frequency can thus be used by a bird to determine the size 
 
 Start by downloading the files [barbet-data.csv](/assets/data/barbet-data.csv) and [barbet.tre](/assets/data/barbet.tre) using curl or some other means. 
 
-Issue a **setwd** command in R studio if these files are not in the same directory that you've been working in.
+Issue a `setwd` command in R studio if these files are not in the same directory that you've been working in.
 
 Read in the character data:
 
@@ -609,7 +640,7 @@ Plot the tree using the phytools plotTree function:
 
     plotTree(barbet_tree, fsize=.7)
     
-The original paper conducted a **multiple linear regression** analysis to test whether body size was related to both longer notes as well as lower frequency. To recreate their analysis, we first need to create a comparative data object in caper that associates <tt>barbet_tree</tt> with <tt>barbet_data</tt>:
+The original paper conducted a **multiple linear regression** analysis to test whether body size was related to both longer notes as well as lower frequency. To recreate their analysis, we first need to create a comparative data object in caper that associates `barbet_tree` with `barbet_data`:
 
     comp.data <- comparative.data(barbet_tree, barbet_data, names.col="Species", vcv.dim=2, warn.dropped=TRUE)
     
@@ -618,7 +649,7 @@ You should see a warning in red that some data were dropped when compiling the c
     dropped <- as.numeric(comp.data$dropped$tips)
     barbet_tree$tip.label[dropped]
     
-If you show all but the first column of <tt>barbet_data</tt> (which just contains the species names), you can see that the species that were dropped were those that had missing data for the <tt>Note_Length</tt> and <tt>Dominant_frequency</tt> characters:
+If you show all but the first column of `barbet_data` (which just contains the species names), you can see that the species that were dropped were those that had missing data for the `Note_Length` and `Dominant_frequency` characters:
 
     barbet_data[c(-1)]
     
@@ -647,7 +678,7 @@ Negatively, the regression coefficient for Dominant_frequency was -0.15813.
 
 ### Measuring phylogenetic signal
 
-The PhyTools package lets you estimate Pagel's lambda and Blomberg's K, both of which tell you something about how much phylogenetic signal is present in a continuous character. PhyTools expects the data to consist of just one character for these analyses, so we will need to isolate each character's column separately, using the R function **setNames** to assign the species name to each row. The PhyTools **phylosig** function estimates lambda and K for the character data provided on the specified tree:
+The PhyTools package lets you estimate Pagel's lambda and Blomberg's K, both of which tell you something about how much phylogenetic signal is present in a continuous character. PhyTools expects the data to consist of just one character for these analyses, so we will need to isolate each character's column separately, using the R function `setNames` to assign the species name to each row. The PhyTools `phylosig` function estimates lambda and K for the character data provided on the specified tree:
 
     onetrait <- setNames(barbet_all_data$Note_Length, barbet_all_data$Species)
     phylosig(barbet_tree, onetrait, method="lambda", test=TRUE)
@@ -669,5 +700,5 @@ Colours has less signal than Note_Length (lambda = 0.669, K=0.205), but there is
 
 ## What to turn in
 
-To get points for completing this lab, email (or Slack to) Zach the answers to the :thinking: thinking questions. 
+To get points for completing this lab, send the answers to the :thinking: thinking questions to Analisa via Slack. 
 
