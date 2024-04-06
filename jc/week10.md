@@ -23,6 +23,7 @@ Galax has been modified, so replace the copy that is now in your `~/bin` directo
 
     curl -O https://gnetum.eeb.uconn.edu/courses/phylogenetics/jc/galax
     mv galax ~/bin
+    chmod +x ~/bin/galax
     
 ### 3. Create a bash script to help clean up after a run
 
