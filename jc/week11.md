@@ -107,9 +107,9 @@ You will also need to copy _zeroinfo.Rev_ into your _week11_ directory:
 
 To start the run, be sure your email is the one that will be used by the _zeroinfo.slurm_ script, then type
 
-    sbatch test.slurm
+    sbatch zeroinfo.slurm
     
-You should see 5 directories created: _simrep-1_, _simrep-2_, _simrep-3_, _simrep-4_, and _simrep-5_, along with files that have names matching the patterns _testrun_*.err_ and _testrun_*.out_.
+You should see 5 directories created: _simrep-1_, _simrep-2_, _simrep-3_, _simrep-4_, and _simrep-5_, along with files that have names matching the patterns _zeroinfo_*.err_ and _zeroinfo_*.out_. The `zeroinfo` part comes from the job name (`#SBATCH --job-name=zeroinfo`).
 
 You can check whether your run has finished using the `squeue` command:
 
@@ -128,9 +128,9 @@ Be sure you are in the `~/week11` directory, then use nano to create a file name
     treefname = sys.argv[1]
     
     dirnames = glob.glob('simrep-*')
-    print('%20s %12s %12s %12s %12s %12s %12s %12s %12s' % ('dir', 'coverage', 'H', 'H*', 'I', 'Ipct', 'covH', 'covIpct', 'rawIpct'))
+    print('%20s %12s %12s %12s %12s %12s %12s %12s %12s %12s' % ('dir', 'coverage', 'H', 'H*', 'I', 'Ipct', 'covH', 'covIpct', 'rawIpct', 'Dpct'))
     for d in dirnames:
-        stuff = open(os.path.join(d, 'galax-output.txt'), 'r').read()
+        stuff = open(os.path.join(d, 'galax-combined.txt'), 'r').read()
     
         m = re.search('(?P<raw>[.0-9]+) percent information given sample size', stuff, re.M | re.S)
         assert m is not None
@@ -147,7 +147,15 @@ Be sure you are in the `~/week11` directory, then use nano to create a file name
         covH     = math.log(samplesize/coverage)
         covIpct  = 100.0*(covH - Hstar)/covH
         
-        print('%20s %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f' % (d, coverage, H, Hstar, I, Ipct, covH, covIpct, rawIpct))
+        # The galax-separate.txt file should have a merged line that looks like this
+        # treefile  unique  coverage         H        H*         I      Ipct        D      Dpct
+        # merged     40000   0.00020  46.84760  20.78265  26.06496  55.63776  4.86519  23.40989        
+        stuff = open(os.path.join(d, 'galax-separate.txt'), 'r').read()
+        m2 = re.search('^merged\s+\d+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+(?P<Dpct>[.0-9]+)', stuff, re.M | re.S)
+        assert m2 is not None
+        Dpct = float(m2.group('Dpct'))
+        
+        print('%20s %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f' % (d, coverage, H, Hstar, I, Ipct, covH, covIpct, rawIpct, Dpct))
 
 Run `summarize.py` like this:
 
