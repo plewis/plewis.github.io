@@ -122,10 +122,6 @@ Be sure you are in the `~/week11` directory, then use nano to create a file name
     import math,re,glob,os,sys
     
     samplesize = 40000
-    if len(sys.argv) < 2:
-        print('You need to specify a tree file name to process on the command line.')
-        sys.exit('Usage: python3 summarize.py <tree file name>')
-    treefname = sys.argv[1]
     
     dirnames = glob.glob('simrep-*')
     print('%20s %12s %12s %12s %12s %12s %12s %12s %12s %12s' % ('dir', 'coverage', 'H', 'H*', 'I', 'Ipct', 'covH', 'covIpct', 'rawIpct', 'Dpct'))
@@ -136,7 +132,7 @@ Be sure you are in the `~/week11` directory, then use nano to create a file name
         assert m is not None
         rawIpct = float(m.group('raw'))
         
-        m = re.search('%s\s+(?P<unique>\d+)\s+(?P<coverage>[.0-9]+)\s+(?P<H>[.0-9]+)\s+(?P<Hstar>[.0-9]+)\s+(?P<I>[.0-9]+)\s+(?P<Ipct>[.0-9]+)' % treefname, stuff, re.M | re.S)
+        m = re.search('treefile\s+unique\s+coverage\s+H\s+H[*]\s+I\s+Ipct\s+D\s+Dpct\s+\S+\s+(?P<unique>\d+)\s+(?P<coverage>[.0-9]+)\s+(?P<H>[.0-9]+)\s+(?P<Hstar>[.0-9]+)\s+(?P<I>[.0-9]+)\s+(?P<Ipct>[.0-9]+)', stuff, re.M | re.S)
         assert m is not None
         unique   = int(m.group('unique'))
         coverage = float(m.group('coverage'))
@@ -151,7 +147,7 @@ Be sure you are in the `~/week11` directory, then use nano to create a file name
         # treefile  unique  coverage         H        H*         I      Ipct        D      Dpct
         # merged     40000   0.00020  46.84760  20.78265  26.06496  55.63776  4.86519  23.40989        
         stuff = open(os.path.join(d, 'galax-separate.txt'), 'r').read()
-        m2 = re.search('^merged\s+\d+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+(?P<Dpct>[.0-9]+)', stuff, re.M | re.S)
+        m2 = re.search('merged\s+\d+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+[.0-9]+\s+(?P<Dpct>[.0-9]+)', stuff, re.M | re.S)
         assert m2 is not None
         Dpct = float(m2.group('Dpct'))
         
@@ -159,13 +155,11 @@ Be sure you are in the `~/week11` directory, then use nano to create a file name
 
 Run `summarize.py` like this:
 
-    python3 summarize.py zeroinfo.tre
+    python3 summarize.py
     
-This should give you a summary of the results stored in the _zeroinfo.tre_ file in each of the simulation directories created by the `zeroinfo.slurm` script.
+This should give you a summary of the results in the two Galax output files _galax-combined.txt_ and _galax-separate.txt_ that have been created by Galax in each replicate directory.
 
-The main difference between this version of _summarize.py_ and the one you used last week is that this one lets you specify the name of the file to process on the command line. This will make it easier to use it for different analyses as you will not have to remember to change the name inside _summarize.py_ each time you run it.
-
-The last column shows the raw percent information content. This is a new quantity that is just based on the raw entropy (with no attempt to extend the reach by estimating coverage). This is a simpler version of what we've been calculating, but has the advantage that it cannot be negative, so hopefully it will be close to zero (and not, say, -8!) for runs in which the data is ignored.
+The last column is new: it records the percent dissonance measured by comparing the results from the four replicate runs.
 
 ### 6. Nearly zero information analyses
 
