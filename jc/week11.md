@@ -35,8 +35,21 @@ Create a `week11` directory:
     mkdir week11
     cd week11
     
-### 2. Create the SLURM script
+### 2. Create files
 
+Create a new _clean.sh_ in your new _week11_ directory. Let's use a quick method for creating small files. If you type `cat - > clean.sh`, making sure to leave a space between each component as shown, then the `cat` command will expect you to type in what you want to be stored in the new file names _clean.sh_. Paste in the following text and then press Control-d to tell `cat` that you are finished.
+
+    #!/bin/bash
+    
+    cd .
+    rm -rf *.out
+    rm -rf *.err
+    rm -rf simrep-*
+
+You should now have a file named _clean.sh_ in your _week11_ directory. All you need do now is make it executable:
+
+    chmod +x clean.sh
+    
 Copy the _test.slurm_ file you used last week:
 
     cp ../week10/test.slurm zeroinfo.slurm
@@ -162,6 +175,10 @@ This should give you a summary of the results in the two Galax output files _gal
 The last column is new: it records the percent dissonance measured by comparing the results from the four replicate runs.
 
 ### 6. Nearly zero information analyses
+
+Use your _clean.sh_ script to remove the _simrep*_ directories and output/error files from the previous run (only do this when you're finished gathering all the information you need):
+
+    ./clean.sh
 
 Copy _zeroinfo.Rev_ to create _lowinfo.Rev_:
 
