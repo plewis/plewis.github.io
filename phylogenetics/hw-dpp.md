@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Homework 9 (Dirichlet Process Prior)
+title: Homework 13 (Dirichlet Process Prior)
 permalink: /hwdpp/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
-In this homework assignment you will use what you know (from the lecture on March 10) about Dirichlet process priors to compute the probability of each possible clustering of 3 genes.
+In this homework assignment you will use what you know (from the lecture on April 9) about Dirichlet process priors to compute the probability of each possible clustering of 3 genes.
 
 Assume that there are 3 genes (A, B, and C), and that a **Dirichlet process prior** governs the clustering of genes according to preferred tree topology. 
 
-One possible configuration seats all 3 genes at the same "table" (using the restaurant metaphor). In this configuration, all 3 genes must share the same topology.
+One possible configuration "seats" all 3 genes at the same "table" (using the restaurant metaphor). In this configuration, all 3 genes must share the same topology.
 
 The configuration at the opposite extreme seats each of the 3 genes at its own table, and each table gets its own private tree topology. Note that the same "dish" (tree topology) can be served at different tables, so it is possible that all 3 genes share one topology despite sitting at different tables.
 
@@ -17,7 +17,7 @@ The configuration at the opposite extreme seats each of the 3 genes at its own t
 
 ## Question 1
 
-Calculate the prior probabilities of all possible configurations of the 3 genes under the Dirichlet process model. Note that slide 7 in the March 10 lecture notes provides almost everything you need to answer this question.
+Calculate the prior probabilities of all possible configurations of the 3 genes under the Dirichlet process model. Note that slide 7 in the April 9 lecture notes provides almost everything you need to answer this question.
 
 | configuration | probability |
 | :-----------: | :---------: |
@@ -29,7 +29,7 @@ Calculate the prior probabilities of all possible configurations of the 3 genes 
 
 ## Question 2
 
-What is the expected number of groups? (See slide 12 from the March 10 lecture notes.)
+What is the expected number of groups? (See slide 12 from the April 9 lecture notes.)
 
 
 

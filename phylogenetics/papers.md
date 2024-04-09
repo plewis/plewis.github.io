@@ -7,6 +7,8 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2024/).
 
 These papers were cited in the Spring 2024 version of the course. 
 
+Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. [Bayesian estimation of concordance among gene trees](https://doi.org/10.1093/molbev/msl170). Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy) (Apr 9)
+
 Bergthorsson U., Adams K. L., Thomason B., Palmer J. D. 2003. Widespread horizontal transfer of mitochondrial genes in flowering plants. Nature 424:197–201. (Apr 2)
 
 Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic signal in comparative data: behavioral traits are more labile. Evolution 57(4):717-745. (Apr 4)
@@ -77,6 +79,8 @@ Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calcu
 
 Larget, B., and D. L. Simon. 1999. Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees. Molecular Biology and Evolution 16: 750-759. (see also Holder et al. 2005) (Feb 27)
 
+Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra) (Apr 9)
+
 Lartillot, N., and H. Philippe. 2006. Computing bayes factors using thermodynamic integration. Systematic Biology 55(2): 195-207. (Thermodynamic integration (a.k.a. path sampling) marginal likelihood estimation) (Feb 29)
 
 Lewis, P. O. 2001a. A likelihood approach to estimating phylogeny from discrete morphological character data. Systematic Biology 50:913-925. (Mar 21)
@@ -133,8 +137,6 @@ Zwickl, D., and M. T. Holder. 2004. Model parameterization, prior distributions,
 
 {% comment %}
 Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
-
-Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. Bayesian estimation of concordance among gene trees. Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy)
 
 Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
 
@@ -205,8 +207,6 @@ Kluge, A. G., and J. S. Farris. 1969. Quantitative phyletics and the evolution o
 Kolaczkowski, B., and J. W. Thornton. 2004. Performance of maximum parsimony and likelihood phylogenetics when evolution is heterogeneous. Nature 431:980-984.
 
 Kolaczkowski, B., and J. W. Thornton. 2008. [A mixed branch length model of heterotachy improves phylogenetic accuracy.](https://doi.org/10.1093/molbev/msn042) Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
-
-Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra)
 
 Le, S. Q., and Gascuel, O. 2008. An improved general amino acid replacement matrix. Molecular Biology and Evolution, 25(7):1307-1320. (LG amino acid model)
 
