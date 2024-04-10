@@ -31,27 +31,33 @@ Here is an overview of today's themes:
     4. Are the true diversification and relative extinction values within the profile likelihood 95% confidence intervals? 
     answer:
     
-    5. Which elements of the variance-covariance matrix tell you that this matrix represents no phylogenetic information?
+    5. What is the estimate of the intercept? 
     answer:
     
-    6. Is the relationship between body size (as measured by wing length) and the two song traits statistically significant once phylogeny is taking into account? What part of the model summary output tells you the answer to this?
+    6. What is the estimate of the slope? 
+    answer:
+
+    6. Which elements of the variance-covariance matrix tell you that this matrix represents no phylogenetic information?
     answer:
     
-    7. Is body size positively or negatively associated with the length of notes in songs? (Hint: look at the estimated coefficient for Note_Length.)
+    7. Is the relationship between body size (as measured by wing length) and the two song traits statistically significant once phylogeny is taking into account? What part of the model summary output tells you the answer to this?
     answer:
     
-    8. Is body size positively or negatively associated with the frequency of songs? (Hint: look at the estimated coefficient for Dominant_frequency.)
+    8. Is body size positively or negatively associated with the length of notes in songs? (Hint: look at the estimated coefficient for Note_Length.)
     answer:
     
-    9. What are the estimated values of Pagel's lambda and Blomberg's K? What does this imply about phylogenetic signal?
+    10. Is body size positively or negatively associated with the frequency of songs? (Hint: look at the estimated coefficient for Dominant_frequency.)
     answer:
     
-    10. Does this character have more or less signal than Note_Length? Does it have a significant amount of signal?
+    11. What are the estimated values of Pagel's lambda and Blomberg's K? What does this imply about phylogenetic signal?
+    answer:
+    
+    12. Does this character have more or less signal than Note_Length? Does it have a significant amount of signal?
     answer:
     
 ## Installing APE and related packages
 
-**APE** is a package largely written and maintained by [Emmanuel Paradis](http://ape-package.ird.fr/ep/), who has written a very nice book ([Paradis 2006](/phylogenetics2022#literature-cited)) explaining in detail how to use APE. APE is designed to be used inside the [R](http://www.r-project.org/) programming language, which you are no doubt familiar with and was the subject of an earlier lab this semester (see [R primer](https://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_R_Primer) ). APE can do an impressive array of analyses. For example, it is possible to estimate trees using neighbor-joining or maximum likelihood, estimate ancestral states (for either discrete or continuous data), perform Sanderson's penalized likelihood relaxed clock method to estimate divergence times, evaluate Felsenstein's independent contrasts, estimate birth/death rates, perform bootstrapping, and even automatically pull sequences from GenBank given a vector of accession numbers! APE also has impressive tree plotting capabilities, of which we will only scratch the surface today (flip through Chapter 4 of the Paradis book to see what more APE can do).
+**APE** is a package largely written and maintained by [Emmanuel Paradis](http://ape-package.ird.fr/ep/), who has written a very nice book ([Paradis 2006](/phylogenetics2022#literature-cited)) explaining in detail how to use APE. APE is designed to be used inside the [R](http://www.r-project.org/) programming language, which you are no doubt familiar with and was the subject of an earlier lab this semester (see [Using R to explore probability distributions](/rprobdist/)). APE can do an impressive array of analyses. For example, it is possible to estimate trees using neighbor-joining or maximum likelihood, estimate ancestral states (for either discrete or continuous data), perform Sanderson's penalized likelihood relaxed clock method to estimate divergence times, evaluate Felsenstein's independent contrasts, estimate birth/death rates, perform bootstrapping, and even automatically pull sequences from GenBank given a vector of accession numbers! APE also has impressive tree plotting capabilities, of which we will only scratch the surface today (flip through Chapter 4 of the Paradis book to see what more APE can do).
 
 APE is also the foundation for many other R packages. Here are some examples of other R packages used in phylogenetics that depend on APE: [phytools](https://cran.r-project.org/web/packages/phytools/index.html) by [Liam Revell](http://faculty.umb.edu/liam.revell/), [geiger](https://cran.r-project.org/web/packages/geiger/index.html) by [Matthew Pennell](https://www.zoology.ubc.ca/person/matthew-pennell), and [hisse](https://cran.r-project.org/web/packages/hisse/index.html) by [Jeremy Beaulieu](https://www.jeremybeaulieu.org/people.html) and [Brian O'Meara](http://brianomeara.info). The full list can be seen by looking at the "Reverse depends" section of the [APE CRAN site](https://cran.r-project.org/web/packages/ape/index.html).
 
