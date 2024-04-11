@@ -636,7 +636,7 @@ Read in the character data:
     
 The _barbet-data.csv_ file contains data for 23 traits, but we just need data for 3 to do this analysis. The second line above selects just this subset of characters we are interested in.
 
-The last line above sets the names of the rows equal to the species names that comprise the first column in the data frame. We need row names defined so that the caper package knows how to associate rows in the data matrix with taxa in the tree.
+The last line above sets the names of the rows equal to the species names that compose the first column in the data frame. We need row names defined so that the caper package knows how to associate rows in the data matrix with taxa in the tree.
         
 Read in the tree:
 
