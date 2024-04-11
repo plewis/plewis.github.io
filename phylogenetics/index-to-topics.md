@@ -33,11 +33,15 @@ bootstrapping (IQ-TREE ultrafast), Feb-15
 
 branch-and-bound, Jan-18 
 
-brownian motion model, Apr-2
+Brownian motion model, Apr-2
 
 coalescence, Mar-7
 
+codon models, Apr-11
+
 comparative method, Apr-2
+
+concordance factor (CF), Apr-9
 
 conditioning on variability, Mar-21
 
@@ -50,6 +54,8 @@ delta, Pagel's, Apr-4
 density example (gold-to-aluminum brick), Feb-20
 
 dependence model, Mar-26
+
+Dirichlet process prior, Apr-9
 
 discrete Gamma model, Feb-8
 
@@ -83,6 +89,10 @@ estrus advertisement example, Mar-26
 
 evolutionary distance, Feb-6
 
+exchangeabilities, nucleotide, Jan-30
+
+exchangeabilities, amino acid, Apr-11
+
 exhaustive search, Jan-18 
 
 expected time to coalescence, Mar-7
@@ -97,13 +107,17 @@ fence analogy (truncated priors), Mar-5
 
 free rates model (+R), Feb-15
 
-frequencies (equilibrium nucleotide), Jan-30
+frequencies, equilibrium nucleotide, Jan-30
 
-frequencies (equilibrium state), Mar-21
+frequencies, equilibrium amino acid, Apr-11
+
+frequencies, equilibrium state, Mar-21
 
 gene trees, Mar-7
 
 general time-reversible model (GTR), Feb-1
+
+genetic code, Apr-11
 
 Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-1
 
@@ -173,9 +187,19 @@ goodness-of-fit of a model, Jan-30
 
 Hastings ratio, Feb-22
 
+models, amino acid, Apr-11
+
 models, asymmetric, Mar-21
 
-models, dependent, Mar-26
+models, Brownian motion, Apr-2
+
+models, codon, Apr-9
+
+models, dependence, Mar-26
+
+models, Dirichlet process prior, Apr-9
+
+models, discrete Gamma, Feb-8
 
 models, discrete morphology, Mar-21
 
@@ -183,11 +207,17 @@ models, empirical Bayesian, Mar-5
 
 models, hierarchical, Mar-5
 
-models, independent, Mar-26
+models, independence, Mar-26
 
 models, mixture (+I, +G), Feb-8
 
+models, mixture (C20), Apr-11
+
 models, Mk, Mar-21
+
+models, partition, Feb-8
+
+models, protein, Apr-11
 
 models, symmetric, Mar-21
 
@@ -196,6 +226,10 @@ monophyly, Jan-16
 nearest-neighbor interchange (NNI) branch swapping, Jan-18 
 
 newick trees, Jan-16 
+
+nonsynonymous/synonymous rate ratio (omega), Apr-11
+
+point accepted mutation (PAM) unit, Apr-11
 
 paraphyly, Jan-18 
 
@@ -254,6 +288,26 @@ pruning algorithm, Feb-8
 running on empty (MCMC without data), Mar-5
 
 site-specific rates, Feb-8
+
+software, ape, Apr-11
+
+software, BayesTraits, Apr-4
+
+software, BUCKy, Apr-9
+
+software, caper, Apr-11
+
+software, geiger, Apr-11
+
+software, MrBayes, Mar-7
+
+software, PAUP*, Jan-18 (and many times after)
+
+software, PhyloBayes, Apr-9
+
+software, phytools, Apr-11
+
+software, RevBayes, Mar-21, Mar-28
 
 splits, Jan-16 
 
