@@ -560,9 +560,9 @@ Copy your _divtime.Rev_ file to create a new file named _divprior.Rev_ and make 
     #moves[nmoves++] = mvSlide(birth_rate, delta=1.0, tune=true, tuneTarget=0.4, weight=1.0)
     birth_rate <- 2.6
 
-Change the setup for the `mnScreen` monitor to have `printgen=10000` rather than `printgen=100`; and
+* Change the setup for the `mnScreen` monitor to have `printgen=10000` rather than `printgen=100`; and
 
-Change the MCMC burnin and run commands to include `underPrior=TRUE`, and change the number of generations in the run command to 1 million (don't worry, it goes fast if you don't ever calculate a likelihood!):
+* Change the MCMC burnin and run commands to include `underPrior=TRUE`, and change the number of generations in the run command to 1 million (don't worry, it goes fast if you don't ever calculate a likelihood!):
 
     mymcmc.burnin(generations=1000, tuningInterval=100, underPrior=TRUE)
     mymcmc.run(generations=1000000, underPrior=TRUE)
