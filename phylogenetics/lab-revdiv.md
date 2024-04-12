@@ -3,11 +3,67 @@ layout: page
 title: RevBayes Divergence Dating Lab
 permalink: /revdiv/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2022/)
+[Up to the Phylogenetics main page](/phylogenetics2024/)
 
 ## Goals
 
 The goal of this lab exercise is to introduce you to Bayesian divergence time estimation. There are other programs that are popular for divergence time analyses (notably [BEAST2](https://www.beast2.org)), but we will use [RevBayes](https://revbayes.github.io) because you already have some experience with this program (namely the [RevBayes lab](/revbayes/)).
+
+## Answer template
+
+Here is a text file template in which to store your answers to the :thinking: thinking questions:
+
+    1. What is the 95% HPD (highest posterior density) credible interval for clock_rate (use the Estimates tab in Tracer to find this information)? Does this include the true value? 
+    answer:
+    
+    2. What is the 95% HPD (highest posterior density) credible interval for birth_rate? Does this include the true value?
+    answer:
+        
+    3. Which parameter (clock_rate or birth_rate) is hardest to estimate precisely (i.e. has the broadest HPD credible interval)? 
+    answer:
+    
+    4. For the parameter you identified in the previous question, would it help to simulate 20000 sites rather than 10000? 
+    answer:
+    
+    5. What would help in reducing the HPD interval for birth_rate? 
+    answer:
+    
+    6. Using the Marginal Density tab in Tracer, select all 6 exchangeabilities. What do these values represent, and what about these densities makes sense given what you know about the true model used to simulate the data? 
+    answer:
+    
+    7. Using the Marginal Density tab in Tracer, select all 4 state_freqs. What about these densities make sense given what you know about the true model used to simulate the data?
+    answer:
+    
+    8. What is the true rate for any given edge in the tree?
+    answer:
+    
+    9. Looking across the 38 branch rate parameters, do any of them get very far from 1.0 (e.g. less than 0.98 or greater than 1.2)? 
+    answer:
+    
+    10. What are the mean values of ucln_mu and ucln_sigma, our two hyperparameters that govern the assumed lognormal prior applied to each branch rate? 
+    answer:
+    
+    11. What do these values translate to on the linear scale (use the formulas in the figure from lecture to do the calculation)?
+    answer:
+    
+    12. Do the values on the linear scale make sense in light of the fact that you know that the data were simulated under a strict clock with rate 1.0?
+    answer:
+    
+    13. We've added moves, but no parameters or priors for the node times. Why not?
+    answer:
+    
+    14. Does the MAP tree have the same topology as the true tree
+    answer:
+    
+    15. Are we more confident about recent nodes or ancient nodes in the tree?
+    answer:
+    
+    16. What would you conclude if these credible intervals were exactly the same size if we had performed the MCMC analysis on the prior only, with no data?
+    answer:
+    
+    17. Does the data contain information about substitution rates?
+    answer:
+
 
 ## Getting started
 
@@ -19,11 +75,11 @@ Login to your account on the Health Center (Xanadu) cluster, then issue
     
 to start a session on a node that is not currently running jobs. 
 
-**Important** The <tt>--mem=5G</tt> part is important for this lab, as RevBayes uses more than the default amount (128 MB) of memory sometimes.
+**Important** The `--mem=5G` part is important for this lab, as RevBayes uses more than the default amount (128 MB) of memory sometimes.
 
 ### Create a directory
 
-Use the unix <tt>mkdir</tt> command to create a directory to play in today:
+Use the unix `mkdir` command to create a directory to play in today:
 
     cd
     mkdir rbdiv
@@ -42,7 +98,7 @@ You will need to load the paml/4.9 module in order to use PAML, which we will us
  
 ## Simulating and analyzing under the strict clock model
 
-Divergence time analyses are the trickiest type of analysis we will do in this course. That's because the sequences do not contain information about **substitution rates** or **divergence times** per se; they contain information about the **number of substitutions** that have occurred, and the number of substitutions  is the _product_ of rate and time. Thus, maximum likelihood methods cannot separate rates from times; doing so requires a Bayesian approach and considered use of priors, which constrain the range of rate and time scenarios considered plausible.
+Divergence time analyses are the trickiest type of analysis we will do in this course. That's because the sequences do not contain information about **substitution rates** or **divergence times** _per se_; they contain information about the **number of substitutions** that have occurred, and the number of substitutions  is the _product_ of rate and time. Thus, maximum likelihood methods cannot separate rates from times; doing so requires a Bayesian approach and considered use of priors, which constrain the range of rate and time scenarios considered plausible.
 
 We will thus start slowly, and we will simulate data so that we know the truth. This will help guide your expectations when conducting divergence time analyses on real data.
 
@@ -58,9 +114,9 @@ First simulate a pure birth tree using evolver. Start evolver by simply typing e
 
 * specify that you want to generate a rooted tree by typing 2
 * specify 20 species
-* specify 1 tree and a random number seed of _your_ choosing
+* specify 1 tree and a random number seed of _your_ choosing (separate these two positive whole numbers with a space)
 * specify 1 to answer yes to the question about wanting branch lengths
-* specify 2.6 for the birth rate, 0.0 for the death rate, 1.0 for the sampling fraction, and 1.0 for the tree height
+* specify 2.6 for the birth rate, 0.0 for the death rate, 1.0 for the sampling fraction, and 1.0 for the tree height (separate these numbers with at least one space; e.g. "2.6 0.0 1.0 1.0"
 * press 0 to quit
 
 One thing to note before we continue. PAML's evolver program scales the tree to have height equal to the specified mutation rate (1.0, the last number we specified above). Normally pure birth trees would have different heights because of stochastic variation, but apparently this is only possible in evolver by editing the source code and making your own _ad hoc_ version. I've done the next best thing, which is set the birth rate to the value (2.6) that yields a tree having _expected_ height 1.0. 
@@ -103,7 +159,7 @@ Here's the quick way to create these files:
     touch paupblock
     touch paupend
 
-The **echo** command parrots what you put in quotes and the <tt>> paupstart</tt> at the end creates the file _paupstart_ and saves the echoed contents there (you could use <tt>>> paupstart</tt> if you wanted to append other lines to the file). 
+The **echo** command parrots what you put in quotes and the `> paupstart` at the end creates the file _paupstart_ and saves the echoed contents there (you could use `>> paupstart` if you wanted to append other lines to the file). 
 
 The **touch** command is intended to update the time stamp on a file, but will create an empty text file if the file specified does not exist.
 
@@ -119,7 +175,7 @@ You should now find a file named _mc.nex_ containing the sequence data.
 
 In our first RevBayes analysis, we will see how well we can estimate what we already know to be true about the evolution of both the tree and the sequences. You will cheat and fix some things to their known true values, such as the tree topology and edge lengths. The idea is to take small steps so that we know what we are doing all along.
 
-RevBayes uses an R-like language called the Rev Language to specify the model and the analysis. Rev is not R, but it is so similar to R that you will often forget that you are not using R and will try things that work in R but do not work in Rev - just a heads-up!
+As you already know from previous labs, RevBayes uses an R-like language called the Rev Language to specify the model and the analysis. Rev is not R, but it is so similar to R that you will often forget that you are not using R and will try things that work in R but do not work in Rev - just a heads-up!
 
 ### Set up the tree submodel
 
@@ -157,24 +213,24 @@ Create a new file named _strict.Rev_ and add the following to it: I'll provide s
         taxa = taxa)
     timetree.setValue(T)
 
-Note that we are assigning only the first tree in _trees.txt_ to the variable <tt>T</tt> (there is only 1 tree in that file, but RevBayes stores the trees it reads in a vector, so you have to add the <tt>[1]</tt> to select the first anyway).
+Note that we are assigning only the first tree in _trees.txt_ to the variable `T` (there is only 1 tree in that file, but RevBayes stores the trees it reads in a vector, so you have to add the `[1]` to select the first anyway).
 
-The functions beginning with <tt>dn</tt> (e.g. **<tt>dnExponential</tt>** and **<tt>dnBDP</tt>**) are probability distributions. Thus, **<tt>birth_rate</tt>** is a parameter that is assigned an Exponential prior distribution having rate 0.01, and **<tt>timetree</tt>** is a compound parameter representing the tree and its branching times that is assigned a Birth Death Process (BDP) prior distribution. The BDP is a submodel, like the +I or +G rate heterogeneity submodels: it has its own parameters (**lambda**, **mu**, **rho**, and **rootAge**) all of which are fixed except for **<tt>birth_rate</tt>**.
+The functions beginning with `dn` (e.g. `dnExponential` and `dnBDP`) are probability distributions. Thus, `birth_rate` is a parameter that is assigned an Exponential prior distribution having rate 0.01, and `timetree` is a compound parameter representing the tree and its branching times that is assigned a Birth Death Process (BDP) prior distribution. The BDP is a submodel, like the +I or +G rate heterogeneity submodels: it has its own parameters (**lambda**, **mu**, **rho**, and **rootAge**) all of which are fixed except for `birth_rate`.
 
-The **<tt>setValue</tt>** function sets the starting value of a parameter that is allowed to vary. 
+The `setValue` function used on the last line sets the starting value of a parameter that is allowed to vary. In this case, we are using setValue to start off our MCMC analysis with the true tree and true edge lengths.
 
-Each parameter in the model requires a mechanism to propose changes to its value. These are called _moves_. A vector of moves has been created for you, so you need only add to it. The variable **<tt>nmoves</tt>** keeps track of how many moves we've defined. Each time a move is added to the moves vector, we increment the variable **<tt>nmoves</tt>** so that new moves will not overwrite previously defined moves. This increment is performed by the <tt>++</tt> in <tt>nmoves++</tt>. 
+Each parameter in the model requires a mechanism to propose changes to its value during an MCMC run. These are called _moves_. A vector of moves has been created for you, so you need only add to it. The variable `nmoves` keeps track of how many moves we've defined. Each time a move is added to the moves vector, we increment the variable `nmoves` so that new moves will not overwrite previously defined moves. This increment is performed by the `++` in `nmoves++`. Thus, if `nmoves` currently has the value 2, `moves[nmoves++] = ...` sets the value of `moves[2]` to `...` (not literally, of course; the ellipses stand in for whatever move you are creating) and immediately increments `nmoves` to 3 so it will refer to the next empty slot in the `moves` vector whenever we add another move.
 
 Monitors in RevBayes handle output. We are just initializing the monitor counters now; we will add monitors toward the end of our RevBayes script.
 
-The model comprises a DAG (Directed Acyclic Graph). The nodes of this graph are of several types and represent model inputs and outputs:
-* **Stochastic nodes** are exemplified by <tt>birth_rate</tt> and <tt>timetree</tt>; they can be identified by the tilde (<tt>~</tt>) symbol used to assign a prior distribution.
-* **Constant nodes** are exemplified by <tt>death_rate</tt>,  <tt>sampling_fraction</tt>, and <tt>root_time</tt>; they can be identified by the assignment operator <tt><-</tt> that fixes their value to a constant.
-* **Deterministic nodes** are exemplified by <tt>diversification</tt>; they can be identified by the assignment operator <tt>:=</tt>. These nodes represent functions of other nodes used to output quantities in a more understandable way. For example, diversification will show up as a column in the output even though it is not a parameter of the model itself. (The diversification node was only added here to illustrate deterministic nodes; it's value will always equal birth_rate because death_rate is a constant 0.0).
+The model can be summarized by a DAG (Directed Acyclic Graph). The nodes of this graph are of several types and represent model inputs and outputs:
+* **Stochastic nodes** are exemplified by `birth_rate` and `timetree`; they can be identified by the tilde (`~`) symbol used to assign a prior distribution. These quantities are parameters that will be updated during MCMC.
+* **Constant nodes** are exemplified by `death_rate`,  `sampling_fraction`, and `root_time`; they can be identified by the assignment operator `<-` that fixes their value to a constant. They are not changed during the MCMC analysis.
+* **Deterministic nodes** are exemplified by `diversification`; they can be identified by the assignment operator `:=`. These nodes represent functions of other nodes used to output quantities in a more understandable way. For example, diversification (birth rate minus death rate) will show up as a column in the output even though it is not a parameter of the model itself. (The diversification node was only added here to illustrate deterministic nodes; it's value will always equal birth_rate because death_rate is a constant 0.0).
 
 ### Set up the strict clock submodel
 
-Add the following 3 lines to your growing revscript:
+Add the following 3 lines to your growing _strict.Rev_ file:
 
     # Strict clock
 
@@ -182,7 +238,7 @@ Add the following 3 lines to your growing revscript:
     clock_rate.setValue(1.0) 
     moves[nmoves++] = mvSlide(clock_rate, delta=1.0, tune=true, tuneTarget=0.4, weight=1.0)
 
-This adds a parameter **<tt>clock_rate</tt> **with a vague Exponential prior (rate 0.01) and starting value 1.0. The move we're using to propose new values for this parameter as well as the <tt>birth_rate</tt> parameter is a _sliding window move_, which you are familiar with from your MCMC homework. The value **<tt>delta</tt>** is the width of the window centered over the current value, and we've told RevBayes to tune this proposal during the burnin period so that it achieves (if possible) an acceptance rate of 40%. The weight determines the probability that this move will be tried. At the start of the MCMC analysis, RevBayes sums the weights of all moves you've defined and uses the weight divided by the sum of all weights as the probability of selecting that particular move next.
+This adds a parameter `clock_rate` with a vague Exponential prior (rate 0.01) and starting value 1.0. The move we're using to propose new values for this parameter as well as the `birth_rate` parameter is a _sliding window move_, which you are familiar with from your MCMC homework. The value `delta` is the width of the window centered over the current value, and we've told RevBayes to tune this proposal during the burnin period so that it achieves (if possible) an acceptance rate of 40%. The weight determines the probability that this move will be tried. At the start of the MCMC analysis, RevBayes sums the weights of all moves you've defined and uses the weight divided by the sum of all weights as the probability of selecting that particular move next.
 
 ### Set up the substitution submodel
 
@@ -196,13 +252,13 @@ Now let's set up a GTR substitution model:
     moves[nmoves++] = mvDirichletSimplex(exchangeabilities, alpha=10.0, tune=true, weight=1.0)
     moves[nmoves++] = mvDirichletSimplex(state_freqs, alpha=10.0, tune=true, weight=1.0)
 
-The Q matrix for the GTR model involves state frequencies and exchangeabilities. I've made both **<tt>state_freqs</tt>** and **<tt>exchangeabilities</tt>** stochastic nodes in our DAG and assigned both of them flat Dirichlet prior distributions (the <tt>v(1,1,...,1)</tt> part is the vector of parameters for the Dirichlet prior distribution (all 1s means a flat prior).
+The Q matrix for the GTR model involves state frequencies and exchangeabilities. I've made both `state_freqs` and `exchangeabilities` stochastic nodes in our DAG and assigned both of them flat Dirichlet prior distributions (the `v(1,1,...,1)` part is the vector of parameters for the Dirichlet prior distribution (all 1s produces a flat prior distribution in which every possible combination of state frequencies (or exchangeabilities) is equally probable).
 
 I've assigned mvDirichletSimplex moves to both of these parameters. A simplex is a set of coordinates that are constrained to sum to 1, and this proposal mechanism modifies all of the state frequencies (or exchangeabilities) simultaneously while preserving this constraint. A list of all available moves can be found in the [Documentation section of the RevBayes web site](https://revbayes.github.io/documentation/) if you want to know more.
 
 ### Finalize the PhyloCTMC
 
-It is time to collect the various submodels (<tt>timetree</tt>, <tt>Q</tt>, and <tt>clock_rate</tt>) into one big Phylogenetic Continuous Time Markov Chain (dnPhyloCTMC) distribution object and attach (_clamp_) the data matrix <tt>D</tt> to it.
+It is time to collect the various submodels (`timetree`, `Q`, and `clock_rate`) into one big Phylogenetic Continuous Time Markov Chain (`dnPhyloCTMC`) distribution object and attach (_clamp_) the data matrix `D` to it.
 
     # PhyloCTMC
 
@@ -210,7 +266,7 @@ It is time to collect the various submodels (<tt>timetree</tt>, <tt>Q</tt>, and 
     phySeq.clamp(D)
     mymodel = model(exchangeabilities)
 
-The last line above is a little obscure. RevBayes needs to have an entry point (a root node, if you will) into the DAG, and any stochastic node will suffice. Here I've supplied <tt>exchangeabilities</tt> when constructing mymodel, but I could have provided <state_freqs>, <birth_rate>, <clock_rate>, etc., instead.
+The last line above is a little obscure. RevBayes needs to have an entry point (a root node, if you will) into the DAG, and any stochastic node will suffice. Here I've supplied `exchangeabilities` when constructing mymodel, but I could have provided <state_freqs>, <birth_rate>, <clock_rate>, etc., instead.
 
 Add one more line to this section of your file:
 
@@ -228,13 +284,13 @@ Let's create 2 monitors to keep track of sampled parameter values, sampled trees
     monitors[nmonitors++] = mnFile(filename  = "output/strict.trees", printgen = 10, timetree)
     monitors[nmonitors++] = mnScreen(printgen=100)
 
-The first monitor will save model parameter values to a file named _strict.log_ in the _output_ directory (which will be created if necessary). The second monitor will save trees to a file named _strict.trees_ in the _output_ directory. Note that we have to give it <tt>timetree</tt> as an argument. This is kind of silly because we've fixed the tree topology and edge lengths, so all the lines in the _strict.trees_ will be identical, but this saves me having to explain this later. Finally, the third monitor produces output to the console so that you can monitor progress.
+The first monitor will save model parameter values to a file named _strict.log_ in the _output_ directory (which will be created if necessary). The second monitor will save trees to a file named _strict.trees_ in the _output_ directory. Note that we have to give it `timetree` as an argument. This is kind of silly because we've fixed the tree topology and edge lengths, so all the lines in the _strict.trees_ will be identical, but let's add it anyway just as a sanity check to verify that the tree topology and edge lengths don't change during the MCMC run. Finally, the third monitor produces output to the console so that you can monitor progress.
 
 Note that we are sampling only every 10th iteration for the first 2 monitors and every 100th iteration for the screen monitor.
 
 ### Set up MCMC
 
-Finally, we're ready to add the final section to our revscript. Here we create an **<tt>mcmc</tt>** object that combines the model, monitors, and moves and says to do just 1 MCMC analysis. We will devote the first 1000 iterations to burnin, stoping to tune the moves every 100 iterations (RevBayes collects data for 100 iterations to compute the acceptance probabilities for each move, then uses that to decide whether to make the move bolder or more conservative.) Then we run for real for 10000 iterations and ask RevBayes to output an operator summary, which will tell us how often each of our moves was attempted and succeeded.
+Finally, we're ready to add the final section to our revscript. Here we create an `mcmc` object that combines the model, monitors, and moves and says to do just 1 MCMC analysis. We will devote the first 1000 iterations to burnin, stopping to tune the moves every 100 iterations (RevBayes collects data for 100 iterations to compute the acceptance probabilities for each move, then uses that to decide whether to make the move bolder or more conservative.) Then we run for real for 10000 iterations and ask RevBayes to output an operator summary, which will tell us how often each of our moves was attempted and succeeded.
 
     # MCMC
 
@@ -250,6 +306,10 @@ Finally, we're ready to add the final section to our revscript. Here we create a
 To run RevBayes, enter the following at the command prompt with the name of your revscript file last:
 
     rb strict.Rev
+    
+{% comment %}
+This run took about 5 minutes on the cluster.
+{% endcomment %}
 
 If this were a long analysis, we would create a slurm script and submit the job using sbatch, but this one should be short enough that you can easily wait for it to finish while logged in.
 
@@ -271,19 +331,7 @@ I got (0.9986, 1.0216), and yes, it includes the true value 1.0
 I got (0.6306,4.1727); yes, the true rate was 2.6, which is close to the middle of the credible interval
 {% endcomment %}
 
-> :thinking: Using the Marginal Density tab in Tracer, and select all 6 exchangeabilities. What do these values represent, and what about these densities makes sense given what you know about the true model used to simulate the data? 
-
-{% comment %}
-yes, the 2 transition relative rates are about 0.358, which is 5.04 times higher than the other 4, which average 0.071
-{% endcomment %}
-
-> :thinking: Using the Marginal Density tab in Tracer, and selecting all 4 state_freqs, what about these densities make sense given what you know about the true model used to simulate the data?
-
-{% comment %}
-yes, they are centered over 0.1, 0.2, 0.3, and 0.4, which are the values we specified when simulating the data using evolver
-{% endcomment %}
-
-> :thinking: Which parameter is hardest to estimate precisely (i.e. has the broadest HPD credible interval)? 
+> :thinking: Which parameter (clock_rate or birth_rate) is hardest to estimate precisely (i.e. has the broadest HPD credible interval)? 
 
 {% comment %}
 birth_rate
@@ -292,7 +340,7 @@ birth_rate
 > :thinking: For the parameter you identified in the previous question, would it help to simulate 20000 sites rather than 10000? 
 
 {% comment %}
-no, not even an infinite amount of data would narrow down the estimate of birth_rate (do you understand why?)
+no, not even an infinite amount of data would narrow down the estimate of birth_rate because we fixed the tree and edge lengths to their true values, and thus no amount of sequence data can improve on these values.
 {% endcomment %}
 
 > :thinking: What would help in reducing the HPD interval for birth_rate? 
@@ -301,7 +349,19 @@ no, not even an infinite amount of data would narrow down the estimate of birth_
 larger trees: the data needed to estimate birth_rate lies in the lengths of the intervals between speciation events, so more speciation events mean more data for estimating birth_rate
 {% endcomment %}
 
-You may have noticed that our effective sample sizes for the <tt>exchangeabilities</tt> and <tt>state_freqs</tt> parameters are pretty low. You no doubt also noticed that these are being estimated quite precisely and accurately. What gives? The fact that there is so much information in the data about these parameters is the problem here. The densities for these parameters are very _sharp_ (low variance), and proposals that move the values for these parameters away from the optimum by very much fail. Looking at the operator summary table generated after the MCMC analysis finished, you will notice that RevBayes maxed out its tuning parameter for both <tt>exchangeabilities</tt> and <tt>state_freqs</tt> at 100. Making this tuning parameter larger results in smaller proposed changes, so if we could set the tuning parameter alpha to, say, 1000 or even 10000, we could achieve better acceptance rates and higher ESSs.
+> :thinking: Using the Marginal Density tab in Tracer, select all 6 exchangeabilities. What do these values represent, and what about these densities makes sense given what you know about the true model used to simulate the data? 
+
+{% comment %}
+yes, the 2 transition relative rates are about 0.358, which is 5.04 times higher than the other 4, which average 0.071
+{% endcomment %}
+
+> :thinking: Using the Marginal Density tab in Tracer, select all 4 state_freqs. What about these densities make sense given what you know about the true model used to simulate the data?
+
+{% comment %}
+yes, they are centered over 0.1, 0.2, 0.3, and 0.4, which are the values we specified when simulating the data using evolver
+{% endcomment %}
+
+You may have noticed that our effective sample sizes for the `exchangeabilities` and `state_freqs` parameters are pretty low. You no doubt also noticed that these are being estimated quite precisely and accurately. What gives? The fact that there is so much information in the data about these parameters is the problem here. The densities for these parameters are very _sharp_ (low variance), and proposals that move the values for these parameters away from the optimum by very much fail. Looking at the operator summary table generated after the MCMC analysis finished, you will notice that RevBayes maxed out its tuning parameter (alpha) for both `exchangeabilities` and `state_freqs` at 100. Making this tuning parameter larger results in smaller proposed changes, so if we could set the tuning parameter alpha to, say, 1000 or even 10000, we could achieve better acceptance rates and higher ESSs.
 
 ## Relaxed clocks
 
@@ -329,15 +389,15 @@ Edit _relaxed.Rev_, replacing the section entitled "Strict clock" with this rela
         moves[nmoves++] = mvSlide(branch_rates[i], delta=0.5, tune=true, weight=1.0)
     }
  
-You'll also need to substitute **<tt>branch_rates</tt>** for **<tt>clock_rate</tt>** in your dnPhyloCTMC call:
+You'll also need to substitute `branch_rates` for `clock_rate` in your dnPhyloCTMC call:
 
     phySeq ~ dnPhyloCTMC(tree=timetree, Q=Q, branchRates=branch_rates, nSites=n_sites, type="DNA")
 
-The model has suddenly gotten a lot more complicated, hasn't it? We now have a rate parameter for every edge in the tree, so we've added $$(2)(20) - 2 = 38$$ more parameters to the model. Each of these edge rate parameters has a lognormal prior, and the 2 parameters of that distribution represent hyperparameters in what is now a hierarchical model, so we've increased the model from 10 parameters (1 **<tt>clock_rate</tt>**, 1 **<tt>birth_rate</tt>**, 3 **<tt>state_freqs</tt>**, 5 **<tt>exchangeabilities</tt>**) to 50 parameters (the original 10 plus 38 edge rates and 2 hyperparameters **<tt>ucln_mu</tt>** and **<tt>ucln_sigma</tt>**).
+The model has suddenly gotten a lot more complicated, hasn't it? We now have a rate parameter for every edge in the tree, so we've added $$(2)(20) - 2 = 38$$ more parameters to the model. Each of these edge rate parameters has a lognormal prior, and the 2 parameters of that distribution represent hyperparameters in what is now a hierarchical model, so we've increased the model from 10 parameters (1 `clock_rate`, 1 `birth_rate`, 3 `state_freqs`, 5 `exchangeabilities`) to 50 parameters (the original 10 plus 38 edge rates and 2 hyperparameters `ucln_mu` and `ucln_sigma`).
 
 {% include figure.html description="Lognormal Distribution" url="/assets/img/lognormal.png" css="image-right noborder" width="400px" %}
 
-To the right is a slide (from the March 3, 2022, lecture) that shows the relationship between the lognormal distribution (left) and the normal distribution (right). The lognormal distribution is tricky in that its two parameters (mu and sigma) are _not_ the mean and standard deviation of the lognormally-distributed variable, as you might be led to assume if you are used to mu and sigma used with normal distributions. In a Lognormal distribution, mu and sigma are, instead, the mean and standard deviation of the _log_ of the lognormally-distributed variable! 
+To the right is slide 5 from the [March 5, 2024, lecture](https://gnetum.eeb.uconn.edu/courses/phylogenetics/13-priors-annotated.pdf) that shows the relationship between the lognormal distribution (left) and the normal distribution (right). The lognormal distribution is tricky in that its two parameters ($$\mu$$ and $$\sigma$$) are _not_ the mean and standard deviation of the lognormally-distributed variable, as you might be led to assume if you are used to the $$\mu$$ and $$\sigma$$ associated with normal distributions. In a Lognormal distribution, $$\mu$$ and $$\sigma$$ are, instead, the mean and standard deviation of the _log_ of the lognormally-distributed variable! 
 
 Note this line:
 
@@ -345,9 +405,9 @@ Note this line:
  
 This sets the starting value of all branch rate parameters to 1. 
 
-This seems to be kind of important. If you let RevBayes choose starting values for branch rates, it will start by drawing values for hyperparameters ucln_mu and ucln_sigma (which, due to the high variances we've given to their hyperpriors, can result in some pretty crazy values) and then will draw values from Lognormal(<tt>ucln_mu</tt>, <tt>ucln_sigma</tt>) to serve as starting values for the branch rates. This procedure could start us far away from a reasonable constellation of parameter values and the MCMC analysis may never find its way to a reasonable configuration, at least with the length of run we are able to manage in a lab period. 
+This seems to be kind of important. If you let RevBayes choose starting values for branch rates, it will start by drawing values for hyperparameters ucln_mu and ucln_sigma (which, due to the high variances we've given to their hyperpriors, can result in some pretty crazy values) and then will draw values from Lognormal(`ucln_mu`, `ucln_sigma`) to serve as starting values for the branch rates. This procedure could start us very far away from a reasonable constellation of parameter values and the MCMC analysis may never find its way to a reasonable configuration, at least with the length of run we are able to manage in a lab period. 
 
-It is **always a good idea to start an MCMC analysis with all parameters set to their MLEs**, or at least reasonable values. This does not violate Bayesian principles in any way, and it saves on the amount of burnin that needs to be done. This is especially true for complex models where the amount of information for estimating parameters is low. Here I'm cheating a bit and setting the branch rates to what I know is the true value (1.0), but if we used our estimated <tt>clock_rate</tt> from the previous analysis things would work out just as well. 
+Unless you are particularly interested in how well your MCMC converges from diverse starting points, it is a **good idea to start an MCMC analysis with all parameters set to reasonable values**, for example maximum likelihood estimates (MLEs). This does not violate Bayesian principles in any way, and it saves on the amount of burnin that needs to be done. This is **especially true for complex models** where the amount of information for estimating parameters is low. Here I'm cheating a bit and setting the branch rates to what I know is the true value (1.0), but if we used our estimated `clock_rate` from the previous analysis things would work out just as well. 
 
 {% comment %}
 Note that I'm not using setValue for any other parameters; the analysis seems to behave without starting those off at reasonable values, indicating either that there's a enough information about those parameters (e.g. birth_rate, state_freqs, exchangeabilities) or the parameters have less influence due to the fact that they are hyperparameters one level removed from the likelihood (e.g. ucln_mu, ucln_sigma).
@@ -369,6 +429,10 @@ Now run the new model:
 
     rb relaxed.Rev
 
+{% comment %}
+This run took about 13 minutes on the cluster.
+{% endcomment %}
+
 ## Review results of the relaxed clock analysis
 
 If you create a plot of your _relaxed.dot_ file using one of the online Graphviz viewers, the increase in model complexity will be very apparent!
@@ -381,7 +445,7 @@ Open the _relaxed.log_ file in Tracer and answer the following questions:
 1.0 (remember, we are still using the data set simulated under a strict clock with rate 1.0)
 {% endcomment %}
 
-> :thinking: Looking across the 38 branch rate parameters, do any of them get very far from 1.0? 
+> :thinking: Looking across the 38 branch rate parameters, do any of them get very far from 1.0 (e.g. less than 0.98 or greater than 1.2)? 
 
 {% comment %}
 No, they are all very close to 1.0
@@ -399,10 +463,10 @@ I got 0.0116 for ucln_mu and 0.01828 for ucln_sigma
 Mean equals 1.0118, standard deviation equals 0.01850
 {% endcomment %}
 
-> :thinking: Do the values on the linear scale make sense?
+> :thinking: Do the values on the linear scale make sense in light of the fact that you know that the data were simulated under a strict clock with rate 1.0?
 
 {% comment %}
-Yes, the mean is near 1, which was the clock rate simulated, and the standard deviation is near 0, which means there is essentially no variation among branches in substitution rate (i.e., a strict clock), which is also what we simulated
+Yes, the mean is near 1, which was the clock rate used for simulating the data, and the standard deviation is near 0, which means there is essentially no variation among branches in substitution rate (i.e., a strict clock), which is also what we simulated
 {% endcomment %}
 
 ## Divergence times
@@ -429,9 +493,9 @@ Now add the following section just before the section entitled "# Uncorrelated L
 
 Note that we are giving extra weight to these moves, so each tree topology move will be attempted 5 times more often, and the node time slider move will be attempted 10 times more often, than the other moves we've defined.
 
-Note also that we're still starting the MCMC off with the true tree topology and node times (see the line <tt>timetree.setValue(T)</tt>). This is cheating, of course, but the result would be the same if you started with a maximum likelihood estimate obtained under a strict clock.
+Note also that we're still starting the MCMC off with the true tree topology and node times (see the line `timetree.setValue(T)`). This is cheating, of course, but the result would be the same if you started with a maximum likelihood estimate obtained under a strict clock.
 
-Add the following to the very end of the _divtime.Rev_ file. This will read all the sampled trees (each will be different this time because we added moves to modify tree topology and node times) and create a consensus tree showing 95% credible intervals around each divergence time:
+Add the following to the very end of the _divtime.Rev_ file (but before `quit()`). This will read all the sampled trees (each will be different this time because we added moves to modify tree topology and node times) and create a consensus tree showing 95% credible intervals around each divergence time:
 
     # Summarize divergence times
 
@@ -439,11 +503,15 @@ Add the following to the very end of the _divtime.Rev_ file. This will read all 
     tt.summarize()
     mapTree(tt, "output/divtimeMAP.tre")
 
-Be sure to change your output files to have the prefix **divtime** rather than **relaxed** so that you don't overwrite the previous results, then run the new model:
+**Important:** Be sure to change all your output files to have the prefix **divtime** rather than **relaxed** so that you don't overwrite the previous results, then run the new model:
 
     rb divtime.Rev
 
 Be prepared to wait for a little longer this time; we've added a lot of extra work to the analysis.
+
+{% comment %}
+This run took about 25 minutes on the cluster.
+{% endcomment %}
 
 ## Review results of the divergence time analysis
 
@@ -481,20 +549,20 @@ To finish up the lab, let's see what the credible interval sizes are under the p
 
 Copy your _divtime.Rev_ file to create a new file named _divprior.Rev_ and make the following changes in the new file:
 
-Change output file names to have prefix _divprior_ rather than _divtime_ so that you will not overwrite previous files (don't forget to do this in the <tt>readTreeTrace</tt> and <tt>mapTree</tt> commands);
+* Change output file names to have prefix _divprior_ rather than _divtime_ so that you will not overwrite previous files (don't forget to do this in the `readTreeTrace` and `mapTree` commands);
 
-Comment out the 3 lines setting up moves (<tt>mvNNI</tt>, <tt>mvNarrow</tt>, <tt>mvFNPR</tt>) that change tree topology;
+* Comment out the 3 lines setting up moves (`mvNNI`, `mvNarrow`, `mvFNPR`) that change tree topology;
 
-Comment out the existing lines setting up the prior and slide move for <tt>birth_rate</tt> and replace with a single line making the <tt>birth_rate</tt> a constant node:
+* Comment out the 3 existing lines setting up the prior and slide move for `birth_rate` and replace with a single line making the `birth_rate` a constant node:
 
     #birth_rate ~ dnExponential(0.01)
     #birth_rate.setValue(1.0)
     #moves[nmoves++] = mvSlide(birth_rate, delta=1.0, tune=true, tuneTarget=0.4, weight=1.0)
     birth_rate <- 2.6
 
-Change the setup for the <tt>mnScreen</tt> monitor to have <tt>printgen=10000</tt> rather than <tt>printgen=100</tt>; and
+Change the setup for the `mnScreen` monitor to have `printgen=10000` rather than `printgen=100`; and
 
-Change the MCMC burnin and run commands to include <tt>underPrior=TRUE</tt>, and change the number of generations in the run command to 1 million (don't worry, it goes fast if you don't ever calculate a likelihood!):
+Change the MCMC burnin and run commands to include `underPrior=TRUE`, and change the number of generations in the run command to 1 million (don't worry, it goes fast if you don't ever calculate a likelihood!):
 
     mymcmc.burnin(generations=1000, tuningInterval=100, underPrior=TRUE)
     mymcmc.run(generations=1000000, underPrior=TRUE)
@@ -502,6 +570,10 @@ Change the MCMC burnin and run commands to include <tt>underPrior=TRUE</tt>, and
 Now run the file as usual:
 
     rb divprior.Rev
+
+{% comment %}
+This run took about 2 minutes on the cluster.
+{% endcomment %}
 
 Open both _divpriorMAP.tre_ and _divtimeMAP.tre_ and make the node bars equal the 95% HPD intervals in each.
 
@@ -517,5 +589,5 @@ If you need to estimate divergence times, and especially if you have fossils tha
 
 ## What to turn in
 
-Use FigTree to create a PDF figure of your _divtimeMAP.tre_ with credible intervals indicated by bars and turn that in along with your thinking questions to get credit.
+Use FigTree to create a PDF figure of your _divtimeMAP.tre_ with credible intervals indicated by bars and send that along with your thinking questions to Analisa on Slack to get credit.
 
