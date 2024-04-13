@@ -17,7 +17,31 @@ Create a `week12` directory:
     mkdir week12
     cd week12
     
-### 2. Create a slurm script
+### 2. Create a clean script
+
+Create a file named _clean.sh_ and copy the following into it:
+
+    #!/bin/bash
+    cd .
+    rm -rf *.out
+    rm -rf *.err
+    rm -rf gene??
+
+Now make it executable:
+
+    chmod +x clean.sh
+    
+Use it like this to clean out the directory of old files before starting an array job:
+
+    ./clean.sh
+    
+This file is a little different than last week's _clean.sh_ because we want to make sure to just delete the diretories and not the data files. For example, if the last line had been
+
+    rm -rf gene*
+    
+then this would delete _gene21.nex_ as well as the directory _gene21_, which would force you to download the _gene21.nex_ file again.
+
+### 3. Create a slurm script
     
 Now create a file _info.slurm_ using nano and copy the following into it:
 
@@ -44,7 +68,14 @@ Now create a file _info.slurm_ using nano and copy the following into it:
     genes=(gene21 gene26 gene28 gene30 gene32 gene34)
     
     # Create a directory for the current task and navigate into it
-    taskdir=${genes[$SLURM_ARRAY_TASK_ID]}
+    # The first element of the genes array is 0, but SLURM_ARRAY_TASK_ID
+    # starts at 1, so we need to subtract 1 from SLURM_ARRAY_TASK_ID
+    # In bash, you use the construct $((...)) to do integer arithmetic
+    # and ${genes[$i]} returns the element of the genes array indexed by $i
+    # so if $i is 3, $(genes[$i]} returns 'gene30'
+    i=$(($SLURM_ARRAY_TASK_ID - 1))
+    taskdir=${genes[$i]}
+    echo "Creating directory $taskdir"
     mkdir $taskdir
     cd $taskdir
     
@@ -72,7 +103,7 @@ Now create a file _info.slurm_ using nano and copy the following into it:
     echo "info4.tre" >> listfile.txt
     $HOME/bin/galax --listfile listfile.txt --outfile galax-separate
     
-### 3. Copy your RevBayes script
+### 4. Copy your RevBayes script
 
 You will also need to copy the _lowinfo.Rev RevBayes script you used last week into the _week12_ directory and call it _info.Rev_:
 
@@ -104,7 +135,7 @@ to
 
 The specified outgroup taxon must be a taxon in the data file, otherwise RevBayes will abort, so I just picked this taxon at random. Our trees will be unrooted so it doesn't really matter where the root is chosen, because the outgroup is only used for display purposes. We'll choose a better outgroup once we are ready to do the final analyses for the paper.
 
-### 4. Download the data files
+### 5. Download the data files
 
 The data files for this week are in a password-protected directory on a web server. I will tell you separately what username and password to use. Now that we are using real (as-yet-unpublished) data, we need to ensure that the data are not able to be obtained by just anyone in the world, hence the need for a password.
 
@@ -121,7 +152,7 @@ When you've finished, run the following command as a sanity check:
     
 This just prints out the first line `-n 1` of all the downloaded files. They should all have `#nexus` on the first line. If any of them don't, then it probably means you mistyped the password and the file contains an error message rather than data. Just redo that `curl` command, being careful to type the password correctly.
 
-### 5. Start your array job
+### 6. Start your array job
 
 To start the run, be sure your email is the one that will be used by the _zeroinfo.slurm_ script, then type
 
@@ -133,7 +164,7 @@ You can check whether your run has finished using the `squeue` command:
 
     squeue -u eeb5349usr13
     
-### 6. Create a new summarize.py script
+### 7. Create a new summarize.py script
 
 Be sure you are in the `~/week12` directory, then use nano to create a file named `summarize.py` with this content:
 
@@ -144,6 +175,9 @@ Be sure you are in the `~/week12` directory, then use nano to create a file name
     dirnames = glob.glob('gene*')
     print('%20s %12s %12s %12s %12s %12s %12s %12s %12s %12s' % ('dir', 'coverage', 'H', 'H*', 'I', 'Ipct', 'covH', 'covIpct', 'rawIpct', 'Dpct'))
     for d in dirnames:
+        if re.match('gene..[.]nex', d):
+            continue
+        
         stuff = open(os.path.join(d, 'galax-combined.txt'), 'r').read()
     
         m = re.search('(?P<raw>[.0-9]+) percent information given sample size', stuff, re.M | re.S)
@@ -179,7 +213,7 @@ This should give you a summary of the results in the two Galax output files _gal
 
 The last column is new: it records the percent dissonance measured by comparing the results from the four replicate runs.
 
-### 7. Summarize the results and we'll take a look at them when we meet on Friday, April 19.
+### 8. Summarize the results and we'll take a look at them when we meet on Friday, April 19.
 
 
 
