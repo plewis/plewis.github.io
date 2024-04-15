@@ -25,6 +25,8 @@ Bayes' rule, Feb-20
 
 Bayesian Information Criterion (BIC), Feb-29
 
+birth-death tree model, Apr-16
+
 bootstrapping (non-parametric), Feb-15
 
 bootstrapping (parametric), Mar-26
@@ -34,6 +36,8 @@ bootstrapping (IQ-TREE ultrafast), Feb-15
 branch-and-bound, Jan-18 
 
 Brownian motion model, Apr-2
+
+calibration prior, Apr-16
 
 coalescence, Mar-7
 
@@ -45,7 +49,13 @@ concordance factor (CF), Apr-9
 
 conditioning on variability, Mar-21
 
+confidence intervals, Apr-16
+
 consensus trees, Jan-18 
+
+correlated relaxed clock model, Apr-16
+
+credible intervals, Apr-16
 
 deep coalescence, Mar-7
 
@@ -104,6 +114,8 @@ Felsenstein (1981) model (F81), Feb-1
 Felsenstein (1984) model (F84), Feb-1
 
 fence analogy (truncated priors), Mar-5
+
+fossilized birth-death process, Apr-16
 
 free rates model (+R), Feb-15
 
@@ -219,6 +231,8 @@ models, partition, Feb-8
 
 models, protein, Apr-11
 
+models, relaxed clock Apr-11, Apr-16
+
 models, symmetric, Mar-21
 
 monophyly, Jan-16 
@@ -246,6 +260,8 @@ phylogenetically independent contrasts (PIC), Apr-2
 polyphyly, Jan-18 
 
 predictive ability of a model, Jan-30
+
+prior, calibration, Apr-16
 
 prior, coalescent tree, Mar-19
 
@@ -284,6 +300,8 @@ probability, total, Feb-6
 probability, vs. likelihood, Feb-20
 
 pruning algorithm, Feb-8
+
+random local clocks model, Apr-16
 
 running on empty (MCMC without data), Mar-5
 
@@ -339,6 +357,8 @@ subtree-pruning-regrafting (SPR) branch swapping, Jan-18
 
 theta (population genetics parameter), Mar-7
 
+tip dating, Apr-16
+
 trace plots, Feb-22
 
 traffic accidents Poisson example, Mar-21
@@ -359,4 +379,8 @@ tree-bisection-reconnection (TBR) branch swapping, Jan-18
 
 ultrametric, Jan-18 
 
+uncorrelated lognormal relaxed clock model, Apr-16
+
 variance-covariance matrix, Apr-2
+
+Yule pure-birth tree model, Apr-16

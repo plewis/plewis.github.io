@@ -29,6 +29,8 @@ Dayhoff, M.O., Schwartz, R.M., Orcutt, B.C. 1978. A model for evolutionary chang
 
 Degnan, J. H., and N. A. Rosenberg. 2006. [Discordance of species trees with their most likely gene trees.](http://doi.org/10.1371/journal.pgen.0020068) PLoS Genetics 2:e68. (The anomaly zone) (Mar 19)
 
+Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to rule them all. BMC Biol. 8:114. (Random local clocks)
+
 Fan, Y., Wu, R., Chen, M.-H., Kuo, L., and Lewis, P. O. 2011. Molecular Biology and Evolution 28(1):523-532. (Generalized stepping-stone marginal likelihood estimation) (Feb 29)
 
 Farris, J. S. 1974. Formal definitions of paraphyly and polyphyly. Systematic Zoology 23: 548-554. (Jan-16)
@@ -61,6 +63,8 @@ Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting b
 
 Hastings, W. K. 1970. Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109. (Hastings ratio) (Feb 22)
 
+Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. [The fossilized birth–death process for coherent calibration of divergence-time estimates.](http://doi.org/10.1073/pnas.1319091111) PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
+
 Huelsenbeck, J. P., and D. M. Hillis. 1993. [Success of phylogenetic methods in the four taxon case.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 42:247-264. (coined the term Felsenstein Zone) (Feb 15)
 
 Huelsenbeck, J. P., R. Nielsen, and J. P. Bollback. 2003. Stochastic mapping of morphological characters. Systematic Biology 52(2): 131-158. (Mar 28)
@@ -85,6 +89,8 @@ Kimura, M. 1980. A simple method for estimating evolutionary rate of base substi
 
 Kishino, H., and M. Hasegawa. 1989. Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea. Journal of Molecular Evolution 29: 170-179. (F84 model, KH test) (Feb 1)
 
+Kishino, H., J. L. Thorne, and W. J. Bruno. 2001. Performance of a divergence time estimation method under a probabilistic model of rate evolution. Molecular Biology and Evolution 18:352-361.
+
 Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population history. Trends Ecol. Evol. 24:86-93. (Mar 7)
 
 Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model) (Feb 1)
@@ -96,6 +102,8 @@ Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site h
 Lartillot, N., and H. Philippe. 2006. Computing bayes factors using thermodynamic integration. Systematic Biology 55(2): 195-207. (Thermodynamic integration (a.k.a. path sampling) marginal likelihood estimation) (Feb 29)
 
 Le, S. Q., and Gascuel, O. 2008. An improved general amino acid replacement matrix. Molecular Biology and Evolution, 25(7):1307-1320. (LG amino acid model) (Apr 11)
+
+Lewis, L. A., B. D. Mishler, and R. Vilgalys. 1997. [Phylogenetic relationships of the liverworts (Hepaticae), a basal embryophyte lineage, inferred from nucleotide sequence data of the chloroplast gene _rbc_L](https://doi.org/10.1006/mpev.1996.0395) Molecular Phylogenetics and Evolution 7:377-393.
 
 Lewis, P. O. 2001a. A likelihood approach to estimating phylogeny from discrete morphological character data. Systematic Biology 50:913-925. (Mar 21)
 
@@ -131,6 +139,8 @@ Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and inf
 
 Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model) (Feb 8)
 
+Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
+
 Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375. (Jan 25)
 
 Saitou, N., and M. Nei. 1987. The neighbor-joining method: a new method for reconstructing phylogenetic trees. Molecular Biology and Evolution 4: 406-425. (Neighbor joining method) (Jan 25)
@@ -143,6 +153,8 @@ Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. Bayesian selection of c
 
 Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup) (Jan-16)
 
+Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
+
 Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416. (Feb 15)
 
 Whelan, S., and N. Goldman. 2001. A general empirical model of protein evolution derived from multiple protein families using a maximum likelihood approach. Molecular Biology and Evolution, 18, 691-699. (WAG amino acid model) (Apr 11)
@@ -154,6 +166,8 @@ Xie, W.G., P. O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal 
 Yang, Z. 1993. Maximum-likelihood estimation of phylogeny from DNA sequences when substitution rates differ over sites. Molecular Biology and Evolution 10:1396-1401. (Feb 8)
 
 Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences with variable rates over sites: approximate methods. Journal of Molecular Evolution 39:306-314. (+G among-site rate heterogeneity model) (Feb 8)
+
+Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [Total-evidence dating under the fossilized birth–death process.](https://doi.org/10.1093/sysbio/syv080) Systematic Biology 65:228–249. 
 
 Zwickl, D., and M. T. Holder. 2004. Model parameterization, prior distributions, and the general time-reversible model in Bayesian phylogenetics. Systematic Biology 53: 877-888. (Mar 5)
 
@@ -175,8 +189,6 @@ Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees
 Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences in phylogeny. Evolution 19:311-326. (irreversible parsimony)
 
 Drummond, A. J., S. Y. W. Ho, M. J. Phillips, A. Rambaut. 2006. Relaxed phylogenetics and dating with confidence. PLoS Biology 4(5): e88 (Uncorrelated relaxed clocks)
-
-Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to rule them all. BMC Biol. 8:114. (Random local clocks)
 
 Eck, R. V., and M. O. Dayhoff. 1966. Atlas of protein sequence and structure. National Biomedical Research Foundation. Silver Spring, Maryland.
 
@@ -210,23 +222,17 @@ Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the 
 
 Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evolution 48:523-529.
 
-Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. [The fossilized birth–death process for coherent calibration of divergence-time estimates.](http://doi.org/10.1073/pnas.1319091111) PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
-
 Hennig, W. 1966. Phylogenetic systematics. University of Illinois Press, Urbana.
 
 Holder, M. T., Lewis, P. O., Swofford, D. L., and Larget, B. (2005). Hastings ratio of the LOCAL proposal used in Bayesian phylogenetics. Systematic Biology, 54(6), 961–965.
 
 Holder, M. T., P. O. Lewis, and D. L. Swofford. 2010. The Akaike Information Criterion will not choose the no common mechanism model. Systematic Biology 59:477-485.
 
-Kishino, H., J. L. Thorne, and W. J. Bruno. 2001. Performance of a divergence time estimation method under a probabilistic model of rate evolution. Molecular Biology and Evolution 18:352-361.
-
 Kluge, A. G., and J. S. Farris. 1969. Quantitative phyletics and the evolution of anurans. Systematic Zoology 18:1-32.
 
 Kolaczkowski, B., and J. W. Thornton. 2004. Performance of maximum parsimony and likelihood phylogenetics when evolution is heterogeneous. Nature 431:980-984.
 
 Kolaczkowski, B., and J. W. Thornton. 2008. [A mixed branch length model of heterotachy improves phylogenetic accuracy.](https://doi.org/10.1093/molbev/msn042) Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
-
-Lewis, L. A., B. D. Mishler, and R. Vilgalys. 1997. [Phylogenetic relationships of the liverworts (Hepaticae), a basal embryophyte lineage, inferred from nucleotide sequence data of the chloroplast gene _rbc_L](https://doi.org/10.1006/mpev.1996.0395) Molecular Phylogenetics and Evolution 7:377-393.
 
 Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65:1009-1023.
 
@@ -278,8 +284,6 @@ Ree, R. H. 2005. [Detecting the historical signature of key innovations using st
 
 Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610.
 
-Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
-
 Schwarz, G. E. 1978. Estimating the dimension of a model. Ann Stat. 6:461–464. (BIC model selection criterion)
 
 Shi, J. J., and D. L. Rabosky. 2015. [Speciation dynamics during the global radiation of extant bats.](https://doi.org/10.1111/evo.12681) Evolution 69:1528-1545.
@@ -296,8 +300,6 @@ Studier, J. A., and K. J. Keppler. 1988. A note on the neighbor-joining algorith
 
 Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O., and Rogers, J. S. 2001. Bias in Phylogenetic Estimation and Its Relevance to the Choice between Parsimony and Likelihood Methods. Systematic Biology, 50(4), 525–539.
 
-Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
-
 Tuffley, C., and M. Steel. 1997. Links between maximum likelihood and maximum parsimony under a simple model of substitution. Bulletin of Mathematical Biology 59:581-607
 
 Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
@@ -309,8 +311,6 @@ Wiley, E. O. 1981. Phylogenetics: the theory and practice of phylogenetic system
 Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
 
 Yang, Z., and B. Rannala. 2010. Bayesian species delimitation using multilocus sequence data. PNAS 107(20):9264-9269.
-
-Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [Total-evidence dating under the fossilized birth–death process.](https://doi.org/10.1093/sysbio/syv080) Systematic Biology 65:228–249. 
 
 Zhou, Y., H. Brinkmann, N. Rodrigue, N. Lartillot, and H. Philippe. 2010. A Dirichlet Process covarion mixture model and its assessments using posterior predictive discrepency tests. Molecular Biology and Evolution 27:371-384.
 
