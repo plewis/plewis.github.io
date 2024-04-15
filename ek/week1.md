@@ -43,7 +43,7 @@ In the "Clade posteriors" section of the lab, you can replace the "chlorophyllb"
 
 The "fig4a" and "fig4b" refer to the two trees shown in Figure 4 in the Whidden and Matsen (2015) paper:
 
-> C Whidden and FA Matsen IV. 2015. Quantifying MCMC exploration of phylogenetic tree space. Systematic Biology 64(3):472-491. [DOI:](https://doi.org/10.1093/sysbio/syv006)
+> C Whidden and FA Matsen IV. 2015. Quantifying MCMC exploration of phylogenetic tree space. Systematic Biology 64(3):472-491. [DOI:10.1093/sysbio/syv006](https://doi.org/10.1093/sysbio/syv006)
 
 Without using Metropolis-coupling (i.e. multiple robots), I'm assuming that on any given run, either the "fig4a" or "fig4b" clade will have high posterior probability, but not both.
 
