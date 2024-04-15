@@ -12,7 +12,7 @@ permalink: /ekweek1/
 
 3. Download the _DS1.nex_ data file (disregard the data set I AirDropped to you on Monday)
 
-    curl -u <username> -O https://gnetum.eeb.uconn.edu/projects/mcmcmc/DS1.nex
+        curl -u <username> -O https://gnetum.eeb.uconn.edu/projects/mcmcmc/DS1.nex
     
 I will send you the username (which you should use in place of `<username>` above) and password via email. You will be prompted for the password once you issue the `curl` command. Note that the computer will not show you what you type when entering the password; this is to prevent someone from looking over your shoulder while you are typing and stealing your password. Thus, you'll have to just trust in your typing skills!
     
