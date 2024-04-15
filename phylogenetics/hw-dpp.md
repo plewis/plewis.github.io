@@ -5,7 +5,7 @@ permalink: /hwdpp/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2024/)
 
-In this homework assignment you will use what you know (from the lecture on April 9) about Dirichlet process priors to compute the probability of each possible clustering of 3 genes.
+In this homework assignment you will use what you know about Dirichlet process priors to compute the probability of each possible clustering of 3 genes.
 
 Assume that there are 3 genes (A, B, and C), and that a **Dirichlet process prior** governs the clustering of genes according to preferred tree topology. 
 
@@ -17,7 +17,7 @@ The configuration at the opposite extreme seats each of the 3 genes at its own t
 
 ## Question 1
 
-Calculate the prior probabilities of all possible configurations of the 3 genes under the Dirichlet process model. Note that slide 7 in the April 9 lecture notes provides almost everything you need to answer this question.
+Calculate the prior probabilities of all possible configurations of the 3 genes under the Dirichlet process model. Note that slide 4 in the [April 9 lecture notes](https://gnetum.eeb.uconn.edu/courses/phylogenetics/21-dpp.pdf) provides everything you need to answer this question.
 
 | configuration | probability |
 | :-----------: | :---------: |
@@ -29,7 +29,7 @@ Calculate the prior probabilities of all possible configurations of the 3 genes 
 
 ## Question 2
 
-What is the expected number of groups? (See slide 12 from the April 9 lecture notes.)
+What is the expected number of groups? (See slide 8 from the April 9 lecture notes.)
 
 
 

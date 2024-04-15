@@ -266,7 +266,7 @@ It is time to collect the various submodels (`timetree`, `Q`, and `clock_rate`) 
     phySeq.clamp(D)
     mymodel = model(exchangeabilities)
 
-The last line above is a little obscure. RevBayes needs to have an entry point (a root node, if you will) into the DAG, and any stochastic node will suffice. Here I've supplied `exchangeabilities` when constructing mymodel, but I could have provided <state_freqs>, <birth_rate>, <clock_rate>, etc., instead.
+The last line above is a little obscure. RevBayes needs to have an entry point (a root node, if you will) into the DAG, and any stochastic node will suffice. Here I've supplied `exchangeabilities` when constructing `mymodel`, but I could have instead provided `state_freqs`, `birth_rate`, `clock_rate`, or any other variable representing a node in the DAG.
 
 Add one more line to this section of your file:
 
@@ -555,17 +555,17 @@ Copy your _divtime.Rev_ file to create a new file named _divprior.Rev_ and make 
 
 * Comment out the 3 existing lines setting up the prior and slide move for `birth_rate` and replace with a single line making the `birth_rate` a constant node:
 
-    #birth_rate ~ dnExponential(0.01)
-    #birth_rate.setValue(1.0)
-    #moves[nmoves++] = mvSlide(birth_rate, delta=1.0, tune=true, tuneTarget=0.4, weight=1.0)
-    birth_rate <- 2.6
+        #birth_rate ~ dnExponential(0.01)
+        #birth_rate.setValue(1.0)
+        #moves[nmoves++] = mvSlide(birth_rate, delta=1.0, tune=true, tuneTarget=0.4, weight=1.0)
+        birth_rate <- 2.6
 
 * Change the setup for the `mnScreen` monitor to have `printgen=10000` rather than `printgen=100`; and
 
 * Change the MCMC burnin and run commands to include `underPrior=TRUE`, and change the number of generations in the run command to 1 million (don't worry, it goes fast if you don't ever calculate a likelihood!):
 
-    mymcmc.burnin(generations=1000, tuningInterval=100, underPrior=TRUE)
-    mymcmc.run(generations=1000000, underPrior=TRUE)
+        mymcmc.burnin(generations=1000, tuningInterval=100, underPrior=TRUE)
+        mymcmc.run(generations=1000000, underPrior=TRUE)
 
 Now run the file as usual:
 
