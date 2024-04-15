@@ -14,7 +14,7 @@ permalink: /ekweek1/
 
         curl -u <username> -O https://gnetum.eeb.uconn.edu/projects/mcmcmc/DS1.nex
     
-I will send you the username (which you should use in place of `<username>` above) and password via email. You will be prompted for the password once you issue the `curl` command. Note that the computer will not show you what you type when entering the password; this is to prevent someone from looking over your shoulder while you are typing and stealing your password. Thus, you'll have to just trust in your typing skills!
+    I will send you the username (which you should use in place of `<username>` above) and password via email. You will be prompted for the password once you issue the `curl` command. Note that the computer will not show you what you type when entering the password; this is to prevent someone from looking over your shoulder while you are typing and stealing your password. Thus, you'll have to just trust in your typing skills!
     
 4. Carry out the analysis in the [RevBayes lab done in Phylogenetics class on March 21](/revbayes/). See note below before you start.
 
@@ -40,6 +40,10 @@ In the "Clade posteriors" section of the lab, you can replace the "chlorophyllb"
     # of Whidden and Matsen (2015) DOI:10.1093/sysbio/syv006
     fig4b <- clade("Ambystoma_mexicanum", "Siren_intermedia", "Typhlonectes_natans", "Discoglossus_pictus")
     treetrace.cladeProbability( fig4a )
+
+The "fig4a" and "fig4b" refer to the two trees shown in Figure 4 in the Whidden and Matsen (2015) paper:
+
+> C Whidden and FA Matsen IV. 2015. Quantifying MCMC exploration of phylogenetic tree space. Systematic Biology 64(3):472-491. [DOI:](https://doi.org/10.1093/sysbio/syv006)
 
 Without using Metropolis-coupling (i.e. multiple robots), I'm assuming that on any given run, either the "fig4a" or "fig4b" clade will have high posterior probability, but not both.
 
