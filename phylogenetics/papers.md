@@ -9,6 +9,8 @@ These papers were cited in the Spring 2024 version of the course.
 
 Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. [Bayesian estimation of concordance among gene trees](https://doi.org/10.1093/molbev/msl170). Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy) (Apr 9)
 
+Beaulieu, J. M., and B. C. O'Meara. 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic Biology 65:583-601.
+
 Bergthorsson U., Adams K. L., Thomason B., Palmer J. D. 2003. Widespread horizontal transfer of mitochondrial genes in flowering plants. Nature 424:197–201. (Apr 2)
 
 Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic signal in comparative data: behavioral traits are more labile. Evolution 57(4):717-745. (Apr 4)
@@ -47,17 +49,27 @@ Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood a
 
 Fitch, W. M., and E. Margoliash. 1967. Science 155:279-284. (Jan 25)
 
+Fitch, W. M., and E. Markowitz. 1970. An improved method for determining codon variability in a gene and its application to the rate of fixation of mutations in evolution. Biochemical Genetics 4: 579–593.
+
 Fitch, W. 1971. Toward defining the course of evolution: minimum change for a specific tree topology. Systematic Zoology 20:406-416. (Jan 23)
+
+FitzJohn, R. G. 2010. Quantitative traits and diversification. Systematic Biology 59:619–633.
+
+Fitzjohn, R. G. 2012. [Diversitree: comparative phylogenetic analyses of diversification in R.](https://doi.org/10.1111/j.2041-210X.2012.00234.x) Methods in Ecology and Evolution 3:1084-1092.
 
 Fowler, D. M., C. L. Araya, S. J. Fleishman, E. H. Kellogg, J. J. Stephany, D. Baker. and S. Fields. 2010. [High-resolution mapping of protein sequence-function relationships.](https://doi.org/10.1038/nmeth.1492) Nature Methods 7:741-746. (Apr 11)
 
 Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent data. Pages 156-163 in Computing Science and Statistics (E. Keramidas, ed.). (Metropolis-coupled MCMC a.k.a. heated chains) (Feb 22)
+
+Goldberg, E. E., L. T. Lancaster, and R. H. Ree. 2011. Phylogenetic inference of reciprocal effects between geographic range evolution and diversification. Systematic Biology 60:451–465
 
 Goldman, N., and Z. Yang. 1994. A codon-based model of nucleotide substitution for protein-coding DNA sequences. Molecular Biology and Evolution, 11, 725-736. (Goldman-Yang codon model) (Apr-11)
 
 Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts. (Jan-16)
 
 Green, P. J. 1995. Reversible jump Markov chain Monte Carlo computation and Bayesian model determination. Biometrika 82:711-732. (Mar 26)
+
+Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evolution 48:523-529.
 
 Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model) (Feb 1)
 
@@ -91,6 +103,10 @@ Kishino, H., and M. Hasegawa. 1989. Evaluation of the maximum likelihood estimat
 
 Kishino, H., J. L. Thorne, and W. J. Bruno. 2001. Performance of a divergence time estimation method under a probabilistic model of rate evolution. Molecular Biology and Evolution 18:352-361.
 
+Kolaczkowski, B., and J. W. Thornton. 2004. Performance of maximum parsimony and likelihood phylogenetics when evolution is heterogeneous. Nature 431:980-984.
+
+Kolaczkowski, B., and J. W. Thornton. 2008. [A mixed branch length model of heterotachy improves phylogenetic accuracy.](https://doi.org/10.1093/molbev/msn042) Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
+
 Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population history. Trends Ecol. Evol. 24:86-93. (Mar 7)
 
 Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model) (Feb 1)
@@ -113,11 +129,17 @@ Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian p
 
 Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65(6):1009-1023. (Apr 2)
 
+Lovette, I. J., and E. Bermingham. 1999. Explosive speciation in the New World Dendroica warblers. Proc. R. Soc. Lond. B 266:1629-1636. 
+
+Maddison W. P., Midford P. E., Otto S. P. 2007. Estimating a binary character’s effect on speciation and extinction. Systematic Biology 56:701–710.
+
 Martins, E. P., and T. F. Hansen. 1997. Phylogenies and the comparative method: a general approach to incorporating phylogenetic information into the analysis of interspecific data. The American Naturalist 149:646-667. (PGLS) (Apr 2)
 
 Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. Equation of state calculations by fast computing machines. J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC) (Feb 22)
 
 Mirarab, S., and T. Warnow. 2015. [ASTRAL-II: coalescent-based species tree estimation with many hundreds of taxa and thousands of genes.](https://doi.org/10.1093/bioinformatics/btv234) Bioinformatics 31(12):i44–52. (Mar 19)
+
+Moore, B. R., S. Hohna, M. R. May, B. Rannala, and J. P. Huelsenbeck. 2016. [Critically evaluating the theory and performance of Bayesian analysis of macroevolutionary mixtures.](https://doi.org/10.1073/pnas.1518659113) PNAS 113:9569-9574. 
 
 Muse, S. V., and B. S. Gaut. 1994. A likelihood approach for comparing synonymous and nonsynonymous substitution rates, with application to the chloroplast genome. Molecular Biology and Evolution, 11, 715-724. (Apr 11)
 
@@ -129,15 +151,31 @@ Pagel, M. 1994. Detecting correlated evolution on phylogenies: a general method 
 
 Pagel, M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877–884. (introduced the delta and lambda scaling factors used in comparative analyses) (Apr 4)
 
+Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting pattern-heterogeneity in gene sequence or character-state data. Systematic Biology 53:571-581. (mixture of Q-matrices model)
+
 Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discrete characters by reversible-jump Markov chain Monte Carlo. American Naturalist 167:808-825. (rjMCMC for discrete character correlation) (Mar 26)
+
+Pagel, M., and A. Meade. 2008. [Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo.](https://doi.org/10.1098/rstb.2008.0178) Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
 
 Pettigrew, J. D. 1991. Wings or brain? convergent evolution in the origins of bats. Systematic Zoology, 40(2):199-216. (Feb 15)
 
-Si Quang, L., O. Gascuel, and N. Lartillot. 2008. [Empirical profile mixture models for phylogenetic reconstruction.](https://doi.org/10.1093/bioinformatics/btn445) Bioinformatics 24(20): 2317-2323. (Apr 11)
+Pybus, O. G., and P. H. Harvey. 2000. Testing macro-evolutionary models using incomplete molecular phylogenies. Proc. R. Soc. Lond. B 267:2267-2272.
+
+Rabosky, D. L., F. Santini, J. Eastman, S. A. Smith, B. Sidlauskas, J, Chang, and M. E. Alfaro. 2013. [Rates of speciation and morphological evolution are correlated across the largest vertebrate radiation.](https://doi.org/10.1038/ncomms2958) Nature Communications 4:1958.
+
+Rabosky, D. L. 2014. Automatic detection of key innovations, rate shifts, and diversity-dependence on phylogenetic trees. PLoS One 9(2):e89543.
+
+Rabosky, D. L., S. C. Donnellan, M. Grundler, and I. J. Lovette. 2014. [Analysis and visualization of complex macroevolutionary dynamics: an example from Australian scincid lizards.](https://doi.org/10.1093/sysbio/syu025) Systematic Biology 63:610-627.
+
+Rabosky, D. L., J. S. Mitchell, and J. Chang. 2017. [Is BAMM flawed? Theoretical and practical concerns in the analysis of multi-rate diversification models.](https://doi.org/10.1093/sysbio/syx037) Systematic Biology 66:477-498.
 
 Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior) (Mar 5)
 
+Ree, R. R. 2005. [Detecting the historical signature of key innovations using stochastic models of character evolution and cladogenesis.](https://doi.org/10.1111/j.0014-3820.2005.tb00986.x) Evolution 59(2):257–265. 
+
 Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model) (Feb 8)
+
+Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610.
 
 Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
 
@@ -149,11 +187,17 @@ Sankoff, D. 1975. Minimal mutation trees of sequences. SIAM Journal on Applied M
 
 Schluter, D., T. Price, A. Ø. Mooers, and D. Ludwig. 1997. Likelihood of ancestor states in adaptive radiation. Evolution 51:1699-1711. (Mar 21)
 
+Shi, J. J., and D. L. Rabosky. 2015. [Speciation dynamics during the global radiation of extant bats.](https://doi.org/10.1111/evo.12681) Evolution 69:1528-1545.
+
+Si Quang, L., O. Gascuel, and N. Lartillot. 2008. [Empirical profile mixture models for phylogenetic reconstruction.](https://doi.org/10.1093/bioinformatics/btn445) Bioinformatics 24(20): 2317-2323. (Apr 11)
+
 Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. Bayesian selection of continuous-time Markov chain evolutionary models. Molecular Biology and Evolution 18:1001-1013. (Mar 5)
 
 Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup) (Jan-16)
 
 Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
+
+Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
 
 Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416. (Feb 15)
 
@@ -169,6 +213,8 @@ Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences wit
 
 Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [Total-evidence dating under the fossilized birth–death process.](https://doi.org/10.1093/sysbio/syv080) Systematic Biology 65:228–249. 
 
+Zhou, Y., H. Brinkmann, N. Rodrigue, N. Lartillot, and H. Philippe. 2010. A Dirichlet Process covarion mixture model and its assessments using posterior predictive discrepency tests. Molecular Biology and Evolution 27:371-384.
+
 Zwickl, D., and M. T. Holder. 2004. Model parameterization, prior distributions, and the general time-reversible model in Bayesian phylogenetics. Systematic Biology 53: 877-888. (Mar 5)
 
 {% comment %}
@@ -181,8 +227,6 @@ Zwickl, D., and M. T. Holder. 2004. Model parameterization, prior distributions,
 Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
 
 Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
-
-Beaulieu, J. M., and B. C. O'Meara. 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic Biology 65:583-601.
 
 Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates. Systematic Biology 59:145–161.
 
@@ -204,23 +248,13 @@ Felsenstein, J. 1985b. Phylogenies and the comparative method. American Naturali
 
 Felsenstein, J. 2004. Inferring phylogenies. Sinauer Associates, Sunderland, MA.
 
-Fitch, W. M., and E. Markowitz. 1970. An improved method for determining codon variability in a gene and its application to the rate of fixation of mutations in evolution. Biochemical Genetics 4: 579–593.
-
-FitzJohn, R. G. 2010. Quantitative traits and diversification. Systematic Biology 59:619–633.
-
-Fitzjohn, R. G. 2012. [Diversitree: comparative phylogenetic analyses of diversification in R.](https://doi.org/10.1111/j.2041-210X.2012.00234.x) Methods in Ecology and Evolution 3:1084-1092.
-
 Gaut, B. S., and P. O. Lewis. 1995. [Success of maximum likelihood phylogeny inference in the four-taxon case.](https://doi.org/10.1093/oxfordjournals.molbev.a040183) Molecular Biology and Evolution 12(1):152-162.
-
-Goldberg, E. E., L. T. Lancaster, and R. H. Ree. 2011. Phylogenetic inference of reciprocal effects between geographic range evolution and diversification. Systematic Biology 60:451–465
 
 Goldman, N., J. P. Anderson, and A. G. Rodrigo. 2000. Likelihood-based tests of topologies in phylogenetics. Systematic Biology 49:652-670.
 
 Gogarten, J. P., H. Kibak, P. Dittrich, L. Taiz, E. J. Bowman, B. J. Bowman, M. F. Manolson, R. J. Poole, T. Date, T. Oshima, J. Konishi, K. Denda, and M. Yoshida. 1989. Evolution of the vacuolar H+-ATPase: Implications for the origin of eukaryotes PNAS 86:6661-6665.
 
 Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 326:119-157. (first phylogenetic regression model)
-
-Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evolution 48:523-529.
 
 Hennig, W. 1966. Phylogenetic systematics. University of Illinois Press, Urbana.
 
@@ -230,19 +264,11 @@ Holder, M. T., P. O. Lewis, and D. L. Swofford. 2010. The Akaike Information Cri
 
 Kluge, A. G., and J. S. Farris. 1969. Quantitative phyletics and the evolution of anurans. Systematic Zoology 18:1-32.
 
-Kolaczkowski, B., and J. W. Thornton. 2004. Performance of maximum parsimony and likelihood phylogenetics when evolution is heterogeneous. Nature 431:980-984.
-
-Kolaczkowski, B., and J. W. Thornton. 2008. [A mixed branch length model of heterotachy improves phylogenetic accuracy.](https://doi.org/10.1093/molbev/msn042) Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
-
 Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65:1009-1023.
-
-Lovette, I. J., and E. Bermingham. 1999. Explosive speciation in the New World Dendroica warblers. Proc. R. Soc. Lond. B 266:1629-1636. 
 
 Maddison, W. P. 1997. Gene trees in species trees. Systematic Biology 46:523–536.
 
 Maddison, D. R., Swofford, D. L., and Maddison, W. P. 1997. NEXUS: An extensible file format for systematic information. Systematic Biology 46:590–617. (NEXUS file format)
-
-Maddison W. P., Midford P. E., Otto S. P. 2007. Estimating a binary character’s effect on speciation and extinction. Systematic Biology 56:701–710.
 
 Maddison, W. P., and FitzJohn, R. G. 2015. The unsolved challenge to phylogenetic correlation tests for categorical characters. Systematic Biology 64:127–136. (need for true replication in comparative studies)
 
@@ -252,41 +278,21 @@ Michener, C. D., and R. R. Sokal. 1957. A Quantitative Approach to a Problem in 
 
 Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection of likelihood models for phylogeny estimation. Systematic Biology 52:674–683. (DTmodsel model selection criterion)
 
-Moore, B. R., S. Hohna, M. R. May, B. Rannala, and J. P. Huelsenbeck. 2016. [Critically evaluating the theory and performance of Bayesian analysis of macroevolutionary mixtures.](https://doi.org/10.1073/pnas.1518659113) PNAS 113:9569-9574. 
-
 Muse, S. 1995. evolutionary analyses of DNA sequences subject to constraints on secondary structure. Genetics, 139(3), 1429–1439. (secondary structure model)
 
 Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Appropriate likelihood ratio tests and marginal distributions for evolutionary tree models with constraints on parameters. Molecular Biology and Evolution 17:798-803. (LRT border case correction)
 
 Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scripta 26:331–348. (introduced kappa scaling factor used in comparative analyses)
 
-Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting pattern-heterogeneity in gene sequence or character-state data. Systematic Biology 53:571-581. (mixture of Q-matrices model)
-
-Pagel, M., and A. Meade. 2008. [Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo.](https://doi.org/10.1098/rstb.2008.0178) Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
-
 Paradis, E. 2006. Analysis of phylogenetics and evolution with R. Springer. ISBN: 0-387-32914-5.
 
 Pettigrew, J. D. 1994. [Genomic evolution: flying DNA.](https://doi.org/10.1016/S0960-9822(00)00065-8) Current Biology 4(3):277-280. (Feb 15)
 
-Pybus, O. G., and P. H. Harvey. 2000. Testing macro-evolutionary models using incomplete molecular phylogenies. Proc. R. Soc. Lond. B 267:2267-2272.
-
 Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
-
-Rabosky, D. L., F. Santini, J. Eastman, S. A. Smith, B. Sidlauskas, J, Chang, and M. E. Alfaro. 2013. [Rates of speciation and morphological evolution are correlated across the largest vertebrate radiation.](https://doi.org/10.1038/ncomms2958) Nature Communications 4:1958.
-
-Rabosky, D. L. 2014. Automatic detection of key innovations, rate shifts, and diversity-dependence on phylogenetic trees. PLoS One 9(2):e89543.
-
-Rabosky, D. L., S. C. Donnellan, M. Grundler, and I. J. Lovette. 2014. [Analysis and visualization of complex macroevolutionary dynamics: an example from Australian scincid lizards.](https://doi.org/10.1093/sysbio/syu025) Systematic Biology 63:610-627.
-
-Rabosky, D. L., J. S. Mitchell, and J. Chang. 2017. [Is BAMM flawed? Theoretical and practical concerns in the analysis of multi-rate diversification models.](https://doi.org/10.1093/sysbio/syx037) Systematic Biology 66:477-498.
 
 Ree, R. H. 2005. [Detecting the historical signature of key innovations using stochastic models of character evolution and cladogenesis](https://doi.org/10.1111/j.0014-3820.2005.tb00986.x) Evolution 59:257-265.
 
-Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610.
-
 Schwarz, G. E. 1978. Estimating the dimension of a model. Ann Stat. 6:461–464. (BIC model selection criterion)
-
-Shi, J. J., and D. L. Rabosky. 2015. [Speciation dynamics during the global radiation of extant bats.](https://doi.org/10.1111/evo.12681) Evolution 69:1528-1545.
 
 Shimodaira, H., and M. Hasegawa. 1999. Multiple comparisons of log-likelihoods with applications to phylogenetic inference. Molecular Biology and Evolution 16: 1114-1116. (SH topology test)
 
@@ -302,8 +308,6 @@ Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O.
 
 Tuffley, C., and M. Steel. 1997. Links between maximum likelihood and maximum parsimony under a simple model of substitution. Bulletin of Mathematical Biology 59:581-607
 
-Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
-
 Wickett, N. J., Y. Fan, P. Lewis, and B. Goffinet. 2008. [Distribution and evolution of pseudogenes, gene losses, and a gene rearrangement in the plastid genome of the nonphotosynthetic liverwort, _Aneura mirabilis_ (Metzgeriales, Jungermanniopsida).](http://dx.doi.org/10.1007/s00239-008-9133-1) Journal of Molecular Evolution 67:111-122.
 
 Wiley, E. O. 1981. Phylogenetics: the theory and practice of phylogenetic systematics. John Wiley and Sons, New York.
@@ -311,8 +315,6 @@ Wiley, E. O. 1981. Phylogenetics: the theory and practice of phylogenetic system
 Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
 
 Yang, Z., and B. Rannala. 2010. Bayesian species delimitation using multilocus sequence data. PNAS 107(20):9264-9269.
-
-Zhou, Y., H. Brinkmann, N. Rodrigue, N. Lartillot, and H. Philippe. 2010. A Dirichlet Process covarion mixture model and its assessments using posterior predictive discrepency tests. Molecular Biology and Evolution 27:371-384.
 
 {% endcomment %}
 

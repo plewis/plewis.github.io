@@ -7,6 +7,8 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2024/).
 
 The following topics were covered in lecture in the Spring 2024 version of EEB 5349 (Phylogenetics). Please refer to the [schedule](/phylogenetics2024/) to find links to the slides for the dates indicated.
 
+adaptive radiations, Apr-18
+
 Akaike Information Criterion (AIC), Feb-29
 
 among-site state frequency heterogeneity, Mar-21
@@ -19,11 +21,15 @@ ascertainment bias, Mar-21
 
 autoapomorphy trail, Mar-21
 
+Bayesian analysis of macroevolutionary mixtures (BAMM), Apr-18
+
 bat monophyly test, Feb-15
 
 Bayes' rule, Feb-20
 
 Bayesian Information Criterion (BIC), Feb-29
+
+binary-state speciation and extinction (BiSSE) model, Apr-18
 
 birth-death tree model, Apr-16
 
@@ -43,6 +49,8 @@ coalescence, Mar-7
 
 codon models, Apr-11
 
+columbine example, Apr-18
+
 comparative method, Apr-2
 
 concordance factor (CF), Apr-9
@@ -54,6 +62,8 @@ confidence intervals, Apr-16
 consensus trees, Jan-18 
 
 correlated relaxed clock model, Apr-16
+
+covarion, Apr-18
 
 credible intervals, Apr-16
 
@@ -89,6 +99,8 @@ distribution, support, Mar-5
 
 distribution, target (for MCMC), Feb-22
 
+diversification rate, Apr-18
+
 dwell time, Mar-28
 
 edge length, Jan-30
@@ -106,6 +118,8 @@ exchangeabilities, amino acid, Apr-11
 exhaustive search, Jan-18 
 
 expected time to coalescence, Mar-7
+
+extinction rate, Apr-18
 
 evolutionary correlation, Mar-26
 
@@ -125,6 +139,8 @@ frequencies, equilibrium amino acid, Apr-11
 
 frequencies, equilibrium state, Mar-21
 
+gamma, Pybus and Harvey, Apr-18
+
 gene trees, Mar-7
 
 general time-reversible model (GTR), Feb-1
@@ -135,7 +151,7 @@ Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-1
 
 heated chains (MCMC), Feb-22
 
-heterotachy, Feb-8
+heterotachy, Feb-8, Apr-18
 
 hyperparameter, Mar-5
 
@@ -169,6 +185,8 @@ likelihood ratio test, Feb-6
 
 likelihood, vs. probability, Feb-20
 
+lineage-through-time (LTT) plots, Apr-18
+
 marginal likelihood, Feb-20, Feb-29
 
 marginal likelihood (steppingstone method, Feb-29
@@ -185,7 +203,7 @@ MCMC, robot metaphor, Feb-22
 
 MCMC, local move proposal, Feb-27
 
-MCMC, reversible jump (rjMCMC), Mar-26
+MCMC, reversible jump (rjMCMC used in BAMM, heterotachy), Mar-26, Apr-18
 
 MCMC, sliding window proposal, Feb-27
 
@@ -207,9 +225,11 @@ models, Brownian motion, Apr-2
 
 models, codon, Apr-9
 
+models, covarion, Apr-18
+
 models, dependence, Mar-26
 
-models, Dirichlet process prior, Apr-9
+models, Dirichlet process prior, Apr-9, Apr-18
 
 models, discrete Gamma, Feb-8
 
@@ -221,7 +241,7 @@ models, hierarchical, Mar-5
 
 models, independence, Mar-26
 
-models, mixture (+I, +G), Feb-8
+models, mixture (+I, +G, Q matrix, edge length), Feb-8, Apr-18
 
 models, mixture (C20), Apr-11
 
@@ -232,6 +252,8 @@ models, partition, Feb-8
 models, protein, Apr-11
 
 models, relaxed clock Apr-11, Apr-16
+
+models, state-dependent diversification (BiSSE, MuSSE, GeoSSE, QuaSSE, HiSSE), Apr-18
 
 models, symmetric, Mar-21
 
@@ -301,6 +323,8 @@ probability, vs. likelihood, Feb-20
 
 pruning algorithm, Feb-8
 
+pull of the present, Apr-18
+
 random local clocks model, Apr-16
 
 running on empty (MCMC without data), Mar-5
@@ -327,7 +351,11 @@ software, phytools, Apr-11
 
 software, RevBayes, Mar-21, Mar-28
 
+speciation rate, Apr-18
+
 splits, Jan-16 
+
+state-dependent diversification models, Apr-18
 
 steppingstone method (marginal likelihood estimation), Feb-29
 
@@ -376,6 +404,8 @@ transversion (substitution type), Feb-1
 tree islands, Jan-18 
 
 tree-bisection-reconnection (TBR) branch swapping, Jan-18 
+
+turnover, Apr-18
 
 ultrametric, Jan-18 
 
