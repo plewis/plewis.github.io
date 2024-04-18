@@ -51,7 +51,7 @@ Thursday Apr. 4    | **PGLS (cont.)**; **[Phylogenetic signal in continuous trai
 Tuesday Apr. 9     | **[Dirichlet Process Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/21-dpp.pdf)**                                                | **Homework 12** [Maddison and Fitzjohn (2015)](/hwmandf/)
 Thursday Apr. 11   | **[Codon and amino acid models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/22a-aa-codon-models.pdf)**; **[Relaxed clock models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/22b-relaxed-clocks-annotated.pdf)** | **Lab 12** [Comparative methods and diversification in R](/ape/)
 Tuesday Apr. 16    | **[Relaxed clocks (cont.)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/23-divergence-time-annotated.pdf)**; **[Confidence vs. credible intervals](https://gnetum.eeb.uconn.edu/courses/phylogenetics/23-intervals-annotated.pdf)** | **Homework 13** [Dirichlet process prior](/hwdpp/)
-Thursday Apr. 18   | **[Heterotachy, and Covarion models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/24-heterotachy-covarion.pdf)**;                      | **Lab 13** [Divergence Time Estimation with RevBayes](/revdiv/)
+Thursday Apr. 18   | **[Heterotachy, and Covarion models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/24-heterotachy-covarion-annotated.pdf)**;            | **Lab 13** [Divergence Time Estimation with RevBayes](/revdiv/)
 Tuesday Apr. 23    | **[Diversification](https://gnetum.eeb.uconn.edu/courses/phylogenetics/25-diversification.pdf)**                                             | no homework assignment
 Thursday Apr. 25   | **Species delimitation and information**                                                                                                     | **Lab 14**
 
