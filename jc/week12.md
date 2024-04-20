@@ -154,7 +154,7 @@ This just prints out the first line `-n 1` of all the downloaded files. They sho
 
 ### 6. Start your array job
 
-To start the run, be sure your email is the one that will be used by the _zeroinfo.slurm_ script, then type
+To start the run, be sure your email is the one that will be used by the _info.slurm_ script, then type
 
     sbatch info.slurm
     
