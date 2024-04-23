@@ -7,7 +7,7 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2024/).
 
 The following topics were covered in lecture in the Spring 2024 version of EEB 5349 (Phylogenetics). Please refer to the [schedule](/phylogenetics2024/) to find links to the slides for the dates indicated.
 
-adaptive radiations, Apr-18
+adaptive radiations, Apr-23
 
 Akaike Information Criterion (AIC), Feb-29
 
@@ -21,7 +21,7 @@ ascertainment bias, Mar-21
 
 autoapomorphy trail, Mar-21
 
-Bayesian analysis of macroevolutionary mixtures (BAMM), Apr-18
+Bayesian analysis of macroevolutionary mixtures (BAMM), Apr-23
 
 bat monophyly test, Feb-15
 
@@ -29,7 +29,7 @@ Bayes' rule, Feb-20
 
 Bayesian Information Criterion (BIC), Feb-29
 
-binary-state speciation and extinction (BiSSE) model, Apr-18
+binary-state speciation and extinction (BiSSE) model, Apr-23
 
 birth-death tree model, Apr-16
 
@@ -49,7 +49,7 @@ coalescence, Mar-7
 
 codon models, Apr-11
 
-columbine example, Apr-18
+columbine example, Apr-23
 
 comparative method, Apr-2
 
@@ -99,7 +99,7 @@ distribution, support, Mar-5
 
 distribution, target (for MCMC), Feb-22
 
-diversification rate, Apr-18
+diversification rate, Apr-23
 
 dwell time, Mar-28
 
@@ -119,7 +119,7 @@ exhaustive search, Jan-18
 
 expected time to coalescence, Mar-7
 
-extinction rate, Apr-18
+extinction rate, Apr-23
 
 evolutionary correlation, Mar-26
 
@@ -139,7 +139,7 @@ frequencies, equilibrium amino acid, Apr-11
 
 frequencies, equilibrium state, Mar-21
 
-gamma, Pybus and Harvey, Apr-18
+gamma, Pybus and Harvey, Apr-23
 
 gene trees, Mar-7
 
@@ -185,7 +185,7 @@ likelihood ratio test, Feb-6
 
 likelihood, vs. probability, Feb-20
 
-lineage-through-time (LTT) plots, Apr-18
+lineage-through-time (LTT) plots, Apr-23
 
 marginal likelihood, Feb-20, Feb-29
 
@@ -203,7 +203,7 @@ MCMC, robot metaphor, Feb-22
 
 MCMC, local move proposal, Feb-27
 
-MCMC, reversible jump (rjMCMC used in BAMM, heterotachy), Mar-26, Apr-18
+MCMC, reversible jump (rjMCMC used in BAMM, heterotachy), Mar-26, Apr-18, Apr-23
 
 MCMC, sliding window proposal, Feb-27
 
@@ -253,7 +253,7 @@ models, protein, Apr-11
 
 models, relaxed clock Apr-11, Apr-16
 
-models, state-dependent diversification (BiSSE, MuSSE, GeoSSE, QuaSSE, HiSSE), Apr-18
+models, state-dependent diversification (BiSSE, MuSSE, GeoSSE, QuaSSE, HiSSE), Apr-23
 
 models, symmetric, Mar-21
 
@@ -323,7 +323,7 @@ probability, vs. likelihood, Feb-20
 
 pruning algorithm, Feb-8
 
-pull of the present, Apr-18
+pull of the present, Apr-23
 
 random local clocks model, Apr-16
 
@@ -351,11 +351,11 @@ software, phytools, Apr-11
 
 software, RevBayes, Mar-21, Mar-28
 
-speciation rate, Apr-18
+speciation rate, Apr-23
 
 splits, Jan-16 
 
-state-dependent diversification models, Apr-18
+state-dependent diversification models, Apr-23
 
 steppingstone method (marginal likelihood estimation), Feb-29
 
@@ -405,7 +405,7 @@ tree islands, Jan-18
 
 tree-bisection-reconnection (TBR) branch swapping, Jan-18 
 
-turnover, Apr-18
+turnover, Apr-23
 
 ultrametric, Jan-18 
 

@@ -9,7 +9,7 @@ These papers were cited in the Spring 2024 version of the course.
 
 Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. [Bayesian estimation of concordance among gene trees](https://doi.org/10.1093/molbev/msl170). Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy) (Apr 9)
 
-Beaulieu, J. M., and B. C. O'Meara. 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic Biology 65:583-601.
+Beaulieu, J. M., and B. C. O'Meara. 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic Biology 65:583-601. (Apr 23)
 
 Bergthorsson U., Adams K. L., Thomason B., Palmer J. D. 2003. Widespread horizontal transfer of mitochondrial genes in flowering plants. Nature 424:197–201. (Apr 2)
 
@@ -53,15 +53,15 @@ Fitch, W. M., and E. Markowitz. 1970. An improved method for determining codon v
 
 Fitch, W. 1971. Toward defining the course of evolution: minimum change for a specific tree topology. Systematic Zoology 20:406-416. (Jan 23)
 
-FitzJohn, R. G. 2010. Quantitative traits and diversification. Systematic Biology 59:619–633.
+FitzJohn, R. G. 2010. Quantitative traits and diversification. Systematic Biology 59:619–633. (Apr 23)
 
-Fitzjohn, R. G. 2012. [Diversitree: comparative phylogenetic analyses of diversification in R.](https://doi.org/10.1111/j.2041-210X.2012.00234.x) Methods in Ecology and Evolution 3:1084-1092.
+Fitzjohn, R. G. 2012. [Diversitree: comparative phylogenetic analyses of diversification in R.](https://doi.org/10.1111/j.2041-210X.2012.00234.x) Methods in Ecology and Evolution 3:1084-1092. (Apr 23)
 
 Fowler, D. M., C. L. Araya, S. J. Fleishman, E. H. Kellogg, J. J. Stephany, D. Baker. and S. Fields. 2010. [High-resolution mapping of protein sequence-function relationships.](https://doi.org/10.1038/nmeth.1492) Nature Methods 7:741-746. (Apr 11)
 
 Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent data. Pages 156-163 in Computing Science and Statistics (E. Keramidas, ed.). (Metropolis-coupled MCMC a.k.a. heated chains) (Feb 22)
 
-Goldberg, E. E., L. T. Lancaster, and R. H. Ree. 2011. Phylogenetic inference of reciprocal effects between geographic range evolution and diversification. Systematic Biology 60:451–465
+Goldberg, E. E., L. T. Lancaster, and R. H. Ree. 2011. Phylogenetic inference of reciprocal effects between geographic range evolution and diversification. Systematic Biology 60:451–465. (Apr 23)
 
 Goldman, N., and Z. Yang. 1994. A codon-based model of nucleotide substitution for protein-coding DNA sequences. Molecular Biology and Evolution, 11, 725-736. (Goldman-Yang codon model) (Apr-11)
 
@@ -69,7 +69,7 @@ Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, 
 
 Green, P. J. 1995. Reversible jump Markov chain Monte Carlo computation and Bayesian model determination. Biometrika 82:711-732. (Mar 26)
 
-Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evolution 48:523-529.
+Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evolution 48:523-529. (Apr 23)
 
 Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model) (Feb 1)
 
@@ -131,7 +131,7 @@ Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B.
 
 Lovette, I. J., and E. Bermingham. 1999. Explosive speciation in the New World Dendroica warblers. Proc. R. Soc. Lond. B 266:1629-1636. 
 
-Maddison W. P., Midford P. E., Otto S. P. 2007. Estimating a binary character’s effect on speciation and extinction. Systematic Biology 56:701–710.
+Maddison W. P., Midford P. E., Otto S. P. 2007. Estimating a binary character’s effect on speciation and extinction. Systematic Biology 56:701–710. (Apr 23)
 
 Martins, E. P., and T. F. Hansen. 1997. Phylogenies and the comparative method: a general approach to incorporating phylogenetic information into the analysis of interspecific data. The American Naturalist 149:646-667. (PGLS) (Apr 2)
 
@@ -139,9 +139,11 @@ Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller.
 
 Mirarab, S., and T. Warnow. 2015. [ASTRAL-II: coalescent-based species tree estimation with many hundreds of taxa and thousands of genes.](https://doi.org/10.1093/bioinformatics/btv234) Bioinformatics 31(12):i44–52. (Mar 19)
 
-Moore, B. R., S. Hohna, M. R. May, B. Rannala, and J. P. Huelsenbeck. 2016. [Critically evaluating the theory and performance of Bayesian analysis of macroevolutionary mixtures.](https://doi.org/10.1073/pnas.1518659113) PNAS 113:9569-9574. 
+Moore, B. R., S. Hohna, M. R. May, B. Rannala, and J. P. Huelsenbeck. 2016. [Critically evaluating the theory and performance of Bayesian analysis of macroevolutionary mixtures.](https://doi.org/10.1073/pnas.1518659113) PNAS 113:9569-9574.  (Apr 23)
 
 Muse, S. V., and B. S. Gaut. 1994. A likelihood approach for comparing synonymous and nonsynonymous substitution rates, with application to the chloroplast genome. Molecular Biology and Evolution, 11, 715-724. (Apr 11)
+
+Neupane, S., P. O. Lewis, S. Dessein, H. Shanks, S. Paudyal, and F. Lens. 2017. [Evolution of woody life form on tropical mountains in the tribe Spermacoceae (Rubiaceae).](https://doi.org/10.3732/ajb.1600248) American Journal of Botany 104(3):419-438. (Apr 23)
 
 Newton, M. A., and A. E. Raftery. 1994. Approximate Bayesian inference with the weighted likelihood bootstrap (with discussion). J. Roy. Statist. Soc. B 56:3-48. [Harmonic mean method for estimating marginal likelihood] (Feb 29)
 
@@ -159,23 +161,23 @@ Pagel, M., and A. Meade. 2008. [Modelling heterotachy in phylogenetic inference 
 
 Pettigrew, J. D. 1991. Wings or brain? convergent evolution in the origins of bats. Systematic Zoology, 40(2):199-216. (Feb 15)
 
-Pybus, O. G., and P. H. Harvey. 2000. Testing macro-evolutionary models using incomplete molecular phylogenies. Proc. R. Soc. Lond. B 267:2267-2272.
+Pybus, O. G., and P. H. Harvey. 2000. Testing macro-evolutionary models using incomplete molecular phylogenies. Proc. R. Soc. Lond. B 267:2267-2272. (Apr 23)
 
-Rabosky, D. L., F. Santini, J. Eastman, S. A. Smith, B. Sidlauskas, J, Chang, and M. E. Alfaro. 2013. [Rates of speciation and morphological evolution are correlated across the largest vertebrate radiation.](https://doi.org/10.1038/ncomms2958) Nature Communications 4:1958.
+Rabosky, D. L., F. Santini, J. Eastman, S. A. Smith, B. Sidlauskas, J, Chang, and M. E. Alfaro. 2013. [Rates of speciation and morphological evolution are correlated across the largest vertebrate radiation.](https://doi.org/10.1038/ncomms2958) Nature Communications 4:1958. (Apr 23)
 
-Rabosky, D. L. 2014. Automatic detection of key innovations, rate shifts, and diversity-dependence on phylogenetic trees. PLoS One 9(2):e89543.
+Rabosky, D. L. 2014. Automatic detection of key innovations, rate shifts, and diversity-dependence on phylogenetic trees. PLoS One 9(2):e89543. (Apr 23)
 
-Rabosky, D. L., S. C. Donnellan, M. Grundler, and I. J. Lovette. 2014. [Analysis and visualization of complex macroevolutionary dynamics: an example from Australian scincid lizards.](https://doi.org/10.1093/sysbio/syu025) Systematic Biology 63:610-627.
+Rabosky, D. L., S. C. Donnellan, M. Grundler, and I. J. Lovette. 2014. [Analysis and visualization of complex macroevolutionary dynamics: an example from Australian scincid lizards.](https://doi.org/10.1093/sysbio/syu025) Systematic Biology 63:610-627. (Apr 23)
 
-Rabosky, D. L., J. S. Mitchell, and J. Chang. 2017. [Is BAMM flawed? Theoretical and practical concerns in the analysis of multi-rate diversification models.](https://doi.org/10.1093/sysbio/syx037) Systematic Biology 66:477-498.
+Rabosky, D. L., J. S. Mitchell, and J. Chang. 2017. [Is BAMM flawed? Theoretical and practical concerns in the analysis of multi-rate diversification models.](https://doi.org/10.1093/sysbio/syx037) Systematic Biology 66:477-498. (Apr 23)
 
 Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior) (Mar 5)
 
-Ree, R. R. 2005. [Detecting the historical signature of key innovations using stochastic models of character evolution and cladogenesis.](https://doi.org/10.1111/j.0014-3820.2005.tb00986.x) Evolution 59(2):257–265. 
+Ree, R. R. 2005. [Detecting the historical signature of key innovations using stochastic models of character evolution and cladogenesis.](https://doi.org/10.1111/j.0014-3820.2005.tb00986.x) Evolution 59(2):257–265.  (Apr 23)
 
 Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model) (Feb 8)
 
-Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610.
+Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610. (Apr 23)
 
 Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
 
@@ -187,7 +189,7 @@ Sankoff, D. 1975. Minimal mutation trees of sequences. SIAM Journal on Applied M
 
 Schluter, D., T. Price, A. Ø. Mooers, and D. Ludwig. 1997. Likelihood of ancestor states in adaptive radiation. Evolution 51:1699-1711. (Mar 21)
 
-Shi, J. J., and D. L. Rabosky. 2015. [Speciation dynamics during the global radiation of extant bats.](https://doi.org/10.1111/evo.12681) Evolution 69:1528-1545.
+Shi, J. J., and D. L. Rabosky. 2015. [Speciation dynamics during the global radiation of extant bats.](https://doi.org/10.1111/evo.12681) Evolution 69:1528-1545. (Apr 23)
 
 Si Quang, L., O. Gascuel, and N. Lartillot. 2008. [Empirical profile mixture models for phylogenetic reconstruction.](https://doi.org/10.1093/bioinformatics/btn445) Bioinformatics 24(20): 2317-2323. (Apr 11)
 
