@@ -271,7 +271,7 @@ G Yu, D Smith, H Zhu, Y Guan, and TT Lam. 2017. ggtree: an R package for visuali
 
 ### What to turn in
 
-Choose _Knit to HTML_ from the _Knit_ dropdown at the top of your BAMM.Rmd window. This will generate a BAMM.html file in your directory. Please send that file to Zach for your lab participation points for today. Also send Zach the final plot with the heatmap for your single best shift senario. 
+Send _circletree.pdf_ and _bstree.pdf_ to Analisa in order to get credit for this lab.
 
 ## Acknowledgements
 
