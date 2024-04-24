@@ -269,9 +269,11 @@ K Keegan, JD Lafontaine, N Wahlberg, D Wagner. 2019. Towards resolving Amphipyri
 
 G Yu, D Smith, H Zhu, Y Guan, and TT Lam. 2017. ggtree: an R package for visualization and annotation of phylogenetic trees with their covariates and other associated data. Methods in Ecology and Evolution 8:28-36. [DOI:10.1111/2041-210X.12628](https://doi.org/10.1111/2041-210X.12628)
 
+{% comment %}
 ### What to turn in
 
 Send _circletree.pdf_ and _bstree.pdf_ to Analisa in order to get credit for this lab.
+{% endcomment %}
 
 ## Acknowledgements
 

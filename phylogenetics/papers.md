@@ -230,7 +230,7 @@ Akaike, H. 1973. Information theory as an extension of the maximum likelihood pr
 
 Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
 
-Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates. Systematic Biology 59:145–161.
+Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). [When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates.](https://doi.org/10.1093/sysbio/syp081) Systematic Biology 59:145–161.
 
 Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences in phylogeny. Evolution 19:311-326. (irreversible parsimony)
 
