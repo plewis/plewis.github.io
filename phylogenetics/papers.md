@@ -127,7 +127,7 @@ Lewis, P. O. 2001b. Phylogenetic systematics turns over a new leaf. Trends in Ec
 
 Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian phylogenetic inference. Systematic Biology 54:241–253. (Mar 26)
 
-Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65(6):1009-1023. (Apr 2)
+Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65(6):1009-1023. (Apr 2, Apr 25)
 
 Lovette, I. J., and E. Bermingham. 1999. Explosive speciation in the New World Dendroica warblers. Proc. R. Soc. Lond. B 266:1629-1636. 
 
@@ -213,6 +213,8 @@ Yang, Z. 1993. Maximum-likelihood estimation of phylogeny from DNA sequences whe
 
 Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences with variable rates over sites: approximate methods. Journal of Molecular Evolution 39:306-314. (+G among-site rate heterogeneity model) (Feb 8)
 
+Yang, Z., and B. Rannala. 2010. Bayesian species delimitation using multilocus sequence data. PNAS 107(20):9264-9269. (Apr 25)
+
 Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [Total-evidence dating under the fossilized birth–death process.](https://doi.org/10.1093/sysbio/syv080) Systematic Biology 65:228–249. 
 
 Zhou, Y., H. Brinkmann, N. Rodrigue, N. Lartillot, and H. Philippe. 2010. A Dirichlet Process covarion mixture model and its assessments using posterior predictive discrepency tests. Molecular Biology and Evolution 27:371-384.
@@ -266,8 +268,6 @@ Holder, M. T., P. O. Lewis, and D. L. Swofford. 2010. The Akaike Information Cri
 
 Kluge, A. G., and J. S. Farris. 1969. Quantitative phyletics and the evolution of anurans. Systematic Zoology 18:1-32.
 
-Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65:1009-1023.
-
 Maddison, W. P. 1997. Gene trees in species trees. Systematic Biology 46:523–536.
 
 Maddison, D. R., Swofford, D. L., and Maddison, W. P. 1997. NEXUS: An extensible file format for systematic information. Systematic Biology 46:590–617. (NEXUS file format)
@@ -315,8 +315,6 @@ Wickett, N. J., Y. Fan, P. Lewis, and B. Goffinet. 2008. [Distribution and evolu
 Wiley, E. O. 1981. Phylogenetics: the theory and practice of phylogenetic systematics. John Wiley and Sons, New York.
 
 Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
-
-Yang, Z., and B. Rannala. 2010. Bayesian species delimitation using multilocus sequence data. PNAS 107(20):9264-9269.
 
 {% endcomment %}
 

@@ -79,6 +79,8 @@ Dirichlet process prior, Apr-9
 
 discrete Gamma model, Feb-8
 
+dissonance, Apr-25
+
 distribution, Beta, Mar-5, Mar-21
 
 distribution, Dirichlet, Mar-5
@@ -160,6 +162,8 @@ hyperprior, Mar-5
 independence of events, Feb-6
 
 induced prior, Mar-5
+
+information content, Apr-25
 
 integrals, Feb-20
 
@@ -335,6 +339,8 @@ software, ape, Apr-11
 
 software, BayesTraits, Apr-4
 
+software, BPP, Apr-25
+
 software, BUCKy, Apr-9
 
 software, caper, Apr-11
@@ -374,6 +380,8 @@ reconnection limit, Jan-18
 simulation, Feb-15
 
 sojourn time, Mar-28
+
+species delimitation, Apr-25
 
 star decomposition, Jan-18 
 
