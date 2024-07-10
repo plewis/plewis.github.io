@@ -39,7 +39,7 @@ In the "Clade posteriors" section of the lab, you can replace the "chlorophyllb"
     # Calculate the	posterior probability of a diagnostic clade in the tree of Figure 4b
     # of Whidden and Matsen (2015) DOI:10.1093/sysbio/syv006
     fig4b <- clade("Ambystoma_mexicanum", "Siren_intermedia", "Typhlonectes_natans", "Discoglossus_pictus")
-    treetrace.cladeProbability( fig4a )
+    treetrace.cladeProbability( fig4b )
 
 The "fig4a" and "fig4b" refer to the two trees shown in Figure 4 in the Whidden and Matsen (2015) paper:
 
