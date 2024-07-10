@@ -38,14 +38,14 @@ Monday       | Sep. 2       | **LABOR DAY**                                     
 Wednesday    | Sep. 4       | **Stems, Roots**<br/>Chapters 9,10,11                           | **Plant anatomy I**
 Friday       | Sep. 6       | **Woody Dicot Stems, Water**<br/>Chapter 10                     | 
 Monday       | Sep. 9       | **Water Potential, transpiration**<br/>Chapter 12               | 
-Wednesday    | Sep. 11      | **Food Transport**<br/>Chapters 4,12                            | **Plant anatomy II**, **Peas: plant seeds**
+Wednesday    | Sep. 11      | **Food Transport**<br/>Chapters 4,12                            | **Plant anatomy II**<br/>**Peas: plant seeds**
 Friday       | Sep. 13      | **Proteins, Enzymes**<br/>Chapters 4,12                         | 
 Monday       | Sep. 16      | **Membranes, ATP, NADPH**<br/>Chapters 4,6                      | 
-Wednesday    | Sep. 18      | **Photosynthesis**<br/>Chapters 4,6                             | **Transpiration**, **Peas: check germination**
+Wednesday    | Sep. 18      | **Photosynthesis**<br/>Chapters 4,6                             | **Transpiration**<br/>**Peas: check germination**
 Friday       | Sep. 20      | **Photosynthesis (cont.)**<br/>Chapter 6                        | 
 Monday       | Sep. 23      | **Photorespiration, CAM, C4**<br/>Chapter 6                     |  
 Wednesday    | Sep. 25      | **Question/answer session**                                     | **Photosynthesis**<br/>**Peas: day 1**
-Friday       | Sep. 27      | **EXAM I**<br/>up to and including lecture on 9/26)             | **Peas: day 3**
+Friday       | Sep. 27      | **EXAM I**<br/>up to and including lecture on 9/23)             | **Peas: day 3**
 Monday       | Sep. 30      | **Phylogeny, Life Cycles, Endosymbiosis**<br/>Chapters 18,19,20 | **Peas: day 6**
 Wednesday    | Oct. 2       | **Cyanobacteria, Red Algae**<br/>Chapter 20                     | **Mitosis/Meiosis**<br/>**Peas: day 8**
 Friday       | Oct. 4       | **Heterokonts, Chlorophyte Green Algae**<br/>Chapter 20         | **Peas: day 10**
@@ -57,7 +57,7 @@ Wednesday    | Oct. 16      | **Seed plants**<br/>Chapter 23                    
 Friday       | Oct. 18      | **Gymnosperms**<br/>Chapter 23                                  | 
 Monday       | Oct. 21      | **Angiosperms (flowers)**<br/>Chapter 24                        | 
 Wednesday    | Oct. 23      | **Review session (bring questions)**<br/>Chapter 24             | **Gymnosperms and fossils** 
-Friday       | Oct. 25      | **EXAM II**<br/>lecture material from 10/3 through 10/24        | 
+Friday       | Oct. 25      | **EXAM II**<br/>lecture material from 9/30 through 10/21        | 
 Monday       | Oct. 28      | **Angiosperms (inflorescences)**<br/>Chapter 25                 | 
 Wednesday    | Oct. 30      | **Angiosperms (fruits)**<br/>Chapters 25                        | **Angiosperms and flowers**
 Friday       | Nov. 1       | **Angiosperms (pollination)**<br/>Chapter 25                    | 
@@ -132,7 +132,7 @@ The purpose of the assigned textbook reading is to give you the material from a 
 
 _Note: this section may change before the semester begins_
 
-The total number of points you can earn is 370. The lecture component accounts for 200 points and the lab accounts for the remaining 170.
+The total number of points you can earn is 470. The lecture component accounts for 300 points and the lab accounts for the remaining 170.
 
 Lecture        | Points
 :------------- | :---------------
@@ -147,9 +147,9 @@ Laboratory     | Points
 Quizes         | 50
 Transpiration  | 10
 Photosynthesis | 10
-Selection      | 30
 Hormones       | 30
 Climate change | 10
+Final exam     | 30
 Participation  | 30
 
 ### Grading scale
