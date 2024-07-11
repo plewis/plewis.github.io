@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to Botany (BIO 1110)
+title: Introduction to Botany (BIOL 1110)
 permalink: /botany2024/
 ---
 ### Syllabus for Fall Semester 2024
