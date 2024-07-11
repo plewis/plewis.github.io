@@ -4,7 +4,7 @@ title: Introduction to Botany (BIO 1110)
 permalink: /botany2024/
 ---
 ### Syllabus for Fall Semester 2024
-_Last updated July 10, 2024_
+_Last updated July 11, 2024_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -32,46 +32,46 @@ This is a freshman-level introdution to the science of plants, emphasizing the a
 Day          |  Date        |  Lecture topic                                                  |  Lab topic
 :----------: | :----------: | :-------------------------------------------------------------- | :------------------------------------------------------------
 Monday       | Aug. 26      | **Introduction, plant cells**<br/>Chapter 5                     | 
-Wednesday    | Aug. 28      | **Plant cell types and tissues types**<br/>Chapters 5, 9, 10    | **Microscope, Plant Cells, Greenhouse Tour**
+Wednesday    | Aug. 28      | **Plant cell types and tissues types**<br/>Chapters 5, 9, 10    | **1. Microscope, Plant Cells, Greenhouse Tour**
 Friday       | Aug. 30      | **Leaves and stems**<br/>Chapters 9,10,12                       | 
 Monday       | Sep. 2       | **LABOR DAY**                                                   |
-Wednesday    | Sep. 4       | **Stems, Roots**<br/>Chapters 9,10,11                           | **Plant anatomy I**
+Wednesday    | Sep. 4       | **Stems, Roots**<br/>Chapters 9,10,11                           | **2. Plant anatomy I**
 Friday       | Sep. 6       | **Woody Dicot Stems, Water**<br/>Chapter 10                     | 
 Monday       | Sep. 9       | **Water Potential, transpiration**<br/>Chapter 12               | 
-Wednesday    | Sep. 11      | **Food Transport**<br/>Chapters 4,12                            | **Plant anatomy II**<br/>**Peas: plant seeds**
+Wednesday    | Sep. 11      | **Food Transport**<br/>Chapters 4,12                            | **3. Plant anatomy II**<br/>**Peas: plant seeds**
 Friday       | Sep. 13      | **Proteins, Enzymes**<br/>Chapters 4,12                         | 
 Monday       | Sep. 16      | **Membranes, ATP, NADPH**<br/>Chapters 4,6                      | 
-Wednesday    | Sep. 18      | **Photosynthesis**<br/>Chapters 4,6                             | **Transpiration**<br/>**Peas: check germination**
+Wednesday    | Sep. 18      | **Photosynthesis**<br/>Chapters 4,6                             | **4. Transpiration**<br/>**Peas: check germination**
 Friday       | Sep. 20      | **Photosynthesis (cont.)**<br/>Chapter 6                        | 
 Monday       | Sep. 23      | **Photorespiration, CAM, C4**<br/>Chapter 6                     |  
-Wednesday    | Sep. 25      | **Question/answer session**                                     | **Photosynthesis**<br/>**Peas: day 1**
+Wednesday    | Sep. 25      | **Mitosis and meiosis**<br/>Chapter 14                          | **5. Photosynthesis**<br/>**Peas: day 1**
 Friday       | Sep. 27      | **EXAM I**<br/>up to and including lecture on 9/23)             | **Peas: day 3**
 Monday       | Sep. 30      | **Phylogeny, Life Cycles, Endosymbiosis**<br/>Chapters 18,19,20 | **Peas: day 6**
-Wednesday    | Oct. 2       | **Cyanobacteria, Red Algae**<br/>Chapter 20                     | **Mitosis/Meiosis**<br/>**Peas: day 8**
+Wednesday    | Oct. 2       | **Cyanobacteria, Red Algae**<br/>Chapter 20                     | **6. Mitosis/Meiosis**<br/>**Peas: day 8**
 Friday       | Oct. 4       | **Heterokonts, Chlorophyte Green Algae**<br/>Chapter 20         | **Peas: day 10**
 Monday       | Oct. 7       | **Streptophyte Green Algae**<br/>Chapter 20                     | **Peas: day 13**
-Wednesday    | Oct. 9       | **Bryophytes (Hornworts, Mosses, Liverworts)**<br/>Chapter 22   | **Algae**<br/>**Peas: day 15**
+Wednesday    | Oct. 9       | **Bryophytes (Hornworts, Mosses, Liverworts)**<br/>Chapter 22   | **7. Algae**<br/>**Peas: day 15**
 Friday       | Oct. 11      | **Vascular plants, Lycophytes, heterospory**<br/>Chapter 22     | 
 Monday       | Oct. 14      | **Pteridophytes**<br/>Chapter 22                                | 
-Wednesday    | Oct. 16      | **Seed plants**<br/>Chapter 23                                  | **Seedless plants**
+Wednesday    | Oct. 16      | **Seed plants**<br/>Chapter 23                                  | **8. Seedless plants**
 Friday       | Oct. 18      | **Gymnosperms**<br/>Chapter 23                                  | 
 Monday       | Oct. 21      | **Angiosperms (flowers)**<br/>Chapter 24                        | 
-Wednesday    | Oct. 23      | **Review session (bring questions)**<br/>Chapter 24             | **Gymnosperms and fossils** 
+Wednesday    | Oct. 23      | **Angiosperms (inflorescences)**<br/>Chapter 25                 | **9. Plant life cycles** 
 Friday       | Oct. 25      | **EXAM II**<br/>lecture material from 9/30 through 10/21        | 
-Monday       | Oct. 28      | **Angiosperms (inflorescences)**<br/>Chapter 25                 | 
-Wednesday    | Oct. 30      | **Angiosperms (fruits)**<br/>Chapters 25                        | **Angiosperms and flowers**
-Friday       | Nov. 1       | **Angiosperms (pollination)**<br/>Chapter 25                    | 
-Monday       | Nov. 4       | **Tropisms and auxin**<br/>Chapter 13                           | 
-Wednesday    | Nov. 6       | **Hormones (cont.)**<br/>Chapter 13                             | **Life cycles**
-Friday       | Nov. 8       | **Phytochrome (or how plants tell time)**<br/>Chapter 26        | 
-Monday       | Nov. 11      | **Mitosis and meiosis**<br/>Chapter 14                          | 
-Wednesday    | Nov. 13      | **Mendelian genetics**<br/>Chapter 15                           | **Fungi**
+Monday       | Oct. 28      | **Angiosperms (fruits)**<br/>Chapters 25                        | 
+Wednesday    | Oct. 30      | **Angiosperms (pollination)**<br/>Chapter 25                    | **10.Gymnosperms and fossils**
+Friday       | Nov. 1       | **Angiosperm major families**                                   | 
+Monday       | Nov. 4       | **Fungi and lichens                                             | 
+Wednesday    | Nov. 6       | **Tropisms and auxin**<br/>Chapter 13                           | **11. Angiosperms and flowers**
+Friday       | Nov. 8       | **Hormones (cont.)**<br/>Chapter 13                             | 
+Monday       | Nov. 11      | **Phytochrome (or how plants tell time)**<br/>Chapter 26        | 
+Wednesday    | Nov. 13      | **Mendelian genetics**<br/>Chapter 15                           | **12. Fungi**
 Friday       | Nov. 15      | **Mendelian genetics (cont.)**<br/>Chapter 15                   | 
 Monday       | Nov. 18      | **THANKSGIVING BREAK**                                          | 
 Wednesday    | Nov. 20      | **THANKSGIVING BREAK**                                          | (no lab Thanksgiving break week)
 Friday       | Nov. 22      | **THANKSGIVING BREAK**                                          | 
 Monday       | Nov. 25      | **Recombination**<br/>Chapter 15                                | 
-Wednesday    | Nov. 27      | **Natural selection**<br/>Chapter 17                            | **Climate change**
+Wednesday    | Nov. 27      | **Natural selection**<br/>Chapter 17                            | **13. Climate change**
 Friday       | Nov. 29      | **Population genetics**<br/>Chapter 17                          | 
 Monday       | Dec. 2       | **Speciation in flowering plants**<br/>Chapter 17               | 
 Wednesday    | Dec. 4       | **Nutrient cycles**<br/>Chapter 26                              | **Lab Final**
