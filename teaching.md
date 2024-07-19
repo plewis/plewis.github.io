@@ -12,15 +12,13 @@ permalink: /teaching/
 
 {% include figure.html description="Liverwort, Woods Hole, MA." url="/assets/img/liverwort.jpg" css="image-left" width="300px" targeturl="https://en.wikipedia.org/wiki/Marchantiophyta" %}
 
-**Being taught Fall 2024**
+**Being taught Fall 2024!**
 
-This is a freshman-level 4-credit undergraduate BIOL/EEB majors lab course that satisfies the General Education Content Area 3 (lab) (Common Curriculum TOI-6 lab) requirement at the University of Connecticut. The course covers many key aspects of biology (anatomy, physiology, ecology, biodiversity, genetics, population genetics, and evolution) using examples from green plants (including green algae), fungi, cyanobacteria, heterokonts, and red algae. Lab topics include selection, photosynthesis, transpiration, plant hormones, and fossil plants. 
+This is a freshman-level 4-credit undergraduate BIOL/EEB majors lab course that satisfies the General Education Content Area 3 (lab) ([Common Curriculum](https://commoncurriculum.senate.uconn.edu) [TOI-6 lab](https://commoncurriculum.senate.uconn.edu/scientific-and-empirical-inquiry/)) requirement at the University of Connecticut. The course covers many key aspects of biology (anatomy, physiology, ecology, biodiversity, genetics, population genetics, and evolution) using examples from green plants (including green algae), fungi, cyanobacteria, heterokonts, and red algae. Lab topics include selection, photosynthesis, transpiration, plant hormones, and fossil plants. 
 
 **Important:** this course is **equivalent to BIOL 1108** for the BIOL and EEB majors, so, if you are interested in plants, take this one instead and enjoy a smaller class size!
 
-{% comment %}
 <p class="sectionbreak"/>
-{% endcomment %}
 
 ---
 
@@ -31,6 +29,8 @@ This is a freshman-level 4-credit undergraduate BIOL/EEB majors lab course that 
 This is a sophomore-level 3-credit undergraduate course that satisfies the [Evolution Core Requirement of the BIOL major](https://biology.uconn.edu/biological-sciences/) as well as one of the [Core Requirements of the EEB major](https://biology.uconn.edu/eeb/). In this course, you will learn how natural selection and other processes lead to evolutionary change in organisms across generations, and about key turning points in history that have led to the diversity of organisms we now see on Earth. You will learn _tree thinking_ that will allow you to understand and correctly interpret evolutionary trees in scientific literature.
 
 [Link to Spring 2023 course web site](https://uconneeb.github.io/evolution/)
+
+<p class="sectionbreak"/>
 
 ---
 
