@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2024/
 ---
 ### Syllabus for Fall Semester 2024
-_Last updated July 11, 2024_
+_Last updated August 23, 2024_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -67,12 +67,12 @@ Friday       | Nov. 8       | **Hormones (cont.)**<br/>Chapter 13               
 Monday       | Nov. 11      | **Phytochrome (or how plants tell time)**<br/>Chapter 26        | 
 Wednesday    | Nov. 13      | **Mendelian genetics**<br/>Chapter 15                           | **12. Fungi**
 Friday       | Nov. 15      | **Mendelian genetics (cont.)**<br/>Chapter 15                   | 
-Monday       | Nov. 18      | **THANKSGIVING BREAK**                                          | 
-Wednesday    | Nov. 20      | **THANKSGIVING BREAK**                                          | (no lab Thanksgiving break week)
-Friday       | Nov. 22      | **THANKSGIVING BREAK**                                          | 
-Monday       | Nov. 25      | **Recombination**<br/>Chapter 15                                | 
-Wednesday    | Nov. 27      | **Natural selection**<br/>Chapter 17                            | **13. Climate change**
-Friday       | Nov. 29      | **Population genetics**<br/>Chapter 17                          | 
+Monday       | Nov. 18      | **Recombination**<br/>Chapter 15                                | 
+Wednesday    | Nov. 20      | **Natural selection**<br/>Chapter 17                            | **13. Climate change**
+Friday       | Nov. 22      | **Population genetics**<br/>Chapter 17                          | 
+Monday       | Nov. 25      | **THANKSGIVING BREAK**                                          | 
+Wednesday    | Nov. 27      | **THANKSGIVING BREAK**                                          | (no lab Thanksgiving break week)
+Friday       | Nov. 29      | **THANKSGIVING BREAK**                                          | 
 Monday       | Dec. 2       | **Speciation in flowering plants**<br/>Chapter 17               | 
 Wednesday    | Dec. 4       | **Nutrient cycles**<br/>Chapter 26                              | **Lab Final**
 Friday       | Dec. 6       | **Review for final**                                            | 
