@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2024/
 ---
 ### Syllabus for Fall Semester 2024
-_Last updated August 23, 2024_
+_Last updated August 24, 2024_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -149,8 +149,8 @@ Transpiration  | 10
 Photosynthesis | 10
 Hormones       | 30
 Climate change | 10
-Final exam     | 30
-Participation  | 30
+Final exam     | 20
+Participation  | 40
 
 ### Grading scale
 
