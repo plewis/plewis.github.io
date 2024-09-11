@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2024/
 ---
 ### Syllabus for Fall Semester 2024
-_Last updated August 24, 2024_
+_Last updated September 11, 2024_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -36,15 +36,15 @@ Wednesday    | Aug. 28      | **Plant cell types and tissues types**<br/>Chapter
 Friday       | Aug. 30      | **Leaves and stems**<br/>Chapters 9,10,12                       | 
 Monday       | Sep. 2       | **LABOR DAY**                                                   |
 Wednesday    | Sep. 4       | **Stems, Roots**<br/>Chapters 9,10,11                           | **2. Plant anatomy I**
-Friday       | Sep. 6       | **Woody Dicot Stems, Water**<br/>Chapter 10                     | 
+Friday       | Sep. 6       | **Woody Dicot Stems**<br/>Chapter 10                            | 
 Monday       | Sep. 9       | **Water Potential, transpiration**<br/>Chapter 12               | 
 Wednesday    | Sep. 11      | **Food Transport**<br/>Chapters 4,12                            | **3. Plant anatomy II**<br/>**Peas: plant seeds**
-Friday       | Sep. 13      | **Proteins, Enzymes**<br/>Chapters 4,12                         | 
-Monday       | Sep. 16      | **Membranes, ATP, NADPH**<br/>Chapters 4,6                      | 
-Wednesday    | Sep. 18      | **Photosynthesis**<br/>Chapters 4,6                             | **4. Transpiration**<br/>**Peas: check germination**
-Friday       | Sep. 20      | **Photosynthesis (cont.)**<br/>Chapter 6                        | 
-Monday       | Sep. 23      | **Photorespiration, CAM, C4**<br/>Chapter 6                     |  
-Wednesday    | Sep. 25      | **Mitosis and meiosis**<br/>Chapter 14                          | **5. Photosynthesis**<br/>**Peas: day 1**
+Friday       | Sep. 13      | **Enzymes, Membranes, Energy carriers**<br/>Chapters 4,12       | 
+Monday       | Sep. 16      | **Photosynthesis**<br/>Chapters 6                               | 
+Wednesday    | Sep. 18      | **Photosynthesis (cont.)**<br/>Chapters 6                       | **4. Transpiration**<br/>**Peas: check germination**
+Friday       | Sep. 20      | **Photorespiration, CAM, C4**<br/>Chapter 6                     | 
+Monday       | Sep. 23      | **Mitosis and meiosis**<br/>Chapter 6                           |  
+Wednesday    | Sep. 25      | **Mitosis and meiosis (cont.)**<br/>Chapter 14                  | **5. Photosynthesis**<br/>**Peas: day 1**
 Friday       | Sep. 27      | **EXAM I**<br/>up to and including lecture on 9/23)             | **Peas: day 3**
 Monday       | Sep. 30      | **Phylogeny, Life Cycles, Endosymbiosis**<br/>Chapters 18,19,20 | **Peas: day 6**
 Wednesday    | Oct. 2       | **Cyanobacteria, Red Algae**<br/>Chapter 20                     | **6. Mitosis/Meiosis**<br/>**Peas: day 8**
