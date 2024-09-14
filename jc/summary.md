@@ -179,3 +179,13 @@ For `gene30`:
 
 
 ## Fall 2024
+
+## Week 14 (September 16-20, 2024)
+
+Instructions are [here](/jcweek14/).
+
+This week we began generating data that will be used in the paper. The first table we will need shows how information content estimation fails if the number of samples from the posterior does not greatly exceed the expected number of plausible tree topologies. Perform array jobs in which each of 20 tasks asks RevBayes to sample from the prior (zero info) for problems in which the number of taxa is 9 (1*3*5*7*9*11*13 = 135,135 unrooted topologies). Each array job examines a different posterior sample size (10k, 100k, 1000k, 10000k) and we expect information to be accurately estimate (i.e. 0.0 information) only for the 1000k and 10000k cases.
+
+
+
+
