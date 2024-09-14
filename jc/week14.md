@@ -50,7 +50,7 @@ After saving and exiting out of nano, make the `clean.sh` file executable:
         
 ### 4. Create the SLURM script
 
-These instructions were prepared using the tutorial on the [Computational Biology Core](https://bioinformatics.uconn.edu) web site. To get there, choose "Tutorials and Instruction" from the main menu, then "Tutorials", then click on the link for "Array Job Submission".
+These instructions were prepared using the tutorial on the [Computational Biology Core](https://bioinformatics.uconn.edu) web site. To get there, choose "Tutorials and Instruction" from the main menu, then "Documentation and Tutorials", then click on the link for "Using job arrays in SLURM".
 
 Issue the following command from within your `zeroinfo` directory:
 
@@ -65,8 +65,8 @@ and edit the text you now have in "test.slurm" to match the following:
     #SBATCH -N 1
     #SBATCH -c 1
     #SBATCH --mem=5G
-    #SBATCH --partition=mcbstudent
-    #SBATCH --qos=mcbstudent
+    #SBATCH --partition=general
+    #SBATCH --qos=general
     #SBATCH --array=[1-20]%20
     #SBATCH --mail-type=ALL
     #SBATCH --mail-user=jessica.chen@uconn.edu
