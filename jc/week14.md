@@ -4,7 +4,7 @@ title: Week 14 (Sep 16-20, 2024)
 permalink: /jcweek14/
 ---
 
-This week we will begin generating data that will be used in the paper. The first table we will need shows how information content estimation fails if the number of samples from the posterior does not greatly exceed the expected number of plausible tree topologies. Perform array jobs in which each of 20 tasks asks RevBayes to sample from the prior (zero info) for problems in which the number of taxa is 9 (1*3*5*7*9*11*13 = 135,135 unrooted topologies). Each array job examines a different posterior sample size (10k, 100k, 1000k, 10000k) and we expect information to be accurately estimate (i.e. 0.0 information) only for the 1000k and 10000k cases.
+This week we will begin generating data that will be used in the paper. The first table we will need shows how information content estimation fails if the number of samples from the posterior does not greatly exceed the expected number of plausible tree topologies. Perform array jobs in which each of 20 tasks asks RevBayes to sample from the prior (zero info) for problems in which the number of taxa is 9 (`1*3*5*7*9*11*13 = 135,135` unrooted topologies). Each array job examines a different posterior sample size (1k, 10k, 100k, 1000k, 10000k) and we expect information to be accurately estimate (i.e. 0.0 information) only for the 1000k and 10000k cases.
 
 Note: you do not need to type (or copy) comments, which are the parts of lines after the hash `#` symbol.
 
@@ -90,10 +90,12 @@ and edit the text you now have in "test.slurm" to match the following:
     
     # Run RevBayes
     cp ../zeroinfo.Rev .
+    sed -i "s/__RNSEED__/$SLURM_ARRAY_TASK_ID/" zeroinfo.Rev
     rb zeroinfo.Rev
     
     # Convert RevBayes-style treefile into a nexus-formatted treefile that Galax can read
-    python3 $HOME/bin/rb2nxs.py "output/zeroinfo_run_*.trees" zeroinfo.tre
+    #python3 $HOME/bin/rb2nxs.py "output/zeroinfo_run_*.trees" zeroinfo.tre
+    python3 $HOME/bin/rb2nxs.py "output/zeroinfo.trees" zeroinfo.tre
     
     # Run Galax
     $HOME/bin/galax --treefile zeroinfo.tre --outfile galax-output
@@ -131,12 +133,12 @@ Be sure you are in your `~/zeroinfo` directory, then use nano to create a file n
 
 ### 6: Adjust parameters in your _zeroinfo.Rev_ file
 
-We need to generate samples of size 10000, 100000, 1000000, and 10000000 using RevBayes. At the top of _zeroinfo.Rev_ there are some variables that we can adjust to achieve these sample sizes. Here are the two that are relevant:
+We need to generate samples of size 1000, 10000, 100000, 1000000, and 10000000 using RevBayes. At the top of _zeroinfo.Rev_ there are some variables that we can adjust to achieve these sample sizes. Here are the two that are relevant:
 
 * `samplingiters` is the number of iterations to perform after burning in the MCMC chain
 * `saveevery` is the number of iterations to skip between iterations in which a sample is saved
 
-The total number of samples saved to the output file will equal `samplingiters` divided by `saveevery`. Let's always use 1000 for `saveevery`. To get 10000 trees saved, you would thus set `samplingiters` to 10000000.
+The total number of samples saved to the output file will equal `samplingiters` divided by `saveevery`. Let's always use 10 for `saveevery`. To get 1000 trees saved, you would thus set `samplingiters` to 10000.
 
 Although it doesn't affect anything, I would set the variable `printevery` in the _zeroinfo.Rev_ file to 1% of `samplingiters`. That way, you will get 100 lines in the output showing the progress of the run.
 
@@ -144,7 +146,7 @@ In addition, you will want to make sure that the variable `ignore_data` is set t
 
 You will need to perform a run (steps 7-9) for each of the four sample sizes. Before each run, after adjusting samplingiters and saveevery, make a copy of _zeroinfo.Rev_ like this:
 
-    cp zeroinfo.Rev zeroinfo-10000.Rev   # for the run saving 10000 trees
+    cp zeroinfo.Rev zeroinfo-1000.Rev   # for the run saving 1000 trees
     
 This way we will have a copy of the file you actually used for each run in case one of the runs looks like it is not behaving the way we expected.
     
@@ -166,7 +168,7 @@ Run `summarize.py` like this:
 
     python3 summarize.py
     
-This should give you a summary of the results from all the simulation directories created by the `test.slurm` script. Make a copy of the output generated and save it to a file on your laptop with a name that reflects the sample size used (e.g. _summary-10000.txt_).
+This should give you a summary of the results from all the simulation directories created by the `test.slurm` script. Make a copy of the output generated and save it to a file on your laptop with a name that reflects the sample size used (e.g. _summary-1000.txt_).
 
 ### 9. Clean up
 
@@ -175,5 +177,4 @@ If you are ready to delete all the `simrep-*` directories and slurm output files
     ./clean.sh
 
 Remember, the initial `./` is needed because the linux operating system does not look for executable files in the current directory (to prevent you from hurting yourself by accidentally running a program); the `./` says to run the `clean.sh` script in the current directory (the `.` is shorthand for "current directory").
-
 
