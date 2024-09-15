@@ -5,9 +5,9 @@ permalink: /study-guide-botany-first-exam/
 ---
 ## First lecture exam (Friday, Sep. 27, 2024)
 
-The first exam will be worth 100 points and will comprise at least 40 questions, many of which are multiple choice like the poll questions I've been giving you in class. (Note that the poll questions and answers are posted in the form of a pdf file in the Lecture section of the HuskyCT course web site.) Not all questions will be multiple choice, however. Expect some matching, fill in the blank, short answer, and figure-labeling kinds of questions also.
+The first exam will be worth 100 points and will comprise at least 40 questions, many of which are multiple choice like the poll questions I've been giving you in class. (Note that the poll questions and answers are posted in the form of a pdf file on the HuskyCT course web site.) Not all questions will be multiple choice, however. Expect some matching, fill in the blank, short answer, and figure-labeling kinds of questions also.
 
-Note: this document may be updated again before the exam. Be sure to check back.
+Note: this document (as well as the poll question document) may be updated again before the exam. Be sure to check back.
 {:.pozor}
 
 The exam will cover through photosynthesis (i.e. lecture 11 on Friday, Sep. 20, 2024).
