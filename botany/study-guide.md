@@ -1,22 +1,22 @@
 ---
 layout: page
-title: Study Guide
-permalink: /study-guide/
+title: BIOL 1110 Study Guide for First Exam
+permalink: /study-guide-botany-first-exam/
 ---
-## First lecture exam (Friday, Sep. 30, 2022)
+## First lecture exam (Friday, Sep. 27, 2024)
 
 The first exam will be worth 100 points and will comprise at least 40 questions, many of which are multiple choice like the poll questions I've been giving you in class. (Note that the poll questions and answers are posted in the form of a pdf file in the Lecture section of the HuskyCT course web site.) Not all questions will be multiple choice, however. Expect some matching, fill in the blank, short answer, and figure-labeling kinds of questions also.
 
-Note: this document will be updated after each lecture. Be sure to check back.
+Note: this document may be updated again before the exam. Be sure to check back.
 {:.pozor}
 
-The exam will cover through photosynthesis.
+The exam will cover through photosynthesis (i.e. lecture 11 on Friday, Sep. 20, 2024).
 
 Here are some things to consider when studying for this exam:
 
 ### There have been a _lot_ of terms!
 
-Here are the terms I've introduced thus far. You should be able to briefly explain each of these structures or processes. If you don't remember what I said, look up the term in your text book. Most terms are associated with figures from the textbook, so finding the figure in the textbook and reading the figure caption is a good place to start.
+Here are the terms I've introduced thus far. You should be able to briefly explain each of these structures or processes. If you don't remember what I said, look for the term in my lecture PDFs on HuskyCT and, if that doesn't jog your memory, skip to that section of the recorded lecture and listen to my explanation again. Most terms are associated with figures from the textbook, so finding the figure in the textbook and reading the figure caption is also a good place to start.
 
 * cell, cell membrane, mitochondrion, vacuole, plasmodesmata
 * plastid, chloroplast, chromoplast, amyloplast
@@ -60,12 +60,12 @@ Here are the terms I've introduced thus far. You should be able to briefly expla
 * sugar sources vs. sinks in plants
 * pressure flow model for sugar transport in phloem, aphids
 * polymers: monomers
-* nucleic acids (DNA,RNA; nucleic acid monomers)
+* nucleic acids (DNA,RNA; nucleic acid monomers are nucleotides) How many different nucleotides are there? What are their single-letter abbreviations?
 * polysaccharides (cellulose, starch; glucose monomers)
-* polypeptides (amino acid monomers)
+* polypeptides (amino acid monomers) How many amino acids are used in natural polypeptides?
 * HONCP: 1,2,3,4,5 bonds in Hydrogen, Oxygen, Nitrogen, Carbon, and Phosphorus, respectively
 * amino acid components: amino group (-NH2), carboxyl group (-COOH), central carbon, side group
-* levels of protein structure: primary (sequence), secondary (helices, sheets), tertiary (disulfide bridges between cysteins), quaternary (number of polypeptide subunits)
+* protein structure: disulfide bridges between cysteins tie together different parts of a protein to create particular shapes
 * biological membranes: lipid bilayer, phospholipids, hydrophylic head, hydrophobic tail
 * membrane proteins: peripheral, integral
 * enzyme: proteins that catalyze chemical reactions, activation energy, names end in "-ase"
@@ -73,6 +73,8 @@ Here are the terms I've introduced thus far. You should be able to briefly expla
 * NADPH from NADP+ plus H+ plus 2 e-, reduction (charge reduced) vs. oxidation (the reverse reaction)
 * visble light, 400-700nm, wavelength, light energy: higher for shorter wavelengths, ultraviolet, infrared
 * light-absorbing pigments in leaves: chlorophyll-a, chlorophyll-b, carotenoids (many kinds)
+
+Here are some terms that will appear during the lectures on Sep. 16, 18, and 20:
 * choroplasts: stroma, thylakoids, thylakoid membrane separates stroma from space inside thylakoid, granum = stack of thylakoids
 * light-dependent vs. light-independent reactions
 * light-dependent reactions of photosynthesis: light and water in, oxygen, ATP, and NADPH out
@@ -89,9 +91,11 @@ Making drawings (on scrap paper, iPad, etc.) and labeling them without looking a
 
 * Plant body with root, stem, leaves, buds
 * A cell showing primary and secondary cell wall, pits, plasmodesmata, organelles, etc.
-* A leaf in cross section showing epidermis, mesophyll layers, vascular bundle (with xylem and phloem in correct orientation), stomata
+* A leaf in cross section showing epidermis, 2 mesophyll layers, vascular bundle (with xylem and phloem in correct orientation), stomata
 * Monocot vs. eudicot stem in cross section (label pith, cortex, cambium, bundles, epidermis, etc.)
 * Draw a diagram of a biological membrane in cross section showing phospholipids and an integral membrane protein. What parts are water molecules clinging to?
+
+Here are some some drawings to make after hearing the lectures on Sep. 16, 18, and 20:
 * Draw a thylakoid membrane with PSII, cytochrome, PSI, NADP+ reductase, and ATP synthase. Explain to yourself or a study partner how the light-dependent reactions work, where electron pairs originate, where they end up, and how ATP and NADPH are produced.
 * Start with 3 RuBP molecules and 3 CO2 molecules and show how 1 extra PGAL can be produced; where is ATP and NADPH used?
 * Make a drawing including a circle representing a bundle sheath cell of a C4 plant and a second circle depicting a normal mesophyll cell. Add malate, PEP, pyruvate, ATP, and CO2 to this figure with arrows between them showing the C4 pathway and black dots indicating the number of carbon atoms in each molecule.
@@ -102,5 +106,5 @@ Making drawings (on scrap paper, iPad, etc.) and labeling them without looking a
 * Look for natural wood doors and floors and try to tell what type of section you are looking at (radial vs. tangential). Can you find rays, vessels?
 * Can you find lenticels on trees around campus. These may only be visible on younger twigs. Can you see leaf scars and terminal bud scars on older parts of twigs?
 * Being careful not to fall in, visit Swan Lake (front of Chemistry building) or Mirror Lake (lake with island along Route 195) and look for oxygen bubbles in algae along the lake margin
-* Take a deep breath and think about the oxygen spewing from the leaves of all the algae, grass, and trees around you!
+* Take a deep breath and think about the oxygen diffusing from the leaves of all the algae, grass, and trees around you! Where in the chloroplast is the oxygen produced? What molecule was the oxygen given off in photosynthesis come from?
 * Do you have any houseplants with thick leaves or stems? Look up the name of the houseplant using your web browser and see if it is in the plant family Crassulaceae. If not, is it in another plant family known for CAM (e.g. cactus family Cactaceae)?

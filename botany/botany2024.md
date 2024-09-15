@@ -45,7 +45,7 @@ Wednesday    | Sep. 18      | **Photosynthesis (cont.)**<br/>Chapters 6         
 Friday       | Sep. 20      | **Photorespiration, CAM, C4**<br/>Chapter 6                     | 
 Monday       | Sep. 23      | **Mitosis and meiosis**<br/>Chapter 6                           |  
 Wednesday    | Sep. 25      | **Mitosis and meiosis (cont.)**<br/>Chapter 14                  | **5. Photosynthesis**<br/>**Peas: day 1**
-Friday       | Sep. 27      | **EXAM I**<br/>up to and including lecture on 9/23)             | **Peas: day 3**
+Friday       | Sep. 27      | **EXAM I**<br/>up to and including lecture on 9/20)             | **Peas: day 3**
 Monday       | Sep. 30      | **Phylogeny, Life Cycles, Endosymbiosis**<br/>Chapters 18,19,20 | **Peas: day 6**
 Wednesday    | Oct. 2       | **Cyanobacteria, Red Algae**<br/>Chapter 20                     | **6. Mitosis/Meiosis**<br/>**Peas: day 8**
 Friday       | Oct. 4       | **Heterokonts, Chlorophyte Green Algae**<br/>Chapter 20         | **Peas: day 10**
