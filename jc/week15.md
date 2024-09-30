@@ -103,10 +103,10 @@ Be sure you are in your `~/zeroinfo` directory, then use nano to create a file n
     import math,re,glob,os,sys
     
     samplesize = None
-    treefname = 'zeroinfo.tre'
+    treefname = 'zeroinfo.trees'
     
     dirnames = glob.glob('simrep-*')
-    print('%20s %20s %20s %12s %12s %12s %12s %12s %12s %12s %12s %12s %12s %12s %12s' % ('dir', 'samplesize', 'log(ss/ntopol)', 'coverage', 'Hprior', 'Hpost', 'I', 'Ipct', 'covH', 'covIpct', 'rawHprior', 'rawHpost', 'rawIpct', 'trueHpost', 'trueIpct'))
+    print('%20s %20s %20s %12s %12s %12s %12s %12s %12s %12s %12s %12s %12s %12s' % ('dir', 'samplesize', 'log(ss/ntopol)', 'coverage', 'Hprior', 'Hpost', 'I', 'Ipct', 'covH', 'covIpct', 'rawHprior', 'rawHpost', 'rawIpct', 'rawIpct2'))
     for d in dirnames:
         galax_file_name = os.path.join(d, 'galax-output.txt')
         if not os.path.exists(galax_file_name):
@@ -121,31 +121,31 @@ Be sure you are in your `~/zeroinfo` directory, then use nano to create a file n
         # 26.74662 percent raw information given sample size
         #  0.05908 percent raw information given total num. topologies
         
-        m = re.search(r'(?P<rawHpost>[.0-9]+) raw posterior entropy\s+(?P<samplesize>[0-9]+) sample size\s+(?P<rawHprior>[.0-9]+) maximum entropy given sample size\s+(?P<trueHprior>[.0-9]+) maximum entropy given total num. topologies\s+(?P<rawIpct>[.0-9]+) percent raw information given sample size\s+(?P<trueIpct>[.0-9]+) percent raw information given total num. topologies', stuff, re.M | re.S)
+        m = re.search(r'(?P<rawHpost>[.0-9]+) raw posterior entropy\s+(?P<samplesize>[0-9]+) sample size\s+(?P<rawHprior>[.0-9]+) maximum entropy given sample size\s+(?P<Hprior2>[.0-9]+) maximum entropy given total num. topologies\s+(?P<rawIpct>[.0-9]+) percent raw information given sample size\s+(?P<Ipct2>[.0-9]+) percent raw information given total num. topologies', stuff, re.M | re.S)
         if m is None:
             sys.exit('Could not find raw results in file "%s"' % galax_file_name)
         rawHpost   = float(m.group('rawHpost'))
         samplesize = float(m.group('samplesize'))
         rawHprior  = float(m.group('rawHprior'))
-        trueHprior  = float(m.group('trueHprior'))
+        Hprior2    = float(m.group('Hprior2'))
         rawIpct    = float(m.group('rawIpct'))
-        trueIpct    = float(m.group('trueIpct'))
+        Ipct2      = float(m.group('Ipct2'))
         
-        m = re.search(r'%s\s+(?P<unique>\d+)\s+(?P<coverage>[.0-9]+)\s+(?P<H>[.0-9]+)\s+(?P<Hstar>[.0-9]+)\s+(?P<I>[.0-9]+)\s+(?P<Ipct>[.0-9]+)' % treefname, stuff, re.M | re.S)
-        if m is None:
+        m2 = re.search(r'%s\s+(?P<unique>\d+)\s+(?P<coverage>[.0-9]+)\s+(?P<H>[.0-9]+)\s+(?P<Hstar>[.0-9]+)\s+(?P<I>[.0-9]+)\s+(?P<Ipct>[.0-9]+)' % treefname, stuff, re.M | re.S)
+        if m2 is None:
             sys.exit('Could not find conditional clade results in file "%s"' % galax_file_name)
-        unique   = int(m.group('unique'))
-        coverage = float(m.group('coverage'))
-        Hprior   = float(m.group('H'))
-        Hpost    = float(m.group('Hstar'))
-        I        = float(m.group('I'))
-        Ipct     = float(m.group('Ipct'))
+        unique   = int(m2.group('unique'))
+        coverage = float(m2.group('coverage'))
+        Hprior   = float(m2.group('H'))
+        Hpost    = float(m2.group('Hstar'))
+        I        = float(m2.group('I'))
+        Ipct     = float(m2.group('Ipct'))
         covH     = math.log(samplesize/coverage)
         covIpct  = 100.0*(covH - Hpost)/covH
         
         logRatioSampleSizeToNumTopologies = math.log(samplesize) - Hprior
         
-        print('%20s %20d %20.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f' % (d, samplesize, logRatioSampleSizeToNumTopologies, coverage, Hprior, Hpost, I, Ipct, covH, covIpct, rawHprior, rawHpost, rawIpct, trueHprior, trueIpct))
+        print('%20s %20d %20.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f %12.5f' % (d, samplesize, logRatioSampleSizeToNumTopologies, coverage, Hprior, Hpost, I, Ipct, covH, covIpct, rawHprior, rawHpost, rawIpct, Ipct2))
 
 ### 6: Adjust parameters in your _zeroinfo.Rev_ file
 
