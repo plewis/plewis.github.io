@@ -144,7 +144,7 @@ Although it doesn't affect anything, I would set the variable `printevery` in th
 
 In addition, you will want to make sure that the variable `ignore_data` is set to `TRUE` for each run.
 
-You will need to perform a run (steps 7-9) for each of the four sample sizes. Before each run, after adjusting samplingiters and saveevery, make a copy of _zeroinfo.Rev_ like this:
+You will need to perform a run (steps 7-9) for each of the 5 sample sizes. Before each run, after adjusting `samplingiters` and `saveevery`, make a copy of _zeroinfo.Rev_ like this:
 
     cp zeroinfo.Rev zeroinfo-1000.Rev   # for the run saving 1000 trees
     

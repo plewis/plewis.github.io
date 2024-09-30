@@ -184,7 +184,17 @@ For `gene30`:
 
 Instructions are [here](/jcweek14/).
 
-This week we began generating data that will be used in the paper. The first table we will need shows how information content estimation fails if the number of samples from the posterior does not greatly exceed the expected number of plausible tree topologies. Perform array jobs in which each of 20 tasks asks RevBayes to sample from the prior (zero info) for problems in which the number of taxa is 9 (1*3*5*7*9*11*13 = 135,135 unrooted topologies). Each array job examines a different posterior sample size (10k, 100k, 1000k, 10000k) and we expect information to be accurately estimate (i.e. 0.0 information) only for the 1000k and 10000k cases.
+This week we began generating data that will be used in the paper. The first table we will need shows how information content estimation fails if the number of samples from the posterior does not greatly exceed the expected number of plausible tree topologies. Perform array jobs in which each of 20 tasks asks RevBayes to sample from the prior (zero info) for problems in which the number of taxa is 9 (`1*3*5*7*9*11*13 = 135,135` unrooted topologies). Each array job examines a different posterior sample size (10k, 100k, 1000k, 10000k) and we expect information to be accurately estimated (i.e. 0.0 information) only for the 1000k and 10000k cases.
+
+Jessica had problems with the last case (10000k), which took 10 hours to run and ended up crashing before finishing. The problem was with the python script rb2nxs.py, which could not handle a file with 10 million lines. It turns out that galax can read revbayes tree files directly, so there was no need for rb2nxs.py anyway.
+
+## Week 15 (September 30 to October 4, 2024)
+
+We skipped a week because Analisa and I were at the ICERM workshop at Brown University on Thursday, Sept. 19.
+
+Instructions are [here](/jcweek15/).
+
+This week we will try the simulations for 10000k samples again using an updated version of galax that reads RevBayes tree files directly without requiring conversion to nexus format. It turns out that there was a bug in a regex specification in galax that was causing tree descriptions containing an `e` in a branch length specification (e.g. `:1.12345e-04`) to be skipped. That has been fixed, and the output for raw entropy now includes two different estimates, one in which the prior entropy is based on the number of samples and the other in which the prior entropy is based on the number of tree topologies.
 
 
 
