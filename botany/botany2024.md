@@ -26,6 +26,7 @@ This is a freshman-level introdution to the science of plants, emphasizing the a
 **Time (section 2):** Wednesday 3:35-6:35 <br/>
 **Place:** Torrey Life Science (TLS) 309, Storrs Campus <br/>
 **Instructor** [Ellie Loew-Mendelson](mailto:emendelson@uconn.edu)
+**Office hours** Mondays right after lecture (11-12)
 
 ## Schedule
 
