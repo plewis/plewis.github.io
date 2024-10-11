@@ -196,6 +196,36 @@ Instructions are [here](/jcweek15/).
 
 This week we will try the simulations for 10000k samples again using an updated version of galax that reads RevBayes tree files directly without requiring conversion to nexus format. It turns out that there was a bug in a regex specification in galax that was causing tree descriptions containing an `e` in a branch length specification (e.g. `:1.12345e-04`) to be skipped. That has been fixed, and the output for raw entropy now includes two different estimates, one in which the prior entropy is based on the number of samples and the other in which the prior entropy is based on the number of tree topologies.
 
+## Week 16 (October 7-11, 2024)
 
+This week the goal was to finish the prior simulations up to a sample size of 10 million. We adjusted the printfreq variable in the RevBayes script so that only 10 "progress report" lines were generated per run, greatly reducing the amount of disk space required to store the output files. This may have been why some runs were stopped (ran out of allotted disk space).
+
+We started the final 10M run during our meeting on Friday but it failed due to an "out of memory error", revealed using the command 
+
+    sacct --jobs 8414234 --format=jobid%30,state%30
+    
+Jessica started it again with 20G rather than 10G memory and it worked.
+
+Here is a summary of the "zero info" simulations. Each value shown is a mean over 20 replicate simulations. "I (cc)" is the conditional-clade-based information measure described in the Lewis et al. (2016) paper. "I (simple)" is a version that uses the log uncorrected posterior entropy minus the log sample size (or log number of topologies, if that is smaller than the sample size). All simulations involved unrooted trees of 9 taxa, so there are 135,135 possible tree topologies.
+
+| sample size | I (cc)    | I (simple) |
+| :---------: | :-------: | :--------: |
+|      1,000  | 11.39635  |  0.07325   |
+|     10,000  |  1.257569 |  0.55403   |
+|    100,000  |  0.119667 |  6.16813   |
+|  1,000,000  |  0.013501 |  0.58872   |
+| 10,000,000  |  0.002932 |  0.05908   |
+
+Jessica will redo all but the last of these runs next week because the "I (simple)" column is probably not as precise as the 5 digits above suggest because the values were not calculated by the (older) _summarize.py_ script and instead were computed based on numbers that were reported (which were all rounded to 5 decimal places)
+
+## Week 17 (October 14-18, 2024)
+
+Jessica reran the 1K, 10K, 100K, and 1M sample cases again using the new summarize.py script that reports rawIpct2 and saved the output from each of these runs as files on her local laptop so that we can copy/paste the numbers later for purposes of plotting and calculating means and standard deviations.
+
+Running _summarize.py_ as follows (for e.g. the 1000 sample size case)
+
+    python3 summarize.py > summary1000.txt
+
+allows the output to be saved as a file `summary1000.txt`.
 
 
