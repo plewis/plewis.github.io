@@ -240,6 +240,8 @@ In the table above, "I (old" is the approach using conditional clade probabiliti
 
 ## Week 18 (October 21-25, 2024)
 
-Complete the table shown in the Week 17 summary by adding a run that has sample size exactly the same as the number of possible tree topologies, i.e. 135,135.
+Instructions are [here](/jcweek18/).
 
-Also create a table in which data for 1000 and 10,000 sites is used in the RevBayes analysis. In these simulations, we're interested in whether both methods work well when there is a larger amount of information.
+Completed the table shown in the Week 17 summary by adding a run that has sample size exactly the same as the number of possible tree topologies, i.e. 135,135.
+
+Also created a table in which data for 1000 and 10,000 sites is used in the RevBayes analysis. In these simulations, we're interested in whether both methods work well when there is a larger amount of information.
