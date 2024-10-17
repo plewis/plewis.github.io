@@ -228,4 +228,18 @@ Running _summarize.py_ as follows (for e.g. the 1000 sample size case)
 
 allows the output to be saved as a file `summary1000.txt`.
 
+|  sample size |   I (old) |    I (new) |    smaller |
+| :----------: | :-------: | :--------: | :--------: |
+|      1,000   |  11.38495 |    0.07417 |    0.07417 |
+|     10,000   |   1.25584 |    0.55544 |    0.55544 |
+|    100,000   |   0.11959 |    3.86551 |    0.11959 |
+|   1,000,000  |   0.01350 |   14.99063 |    0.01350 |
+|  10,000,000  |   0.00293 |   26.74662 |    0.00293 |
 
+In the table above, "I (old" is the approach using conditional clade probabilities described in the paper and "I (new)" is the new approach using the raw posterior entropy and with prior entropy determined by sample size.
+
+## Week 18 (October 21-25, 2024)
+
+Complete the table shown in the Week 17 summary by adding a run that has sample size exactly the same as the number of possible tree topologies, i.e. 135,135.
+
+Also create a table in which data for 1000 and 10,000 sites is used in the RevBayes analysis. In these simulations, we're interested in whether both methods work well when there is a larger amount of information.
