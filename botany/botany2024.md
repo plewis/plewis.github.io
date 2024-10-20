@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2024/
 ---
 ### Syllabus for Fall Semester 2024
-_Last updated October 14, 2024_
+_Last updated October 20, 2024_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -58,7 +58,7 @@ Wednesday    | Oct. 16      | **21. Seed plants**<br/>Chapter 23                
 Friday       | Oct. 18      | **22. Gymnosperms**<br/>Chapter 23                                  | 
 Monday       | Oct. 21      | **23. Angiosperms (flowers)**<br/>Chapter 24                        | 
 Wednesday    | Oct. 23      | **24. Angiosperms (inflorescences)**<br/>Chapter 25                 | **9. Plant life cycles** 
-Friday       | Oct. 25      | **EXAM II**<br/>lecture material from 9/30 through 10/21        | 
+Friday       | Oct. 25      | **EXAM II**<br/>lecture material from 9/23 through 10/21            | 
 Monday       | Oct. 28      | **25. Angiosperms (fruits)**<br/>Chapters 25                        | 
 Wednesday    | Oct. 30      | **26. Angiosperms (pollination)**<br/>Chapter 25                    | **10.Gymnosperms and fossils**
 Friday       | Nov. 1       | **27. Angiosperm major families**                                   | 
