@@ -10,6 +10,7 @@ Note:
 
 * this study guide is subject to updates until this notice is removed.
 * some topics listed here have not yet been covered in lecture
+* words in _italics_ have been added since this document was created on Oct. 13, 2024
 
 ### Phylogeny
 
@@ -101,6 +102,7 @@ You should be able to define these terms (note that some of these are special ca
 * Sperm
 * Megaspore
 * Microspore
+* _Sporocyte_
 
 You should be able to draw a homosporous life cycle from memory, connecting the following terms with arrows pointed in the correct direction:
 
@@ -112,6 +114,7 @@ You should be able to draw a homosporous life cycle from memory, connecting the 
 * Gametophyte
 * Sporophyte
 * Spores
+* _Sporocytes_
 
 You should be able to draw a heterosporous life cycle from memory, connecting the following terms with arrows pointed in the correct direction:
 
@@ -125,6 +128,8 @@ You should be able to draw a heterosporous life cycle from memory, connecting th
 * Sporophyte
 * Megaspores
 * Micropores
+* _Microporocytes_
+* _Megasporocytes_
 
 You should, for both homosporous and heterosporous life cycles above, add these terms in the appropriate places:
 
@@ -141,6 +146,52 @@ You should be able to define these terms and list the group(s) in which these fe
 * Antheridiophore
 * Elaters
 * Thallus
+* _Frond_
+* _Pinna_
+* _Endospory_
+* _Megaphyll_
+* _Microphyll_
+* _Fiddlehead_
+* _Sorus_
+* _Indusium_
+* _Annulus_
+* _Swimming sperm_
+* _Haustorial pollen tube_
+* _Tube cell_
+* _Generative cell_
+* _Cotyledon_
+* _Pistil_
+* _Carpel_
+* _Ovary_
+* _Style_
+* _Stigma_
+* _Stamen_
+* _Filament_
+* _Anther_
+* _Seed_
+* _Pollen grain_
+* _Ovule_
+* _Corolla_
+* _Calyx_
+* _Fruit_
+* _Androecium_
+* _Gynoecium_
+
+_You should be able to..._
+
+* _Identify which generations are present in a pine seed
+* _Explain why fleshy_ Ginkgo _and Yew seeds are naked seeds and not fleshy fruits_
+* _Explain why fossils of the African genus_ Welwitschia _have been found in Brazil_
+* _Name the gymnosperm clade in which the oldest trees are found_
+* _Name the gymnosperm clade in which the tallest trees are found_
+* _Name the gymnosperm clade in which the most massive trees are found_
+* _Name the gymnosperm clade that represents a monotypic phylum_
+* _Explain the difference between deciduous and evergreen_
+* _Explain the difference between monoecious and dioecious_
+* _Explain how the terms carpel and pistil are related_
+* _Explain the difference between apocarpous and syncarpous_
+* _Explain the difference between inferior and superior ovaries and hypogynous, perigynous, and epigynous flowers_
+* _Explain what double fertilization is and why it makes angiosperms more efficient in their use of energy than gymnosperms_
 
 ### Mitosis and Meiosis
 
