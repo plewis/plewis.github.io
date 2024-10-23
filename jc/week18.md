@@ -31,6 +31,7 @@ Copy _zeroinfo.Rev_ into your `someinfo` directory and change its name to _somei
     mv  zeroinfo.Rev someinfoRev
     
 Edit the lines at the top of your _someinfo.Rev_ script to look like this:
+
     datafname <- "simdata.nex"
     treefname <- "output/someinfo.trees"
     logfname  <- "output/someinfo.log"
@@ -43,7 +44,7 @@ Edit the lines at the top of your _someinfo.Rev_ script to look like this:
     numruns        <- 1
     ignore_data <- FALSE
     
-These settings are for the 1K case (`samplingiters` = 10000 and `saveevery` = 10, so 10000/10 = 1000 samples will be saved). You will need to modify `samplingiters` for the other cases to achieve the correct number of samples.
+These settings are for the 1K case (`samplingiters = 10000` and `saveevery = 10`, so `10000/10 = 1000` samples will be saved). You will need to modify `samplingiters` for the other cases to achieve the correct number of samples.
             
 ### 4. Create the SLURM script
 
