@@ -15,7 +15,7 @@ Note that the images and questions will continue to be updated throughout the re
 
 This is intended to help you study, but note that not everything on the exam is represented here!
 
-<div id="details"></div>
+<div id="arbitrary"></div>
 <script type="text/javascript">
         var already_seen = [];
         for (var i in cards) {
@@ -64,8 +64,8 @@ This is intended to help you study, but note that not everything on the exam is 
         var which = 0;
         var reveal = false;
 
-        var details_div = d3.select("div#details")
-            .attr("class", "detailsbox");
+        var arbitrary_div = d3.select("div#arbitrary")
+            .attr("class", "contentbox");
 
         // Listen and react to keystrokes
         d3.select("body")
@@ -112,8 +112,7 @@ This is intended to help you study, but note that not everything on the exam is 
         }
 
         // Create SVG element
-        var svg = details_div
-            .append("svg")
+        var svg = arbitrary_div.append("svg")
             .attr("width", w)
             .attr("height", h);
             
@@ -148,7 +147,7 @@ This is intended to help you study, but note that not everything on the exam is 
             .enter()
             .append("image")
             .attr("class", function(d) {return "image-"+d['index'];})
-            .attr("xlink:href", function(d) {return "img/" + d['filename'];})
+            .attr("xlink:href", function(d) {return "/botany/flash3/img/" + d['filename'];})
             .attr("x", function(d) {return d['x'];})
             .attr("y", function(d) {return d['y'];})
             .attr("width", function(d) {return d['w'];})
