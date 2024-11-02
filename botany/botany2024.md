@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2024/
 ---
 ### Syllabus for Fall Semester 2024
-_Last updated October 31, 2024_
+_Last updated November 2, 2024_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -61,21 +61,21 @@ Wednesday    | Oct. 23      | **24. Angiosperms (inflorescences)**<br/>Chapter 2
 Friday       | Oct. 25      | **EXAM II**<br/>lecture material from 9/23 through 10/21            | 
 Monday       | Oct. 28      | **25. Angiosperms (fruits)**<br/>Chapters 25                        | 
 Wednesday    | Oct. 30      | **26. Angiosperms (pollination)**<br/>Chapter 25                    | **10.Gymnosperms and fossils**
-Friday       | Nov. 1       | **27. Fungi and lichens**                                           | 
-Monday       | Nov. 4       | **28. Tropisms and auxin**<br/>Chapter 13                           | 
-Wednesday    | Nov. 6       | **29. Hormones (cont.)**<br/>Chapter 13                             | **11. Angiosperms and flowers**
-Friday       | Nov. 8       | **30. Phytochrome (or how plants tell time)**<br/>Chapter 26        | 
-Monday       | Nov. 11      | **31. Mendelian genetics**<br/>Chapter 15                           | 
-Wednesday    | Nov. 13      | **32. Mendelian genetics (cont.)**<br/>Chapter 15                   | **12. Fungi**
-Friday       | Nov. 15      | **33. Recombination**<br/>Chapter 15                                | 
-Monday       | Nov. 18      | **34. Natural selection**<br/>Chapter 17                            | 
-Wednesday    | Nov. 20      | **35. Population genetics**<br/>Chapter 17                          | **13. Climate change**
-Friday       | Nov. 22      | **36. Speciation in flowering plants**<br/>Chapter 17               | 
+Friday       | Nov. 1       | **27. Fungi**<br/>Chapter 21                                        | 
+Monday       | Nov. 4       | **28. Lichens, Slime Molds, and Fermentation**<br/>Chapter 21       | 
+Wednesday    | Nov. 6       | **29. Tropisms and auxin**<br/>Chapter 13                           | **11. Angiosperms and flowers**
+Friday       | Nov. 8       | **30. Hormones (cont.)**<br/>Chapter 13                             | 
+Monday       | Nov. 11      | **31. Phytochrome (or how plants tell time)**<br/>Chapter 26        | 
+Wednesday    | Nov. 13      | **32. Mendelian genetics**<br/>Chapter 15                           | **12. Fungi**
+Friday       | Nov. 15      | **33. Mendelian genetics (cont.)**<br/>Chapter 15                   | 
+Monday       | Nov. 18      | **34. Recombination**<br/>Chapter 15                                | 
+Wednesday    | Nov. 20      | **35. Natural selection**<br/>Chapter 17                            | **13. Climate change**
+Friday       | Nov. 22      | **36. Population genetics**<br/>Chapter 17                          | 
 Monday       | Nov. 25      | **THANKSGIVING BREAK**                                              | 
 Wednesday    | Nov. 27      | **THANKSGIVING BREAK**                                              | (no lab Thanksgiving break week)
 Friday       | Nov. 29      | **THANKSGIVING BREAK**                                              | 
-Monday       | Dec. 2       | **37. Nutrient cycles**<br/>Chapter 26                              | 
-Wednesday    | Dec. 4       | **38. TBA                                                           | **Lab Final**
+Monday       | Dec. 2       | **37. Speciation in flowering plants**<br/>Chapter 17               | 
+Wednesday    | Dec. 4       | **38.    Nutrient cycles**<br/>Chapter 26                           | **Lab Final**
 Friday       | Dec. 6       | **Review for final**                                                | 
 TBA          | Dec. 9-15    | **[FINAL EXAM]**                                                    | 
       
