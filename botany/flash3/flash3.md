@@ -15,7 +15,6 @@ Note that the images and questions will continue to be updated throughout the re
 
 This is intended to help you study, but note that not everything on the exam is represented here!
 
-<div id="arbitrary"></div>
 <div id="details"></div>
 <script type="text/javascript">
         var already_seen = [];
@@ -113,7 +112,7 @@ This is intended to help you study, but note that not everything on the exam is 
         }
 
         // Create SVG element
-        var svg = d3.select("body")
+        var svg = details_div
             .append("svg")
             .attr("width", w)
             .attr("height", h);
