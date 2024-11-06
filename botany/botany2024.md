@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2024/
 ---
 ### Syllabus for Fall Semester 2024
-_Last updated November 2, 2024_
+_Last updated November 5, 2024_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -77,7 +77,7 @@ Friday       | Nov. 29      | **THANKSGIVING BREAK**                            
 Monday       | Dec. 2       | **37. Speciation in flowering plants**<br/>Chapter 17               | 
 Wednesday    | Dec. 4       | **38.    Nutrient cycles**<br/>Chapter 26                           | **Lab Final**
 Friday       | Dec. 6       | **Review for final**                                                | 
-TBA          | Dec. 9-15    | **[FINAL EXAM]**                                                    | 
+Friday       | Dec. 13      | **[FINAL EXAM 8-10am]**                                             | 
       
 ### Course Learning Objectives
 
