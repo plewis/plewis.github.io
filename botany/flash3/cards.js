@@ -26,7 +26,8 @@ var cards = [
     {'filename':'lichenshrub.jpg',        'question':'Lichen type?',        'answer':'foliose',                       'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
     {'filename':'birdsnest.jpg',          'question':'Fungus group?',       'answer':'Basidiomycete',                 'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
     {'filename':'halloweenfungus.jpg',    'question':'Fungus group?',       'answer':'Basidiomycete',                 'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
-    {'filename':'canarygrassexpt.png',    'question':'Who\'s experiment?',  'answer':'Charles and Francis Darwin',    'attrcolor':'black', 'attribution':'Photo by Paul O. Lewis' }
+    {'filename':'canarygrassexpt.png',    'question':'Whose experiment?',   'answer':'Charles and Francis Darwin',    'attrcolor':'black', 'attribution':'Photo by Paul O. Lewis' },
+    {'filename':'lilyovary.png',          'question':'Placentation type?',  'answer':'axile',                         'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' }
 ];
 
 //    {'filename':'dogvomit.jpg',           'question':'Type of organism?',   'answer':'slime mold',                        'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' }
