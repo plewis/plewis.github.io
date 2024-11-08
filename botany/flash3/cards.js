@@ -20,5 +20,13 @@ var cards = [
     {'filename':'head.jpg',               'question':'Inflorescence type?', 'answer':'head',                          'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
     {'filename':'spike.jpg',              'question':'Inflorescence type?', 'answer':'spike',                         'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
     {'filename':'spike2.jpg',             'question':'Inflorescence type?', 'answer':'spike',                         'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
-    {'filename':'catkin.jpg',             'question':'Inflorescence type?', 'answer':'catkin',                        'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' }
+    {'filename':'catkin.jpg',             'question':'Inflorescence type?', 'answer':'catkin',                        'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
+    {'filename':'miners.jpg',             'question':'Hormone involved?',   'answer':'cytokinin',                     'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
+    {'filename':'lichenrock.jpg',         'question':'Lichen type?',        'answer':'crustose',                      'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
+    {'filename':'lichenshrub.jpg',        'question':'Lichen type?',        'answer':'foliose',                       'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
+    {'filename':'birdsnest.jpg',          'question':'Fungus group?',       'answer':'Basidiomycete',                 'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
+    {'filename':'halloweenfungus.jpg',    'question':'Fungus group?',       'answer':'Basidiomycete',                 'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' },
+    {'filename':'canarygrassexpt.png',    'question':'Who\'s experiment?',  'answer':'Charles and Francis Darwin',    'attrcolor':'black', 'attribution':'Photo by Paul O. Lewis' }
 ];
+
+//    {'filename':'dogvomit.jpg',           'question':'Type of organism?',   'answer':'slime mold',                        'attrcolor':'white', 'attribution':'Photo by Paul O. Lewis' }
