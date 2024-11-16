@@ -69,7 +69,8 @@ This is intended to help you study, but note that not everything on the exam is 
 
         // Listen and react to keystrokes
         d3.select("body")
-            .on("keydown", keyDown);
+            .on("keydown", keyDown)
+            .on("click", keyDown);
 
         function keyDown() {
             if (reveal) {
