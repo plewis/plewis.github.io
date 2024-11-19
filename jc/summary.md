@@ -245,3 +245,41 @@ Instructions are [here](/jcweek18/).
 Completed the table shown in the Week 17 summary by adding a run that has sample size exactly the same as the number of possible tree topologies, i.e. 135,135.
 
 Also created a table in which data for 1000 and 10,000 sites is used in the RevBayes analysis. In these simulations, we're interested in whether both methods work well when there is a larger amount of information.
+
+## Week 19 (Oct 28 - Nov 1, 2024)
+
+## Week 20 (Nov 4 - Nov 8, 2024)
+
+## Week 21 (Nov 11 - Nov 15, 2024)
+
+This week we spent time going through the presentation I prepared for Systematics Seminar on the Koch paper:
+
+N. Koch. 2021. Phylogenomic subsampling and the search for phylogenetically reliable loci. Molecular Biology and Evolution 38(9):4025-4038. DOI:[10.1093/molbev/msab151](https://doi.org/10.1093/molbev/msab151)
+
+## Week 22 (Nov 18 - Nov 22, 2024)
+
+The goal for this week is to simulate a single replicate phylogenomic data set with 200 loci, estimate individual gene trees for all loci using IQTREE, and sort the loci from "most useful" to "least useful" using Koch's genesortR program.
+
+The simulated data varies from locus to locus in the following attributes:
+
+* sequence length (discrete uniform 50 to 1000)
+* edge rate variance (lognormal with mean 1 and variance between 0 and 0.25)
+* relative rates among loci (gamma with mean 1 and shape 2, scale 0.5)
+* among site rate heterogeneity (gamma with mean 1, shape between 0.1 and 10, and scale=1/shape)
+* occupancy fixed to 1.0 due to SMC limitation
+* compositional heterogeneity (dirichlet with shape 5 to 500)
+
+Koch's PCA uses the following variables
+
+* proportion variable sites
+* average pairwise patristic distances
+* clocklikeness
+* saturation
+* RCFV (relative composition frequency variability)
+* average bootstrap support
+* RF similarity to the species tree
+
+Instructions are [here](/jcweek22/).
+
+
+
