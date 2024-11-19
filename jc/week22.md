@@ -16,8 +16,10 @@ Create a `koch200` directory and navigate into it:
         
 ### 2. Download and unpack the data
 
-    curl -O https://gnetum.eeb.uconn.edu/projects/phyloinfo/week22/data.tar.gz
+    curl -u jchen -O https://gnetum.eeb.uconn.edu/projects/phyloinfo/week22/data.tar.gz
     tar zxvf data.tar.gz
+    
+You will be asked for a password when you issue the `curl` command. Do you remember what it is? I sent it to you in an email on April 13, 2024, but, if you can't find it, let me know and I'll send it to you again.
     
 The `curl` command will copy the file _data.tar.gz_ from the remote server to your _koch200_ directory, and the `tar` command will unpack it, creating the directory _data_ inside your _koch200_ directory.
 
@@ -51,7 +53,6 @@ and copy the following text to the file (then exit nano saving the file):
     #SBATCH -e %x_%A_%a.err
     
     # Load required modules
-    module load gcc/10.2.0
     module load iqtree/2.2.2
     
     # Run IQ-TREE on each locus
