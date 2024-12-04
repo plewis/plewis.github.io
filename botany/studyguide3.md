@@ -6,12 +6,6 @@ permalink: /study-guide-botany-final-exam/
 
 ## Final exam (Friday, Dec. 13, 2024, 8-10am, TLS 301)
 
-Note: 
-
-* this study guide is subject to updates until this notice is removed.
-* some topics listed here have not yet been covered in lecture
-* this document last modified on 17 Nov 2024
-
 ### Angiosperms (lectures 24, 25, 26)
 
 Terms you should know related to angiosperm inflorescences, fruits, and pollination:
