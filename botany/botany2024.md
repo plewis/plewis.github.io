@@ -77,7 +77,7 @@ Friday       | Nov. 29      | **THANKSGIVING BREAK**                            
 Monday       | Dec. 2       | **37. Nutrient cycles**<br/>Chapter 26                              | 
 Wednesday    | Dec. 4       | **38. Six Important Angiosperm Families**<br/>                      | **Lab Final**
 Friday       | Dec. 6       | **Come with questions**                                             | 
-Friday       | Dec. 13      | **[FINAL EXAM 8-10am]**                                             | 
+Friday       | Dec. 13      | **[FINAL EXAM 8-10am]**                                             | [Study Guide](/study-guide-botany-final-exam/), [Flash Cards](https://gnetum.eeb.uconn.edu/courses/botany/flash3/flash.html), [Polls](https://gnetum.eeb.uconn.edu/courses/botany/polls3.pdf)
       
 ### Course Learning Objectives
 
