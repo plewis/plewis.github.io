@@ -28,7 +28,7 @@ This is a freshman-level 4-credit undergraduate BIOL/EEB majors lab course that 
 
 This is a sophomore-level 3-credit undergraduate course that satisfies the [Evolution Core Requirement of the BIOL major](https://biology.uconn.edu/biological-sciences/) as well as one of the [Core Requirements of the EEB major](https://biology.uconn.edu/eeb/). In this course, you will learn how natural selection and other processes lead to evolutionary change in organisms across generations, and about key turning points in history that have led to the diversity of organisms we now see on Earth. You will learn _tree thinking_ that will allow you to understand and correctly interpret evolutionary trees in scientific literature.
 
-[Link to Spring 2023 course web site](https://uconneeb.github.io/evolution/)
+[Link to Spring 2025 course web site](https://uconneeb.github.io/evolution/)
 
 <p class="sectionbreak"/>
 

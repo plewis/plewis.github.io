@@ -35,7 +35,7 @@ Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to r
 
 Fan, Y., Wu, R., Chen, M.-H., Kuo, L., and Lewis, P. O. 2011. Molecular Biology and Evolution 28(1):523-532. (Generalized stepping-stone marginal likelihood estimation) (Feb 29)
 
-Farris, J. S. 1974. Formal definitions of paraphyly and polyphyly. Systematic Zoology 23: 548-554. (Jan-16)
+Farris, J. S. 1974. [Formal definitions of paraphyly and polyphyly.](https://www.jstor.org/stable/2412474) Systematic Zoology 23:548-554. (Jan-16)
 
 Felsenstein, J. 1978. [Cases in which parsimony or compatibility methods will be positively misleading.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 27:401-410. (Characterized the long branch attraction problem) (Feb 15)
 
