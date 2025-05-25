@@ -1172,15 +1172,23 @@ permalink: /applets/mcmc-robot/
 
 Here is the sequence of activities I normally use when demonstrating MCMC using this applet.
 
-1 **Start far off** Click on the default hill and move it to the bottom left corner. Click near the upper right corner to choose a starting point as far away from the hill as possible. Click Run to show that the robot can quickly find its way to to base of the hill. Turn off trajectories and fails to see the burnin trail.
-2 **Fails usually point away from hill** because those are downhill moves that are not automatically accepted.
-3 **Summary statistics** After clicking Run a few times, click Stats to summarize. The percent inside inner circle should be about 50 and within the outer circle should be about 95.
-4 **Baby steps** Clear and then choose step length mean equal to 1. Press run a few times to show that the robot heads toward the hill but using tiny steps. Clearly this step size would not lead to good mixing. Note that there are very few fails, however. Most steps succeed because none are "off a cliff".
-5 **Giant leaps** Clear and then choose step length mean equal to 500. Press run a couple of times to show that there are many fails because the robot often proposes steps far away (and thus likely way downhill) from where it is currently.
-6 **Metropolis within Gibbs** Reset step length mean to 50 and click Metropolis within Gibbs to show that alternating the dimension updated works well, despite the very rectangular paths taken.
-7 **Hide trajectory** Hide both fails and trajectory to just see the distribution of points.
-8 **Multimodal landscape** Move the main hill to the lower left corner and create two smaller hills elsewhere, one between starting point and the main hill. Shows that robot gets stuck on the nearest hill to the starting point.
-9 **Multiple chains** Switch to using 4 chains and repeat previous run (showing just the cold chain) to see the extensive swapping. Turn off trajetories and fails to see that mixing is much better.
+1. **Start far off** Click on the default hill and move it to the bottom left corner. Click near the upper right corner to choose a starting point as far away from the hill as possible. Click Run to show that the robot can quickly find its way to to base of the hill. Turn off trajectories and fails to see the burnin trail.
+
+2. **Fails usually point away from hill** because those are downhill moves that are not automatically accepted.
+
+3. **Summary statistics** After clicking Run a few times, click Stats to summarize. The percent inside inner circle should be about 50 and within the outer circle should be about 95.
+
+4. **Baby steps** Clear and then choose step length mean equal to 1. Press run a few times to show that the robot heads toward the hill but using tiny steps. Clearly this step size would not lead to good mixing. Note that there are very few fails, however. Most steps succeed because none are "off a cliff".
+
+5. **Giant leaps** Clear and then choose step length mean equal to 500. Press run a couple of times to show that there are many fails because the robot often proposes steps far away (and thus likely way downhill) from where it is currently.
+
+6. **Metropolis within Gibbs** Reset step length mean to 50 and click Metropolis within Gibbs to show that alternating the dimension updated works well, despite the very rectangular paths taken.
+
+7. **Hide trajectory** Hide both fails and trajectory to just see the distribution of points.
+
+8. **Multimodal landscape** Reset to delete the default hill and create three small, isolated hills. Click somewhere near one of the hills, set the foray length to 1000 steps, and click Run. This shows that the robot usually gets stuck on the nearest hill to the starting point.
+
+9. **Multiple chains** Switch to using 4 chains and repeat previous run (showing just the cold chain) to see the extensive swapping. Turn off trajetories and fails to see that mixing is much better.
 
 ## Acknowledgements
 
