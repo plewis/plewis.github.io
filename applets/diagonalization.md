@@ -1483,7 +1483,7 @@ Imagine a sequence comprising 50 sites in which 30 sites (60%) are in state 0 an
 
  00101101101000010110000010100001010000001101110110
   
-The fraction of sites in each of the two possible states can be represented by the (transposed) vector (0.6, 0.4). If this sequence were allowed to evolve for an infinite amount of time under an equal-rate (Cavender-Farris) model, the sequence composition would achieve an equilibrium in which half the sites were in state 0 and the other half in state 1. This ewquilibrium point is represented by the red dot on the simplex in the applet. 
+The fraction of sites in each of the two possible states can be represented by the (transposed) vector (0.6, 0.4). If this sequence were allowed to evolve for an infinite amount of time under an equal-rate (Cavender-Farris) model, the sequence composition would achieve an equilibrium in which half the sites were in state 0 and the other half in state 1. This equilibrium point is represented by the red dot on the simplex in the applet. 
 
 If, however, the amount of time and the substitution rate were such that the expected number of substitutions is 0.5, the sequence would evolve toward the equilibrium, but how close would it come to the red dot? This applet illustrates how to predict the distance a sequence would evolve toward the equilibrium point. 
 

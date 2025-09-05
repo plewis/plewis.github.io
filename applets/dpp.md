@@ -7,7 +7,7 @@ permalink: /applets/dpp/
 ## Dirichlet Process Prior applet
 Written by Paul O. Lewis (27-Mar-2020)
 
-A description of this applet is provided below the plot.
+Instructions for how to use this applet are provided below the plot.
 
 <div id="arbitrary" style="display:inline-block"></div>
 <div id="controls" style="display:inline-block; vertical-align:top;"></div>
