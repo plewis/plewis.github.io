@@ -1,7 +1,7 @@
 ---
 layout: applet
 title: Dirichlet Process Prior
-permalink: /applets/dpp/
+permalink: /applets/tmpdpp/
 ---
 
 ## Dirichlet Process Priors
