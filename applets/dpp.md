@@ -9,17 +9,6 @@ Written by Paul O. Lewis (27-Mar-2020)
 
 Instructions for how to use this applet are provided below the plot.
 
----
-layout: applet
-title: Dirichlet Process Priors
-author: Paul O. Lewis
-permalink: /applets/dpp/
----
-## Dirichlet Process Prior applet
-Written by Paul O. Lewis (27-Mar-2020)
-
-Instructions for how to use this applet are provided below the plot.
-
 <div id="arbitrary" style="display:inline-block"></div>
 <div id="controls" style="display:inline-block; vertical-align:top;"></div>
 <script type="text/javascript">
