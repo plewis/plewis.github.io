@@ -19,6 +19,7 @@ Developing these applets helped me understand concepts, and I hope they are usef
 ### Statistics ###
 
 * [Density Rain](/applets/density-rain/)
+* [Normal Snap](/applets/normal-snap/)
 * [MCMC](/applets/mcmc-robot/)
 * [Dirichlet Process Prior](/applets/dpp/)
 * [Eigenvectors, eigenvalues, and diagonalization](/applets/diagonalization/)
