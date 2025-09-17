@@ -48,9 +48,11 @@ You will note that dragging the distribution away from the maximum likelihood es
     var n = 100;            // number of line segments used in density plot
     var max_sigma = 100;
 
+    // Select DIV element already created (see above) to hold SVG
+    var plot_div = d3.select("div#arbitrary");
+    
     // Create SVG element
-    var svg = d3.select("div.content")
-        .append("svg")
+    var svg = plot_div.append("svg")
         .attr("width", w)
         .attr("height", h);
 
