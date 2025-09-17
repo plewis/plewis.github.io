@@ -8,14 +8,7 @@ permalink: /applets/normal-snap/
 
 Illustrates the concept of maximum likelihood estimation of the parameters of a univariate normal distribution.
 
-### Some things to try: ###
-* Drag your mouse **up** to **decrease** the standard deviation of the distribution (i.e. increase "sharpness")
-* Drag your mouse **down** to **increase** the standard deviation  of the distribution (i.e. spread it out more)
-* Drag your mouse **left** to **decrease** the mean of the distribution (i.e. move it to the left)
-* Drag your mouse **right** to **increase** the mean of the distribution (i.e. move it to the right)
-* Letting go of the mouse button causes the app to "snap" back to the maximum likelihood estimates of mean and standard deviation
-
-You will note that dragging the distribution away from the maximum likelihood estimates (MLEs) causes the background to become increasingly red. This **increasing redness** corresponds with the **decreasing log-likelihood** shown below the plot. The log-likelihood measures the fit of the distribution to the data. Notice that lower log-likelihoods are associated with the sampled points being closer to the baseline (i.e. their probability density is lower than it would be if the mean and standard deviation were at their MLEs).
+Scroll down below the applet for more background and details.
 
 <div id="arbitrary"></div>
 <script type="text/javascript">
@@ -488,6 +481,15 @@ You will note that dragging the distribution away from the maximum likelihood es
 
     bounding_rect.call(drag);
 </script>
+
+### Some things to try: ###
+* Drag your mouse **up** to **decrease** the standard deviation of the distribution (i.e. increase "sharpness")
+* Drag your mouse **down** to **increase** the standard deviation  of the distribution (i.e. spread it out more)
+* Drag your mouse **left** to **decrease** the mean of the distribution (i.e. move it to the left)
+* Drag your mouse **right** to **increase** the mean of the distribution (i.e. move it to the right)
+* Letting go of the mouse button causes the app to "snap" back to the maximum likelihood estimates of mean and standard deviation
+
+You will note that dragging the distribution away from the maximum likelihood estimates (MLEs) causes the background to become increasingly red. This **increasing redness** corresponds with the **decreasing log-likelihood** shown below the plot. The log-likelihood measures the fit of the distribution to the data. Notice that lower log-likelihoods are associated with the sampled points being closer to the baseline (i.e. their probability density is lower than it would be if the mean and standard deviation were at their MLEs).
 
 ## Acknowledgements
 
