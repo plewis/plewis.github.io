@@ -12,7 +12,8 @@ California, Davis, in June 2020. While at UC Davis, Analisa studied
 convergent evolution in morphology associated with transitions to
 selective zooplanktivory in butterfly fishes in the lab of [Peter
 Wainwright](https://fishlab.ucdavis.edu). Analisa became a Ph.D. candidate 
-on April 13, 2023, by passing her general oral exam. Her advisory committee 
+on April 13, 2023, by passing her general oral exam, and successfully defended
+her prospectus September 15, 2025. Her advisory committee 
 comprises Paul Lewis (advisor), Elizabeth Jockush, Kent Holsinger, and Jill Wegrzyn.
 Chris Simon served as an outside member of the oral exam committee.
 
@@ -33,7 +34,7 @@ obtained his B.S. in Biology and Mathematics from [Georgetown
 College](https://en.wikipedia.org/wiki/Georgetown_College), Georgetown,
 KY, in 1982. He obtained his M.S. degree in Biology from the [University
 of Memphis](https://www.memphis.edu) in 1984 (advisor: Edward T. Browne,
-Jr.), performing a floristic study of [Haywood County,
+Jr.; honorary advisor Guy Nesom), performing a floristic study of [Haywood County,
 Tennessee](https://en.wikipedia.org/wiki/Haywood_County,_Tennessee). He
 earned a Ph.D. in Plant Biology from [The Ohio State
 University](https://en.wikipedia.org/wiki/Ohio_State_University) in 1991
@@ -54,6 +55,13 @@ Albuquerque, NM.
 
 ## Former lab members ##
 
+### Gavin Conant ###
+
+Gavin was an undergraduate honors student that I mentored while in the Department 
+of Biology at the University of New Mexico (UNM). Gavin went on to obtain a Ph.D. (advisor 
+Andreas Wagner) at UNM, was an Assistant and Associate Professor at the University of Missouri, Columbia, and
+is now (as of 2024) [Professor of Genetics at North Carolina State University](https://genetics.sciences.ncsu.edu/people/gconant/).
+
 ### Suman Neupane ###
 
 Suman started working toward his Ph.D. here in January, 2013, after
@@ -73,7 +81,8 @@ island systems.
 
 After leaving UConn, Suman was a postdoctoral researcher in [Josef Uyeda's laboratory at
 Virginia Tech](http://www.uyedalab.com/). Suman began a tenure-track position 
-in the Biology Department at [Murray State University](https://www.murraystate.edu) in Fall 2020. 
+in the Biology Department at [Murray State University](https://www.murraystate.edu) 
+in Fall 2020 and is currently an Assistant Professor at [Ball State University](https://www.bsu.edu/academics/collegesanddepartments/biology/about/faculty-staff/biofaculty/neupanesuman).
 
 [Suman's web site](https://sumanneupane1.weebly.com)
 
@@ -87,8 +96,9 @@ green algal chloroplast and mitochondrial genomes for the GrAToL
 Lewis lab members and statisticians in the UConn Statistics department
 on the Bayesian Phylogenetic Information Content project.
 
-Karolina is now an [Assistant Professor in Biology at Assumption College](https://www.assumption.edu/faculty-profile/dr-karolina-fu%C4%8D%C3%ADkov%C3%A1)
-in Worcester, Massachusetts. You can reach her at [karolina.fucikova@gmail.com](karolina.fucikova@gmail.com).
+Karolina moved on to become an [Assistant Professor in Biology at Assumption College](https://www.assumption.edu/faculty-profile/dr-karolina-fu%C4%8D%C3%ADkov%C3%A1)
+in Worcester, Massachusetts. She is currently a Learning and Assessment Specialist 
+at the Cornell School of Continuing Education.
 
 [Karolina's web site](https://euastrum.wordpress.com)
 
@@ -115,7 +125,7 @@ Mark was a postdoctoral research associate in the lab for 2 years. Mark
 received his Ph.D. from the University of Texas, Austin, in 2001, and
 moved on to a postdoctoral position with David Swofford (then at Florida
 State University) in 2003. He is now an Associate Professor in the
-[Department of Ecology and Evolutionary Biology](http://www2.ku.edu/~eeb/) at the University of
+[Department of Ecology and Evolutionary Biology](https://eeb.ku.edu/people/mark-holder) at the University of
 Kansas. 
 
 [Mark’s web site](http://phylo.bio.ku.edu/)

@@ -39,11 +39,11 @@ Farris, J. S. 1974. [Formal definitions of paraphyly and polyphyly.](https://www
 
 Felsenstein, J. 1978. [Cases in which parsimony or compatibility methods will be positively misleading.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 27:401-410. (Characterized the long branch attraction problem) (Feb 15)
 
-Felsenstein, J. 1981. Evolutionary trees from DNA sequences: a maximum likelihood approach. Journal of Molecular Evolution 17:368-376. (F81 model, pruning algorithm, origin of likelihood-based phylogenetics) (Feb 1, Feb 8)
+Felsenstein, J. 1981. [Evolutionary trees from DNA sequences: a maximum likelihood approach.](https://doi.org/10.1007/BF01734359)  Journal of Molecular Evolution 17:368-376. (F81 model, pruning algorithm, origin of likelihood-based phylogenetics) (Feb 1, Feb 8)
 
-Felsenstein, J. 1985a. Confidence intervals on phylogenies: an approach using the bootstrap. Evolution 39:783-791. (nonparametric bootstrapping) (Feb 15)
+Felsenstein, J. 1985a. [Confidence intervals on phylogenies: an approach using the bootstrap.](https://doi.org/10.1111/j.1558-5646.1985.tb00420.x) Evolution 39:783-791. (nonparametric bootstrapping) (Feb 15)
 
-Felsenstein, J. 1985b. Phylogenies and the comparative method. American Naturalist 125:1-15. (independent contrasts) (Apr 2)
+Felsenstein, J. 1985b. [Phylogenies and the comparative method.](https://doi.org/10.1086/284325) American Naturalist 125:1-15. (independent contrasts) (Apr 2)
 
 Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood approach. Evolution 46:159-173. (conditioning on variability in discrete trait likelihood calculations) (Mar 21)
 
@@ -79,7 +79,7 @@ Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. [The fossilized birth–de
 
 Huelsenbeck, J. P., and D. M. Hillis. 1993. [Success of phylogenetic methods in the four taxon case.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 42:247-264. (coined the term Felsenstein Zone) (Feb 15)
 
-Huelsenbeck, J. P., R. Nielsen, and J. P. Bollback. 2003. Stochastic mapping of morphological characters. Systematic Biology 52(2): 131-158. (Mar 28)
+Huelsenbeck, J. P., R. Nielsen, and J. P. Bollback. 2003. [Stochastic mapping of morphological characters.](https://doi.org/10.1080/10635150390192780) Systematic Biology 52(2): 131-158. (Mar 28) 
 
 Huelsenbeck, J. P., Jain, S., Frost, S., and Pond, S. 2006. A Dirichlet process model for detecting positive selection in protein-coding DNA sequences. Proceedings of the National Academy USA 103:6263–6268. (DP mixture model for omega) (Apr 9)
 
@@ -170,6 +170,10 @@ Rabosky, D. L. 2014. Automatic detection of key innovations, rate shifts, and di
 Rabosky, D. L., S. C. Donnellan, M. Grundler, and I. J. Lovette. 2014. [Analysis and visualization of complex macroevolutionary dynamics: an example from Australian scincid lizards.](https://doi.org/10.1093/sysbio/syu025) Systematic Biology 63:610-627. (Apr 23)
 
 Rabosky, D. L., J. S. Mitchell, and J. Chang. 2017. [Is BAMM flawed? Theoretical and practical concerns in the analysis of multi-rate diversification models.](https://doi.org/10.1093/sysbio/syx037) Systematic Biology 66:477-498. (Apr 23)
+
+{% comment %}
+Rannala B. and Z Yang. 1996. [Probability distribution of molecular evolutionary trees: a new method of phylogenetic inference.](https://doi.org/10.1007/BF02338839) Journal of Molecular Evolution 43:304–311.
+{% endcomment %}
 
 Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior) (Mar 5)
 
