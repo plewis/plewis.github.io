@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Phylogenetics (EEB 5349)
-permalink: /phylogenetics2024/
+permalink: /phylogenetics2026/
 ---
 {% comment %}
 [Scroll straight to today in the schedule](#today)
@@ -9,7 +9,7 @@ permalink: /phylogenetics2024/
 
 This is a graduate-level course in phylogenetics, emphasizing primarily maximum likelihood and Bayesian approaches to estimating phylogenies, which are genealogies at or above the species level. A primary goal is to provide an accessible introduction to the theory so that by the end of the course students should be able to understand much of the primary literature on modern phylogenetic methods and know how to intelligently apply these methods to their own problems. The laboratory provides hands-on experience with several important phylogenetic software packages (PAUP*, IQ-TREE, RevBayes, BayesTraits, and others) and introduces students to the use of remote high performance computing resources to perform phylogenetic analyses.
 
-**Semester:** Spring 2024 <br/>
+**Semester:** Spring 2026 <br/>
 **Lecture:** Tuesday/Thursday 11:00-12:15 ([Paul O. Lewis](mailto:paul.lewis@uconn.edu), office hours Tu 1-2 or by appointment in Gant w421) <br/>
 **Lab:** Thursday 1:25-3:20 ([Analisa Milkey](mailto:analisa.milkey@uconn.edu), office hours: Mo 1:30-2:30, Fr 12-1 in Gant W420) <br/>
 **Room:** Torrey Life Science (TLS) 181, Storrs Campus <br/>
@@ -24,44 +24,44 @@ Warning: This schedule will most likely change quite a few times during the seme
 
 Date               |  Lecture topic                                                                                                                               |  Lab/homework
 :----------------: | :------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------
-Tuesday Jan. 16    | **[Introduction](https://gnetum.eeb.uconn.edu/courses/phylogenetics/01-intro-annotated.pdf)**                                                | **Homework 1** [Splits](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw1-TreeFromSplits.pdf) due 2024-01-23
-Thursday Jan. 18   | **[Optimality criteria, search strategies, consensus trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/02-searching-annotated.pdf)** | **Lab 1** [Using the Xanadu cluster](/xanadu/), [Introduction to PAUP*](/paup/), and [NEXUS file format](/nexus/)
-Tuesday Jan. 23    | **[The parsimony criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/03-parsimony-annotated.pdf)**                                 | **Homework 2** [Parsimony](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw2-parsimony.pdf) due 2024-01-30
-Thursday Jan 25    | **[Distance methods](https://gnetum.eeb.uconn.edu/courses/phylogenetics/04-distances-annotated.pdf)**                                        | **Lab 2** [Searching](/searching/)
-Tuesday Jan. 30    | **[Substitution models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/05-models-annotated.pdf)**                                        | **Homework 3** [Distances](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw3-distance.pdf) [Python primer](https://plewis.github.io/python/) due 2024-02-06
-Thursday Feb. 1    | **Substitution models (cont.)**                                                                                                              | **Lab 3** [Estimating parameters using likelihood](/likelihood/)
-Tuesday Feb. 6     | **[Maximum likelihood criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/06-likelihood-annotated.pdf)**                           | **Homework 4** [Transitions and transversions](https://gnetum.eeb.uconn.edu/courses/phylogenetics/04-hw4-k80beta.pdf) due 2024-02-15
-Thursday Feb. 8    | **[Rate heterogeneity](https://gnetum.eeb.uconn.edu/courses/phylogenetics/07-ratehet-annotated.pdf)**                                        | **Lab 4** [Simulating sequence data](/simulation/)
-Tuesday Feb. 13	   | **SNOW DAY (no class)**                                                                                                                      | **Homework 5** [Site likelihood](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw5-likelihood.pdf) due 2024-02-20
-Thursday Feb. 15   | **[Rate het. (finish up)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/07-ratehet2-annotated.pdf), [Bootstrapping](https://gnetum.eeb.uconn.edu/courses/phylogenetics/08-bootstrapping-annotated.pdf), [bootstrap demo in R](https://gnetum.eeb.uconn.edu/courses/phylogenetics/bootstrap.Rmd), [Simulation](https://gnetum.eeb.uconn.edu/courses/phylogenetics/08-simulation-annotated.pdf)** | **Lab 5 [Maximum likelihood analyses with IQ-TREE](/iqtree/)**
-Tuesday Feb. 20    | **[Bayes' Rule and Bayesian statistics](https://gnetum.eeb.uconn.edu/courses/phylogenetics/09-bayesrule-annotated.pdf)**                     | **Homework 6** [Rate heterogeneity](/hwratehet/) due 2024-02-27
-Thursday Feb. 22   | **[Markov chain Monte Carlo (MCMC)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/10-mcmc-annotated.pdf)**                              | **Lab 6** [Using R to explore probability distributions](/rprobdist/) (Through Exponential, questions 1-19)
-Tuesday Feb. 27    | **[MCMC (cont.)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/11-mcmc2-annotated.pdf)**                                                | **Homework 7** [MCMC](/hwmcmc/) due 2024-03-05
-Thursday Feb. 29   | **[Model selection](https://gnetum.eeb.uconn.edu/courses/phylogenetics/12-model-selection.pdf)**                                             | **Lab 7** [Using R to explore probability distributions](/rprobdist/) (start with Lognormal, questions 20-29)
-Tuesday Mar. 5     | **[Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/13-priors-annotated.pdf)**                                                     | **Homework 8** [Bloodroot](/hwbloodroot/) due 2024-03-19
-Thursday Mar. 7    | **[Coalescence](https://gnetum.eeb.uconn.edu/courses/phylogenetics/14-coalescence-annotated.pdf)**                                           | **Lab 8** [MrBayes](/mrbayes/)
-Tuesday Mar. 12    | **SPRING BREAK**                                                                                                                             |
-Thursday Mar. 14   | **SPRING BREAK**                                                                                                                             |
-Tuesday Mar.  19   | **[Species trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/15-species-trees-annotated.pdf)**                                       | **Homework 9** [Taking a step in treespace](/hwlocalmove/)
-Thursday Mar. 21   | **[Discrete morphological models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/16-discrete-morph-annotated.pdf)**                      | **Lab 9** [RevBayes](/revbayes/)
-Tuesday Mar. 26    | **[rjMCMC and Polytomies](https://gnetum.eeb.uconn.edu/courses/phylogenetics/17a-rjmcmc-polytomy-annotated.pdf)**; **[Evolutionary Correlation](https://gnetum.eeb.uconn.edu/courses/phylogenetics/17b-evol-correlation-annotated.pdf)** | **Homework 10** [Conditioning on variability](/hwcondvar/)
-Thursday Mar. 28   | **[Stochastic character mapping](https://gnetum.eeb.uconn.edu/courses/phylogenetics/18a-stochastic-mapping.pdf)**]                           | **Lab 10** [Discrete Morphology in RevBayes](/morph/)
-Tuesday Apr. 2     | **[Bloodroot revisited](https://gnetum.eeb.uconn.edu/courses/phylogenetics/sanguinaria-annotated.pdf)**; **[Independent Contrasts](https://gnetum.eeb.uconn.edu/courses/phylogenetics/19a-indep-contrasts-annotated.pdf)**; **[PGLS regression](https://gnetum.eeb.uconn.edu/courses/phylogenetics/19b-pgls-regression-annotated.pdf)** | **Homework 11** [Simulating a character using the Brownian motion model](/hwbmsim/)
-Thursday Apr. 4    | **PGLS (cont.)**; **[Phylogenetic signal in continuous traits](https://gnetum.eeb.uconn.edu/courses/phylogenetics/20-signal.pdf)**           | **Lab 11** [BayesTraits](/bayes-traits/)
-Tuesday Apr. 9     | **[Dirichlet Process Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/21-dpp.pdf)**                                                | **Homework 12** [Maddison and Fitzjohn (2015)](/hwmandf/)
-Thursday Apr. 11   | **[Codon and amino acid models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/22a-aa-codon-models.pdf)**; **[Relaxed clock models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/22b-relaxed-clocks-annotated.pdf)** | **Lab 12** [Comparative methods and diversification in R](/ape/)
-Tuesday Apr. 16    | **[Relaxed clocks (cont.)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/23-divergence-time-annotated.pdf)**; **[Confidence vs. credible intervals](https://gnetum.eeb.uconn.edu/courses/phylogenetics/23-intervals-annotated.pdf)** | **Homework 13** [Dirichlet process prior](/hwdpp/)
-Thursday Apr. 18   | **[Heterotachy, and Covarion models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/24-heterotachy-covarion-annotated.pdf)**;            | **Lab 13** [Divergence Time Estimation with RevBayes](/revdiv/)
-Tuesday Apr. 23    | **[Diversification](https://gnetum.eeb.uconn.edu/courses/phylogenetics/25-diversification.pdf)**                                             | no homework assignment
-Thursday Apr. 25   | **[Species delimitation and information](https://gnetum.eeb.uconn.edu/courses/phylogenetics/26-bpp-info.pdf)**                               | **Lab 14** [Divergence Time Estimation with RevBayes](/revdiv/) (finish); [Plotting trees in R with ggtree](/ggtree/) (optional)
+Tuesday Jan. 20    | **Introduction**                                                | **Homework 1** Splits 
+Thursday Jan. 22   | **Optimality criteria, search strategies, consensus trees**     | **Lab 1** Using the Xanadu cluster(/xanadu/), Introduction to PAUP*(/paup/), and NEXUS file format(/nexus/)
+Tuesday Jan. 27    | **The parsimony criterion**                                     | **Homework 2** Parsimony 
+Thursday Jan 29    | **Distance methods**                                            | **Lab 2** Searching(/searching/)
+Tuesday Feb. 3     | **Substitution models**                                         | **Homework 3** Distances Python primer 
+Thursday Feb. 5    | **Substitution models (cont.)**                                 | **Lab 3** Estimating parameters using likelihood(/likelihood/)
+Tuesday Feb. 10    | **Maximum likelihood criterion**                                | **Homework 4** Transitions and transversions 
+Thursday Feb. 12   | **Rate heterogeneity**                                          | **Lab 4** Simulating sequence data(/simulation/)
+Tuesday Feb. 17	   | ** **                                                           | **Homework 5** Site likelihood 
+Thursday Feb. 19   | **Bootstrapping, Simulation**                                   | **Lab 5 Maximum likelihood analyses with IQ-TREE(/iqtree/)**
+Tuesday Feb. 24    | **Bayes' Rule and Bayesian statistics**                         | **Homework 6** Rate heterogeneity(/hwratehet/) 
+Thursday Feb. 26   | **Markov chain Monte Carlo (MCMC)**                             | **Lab 6** Using R to explore probability distributions(/rprobdist/) (Through Exponential, questions 1-19)
+Tuesday Mar. 3     | **MCMC (cont.)**                                                | **Homework 7** MCMC(/hwmcmc/) 
+Thursday Mar. 5    | **Model selection**                                             | **Lab 7** Using R to explore probability distributions(/rprobdist/) (start with Lognormal, questions 20-29)
+Tuesday Mar. 10    | **Priors**                                                      | **Homework 8** Bloodroot(/hwbloodroot/) 
+Thursday Mar. 12   | **Coalescence**                                                 | **Lab 8** MrBayes(/mrbayes/)
+Tuesday Mar. 17    | **SPRING BREAK**                                                |
+Thursday Mar. 19   | **SPRING BREAK**                                                |
+Tuesday Mar. 24    | **Species trees**                                               | **Homework 9** Taking a step in treespace(/hwlocalmove/)
+Thursday Mar. 26   | **Discrete morphological models**                               | **Lab 9** RevBayes(/revbayes/)
+Tuesday Mar. 31    | **rjMCMC and Polytomies**; **Evolutionary Correlation**         | **Homework 10** Conditioning on variability(/hwcondvar/)
+Thursday Apr. 2    | **Stochastic character mapping**]                               | **Lab 10** Discrete Morphology in RevBayes(/morph/)
+Tuesday Apr. 7     | **Independent Contrasts**; **PGLS regression**                  | **Homework 11** Simulating a character using the Brownian motion model(/hwbmsim/)
+Thursday Apr. 9    | **PGLS (cont.)**; **Phylogenetic signal **                      | **Lab 11** BayesTraits(/bayes-traits/)
+Tuesday Apr. 14    | **Dirichlet Process Priors**                                    | **Homework 12** Maddison and Fitzjohn (2015)(/hwmandf/)
+Thursday Apr. 16   | **Codon and amino acid models**;                                | **Lab 12** Comparative methods and diversification in R(/ape/)
+Tuesday Apr. 21    | **Relaxed clocks**;                                             | **Homework 13** Dirichlet process prior(/hwdpp/)
+Thursday Apr. 23   | **Heterotachy, and Covarion models**;                           | **Lab 13** Divergence Time Estimation with RevBayes(/revdiv/)
+Tuesday Apr. 28    | **Diversification**                                             | no homework assignment
+Thursday Apr. 30   | **Species delimitation and information**                        | **Lab 14** Divergence Time Estimation with RevBayes(/revdiv/) (finish); Plotting trees in R with ggtree(/ggtree/) (optional)
 
 ## Index to major topics
 
-[Index for 2024](/index2024/)
+[Index for 2026](/index2026/)
 
 ## Literature cited
 
-[Literature cited in 2024](/papers2024/)
+[Literature cited in 2026](/papers2026/)
 
 ## Grading
 
