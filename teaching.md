@@ -34,11 +34,11 @@ This is a sophomore-level 3-credit undergraduate course that satisfies the [Evol
 
 ---
 
-### [Phylogenetics (EEB 5349)](/phylogenetics2024/)
+### [Phylogenetics (EEB 5349)](/phylogenetics2026/)
 
 {% include figure.html description="A seaweed phylogeny" url="/assets/img/seaweed-phylogeny.png" css="image-left" width="300px" targeturl="https://phylogeny.uconn.edu/courses/" %}
 
 This graduate course explains models and methods used in maximum-likelihood and Bayesian phylogenetics. Phylogenetic trees, genealogies at the level of species or more inclusive groups, are now pervasive in biology. Their estimation has been revolutionized by the availability of molecular sequence data, which has allowed elucidation of historical relatedness among lineages for which important life cycle stages have never been observed. Topics include substitution models, Markov chain Monte Carlo (MCMC), Bayesian statistics, comparative methods, and the use of a range of phylogenetic inference software.
 
-[Link to Spring 2024 lecture/lab schedule](/phylogenetics2024/)
+[Link to Spring 2026 lecture/lab schedule](/phylogenetics2026/)
 
