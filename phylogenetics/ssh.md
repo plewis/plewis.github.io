@@ -11,13 +11,13 @@ It is possible to create an alias that will allow you to avoid a lot of typing w
 * **local laptop** means the computer you will have with you in lab used to communicate with the cluster
 * **remote cluster** means the Storrs HPC computing cluster (which you will never see)
 * Be sure to replace `xxxxx` in the instructions below with your own username (**local laptop**)
-* Be sure to replace `xxx00000` in the instructions below with your cluster username (**remote cluster**)
+* Be sure to replace `xxx00000` in the instructions below with your NetID, which is also your cluster username (**remote cluster**)
 * Steps 1-5 below take place on your **local laptop**
-* Step 6 involve both your **local laptop** and the **remote cluster**
+* Step 6 involves both your **local laptop** and the **remote cluster**
 
 ### Step 1
 
-Check whether you have a directory named `~/.ssh` on your **local laptop**. The `~` part is a stand-in for your home directory. The `.ssh` directory, if it exists, will be hidden and not easily visible using the `ls` command (this is true for all files and directories whose names begin with a period). To see it, you will need to use the long format of the `ls` command:
+Check whether you have a directory named _~/.ssh_ on your **local laptop**. The _~_ part is a stand-in for your home directory. The _.ssh_ directory, if it exists, will be hidden and not easily visible using the `ls` command (this is true for all files and directories whose names begin with a period). To see it, you will need to use the long format of the `ls` command:
 
     ls -la ~
 
@@ -28,15 +28,17 @@ Alternatively, you can also just try to `cd` into the directory:
 If it doesn't exist, you will get an error message similar to this:
 
     ls: /Users/xxxxx/.ssh: No such file or directory
+    
+If it does already exist, you can skip the next step (Step 2) and go directly to [Step 3](#step-3)
 
 ### Step 2
 
-If you do **not** have a directory `~/.ssh`, then create it using the `mkdir` command:
+If you do **not** have a directory _~/.ssh_, then create it using the `mkdir` command:
 
     mkdir ~/.ssh
     chmod 700 ~/.ssh
     
-The `chmod` command sets permissions on the directory to those required by SSH. SSH will refuse to work if this directory is able to be seen by a wider audience than just you. If you issue the command `ls -la` in your home directory, the line corresponding to your new `.ssh` directory should look like this (except that you will see your own username, not `xxxxx`, of course):
+The `chmod` command sets permissions on the directory to those required by SSH. SSH will refuse to work if this directory is able to be seen by a wider audience than just you. If you issue the command `ls -la` in your home directory, the line corresponding to your new _.ssh_ directory should look like this (except that you will see your own username, not `xxxxx`, of course):
 
     drwx------    2 xxxxx domain users      4608 May 26  2020 .ssh
 
@@ -57,9 +59,13 @@ The first part of this line  says that this directory has read, write, and execu
     
 ### Step 3
 
-Now that the directory `~/.ssh` exists and has the right permissions, you need to create a file named `config` inside that directory.
+Now that the directory _~/.ssh_ exists and has the right permissions, you need to create (or edit) a file named _config_ inside that directory. First check to see if _config_ also exists using `ls -la` (after first changing directory (`cd`) into the _~/.ssh_ directory):
 
     cd ~/.ssh
+    ls -la
+    
+If you don't see a file named _config_ in the output of the `ls` command, type  
+
     touch config
     chmod 600 config
 
@@ -86,7 +92,9 @@ The program will ask you a couple of questions. First, it will ask you:
     Generating public/private ed25519 key pair.
     Enter file in which to save the key (/Users/xxxxx/.ssh/id_ed25519):
   
-Just press return to choose the default. Next, it will ask you for a passphrase:
+Note that there are several different types of keys and your system may choose a different type than the _ed25519_ type shown above. For example, you may see _rsa_, _dsa_, _ecdsa_, _ecdsa-sk_, _ed25519_, or _ed25519-sk_. Just press return to choose the default file name suggested (_/Users/xxxxx/.ssh/id_ed25519_ in the example above). **Make a note of this filename**: you will need to paste it into another file soon. 
+
+Next, it will ask you for a passphrase:
 
     Enter passphrase (empty for no passphrase):
     Enter same passphrase again: 
@@ -144,9 +152,11 @@ Edit the `config` file and add the following lines (`host` should be flush left,
         User eeb5349usr13
 {% endcomment %}
 
-Be sure to use your own NetID, not `xxx00000` (which is a fake NetID) and your own home directory name, not `xxxxx`.
+Be sure to use your own NetID, not `xxx00000` (which is a fake NetID).
 
-These 3 lines will create an alias named `hpc` that allows you to login to user account on the HPC cluster using `ssh`:
+Note that IdentityFile should specify the private key file name that you save earlier when you ued `ssh-keygen`.
+
+These 4 lines in the _config_ file will create an alias named `hpc` that allows you to login to user account on the HPC cluster using `ssh`:
 
     ssh hpc
     
@@ -166,25 +176,25 @@ The third `scp` command is the same as the second except that the file will end 
 
 ### Step 6
 
-Even though the config file entry saves a little bit of time, you still need to type your password. If typing your password repeatedly annoys you, we can fix this with just a little more work.
+Even though the config file entry saves a little bit of time, you still need to type your password when logging in. If typing your password repeatedly annoys you, we can fix this with just a little more work.
 
 On your **local laptop** on which you just created a public/private key pair, type
 
     cat ~/.ssh/id_ed25519.pub
     
-This will spit out the contents of your public key to the screen. Here is what mine looks like:
+(be sure to use the file name that `ssh-keygen` generated; it may not be named _id_ed25519.pub_ on your system). Also be sure that the file you `cat` ends in _.pub_ (i.e. the _public_ key file). This will spit out the contents of your **public key** to the screen. Here is what mine looks like:
 
     ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKh6TEdeul5a+Q239SNR1gSQVq/WjsxDARMmTQIUTOmf plewis@cormoran.local
 
-Be sure to put the `.pub` ending on the file name so that you spit out the _public_ key and not the _private_ key.
-
 Copy that text to your clipboard and log into the **remote cluster** using `ssh hpc`. 
 
-On the **remote cluster**, you will now create an _authorized_keys_ file in your `.ssh` directory. First, check to see if you have the directory `.ssh` in your home directory on the cluster:
+If you are using a Mac, you should be able to select the text and press Cmd-C to copy it. If you are using Windows, you may need to select the text and choose _Edit > Copy_ from the menu.
+
+On the **remote cluster**, you will now create an _authorized_keys_ file in your `.ssh` directory. First, check to see if you have the directory `.ssh` in your home directory on the remote cluster:
 
     cd ~/.ssh
     
-If this gives you a `No such file or directory` error, then create the directory using `mkdir`. (If you are getting _deja vu_, it is probably because you just did this a few minutes ago on your local laptop.)
+If this gives you a `No such file or directory` error, then create the directory using `mkdir`.
 
     mkdir ~/.ssh
     chmod 700 ~/.ssh
@@ -206,7 +216,7 @@ and paste in your public key, pressing return so that there is a line feed at th
 
 That's it. You should now be able to logout (using Ctrl-d or by typing `exit`) of the **remote cluster** and log back in again using `ssh hpc`. You should not need a password when you log back in, but you will need to enter your passphrase.
 
-You are now asking: "What good is it to replace a password with a passphrase?" The benefit is that you can allow an ssh agent to fill in the passphrase for you. You need only give the agent your passphrase after your local laptop boots up and it will enter it automatically thereafter. To start an agent and add your passphrase, type
+You are now asking: "What good is it to eliminate having to type a password if I still have to type a passphrase?" The benefit is that you can allow an ssh _agent_ to fill in the passphrase for you. You need only give the agent your passphrase after your local laptop boots up and it will enter it automatically thereafter. To start an agent and add your passphrase, type
 
     ssh-agent
     ssh-add

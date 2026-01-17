@@ -25,7 +25,7 @@ Warning: This schedule will most likely change quite a few times during the seme
 Date               |  Lecture topic                                                  |  Lab/homework
 :----------------: | :-------------------------------------------------------------- | :------------------------
 Tuesday Jan. 20    | **Trees and optimality criteria**                               | **Homework 1**  
-Thursday Jan. 22   | **Search strategies, consensus trees**                          | **Lab 1** Using the [HPC cluster](/storrshpc/)
+Thursday Jan. 22   | **Search strategies, consensus trees**                          | **Lab 1** [Using the HPC cluster](/storrshpc/)
 Tuesday Jan. 27    | **Distance methods**                                            | **Homework 2**  
 Thursday Jan 29    | **Substitution models**                                         | **Lab 2** Searching
 Tuesday Feb. 3     | **Substitution models (cont.)**                                 | **Homework 3**  

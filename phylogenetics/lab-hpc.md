@@ -37,8 +37,10 @@ Type the following command into your terminal window:
 
     ssh hpc
  
-where `username` should be replaced by your username on the cluster.
-
+If this doesn't work, there are a couple of possible reasons:
+* Perhaps you skipped something when working through the [Setting up an ssh alias](/ssh-alias/) page? The `hpc` part is an alias for the Storrs HPC cluster, so if that alias was not created, then `ssh hpc` will not work;
+* Perhaps you are not on campus? If you are trying this at home and the terminal just hangs after you type `ssh hpc` and hit return, you will need to login to the VPN (Virtual Private Network) so that you appear to be on campus. See the [ITS Services VPN page](https://services.its.uconn.edu/service/vpn/) for how to set this up.
+ 
 ###  SCP and Cyberduck 
 
 An SCP client is needed to to transfer files back and forth using the Secure Copy Protocol (SCP). I will show you how to transfer files using both methods, but for now  you should go ahead and install [Cyberduck](https://cyberduck.io/download/). Cyberduck provides a nice graphical user interface, but you might find that the `scp` command line client lets you get your work done faster once you get used to using it.
