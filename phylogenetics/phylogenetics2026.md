@@ -22,38 +22,38 @@ Warning: This schedule will most likely change quite a few times during the seme
 <a name="today"/>
 {% endcomment %}
 
-Date               |  Lecture topic                                                                                                                               |  Lab/homework
-:----------------: | :------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------
+Date               |  Lecture topic                                                  |  Lab/homework
+:----------------: | :-------------------------------------------------------------- | :------------------------
 Tuesday Jan. 20    | **Trees and optimality criteria**                               | **Homework 1**  
-Thursday Jan. 22   | **Search strategies, consensus trees**                          | **Lab 1** Using the HPC cluster(/storrshpc/), Introduction to PAUP*(/paup/), and NEXUS file format(/nexus/)
+Thursday Jan. 22   | **Search strategies, consensus trees**                          | **Lab 1** Using the [HPC cluster](/storrshpc/)
 Tuesday Jan. 27    | **Distance methods**                                            | **Homework 2**  
-Thursday Jan 29    | **Substitution models**                                         | **Lab 2** Searching(/searching/)
+Thursday Jan 29    | **Substitution models**                                         | **Lab 2** Searching
 Tuesday Feb. 3     | **Substitution models (cont.)**                                 | **Homework 3**  
-Thursday Feb. 5    | **Maximum likelihood criterion**                                | **Lab 3** Estimating parameters using likelihood(/likelihood/)
+Thursday Feb. 5    | **Maximum likelihood criterion**                                | **Lab 3** Estimating parameters using likelihood
 Tuesday Feb. 10    | **Rate heterogeneity**                                          | **Homework 4**  
-Thursday Feb. 12   | **Bootstrapping**                                               | **Lab 4** Simulating sequence data(/simulation/)
+Thursday Feb. 12   | **Bootstrapping**                                               | **Lab 4** Simulating sequence data
 Tuesday Feb. 17	   | **Simulation**                                                  | **Homework 5**  
-Thursday Feb. 19   | **Bayes' Rule and Bayesian statistics**                         | **Lab 5 Maximum likelihood analyses with IQ-TREE(/iqtree/)**
+Thursday Feb. 19   | **Bayes' Rule and Bayesian statistics**                         | **Lab 5** Maximum likelihood analyses with IQ-TREE
 Tuesday Feb. 24    | **Markov chain Monte Carlo (MCMC)**                             | **Homework 6** 
-Thursday Feb. 26   | **MCMC (cont.)**                                                | **Lab 6** Using R to explore probability distributions(/rprobdist/) (Through Exponential, questions 1-19)
+Thursday Feb. 26   | **MCMC (cont.)**                                                | **Lab 6** Using R to explore probability distributions
 Tuesday Mar. 3     | **Model selection**                                             | **Homework 7** 
-Thursday Mar. 5    | *Priors**                                                       | **Lab 7** Using R to explore probability distributions(/rprobdist/) (start with Lognormal, questions 20-29)
+Thursday Mar. 5    | *Priors**                                                       | **Lab 7** TBA
 Tuesday Mar. 10    | **Coalescence**                                                 | **Homework 8** 
-Thursday Mar. 12   | ****                                                            | **Lab 8** MrBayes(/mrbayes/)
+Thursday Mar. 12   | ****                                                            | **Lab 8** TBA
 Tuesday Mar. 17    | **SPRING BREAK**                                                |
 Thursday Mar. 19   | **SPRING BREAK**                                                |
 Tuesday Mar. 24    | **Species trees**                                               | **Homework 9** 
-Thursday Mar. 26   | **Discrete morphological models**                               | **Lab 9** RevBayes(/revbayes/)
+Thursday Mar. 26   | **Discrete morphological models**                               | **Lab 9** RevBayes
 Tuesday Mar. 31    | **rjMCMC and Polytomies**; **Evolutionary Correlation**         | **Homework 10** 
-Thursday Apr. 2    | **Stochastic character mapping**]                               | **Lab 10** Discrete Morphology in RevBayes(/morph/)
+Thursday Apr. 2    | **Stochastic character mapping**]                               | **Lab 10** Discrete Morphology in RevBayes
 Tuesday Apr. 7     | **Independent Contrasts**; **PGLS regression**                  | **Homework 11** 
-Thursday Apr. 9    | **PGLS (cont.)**; **Phylogenetic signal **                      | **Lab 11** BayesTraits(/bayes-traits/)
+Thursday Apr. 9    | **PGLS (cont.)**; **Phylogenetic signal **                      | **Lab 11** BayesTraits
 Tuesday Apr. 14    | **Dirichlet Process Priors**                                    | **Homework 12** 
-Thursday Apr. 16   | **Codon and amino acid models**;                                | **Lab 12** Comparative methods and diversification in R(/ape/)
+Thursday Apr. 16   | **Codon and amino acid models**;                                | **Lab 12** Comparative methods and diversification in R
 Tuesday Apr. 21    | **Relaxed clocks**;                                             | **Homework 13** 
-Thursday Apr. 23   | **Heterotachy, and Covarion models**;                           | **Lab 13** Divergence Time Estimation with RevBayes(/revdiv/)
+Thursday Apr. 23   | **Heterotachy, and Covarion models**;                           | **Lab 13** Divergence Time Estimation with RevBayes
 Tuesday Apr. 28    | **Diversification**                                             | no homework assignment
-Thursday Apr. 30   | **Species delimitation and information**                        | **Lab 14** Divergence Time Estimation with RevBayes(/revdiv/) (finish); Plotting trees in R with ggtree(/ggtree/) (optional)
+Thursday Apr. 30   | **Species delimitation and information**                        | **Lab 14** Plotting trees in R with ggtree
 
 ## Index to major topics
 
