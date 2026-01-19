@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Grading info (EEB 5349)
-permalink: /grading/
+permalink: /phylogenetics-grading/
 ---
 Return to the [Phylogenetics (EEB 5349) 2026 main page](/phylogenetics2026/).
 

@@ -65,10 +65,7 @@ Thursday Apr. 30   | **Species delimitation and information**                   
 
 ## Grading
 
-Not quite ready yet, but definitely this section will be in place on the first day of the semester (Tuesday, January 20, 2026).
-{% comment %}
-[Grading info](/grading/)
-{% endcomment %}
+[Grading info](/phylogenetics-grading/)
 
 ## Books (and book chapters) on phylogenetics
 
