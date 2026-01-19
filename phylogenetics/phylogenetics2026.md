@@ -28,29 +28,29 @@ Tuesday Jan. 20    | **Trees and optimality criteria**                          
 Thursday Jan. 22   | **Search strategies, consensus trees**                          | **Lab 1** [Using the HPC cluster](/storrshpc/)
 Tuesday Jan. 27    | **Distance methods**                                            | **Homework 2**  
 Thursday Jan 29    | **Substitution models**                                         | **Lab 2** Searching
-Tuesday Feb. 3     | **Substitution models (cont.)**                                 | **Homework 3**  
+Tuesday Feb. 3     | **Substitution models (cont.)**                                 | **Homework 3** 
 Thursday Feb. 5    | **Maximum likelihood criterion**                                | **Lab 3** Estimating parameters using likelihood
-Tuesday Feb. 10    | **Rate heterogeneity**                                          | **Homework 4**  
+Tuesday Feb. 10    | **Rate heterogeneity**                                          | **Individual Meetings**  
 Thursday Feb. 12   | **Bootstrapping**                                               | **Lab 4** Simulating sequence data
-Tuesday Feb. 17	   | **Simulation**                                                  | **Homework 5**  
+Tuesday Feb. 17	   | **Simulation**                                                  | **Homework 4**  
 Thursday Feb. 19   | **Bayes' Rule and Bayesian statistics**                         | **Lab 5** Maximum likelihood analyses with IQ-TREE
-Tuesday Feb. 24    | **Markov chain Monte Carlo (MCMC)**                             | **Homework 6** 
+Tuesday Feb. 24    | **Markov chain Monte Carlo (MCMC)**                             | **Homework 5** 
 Thursday Feb. 26   | **MCMC (cont.)**                                                | **Lab 6** Using R to explore probability distributions
-Tuesday Mar. 3     | **Model selection**                                             | **Homework 7** 
+Tuesday Mar. 3     | **Model selection**                                             | **Homework 6** 
 Thursday Mar. 5    | *Priors**                                                       | **Lab 7** TBA
-Tuesday Mar. 10    | **Coalescence**                                                 | **Homework 8** 
-Thursday Mar. 12   | ****                                                            | **Lab 8** TBA
-Tuesday Mar. 17    | **SPRING BREAK**                                                |
-Thursday Mar. 19   | **SPRING BREAK**                                                |
-Tuesday Mar. 24    | **Species trees**                                               | **Homework 9** 
+Tuesday Mar. 10    | **Coalescence**                                                 | **Individual Meetings** 
+Thursday Mar. 12   | **Species trees**                                               | **Lab 8** TBA
+Tuesday Mar. 17    | **SPRING BREAK**                                                | **SPRING BREAK**  
+Thursday Mar. 19   | **SPRING BREAK**                                                | **SPRING BREAK**  
+Tuesday Mar. 24    | **Codon and amino acid models**                                 | **Homework 7** 
 Thursday Mar. 26   | **Discrete morphological models**                               | **Lab 9** RevBayes
-Tuesday Mar. 31    | **rjMCMC and Polytomies**; **Evolutionary Correlation**         | **Homework 10** 
-Thursday Apr. 2    | **Stochastic character mapping**]                               | **Lab 10** Discrete Morphology in RevBayes
-Tuesday Apr. 7     | **Independent Contrasts**; **PGLS regression**                  | **Homework 11** 
+Tuesday Mar. 31    | **rjMCMC and Polytomies**; **Evolutionary Correlation**         | **Homework 8** 
+Thursday Apr. 2    | **Inferring introgression/hybridization**]                      | **Lab 10** Discrete Morphology in RevBayes
+Tuesday Apr. 7     | **Independent Contrasts**; **PGLS regression**                  | **Homework 9** 
 Thursday Apr. 9    | **PGLS (cont.)**; **Phylogenetic signal **                      | **Lab 11** BayesTraits
-Tuesday Apr. 14    | **Dirichlet Process Priors**                                    | **Homework 12** 
-Thursday Apr. 16   | **Codon and amino acid models**;                                | **Lab 12** Comparative methods and diversification in R
-Tuesday Apr. 21    | **Relaxed clocks**;                                             | **Homework 13** 
+Tuesday Apr. 14    | **Dirichlet Process Priors**                                    | **Individual Meetings** 
+Thursday Apr. 16   | **Visit by Dr. Rosana Zenil-Ferguson**;                         | **Lab 12** Comparative methods and diversification in R
+Tuesday Apr. 21    | **Relaxed clocks**;                                             | **Homework 10** 
 Thursday Apr. 23   | **Heterotachy, and Covarion models**;                           | **Lab 13** Divergence Time Estimation with RevBayes
 Tuesday Apr. 28    | **Diversification**                                             | no homework assignment
 Thursday Apr. 30   | **Species delimitation and information**                        | **Lab 14** Plotting trees in R with ggtree

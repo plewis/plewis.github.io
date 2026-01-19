@@ -216,16 +216,19 @@ and paste in your public key, pressing return so that there is a line feed at th
 
 That's it. You should now be able to logout (using Ctrl-d or by typing `exit`) of the **remote cluster** and log back in again using `ssh hpc`. You should not need a password when you log back in, but you will need to enter your passphrase.
 
-You are now asking: "What good is it to eliminate having to type a password if I still have to type a passphrase?" The benefit is that you can allow an ssh _agent_ to fill in the passphrase for you. You need only give the agent your passphrase after your local laptop boots up and it will enter it automatically thereafter. To start an agent and add your passphrase, type
+You are now asking: "What good is it to eliminate having to type a password if I still have to type a passphrase?" The benefit is that you can allow an ssh _agent_ to fill in the passphrase for you. You need only give the agent your passphrase after your local laptop boots up and it will enter it automatically thereafter. To start an agent, type
 
-    ssh-agent
+    eval "$(ssh-agent -s)"
+    
+To add your private key to the agent, type
+
     ssh-add
     
 It will prompt you for your passphrase and, thereafter, you will not need to type either your password or your passphrase again (at least until you logout or reboot your local laptop). I have gone one step further and created an alias for this combination of commands:
 
-    alias agent="ssh-agent;ssh-add"
+    alias agent="eval \"$(ssh-agent -s)\";ssh-add"
     
-Now I just type `agent` and it starts the ssh agent and asks for my passphrase. To make this alias permanent, you can use nano to edit your `.bash_profile` file and add the line above to that file. The `.bash_profile` file is run each time you open a terminal session, so that makes the alias always present when you need it.
+To make this alias permanent, you can use nano to edit your _~/.bash_profile_ file and add the line above to that file. The _.bash_profile_ file is run each time you open a terminal session, so that makes the alias always present when you need it. Now I just type `agent` and it starts the ssh agent and asks for my passphrase. 
 
 
 
