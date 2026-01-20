@@ -195,7 +195,7 @@ If you've made a shortcut in your _.ssh/config_ file, you can use the following 
 
     scp algae.nex hpc:
 
-Don't overlook the colon on the very end of the line! The `hpd:` part says that _algae.nex_ should be moved to the cluster and the colon `:` separates the remote machine (`hpc`) from the directory where it is to be stored on the remote machine. If there is nothing after the colon, then the file is stored in your home directory on the remote machine.
+Don't overlook the colon on the very end of the line! The `hpc:` part says that _algae.nex_ should be moved to the cluster and the colon `:` separates the remote machine (`hpc`) from the directory where it is to be stored on the remote machine. If there is nothing after the colon, then the file is stored in your home directory on the remote machine.
 
 ##  A few more UNIX commands 
 
