@@ -7,6 +7,40 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2026/).
 
 The following topics were covered in lecture in the Spring 2026 version of EEB 5349 (Phylogenetics). Please refer to the [schedule](/phylogenetics2026/) to find links to the slides for the dates indicated.
 
+consensus trees, Jan-22 
+
+evolutionary distance, Jan-22
+
+exhaustive search, Jan-22 
+
+likelihood criterion, Jan-20 
+
+maximum agreement subtree, Jan-22
+ 
+nearest-neighbor interchange (NNI) branch swapping, Jan-22 
+
+newick trees, Jan-20 
+
+parsimony criterion, Jan-20 
+
+software, PAUP*, Jan-22
+
+splits, Jan-20 
+
+reconnection limit, Jan-22 
+
+star decomposition, Jan-22 
+
+stepwise addition, Jan-22 
+
+subtree-pruning-regrafting (SPR) branch swapping, Jan-22 
+
+tree islands, Jan-22 
+
+tree-bisection-reconnection (TBR) branch swapping, Jan-22 
+
+ultrametric, Jan-20 
+
 {% comment %}
 adaptive radiations, Apr-23
 
@@ -60,8 +94,6 @@ conditioning on variability, Mar-21
 
 confidence intervals, Apr-16
 
-consensus trees, Jan-18 
-
 correlated relaxed clock model, Apr-16
 
 covarion, Apr-18
@@ -112,13 +144,9 @@ effective population size (Ne), Mar-19
 
 estrus advertisement example, Mar-26
 
-evolutionary distance, Feb-6
-
 exchangeabilities, nucleotide, Jan-30
 
 exchangeabilities, amino acid, Apr-11
-
-exhaustive search, Jan-18 
 
 expected time to coalescence, Mar-7
 
@@ -180,8 +208,6 @@ Kimura (1980) 2-parameter model (K2P, K80), Feb-1
 
 lambda, Pagel's, Apr-4
 
-likelihood criterion, Jan-18 
-
 likelihood (single sequence), Feb-6
 
 likelihood (evolutionary distance), Feb-6
@@ -198,8 +224,6 @@ marginal likelihood (steppingstone method, Feb-29
 
 Markov model, Jan-30
 
-maximum agreement subtree, Jan-18
- 
 maximum likelihood estimate (MLE), Feb-6
 
 Markov-chain Monte Carlo (MCMC), Feb-22
@@ -264,17 +288,11 @@ models, symmetric, Mar-21
 
 monophyly, Jan-16 
 
-nearest-neighbor interchange (NNI) branch swapping, Jan-18 
-
-newick trees, Jan-16 
-
 nonsynonymous/synonymous rate ratio (omega), Apr-11
 
 point accepted mutation (PAM) unit, Apr-11
 
 paraphyly, Jan-18 
-
-parsimony criterion, Jan-18 
 
 partitioned models, Feb-8
 
@@ -350,8 +368,6 @@ software, geiger, Apr-11
 
 software, MrBayes, Mar-7
 
-software, PAUP*, Jan-18 (and many times after)
-
 software, PhyloBayes, Apr-9
 
 software, phytools, Apr-11
@@ -359,8 +375,6 @@ software, phytools, Apr-11
 software, RevBayes, Mar-21, Mar-28
 
 speciation rate, Apr-23
-
-splits, Jan-16 
 
 state-dependent diversification models, Apr-23
 
@@ -376,21 +390,13 @@ rate heterogeneity, Feb-8
 
 rate matrix (instantaneous), Feb-1
 
-reconnection limit, Jan-18 
-
 simulation, Feb-15
 
 sojourn time, Mar-28
 
 species delimitation, Apr-25
 
-star decomposition, Jan-18 
-
-stepwise addition, Jan-18 
-
 substitution rate, Jan-30
-
-subtree-pruning-regrafting (SPR) branch swapping, Jan-18 
 
 theta (population genetics parameter), Mar-7
 
@@ -410,13 +416,7 @@ transition-transversion ratio, Feb-1
 
 transversion (substitution type), Feb-1
 
-tree islands, Jan-18 
-
-tree-bisection-reconnection (TBR) branch swapping, Jan-18 
-
 turnover, Apr-23
-
-ultrametric, Jan-18 
 
 uncorrelated lognormal relaxed clock model, Apr-16
 
