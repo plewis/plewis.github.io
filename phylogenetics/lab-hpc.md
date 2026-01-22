@@ -282,11 +282,18 @@ Edit your `~/.bash_profile` file in nano and add the following two lines beneath
     
 What does this do? This sets the search path for executable files to the existing path (`$PATH`) and adds the _bin_ directory you just created to that path (`:$HOME/bin`). Now, every time you log into the cluster, any files in your _bin_ directory will be automatically findable by the system. 
 
-To test this, log out and then log back in and type:
+To test this, log out and then log back in and type (you should be able to use the Tab key to complete the filename after typing the first few letters):
 
-    paup
+    paup4a168_centos64
     
 PAUP* should start right up! No need to add the `./` before `paup`.
+
+Let's do one other thing to make starting PAUP* more convenient:
+
+    cd ~/bin
+    mv paup4a168_centos64 paup
+    
+This just renames the PAUP* executable file to something easier to type (_paup_).
     
 ##  Starting a PAUP* analysis 
 
@@ -311,9 +318,9 @@ This file will be used by software called SLURM to start your run. SLURM provide
 
 Here is an explanation of each of the lines in _gopaup_:
 * The 1st line specifies the command interpreter to use (just include this in your scripts verbatim).
-* The 2nd through 5th lines begin with `#SBATCH` and are interpreted as commands by SLURM itself. In this case, the first and second `#SBATCH` commands tell SLURM to use the general partition (`--partition=general`) and the general quality of service (`--qos=general`). You should always include these two lines verbatim. The third `#SBATCH` line gives a name to your job (`--job-name=pauprun`). You could change `pauprun` here to something else, but keep your job names short and without embedded spaces or punctuation. The job name will help you identify your run when checking status. The fourth `#SBATCH` line asks slurm to email you when the job is finished. 
-* The 6th line is simply a `cd` command that changes the present working directory to the _pauprun_ directory you created earlier. This will ensure that anything saved by PAUP* ends up in this directory rather than in your home directory. 
-* The 7th and last line starts up PAUP* and executes the _run.nex_ file. The `-n` flag tells PAUP* that no human is going to be listening or answering questions, so it should just use default answers to any questions it needs to ask during the run.
+* The 2nd through 6th lines begin with `#SBATCH` and are interpreted as commands by SLURM itself. In this case, the first and second `#SBATCH` commands tell SLURM to use the general partition (`--partition=general`) and the general quality of service (`--qos=general`). You should always include these two lines verbatim. The third `#SBATCH` line gives a name to your job (`--job-name=pauprun`). You could change `pauprun` here to something else, but keep your job names short and without embedded spaces or punctuation. The job name will help you identify your run when checking status. The fourth and fifth `#SBATCH` line asks slurm to email you when the job is finished. 
+* The 7th line is simply a `cd` command that changes the present working directory to the _pauprun_ directory you created earlier. This will ensure that anything saved by PAUP* ends up in this directory rather than in your home directory. 
+* The 8th and last line starts up PAUP* and executes the _run.nex_ file. The `-n` flag tells PAUP* that no human is going to be listening or answering questions, so it should just use default answers to any questions it needs to ask during the run.
 
 ###  Submitting a job using **sbatch**
 
