@@ -138,10 +138,13 @@ Now use nano to create a second file named _gopaup_ in your _pauprun_ directory.
     #SBATCH --qos=general
     #SBATCH --job-name=pauprun
     #SBATCH --mail-type=END
+    #SBATCH --mail-user=your.email@uconn.edu
     cd $HOME/pauprun
     paup -n run.nex
     
-You may not wish to use the line that begins with **<tt>#SBATCH --mail-type=</tt>**. If you don't want email notifications cluttering your email inbox, just delete these this line from the file (it is not required).
+You may not wish to use the lines that begin with `#SBATCH --mail-type=` and `#SBATCH --mail-user=`. If you don't want email notifications cluttering your email inbox, just delete these lines from the file (they are not required).
+
+If you do use them, be sure to use your own email address and not `your.email@uconn.edu`!
 
 Note that other mail options besides END are possible, including NONE, BEGIN, FAIL, and ALL. You can combine two or more in one line by separating them with commas:
 
@@ -300,6 +303,7 @@ If you've been following the directions in sequence, you now have three files (_
     #SBATCH --qos=general
     #SBATCH --job-name=pauprun
     #SBATCH --mail-type=END
+    #SBATCH --mail-user=your.email@uconn.edu
     cd $HOME/pauprun
     paup -n run.nex
 
