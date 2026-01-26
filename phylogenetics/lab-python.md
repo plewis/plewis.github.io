@@ -3,7 +3,7 @@ layout: page
 title: Python primer
 permalink: /python/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2024/)
+[Up to the Phylogenetics main page](/phylogenetics2026/)
 
 ## What is Python?
 
@@ -12,7 +12,7 @@ permalink: /python/
 {%comment%}
 One might make the case that programs like PAUP* and RevBayes that have their own unique command language also represent programming languages; however, Python and R are different in being general purpose (i.e. not written specifically for phylogenetics).
 {%endcomment%}
-Python is one of a number of different high-level computing languages in common use. All of the software we use is written in one of these languages. PAUP* is written entirely in the C language, BEAST uses both Java and C, and RevBayes is written in C++. Knowing a little bit of computer programming can save you immense amounts of time by allowing you to automate things. You will begin realizing these savings doing homework for this class. While it is possible to do all the homework assignments by hand using a calculator, you will find that using Python will save you time and is more accurate because, once you have it programmed, you can do the same calculation with many different input values without making a mistake. 
+Python is one of a number of different high-level computing languages in common use. Knowing a little bit of computer programming can save you immense amounts of time by allowing you to automate things. You will begin realizing these savings doing homework for this class. While it is possible to do all the homework assignments by hand using a calculator, you will find that using Python will save you time and is more accurate because it allows you to do the same calculation with many different input values without making a mistake. 
 
 Python is a good language to learn first because it is relatively simple (not many words or punctuation rules to learn) and is much more forgiving than other languages. It is in a class of languages known as **scripting languages** because the program is interpreted as it is read by the computer program known as the python interpreter. Languages such as C and C++ require two additional steps (compiling and linking) before they can be run.
 
@@ -22,17 +22,21 @@ Python is a good language to learn first because it is relatively simple (not ma
 
 {% include icon.html url="/assets/img/Mac_logo.png" description="MacIntosh logo" css="image-left" height="87px" %}
 
-If you have a Mac, start your Terminal program (in the _Applications/Utilities_ folder), then type the following at the unix prompt (<tt>$</tt>):
+If you have a Mac, start your Terminal program (in the _Applications/Utilities_ folder), then type the following at the unix prompt (`$`):
 
     python3
     
 If you get an error saying that python3 cannot be found, the easiest thing to do is to use python3 on the cluster. To take this approach, login to the cluster and type 
 
-    srun --partition=mcbstudent --qos=mcbstudent --pty bash 
+    srun --partition=general --qos=general --pty bash 
     
-to become interactive on a free compute node, use `module load python/3.8.1` to load the python3 module, and then simply type `python3` to start python. 
+This will start an interactive session. Now type
 
-Alternatively, visit the [Python](https://www.python.org/downloads/) web site and download and install the latest version of Python 3 on your Mac.  
+    module load python
+    
+to make python available, and then simply type `python3` to start python. 
+
+Alternatively, you can install python on your mac. I would suggest using [homebrew](https://brew.sh) because this will install the latest python without disrupting the version of python that your MacOS depends on.
 
 ### Windows
 
@@ -40,9 +44,15 @@ Alternatively, visit the [Python](https://www.python.org/downloads/) web site an
 
 If you have Windows, the easiest thing to do is login to the cluster, type 
 
-    srun --partition=mcbstudent --qos=mcbstudent --pty bash 
+    srun --partition=general --qos=general --pty bash 
     
-to become interactive on a free compute node, use `module load python/3.8.1` to load the python3 module, and then simply type `python3` to start python. Alternatively, you can download and install Python on your Windows computer from the [Python web site](http://www.python.org/download/). I recommend you install the latest version of Python 3 that is available.
+This will start an interactive session. Now type
+
+    module load python
+    
+to make python available, and then simply type `python3` to start python. 
+
+Alternatively, you can download and install Python on your Windows computer from the [Python web site](http://www.python.org/download/). I recommend you install the latest version of Python 3 that is available.
 
 Once you have Python installed, you can invoke it in Windows using _Start > All Programs > Python 3.x > Python (command line)_. The console window that opens should show the version at the top, and you should see the python prompt, which consists of three greater-than symbols in a row: >>>. You can also choose Start > All Programs > Python 3.x > IDLE (Python GUI) if you prefer the look and feel of the IDLE python interpreter over the windows console.
 
@@ -58,11 +68,11 @@ This is the briefest of introductions, designed to get you just to the point whe
 
 ### Kinds of information you can store in Python variables
 
-Try typing in the Python code presented in the example sessions below. The `>>>` represents the **Python** **prompt** (you will see this when you start Python), so don't type that! The output is shown below each Python statement that generates output (don't type that either!). Finally, everything after a <tt>#</tt> character represents a comment (while you can type these in, it would be a waste of time unless you just want practice typing).
+Try typing in the Python code presented in the example sessions below. The `>>>` represents the **Python** **prompt** (you will see this when you start Python), so don't type that! The output is shown below each Python statement that generates output (don't type that either!). Finally, everything after a `#` character represents a comment (while you can type these in, it would be a waste of time unless you just want practice typing).
 
 #### Integers, floats and strings
 
-**Strings** are series of characters. Assign the string <tt>'Have a nice day'</tt> to the variable <tt>s</tt>:
+**Strings** are series of characters. Assign the string `'Have a nice day'` to the variable `s`:
 
     >>> s = 'Have a nice day'
     
@@ -71,11 +81,11 @@ You can see what is stored in a variable by simply typing the variable and hitti
     >>> s
     'Have a nice day'
 
-**Integers** are whole positive or negative numbers. Assign the integer <tt>9</tt> to the variable <tt>i</tt>:
+**Integers** are whole positive or negative numbers. Assign the integer `9` to the variable `i`:
 
     >>> i = 9
 
-**Floats** are numbers with an implicit or explicit decimal point. Assign the float <tt>9.5</tt> to the variable <tt>f</tt>:
+**Floats** are numbers with an implicit or explicit decimal point. Assign the float `9.5` to the variable `f`:
 
     >>> f = 9.5
 
@@ -97,13 +107,13 @@ The problem is that 2/4 gives you the number of times 4 can cleanly divide into 
     0.5
 {% endcomment %}    
     
-Later on you will learn how to read data from a file. When numbers are read from a file, they start out as strings. If you want these strings to be used as numbers, you will need to convert them to integers or floats. Here is how to convert a string (<tt>'5'</tt>) to an integer:
+Later on you will learn how to read data from a file. When numbers are read from a file, they start out as strings. If you want these strings to be used as numbers, you will need to convert them to integers or floats. Here is how to convert a string (`'5'`) to an integer:
 
     >>> x = int('5')
     >>> x
     5
     
-Here is another attempt to convert a string to an integer. This one fails because the string <tt>'5.5'</tt> is not able to be converted to an integer:    
+Here is another attempt to convert a string to an integer. This one fails because the string `'5.5'` is not able to be converted to an integer:    
     
     >>> x = int('5.5')
     Traceback (most recent call last):
@@ -148,12 +158,12 @@ Change the last value in the list to "G'day":
     >>> L
     [5, 13, "G'day"]
 
-This last example illustrates two things. First, the elements can be accessed by counting backward from the number of elements. Hence, <tt>L[-1]</tt> refers to the same element as <tt>L[3-1] = L[2]</tt> (i.e., the last element). Second, you can embed an apostrophe inside a string by using double quotes to surround the string, and you could embed double quotes inside a string by using single quotes to surround it.
+This last example illustrates two things. First, the elements can be accessed by counting backward from the number of elements. Hence, `L[-1]` refers to the same element as `L[3-1] = L[2]` (i.e., the last element). Second, you can embed an apostrophe inside a string by using double quotes to surround the string, and you could embed double quotes inside a string by using single quotes to surround it.
 
     >>> print('This is a "useful" string')
     This is a "useful" string
 
-You can find out how many elements are in the list using the <tt>len()</tt> function:
+You can find out how many elements are in the list using the `len()` function:
 
     >>> len(L)
     3
@@ -189,7 +199,7 @@ Now try this:
 
 In the second case, you set the variable `t` to a float value, not a tuple, because you did not include any commas. 
     
-If <tt>t =(1,2,3,4)</tt>, you can assign the 4 elements of the tuple <tt>t</tt> to the 4 variables <tt>a</tt>, <tt>b</tt>, <tt>c</tt>, and <tt>d</tt> like this:
+If `t =(1,2,3,4)`, you can assign the 4 elements of the tuple `t` to the 4 variables `a`, `b`, `c`, and `d` like this:
 
     >>> t =(1,2,3,4)
     >>> a,b,c,d = t
@@ -244,11 +254,19 @@ Using `//` instead of `/` for division causes the result to be an integer (i.e. 
     
 The result equals 1 because 6.0/4.0 = 1.5, which equals the integer 1 if the decimal component 0.5 is ignored.
 
-Divide the float 6.0 by the float 2.0:
+Divide the float 6.0 by the float 4.0:
 
-    >>> x = 6.0/2.0
+    >>> x = 6.0/4.0
     >>> x
-    3.0
+    1.5
+
+Divide the integer 6 by the integer 4 but use `/` for the division:
+
+    >>> x = 6/4
+    >>> x
+    1.5
+    
+Note that using `/` for division implicitly converts integers to floats.
 
 #### Order of operations
 
@@ -256,7 +274,7 @@ In the following expression, the multiplication is done before the division beca
 
     >>> x = 6*7//3
     >>> x
-    14.0
+    14
 
 If you want the division to be done first, use parentheses:
 
@@ -272,7 +290,7 @@ Why does the order matter? It wouldn't in this case if you had used floats, but 
 
 #### Precedence
 
-Some operations are evaluated before others due to their higher precedence. For example, exponentiation has higher precedence than multiplication or division, so the <tt>**</tt> is done before the multiplcation here:
+Some operations are evaluated before others due to their higher precedence. For example, exponentiation has higher precedence than multiplication or division, so the `**` is done before the multiplcation here:
 
     >>> x = 2*2**3
     >>> x
@@ -290,8 +308,8 @@ Multiplication and division, in turn, have higher precedence than addition or su
 
 The sum function makes it easy to sum the elements of a list or tuple:
 
-    >>> x = sum([1,2,3,4])
-    >>> x
+    >>> x = [1,2,3,4]
+    >>> sum(x)
     10
 
 The min and max functions make it easy to find the extreme values in a list or tuple:
@@ -304,7 +322,7 @@ The min and max functions make it easy to find the extreme values in a list or t
 
 #### Creative ways of creating lists
 
-The <tt>range(x,y,z)</tt> function can be used to generate a list of integers starting with <tt>x</tt>, ending just before <tt>y</tt> (<tt>y</tt> itself will not be included in the list), and skipping <tt>z</tt> integers between each one included:
+The `range(x,y,z)` function can be used to generate a list of integers starting with `x`, ending just before `y` (`y` itself will not be included in the list), and skipping `z-1` integers between each one included:
 
     >>> odd_numbers = list(range(1,10,2))
     >>> odd_numbers
@@ -354,7 +372,7 @@ You can, however make the variables involved into floats when you first assign v
     >>> p
     0.085572429906542055
 
-This time <tt>p</tt> is a float because you divided one float by another.
+This time `p` is a float because you divided one float by another.
 {% endcomment %}
 
 ### Computing a JC distance from a p-distance
@@ -368,16 +386,16 @@ To compute the JC distance, we need some capabilities (e.g. the ability to take 
     >>> jc
     0.090860500068600705
 
-In the <tt>import math</tt> statement, the <tt>math</tt> part is known as a Python **module**. To see a list of all modules (and documentation for them), check out the [Global Module List](https://docs.python.org/3/py-modindex.html) in the Python documentation.
+In the `import math` statement, the `math` part is known as a Python **module**. To see a list of all modules (and documentation for them), check out the [Global Module List](https://docs.python.org/3/py-modindex.html) in the Python documentation.
 
-Note that using <tt>import math</tt> requires us to use the prefix <tt>math.</tt> in front of every function imported. You can save some typing by being explicit about what functions you want to import from the math module:
+Note that using `import math` requires us to use the prefix `math.` in front of every function imported. You can save some typing by being explicit about what functions you want to import from the math module:
 
     >>> from math import log,exp
     >>> jc = -0.75*log(1.0 - 4.0*p/3.0)
     >>> jc
     0.090860500068600705
 
-I've imported both the <tt>log</tt> (logarithm) function as well as the <tt>exp</tt> (exponental function) even though I ended up using just <tt>log</tt>. Note that this time I did not need to specify <tt>math.log</tt>; I was able to just use <tt>log</tt> by itself.  
+I've imported both the `log` (logarithm) function as well as the `exp` (exponental function) even though I ended up using just `log`. Note that this time I did not need to specify `math.log`; I was able to just use `log` by itself.  
 
 How do you know what there is to import from a module? One way is to visit the module's documentation, but you can also get python to provide a list of everything in the module (but note that you have to import the module before you can list its contents):
 
@@ -390,7 +408,7 @@ How do you know what there is to import from a module? One way is to visit the m
 
 ## Loops
 
-An important component of any programming language is the ability to do the same sort of thing many times. In the session that follows, you will create a list containing all six pairwise differences among sequences, then use a <tt>for</tt> loop to compute the JC distance for all six. **Important: use a tab to indent**. Python is very sensitive about indenting. If the indented lines are not indented by exactly the same amount, Python will spit out an error message.
+An important component of any programming language is the ability to do the same sort of thing many times. In the session that follows, you will create a list containing all six pairwise differences among sequences, then use a `for` loop to compute the JC distance for all six. **Important: use a tab to indent**. Python is very sensitive about indenting. If the indented lines are not indented by exactly the same amount, Python will spit out an error message.
 
     >>> from math import log
     >>> n = 3424.
@@ -404,20 +422,20 @@ An important component of any programming language is the ability to do the same
     >>> jc
     [0.090860500068600705, 0.085604236767267153, 0.1024886399705747, 0.082663697169458011, 0.11090623674796182, 0.11090623674796182]
 
-You may be curious about <tt>range(6)</tt>. We saw the range function earlier, but there I told you it required three values: start, stop, and step. It turns out that, if you only supply one value, python interprets that value as the stop value, assuming start = 0 and step = 1. The <tt>range(n)</tt> function thus yields integers starting with 0 and ending with n-1. Try converting the output of the range function to a list to verify this:
+You may be curious about `range(6)`. We saw the range function earlier, but there I told you it required three values: start, stop, and step. It turns out that, if you only supply one value, python interprets that value as the stop value, assuming start = 0 and step = 1. The `range(n)` function thus yields integers starting with 0 and ending with n-1. Try converting the output of the range function to a list to verify this:
 
     >>> list(range(10))
     [0,1,2,3,4,5,6,7,8,9]
 
-Your <tt>for i in range(6):</tt> loop could therefore have been written like this and the result would be exactly the same:
+Your `for i in range(6):` loop could therefore have been written like this and the result would be exactly the same:
 
     for i in [0,1,2,3,4,5]:
 
-Now, what does the line above mean? The <tt>for</tt> loop lets <tt>i</tt> take on each value in the list, in turn. Thus, the indented portion of the loop is executed 6 times, once for each value in the list.
+Now, what does the line above mean? The `for` loop lets `i` take on each value in the list, in turn. Thus, the indented portion of the loop is executed 6 times, once for each value in the list.
 
 ## Python script files
 
-Now that your Python constructs are getting a little longer, it is a good time to learn about creating files for your Python programs. A file containing Python statements is called a Python <tt>script</tt>. It is a good idea to have a good text editor before starting to create scripts, so your next goal will be to download one if you do not already have one installed. 
+Now that your Python constructs are getting a little longer, it is a good time to learn about creating files for your Python programs. A file containing Python statements is called a Python `script`. It is a good idea to have a good text editor before starting to create scripts, so your next goal will be to download one if you do not already have one installed. 
 
 **Note: Microsoft Word is _not_ a good text editor!** It is an excellent word processor, but text editors and word processors are different beasts. Text editors always save files as plain text, while Word saves the file in its proprietary file format that Python cannot read. It is possible to save Word files as plain text, but usually this is more trouble than it is worth.
 
@@ -429,11 +447,11 @@ Fortunately, there are free (and really good) text editors for both Windows and 
 
 {% include icon.html url="/assets/img/Mac_logo.png" description="MacIntosh logo" css="image-left" height="87px" %}
 
-If you have a Mac, download [BBEdit](http://www.barebones.com/products/bbedit/download.html). Once you get BBEdit installed, start it up and create a file with the contents shown below in the section entitled "Your first Python script" (after the instructions for Windows users). Save the file using the name <tt>first.py</tt> in a convenient location (e.g. _Documents/scripts_), then navigate to that folder in your Terminal window using the command
+If you have a Mac, download [BBEdit](http://www.barebones.com/products/bbedit/download.html). Once you get BBEdit installed, start it up and create a file with the contents shown below in the section entitled "Your first Python script" (after the instructions for Windows users). Save the file using the name `first.py` in a convenient location (e.g. _Documents/scripts_), then navigate to that folder in your Terminal window using the command
 
     cd $HOME/Documents/scripts
     
-If you don't want to download BBEdit, you can use the TextEdit app that came with your Mac. If you do end up using TextEdit, I **strongly recommend** that you change the default format from _Rich text_ to _Plain text_ in the TextEdit Preferences.
+One amazingly nice feature of BBEdit is that it will allow you to edit files on the cluster as well as on your local machine! To set this up, choose _Setup..._ from the BBedit menu, click on the Bookmarks tab, then click the + button at the bottom left. Create a name for your bookmark (e.g. "hpc"), type `login.storrs.hpc.uconn.edu` for Server, SFTP and port 22, enter your NetID for User Name, and leave the Password and Remote Path fields blank. Once you save your bookmark, you can double-click its name to open a file browser that should show the contents of your home directory on the cluster. Just double-click a file to edit the remote file using BBEdit!
 
 ---
 
@@ -445,7 +463,7 @@ If you have Windows, but you are using Python on the cluster, you should just us
 
 ### Your first Python script
 
-Here is what you should type into your new <tt>first.py</tt> file:
+Here is what you should type into your new `first.py` file:
 
     from math import log
     n = 3424.
@@ -457,7 +475,7 @@ Here is what you should type into your new <tt>first.py</tt> file:
         jc.append(d)
     print(jc)
 
-Note that I have used the <tt>print</tt> function on the last line. This is because our little trick of getting Python to tell us the value of a variable by placing the variable's name on a line by itself only works when you are using Python _interactively_. We are now switching to programming mode, where an entire script is given to the Python interpreter, and a print statement must be used in this context. The result should be the same.
+Note that I have used the `print` function on the last line. This is because our little trick of getting Python to tell us the value of a variable by placing the variable's name on a line by itself only works when you are using Python _interactively_. We are now switching to programming mode, where an entire script is given to the Python interpreter, and a print statement must be used in this context. The result should be the same.
 
 #### If you are using Windows (and not running python on the cluster)
 
@@ -465,7 +483,7 @@ Try running your script by typing the following at your operating system prompt 
 
     first.py
     
-When Python was installed, it should have associated the <tt>.py</tt> file name extension with python scripts, and thus it should know to use python to process such files. As a result, you need only type the name of the file and hit return to run it. 
+When Python was installed, it should have associated the `.py` file name extension with python scripts, and thus it should know to use python to process such files. As a result, you need only type the name of the file and hit return to run it. 
 
 #### If you are using a Mac (or are running python on the cluster)
 
@@ -485,7 +503,7 @@ The program _first.py_ spits out six JC distance values, but it is usually good 
         d = -0.75*log(1.0 - 4.0*p/3.0)
         print('%12d %12.5f %12.8f' % (i, p, d))
 
-You will note a couple of differences between _first.py_ and _second.py_. First, there is no <tt>jc</tt> list anymore, we just print out values as they are computed. Second, the <tt>print</tt> statement is much more complicated now! The complexity might be daunting at first, but you will quickly become adjusted to it I think. 
+You will note a couple of differences between _first.py_ and _second.py_. First, there is no `jc` list anymore, we just print out values as they are computed. Second, the `print` statement is much more complicated now! The complexity might be daunting at first, but you will quickly become adjusted to it I think. 
 
 Here is how the print statement used in _second.py_ works. There are two parts separated by a percent symbol (%). The first part is a string:
 
@@ -496,13 +514,13 @@ while the second part is a tuple:
     (i, p, d)
     
 The string serves as a format specification. Here is a breakdown:
-* <tt>%12d</tt> says print an integer (<tt>d</tt> is code for integer here) using 12 spaces
-* <tt>%12.5f</tt> says print a float (<tt>f</tt> is code for float here) using 12 spaces total, with 5 of the 12 being devoted to the part after the decimal point
-* <tt>%12.8f</tt> says print another float using 12 spaces, this time with 8 of the 12 being after the decimal point
+* `%12d` says print an integer (`d` is code for integer here) using 12 spaces
+* `%12.5f` says print a float (`f` is code for float here) using 12 spaces total, with 5 of the 12 being devoted to the part after the decimal point
+* `%12.8f` says print another float using 12 spaces, this time with 8 of the 12 being after the decimal point
 
-The tuple provides the values to insert: the integer stored in the variable <tt>i</tt> will go in the first spot, while the floats stored in <tt>p</tt> and <tt>d</tt> will go in the second and third spots. Be sure to use <tt>d</tt> for integers and <tt>f</tt> for floats in your format string, otherwise Python will complain.
+The tuple provides the values to insert: the integer stored in the variable `i` will go in the first spot, while the floats stored in `p` and `d` will go in the second and third spots. Be sure to use `d` for integers and `f` for floats in your format string, otherwise Python will complain.
 
-Run _second.py_ and see if Python spaced everything as you expected. Note that the second float will actually take up 13 spaces because there is a single space in the format string just before the <tt>%12.5f</tt> specification. Spaces in the format string are inserted as is into the print output.
+Run _second.py_ and see if Python spaced everything as you expected. Note that the second float will actually take up 13 spaces because there is a single space in the format string just before the `%12.5f` specification. Spaces in the format string are inserted as is into the print output.
 
 ## Computing the sum-of-squares
 
@@ -518,6 +536,7 @@ Let's create a Python script that will spit out the numbers we need for the tabl
     path = [0.3, 0.3, 0.2, 0.2, 0.3, 0.3]
     x = [293.0, 277.0, 328.0, 268.0, 353.0, 353.0]
     totalSS = 0.0
+    print('%12s %12s %12s %12s' % ('Pair', 'pij', 'dij', 'SS'))
     for i in range(6):
         pdist = x[i]/n
         dij = -0.75*log(1.0 - 4.0*pdist/3.0)
@@ -527,17 +546,18 @@ Let's create a Python script that will spit out the numbers we need for the tabl
         SS = numerator/denominator
         totalSS += SS
         print('%12s %12.5f %12.5f %12.5f' % (rowname[i], pij, dij, SS))
-        print('total SS = %.5f' % totalSS)
+    print('total SS = %.5f' % totalSS)
 
 Here are the new additions:
-* A <tt>rowname</tt> variable has been added to which is assigned a list of strings. Each element of rowname will serve as the label for a row in the table that is output
-* A <tt>path</tt> variable has been added to which has been assigned a list of path lengths through Tree 1. Each element of <tt>path</tt> is the path length for the corresponding comparison named in <tt>rowname</tt>
-* A variable named <tt>totalSS</tt> was added to keep track of the sum of the individual pairwise SS values as they are calculated. Note that we have to initialize the value of <tt>totalSS</tt> to zero before the loop begins
-* I've introduced a <tt>pij</tt> variable to hold the current path length
+* A `rowname` variable has been added to which is assigned a list of strings. Each element of rowname will serve as the label for a row in the table that is output
+* A `path` variable has been added to which has been assigned a list of path lengths through Tree 1. Each element of `path` is the path length for the corresponding comparison named in `rowname`
+* A variable named `totalSS` was added to keep track of the sum of the individual pairwise SS values as they are calculated. Note that we have to initialize the value of `totalSS` to zero before the loop begins
+* The first print statement just prints the column headers.
+* I've introduced a `pij` variable to hold the current path length
 * The numerator and denominator variables hold the top and bottom parts of the SS calculation. The double-asterisk means "raised to the power of"
 * The SS variable holds the sum-of-squares value for pairwise comparison i
-* The <tt>totalSS += SS</tt> tells Python that we want to add the current value of SS to the running sum being stored in the variable <tt>totalSS</tt>
-* The last line prints the value of <tt>totalSS</tt>. Note that if there is only one value to be substituted in a format string, you needn't make it into a tuple (i.e. no parentheses are needed around <tt>totalSS</tt>)
+* The `totalSS += SS` tells Python that we want to add the current value of SS to the running sum being stored in the variable `totalSS`
+* The last line prints the value of `totalSS`. Note that if there is only one value to be substituted in a format string, you needn't make it into a tuple (i.e. no parentheses are needed around `totalSS`)
 
 Try running this script and let us know if you don't understand how it works.
 
@@ -547,7 +567,7 @@ One of the most fundamental tasks in programming is to read information stored i
 
 ### Reading data from a file
 
-Suppose you wanted to read in the six values that we've been storing in the variable <tt>x</tt> from a file. To experiment with this, we'll need a file. Create a file named _ss1.txt_ using your text editor that contains the six numbers, one per line. It should look like this:
+Suppose you wanted to read in the six values that we've been storing in the variable `x` from a file. To experiment with this, we'll need a file. Create a file named _ss1.txt_ using your text editor that contains the six numbers, one per line. It should look like this:
 
     293.0
     277.0
@@ -556,7 +576,7 @@ Suppose you wanted to read in the six values that we've been storing in the vari
     353.0
     353.0
 
-To read these values, add the five lines below to your _ss1.py_ file and comment out the line that currently defines <tt>x</tt> (place a pound sign <tt>#</tt> in front of the <tt>x</tt>):
+To read these values, add the five lines below to your _ss1.py_ file and comment out the line that currently defines `x` (place a pound sign `#` in front of the `x`):
 
     lines = open('ss1.txt','r').readlines()
     x = []
@@ -565,15 +585,15 @@ To read these values, add the five lines below to your _ss1.py_ file and comment
         x.append(f)
     # x = [293.0, 277.0, 328.0, 268.0, 353.0, 353.0] 
 
-The first line above opens a file named _ss1.txt_ for reading (this is what the <tt>r</tt> means). The <tt>readlines()</tt> part causes the entire contents of the file to be read, creating a list in which each element is a separate line from the file. This list is stored in the variable <tt>lines</tt>.
+The first line above opens a file named _ss1.txt_ for reading (this is what the `r` means). The `readlines()` part causes the entire contents of the file to be read, creating a list in which each element is a separate line from the file. This list is stored in the variable `lines`.
 
-The <tt>for</tt> loop visits each element in <tt>lines</tt> one at a time. This represents a different (more convenient) style of <tt>for</tt> loop that doesn't require us to know how long the lines list is (that is, this style avoids having to use <tt>range(n)</tt>, which would require us to know <tt>n</tt>). Inside the <tt>for</tt> loop, the string read from one particular line in the file is stored in the variable <tt>line</tt>. The string in <tt>line</tt> is converted to a float named <tt>f</tt>, which is then appended to the growing list <tt>x</tt>. After all is said and done, the variable <tt>x</tt> will be exactly the same (a list of six float values) that it was before when we defined it directly.
+The `for` loop visits each element in `lines` one at a time. This represents a different (more convenient) style of `for` loop that doesn't require us to know how long the lines list is (that is, this style avoids having to use `range(n)`, which would require us to know `n`). Inside the `for` loop, the string read from one particular line in the file is stored in the variable `line`. The string in `line` is converted to a float named `f`, which is then appended to the growing list `x`. After all is said and done, the variable `x` will be exactly the same (a list of six float values) that it was before when we defined it directly.
 
-Note that we had to explicitly convert each line into a float value. This is because each line of information read from the file is stored as a string, not a float. If you failed to explicitly convert each value, you would later run into trouble when you tried to do arithmetic with the values stored in <tt>x</tt>.
+Note that we had to explicitly convert each line into a float value. This is because each line of information read from the file is stored as a string, not a float. If you failed to explicitly convert each value, you would later run into trouble when you tried to do arithmetic with the values stored in `x`.
 
 ### Writing output to a file
 
-Writing to a file involves creating a Python variable that represents the file, then calling that variable's <tt>write</tt> function to spit out something to the file. Create a file for writing (note the <tt>'w'</tt> for writing rather than <tt>'r'</tt> for reading) as follows:
+Writing to a file involves creating a Python variable that represents the file, then calling that variable's `write` function to spit out something to the file. Create a file for writing (note the `'w'` for writing rather than `'r'` for reading) as follows:
 
     outfile = open('output.txt', 'w')
 
@@ -581,7 +601,7 @@ You can now write something to it like this:
 
     outfile.write('Hello\n')
 
-One big difference between writing to a file versus printing to the terminal is that the write function does not terminate the line. The end-of-line character is designated using the two-character combination <tt>\n</tt>. Thus, if you wanted two blank lines between the words "Hello" and "Goodbye" you would do this:
+One big difference between writing to a file versus printing to the terminal is that the write function does not terminate the line. The end-of-line character is designated using the two-character combination `\n`. Thus, if you wanted two blank lines between the words "Hello" and "Goodbye" you would do this:
 
     outfile.write('Hello\n\nGoodbye')
 
@@ -607,6 +627,7 @@ When you are finished writing to the file (say, as the last line of your script)
     outf = open('output.txt', 'w')
 
     totalSS = 0.0
+    outf.write('%12s %12s %12s %12s\n' % ('Pair', 'pij', 'dij', 'SS'))
     for i in range(6):
         pdist = x[i]/n
         dij = -0.75*log(1.0 - 4.0*pdist/3.0)

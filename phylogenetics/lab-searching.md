@@ -3,13 +3,13 @@ layout: page
 title: Searching through treespace
 permalink: /searching/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2024/)
+[Up to the Phylogenetics main page](/phylogenetics2026/)
 
 This lab explores different search strategies under the parsimony criterion.
 
 ## What to turn in
 
-Please copy the questions in the template below into a plain text file (i.e., use Notepad++ on Windows or BBEdit on Mac). The questions below correspond to the sections in the lab tutorial starting with the "thinking" emoji. As you work through the lab, replace the underscores with your answers to these questions. After the lab, send your text file to Analisa via a Slack DM.
+Please copy the questions in the template below into a plain text file (i.e., use Notepad++ on Windows or BBEdit on Mac). The questions below correspond to the sections in the lab tutorial starting with the "thinking" emoji :thinking:. As you work through the lab, replace the underscores with your answers to these questions. After the lab, send your text file to Analisa via a Slack DM.
 
     ____ How many separate tree topologies did PAUP* examine? 
     ____ What is the parsimony treelength of the best tree? 
@@ -32,8 +32,8 @@ Please copy the questions in the template below into a plain text file (i.e., us
     ____ How many trees are currently in memory? 
     ____ Has PAUP saved trees from all islands discovered during this search?
     ____ Explain why PAUP saved the number of trees it did.
-    ____ Of the three types of branch swapping (NNI, SPR, TBR), which is most thorough? 
-    ____ Least thorough? 
+    ____ How many times more trees were examined by SPR than NNI? 
+    ____ How many times more trees were examined by TBR than SPR?
     ____ What is the minimum evolution score for the NJ tree?
     ____ What is the minimum evolution score for the tree found by heuristic search starting with the NJ tree?
     ____ What is wrong with this picture? 
@@ -41,33 +41,39 @@ Please copy the questions in the template below into a plain text file (i.e., us
 
 ## Getting started
 
-Log into your account on the Health Center (Xanadu) cluster:
+Log into your account on the HPC cluster:
 
-    ssh username@xanadu-submit-ext.cam.uchc.edu
+    ssh hpc
     
-Then type:
+Notice that your prompt looks something like this:
 
-    srun --partition=mcbstudent --qos=mcbstudent --pty bash
+    [pol02003@login5 ~]$
     
-This asks the scheduler to find a node (computer) in the cluster that is currently not busy. It should transfer your session from the head node to a different node. The reason we are using `srun` today is that some of the analyses we are going to run take more than a few seconds to complete. If all of us ran long jobs on the head node simultaneously, users would notice significant slowdown in response time, which is very annoying to other users. Thus, we will start developing good habits and will use `srun` to perform our interactive analyses on a node that no one else is currently using.
+The `pol02003` part is my NetID and the `login5` part is known as the **head node**. It is the machine (perhaps one of several machines) that everyone is assigned to when they login to the cluster.
+    
+Now type:
 
-If the `srun` command above fails to find a node for you, it may be because there is another class running at the same time and that class is occupying all the nodes assigned to the partition `mcbstudent`. If that happens, try using `--partition=general --qos=general` instead.
+    srun --partition=general --qos=general --pty bash
+    
+This asks the scheduler to find a node (computer) in the cluster that is currently not completely busy. It should transfer your session from the head node to a different node. When it has found a node, you should see a prompt like this:
 
-Once you see the prompt, type
+    [pol02003@cn453 ~]$
 
-    module load paup/4.0a-166
+The `pol02003` is my NetID and the `cn453` part is the **node** (i.e. individual computer) that I was assigned.
 
-This will make the most recent installed version available to you. Without this line, typing `paup` may fail to do anything or may start a version of PAUP* that is (perhaps) years old!
+The reason we are using `srun` today is that some of the analyses we are going to run take more than a few seconds to complete. If all of us ran long jobs on the head node simultaneously, other users would notice significant slowdown in response time, which is very annoying to those other users and might result in some wrist-slapping by the cluster administrators. Thus, we will start developing good habits and will use `srun` to perform our interactive analyses on a node other than the "head node".
+
+I'm assuming you have PAUP* installed in your _bin_ directory. If you haven't installed PAUP* yet, revisit the _Installing PAUP*_ section of the [Using the UConn HPC cluster](/storrshpc/) page.
 
 ## Download a copy of the data file
 
-If you have not already downloaded the  [angio35.nex](https://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/angio35.nex) file, you can recreate it in your current directory as follows:
+Download the _angio35.nex_ file into your current directory on the cluster: 
 
     curl -Ok https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/angio35.nex
 
 ## Create a command file
 
-Now start the nano editor (do not specify a file name because you will be creating a new file) and enter the following text, saving the file as `run.nex`:
+Now start the nano editor (do not specify a file name because you will be creating a new file) and enter the following text:
 
     #nexus
 
@@ -78,10 +84,12 @@ Now start the nano editor (do not specify a file name because you will be creati
         alltrees fd=barchart;
         quit;
     end;
+    
+Type Ctrl-X and save the file as _run.nex_.
 
-While it is possible to put a paup block directly into a data file such as _angio35.nex_, there are at least a couple of advantages to creating a separate NEXUS file like `run.nex` that contains the paup block. First, executing `run.nex` automatically starts a log file so that you will have a record of what you did. Second, it is not a great idea to put commands inside of the data file (_angio35.nex_) itself. Doing so may seem convenient at the time, but you will later forget that executing _angio35.nex_ involves starting a possibly long-running analysis that also may immediately overwrite output files that took a long time to create (if the analysis is indeed long-running).
+While it is possible to put a paup block directly into a data file such as _angio35.nex_, there are at least a couple of advantages to creating a separate NEXUS file like _run.nex_ that contains the paup block. First, executing _run.nex_ automatically starts a log file so that you will have a record of what you did. Second, it is not a great idea to put commands inside of the data file (_angio35.nex_) itself. Doing so may seem convenient at the time, but you will later forget that executing _angio35.nex_ involves starting a possibly long-running analysis that also may immediately overwrite output files that took a long time to create (if the analysis is indeed long-running).
 
-Note that because we used the `replace` keyword in the `log` command, the file `output.txt` will be overwritten without warning if it exists. Yes, this is called _living dangerously_ but saves some frustration if a run must be restarted.
+Note that because we used the `replace` keyword in the `log` command, the file _output.txt_ will be overwritten without warning if it exists. Yes, this is called _living dangerously_ but saves some frustration if a run must be restarted.
 
 The delete command
 
@@ -96,12 +104,14 @@ The `quit` command causes PAUP* to quit.
 Start PAUP*, specifying `run.nex` as the file to execute:
 
     paup run.nex
+    
+(Did PAUP* start? If you got an error message, type `ls ~/bin` to make sure that the PAUP* executable file is named _paup_ and not _paup4a168_centos64_.)   
 
-You will find that you need to type `y` in order to answer the question _Warning: there are unsaved trees. Do you want to quit anyway?_. You can avoid having to answer that question each time you execute _run.nex_ by placing the following just above the line containing the `quit` command:
+You will find that you need to type `y` in order to answer the question (issued by PAUP*) _Warning: there are unsaved trees. Do you want to quit anyway?_. You can avoid having to answer that question each time you execute _run.nex_ by placing the following just above the line containing the `quit` command:
 
     set nowarntsave;
 
-This analysis should finish very quickly because you now have only 5 taxa. The `fd=barchart` setting tells PAUP to output a bar chart showing the distribution parsimony scores. 
+This analysis should finish very quickly because you now have only 5 taxa. The `fd=barchart` setting tells PAUP to output a bar chart showing the distribution of parsimony scores. 
 
 > :thinking: How many separate tree topologies did PAUP* examine? What is the parsimony treelength of the best tree? The worst tree? How many steps separate the best tree from the next best? (consult the bar chart to determine the answer)
 
@@ -127,11 +137,11 @@ Let's do an experiment: perform an NNI heuristic search, starting with the best 
 
 ### Exercise to turn in before the end of lab
 
-_Before you start the NNI search_, use the `showtrees` command to show you the tree obtained from the exhaustive enumeration. (Note that the `quit` command in your `run.nex` file caused PAUP* to quit, so you will need to modify the `run.nex` file, adding the `showtrees` command just before the `quit` command, and run PAUP* again.)
+_Before you start the NNI search_, use the `showtrees` command to show you the tree obtained from the exhaustive enumeration. (Note that the `quit` command in your `run.nex` file caused PAUP* to quit, so you will need to modify the `run.nex` file, adding the `showtrees;` command just before the `quit` command, and run PAUP* again.)
 
 Draw this tree as an **unrooted** tree on a piece of paper, abbreviating the taxa as **E** for _Ephedra_, ***P*** for _Pinus_, ***W*** for _Welwitschia_, ***Gg*** for _Gnetum_ gnemon, and ***Gb*** for _Ginkgo biloba_.
 
-Draw the 4 possible NNI rearrangements (refer to the [description of NNI in your lecture notes (slide 13)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/02-searching-annotated.pdf) if you've forgotten) and label them with the tree number from the PAUP* output (which you shall obtain shortly).
+Draw the 4 possible NNI rearrangements (refer to the [description of NNI in your lecture notes (slide 18)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-01-22-optimality-searching.pdf) if you've forgotten) and label them with the tree number from the PAUP* output (which you shall obtain shortly).
 
 ## Perform an NNI search
 
@@ -165,12 +175,12 @@ As you can see, I've added some
 
     [!comments that begin with an exclamation point]
     
-NEXUS comments that begin with ! are _printable_ comments: they will appear in the _output.txt_ log file, which provides a nice way to document what you did both in the command file as well as the output. The *** at the beginning of each comment is not necessary, but I find it helps to locate my annotations in the output file later.
+NEXUS comments that begin with `!` will appear in the _output.txt_ log file, which provides a nice way to document what you did both in the command file as well as the output. The *** at the beginning of each comment is not necessary, but I find it helps to locate my annotations in the output file later.
     
 The `hsearch` command is broken down as follows:
 * `start=1` starts the search from the tree currently in memory (i.e., the best tree resulting from your exhaustive search using the parsimony criterion)
 * `swap=nni` causes the Nearest-Neighbor Interchange (NNI) method to be used for branch swapping
-* `nbest=15` saves the 15 best trees found during the search. Thus, were PAUP to examine every possible tree, we would end up saving all of them in memory. The reason this command is needed is that PAUP ordinarily does not save trees that are worse than the best one it has seen thus far. Here, we are interested in seeing the trees that are examined during the course of the search, even if they are not as good as the starting tree.
+* `nbest=15` saves the 15 best trees found during the search. Thus, were PAUP to examine every possible tree, we would end up saving all of them in memory. The reason this command is needed is that PAUP ordinarily does not save trees that are worse than the best one it has seen thus far. Here, we are interested in seeing _all_ trees examined during the course of the search, even if they are not as good as the starting tree.
 
 The `describe all` command plots the 5 trees currently in memory. The reason we are using the `describe` command rather than the `showtrees` command is because we want PAUP to show us the numbers it has assigned to the internal nodes, something that `showtrees` doesn't do.
 
@@ -187,22 +197,22 @@ Edge 37-38: tree 4 (Gb <-> E), tree 5 (P <-> E)
 
 ## Find the most parsimonious tree for all 35 taxa 
 
-Modify your _run.nex_ file to conduct a heuristic search on _all 35 taxa_ having the following characteristics:
-* The starting trees are each generated by the stepwise addition method, using random addition of sequences (you will employ the `addseq` and `start` keywords for this)
-* Swap using NNI branch swapping (you will employ the `swap` keyword for this)
-* Set the `nbest` option to `all` because we want to be saving just the best trees, not suboptimal trees (yes, this option is a little confusing).
-* Set the random number seed to 5555 using the `rseed` option (this determines the sequence of pseudorandom numbers used for the random additions; ordinarily you would not need to set the random number seed, but we will do this here to ensure that we all get the same results)
-* Do 500 replicate searches; each replicate represents an independent search starting from a different random-addition tree (you will use the `nreps` keyword for this).
-
 Use the following command to get PAUP to list the options for hsearch:
 
     hsearch ?
+
+Modify your _run.nex_ file to conduct a heuristic search on _all 35 taxa_ having the following characteristics:
+* The starting trees are each generated by the stepwise addition method, using random addition of sequences (you will employ the `addseq` and `start` keywords for this)
+* Swap using NNI branch swapping (you will employ the `swap` keyword for this)
+* Set the `nbest` option to `all` because we want to be saving all (and only) the best trees, not suboptimal trees (yes, this is confusing given how we just used the `nbest` command).
+* Set the random number seed to 5555 using the `rseed` option (this determines the sequence of pseudorandom numbers used for the random additions; ordinarily you would not need to set the random number seed, but we will do this here to ensure that we all get the same results)
+* Do 500 replicate searches; each replicate represents an independent search starting from a different random-addition tree (you will use the `nreps` keyword for this).
 
 {% comment %}
 hsearch start=stepwise addseq=random swap=nni nbest=all rseed=5555 nreps=500;
 {% endcomment %}
 
-Remember you can comment out portions of your Nexus file if you don't want to lose them: e.g.,
+Remember, you can comment out portions of your Nexus file if you don't want to lose them: e.g.,
 
     #nexus
 
@@ -290,9 +300,9 @@ Wondering about this warning?
 
 _Multiple hits on islands of unsaved trees may in fact represent different islands._
 
-When PAUP encounters a new island, it will find all trees composing that particular island in the process of branch swapping. If, in a new search (remember, you are performing 500 searches in each of these runs), it encounters any trees already stored in memory, it knows that it has hit an island that it found previously. Note that it would be pointless to continue on this tack, because it will only find all the trees on that island again. For trees retained in memory, PAUP can keep track of which island they belong to (remember that it is possible for trees with the same parsimony score to be in different tree islands!). But for trees that are not retained in memory, PAUP only knows that it has encountered an island of trees having score X; it has no way of finding out how many islands are actually represented amongst the trees having score X.
+When PAUP* encounters a new island, it will find all trees composing that particular island in the process of branch swapping. If, in a new search (remember, you are performing 500 searches in each of these runs), it encounters any trees already stored in memory, it knows that it has hit an island that it found previously. Note that it would be pointless to continue on this tack, because it will only find all the trees on that island again. For trees retained in memory, PAUP can keep track of which island they belong to (remember that it is possible for trees with the same parsimony score to be in different tree islands!). But for trees that are not retained in memory, PAUP* only knows that it has encountered an island of trees having score X; it has no way of finding out how many islands are actually represented amongst the trees having score X.
 
-> :thinking: Of the three types of branch swapping (NNI, SPR, TBR), which is most thorough (i.e. examines the largest number of tree topologies)? Least thorough? 
+> :thinking: If NNI is used as a reference, how many times more trees were examined by SPR than NNI? (i.e. if NNI explored x rearrangements and SPR explored y rearrangements, report y/x.) How many times more trees were examined by TBR than SPR?
 
 {% comment %}
 Of the three types of branch swapping (NNI, SPR, TBR), which is the most thorough? 

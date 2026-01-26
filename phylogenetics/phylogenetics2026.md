@@ -24,10 +24,10 @@ Warning: This schedule will most likely change quite a few times during the seme
 
 Date               |  Lecture topic                                                  |  Lab/homework
 :----------------: | :-------------------------------------------------------------- | :------------------------
-Tuesday Jan. 20    | **[Trees and optimality criteria](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-01-20-trees-optimality.pdf)**          | **[Homework 1](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2025-01-20-hw1.pdf)**  
+Tuesday Jan. 20    | **[Trees and optimality criteria](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-01-20-trees-optimality.pdf)**          | **[Homework 1](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-01-20-hw1.pdf)**  
 Thursday Jan. 22   | **[Search strategies, consensus trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-01-22-optimality-searching.pdf)** | **Lab 1** [Using the HPC cluster](/storrshpc/)
-Tuesday Jan. 27    | **Distance methods**                                            | **Homework 2**  
-Thursday Jan 29    | **Substitution models**                                         | **Lab 2** Searching
+Tuesday Jan. 27    | **Distance methods**                                            | **[Homework 2](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-01-27-hw2-distance.pdf)**  
+Thursday Jan 29    | **Substitution models**                                         | **Lab 2** [Searching](/searching/)
 Tuesday Feb. 3     | **Substitution models (cont.)**                                 | **Homework 3** 
 Thursday Feb. 5    | **Maximum likelihood criterion**                                | **Lab 3** Estimating parameters using likelihood
 Tuesday Feb. 10    | **Rate heterogeneity**                                          | **Individual Meetings**  

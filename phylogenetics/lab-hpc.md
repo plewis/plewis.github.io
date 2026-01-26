@@ -236,7 +236,7 @@ To delete an entire directory (don't try this now!), you can add the `-rf` flags
 
 The above command would remove everything in the _pauprun_ directory (without asking!), and then remove the _pauprun_ directory itself. I want to stress that `rm -rf` is a **particularly dangerous command**, so make sure you are not distracted or sleep-deprived when you use it! Unlike the Windows or Mac graphical user interface, files deleted using `rm` are **not** moved to the Recycle Bin or Trash, they are just gone. There is **no undo** for the `rm` command.
 
-##  Installing PAUP*
+## Installing PAUP*
 
 The phylogeny program we will use today is called PAUP*. PAUP* is among the first phylogenetic analysis programs produced (1980s), and its developer (David L. Swofford) is still very actively adding to it today. The name PAUP is an acronym that originally stood for Phylogenetic Analysis Using Parsimony. The asterisk was added once PAUP began incorporating likelihood and distance methods in the mid 1990s. PAUP can also be interpreted as a recursive acronym: Phylogenetic Analysis Using PAUP.
 
