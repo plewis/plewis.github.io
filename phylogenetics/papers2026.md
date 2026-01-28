@@ -5,13 +5,15 @@ permalink: /papers2026/
 ---
 Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2026/).
 
-These papers have been cited in previous versions of the course. 
+These papers have been cited in previous versions of the course.
+
+:heavy_check_mark: indicates papers cited in Spring 2026. 
 
 Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
 
 Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. [Bayesian estimation of concordance among gene trees](https://doi.org/10.1093/molbev/msl170). Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy) 
 
-Bandelt, H.-J., and A. W. M. Dress. 1992. Split decomposition: a new and useful approach to phylogenetic analysis of distance data. Molecular Phylogenetics and Evolution 1: 242-252.
+:heavy_check_mark: Bandelt, H.-J., and A. W. M. Dress. 1992. [Split decomposition: a new and useful approach to phylogenetic analysis of distance data.](https://doi.org/10.1016/1055-7903(92)90021-8) Molecular Phylogenetics and Evolution 1: 242-252.
 
 Beaulieu, J. M., and B. C. O'Meara. 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic Biology 65:583-601. 
 
@@ -23,17 +25,17 @@ Blomberg, S. P., J. G. Lefevre, J. A. Wells, and M. Waterhouse. 2012. [Independe
 
 Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). [When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates.](https://doi.org/10.1093/sysbio/syp081) Systematic Biology 59:145–161.
 
-:white_check_mark: Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. Mitochondrial DNA sequences of primates, tempo and mode of evolution. Journal of Molecular Evolution 18:225-239. 
+:heavy_check_mark: Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. [Mitochondrial DNA sequences of primates, tempo and mode of evolution.](https://doi.org/10.1007/BF01734101) Journal of Molecular Evolution 18:225-239. 
 
-:white_check_mark: Buneman, M. 1971. The recovery of trees from measurements of dissimilarity. Pp. 387-395 in Mathematics in the Archeological and Historical Sciences (Hodson, F. R., Kendall, D. G., and Tautu, P., eds.), Edinburgh Univ. Press, Edinburgh. 
+:heavy_check_mark: Buneman, M. 1971. The recovery of trees from measurements of dissimilarity. Pp. 387-395 in Mathematics in the Archeological and Historical Sciences (Hodson, F. R., Kendall, D. G., and Tautu, P., eds.), Edinburgh Univ. Press, Edinburgh. 
 
 Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences in phylogeny. Evolution 19:311-326. (irreversible parsimony)
 
-:white_check_mark: Cavalli-Sforza, L. L., and A. W. F. Edwards. 1967. Evolution 32:550-570. 
+:heavy_check_mark: Cavalli-Sforza, L. L., and A. W. F. Edwards. 1967. [Phylogenetic analysis. Models and estimation procedures.](https://doi.org/10.1111/j.1558-5646.1967.tb03411.x) Evolution 21:550-570. 
 
 Chifman, J., and Kubatko, L. S. 2014. [Quartet Inference from SNP Data Under the Coalescent Model.](http://doi.org/10.1093/bioinformatics/btu530) Bioinformatics 30(23):3317-3324. 
 
-:white_check_mark: Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London. 
+:heavy_check_mark: Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London. 
 
 Dayhoff, M.O., Schwartz, R.M., Orcutt, B.C. 1978. A model for evolutionary change in proteins. Atlas of Protein Sequence and Structure, 5, 345–352. (PAM amino acid model) 
 
@@ -51,7 +53,7 @@ Fan, Y., Wu, R., Chen, M.-H., Kuo, L., and Lewis, P. O. 2011. Molecular Biology 
 
 Farris, J. S. 1989. The retention index and the rescaled consistency index. Cladistics 5: 417-419.
 
-:white_check_mark: Farris, J. S. 1974. [Formal definitions of paraphyly and polyphyly.](https://www.jstor.org/stable/2412474) Systematic Zoology 23:548-554. 
+:heavy_check_mark: Farris, J. S. 1974. [Formal definitions of paraphyly and polyphyly.](https://www.jstor.org/stable/2412474) Systematic Zoology 23:548-554. 
 
 Felsenstein, J. 1973. Maximum likelihood estimation of evolutionary trees from continuous characters. American Journal of Human Genetics 25:471-492.
 
@@ -69,11 +71,11 @@ Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood a
 
 Felsenstein, J. 2004. Inferring phylogenies. Sinauer Associates, Sunderland, MA.
 
-:white_check_mark: Fitch, W. M., and E. Margoliash. 1967. Science 155:279-284. 
+:heavy_check_mark: Fitch, W. M., and E. Margoliash. 1967. [Construction of phylogenetic trees](https://doi.org/10.1126/science.155.3760.279) Science 155:279-284. 
 
 Fitch, W. M., and E. Markowitz. 1970. An improved method for determining codon variability in a gene and its application to the rate of fixation of mutations in evolution. Biochemical Genetics 4: 579–593.
 
-:white_check_mark: Fitch, W. 1971. [Toward defining the course of evolution: minimum change for a specific tree topology.](https://doi.org/10.1093/sysbio/20.4.406) Systematic Zoology 20:406-416.  
+:heavy_check_mark: Fitch, W. 1971. [Toward defining the course of evolution: minimum change for a specific tree topology.](https://doi.org/10.1093/sysbio/20.4.406) Systematic Zoology 20:406-416.  
 
 FitzJohn, R. G. 2010. Quantitative traits and diversification. Systematic Biology 59:619–633. 
 
@@ -93,7 +95,7 @@ Goldman, N., J. P. Anderson, and A. G. Rodrigo. 2000. Likelihood-based tests of 
 
 Gogarten, J. P., H. Kibak, P. Dittrich, L. Taiz, E. J. Bowman, B. J. Bowman, M. F. Manolson, R. J. Poole, T. Date, T. Oshima, J. Konishi, K. Denda, and M. Yoshida. 1989. Evolution of the vacuolar H+-ATPase: Implications for the origin of eukaryotes PNAS 86:6661-6665.
 
-:white_check_mark: Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts. 
+:heavy_check_mark: Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts. 
 
 Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 326:119-157. (first phylogenetic regression model)
 
@@ -123,7 +125,7 @@ Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommod
 
 Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from multilocus data. Molecular Biology and Evolution 27:570-580. (Bayesian species tree estimation) 
 
-:white_check_mark: Huson, D. H., and D. Bryant. 2006. Application of phylogenetic networks in evolutionary studies. Mol. Biol. Evol. 23:254-267. (SplitsTree) 
+:heavy_check_mark: Huson, D. H., and D. Bryant. 2006. [Application of phylogenetic networks in evolutionary studies.](https://doi.org/10.1093/molbev/msj030) Molecular Biology and Evolution 23:254-267. (SplitsTree) 
 
 Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of mutation data matrices from protein sequences. Comput Applic Biosci, 8, 275–282. (JTT amino acid model) 
 
@@ -131,7 +133,7 @@ Jones, C. S., F. T. Bakker, C. D. Schlichting, and A. B. Nicotra. 2009. Leaf sha
 
 Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model) 
 
-:white_check_mark: Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. Phylogenetic analysis: concepts and methods. American Journal of Human Genetics 23: 235-252. 
+:heavy_check_mark: Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. [Phylogenetic analysis: concepts and methods.](https://pmc.ncbi.nlm.nih.gov/articles/PMC1706731/) American Journal of Human Genetics 23: 235-252. 
 
 Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model) 
 
@@ -243,9 +245,9 @@ Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic informa
 
 Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
 
-:white_check_mark: Rzhetsky, A., and Nei, M. 1992. Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference. Journal of Molecular Evolution 35: 367-375. 
+:heavy_check_mark: Rzhetsky, A., and Nei, M. 1992. [Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference.](https://doi.org/10.1007/BF00161174) Journal of Molecular Evolution 35:367-375. 
 
-:white_check_mark: Saitou, N., and M. Nei. 1987. The neighbor-joining method: a new method for reconstructing phylogenetic trees. Molecular Biology and Evolution 4: 406-425. (Neighbor joining method) 
+:heavy_check_mark: Saitou, N., and M. Nei. 1987. [The neighbor-joining method: a new method for reconstructing phylogenetic trees.](https://doi.org/10.1093/oxfordjournals.molbev.a040454) Molecular Biology and Evolution 4:406-425. (Neighbor joining method) 
 
 Sankoff, D. 1975. Minimal mutation trees of sequences. SIAM Journal on Applied Mathematics 28:35-42. (generalized parsimony, step matrices) 
 
@@ -267,7 +269,7 @@ Stamatakis, A. 2006. Phylogenetic models of rate heterogeneity: a high performan
 
 Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
 
-Studier, J. A., and K. J. Keppler. 1988. A note on the neighbor-joining algorithm of Saitou and Nei. Molecular Biology and Evolution 5: 729-731. (Neighbor joining speedup)
+:heavy_check_mark: Studier, J. A., and K. J. Keppler. 1988. [A note on the neighbor-joining algorithm of Saitou and Nei.](https://doi.org/10.1093/oxfordjournals.molbev.a040527) Molecular Biology and Evolution 5:729-731. (Neighbor joining speedup)
 
 Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. Bayesian selection of continuous-time Markov chain evolutionary models. Molecular Biology and Evolution 18:1001-1013. 
 

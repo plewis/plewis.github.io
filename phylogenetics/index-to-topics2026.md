@@ -7,21 +7,37 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2026/).
 
 The following topics were covered in lecture in the Spring 2026 version of EEB 5349 (Phylogenetics). Please refer to the [schedule](/phylogenetics2026/) to find links to the slides for the dates indicated.
 
-consensus trees, Jan-22 
+additivity of distances, Jan-29
+
+consensus trees, Jan-22, Jan-29
 
 evolutionary distance, Jan-22
 
 exhaustive search, Jan-22 
 
+Farris' paraphyly/polyphyly algorithm, Jan-29
+
+Fitch's parsimony algorithm, Jan-29
+
+four-point condition, Jan-29
+
 likelihood criterion, Jan-20 
 
 maximum agreement subtree, Jan-22
  
+monophyly, Jan-29 
+
 nearest-neighbor interchange (NNI) branch swapping, Jan-22 
+
+neighbor-joining (NJ), Jan-29
 
 newick trees, Jan-20 
 
-parsimony criterion, Jan-20 
+paraphyly, Jan-29 
+
+parsimony criterion, Jan-20, Jan-29 
+
+polyphyly, Jan-29 
 
 software, PAUP*, Jan-22
 
@@ -29,6 +45,10 @@ splits, Jan-20
 
 reconnection limit, Jan-22 
 
+split decomposition, Jan-29
+
+splitstree, Jan-29
+ 
 star decomposition, Jan-22 
 
 stepwise addition, Jan-22 
@@ -286,13 +306,9 @@ models, state-dependent diversification (BiSSE, MuSSE, GeoSSE, QuaSSE, HiSSE), A
 
 models, symmetric, Mar-21
 
-monophyly, Jan-16 
-
 nonsynonymous/synonymous rate ratio (omega), Apr-11
 
 point accepted mutation (PAM) unit, Apr-11
-
-paraphyly, Jan-18 
 
 partitioned models, Feb-8
 
@@ -301,8 +317,6 @@ paternity example, Feb-20
 phylogenetically generalized least squares (PGLS), Apr-2
 
 phylogenetically independent contrasts (PIC), Apr-2
-
-polyphyly, Jan-18 
 
 predictive ability of a model, Jan-30
 
