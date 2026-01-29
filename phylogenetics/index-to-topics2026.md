@@ -9,6 +9,10 @@ The following topics were covered in lecture in the Spring 2026 version of EEB 5
 
 additivity of distances, Jan-29
 
+apomorphy, Jan-29
+
+clade, Jan-29
+
 consensus trees, Jan-22, Jan-29
 
 evolutionary distance, Jan-22
@@ -37,6 +41,8 @@ paraphyly, Jan-29
 
 parsimony criterion, Jan-20, Jan-29 
 
+plesiomorphy, Jan-29
+
 polyphyly, Jan-29 
 
 software, PAUP*, Jan-22
@@ -54,6 +60,10 @@ star decomposition, Jan-22
 stepwise addition, Jan-22 
 
 subtree-pruning-regrafting (SPR) branch swapping, Jan-22 
+
+symplesiomorphy, Jan-29
+
+synapomorphy, Jan-29
 
 tree islands, Jan-22 
 
