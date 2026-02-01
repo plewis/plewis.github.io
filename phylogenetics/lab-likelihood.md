@@ -150,6 +150,12 @@ You will be submitting your answers to the questions posed in the boxes labeled 
     Does the model you have selected place all the chlorophyll-b organisms together?
     answer:
 
+    Which model (of the 5 you tested) is best according to AICc?
+    answer:
+
+    Which model (of the 5 you tested) is best according to BIC?
+    answer:
+
 ## Create a directory for this lab
 
 Create a new directory to use for this lab as follows:
@@ -635,7 +641,67 @@ Now, re-issue the `lset` command but, for every parameter that you estimated, ch
 yes!
 {% endcomment %}
 
-This lab is already a bit long, so we will not take time to do it now, but I hope you realize that you could figure out exactly what parameter(s) are needed in the model to get this tree right. JC69 doesn't do it, nor does F81 (as you may have noticed), but it actually doesn't take much beyond JC69 to do the trick.
+## Automodel
+
+You might be exhausted by now, but let's try one last (very useful!) command. 
+
+Use nano to create a new "run" file named _automodel.nex_:
+
+    nano automodel.nex
+    
+Copy and paste the following text into this new file:
+
+    #nexus
+    
+    begin paup;
+        [Start a log file]
+        log start file=pauplog.txt replace;
+    
+        [Read the data]
+        execute algae.nex;
+        
+        [Set up for likelihood]
+        set criterion=likelihood;    
+        
+        [Read in the tree you've been using for model testing]
+        outgroup Anacystis_nidulans;
+        gettrees file=f81.tre;
+        
+        [Test all models at once!]
+        automodel;
+        
+        [Stop logging to pauplog.txt and quit]
+        log stop;
+        quit;    
+    end;
+    
+Run this file in PAUP*:
+
+    paup automodel.nex
+    
+This generates a lot of output, but it is easy to pick out the few models you tested and check
+to ensure that you got the number of parameters and log-likelihood correct when you did things
+the hard way. This table also evaluates models using AICc and BIC.
+
+> :thinking: Which model (of the 5 you tested) is best according to AICc?
+
+{% comment %}
+                     F81         HKY       HKY+I       HKY+G     HKY+I+G
+ ----------- ----------- ----------- ----------- ----------- -----------
+        AICc    6729.284    6572.391    6386.217    6380.656    6381.895
+                     5th         4th         3rd      (best)         2nd
+ ----------- ----------- ----------- ----------- ----------- -----------
+{% endcomment %}
+
+> :thinking: Which model (of the 5  you tested) is best according to BIC?
+
+{% comment %}
+                     F81         HKY       HKY+I       HKY+G     HKY+I+G
+ ----------- ----------- ----------- ----------- ----------- -----------
+         BIC    6805.872    6653.727    6472.296    6466.735    6472.713
+                     5th         4th         2nd      (best)         3rd
+ ----------- ----------- ----------- ----------- ----------- -----------
+{% endcomment %}
 
 {% comment %}
 ## A challenge
