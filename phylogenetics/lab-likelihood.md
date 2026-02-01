@@ -3,7 +3,7 @@ layout: page
 title: Likelihood Lab
 permalink: /likelihood/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2024/)
+[Up to the Phylogenetics main page](/phylogenetics2026/)
 
 ## Goals
 
@@ -11,19 +11,23 @@ The goal of this lab exercise is to show you how to conduct maximum likelihood a
 
 ## Getting started
 
-Login to your account on the Health Center (Xanadu) cluster:
+Login to your account on the Storrs HPC cluster:
 
-    ssh username@xanadu-submit-ext.cam.uchc.edu
+    ssh hpc
     
 Type the following:
 
-    srun --partition=mcbstudent --qos=mcbstudent --pty bash
+    srun -p general -q general --pty bash
+    
+If you get tired of typing all this, you can create an alias by opening the _.bashrc_ file in your home directory:
 
-to start a session on a node that is not currently running jobs. Once you see the prompt, type
+    nano ~/.bashrc
+    
+and typing the following (you can make it the first line of the file):
 
-    module load paup/4.0a-166
-
-to load the paup module.
+    alias gensrun='-p general -q general --pty bash'
+    
+Save the _.bashrc_ file and you can simply type `gensrun` to run the `srun` command the next time you login to the cluster!
 
 ## Create a text file in which to save answers
 
