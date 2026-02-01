@@ -169,6 +169,8 @@ Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian p
 
 Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65(6):1009-1023. 
 
+Lockhart, P. J., M. A. Steel, M. D. Hendy, and D. Penny. 1994. [Recovering evolutionary trees under a more realistic model of sequence evolution.](https://doi.org/10.1093/oxfordjournals.molbev.a040136) Molecular Biology and Evolution 11:605–612.
+
 Lovette, I. J., and E. Bermingham. 1999. Explosive speciation in the New World Dendroica warblers. Proc. R. Soc. Lond. B 266:1629-1636. 
 
 Maddison, W. P. 1997. Gene trees in species trees. Systematic Biology 46:523–536.
