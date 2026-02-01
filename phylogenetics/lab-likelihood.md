@@ -54,7 +54,7 @@ You will be submitting your answers to the questions posed in the boxes labeled 
     What parameters are being estimated using the F81 model?
     answer:
     
-    Does this model fit the data better than the "empirical base frequencies" version of the F81 model? 
+    Does this model fit the data better than the "empirical base frequencies" version of the F81 model?  What information did you use to come to your conclusion?
     answer:
     
     What is the MLE of the transition/transversion ratio under the HKY85 model? 
@@ -170,9 +170,9 @@ If you remember from lecture, adding more parameters to a model to account for d
 
 ![Accepted phylogeny placing chl. a+b taxa together](https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/lockhart-figure.png)
 
-**The accepted phylogeny** (based on much evidence besides these data) **places all the chlorophyll-b-containing plastids together** (Lockhart 1994). 
+**The accepted phylogeny** (based on much evidence besides these data) **places all the chlorophyll-b-containing plastids together** (Lockhart et al. 1994). 
 
-Thus, there **should be a branch** in the tree separating all taxa from the **two that do not have chlorophyll b**, namely the cyanobacterium **_Anacystis_** (which has chlorophyll a and phycobilin accessory pigments) and the straminopyle **_Olithodiscus_** (which has chlorophylls a and c).
+Thus, there **should be a branch** in the tree separating all chlorophyll-b-containing taxa (circled in the figure above) from the **two taxa that do not have chlorophyll b**, namely the cyanobacterium **_Anacystis_** (which has chlorophyll a and phycobilin accessory pigments) and the straminopyle **_Olithodiscus_** (which has chlorophylls a and c).
 
 ## Obtain the maximum likelihood tree under the F81 model
 
@@ -193,7 +193,7 @@ Execute _run.nex_ in PAUP* (i.e. type `paup run.nex` on the command line). Becau
 
     showtrees;
 
-One problem is that the tree is drawn in such a way that it appears to be rooted within the flowering plants (tobacco and rice). Specifying the cyanobacterium _Anacystis_ as the outgroup makes more sense biologically:
+One problem is that the tree is drawn in such a way that it appears to be rooted within the flowering plants (tobacco and rice). Specifying the cyanobacterium _Anacystis_ as the outgroup makes more sense biologically. To set this, type the following at the `paup>` prompt:
 
     outgroup Anacystis_nidulans;
     showtrees;
@@ -270,6 +270,8 @@ I would like to recommend that, instead of typing commands at the `paup>` prompt
         quit;
     end;
 
+(Be sure to type `q` to exit PAUP* before typing `nano run.nex` to edit this file.)
+
 You'll notice that I've commented out [using square brackets] everything from the `hsearch` command through saving the tree file. We need not do the search over again every time we run this file because the tree and branch lengths resulting from this search are already saved in the file _f81.tre_.
 
 You will also notice that I added a quit command at the end. This causes PAUP* to quit after executing all the commands in the paup block, saving you the trouble of typing `quit` in order to edit the _run.nex_ file in preparation for the next step.
@@ -308,7 +310,7 @@ Base frequencies:
 16: 3 base frequencies plus 13 branch lengths
 {% endcomment %}
 
-> :thinking: Does this model fit the data better than the "empirical base frequencies" version of the F81 model? 
+> :thinking: Does this model fit the data better than the "empirical base frequencies" version of the F81 model? What information did you use to come to your conclusion?
 
 {% comment %}
 yes, -3348.341 > -3351.789
@@ -318,11 +320,17 @@ yes, -3348.341 > -3351.789
 
 Switch to the HKY85 model now and estimate the transition/transversion ratio along with the base frequencies. The way you specify the HKY model in PAUP* is to tell it you want a model with 2 substitution rate parameters (`nst=2`), and that you want to estimate the base frequencies (`basefreq=estimate`) and the transition/transversion ratio (`tratio=estimated`). Note that these specifications also apply to the F84 model, so if you wanted PAUP* to use the F84 model, you would need to add `variant=f84` to the `lset` command.
 
+    [F81 model with estimated base frequencies]
+    [lset basefreq=estimate;]
+    [lscores 1;]
+
     [HKY85 model]
     lset nst=2 basefreq=estimate tratio=estimate;
     lscores 1;
+    
+(Note that I commented out the code for the F81 model.)
  
-> :thinking: What is the MLE of the transition/transversion ratio under the HKY85 model? 
+> :thinking: What is the MLE (maximum likelihood estimate) of the transition/transversion ratio under the HKY85 model? 
 
 {% comment %}
 1.888760
@@ -366,7 +374,7 @@ The transition/transversion ratio (tratio) is the (expected number of transition
 
 ## Estimate the proportion of invariable sites
 
-Now ask PAUP* to estimate pinvar, the proportion of invariable sites, using the command `lset pinvar=estimate`. The HKY85 model with among-site rate heterogeneity modeled using the two-category invariable sites approach is called the HKY85+I model.
+Now ask PAUP* to estimate pinvar, the proportion of invariable sites, by adding `pinvar=estimate` to your existing `lset` command. The HKY85 model with among-site rate heterogeneity modeled using the two-category invariable sites approach is called the HKY85+I model.
 
 > :thinking: What is the MLE of pinvar under the HKY85+I model? 
 
@@ -400,10 +408,9 @@ It is possible for a site to show no change if the substitution rate is small bu
 
 ## Estimate the heterogeneity in rates among sites
 
-Now set `pinvar=0` and tell PAUP* to use the discrete gamma distribution with 5 rate categories. Here are the commands for doing this all in one step:
+Now change `pinvar=estimate` to `pinvar=0` in your `lset` command and tell PAUP* to use the discrete gamma distribution with 5 rate categories. Here are the commands for doing this all in one step:
 
-    lset pinvar=0 rates=gamma ncat=5 shape=estimate;
-    lscores 1;
+    ;
 
 The HKY85 model with among-site rate heterogeneity modeled using the discrete gamma approach is called the HKY85+G model.
 
@@ -466,18 +473,26 @@ In this section, you will perform some simple likelihood ratio tests to decide w
 
 ### Determining significance
 
-A model having k parameters can always attain a higher likelihood than any model having fewer than k parameters that is nested within it (you should be able to explain why this is true), so the question we will be asking is whether more complex (i.e. more parameter-rich) models fit _significantly_ better than simpler nested models. To do this we will assume that the likelihood ratio test statistic LR (equal to twice the difference in log-likelihoods) has the same distribution as a chi-squared random variable with degrees of freedom (d.f.) equal to the difference in the number of estimated parameters in the two models. (A parameter whose value is fixed or which can be determined from the values of other parameters doesn't count as an estimated parameter.)
+A model having k parameters can always attain a higher likelihood than any model having fewer than k parameters that is nested within it (you should be able to explain why this is true), so the question we will be asking is whether more complex (i.e. more parameter-rich) models fit _significantly_ better than simpler nested models. To do this we will assume that the likelihood ratio test statistic LR (equal to **twice the difference in log-likelihoods**) has the same distribution as a chi-squared random variable with degrees of freedom (d.f.) equal to the difference in the number of estimated parameters in the two models. (A parameter whose value is fixed or which can be determined from the values of other parameters doesn't count as an estimated parameter.)
 
 {% include figure.html description="Chi-squared plot (df=3) showing 5% tail region" url="/assets/img/chisq.png" css="image-right noborder" width="400px" %}
 
-To be specific, we would like to know whether LR falls inside the 5% right tail of the chi-squared distribution (see figure to the right for an example). If it does, then it should be considered an unusually large value of LR; i.e. not a LR value that would normally arise (i.e. falls within the interval that accounts for 95% of the probability distribution) if the models were equivalent explanations of the data. 
+To be specific, we would like to know whether the LR test statistic falls inside the 5% right tail of the chi-squared distribution (see figure to the right for an example). If it does, then it should be considered an unusually large value of LR; i.e. not a LR value that would normally arise (i.e. falls within the interval that accounts for 95% of the probability distribution) if the models were equivalent explanations of the data. 
 
-We can use R to do the calculation for us. As with PAUP*, the default version of R is old, so load a recent version and start it (`module avail` will show you all available versions of all available software if you are curious):
+We can use R to do the calculation for us. R is available as a _module_ on the cluster. To load this module, be sure you have exited PAUP* and type:
 
-    module load R/3.6.1
+    module load r
+    
+You should see a response like this:
+
+    Loading r/4.5.2
+      Loading requirement: gcc/14.2.0
+      
+Now type `R` to start R:
+
     R
 
-Suppose LR = 6.91 (the difference in log likelihood between the models is 3.455) and d.f. = 1 (one parameter differs between the models). To ask R to tell us what fraction of the 1 d.f. chi-square distribution is to the left of 6.91, use the `pchisq` (chi-squared cumulative probability) command:
+Suppose LR = 6.91 (twice the difference in log likelihood between the models, which is 3.455) and d.f. = 1 (one parameter differs between the models). To ask R to tell us what fraction of the chi-square distribution (with 1 degree of freedom) is to the left of 6.91, use the `pchisq` (chi-squared cumulative probability) command:
 
     pchisq(6.91, df=1)
     
@@ -493,15 +508,19 @@ To find the critical value, you can use the `qchisq` (chi-squared quantile) comm
     
 This tells us the specific value that we have to exceed in order to be significant. In this case (when d.f.=1), it is 3.841459.
 
+To escape R, type `q()` and then answer `n` when asked if you want to save the workspace image.
+
 ### What parameters make the fit of the model significantly better?
 
-The model with which we will begin is the F81 model with estimated base frequencies. Compare this F81 model to the HKY85 model, which differs from the F81 model only in the fact that it allows transitions and transversions to occur at different rates.
+The model we will begin with is the F81 model with estimated base frequencies. Compare this F81 model to the HKY85 model, which differs from the F81 model only in the fact that it allows transitions and transversions to occur at different rates.
 
-**To calculate the likelihood ratio test statistic LR, subtract the log-likelihood of the less complex model from that of the more complex model and multiply by 2**. This will give you a positive number. If you ever get a negative LR statistic, it means you have the models in the wrong order.
+**To calculate the likelihood ratio test statistic LR, subtract the log-likelihood of the less complex model from that of the more complex model and multiply by 2**. This will give you a positive number. If you ever get a negative LR test statistic, it means you have the models in the wrong order.
 
 You should have all the numbers you need to perform these likelihood ratio tests. If, however, you have not written some of them down, and thus need to redo some of these analyses, you might need to know how to turn off rate heterogeneity using the following command:
 
     lset rates=equal pinvar=0;
+    
+It will help if you create a table that lists the (maximized) log-likelihood and number of free parameters for the models F81, HKY, HKY+I, HKY+G, and HKY+I+G before you start trying to answer the questions below.
     
 > :thinking: What is the likelihood ratio test statistic for F81 vs. HKY85? 
 
@@ -592,12 +611,12 @@ Now, re-issue the `lset` command but, for every parameter that you estimated, ch
         set criterion=likelihood;
         
         [Estimate HKY85+I+G arameters on a neighbor-joining tree]
-        lset nst=2 basefreq=estimate tratio=estimate rates=gamma shape=estimate pinvar=estimate;
+        lset nst=2 basefreq=estimate tratio=estimate rates=gamma ncat=5 shape=estimate pinvar=estimate;
         nj;
         lscores 1;
         
         [Fix parameters at their estimated values]
-        lset nst=2 basefreq=previous tratio=previous rates=gamma shape=previous pinvar=previous;
+        lset nst=2 basefreq=previous tratio=previous rates=gamma ncat=5 shape=previous pinvar=previous;
         
         [Perform heuristic search under the HKY85+I+G model]
         hsearch;
