@@ -416,7 +416,8 @@ It is possible for a site to show no change if the substitution rate is small bu
 
 Now change `pinvar=estimate` to `pinvar=0` in your `lset` command and tell PAUP* to use the discrete gamma distribution with 5 rate categories. Here are the commands for doing this all in one step:
 
-    ;
+    lset nst=2 basefreq=estimate tratio=estimate pinvar=0 rates=gamma ncat=5 shape=estimate;
+    lscores 1;
 
 The HKY85 model with among-site rate heterogeneity modeled using the discrete gamma approach is called the HKY85+G model.
 
