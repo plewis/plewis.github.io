@@ -59,7 +59,7 @@ Felsenstein, J. 1973. Maximum likelihood estimation of evolutionary trees from c
 
 Felsenstein, J. 1978. [Cases in which parsimony or compatibility methods will be positively misleading.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 27:401-410. (Characterized the long branch attraction problem) 
 
-Felsenstein, J. 1981. [Evolutionary trees from DNA sequences: a maximum likelihood approach.](https://doi.org/10.1007/BF01734359)  Journal of Molecular Evolution 17:368-376. (F81 model, pruning algorithm, origin of likelihood-based phylogenetics) 
+:heavy_check_mark: Felsenstein, J. 1981. [Evolutionary trees from DNA sequences: a maximum likelihood approach.](https://doi.org/10.1007/BF01734359)  Journal of Molecular Evolution 17:368-376. (F81 model, pruning algorithm, origin of likelihood-based phylogenetics) 
 
 Felsenstein, J. 1983. Statistical inference of phylogenies. Journal of the Royal Statistical Society A 146:246-272. (LRT of molecular clock)
 
@@ -103,7 +103,7 @@ Green, P. J. 1995. Reversible jump Markov chain Monte Carlo computation and Baye
 
 Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evolution 48:523-529. 
 
-Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model) 
+:heavy_check_mark: Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model) 
 
 Hastings, W. K. 1970. Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109. (Hastings ratio) 
 
@@ -131,13 +131,13 @@ Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of m
 
 Jones, C. S., F. T. Bakker, C. D. Schlichting, and A. B. Nicotra. 2009. Leaf shape evolution in the South African genus _Pelargonium_ L'Hér. (Geraniaceae). International Journal of Organic Evolution 63:479-497. 
 
-Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model) 
+:heavy_check_mark: Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model) 
 
 :heavy_check_mark: Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. [Phylogenetic analysis: concepts and methods.](https://pmc.ncbi.nlm.nih.gov/articles/PMC1706731/) American Journal of Human Genetics 23: 235-252. 
 
-Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model) 
+:heavy_check_mark: Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model) 
 
-Kishino, H., and M. Hasegawa. 1989. Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea. Journal of Molecular Evolution 29: 170-179. (F84 model, KH test) 
+:heavy_check_mark: Kishino, H., and M. Hasegawa. 1989. Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea. Journal of Molecular Evolution 29: 170-179. (F84 model, KH test) 
 
 Kishino, H., J. L. Thorne, and W. J. Bruno. 2001. Performance of a divergence time estimation method under a probabilistic model of rate evolution. Molecular Biology and Evolution 18:352-361.
 
@@ -149,7 +149,7 @@ Kolaczkowski, B., and J. W. Thornton. 2008. [A mixed branch length model of hete
 
 Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population history. Trends Ecol. Evol. 24:86-93. 
 
-Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model) 
+:heavy_check_mark: Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model) 
 
 Larget, B., and D. L. Simon. 1999. Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees. Molecular Biology and Evolution 16: 750-759. (see also Holder et al. 2005) 
 
@@ -278,6 +278,8 @@ Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. Bayesian selection of c
 Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O., and Rogers, J. S. 2001. Bias in Phylogenetic Estimation and Its Relevance to the Choice between Parsimony and Likelihood Methods. Systematic Biology, 50(4), 525–539.
 
 Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup) 
+
+:heavy_check_mark: Tavaré, S. 1986. Some probabilistic and statistical problems in the analysis of DNA sequences. Lectures on Mathematics in the Life Sciences 17:57-86.
 
 Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
 
