@@ -25,7 +25,7 @@ If you get tired of typing all this, you can create an alias by opening the _.ba
     
 and typing the following (you can make it the first line of the file):
 
-    alias gensrun='-p general -q general --pty bash'
+    alias gensrun='srun -p general -q general --pty bash'
     
 Save the _.bashrc_ file and you can simply type `gensrun` to run the `srun` command the next time you login to the cluster!
 
@@ -617,7 +617,7 @@ Now, re-issue the `lset` command but, for every parameter that you estimated, ch
         execute algae.nex;
         set criterion=likelihood;
         
-        [Estimate HKY85+I+G arameters on a neighbor-joining tree]
+        [Estimate HKY85+I+G parameters on a neighbor-joining tree]
         lset nst=2 basefreq=estimate tratio=estimate rates=gamma ncat=5 shape=estimate pinvar=estimate;
         nj;
         lscores 1;
