@@ -21,14 +21,34 @@ exhaustive search, Jan-22
 
 Farris' paraphyly/polyphyly algorithm, Jan-29
 
+Felsenstein (1981) model (F81), Feb-5
+
+Felsenstein (1984) model (F84), Feb-5
+
 Fitch's parsimony algorithm, Jan-29
 
 four-point condition, Jan-29
 
-likelihood criterion, Jan-20 
+general time-reversible model (GTR), Feb-5
+
+Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-5
+
+independence of events, Feb-5
+
+Kimura (1980) 2-parameter model (K2P, K80), Feb-3
+
+likelihood (criterion), Jan-20 
+
+likelihood (single sequence), Feb-5
+
+likelihood (evolutionary distance), Feb-5
+
+likelihood, vs. probability, Feb-5
 
 maximum agreement subtree, Jan-22
  
+maximum likelihood estimate (MLE), Feb-5
+
 monophyly, Jan-29 
 
 nearest-neighbor interchange (NNI) branch swapping, Jan-22 
@@ -45,11 +65,23 @@ plesiomorphy, Jan-29
 
 polyphyly, Jan-29 
 
+probability, "and" rule, Feb-5
+
+probability, conditional, Feb-5
+
+probability, joint, Feb-5
+
+probability, "or" rule, Feb-5
+
+probability, vs. likelihood, Feb-5
+
+rate matrix (instantaneous), Feb-3
+
+reconnection limit, Jan-22 
+
 software, PAUP*, Jan-22
 
 splits, Jan-20 
-
-reconnection limit, Jan-22 
 
 split decomposition, Jan-29
 
@@ -64,6 +96,14 @@ subtree-pruning-regrafting (SPR) branch swapping, Jan-22
 symplesiomorphy, Jan-29
 
 synapomorphy, Jan-29
+
+transition (substitution type), Feb-3
+
+transition-transversion rate ratio, Feb-3
+
+transition-transversion ratio, Feb-3
+
+transversion (substitution type), Feb-3
 
 tree islands, Jan-22 
 
@@ -184,10 +224,6 @@ extinction rate, Apr-23
 
 evolutionary correlation, Mar-26
 
-Felsenstein (1981) model (F81), Feb-1
-
-Felsenstein (1984) model (F84), Feb-1
-
 fence analogy (truncated priors), Mar-5
 
 fossilized birth-death process, Apr-16
@@ -204,11 +240,7 @@ gamma, Pybus and Harvey, Apr-23
 
 gene trees, Mar-7
 
-general time-reversible model (GTR), Feb-1
-
 genetic code, Apr-11
-
-Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-1
 
 heated chains (MCMC), Feb-22
 
@@ -217,8 +249,6 @@ heterotachy, Feb-8, Apr-18
 hyperparameter, Mar-5
 
 hyperprior, Mar-5
-
-independence of events, Feb-6
 
 induced prior, Mar-5
 
@@ -234,17 +264,9 @@ K, Blomberg's, Apr-4
 
 kernel density estimation, Feb-27
 
-Kimura (1980) 2-parameter model (K2P, K80), Feb-1
-
 lambda, Pagel's, Apr-4
 
-likelihood (single sequence), Feb-6
-
-likelihood (evolutionary distance), Feb-6
-
 likelihood ratio test, Feb-6
-
-likelihood, vs. probability, Feb-20
 
 lineage-through-time (LTT) plots, Apr-23
 
@@ -253,8 +275,6 @@ marginal likelihood, Feb-20, Feb-29
 marginal likelihood (steppingstone method, Feb-29
 
 Markov model, Jan-30
-
-maximum likelihood estimate (MLE), Feb-6
 
 Markov-chain Monte Carlo (MCMC), Feb-22
 
@@ -342,21 +362,13 @@ prior, induced split, Mar-5
 
 prior, polytomy, Mar-26
 
-probability, "and" rule, Feb-6
-
-probability, conditional, Feb-6
-
 probability, density, Feb-20
-
-probability, joint, Feb-6
 
 probability, marginal, Feb-6
 
 probability, mass vs. density, Feb-20
 
 probability, no coalescence, Mar-7
-
-probability, "or" rule, Feb-6
 
 probability, prior, Feb-20
 
@@ -365,8 +377,6 @@ probability, posterior, Feb-20
 probability, support, Mar-5
 
 probability, total, Feb-6
-
-probability, vs. likelihood, Feb-20
 
 pruning algorithm, Feb-8
 
@@ -412,8 +422,6 @@ rare disease example, Feb-20
 
 rate heterogeneity, Feb-8
 
-rate matrix (instantaneous), Feb-1
-
 simulation, Feb-15
 
 sojourn time, Mar-28
@@ -431,14 +439,6 @@ trace plots, Feb-22
 traffic accidents Poisson example, Mar-21
 
 transition probabilities, Jan-30
-
-transition (substitution type), Feb-1
-
-transition-transversion rate ratio, Feb-1
-
-transition-transversion ratio, Feb-1
-
-transversion (substitution type), Feb-1
 
 turnover, Apr-23
 
