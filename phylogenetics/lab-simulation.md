@@ -3,15 +3,32 @@ layout: page
 title: Simulation Lab
 permalink: /simulation/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2024/)
+[Up to the Phylogenetics main page](/phylogenetics2026/)
 
 ## Goals
 
 The goal of this lab is to gain experience simulating DNA sequence data, which can be useful in testing null hypotheses of interest (parametric bootstrapping) as well as testing the robustness of models to violations of their assumptions and testing the correctness of software and algorithms. The workhorse for DNA simulations in phylogenetics is Andrew Rambaut's program [seq-gen](http://tree.bio.ed.ac.uk/software/seqgen/), which still available (and still as useful as it always was!), but today we will use PAUP* to perform a simulation experiment to demonstrate the phenomenon known as long branch attraction.
 
-As always, start by logging into the Xanadu cluster and grabbing a node on the cluster that is free:
+## Getting started
 
-    srun --qos=mcbstudent --partition=mcbstudent --pty bash
+Login to your account on the Storrs HPC cluster and start an interactive slurm session:
+
+    ssh hpc
+    gensrun
+        
+If `gensrun` fails, you can create the `gensrun` alias by opening the _.bashrc_ file in your home directory:
+
+    nano ~/.bashrc
+    
+and typing the following (you can make it the first line of the file):
+
+    alias gensrun='srun -p general -q general --pty bash'
+    
+Save the _.bashrc_ file and enter the following command (from within your home directory) to load the _.bashrc_ file (and thus load the `gensrun` alias):
+
+    . .bashrc
+
+The initial `.` means "read the following file". There should be a space between that initial `.` and `.bashrc`.
 
 ## Create a directory for this exercise
 
@@ -75,7 +92,6 @@ it in with your answers after the lab.
     What fraction of sites are essentially invariable?
     answer: 
 
-{% comment %}  
 ## Using Seq-Gen to simulate sequence data
 
 ### Compiling seq-gen
@@ -160,19 +176,17 @@ The `HOME` part is an environmental variable that substitutes in your home direc
 
 > :thinking: Take a look at the file seq-gen generated. Can you explain why nearly every site shows evidence of substitution? (hint1: look at the branch lengths specified in the true tree)
 
-{comment}
+{% comment %}
 all 9 branch lengths are 1, which means that, on average, there will be 9 substitutions at every site over the entire tree, so it is not surprising that there are no constant sites.
-{endcomment}
+{% endcomment %}
 
 Modify your _sg.sh_ specifying a branch length scaling factor of 0.0001 and rerun it.
 
 > :thinking: Take a look at the file seq-gen generated. How many sites would you expect to look at before seeing one that shows evidence of substitution? (hint: I'm not asking you to count constant sites! You can answer this using the true tree branch lengths and scaling factor)
 
-{comment}
+{% comment %}
 Now all 9 branch lengths are 0.0001, so we expect only 0.0009 substitutions per site over the tree, which translates to 1 substitution every 1111 sites.
-{endcomment}
-
-{% endcomment %}  
+{% endcomment %}
 
 ## Using PAUP* to perform simulation experiments
 
