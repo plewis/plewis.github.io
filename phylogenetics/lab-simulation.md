@@ -7,7 +7,54 @@ permalink: /simulation/
 
 ## Goals
 
-The goal of this lab is to gain experience simulating DNA sequence data, which can be useful in testing null hypotheses of interest (parametric bootstrapping) as well as testing the robustness of models to violations of their assumptions and testing the correctness of software and algorithms. The workhorse for DNA simulations in phylogenetics is Andrew Rambaut's program [seq-gen](http://tree.bio.ed.ac.uk/software/seqgen/), which still available (and still as useful as it always was!), but today we will use PAUP* to perform a simulation experiment to demonstrate the phenomenon known as long branch attraction.
+The goal of this lab is to gain experience simulating DNA sequence data, which can be useful in testing null hypotheses of interest (parametric bootstrapping) as well as testing the robustness of models to violations of their assumptions and testing the correctness of software and algorithms. The workhorse for DNA simulations in phylogenetics is Andrew Rambaut's program [seq-gen](http://tree.bio.ed.ac.uk/software/seqgen/), which still available (and still as useful as it always was!)
+{% comment %}
+, but today we will use PAUP* to perform a simulation experiment to demonstrate the phenomenon known as long branch attraction.
+{% endcomment %}
+
+## Template
+
+Here is a template with the questions asked below. Copy this into a text file and turn
+it in with your answers after the lab.
+
+    Can you explain why nearly every site shows evidence of substitution?
+    answer:
+
+    How many sites would you expect to look at before seeing one that shows evidence of substitution?
+    answer:
+
+    How many data sets did seq-gen simulate?
+    answer:
+
+    What part of the seq-gen command told it to generate this many data sets?
+    answer:
+
+    How many trees obtained using the parsimony criterion have a topology identical to the true tree?
+    answer:
+
+    How many trees obtained using the likelihood criterion have a topology identical to the true tree?
+    answer:
+
+    What split characterizes the true tree: AB|CD, AC|BC, or AD|BC?
+    answer:
+
+    What split characterizes the first parsimony tree: AB|CD, AC|BC, or AD|BC?
+    answer:
+
+    How many parsimony trees were AB|CD? AC|BD? AD|BC?
+    answer:
+
+    Explain why this phenomenon is called long branch attraction.
+    answer:
+
+    How many likelihood trees were AB|CD? AC|BD? AD|BC?
+    answer:
+
+    How many likelihood trees were AB|CD? AC|BD? AD|BC when rate heterogeneity was present?
+    answer:
+
+    Is likelihood susceptible to LBA if the model is incorrect in an important way?
+    answer:    
 
 ## Getting started
 
@@ -28,7 +75,7 @@ Save the _.bashrc_ file and enter the following command (from within your home d
 
     . .bashrc
 
-The initial `.` means "read the following file". There should be a space between that initial `.` and `.bashrc`.
+The initial `.` means "read the following file". There should be a space between the initial `.` and `.bashrc`.
 
 ## Create a directory for this exercise
 
@@ -37,66 +84,11 @@ First, create a directory to use for this lab and navigate into that directory:
     mkdir simlab
     cd simlab
     
-## Template
-
-Here is a template with the questions asked below. Copy this into a text file and turn
-it in with your answers after the lab.
-
-    What substitution model will PAUP* use?
-    answer:
-    
-    Did both optimality criteria get the tree correct most of the time?
-    answer: 
-    
-    Which optimality criterion performed best at recovering the true tree?
-    answer: 
-
-    Which (parsimony or ML) appears to be statistically consistent? Why?
-    answer: 
-
-    How did you modify your paupsimFZ.nex file in order to accomplish this?
-    answer: 
-
-    Is ML statistically consistent when the model is violated in this way? Why? 
-    answer: 
-
-    Make all branches in the true tree long (e.g. 10). 
-    What is the proportion of constant sites? 
-    answer: 
-
-    How many substitutions are simulated, on average, per 
-    site over the entire tree?
-    answer: 
-
-    Make all branches in the true tree short (e.g. 0.001). 
-    What is the proportion of constant sites? 
-    answer: 
-
-    How many substitutions are simulated, on average, per 
-    site over the entire tree?
-    answer: 
-
-    Make all branches in the true tree 10 but add significant 
-    rate heterogeneity (gamma shape 0.01). What about the
-    proportion of constant sites now? 
-    answer: 
-
-    How many substitutions are simulated, on average, per site 
-    over the entire tree? 
-    answer: 
-
-    To which of the previous 2 simulated data sets is this data 
-    set most similar in terms of the proportion of constant sites? 
-    answer: 
-
-    What fraction of sites are essentially invariable?
-    answer: 
-
 ## Using Seq-Gen to simulate sequence data
 
 ### Compiling seq-gen
 
-There is no module for seq-gen on the Xanadu cluster, so you will need to download the source code and compile it yourself. In the [IQ-TREE lab](/iqtree/), you learned how to download and unpack an _executable_ file, but seq-gen is different in that what you will download is the _source code_ (written in the computing language C), which needs to be compiled into an executable file before it can be used.
+The seq-gen program is not installed on the cluster, so you will need to download the source code and compile it yourself. What you will download is the **source code** (written in the computing language C), which needs to be compiled into an **executable file** before it can be used.
 
 Download the seq-gen source code from GitHub using the following curl command:
 
@@ -106,7 +98,11 @@ Unpack the downloaded "tape archive" file _1.3.4.tar.gz_ as follows:
 
     tar zxvf 1.3.4.tar.gz
     
-You should now have a directory named Seq-Gen-1.3.4 inside your _simlab_ directory. Navigate into the _source_ subdirectory of the new _Seq-Gen-1.3.4_ directory:
+You should now have a directory named Seq-Gen-1.3.4 inside your _simlab_ directory. You can now delete the _1.3.4.tar.gz_ file:
+
+    rm 1.3.4.tar.gz
+
+Navigate into the _source_ subdirectory of the new _Seq-Gen-1.3.4_ directory:
 
     cd Seq-Gen-1.3.4/source
     
@@ -114,25 +110,28 @@ There is a file inside this directory named _Makefile_ that contains instruction
 
     make
 
-The C compiler will "compile" (note the <tt>-c</tt> on the command line) all the files ending in <tt>.c</tt> (including, as necessary, the files ending in <tt>.h</tt>), producing files with the same prefix but ending in <tt>.o</tt>. You can ignore the warning that is issued along the way (errors are harder to ignore, but fortunately there should be no errors). These "object" files are then linked together (note the <tt>-o</tt> rather than <tt>-c</tt> this time) in the final step to create the executable file, which is named _seq-gen_. Move the executable file back to the _simlab_ directory so that it is easier to use for this lab:
+The C compiler will **compile** (note the <tt>-c</tt> on the command line) all the files ending in <tt>.c</tt> (including, as necessary, the files ending in <tt>.h</tt>), producing **object** files with the same prefix but ending in <tt>.o</tt>. You can ignore the warning that is issued along the way (errors are harder to ignore, but fortunately there should be no errors). These object files are then linked together (note the <tt>-o</tt> rather than <tt>-c</tt> this time) in the final step to create the executable file, which is named _seq-gen_. 
 
-    mv seq-gen ~/simlab
+It is customary to store executable files in a directory named _bin_ (bin is short for binary because an executable file is just a sequence of 1s and 0s). You should already have a _bin_ directory (you earlier copied the paup executable file there), so now move the seq-gen executable file into your _~/bin_ directory so that it is easier to use for this lab:
+
+    mv seq-gen ~/bin
+    
+Once you've moved _seq-gen_ to your _bin_ directory, you can delete the _Seq-Gen-1.3.4_ directory:
+
     cd ~/simlab
+    rm -rf Seq-Gen-1.3.4
+    
+The `-rf` part of the remove (`rm`) command says to delete files recursively (`-r`) and forcibly (`-f`). The "forcibly" part means that rm will not ask if it is OK to delete any file it finds, it will just delete it. The recursive part is necessary because this is a directory and rm will not do anything with a directory unless you specify that the removal is recursive.
     
 ### Viewing the seq-gen documentation
 
 The documentation is in the form of an HTML file, _Seq-Gen.Manual.html_, which is located in the _Seq-Gen-1.3.4/documentation_ directory. It is not that convenient to view web pages on the cluster, so you may wish to download the [zip file version](https://github.com/rambaut/Seq-Gen/archive/refs/tags/1.3.4.zip) to your local laptop in order to get the file _Seq-Gen.Manual.html_ where you can open it in a web browser.
 
-That said, you _can_ read this file while on the cluster using the `lynx` command:
-
-    cd Seq-Gen-1.3.4/documentation
-    lynx Seq-Gen.Manual.html
-    
-Type Q to quit when you've seen enough.
-
 ### Using seq-gen
 
-Return to the _simlab_ directory now, where your _seq-gen_ executable is located. 
+Return to the _simlab_ directory now:
+
+    cd ~/simlab 
 
 Using nano, create a file named _tree.txt_ that contains the following single line:
 
@@ -140,8 +139,8 @@ Using nano, create a file named _tree.txt_ that contains the following single li
     
 Now, create a file named _sg.sh_ containing the following:
 
-    $HOME/simlab/seq-gen -mHKY -l10000 -n1 -p1 -t2.0 -on < tree.txt > simdata.nex
-
+    seq-gen -mHKY -l10000 -n1 -p1 -on < tree.txt > simdata.nex
+    
     # -mHKY                       use the HKY substitution model
     #                             (HKY, F84, GTR, JTT, WAG, PAM, BLOSUM, MTREV, CPREV or GENERAL)
     # -l10000                     sequence length (number of sites to simulate)
@@ -154,25 +153,34 @@ Now, create a file named _sg.sh_ containing the following:
     # -i0.5                       proportion of invariable sites
     # -z123579                    random number seed
     # -on                         output format (on=nexus, op=phylip, or=relaxed phylip)
+    # -x paupblock.txt            insert contents of the file paupblock.txt after each simulated data set
     # -s1.0                       branch length scaling factor (1.0 says to not scale branch lengths at all)
     #
-    # tree.txt
-    #
+    # tree.txt should look something like this:
     # (A:1.0,B:1.0,((C:1.0,D:1.0):1.0,(E:1.0,F:1.0):1.0):1.0)
+    #
+    # paupblock.txt, if used, should look something like this:
+    # begin paup;
+    #   set crit=like;
+    #   lset nst=1 basefreq=equal rates=equal;
+    #   hsearch;
+    # end;
     
-Most of the contents of this file are comments (lines starting with <tt>#</tt>). I included those as a sort of cheat-sheet for using seq-gen to save having to look some things up in the manual.
+Most of the contents of this file are comments (lines starting with `#`). I included those as a sort of cheat-sheet for using seq-gen to save having to look everything up in the manual.
 
-You will need to execute the command at the top of this file, and the easiest way to run Linux commands that are stored in a file is to "source" the file:
+You will need to execute the command on the first line of the _sg.sh_ file, and the easiest way to run Linux commands that are stored in a file is to "source" the file:
 
     . sg.sh
     
-The initial dot tells the bash interpreter to simply issue the commands found in the following "shell script" file as if you typed them into the console. You could skip the creation of _sg.sh_ in the first place by simply issuing the command on the command line, like this:
+The initial dot tells the bash interpreter to simply issue the commands found in the following "shell script" file as if you typed them into the console. 
 
-    $HOME/simlab/seq-gen -mHKY -l10000 -n1 -p1 -t2.0 -a0.5 -on < tree.txt > simdata.nex
+You could skip the creation of _sg.sh_ in the first place by simply issuing the command on the command line, like this:
+
+    seq-gen -mHKY -l10000 -n1 -p1 -on < tree.txt > simdata.nex
     
 I showed you how to store the command in a file because that provides a record of what you did and allows you to easily modify the command and run it again.
 
-The `HOME` part is an environmental variable that substitutes in your home directory where it is invoked (by preceding it with `$`). For example, `$HOME` would be replaced with `/home/FCAM/eeb5349/usr14` for me since I am using the `eeb5349usr14` account. You can see what `HOME` holds by typing the command `echo $HOME`. 
+Note: if the _sg.sh_ file fails to run, it may be because the system cannot find the _seq-gen_ executable file. Try replacing `seq-gen` in the _sg.sh_ script with `$HOME/bin/seq-gen`. If this works, it means that something went wrong when you worked through the section on [Creating your own bin directory](/storrshpc/#creating-your-own-bin-directory) in the first lab of the semester. Feel free to ask one of us for help getting your _bin_ directory set up correctly.
 
 > :thinking: Take a look at the file seq-gen generated. Can you explain why nearly every site shows evidence of substitution? (hint1: look at the branch lengths specified in the true tree)
 
@@ -188,186 +196,235 @@ Modify your _sg.sh_ specifying a branch length scaling factor of 0.0001 and reru
 Now all 9 branch lengths are 0.0001, so we expect only 0.0009 substitutions per site over the tree, which translates to 1 substitution every 1111 sites.
 {% endcomment %}
 
-## Using PAUP* to perform simulation experiments
+## Analyzing multiple simulated data sets
 
-We will be using cutting-edge features in PAUP* -- so cutting edge that you will not be able to find any information about these features anywhere online or by using the <tt>help</tt> command in PAUP*! So don't get confused when you try to look up some of the components of the NEXUS file you will be using.  
+Ordinarily, simulation studies involve analyzing hundreds if not thousands of simulated data sets to make overall trends discoverable. Let's use seg-gen to generate several simulated data sets and analyze each with PAUP* under the parsimony and likelihood criteria.
 
-### Simulation Template
+Using nano, replace the contents of your _tree.txt_ file with the following single line:
 
-Create an empty text file named _paupsim.nex_:
+    (A:0.05,B:0.05,(C:0.05,D:0.05):0.05)
 
-    #nexus
+Now, replace the first line of your _sg.sh_ file with this (note: only the first, uncommented line matters):
 
-    begin trees;
-        tree 1 = ((A:0.1,B:0.1):0.1,(C:0.1,D:0.1):0);
-    end;
+    seq-gen -mHKY -l1000 -n10 -p1 -on -x paupblock.txt < tree.txt > simdata.nex
 
-    begin dnasim;
-        simdata nchar=10000;
-        lset nst=1 basefreq=equal rates=equal pinvar=0;
-        truetree source=memory treenum=1 showtruetree=brlens;
-        beginsim nreps=100 seed=12345 monitor=no resultsfile=(name=results.txt replace output=allreps);
-            [parsimony]
-                set criterion=parsimony;
-                alltrees;
-                tally parsimony;
-            [likelihood]
-                set criterion=likelihood;
-                alltrees;
-                tally 'ML-JC';
-        endsim; 
-    end;
+Finally, use nano to create a file named _paupblock.txt_ with these contents:
 
     begin paup;
-        set nowarntsave;
-        quit;
+      set crit=parsimony;
+      hsearch;
+      savetrees file=parsimony-results.tre format=newick brlens append;
+      set crit=likelihood;
+      hsearch;
+      savetrees file=likelihood-results.tre format=newick brlens append;
     end;
+
+Run _sg.sh_ as before:
+
+    . sg.sh
     
-The <tt>trees</tt> block contains the description of the true tree that we will use to simulate data. By default, trees are considered unrooted.
+Use the `tail` command to see the last 20 lines of the file _simdata.nex_:
 
-The <tt>beginsim...endsim</tt> loop in the <tt>dnasim</tt> block tells PAUP* to simulate 100 nucleotide data sets (<tt>nreps=100</tt>). 
+    tail -n 20 simdata.nex    
 
-> :thinking: What substitution model will PAUP* use? (hint: the <tt>lset</tt> command specifies the model.)
+> :thinking: How many data sets did seq-gen simulate? (Hint: seq-gen reports this number in a comment after "Begin DATA;", but you may need to scroll up a bit to see it)
 
 {% comment %}
-JC (no rate heterogeneity)
+10
 {% endcomment %}
 
-For each of the 100 data sets simulated, two analyses will be performed: (1) an exhaustive search using parsimony and (2) and exhaustive search using maximum likelihood. I've added the <tt>[parsimony]</tt> and <tt>[likelihood]</tt> comments along with indentation to show you where these two searches are defined. 
+> :thinking: What part of the seq-gen command told it to generate this many data sets?
 
-The <tt>tally</tt> commands keep track of how many times parsimony and ML infer a tree identical to the true tree used for simulation, and the tallied information is stored in the file <tt>results.txt</tt>. The name supplied after the tally command will end up being the column name in the file. Note that I had to surround the <tt>ML-JC</tt> with single quotes because of the embedded hyphen. (The quotes would also be necessary if you wanted a space inside the column name.)
+{% comment %}
+-n10
+{% endcomment %}
 
-For both parsimony and ML, tally calculates the following quantities (where NAME is either "parsimony" or "ML-JC"):
-* NAME_Ntrees, the number of trees tied for being best (ideally 1)
-* NAME_P, the fraction of splits in the true tree that were found in the inferred tree (averaged over number of trees inferred)
-* NAME_correct, same as NAME_P if no incorrect splits are found in the inferred tree, otherwise 0 (averaged over number of trees inferred)
+Run _simdata.nex_ in PAUP*:
 
-The final paup block sets nowarntsave, which means PAUP will not warn you if you quit without saving stored trees, then quits.
-
-### Execute the NEXUS File
-
-Log on to the cluster, start a session using
-
-    srun --partition=mcbstudent --qos=mcbstudent --pty bash
+    paup -L logfile.txt simdata.nex
     
-then load the current module of PAUP*
-
-    module load paup/4.0a-166
+You will need to type `q` at PAUP*'s prompt to get out of PAUP*.
     
-Start PAUP*, and execute your NEXUS file: 
+Type `paup --help` to see what the command line switch `-L` does.
 
-    paup paupsim.nex
+## Downloading result files from the cluster to your laptop
 
-Note that PAUP* quits after performing the simulations (because we told it to quit in that final paup block). You can also view the _results.txt_ file directly in your terminal by typing 
+We need to view the two files _parsimony-results.tre_ and _likelihood-results.tre_ in FigTree on your local laptop, but currently these files are in the _~/simlab_ directory on the cluster. If you prefer the graphical interface of Cyberduck, you are welcome to use that method to transfer these two files and skip the rest of this section.
 
-    column -t results.txt
+If you want to learn about a command-line way to transfer an entire directory from the cluster to your laptop, read on!
+
+in a terminal console **on your laptop**, type the following (be careful to enter this exactly as written: don't let your console automatically fill in a `/` character after `simlab`!):
+
+    rsync -azPv hpc:simlab .
     
-The <tt>-t</tt> makes the columns align. 
+This will transfer the entire _simlab_ directory on the cluster to the current directory. The `rsync` program is very efficient, compressing each file before sending and then uncompressing it again on your laptop.
 
-> :thinking: Did both optimality criteria get the tree correct most of the time?
+The reason I asked you to be careful is that placing a slash at the end of a directory name in an `rsync` command can be somewhat disastrous if you didn't intend to place the slash there. A slash on the end of a directory tells `rsync` to transfer just the **contents** of the directory, not the directory itself. So, if you had 1000 files in your _simlab_ directory on the cluster and you typed `hpc:simlab/` rather than `hpc:simlab`, you would end up with 1000 files dumped into your current directory instead of a single directory **containing** 1000 files.
 
-{% comment %}
-Yes, both got it right 100 percent of the time
-{% endcomment %}
+If, for some reason, you wanted to copy a directory named _tmp_ from your local laptop to the cluster, your rsync command would be:
 
-### Enter the Felsenstein Zone
-
-As you've learned in lecture, parsimony is particularly prone to long branch attraction while maximum likelihood is able to resist joining long edges if the model is correct in the important details. Copy your NEXUS file to create a file named _paupsimFZ.nex_. Edit the new file and change two edge lengths to 1.0 in order to create a true tree that falls in the Felsenstein zone. Also change the name of the results.txt file to _resultsFZ.txt_ so that you will not overwrite your previous results.
-
-Execute _paupsimFZ.nex_, then `cat` the new _resultsFZ.txt_ file and consider the results of your simulations.
-
-> :thinking: Which optimality criterion performed best at recovering the true tree?
-
-{% comment %}
-ML-JC
-{% endcomment %}
-
-Change the <tt>simdata nchar=10000;</tt> line to <tt>simdata nchar=(100 1000 10000);</tt> and change <tt>output=allreps</tt> to <tt>output=meansonly</tt>. Now PAUP* will simulate data sets of 3 different sequence lengths and summarize the results rather than spitting out a line for every simulation replicate.
-
-> :thinking: Which (parsimony or ML) appears to be statistically consistent? Why?
-
-{% comment %}
-ML because it has convergence as an explanation for similarity whereas parsimony can only explain similarity by inhertitance
-{% endcomment %}
-
-Add substantial rate **HETERO**geneity (e.g. gamma shape = 0.01) to the simulated data and analyze the data under both parsimony and ML (using a model that assumes rate **HOMO**geneity). 
-
-> :thinking: How did you modify your paupsimFZ.nex file in order to accomplish this?
-
-{% comment %}
-changed "rates=equal" to "rates=gamma shape=0.01" in the "lset" command
-added "lset rates=equal" after "set criterion=likelihood" in the likelihood section of the beginsim...endsim section
-{% endcomment %}
-
-> :thinking: Is ML statistically consistent when the model is violated in this way? Why? (hint: think about which data are hard to model accurately with high heterogeneity) 
-
-{% comment %}
-no, assuming rate homogeneity results in underestimation of edge lengths, which in turn makes it easier for ML to misinterpret convergent similarity as similarity due to inheritance from the common ancestor.
-{% endcomment %}
-
-## Saving Simulated Data
-
-Can you figure out how to change your orignal paupsim.nex file (with no rate heterogenity) so that PAUP* simulates one data set and exports it to a file? Start PAUP* and use 
-
-    export ?
+    rsync -azPv tmp hpc:
     
-to figure out how to use the export command to save the simulated data to a file. You will want to delete both the parsimony and ML analysis code between the beginsim and endsim lines and replace it with your export command. You should also add a <tt>cstatus</tt> command to help answer the questions about proportion of constant sites.
+The first thing after the `-azPv` is the "from" location; the second thing is the "to" location. Using `hpc:` specifies that the location is on the remote cluster (the `hpc` part comes from the alias you set up in your _~/.ssh/config_ file, and the `:` separates the remote machine specification from the location relative to your home directory on the remote machine).
+    
+The `-azPv` part means:
+* `a` archive mode (i.e. you want to recursively transfer everything under the target)
+* `z` compress files being transferred (greatly speeds up the transfer)
+* `P` keep partially transferred files and show progress during transfer
+* `v` verbose mode (show what is happening)
 
-You will also probably want to make these other changes to your file:
-* specify only 1 sequence length (e.g. <tt>nchar=1000</tt>)
-* specify only 1 simulation replicate (i.e. <tt>nreps=1</tt>)
-* specify that you want to see output (i.e. <tt>monitor=yes</tt>) 
+You will always use these four options, so you may want to create an alias in your _.bashrc_ file (both on your local laptop and on the cluster) that keeps you from having to remember them:
 
-> :thinking: Make all branches in the true tree long (e.g. 10). What is the proportion of constant sites? 
+    alias rsync='rsync -azPv'
+    
+With the alias in place, you can just type:
 
-{% comment %}
-proportion of constant = 0.01
-{% endcomment %}
+    rsync hpc:simlab .
+    
+## How did parsimony and likelihood do?
 
-> :thinking: How many substitutions are simulated, on average, per site over the entire tree?
+Open _parsimony-results.tre_ in FigTree on your local laptop and flip through the trees.
 
-{% comment %}
-expected number of substitutions per site over entire tree is 50
-{% endcomment %}
-
-> :thinking: Make all branches in the true tree short (e.g. 0.001). What is the proportion of constant sites? 
-
-{% comment %}
-proportion of constant = 0.997
-{% endcomment %}
-
-> :thinking: How many substitutions are simulated, on average, per site over the entire tree?
+> :thinking: How many trees obtained using the parsimony criterion have a topology identical to the true tree?
 
 {% comment %}
-expected number of substitutions per site over entire tree is 0.005
+10
 {% endcomment %}
 
-> :thinking: Make all branches in the true tree 10 but add significant rate heterogeneity (gamma shape 0.01). What about the proportion of constant sites now? 
+Open _likelihood-results.tre_ in FigTree on your local laptop and flip through the trees.
+
+> :thinking: How many trees obtained using the likelihood criterion have a topology identical to the true tree?
 
 {% comment %}
-proportion of constant = 0.917
+10
 {% endcomment %}
 
-> :thinking: How many substitutions are simulated, on average, per site over the entire tree? 
+## Long branch attraction and the Felsenstein zone
+
+In addition to inventing the field of likelihood-based phylogenetics (Felsenstein 1981), Joe Felsenstein published an earlier paper in 1978 that created quite a stir for quite some time titled "Cases in which parsimony or compatibility methods will be positively misleading." This is the paper that first considered the phenomenon of **long branch attraction** (**LBA**).
+
+Let's demonstrate LBA using simulation. Using nano, replace the contents of your _tree.txt_ file with the following single line:
+
+    (A:0.5,B:0.05,(C:0.05,D:0.5):0.05)
+
+Before going further, copy this tree description and paste it into FigTree to see what this tree looks like. The key is that this tree has two unrelated edges that are an order of magnitude longer than all other edges in the tree.
+
+> :thinking: What split characterizes the true tree: AB|CD, AC|BC, or AD|BC?
 
 {% comment %}
-expected number of substitutions per site over entire tree is 50
+AB|CD
 {% endcomment %}
 
-> :thinking: To which of the previous 2 simulated data sets is this data set most similar in terms of the proportion of constant sites? 
+Replace the contents of your _sg.sh_ file with this (I've left out the comments this time):
+
+    seq-gen -mHKY -l1000 -n1000 -p1 -on -x paupblock.txt < tree.txt > simdata.nex
+
+Note that I've set `-n1000` instead of `-n10` this time and have specified a random number seed `-z12345`. Please replace the random number seed above with one of your choosing (try to think of one that no one else will think of) so that we all get different results. We can increase our sample size from 1000 to N*1000 by combining results from N people.
+
+Before running _simdata.nex_ in PAUP*, delete your _logfile.txt_, _likelihood-results.tre_ and _parsimony-results.tre_ files so that we don't mix results from two different analyses:
+
+    rm logfile.txt likelihood-results.tre parsimony-results.tre
+    
+Run PAUP* as before:
+
+    paup -L logfile.txt simdata.nex
+
+This time, let's avoid the tedium of actually counting how many trees were estimated correctly by using PAUP*'s `treedist` command. You should still be in PAUP* (evidenced by the prompt `paup>`). If you quit paup, start it up again without specifying a data file by typing just `paup`.
+
+Load the trees from _parsimony-results.tre_ into PAUP*:
+
+    paup> gettrees file-parsimony-results.tre
+    
+PAUP* should respond by saying `100 trees read from file`. Take a look at the first tree in the file:
+
+    paup> showtrees 1
+
+> :thinking: What split characterizes the first parsimony tree: AB|CD, AC|BC, or AD|BC?
 
 {% comment %}
-It is most similar to the tree having very short branches 0.001
+probably AD|BC, but since everyone is using a different seed, they might see something different
 {% endcomment %}
 
-Start PAUP* (without specifying a data file) and use the <tt>gammaplot shape=0.01</tt> command to examine the rate means for the four categories of rates. 
+Calculate the Robinson-Foulds distance between that first tree and all the others in the file:
 
-> :thinking: What fraction of sites are essentially invariable?
+    paup> treedist reftree=1
+    
+You will see an RF distance of 0 for every tree that is identical to tree 1 and 2 for every tree that differs from tree 1. The reason that the RF distance will be 2 is that it counts the number of splits in the reference tree that are not in the focal tree (i.e. 1) and adds to that the number of splits in the focal tree that are absent from the reference tree (i.e. 1) to give a sum of 2.
+
+If, for example, tree 69 had a distance of 2 from the reference tree, see what that tree looks like:
+
+    paup> showtree 69
+    
+Using this method, tally the number of trees with each of the tree possible splits.
+
+> :thinking: How many parsimony trees were AB|CD? AC|BD? AD|BC?
+
+Note: trees with a distance of 2 may not all be the same. You can run `treedist` again with a different `reftree` to verify that all the 2s in the list are actually the same tree.
 
 {% comment %}
-75 percent of sites (3 of the 4 categories) are expected to have rate essentially 0.0 when shape = 0.01.
+I got:
+     1 AB|CD
+     0 AC|BD
+    99 AD|BC
 {% endcomment %}
 
-## Acknowledgements
+> :thinking: Explain why this phenomenon is called long branch attraction.
 
-Kevin Keegan contributed to a previous version of this lab exercise
+{% comment %}
+The true tree was AB|CD but edges leading to A and D were much longer than the others. Parsimony results in the AD|BC tree most of the time, incorrectly making the taxa at the ends of the two long edges sister taxa.
+{% endcomment %}
+
+> :thinking: How many likelihood trees were AB|CD? AC|BD? AD|BC?
+
+{% comment %}
+I got:
+    99 AB|CD
+     1 AC|BD
+     0 AD|BC
+{% endcomment %}
+
+## Is likelihood immune from LBA?
+
+I don't want to leave you with the notion that likelihood is immune from problems such as LBA.
+
+Revise your _sg.sh_ file to contain this seq-gen command:
+
+    seq-gen -mHKY -l1000 -n1000 -p1 -t2.0 -on -x paupblock.txt -z12345 -a0.1 < tree.txt > simdata.nex
+    
+The only thing I've added is `-a0.1` which adds a considerable amount of among-site rate heterogeneity to the model used to simulate the data. This means that many sites will evolve very slowly but some sites will evolve very quickly (the overall mean rate is the same). We will not tell the likelihood model used by PAUP* about this rate heterogeneity, so the analysis model will assume that every site evolves under the same rate.
+
+Run _sg.sh_ to generate _simdata.nex_ anew.
+    
+Be sure to delete or rename your _logfile.txt_, _likelihood-results.tre_, and _parsimony-results.tre_ files before running PAUP* and analyzing the results.
+
+> :thinking: How many likelihood trees were AB|CD? AC|BD? AD|BC when rate heterogeneity was present?
+
+{% comment %}
+I got:
+    17 AB|CD
+     5 AC|BD
+    78 AD|BC
+{% endcomment %}
+
+> :thinking: Is likelihood susceptible to LBA if the model is incorrect in an important way?
+
+{% comment %}
+yes!
+{% endcomment %}
+
+## Using the contree command to summarize splits
+
+Even using the `treedist` command is both tedius and error-prone. Let me show you one other way to tally the results of these simulations. Start PAUP*, read in the trees from the _likelihood-results.tre_ file, and compute a majority-rule consensus tree:
+
+    paup
+    paup> gettrees file=likelihood-results.tre
+    paup> contree all / nostrict majrule
+    
+Note the table at the bottom of the output that summarizes all splits. Since these are 4-taxon trees, there is only one internal split per tree, so the numbers in this table equate to the number of trees having a particular topology.
+
+# Literature Cited
+
+Felsenstein, J. 1978. [Cases in which parsimony or compatibility methods will be positively misleading.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 27:401-410. 
+
+Felsenstein, J. 1981. [Evolutionary trees from DNA sequences: a maximum likelihood approach.](https://doi.org/10.1007/BF01734359)  Journal of Molecular Evolution 17:368-376.
+
