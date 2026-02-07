@@ -228,9 +228,9 @@ Ordinarily, simulation studies involve analyzing hundreds if not thousands of si
 
     . sg.sh
     
-:large_blue_diamond: Use the `tail` command to see the last 20 lines of the file _simdata.nex_:
+:large_blue_diamond: Use the `tail` command to see the last 30 lines of the file _simdata.nex_:
 
-    tail -n 20 simdata.nex    
+    tail -n 30 simdata.nex    
 
 > :thinking: How many data sets did seq-gen simulate? (Hint: seq-gen reports this number in a comment after "Begin DATA;", but you may need to scroll up a bit to see it)
 
@@ -323,7 +323,7 @@ Let's demonstrate LBA using simulation.
 
 The key is that this tree has two unrelated edges that are an order of magnitude longer than all other edges in the tree.
 
-> :thinking: What split characterizes the true tree: AB|CD, AC|BC, or AD|BC?
+> :thinking: What split characterizes the true tree: AB\|CD, AC\|BC, or AD\|BC?
 
 {% comment %}
 AB|CD
