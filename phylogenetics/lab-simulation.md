@@ -8,9 +8,8 @@ permalink: /simulation/
 ## Goals
 
 The goal of this lab is to gain experience simulating DNA sequence data, which can be useful in testing null hypotheses of interest (parametric bootstrapping) as well as testing the robustness of models to violations of their assumptions and testing the correctness of software and algorithms. The workhorse for DNA simulations in phylogenetics is Andrew Rambaut's program [seq-gen](http://tree.bio.ed.ac.uk/software/seqgen/), which still available (and still as useful as it always was!)
-{% comment %}
-, but today we will use PAUP* to perform a simulation experiment to demonstrate the phenomenon known as long branch attraction.
-{% endcomment %}
+
+I use a :large_blue_diamond: emoji below to indicate something you should do. Hopefully this will make it easier for you to see what to do next (as opposed to commentary on what you just did or notes).
 
 ## Template
 
@@ -58,7 +57,7 @@ it in with your answers after the lab.
 
 ## Getting started
 
-Login to your account on the Storrs HPC cluster and start an interactive slurm session:
+:large_blue_diamond: Login to your account on the Storrs HPC cluster and start an interactive slurm session:
 
     ssh hpc
     gensrun
@@ -79,7 +78,7 @@ The initial `.` means "read the following file". There should be a space between
 
 ## Create a directory for this exercise
 
-First, create a directory to use for this lab and navigate into that directory:
+:large_blue_diamond: Create a directory to use for this lab and navigate into that directory:
 
     mkdir simlab
     cd simlab
@@ -90,11 +89,11 @@ First, create a directory to use for this lab and navigate into that directory:
 
 The seq-gen program is not installed on the cluster, so you will need to download the source code and compile it yourself. What you will download is the **source code** (written in the computing language C), which needs to be compiled into an **executable file** before it can be used.
 
-Download the seq-gen source code from GitHub using the following curl command:
+:large_blue_diamond: Download the seq-gen source code from GitHub using the following curl command:
 
     curl -LO https://github.com/rambaut/Seq-Gen/archive/refs/tags/1.3.4.tar.gz
     
-Unpack the downloaded "tape archive" file _1.3.4.tar.gz_ as follows:
+:large_blue_diamond: Unpack the downloaded "tape archive" file _1.3.4.tar.gz_ as follows:
 
     tar zxvf 1.3.4.tar.gz
     
@@ -102,21 +101,25 @@ You should now have a directory named Seq-Gen-1.3.4 inside your _simlab_ directo
 
     rm 1.3.4.tar.gz
 
-Navigate into the _source_ subdirectory of the new _Seq-Gen-1.3.4_ directory:
+:large_blue_diamond: Navigate into the _source_ subdirectory of the new _Seq-Gen-1.3.4_ directory:
 
     cd Seq-Gen-1.3.4/source
     
-There is a file inside this directory named _Makefile_ that contains instructions for building seq-gen from the C source files (which are the files with names that end in either <tt>.c</tt> or <tt>.h</tt>). All you need to do now is type make to process these instructions:
+There is a file inside this directory named _Makefile_ that contains instructions for building seq-gen from the C source files (which are the files with names that end in either <tt>.c</tt> or <tt>.h</tt>). 
+
+:large_blue_diamond: All you need to do now is type make to process these instructions:
 
     make
 
 The C compiler will **compile** (note the <tt>-c</tt> on the command line) all the files ending in <tt>.c</tt> (including, as necessary, the files ending in <tt>.h</tt>), producing **object** files with the same prefix but ending in <tt>.o</tt>. You can ignore the warning that is issued along the way (errors are harder to ignore, but fortunately there should be no errors). These object files are then linked together (note the <tt>-o</tt> rather than <tt>-c</tt> this time) in the final step to create the executable file, which is named _seq-gen_. 
 
-It is customary to store executable files in a directory named _bin_ (bin is short for binary because an executable file is just a sequence of 1s and 0s). You should already have a _bin_ directory (you earlier copied the paup executable file there), so now move the seq-gen executable file into your _~/bin_ directory so that it is easier to use for this lab:
+It is customary to store executable files in a directory named _bin_ (bin is short for binary because an executable file is just a sequence of 1s and 0s). You should already have a _bin_ directory (you earlier copied the paup executable file there).
+
+:large_blue_diamond: Move the seq-gen executable file into your _~/bin_ directory so that it is easier to use for this lab:
 
     mv seq-gen ~/bin
     
-Once you've moved _seq-gen_ to your _bin_ directory, you can delete the _Seq-Gen-1.3.4_ directory:
+:large_blue_diamond: You can now delete the _Seq-Gen-1.3.4_ directory:
 
     cd ~/simlab
     rm -rf Seq-Gen-1.3.4
@@ -129,15 +132,15 @@ The documentation is in the form of an HTML file, _Seq-Gen.Manual.html_, which i
 
 ### Using seq-gen
 
-Return to the _simlab_ directory now:
+:large_blue_diamond: Return to the _simlab_ directory now:
 
     cd ~/simlab 
 
-Using nano, create a file named _tree.txt_ that contains the following single line:
+:large_blue_diamond: Using nano, create a file named _tree.txt_ that contains the following single line:
 
     (A:1.0,B:1.0,((C:1.0,D:1.0):1.0,(E:1.0,F:1.0):1.0):1.0)
     
-Now, create a file named _sg.sh_ containing the following:
+:large_blue_diamond: Now, create a file named _sg.sh_ containing the following:
 
     seq-gen -mHKY -l10000 -n1 -p1 -on < tree.txt > simdata.nex
     
@@ -168,7 +171,7 @@ Now, create a file named _sg.sh_ containing the following:
     
 Most of the contents of this file are comments (lines starting with `#`). I included those as a sort of cheat-sheet for using seq-gen to save having to look everything up in the manual.
 
-You will need to execute the command on the first line of the _sg.sh_ file, and the easiest way to run Linux commands that are stored in a file is to "source" the file:
+:large_blue_diamond: You will need to execute the command on the first line of the _sg.sh_ file, and the easiest way to run Linux commands that are stored in a file is to "source" the file:
 
     . sg.sh
     
@@ -188,7 +191,9 @@ Note: if the _sg.sh_ file fails to run, it may be because the system cannot find
 all 9 branch lengths are 1, which means that, on average, there will be 9 substitutions at every site over the entire tree, so it is not surprising that there are no constant sites.
 {% endcomment %}
 
-Modify your _sg.sh_ specifying a branch length scaling factor of 0.0001 and rerun it.
+:large_blue_diamond: Modify your _sg.sh_ specifying a branch length scaling factor of 0.0001 and rerun it.
+
+    seq-gen -mHKY -l10000 -n1 -p1 -on -s.0001 < tree.txt > simdata.nex
 
 > :thinking: Take a look at the file seq-gen generated. How many sites would you expect to look at before seeing one that shows evidence of substitution? (hint: I'm not asking you to count constant sites! You can answer this using the true tree branch lengths and scaling factor)
 
@@ -200,15 +205,15 @@ Now all 9 branch lengths are 0.0001, so we expect only 0.0009 substitutions per 
 
 Ordinarily, simulation studies involve analyzing hundreds if not thousands of simulated data sets to make overall trends discoverable. Let's use seg-gen to generate several simulated data sets and analyze each with PAUP* under the parsimony and likelihood criteria.
 
-Using nano, replace the contents of your _tree.txt_ file with the following single line:
+:large_blue_diamond: Using nano, replace the contents of your _tree.txt_ file with the following single line:
 
     (A:0.05,B:0.05,(C:0.05,D:0.05):0.05)
 
-Now, replace the first line of your _sg.sh_ file with this (note: only the first, uncommented line matters):
+:large_blue_diamond: Now, replace the first line of your _sg.sh_ file with this (note: only the first, uncommented line matters):
 
     seq-gen -mHKY -l1000 -n10 -p1 -on -x paupblock.txt < tree.txt > simdata.nex
 
-Finally, use nano to create a file named _paupblock.txt_ with these contents:
+:large_blue_diamond: Finally, use nano to create a file named _paupblock.txt_ with these contents:
 
     begin paup;
       set crit=parsimony;
@@ -219,11 +224,11 @@ Finally, use nano to create a file named _paupblock.txt_ with these contents:
       savetrees file=likelihood-results.tre format=newick brlens append;
     end;
 
-Run _sg.sh_ as before:
+:large_blue_diamond: Run _sg.sh_ as before:
 
     . sg.sh
     
-Use the `tail` command to see the last 20 lines of the file _simdata.nex_:
+:large_blue_diamond: Use the `tail` command to see the last 20 lines of the file _simdata.nex_:
 
     tail -n 20 simdata.nex    
 
@@ -239,7 +244,7 @@ Use the `tail` command to see the last 20 lines of the file _simdata.nex_:
 -n10
 {% endcomment %}
 
-Run _simdata.nex_ in PAUP*:
+:large_blue_diamond: Run _simdata.nex_ in PAUP*:
 
     paup -L logfile.txt simdata.nex
     
@@ -247,9 +252,13 @@ You will need to type `q` at PAUP*'s prompt to get out of PAUP*.
     
 Type `paup --help` to see what the command line switch `-L` does.
 
-## Downloading result files from the cluster to your laptop
+:large_blue_diamond: Download the two files _parsimony-results.tre_ and _likelihood-results.tre_ to your local laptop using either Cyberduck or the `scp` command. The `scp` command would look something like this (type this into a terminal on your **local laptop**):
 
-We need to view the two files _parsimony-results.tre_ and _likelihood-results.tre_ in FigTree on your local laptop, but currently these files are in the _~/simlab_ directory on the cluster. If you prefer the graphical interface of Cyberduck, you are welcome to use that method to transfer these two files and skip the rest of this section.
+    scp hpc:simlab/parsimony-results.tre .
+    scp hpc:simlab/likelihood-results.tre .
+
+{% comment %}
+## Using rsync to copy whole directories 
 
 If you want to learn about a command-line way to transfer an entire directory from the cluster to your laptop, read on!
 
@@ -280,10 +289,11 @@ You will always use these four options, so you may want to create an alias in yo
 With the alias in place, you can just type:
 
     rsync hpc:simlab .
+{% endcomment %}
     
 ## How did parsimony and likelihood do?
 
-Open _parsimony-results.tre_ in FigTree on your local laptop and flip through the trees.
+:large_blue_diamond: Open _parsimony-results.tre_ in FigTree on your local laptop and flip through the trees.
 
 > :thinking: How many trees obtained using the parsimony criterion have a topology identical to the true tree?
 
@@ -291,7 +301,7 @@ Open _parsimony-results.tre_ in FigTree on your local laptop and flip through th
 10
 {% endcomment %}
 
-Open _likelihood-results.tre_ in FigTree on your local laptop and flip through the trees.
+:large_blue_diamond: Open _likelihood-results.tre_ in FigTree on your local laptop and flip through the trees.
 
 > :thinking: How many trees obtained using the likelihood criterion have a topology identical to the true tree?
 
@@ -303,11 +313,15 @@ Open _likelihood-results.tre_ in FigTree on your local laptop and flip through t
 
 In addition to inventing the field of likelihood-based phylogenetics (Felsenstein 1981), Joe Felsenstein published an earlier paper in 1978 that created quite a stir for quite some time titled "Cases in which parsimony or compatibility methods will be positively misleading." This is the paper that first considered the phenomenon of **long branch attraction** (**LBA**).
 
-Let's demonstrate LBA using simulation. Using nano, replace the contents of your _tree.txt_ file with the following single line:
+Let's demonstrate LBA using simulation. 
+
+:large_blue_diamond: Using nano, replace the contents of your _tree.txt_ file with the following single line:
 
     (A:0.5,B:0.05,(C:0.05,D:0.5):0.05)
 
-Before going further, copy this tree description and paste it into FigTree to see what this tree looks like. The key is that this tree has two unrelated edges that are an order of magnitude longer than all other edges in the tree.
+:large_blue_diamond: Before going further, copy this tree description and paste it into FigTree to see what this tree looks like. 
+
+The key is that this tree has two unrelated edges that are an order of magnitude longer than all other edges in the tree.
 
 > :thinking: What split characterizes the true tree: AB|CD, AC|BC, or AD|BC?
 
@@ -315,23 +329,23 @@ Before going further, copy this tree description and paste it into FigTree to se
 AB|CD
 {% endcomment %}
 
-Replace the contents of your _sg.sh_ file with this (I've left out the comments this time):
+:large_blue_diamond: Replace the contents of your _sg.sh_ file with this (I've left out the comments this time):
 
     seq-gen -mHKY -l1000 -n1000 -p1 -on -x paupblock.txt < tree.txt > simdata.nex
 
 Note that I've set `-n1000` instead of `-n10` this time and have specified a random number seed `-z12345`. Please replace the random number seed above with one of your choosing (try to think of one that no one else will think of) so that we all get different results. We can increase our sample size from 1000 to N*1000 by combining results from N people.
 
-Before running _simdata.nex_ in PAUP*, delete your _logfile.txt_, _likelihood-results.tre_ and _parsimony-results.tre_ files so that we don't mix results from two different analyses:
+:large_blue_diamond: Before running _simdata.nex_ in PAUP*, delete your _logfile.txt_, _likelihood-results.tre_ and _parsimony-results.tre_ files so that we don't mix results from two different analyses:
 
     rm logfile.txt likelihood-results.tre parsimony-results.tre
     
-Run PAUP* as before:
+:large_blue_diamond: Run PAUP* as before:
 
     paup -L logfile.txt simdata.nex
 
 This time, let's avoid the tedium of actually counting how many trees were estimated correctly by using PAUP*'s `treedist` command. You should still be in PAUP* (evidenced by the prompt `paup>`). If you quit paup, start it up again without specifying a data file by typing just `paup`.
 
-Load the trees from _parsimony-results.tre_ into PAUP*:
+:large_blue_diamond: Load the trees from _parsimony-results.tre_ into PAUP*:
 
     paup> gettrees file-parsimony-results.tre
     
@@ -345,7 +359,7 @@ PAUP* should respond by saying `100 trees read from file`. Take a look at the fi
 probably AD|BC, but since everyone is using a different seed, they might see something different
 {% endcomment %}
 
-Calculate the Robinson-Foulds distance between that first tree and all the others in the file:
+:large_blue_diamond: Calculate the Robinson-Foulds distance between that first tree and all the others in the file:
 
     paup> treedist reftree=1
     
@@ -355,7 +369,7 @@ If, for example, tree 69 had a distance of 2 from the reference tree, see what t
 
     paup> showtree 69
     
-Using this method, tally the number of trees with each of the tree possible splits.
+:large_blue_diamond: Using this method, tally the number of trees with each of the tree possible splits.
 
 > :thinking: How many parsimony trees were AB|CD? AC|BD? AD|BC?
 
@@ -387,15 +401,15 @@ I got:
 
 I don't want to leave you with the notion that likelihood is immune from problems such as LBA.
 
-Revise your _sg.sh_ file to contain this seq-gen command:
+:large_blue_diamond: Revise your _sg.sh_ file to contain this seq-gen command:
 
     seq-gen -mHKY -l1000 -n1000 -p1 -t2.0 -on -x paupblock.txt -z12345 -a0.1 < tree.txt > simdata.nex
     
 The only thing I've added is `-a0.1` which adds a considerable amount of among-site rate heterogeneity to the model used to simulate the data. This means that many sites will evolve very slowly but some sites will evolve very quickly (the overall mean rate is the same). We will not tell the likelihood model used by PAUP* about this rate heterogeneity, so the analysis model will assume that every site evolves under the same rate.
 
-Run _sg.sh_ to generate _simdata.nex_ anew.
+:large_blue_diamond: Run _sg.sh_ to generate _simdata.nex_ anew.
     
-Be sure to delete or rename your _logfile.txt_, _likelihood-results.tre_, and _parsimony-results.tre_ files before running PAUP* and analyzing the results.
+:large_blue_diamond: Be sure to delete or rename your _logfile.txt_, _likelihood-results.tre_, and _parsimony-results.tre_ files before running PAUP* and analyzing the results.
 
 > :thinking: How many likelihood trees were AB|CD? AC|BD? AD|BC when rate heterogeneity was present?
 
@@ -414,7 +428,9 @@ yes!
 
 ## Using the contree command to summarize splits
 
-Even using the `treedist` command is both tedius and error-prone. Let me show you one other way to tally the results of these simulations. Start PAUP*, read in the trees from the _likelihood-results.tre_ file, and compute a majority-rule consensus tree:
+Even using the `treedist` command is both tedius and error-prone. Let me show you one other way to tally the results of these simulations. 
+
+:large_blue_diamond: Start PAUP*, read in the trees from the _likelihood-results.tre_ file, and compute a majority-rule consensus tree:
 
     paup
     paup> gettrees file=likelihood-results.tre
