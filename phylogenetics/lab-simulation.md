@@ -331,9 +331,15 @@ AB|CD
 
 :large_blue_diamond: Replace the contents of your _sg.sh_ file with this (I've left out the comments this time):
 
-    seq-gen -mHKY -l1000 -n1000 -p1 -on -x paupblock.txt < tree.txt > simdata.nex
+    seq-gen -mHKY -l1000 -n1000 -p1 -on -x paupblock.txt -z12345 < tree.txt > simdata.nex
 
-Note that I've set `-n1000` instead of `-n10` this time and have specified a random number seed `-z12345`. Please replace the random number seed above with one of your choosing (try to think of one that no one else will think of) so that we all get different results. We can increase our sample size from 1000 to N*1000 by combining results from N people.
+Note that I've set `-n1000` instead of `-n10` this time and have specified a random number seed `-z12345`. 
+
+:large_blue_diamond: Replace the random number seed above with one of your choosing (try to think of one that no one else will think of) so that we all get different results. We can increase our sample size from 1000 to N*1000 by combining results from N people.
+
+:large_blue_diamond: Run seq-gen to regenerate _simdata.nex_:
+
+    . sg.sh
 
 :large_blue_diamond: Before running _simdata.nex_ in PAUP*, delete your _logfile.txt_, _likelihood-results.tre_ and _parsimony-results.tre_ files so that we don't mix results from two different analyses:
 
@@ -343,13 +349,26 @@ Note that I've set `-n1000` instead of `-n10` this time and have specified a ran
 
     paup -L logfile.txt simdata.nex
 
-This time, let's avoid the tedium of actually counting how many trees were estimated correctly by using PAUP*'s `treedist` command. You should still be in PAUP* (evidenced by the prompt `paup>`). If you quit paup, start it up again without specifying a data file by typing just `paup`.
+This time, let's avoid the tedium of actually counting how many trees were estimated correctly by using PAUP*'s `treedist` command. 
+
+You should still be in PAUP* (evidenced by the prompt `paup>`). If you quit paup, start it up again without specifying a data file by typing just `paup`.
 
 :large_blue_diamond: Load the trees from _parsimony-results.tre_ into PAUP*:
 
-    paup> gettrees file-parsimony-results.tre
+    paup> gettrees file=parsimony-results.tre
     
-PAUP* should respond by saying `100 trees read from file`. Take a look at the first tree in the file:
+PAUP* will probably ask you some questions at this point:
+* Respond `y` to the question about increasing `maxtrees`
+* Respond to the question about a new values for `maxtrees` by accepting the default (just hit Enter)
+* Respond to the question about the action to take if this limit is hit by typing `2`
+
+You can prevent these kinds of questions from being asked by proactively changing some settings in PAUP*:
+
+    paup> set maxtrees=1000 increase=auto autoinc=200
+
+PAUP* should respond by saying something like `1012 trees read from file` (although your results may differ slightly. You might have expected 1000 trees to be in this file, but there are a few more because of ties in parsimony scores.
+
+:large_blue_diamond: Take a look at the first tree in the file:
 
     paup> showtrees 1
 
@@ -373,13 +392,15 @@ If, for example, tree 69 had a distance of 2 from the reference tree, see what t
 
 > :thinking: How many parsimony trees were AB\|CD? AC\|BD? AD\|BC?
 
-Note: trees with a distance of 2 may not all be the same. You can run `treedist` again with a different `reftree` to verify that all the 2s in the list are actually the same tree.
+Note: trees with a distance of 2 may not all be the same. You can run `treedist` again with a different `reftree` to verify (or prove false) that all the 2s in the list are actually the same tree.
 
 {% comment %}
 I got:
-     1 AB|CD
-     0 AC|BD
-    99 AD|BC
+     60 AB|CD
+      0 AC|BD
+    952 AD|BC
+-------------
+   1012 = 60 + 0 + 952
 {% endcomment %}
 
 > :thinking: Explain why this phenomenon is called long branch attraction.
@@ -392,9 +413,11 @@ The true tree was AB|CD but edges leading to A and D were much longer than the o
 
 {% comment %}
 I got:
-    99 AB|CD
-     1 AC|BD
-     0 AD|BC
+    994 AB|CD
+      1 AC|BD
+      5 AD|BC
+-------------
+   1000 = 994 + 1 + 5
 {% endcomment %}
 
 ## Is likelihood immune from LBA?
@@ -415,9 +438,11 @@ The only thing I've added is `-a0.1` which adds a considerable amount of among-s
 
 {% comment %}
 I got:
-    17 AB|CD
-     5 AC|BD
-    78 AD|BC
+    136 AB|CD
+     14 AC|BD
+    850 AD|BC
+-------------
+   1000 = 136 + 14 + 850
 {% endcomment %}
 
 > :thinking: Is likelihood susceptible to LBA if the model is incorrect in an important way?
