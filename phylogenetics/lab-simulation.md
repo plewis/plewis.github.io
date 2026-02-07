@@ -353,7 +353,7 @@ PAUP* should respond by saying `100 trees read from file`. Take a look at the fi
 
     paup> showtrees 1
 
-> :thinking: What split characterizes the first parsimony tree: AB|CD, AC|BC, or AD|BC?
+> :thinking: What split characterizes the first parsimony tree: AB\|CD, AC\|BC, or AD\|BC?
 
 {% comment %}
 probably AD|BC, but since everyone is using a different seed, they might see something different
@@ -371,7 +371,7 @@ If, for example, tree 69 had a distance of 2 from the reference tree, see what t
     
 :large_blue_diamond: Using this method, tally the number of trees with each of the tree possible splits.
 
-> :thinking: How many parsimony trees were AB|CD? AC|BD? AD|BC?
+> :thinking: How many parsimony trees were AB\|CD? AC\|BD? AD\|BC?
 
 Note: trees with a distance of 2 may not all be the same. You can run `treedist` again with a different `reftree` to verify that all the 2s in the list are actually the same tree.
 
@@ -388,7 +388,7 @@ I got:
 The true tree was AB|CD but edges leading to A and D were much longer than the others. Parsimony results in the AD|BC tree most of the time, incorrectly making the taxa at the ends of the two long edges sister taxa.
 {% endcomment %}
 
-> :thinking: How many likelihood trees were AB|CD? AC|BD? AD|BC?
+> :thinking: How many likelihood trees were AB\|CD? AC\|BD? AD\|BC?
 
 {% comment %}
 I got:
@@ -411,7 +411,7 @@ The only thing I've added is `-a0.1` which adds a considerable amount of among-s
     
 :large_blue_diamond: Be sure to delete or rename your _logfile.txt_, _likelihood-results.tre_, and _parsimony-results.tre_ files before running PAUP* and analyzing the results.
 
-> :thinking: How many likelihood trees were AB|CD? AC|BD? AD|BC when rate heterogeneity was present?
+> :thinking: How many likelihood trees were AB\|CD? AC\|BD? AD\|BC when rate heterogeneity was present?
 
 {% comment %}
 I got:
