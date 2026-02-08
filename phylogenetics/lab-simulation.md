@@ -37,16 +37,16 @@ it in with your answers after the lab.
     What split characterizes the true tree: AB|CD, AC|BC, or AD|BC?
     answer:
 
-    What split characterizes the first parsimony tree: AB|CD, AC|BC, or AD|BC?
+    What split characterizes the first likelihood tree: AB|CD, AC|BC, or AD|BC?
+    answer:
+
+    How many likelihood trees were AB|CD? AC|BD? AD|BC?
     answer:
 
     How many parsimony trees were AB|CD? AC|BD? AD|BC?
     answer:
 
     Explain why this phenomenon is called long branch attraction.
-    answer:
-
-    How many likelihood trees were AB|CD? AC|BD? AD|BC?
     answer:
 
     How many likelihood trees were AB|CD? AC|BD? AD|BC when rate heterogeneity was present?
@@ -349,33 +349,31 @@ Note that I've set `-n1000` instead of `-n10` this time and have specified a ran
 
     paup -L logfile.txt simdata.nex
 
+### How did likelihood fare?
+
 This time, let's avoid the tedium of actually counting how many trees were estimated correctly by using PAUP*'s `treedist` command. 
 
 You should still be in PAUP* (evidenced by the prompt `paup>`). If you quit paup, start it up again without specifying a data file by typing just `paup`.
 
-:large_blue_diamond: Load the trees from _parsimony-results.tre_ into PAUP*:
+:large_blue_diamond: Load the trees from _likelihood-results.tre_ into PAUP*:
 
-    paup> gettrees file=parsimony-results.tre
-    
+    paup> gettrees file=likelihood-results.tre
+
 PAUP* will probably ask you some questions at this point:
 * Respond `y` to the question about increasing `maxtrees`
 * Respond to the question about a new values for `maxtrees` by accepting the default (just hit Enter)
 * Respond to the question about the action to take if this limit is hit by typing `2`
 
-You can prevent these kinds of questions from being asked by proactively changing some settings in PAUP*:
-
-    paup> set maxtrees=1000 increase=auto autoinc=200
-
-PAUP* should respond by saying something like `1012 trees read from file` (although your results may differ slightly. You might have expected 1000 trees to be in this file, but there are a few more because of ties in parsimony scores.
+PAUP* will respond by saying `1000 trees read from file`.
 
 :large_blue_diamond: Take a look at the first tree in the file:
 
     paup> showtrees 1
 
-> :thinking: What split characterizes the first parsimony tree: AB\|CD, AC\|BC, or AD\|BC?
+> :thinking: What split characterizes the first likelihood tree: AB\|CD, AC\|BC, or AD\|BC?
 
 {% comment %}
-probably AD|BC, but since everyone is using a different seed, they might see something different
+probably AB|CD
 {% endcomment %}
 
 :large_blue_diamond: Calculate the Robinson-Foulds distance between that first tree and all the others in the file:
@@ -384,15 +382,47 @@ probably AD|BC, but since everyone is using a different seed, they might see som
     
 You will see an RF distance of 0 for every tree that is identical to tree 1 and 2 for every tree that differs from tree 1. The reason that the RF distance will be 2 is that it counts the number of splits in the reference tree that are not in the focal tree (i.e. 1) and adds to that the number of splits in the focal tree that are absent from the reference tree (i.e. 1) to give a sum of 2.
 
-If, for example, tree 69 had a distance of 2 from the reference tree, see what that tree looks like:
+If, for example, tree 846 had a distance of 2 from the reference tree, see what that tree looks like:
 
-    paup> showtree 69
+    paup> showtree 846
     
-:large_blue_diamond: Using this method, tally the number of trees with each of the tree possible splits.
+Note that trees with a distance of 2 may not all be the same. You can run `treedist` again with a different `reftree` to verify (or prove false) that all the 2s in the list are actually the same tree. For example:
+
+    paup> treedist reftree=846
+    
+Using this method, tally the number of trees with each of the three possible splits.
+
+> :thinking: How many likelihood trees were AB\|CD? AC\|BD? AD\|BC? (Make sure your numbers add up to the total number of trees; if they don't, remember that the reference tree counts as one of the 0 distances)
+
+{% comment %}
+I got:
+    994 AB|CD
+      1 AC|BD
+      5 AD|BC
+-------------
+   1000 = 994 + 1 + 5
+{% endcomment %}
+
+### How did parsimo:large_blue_diamond: ny fare?
+
+There are probably more than 1000 trees in _parsimony-results.tre_ because of ties (some simulated data sets will probably result in two or more trees with the same parsimony score). 
+
+:large_blue_diamond: To prevent PAUP* from asking whether we want to increase `maxtrees`, let's change some settings:
+
+    paup> set maxtrees=1000 increase=auto autoinc=200
+
+:large_blue_diamond: Load the trees from _parsimony-results.tre_ into PAUP*:
+
+    paup> gettrees file=parsimony-results.tre
+    
+PAUP* should respond by saying something like 
+
+    Keeping: trees from file (replacing any trees already in memory)
+    1012 trees read from file
+      
+(although your results may differ slightly). 
 
 > :thinking: How many parsimony trees were AB\|CD? AC\|BD? AD\|BC?
-
-Note: trees with a distance of 2 may not all be the same. You can run `treedist` again with a different `reftree` to verify (or prove false) that all the 2s in the list are actually the same tree.
 
 {% comment %}
 I got:
@@ -407,17 +437,6 @@ I got:
 
 {% comment %}
 The true tree was AB|CD but edges leading to A and D were much longer than the others. Parsimony results in the AD|BC tree most of the time, incorrectly making the taxa at the ends of the two long edges sister taxa.
-{% endcomment %}
-
-> :thinking: How many likelihood trees were AB\|CD? AC\|BD? AD\|BC?
-
-{% comment %}
-I got:
-    994 AB|CD
-      1 AC|BD
-      5 AD|BC
--------------
-   1000 = 994 + 1 + 5
 {% endcomment %}
 
 ## Is likelihood immune from LBA?
