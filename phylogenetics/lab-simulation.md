@@ -366,33 +366,39 @@ PAUP* will probably ask you some questions at this point:
 
 PAUP* will respond by saying `1000 trees read from file`.
 
+{% comment %}
 :large_blue_diamond: Take a look at the first tree in the file:
 
     paup> showtrees 1
 
 > :thinking: What split characterizes the first likelihood tree: AB\|CD, AC\|BC, or AD\|BC?
 
-{% comment %}
-probably AB|CD
-{% endcomment %}
-
 :large_blue_diamond: Calculate the Robinson-Foulds distance between that first tree and all the others in the file:
 
     paup> treedist reftree=1
     
-You will see an RF distance of 0 for every tree that is identical to tree 1 and 2 for every tree that differs from tree 1. The reason that the RF distance will be 2 is that it counts the number of splits in the reference tree that are not in the focal tree (i.e. 1) and adds to that the number of splits in the focal tree that are absent from the reference tree (i.e. 1) to give a sum of 2.
-
-If, for example, tree 846 had a distance of 2 from the reference tree, see what that tree looks like:
-
-    paup> showtree 846
+You will see an RF distance of 0 for every focal tree that is identical to the reference tree (tree 1) and 2 for every tree that differs from the reference tree. The reason that the RF distance will be 2 is that it counts the number of splits in the reference tree that are not in the focal tree (i.e. 1) and adds to that the number of splits in the focal tree that are absent from the reference tree (i.e. 1) to give a sum of 2.
     
-Note that trees with a distance of 2 may not all be the same. You can run `treedist` again with a different `reftree` to verify (or prove false) that all the 2s in the list are actually the same tree. For example:
+One problem  that trees with a distance of 2 may not all be the same. 
+
+You can run `treedist` again with a different `reftree` to verify (or prove false) that all the 2s in the list are actually the same tree. For example:
 
     paup> treedist reftree=846
     
 Using this method, tally the number of trees with each of the three possible splits.
+{% endcomment %}
 
-> :thinking: How many likelihood trees were AB\|CD? AC\|BD? AD\|BC? (Make sure your numbers add up to the total number of trees; if they don't, remember that the reference tree counts as one of the 0 distances)
+## Using the contree command to summarize splits
+
+:large_blue_diamond: Start PAUP*, read in the trees from the _likelihood-results.tre_ file, and compute a majority-rule consensus tree (`majrule`) while turning off calculation of the default strict concensus (`nostrict`):
+
+    paup
+    paup> gettrees file=likelihood-results.tre
+    paup> contree all / nostrict majrule
+    
+Note the table at the bottom of the output that summarizes all splits. Since these are 4-taxon trees, there is only one internal split per tree, so the numbers in this table equate to the number of trees having a particular topology.
+
+> :thinking: How many likelihood trees were AB\|CD? AC\|BD? AD\|BC? (Make sure your numbers add up to the total number of trees.)
 
 {% comment %}
 I got:
@@ -403,7 +409,7 @@ I got:
    1000 = 994 + 1 + 5
 {% endcomment %}
 
-### How did parsimo:large_blue_diamond: ny fare?
+### How did parsimony fare?
 
 There are probably more than 1000 trees in _parsimony-results.tre_ because of ties (some simulated data sets will probably result in two or more trees with the same parsimony score). 
 
@@ -422,7 +428,7 @@ PAUP* should respond by saying something like
       
 (although your results may differ slightly). 
 
-> :thinking: How many parsimony trees were AB\|CD? AC\|BD? AD\|BC?
+> :thinking: How many parsimony trees were AB\|CD? AC\|BD? AD\|BC? (Use the consensus tree approach again)
 
 {% comment %}
 I got:
@@ -469,18 +475,6 @@ I got:
 {% comment %}
 yes!
 {% endcomment %}
-
-## Using the contree command to summarize splits
-
-Even using the `treedist` command is both tedius and error-prone. Let me show you one other way to tally the results of these simulations. 
-
-:large_blue_diamond: Start PAUP*, read in the trees from the _likelihood-results.tre_ file, and compute a majority-rule consensus tree:
-
-    paup
-    paup> gettrees file=likelihood-results.tre
-    paup> contree all / nostrict majrule
-    
-Note the table at the bottom of the output that summarizes all splits. Since these are 4-taxon trees, there is only one internal split per tree, so the numbers in this table equate to the number of trees having a particular topology.
 
 # Literature Cited
 

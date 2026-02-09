@@ -30,7 +30,7 @@ Tuesday Jan. 27    | **Snow Day: no class**                                     
 Thursday Jan 29    | **[Agreement subtree](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-01-29-agreement-subtree.pdf), [Mono-,para-,polyphyly,parsimony](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-01-29-mono-para-poly.pdf), and [NJ, Split Decomposition](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-01-29-nj-split-decomp.pdf)** | **Lab 2** [Searching](/searching/)
 Tuesday Feb. 3     | **[Substitution models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-03-model.pdf)** | **[Homework 3](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-03-hw3-edge-length.pdf)** 
 Thursday Feb. 5    | **[Maximum likelihood criterion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-05-likelihood.pdf)** | **Lab 3** [Estimating parameters using likelihood](/likelihood/)
-Tuesday Feb. 10    | **Rate heterogeneity**                                          | **Individual Meetings**  
+Tuesday Feb. 10    | **[Rate heterogeneity](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-10-ratehet.pdf)** | **Individual Meetings**  
 Thursday Feb. 12   | **Bootstrapping**                                               | **Lab 4** Simulating sequence data
 Tuesday Feb. 17	   | **Simulation**                                                  | **Homework 4**  
 Thursday Feb. 19   | **Bayes' Rule and Bayesian statistics**                         | **Lab 5** Maximum likelihood analyses with IQ-TREE

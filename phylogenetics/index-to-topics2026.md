@@ -9,11 +9,16 @@ The following topics were covered in lecture in the Spring 2026 version of EEB 5
 
 additivity of distances, Jan-29
 
+among-site rate heterogeneity (ASRV), Feb-10
 apomorphy, Jan-29
 
 clade, Jan-29
 
 consensus trees, Jan-22, Jan-29
+
+discrete Gamma model, Feb-10
+
+distribution, Gamma, Feb-10
 
 evolutionary distance, Jan-22
 
@@ -33,7 +38,13 @@ general time-reversible model (GTR), Feb-5
 
 Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-5
 
-independence of events, Feb-5
+heterotachy, Feb-10
+
+independence of events, Feb-10
+
+invariable sites model (+I), Feb-10
+
+kappa (transition-transversion rate ratio), Feb-5
 
 Kimura (1980) 2-parameter model (K2P, K80), Feb-3
 
@@ -41,13 +52,21 @@ likelihood (criterion), Jan-20
 
 likelihood (single sequence), Feb-5
 
-likelihood (evolutionary distance), Feb-5
+likelihood (evolutionary distance), Feb-10
+
+likelihood (tree), Feb-10
 
 likelihood, vs. probability, Feb-5
 
 maximum agreement subtree, Jan-22
  
-maximum likelihood estimate (MLE), Feb-5
+maximum likelihood estimate (MLE), Feb-10
+
+models, discrete Gamma, Feb-8=10
+
+models, mixture (+I, +G, Q matrix, edge length), Feb-10
+
+models, partition, Feb-10
 
 monophyly, Jan-29 
 
@@ -61,23 +80,31 @@ paraphyly, Jan-29
 
 parsimony criterion, Jan-20, Jan-29 
 
+partitioned models, Feb-10
+
 plesiomorphy, Jan-29
 
 polyphyly, Jan-29 
 
 probability, "and" rule, Feb-5
 
-probability, conditional, Feb-5
+probability, conditional, Feb-10
 
-probability, joint, Feb-5
+probability, joint, Feb-10
 
 probability, "or" rule, Feb-5
 
 probability, vs. likelihood, Feb-5
 
+pruning algorithm, Feb-10
+
+rate heterogeneity, Feb-10
+
 rate matrix (instantaneous), Feb-3
 
 reconnection limit, Jan-22 
+
+site-specific rates, Feb-10
 
 software, PAUP*, Jan-22
 
@@ -99,9 +126,9 @@ synapomorphy, Jan-29
 
 transition (substitution type), Feb-3
 
-transition-transversion rate ratio, Feb-3
+transition-transversion rate ratio, Feb-5
 
-transition-transversion ratio, Feb-3
+transition-transversion ratio, Feb-5
 
 transversion (substitution type), Feb-3
 
@@ -117,8 +144,6 @@ adaptive radiations, Apr-23
 Akaike Information Criterion (AIC), Feb-29
 
 among-site state frequency heterogeneity, Mar-21
-
-among-site rate heterogeneity (ASRV), Feb-8
 
 archery priors example, Feb-20
 
@@ -180,8 +205,6 @@ dependence model, Mar-26
 
 Dirichlet process prior, Apr-9
 
-discrete Gamma model, Feb-8
-
 dissonance, Apr-25
 
 distribution, Beta, Mar-5, Mar-21
@@ -189,8 +212,6 @@ distribution, Beta, Mar-5, Mar-21
 distribution, Dirichlet, Mar-5
 
 distribution, discrete Uniform, Mar-5
-
-distribution, Gamma, Feb-8, Mar-5
 
 distribution, Gamma-Dirichlet, Mar-5
 
@@ -244,8 +265,6 @@ genetic code, Apr-11
 
 heated chains (MCMC), Feb-22
 
-heterotachy, Feb-8, Apr-18
-
 hyperparameter, Mar-5
 
 hyperprior, Mar-5
@@ -255,8 +274,6 @@ induced prior, Mar-5
 information content, Apr-25
 
 integrals, Feb-20
-
-invariable sites model (+I), Feb-8
 
 Jukes-Cantor (1969) model (JC69), Jan-30
 
@@ -310,8 +327,6 @@ models, dependence, Mar-26
 
 models, Dirichlet process prior, Apr-9, Apr-18
 
-models, discrete Gamma, Feb-8
-
 models, discrete morphology, Mar-21
 
 models, empirical Bayesian, Mar-5
@@ -320,13 +335,9 @@ models, hierarchical, Mar-5
 
 models, independence, Mar-26
 
-models, mixture (+I, +G, Q matrix, edge length), Feb-8, Apr-18
-
 models, mixture (C20), Apr-11
 
 models, Mk, Mar-21
-
-models, partition, Feb-8
 
 models, protein, Apr-11
 
@@ -339,8 +350,6 @@ models, symmetric, Mar-21
 nonsynonymous/synonymous rate ratio (omega), Apr-11
 
 point accepted mutation (PAM) unit, Apr-11
-
-partitioned models, Feb-8
 
 paternity example, Feb-20
 
@@ -378,15 +387,11 @@ probability, support, Mar-5
 
 probability, total, Feb-6
 
-pruning algorithm, Feb-8
-
 pull of the present, Apr-23
 
 random local clocks model, Apr-16
 
 running on empty (MCMC without data), Mar-5
-
-site-specific rates, Feb-8
 
 software, ape, Apr-11
 
@@ -419,8 +424,6 @@ stochastic character mapping, Mar-28
 subway map model analogy, Jan-30
 
 rare disease example, Feb-20
-
-rate heterogeneity, Feb-8
 
 simulation, Feb-15
 

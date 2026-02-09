@@ -241,7 +241,7 @@ Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and inf
 
 Ree, R. R. 2005. [Detecting the historical signature of key innovations using stochastic models of character evolution and cladogenesis.](https://doi.org/10.1111/j.0014-3820.2005.tb00986.x) Evolution 59(2):257–265.  
 
-Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model) 
+:heavy_check_mark: Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model) 
 
 Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610. 
 
@@ -299,9 +299,9 @@ Wright, A. M., Lloyd, G. T., & Hillis, D. M. (2016). [Modeling character change 
 
 Xie, W.G., P. O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal Likelihood Estimation for Bayesian Phylogenetic Model Selection. Systematic Biology 60(2):150-160. (Stepping-stone marginal likelihood estimation) 
 
-Yang, Z. 1993. Maximum-likelihood estimation of phylogeny from DNA sequences when substitution rates differ over sites. Molecular Biology and Evolution 10:1396-1401. 
+:heavy_check_mark: Yang, Z. 1993. Maximum-likelihood estimation of phylogeny from DNA sequences when substitution rates differ over sites. Molecular Biology and Evolution 10:1396-1401. 
 
-Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences with variable rates over sites: approximate methods. Journal of Molecular Evolution 39:306-314. (+G among-site rate heterogeneity model)
+:heavy_check_mark: Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences with variable rates over sites: approximate methods. Journal of Molecular Evolution 39:306-314. (+G among-site rate heterogeneity model)
 
 Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
 
