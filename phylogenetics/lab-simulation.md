@@ -37,9 +37,6 @@ it in with your answers after the lab.
     What split characterizes the true tree: AB|CD, AC|BC, or AD|BC?
     answer:
 
-    What split characterizes the first likelihood tree: AB|CD, AC|BC, or AD|BC?
-    answer:
-
     How many likelihood trees were AB|CD? AC|BD? AD|BC?
     answer:
 
@@ -371,6 +368,7 @@ PAUP* will respond by saying `1000 trees read from file`.
 
     paup> showtrees 1
 
+NOTE: IF THIS SECTION IS EVER UNCOMMENTED, BE SURE TO ADD THIS QUESTION TO THE TEMPLATE
 > :thinking: What split characterizes the first likelihood tree: AB\|CD, AC\|BC, or AD\|BC?
 
 :large_blue_diamond: Calculate the Robinson-Foulds distance between that first tree and all the others in the file:
