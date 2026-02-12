@@ -57,7 +57,7 @@ Farris, J. S. 1989. The retention index and the rescaled consistency index. Clad
 
 Felsenstein, J. 1973. Maximum likelihood estimation of evolutionary trees from continuous characters. American Journal of Human Genetics 25:471-492.
 
-Felsenstein, J. 1978. [Cases in which parsimony or compatibility methods will be positively misleading.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 27:401-410. (Characterized the long branch attraction problem) 
+:heavy_check_mark: Felsenstein, J. 1978. [Cases in which parsimony or compatibility methods will be positively misleading.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 27:401-410. (Characterized the long branch attraction problem) 
 
 :heavy_check_mark: Felsenstein, J. 1981. [Evolutionary trees from DNA sequences: a maximum likelihood approach.](https://doi.org/10.1007/BF01734359)  Journal of Molecular Evolution 17:368-376. (F81 model, pruning algorithm, origin of likelihood-based phylogenetics) 
 
@@ -83,7 +83,7 @@ Fitzjohn, R. G. 2012. [Diversitree: comparative phylogenetic analyses of diversi
 
 Fowler, D. M., C. L. Araya, S. J. Fleishman, E. H. Kellogg, J. J. Stephany, D. Baker. and S. Fields. 2010. [High-resolution mapping of protein sequence-function relationships.](https://doi.org/10.1038/nmeth.1492) Nature Methods 7:741-746. 
 
-Gaut, B. S., and P. O. Lewis. 1995. [Success of maximum likelihood phylogeny inference in the four-taxon case.](https://doi.org/10.1093/oxfordjournals.molbev.a040183) Molecular Biology and Evolution 12(1):152-162.
+:heavy_check_mark: Gaut, B. S., and P. O. Lewis. 1995. [Success of maximum likelihood phylogeny inference in the four-taxon case.](https://doi.org/10.1093/oxfordjournals.molbev.a040183) Molecular Biology and Evolution 12(1):152-162.
 
 Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent data. Pages 156-163 in Computing Science and Statistics (E. Keramidas, ed.). (Metropolis-coupled MCMC a.k.a. heated chains) 
 
@@ -115,7 +115,7 @@ Holder, M. T., Lewis, P. O., Swofford, D. L., and Larget, B. (2005). Hastings ra
 
 Holder, M. T., P. O. Lewis, and D. L. Swofford. 2010. The Akaike Information Criterion will not choose the no common mechanism model. Systematic Biology 59:477-485.
 
-Huelsenbeck, J. P., and D. M. Hillis. 1993. [Success of phylogenetic methods in the four taxon case.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 42:247-264. (coined the term Felsenstein Zone) 
+:heavy_check_mark: Huelsenbeck, J. P., and D. M. Hillis. 1993. [Success of phylogenetic methods in the four taxon case.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 42:247-264. (coined the term Felsenstein Zone) 
 
 Huelsenbeck, J. P., R. Nielsen, and J. P. Bollback. 2003. [Stochastic mapping of morphological characters.](https://doi.org/10.1080/10635150390192780) Systematic Biology 52(2): 131-158.  
 
@@ -223,7 +223,7 @@ Paradis, E. 2006. Analysis of phylogenetics and evolution with R. Springer. ISBN
 
 Pettigrew, J. D. 1991. Wings or brain? convergent evolution in the origins of bats. Systematic Zoology, 40(2):199-216. 
 
-Pettigrew, J. D. 1994. [Genomic evolution: flying DNA.](https://doi.org/10.1016/S0960-9822(00)00065-8) Current Biology 4(3):277-280. 
+:heavy_check_mark: Pettigrew, J. D. 1994. [Genomic evolution: flying DNA.](https://doi.org/10.1016/S0960-9822(00)00065-8) Current Biology 4(3):277-280. 
 
 Pybus, O. G., and P. H. Harvey. 2000. Testing macro-evolutionary models using incomplete molecular phylogenies. Proc. R. Soc. Lond. B 267:2267-2272. 
 
@@ -287,7 +287,7 @@ Tuffley, C., and M. Steel. 1997. Links between maximum likelihood and maximum pa
 
 Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
 
-Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416. 
+:heavy_check_mark: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416. 
 
 Whelan, S., and N. Goldman. 2001. A general empirical model of protein evolution derived from multiple protein families using a maximum likelihood approach. Molecular Biology and Evolution, 18, 691-699. (WAG amino acid model) 
 

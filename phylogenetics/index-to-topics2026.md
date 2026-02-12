@@ -6,19 +6,20 @@ permalink: /index2026/
 Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2026/).
 
 The following topics were covered in lecture in the Spring 2026 version of EEB 5349 (Phylogenetics). Please refer to the [schedule](/phylogenetics2026/) to find links to the slides for the dates indicated.
-
 additivity of distances, Jan-29
 
 among-site rate heterogeneity (ASRV), Feb-10
 apomorphy, Jan-29
 
+bat monophyly test, Feb-12
+
 clade, Jan-29
 
 consensus trees, Jan-22, Jan-29
 
-discrete Gamma model, Feb-10
+discrete Gamma model, Feb-12
 
-distribution, Gamma, Feb-10
+distribution, Gamma, Feb-12
 
 evolutionary distance, Jan-22
 
@@ -34,6 +35,8 @@ Fitch's parsimony algorithm, Jan-29
 
 four-point condition, Jan-29
 
+free rates model (+R), Feb-12
+
 general time-reversible model (GTR), Feb-5
 
 Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-5
@@ -43,6 +46,8 @@ heterotachy, Feb-10
 independence of events, Feb-10
 
 invariable sites model (+I), Feb-10
+
+Jukes-Cantor (1969) model (JC69), Feb-3
 
 kappa (transition-transversion rate ratio), Feb-5
 
@@ -104,6 +109,8 @@ rate matrix (instantaneous), Feb-3
 
 reconnection limit, Jan-22 
 
+simulation, Feb-12
+
 site-specific rates, Feb-10
 
 software, PAUP*, Jan-22
@@ -123,6 +130,8 @@ subtree-pruning-regrafting (SPR) branch swapping, Jan-22
 symplesiomorphy, Jan-29
 
 synapomorphy, Jan-29
+
+transition (probability), Feb-3
 
 transition (substitution type), Feb-3
 
@@ -152,8 +161,6 @@ ascertainment bias, Mar-21
 autoapomorphy trail, Mar-21
 
 Bayesian analysis of macroevolutionary mixtures (BAMM), Apr-23
-
-bat monophyly test, Feb-15
 
 Bayes' rule, Feb-20
 
@@ -249,8 +256,6 @@ fence analogy (truncated priors), Mar-5
 
 fossilized birth-death process, Apr-16
 
-free rates model (+R), Feb-15
-
 frequencies, equilibrium nucleotide, Jan-30
 
 frequencies, equilibrium amino acid, Apr-11
@@ -274,8 +279,6 @@ induced prior, Mar-5
 information content, Apr-25
 
 integrals, Feb-20
-
-Jukes-Cantor (1969) model (JC69), Jan-30
 
 K, Blomberg's, Apr-4
 
@@ -424,8 +427,6 @@ stochastic character mapping, Mar-28
 subway map model analogy, Jan-30
 
 rare disease example, Feb-20
-
-simulation, Feb-15
 
 sojourn time, Mar-28
 
