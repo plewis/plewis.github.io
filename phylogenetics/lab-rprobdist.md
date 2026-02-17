@@ -7,7 +7,7 @@ permalink: /rprobdist/
 
 ## Goals
 
-This lab represents an introduction to the [R computing language](http://www.r-project.org/), which will be useful not only for today's lab, which explores the most common probability distributions used in Bayesian phylogenetics, but also for Phylogenetics software written as R extensions (i.e. APE).
+This lab represents an introduction to the [R computing language](http://www.r-project.org/), which will be useful not only for today's lab, which explores the most common probability distributions used in Bayesian phylogenetics, but also for Phylogenetics software written as R extensions (i.e. [APE](https://cran.r-project.org/web/packages/ape/index.html), [PhyTools](https://cran.r-project.org/web/packages/phytools/index.html), [Geiger](https://cran.r-project.org/web/packages/geiger/index.html), etc.).
 
 ## Objectives
 
@@ -123,7 +123,7 @@ Copy the text below into a text file to record you answers to questions posed in
 
 ### Installing R
 
-Install R (if you haven't already) by going to the [R project website](http://www.r-project.org/) and following the download instructions for your platform. **You will be doing this lab on your own laptop, not the cluster**, because much of this lab involves plots, which are most easily generated and displayed on your own laptop. I have installed the latest version of R (which, at this moment, is version 4.3.2, nicknamed "Eye Holes"), but these instructions should work with slightly older versions of R.
+Install R (if you haven't already) by going to the [R project website](http://www.r-project.org/) and following the download instructions for your platform. **You will be doing this lab on your own laptop, not the cluster**, because much of this lab involves plots, which are most easily generated and displayed on your own laptop. I have installed the latest version of R (which, at this moment, is version 4.5.2, nicknamed "[Not] Part in a Rumble"), but these instructions should work with slightly older versions of R.
 
 ### Installing RStudio
 
@@ -185,7 +185,15 @@ In the R console window, enter the data and plot it as follows (remember that yo
     > y <- c(1,1,3,5,4,5,7,8)
     > plot(x,y)
     
-The `c` in `c(...)` means "combine", so the `c` function's purpose is to combine its arguments. Thus, both `x` and `y` are not single values, but instead each is a collection of 8 numbers. Collections of numbers like this are known as **vectors** in mathematics, or **arrays** or **lists** in many computer programming languages.
+The `c` in `c(...)` means "combine", so the `c` function's purpose is to combine its arguments. Thus, both `x` and `y` are not single values, but instead each is a **vector** of 8 whole numbers (a.k.a. integers). 
+
+Collections of numbers like this are known as **vectors** in mathematics. In R, a vector is a collection of values of the same type. An **array** in R is a vector that knows its dimension (an array can have more than one dimension). A **list** in R is similar to a single dimensional array or vector except that it can contain different kinds of elements.
+
+To see which (vector, array, or list) you've created, type
+
+    > is.vector(x)
+    > is.array(x)
+    > is.list(x)
 
 ## Modifying a plot
 

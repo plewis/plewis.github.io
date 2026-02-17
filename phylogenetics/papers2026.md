@@ -63,7 +63,7 @@ Felsenstein, J. 1973. Maximum likelihood estimation of evolutionary trees from c
 
 Felsenstein, J. 1983. Statistical inference of phylogenies. Journal of the Royal Statistical Society A 146:246-272. (LRT of molecular clock)
 
-Felsenstein, J. 1985a. [Confidence intervals on phylogenies: an approach using the bootstrap.](https://doi.org/10.1111/j.1558-5646.1985.tb00420.x) Evolution 39:783-791. (nonparametric bootstrapping) 
+:heavy_check_mark: Felsenstein, J. 1985a. [Confidence intervals on phylogenies: an approach using the bootstrap.](https://doi.org/10.1111/j.1558-5646.1985.tb00420.x) Evolution 39:783-791. (nonparametric bootstrapping) 
 
 Felsenstein, J. 1985b. [Phylogenies and the comparative method.](https://doi.org/10.1086/284325) American Naturalist 125:1-15. (independent contrasts) 
 
