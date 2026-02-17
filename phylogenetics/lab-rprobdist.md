@@ -47,46 +47,46 @@ Copy the text below into a text file to record you answers to questions posed in
     5. Compute the sample mean of the values you generated from a Gamma(0.5, 2) distribution, does it appear that the mean is correct?
     answer
      
-    6. How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 10000? 
+    6. How close is the sample mean to the expected mean 2 with sample size 10000?
     answer
      
-    7. How close is the sample mean to the expected mean for a Gamma(0.5, 2) with sample size 1000000?
+    7. How close is the sample mean to the expected mean 2 with sample size 1000000?
     answer
      
-    8. Why are the histograms for x and y so different? (hint: use help(rgamma) to read about the rgamma function) 
+    8. Why are the histograms for x and y so different? 
     answer
      
     9. What are the true means of x and y?
     answer
      
-    10. Calculate the Gamma probability density for the value 0.99 assuming shape alpha=10 and scale beta = 0.1 (use the formula labeled "Density function" in the table above)
+    10. Calculate the Gamma probability density for the value 0.99 assuming shape alpha=10 and scale beta = 0.1
     answer
      
-    11. Use the `pgamma` command to compute the probability that a value drawn from a Gamma(shape=2,scale=0.5) distribution would fall between 0.5 and 4.5? Hint: you will need to either invoke the command twice or provide it with a vector containing two values, then do some subtraction with the results. 
+    11. Use the `pgamma` command to compute the probability that a value drawn from a Gamma(shape=2,scale=0.5) distribution would fall between 0.5 and 4.5?
     answer
      
-    12. What value $x_r$ produces an interval (0,$x_r$) that accounts for 95% of the values drawn from a Gamma(shape=2,scale=0.5) distribution?
+    12. What value x produces an interval (0,x) that accounts for 95% of the values drawn from a Gamma(shape=2,scale=0.5) distribution?
     answer
      
-    13. What pair of values ($x_l$,$x_r$) produces an interval that accounts for the middle 95% of the values drawn from a Gamma(shape=2, scale=0.5) distribution (by middle, I mean that 2.5% of the distribution should be less than $x_l$ and 2.5% greater than $x_r$)?
+    13. What pair of values (x,y) produces an interval that accounts for the middle 95% of the values drawn from a Gamma(shape=2, scale=0.5) distribution?
     answer
      
     14. Is the height of the density at x=0 related to the rate parameter?
     answer
      
-    15. Which of these two densities has the larger mean? (Try to answer this question first by looking at the plot, then compute the numbers to check your intuition.) 
+    15. Which of these two densities has the larger mean? 
     answer
      
-    16. Which of these two densities has the larger variance? (Again, answer the question first by looking at the plot.) 
+    16. Which of these two densities has the larger variance?
     answer
      
-    17. What fraction of the Exponential(10) distribution is less than 1? (Hint: use the `pexp` command.)
+    17. What fraction of the Exponential(10) distribution is less than 1? 
     answer
      
     18. What fraction of the Exponential(0.1) distribution is less than 1?
     answer
      
-    19. Fill in the blank: 95% of the Exponential(0.1) distribution is less than _____. (Hint: use the `qexp` command.)
+    19. Fill in the blank: 95% of the Exponential(0.1) distribution is less than _____.
     answer
     
     20. What is the sample mean of your 1 million Lognormal(1,2) random variates?
@@ -95,13 +95,13 @@ Copy the text below into a text file to record you answers to questions posed in
     21. What is the sample standard deviation of your 1 million Lognormal(1,2) random variates?
     answer
     
-    22. What is the sample mean of the _logarithm_ of your 1 million Lognormal(1,2) random variates?
+    22. What is the sample mean of the logarithm of your 1 million Lognormal(1,2) random variates?
     answer
     
-    23. What is the sample standard deviation of the _logarithm_ of your 1 million Lognormal(1,2) random variates?
+    23. What is the sample standard deviation of the logarithm of your 1 million Lognormal(1,2) random variates?
     answer
     
-    24. What is the median of a Lognormal(1,2) distribution? (Hint: look up Lognormal distribution in Wikipedia)
+    24. What is the median of a Lognormal(1,2) distribution? 
     answer
     
     25. What is the sample median of the 1 million Lognormal(1,2) variates that you generated at the beginning of this section?
