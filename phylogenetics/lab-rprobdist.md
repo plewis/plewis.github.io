@@ -9,6 +9,8 @@ permalink: /rprobdist/
 
 This lab represents an introduction to the [R computing language](http://www.r-project.org/), which will be useful not only for today's lab, which explores the most common probability distributions used in Bayesian phylogenetics, but also for Phylogenetics software written as R extensions (i.e. [APE](https://cran.r-project.org/web/packages/ape/index.html), [PhyTools](https://cran.r-project.org/web/packages/phytools/index.html), [Geiger](https://cran.r-project.org/web/packages/geiger/index.html), etc.).
 
+I use a :large_blue_diamond: emoji below to indicate something you should do. Hopefully this will make it easier for you to see what to do next (as opposed to commentary on what you just did or notes).
+
 ## Objectives
 
 After completing this lab, you will be able to...
@@ -129,6 +131,16 @@ Install R (if you haven't already) by going to the [R project website](http://ww
 
 We will use R via [RStudio](https://rstudio.com/), which will allows you to manipulate R source code and see the results within the same application window. RStudio is a separate app that you can download from [the RStudio downloads page](https://rstudio.com/products/rstudio/download/).
 
+## Quitting R (or the R help system)
+
+Before you start playing with R, it is good to know how to stop it!
+
+**If you are in R but not using RStudio...** type q() and press return to quit R. Just answer no (`n`) to the question "Save workspace image?"
+
+To get out of the R help system, type q at the `:` prompt. While you are in help, you can advance one line using the down arrow key and go back or forth a page at a time using Ctrl-b and Ctrl-f, respectively. 
+
+**If you are using RStudio...**, the help will show up in a side window, so there is nothing you need to escape from, and to quit just close RStudio the way you would quit any program.
+
 ## Creating plots using R
 
 **Prompt:** To use R, type commands into the console window at the R prompt (`>`). Try the following commands for starters. Note that I've started each line with the `>` character. That `>` character is the R command prompt: you should **type in only what follows the > character**. 
@@ -149,17 +161,17 @@ That last one will generate a confusing list of topics, some of which do not app
 
 ## Creating a histogram
 
-Drawing 1000 standard normal variates and creating a histogram is as easy as:
+:large_blue_diamond: Drawing 1000 standard normal variates and creating a histogram is as easy as:
 
     > y <- rnorm(1000, 0, 1)
     
 In this case, y will be a list of 1000 random normal (mean 0, std. dev. 1) variates (a **variate** is just one draw from the distribution). Note that `<-` means "assign to". You can also use an equal sign here, but the `<-` is preferred, saving `=` for specifying values for arguments in function calls (you will see examples of this below). 
 
-To view the values in the variable `y`, just type the name of the variable:
+:large_blue_diamond: To view the values in the variable `y`, just type the name of the variable:
 
     > y
     
-To create a histogram of the values stored in `y`:
+:large_blue_diamond: To create a histogram of the values stored in `y`:
 
     > hist(y)
     
@@ -179,7 +191,7 @@ Let's begin by making a simple scatterplot using these data:
     4	7
     5	8
 
-In the R console window, enter the data and plot it as follows (remember that you should **not** enter the initial `>` on each line; that's the R prompt):
+:large_blue_diamond: In the R console window, enter the data and plot it as follows (remember that you should **not** enter the initial `>` on each line; that's the R prompt):
 
     > x <- c(1,2,1,4,2,3,4,5)
     > y <- c(1,1,3,5,4,5,7,8)
@@ -189,7 +201,7 @@ The `c` in `c(...)` means "combine", so the `c` function's purpose is to combine
 
 Collections of numbers like this are known as **vectors** in mathematics. In R, a vector is a collection of values of the same type. An **array** in R is a vector that knows its dimension (an array can have more than one dimension). A **list** in R is similar to a single dimensional array or vector except that it can contain different kinds of elements.
 
-To see which (vector, array, or list) you've created, type
+:large_blue_diamond: To see which (vector, array, or list) you've created, type
 
     > is.vector(x)
     > is.array(x)
@@ -201,7 +213,7 @@ R does a fairly nice job of selecting defaults for plots, but I find myself want
 
 ### Changing the plotting symbol
 
-Use the `pch` parameter to change the symbol R uses to plot points:
+:large_blue_diamond: Use the `pch` parameter to change the symbol R uses to plot points:
 
     > plot(x, y, pch=19)
     
@@ -215,45 +227,49 @@ See the help topic on `points` for more info:
 
 ### Plot type
 
-The default plot type is `p` for points, but other plot types can be used (use the command `help(plot)` for details). Let's use `"l"` (that's a lower-case L) type to connect our points with lines:
+The default plot type is `p` for points, but other plot types can be used (use the command `help(plot)` for details). 
+
+:large_blue_diamond: Use `"l"` (that's a lower-case L) type to connect the points with lines:
 
     > plot(x, y, type="l")
 
-Clearly, this is not something that you would want to do with these data, but we will use `type="l"` extensively later in this tutorial. To use both points and lines, set the type to both (`b`):
+Clearly, this is not something that you would want to do with these data, but we will use `type="l"` extensively later in this tutorial. 
+
+:large_blue_diamond: To use both points and lines, set the type to both (`b`):
 
     > plot(x, y, type="b")
 
 ### Line width
 
-To make the line connecting the points thicker, use the `lwd` option (`lwd=1` is the default line width):
+:large_blue_diamond: To make the line connecting the points thicker, use the `lwd` option (`lwd=1` is the default line width):
 
     > plot(x,y,type="l",lwd=3)
 
 ### Plot and axis labels
 
-The `xlab`, `ylab`, and `main` parameters can be used to change the x-axis label, the y-axis label and the main plot title, respectively:
+:large_blue_diamond: The `xlab`, `ylab`, and `main` parameters can be used to change the x-axis label, the y-axis label and the main plot title, respectively:
 
     > plot(x, y, type="l", xlab="width", ylab="height", main="Leaf width vs. height")
 
 ### Losing the box
 
-The `bty` parameter can be set to `"n"` to remove the box around the plot:
+:large_blue_diamond: The `bty` parameter can be set to `"n"` to remove the box around the plot:
 
     > plot(x, y, type="l", bty="n")
 
 ### Losing an axis
 
-The `xaxt` and `yaxt` parameters can be set to `"n"` to remove the x- and y-axis, respectively, from the plot. Here for example is a plot with no y-axis (note that I've also set the y-axis label to an empty string with `ylab=""` and removed the box around the plot with `bty`):
+:large_blue_diamond: The `xaxt` and `yaxt` parameters can be set to `"n"` to remove the x- and y-axis, respectively, from the plot. Here for example is a plot with no y-axis (note that I've also set the y-axis label to an empty string with `ylab=""` and removed the box around the plot with `bty`):
 
     > plot(x, y, type="l", yaxt="n",ylab="",bty="n")
 
 ### Changing axis labeling
 
-It is often desirable to change the values used on the x- or y-axis. You can use the `ylim` parameter to make the y-axis extend from 0 to 10 (instead of the default, which is 1 to 8 in this case because that is the observed range of y values):
+:large_blue_diamond: It is often desirable to change the values used on the x- or y-axis. You can use the `ylim` parameter to make the y-axis extend from 0 to 10 (instead of the default, which is 1 to 8 in this case because that is the observed range of y values):
 
     > plot(x, y, type="l", ylim=c(0,10))
 
-Note that there is a little overhang at both ends on the y-axis (the 0 tick mark is slightly above the bottom of the plot and the tick mark for 10 is slightly below the top of the plot). This is because, by default, the y-axis style parameter `yaxs` is set to `"r"`, which causes R to extend the range you defined (using `ylim`) by 4% at each end. You can set `yaxs="i"` to make R strictly honor the limits you set:
+:large_blue_diamond: Note that there is a little overhang at both ends on the y-axis (the 0 tick mark is slightly above the bottom of the plot and the tick mark for 10 is slightly below the top of the plot). This is because, by default, the y-axis style parameter `yaxs` is set to `"r"`, which causes R to extend the range you defined (using `ylim`) by 4% at each end. You can set `yaxs="i"` to make R strictly honor the limits you set:
 
     > plot(x, y, type="l", ylim=c(0,10), yaxs="i")
     
@@ -261,7 +277,9 @@ You can change the x-axis in the same way using `xlim` and `xaxs` instead of `yl
 
 ## Data frames
 
-The `c(...)` notation used above is fine for small examples, but if you have a lot of data, you will prefer to read in the data from a file. R uses the concept of a data frame to store a collection of data. For example, save the following data in a text file on your hard drive named _myfile.txt_. Be sure to use a plain text editor such as [BBEdit](https://www.barebones.com/products/bbedit/) (Mac) or [Notepad++](https://notepad-plus-plus.org) (Windows), **not** Word (which will add a lot of formatting information that R will not understand):
+The `c(...)` notation used above is fine for small examples, but if you have a lot of data, you will prefer to read in the data from a file. R uses the concept of a data frame to store a collection of data. 
+
+:large_blue_diamond: Save the following data in a text file on your hard drive named _myfile.txt_. Be sure to use a plain text editor such as [BBEdit](https://www.barebones.com/products/bbedit/) (Mac) or [Notepad++](https://notepad-plus-plus.org) (Windows), **not** Word (which will add a lot of formatting information that R will not understand):
 
         one two three four
     A    0   1    2     3
@@ -271,25 +289,27 @@ The `c(...)` notation used above is fine for small examples, but if you have a l
 
 Note that the first row has only 4 elements whereas all others have 5. If the first row contains one fewer elements than the other rows, then R assumes that the first row contains column names.
 
-Use this command to read these data into a data frame:
+:large_blue_diamond: Use this command to read these data into a data frame:
 
     > d <- read.table("myfile.txt")
     
-If you get an error, it is probably because the current working directory used by R is not the directory in which you stored your file. You can ask R to tell you the current working directory:
+:large_blue_diamond: If you get an error, it is probably because the current working directory used by R is not the directory in which you stored your file. You can ask R to tell you the current working directory:
 
     > getwd()
 
-and you can set the current working directory as described below. Assuming that you are using Windows and _myfile.txt_ is stored in _C:\phylogenetics\rlab_:
+and you can set the current working directory as described below. 
+
+:large_blue_diamond: Assuming that you are using Windows and _myfile.txt_ is stored in _C:\phylogenetics\rlab_:
 
     > setwd("C:\\phylogenetics\\rlab")  # Windows version
 
 Note that (for rather esoteric reasons) the single backslash characters in the actual path must be replaced by double backslashes in R commands.
 
-If instead you were using a Mac and _myfile.txt_ was stored on your desktop, then you would do this:
+:large_blue_diamond: If instead you were using a Mac and _myfile.txt_ was stored on your desktop, then you would do this:
 
     > setwd("~/Desktop")  # Mac version
 
-To ensure that your data were read correctly, simply type `d` to see the contents of the variable you created to hold the data:
+:large_blue_diamond: To ensure that your data were read correctly, simply type `d` to see the contents of the variable you created to hold the data:
 
     > d
       one two three four
@@ -298,7 +318,7 @@ To ensure that your data were read correctly, simply type `d` to see the content
     C   8   9    10   11
     D  12  13    14   15
     
-To extract one column of your stored data frame, use a `$` followed by the column name:
+:large_blue_diamond: To extract one column of your stored data frame, use a `$` followed by the column name:
 
     > col1 <- d$one
     > col1
@@ -306,22 +326,22 @@ To extract one column of your stored data frame, use a `$` followed by the colum
     
 The `[1]` that starts this line tells you that this is the first line of output; it should not be confused with the actual output, which comprises the numbers 0, 4, 8, and 12.
 
-You can also extract single values, although this is not commonly needed:
+:large_blue_diamond: You can also extract single values, although this is not commonly needed:
 
     > x <- d[2,3]
     > x
     [1] 6
 
-**Important!** Note that, in R, indices begin with 1. This differs from Python and almost every other programming language, which start counting at 0.
+**Important!** Note that, in R, indices begin with 1. In Python and almost every other programming language, counting begins at 0.
 
-Finally, if you have not named your columns, you can still get, for example, the third column as follows:
+:large_blue_diamond: Finally, if you have not named your columns, you can still get, for example, the third column as follows:
 
     > d[,3]
     [1]  2  6 10 14
     
 Note that I've left the row part of the specification empty to tell R that I want to retrieve data from all rows for column 3.
 
-To get the data for the third row, just leave the column specification empty:
+:large_blue_diamond: To get the data for the third row, just leave the column specification empty:
 
     > d[3,]
       one two three four
@@ -387,7 +407,7 @@ variance = alpha * beta^2 = alpha * 4, so alpha = 4/4 = 1.
 
 ### Creating a Histogram
 
-Type the following command into the R console to generate 1000 random numbers (variates) from a Gamma distribution with shape=0.5 and scale=2.0 and store them in the variable `x`:
+:large_blue_diamond: Type the following command into the R console to generate 1000 random numbers (variates) from a Gamma distribution with shape=0.5 and scale=2.0 and store them in the variable `x`:
 
     > x <- rgamma(1000, shape=0.5, scale=2.0)
     
@@ -395,27 +415,27 @@ The `r` in `rgamma` stands for "random". There is a corresponding "r" command fo
 
 It may appear that nothing has happened, but you can view the 1000 values stored in the variable `x` by typing `x` at the prompt.
 
-You can get the sample mean, sample variance, and sample standard deviation using:
+:large_blue_diamond: You can get the sample mean, sample variance, and sample standard deviation using:
 
     > mean(x)
     > var(x)
     > sd(x)
     
-You can get more summary statistics using:
+:large_blue_diamond: You can get more summary statistics using:
 
     > summary(x)
 
-Creating a basic histogram from these 1000 values is easy:
+:large_blue_diamond: Creating a basic histogram from these 1000 values is easy:
 
     > hist(x)
     
-Now refine the histogram by asking R to give you 50 bars:
+:large_blue_diamond: Now refine the histogram by asking R to give you 50 bars:
 
     > hist(x, breaks=50)
     
 Note that breaks represents a suggestion only. R will often be passive-aggressive and not give you exactly as many bars as you want.
 
-Create a histogram with approximately 40 bars from 10000 variates from a Gamma(shape=0.5, scale=2) distribution.
+:large_blue_diamond: Create a histogram with approximately 40 bars from 10000 variates from a Gamma(shape=0.5, scale=2) distribution.
 
 > :thinking: Compute the sample mean of the values you generated from a Gamma(0.5, 2) distribution, does it appear that the mean is correct?
 
@@ -423,7 +443,7 @@ Create a histogram with approximately 40 bars from 10000 variates from a Gamma(s
 Yes, the sample mean is close to the true mean 1.
 {% endcomment %}
 
-Create a histogram with 30 bars from 10000 variates from a Gamma distribution in which the mean is 2 and the variance is 1 Assuming you have stored the 10000 variates in the variable `x`, type `summary(x)` to get the sample mean, median, etc.
+:large_blue_diamond: Create a histogram with 30 bars from 10000 variates from a Gamma distribution in which the **mean is 2** and the **variance is 1**. Assuming you have stored the 10000 variates in the variable `x`, type `summary(x)` to get the sample mean, median, etc.
 
 > :thinking: How close is the sample mean to the expected mean 2 with sample size 10000? 
 
@@ -431,7 +451,7 @@ Create a histogram with 30 bars from 10000 variates from a Gamma distribution in
 I got mean 1.9880, which is 0.012 from the true mean
 {% endcomment %}
 
-Draw another sample with 1 million random variates and summarize.
+:large_blue_diamond: Draw another sample with 1 million random variates and summarize.
 
 > :thinking: How close is the sample mean to the expected mean 2 with sample size 1000000?
 
@@ -443,7 +463,9 @@ The results above make sense: the variance of one Gamma random variate is $\alph
 
 ### Don't confuse rate with scale!
 
-Only 2 parameters are required to fully specify a Gamma distribution, but the second parameter can be either the scale (what we've been using) or the rate (which is the inverse of the scale parameter). Try this experiment, which will plot two histograms on the same plot (by using add=TRUE for the second invocation of hist):
+Only 2 parameters are required to fully specify a Gamma distribution, but the second parameter can be either the scale (what we've been using) or the rate (which is the inverse of the scale parameter). 
+
+:large_blue_diamond: Try this experiment, which will plot two histograms on the same plot (by using `add=TRUE` for the second invocation of hist):
 
     > x <- rgamma(1000000, shape=5, scale=5)
     > y <- rgamma(1000000, 5, 5)
@@ -464,21 +486,25 @@ x has mean 5*5 = 25 whereas y has mean 5/5 = 1
 
 ### Plotting the density function
 
-The "d" commands (e.g. dgamma, dbeta, dexp, dnorm, dunif) can be used to compute the probability density function for a series of values. In this part of the tutorial, you will use the dgamma function to compute the Gamma density function for all 501 values in the series 0.0, 0.01, 0.02, ..., 5.0. First, generate the values in the series and store them in a variable named x:
+The "d" commands (e.g. dgamma, dbeta, dexp, dnorm, dunif) can be used to compute the probability density function for a series of values. In this part of the tutorial, you will use the dgamma function to compute the Gamma density function for all 501 values in the series 0.0, 0.01, 0.02, ..., 5.0. 
+
+:large_blue_diamond: First, generate the values in the series and store them in a variable named x:
 
     > x <- seq(0.0, 5.0, 0.01)
 
-The `seq` function generates a series of values starting at the first supplied value (0.0 in this case), stopping at the second supplied value (5.0 in this case), with spacing between values in the sequence determined by the third supplied value (0.01 in this case). To see if 501 values were generated, type
+The `seq` function generates a series of values starting at the first supplied value (0.0 in this case), stopping at the second supplied value (5.0 in this case), with spacing between values in the sequence determined by the third supplied value (0.01 in this case). 
+
+:large_blue_diamond: To see if 501 values were generated, type
 
     > length(x)
 
-You can list all the values in `x` by simply typing `x` at the console.
+:large_blue_diamond: You can list all the values in `x` by simply typing `x` at the console.
 
-R makes it easy to compute a quantity for every number in a list. Here is how to compute the Gamma density for each value stored in the variable `x`:
+:large_blue_diamond: R makes it easy to compute a quantity for every number in a list. Here is how to compute the Gamma density for each value stored in the variable `x`:
 
     > y <- dgamma(x, shape=10, scale=0.1)
 
-Before plotting the density function, you should convince yourself that R is computing the density correctly by calculating one value yourself by hand. First print out the 100th `x` value as follows:
+:large_blue_diamond: Before plotting the density function, you should convince yourself that R is computing the density correctly by calculating one value yourself by hand. First print out the 100th `x` value as follows:
 
     > x[100]
 
@@ -490,15 +516,17 @@ The value displayed should be 0.99.
 1.26310178 = (0.99^9)*exp(-0.99/0.1)/((0.1^10)*9*8*7*6*5*4*3*2*1)
 {% endcomment %}
 
-You can either use a calculator, or use Python or R to do the calculation (just don't use the R function dgamma to do the calculation). Compare your value to the value computed by R:
+:large_blue_diamond: You can either use a calculator, or use Python or R to do the calculation (just don't use the R function dgamma to do the calculation). Compare your value to the value computed by R:
 
     > y[100]
 
-Now plot the density function as follows:
+:large_blue_diamond: Now plot the density function as follows:
 
     > plot(x,y)
 
-This command says to plot all possible pairs of points, where one value is taken from `x` and the other from `y`. There are 501 values in both `x` and `y`, so 501 points will be plotted. This plot looks pretty ugly, with lots of overlapping points. Instead, let's connect the points with a line but not print all 501 points themselves. You can do this by adding `type="l"` to your plot command:
+This command says to plot all possible pairs of points, where one value is taken from `x` and the other from `y`. There are 501 values in both `x` and `y`, so 501 points will be plotted. This plot looks pretty ugly, with lots of overlapping points. 
+
+:large_blue_diamond: Instead, let's connect the points with a line but not print all 501 points themselves. You can do this by adding `type="l"` to your plot command:
 
     > plot(x,y,type="l")
 
@@ -506,15 +534,15 @@ The type is specified to be a lower case L character here (L for line). For othe
 
     > help(plot)
 
-I nearly always want the lines in my plots to be thicker. Here is how to triple the thickness of the plotted line using the `lwd` (line width) setting:
+:large_blue_diamond: I nearly always want the lines in my plots to be thicker. Here is how to triple the thickness of the plotted line using the `lwd` (line width) setting:
 
     > plot(x,y,type="l", lwd=3)
     
-Finally, make the plotted line blue using the `col` (color) setting:
+:large_blue_diamond: Finally, make the plotted line blue using the `col` (color) setting:
 
     > plot(x,y,type="l", lwd=3, col="blue")
 
-[Here is a very helpful PDF file](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf)  showing many named colors.
+[Here is a very helpful PDF file](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf) showing many named colors.
 
 Also, there are many other settings that affect plots. Get help on the `par` command to see these (just about any setting you can specify for `par` also works for `plot`):
 
@@ -522,19 +550,24 @@ Also, there are many other settings that affect plots. Get help on the `par` com
     
 ### Using the distribution function
 
-We've seen the "d" and "r" commands (for density function and random number generation), but there are two additional standard commands defined for probability distributions. The "p" command computes the cumulative distribution function for a distribution. For the Gamma distribution, you can use the `pgamma` command to compute the integral of the density function up to a specified value. First, plot a Gamma density with shape 2 and scale 0.5:
+We've seen the "d" and "r" commands (for density function and random number generation), but there are two additional standard commands defined for probability distributions. The "p" command computes the cumulative distribution function for a distribution. For the Gamma distribution, you can use the `pgamma` command to compute the integral of the density function up to a specified value. 
+
+:large_blue_diamond: First, plot a Gamma density with shape 2 and scale 0.5:
 
     > x <- seq(0.0, 5.0, 0.01)
     > y <- dgamma(x, shape=2.0, scale=0.5)
     > plot(x, y, type="l")
     
 The total area under this curve is 1.0. What is your guess as to the area of the curve from 0 to 1?
-Compute the area under the density from 0 to 1 as follows using the `pgamma` command:
+
+:large_blue_diamond: Compute the area under the density from 0 to 1 as follows using the `pgamma` command:
 
     > pgamma(1, shape=2, scale=0.5)
     [1] 0.5939942
 
-Thus, nearly 60% of random draws from a Gamma(2,0.5) distribution would be less than 1.0. You can compute several cumulative probabilities by supplying a vector to the pgamma command. Suppose you wanted to know the cumulative probability for each of the values on the x-axis (i.e. 1, 2, 3, 4 and 5):
+Thus, nearly 60% of random draws from a Gamma(2,0.5) distribution would be less than 1.0. You can compute several cumulative probabilities by supplying a vector to the pgamma command. 
+
+:large_blue_diamond: Suppose you wanted to know the cumulative probability for each of the values on the x-axis (i.e. 1, 2, 3, 4 and 5):
 
     > pgamma(c(1,2,3,4,5), shape=2, scale=0.5)
     [1] 0.5939942 0.9084218 0.9826487 0.9969808 0.9995006
@@ -551,18 +584,20 @@ pgamma(0.5, shape=2, scale=0.5) = 0.2642411
 
 ### Quantiles
 
-A quantile is a point along the x-axis of a density plot that corresponds to a particular cumulative probability. For example, the 60% quantile corresponds to a cumulative probability of 0.6. If you computed the area under the density curve up to some point `x` and the cumulative probability was 0.6, then that value of `x` is the 60% quantile. 
+A **quantile** is a point along the x-axis of a density plot that corresponds to a particular cumulative probability. For example, the 0.6 quantile corresponds to a cumulative probability of 0.6. If you computed the area under the density curve up to some point `x` and the cumulative probability was 0.6, then that value of `x` is the 0.6 quantile. A **percentile** is like a quantile except based on cumulative percentage rather than cumulative probability. So the 60% percentile corresponds to the 0.6 quantile.
 
-For example, in the previous section, the value 1 is very close to the 60% quantile. Suppose we wanted to divide up a Gamma(2, 0.5) distribution into four equal-area pieces, and needed to find the points along the x-axis corresponding to the boundaries between these pieces (does this problem sound familiar?). We could do this in R as follows:
+For example, in the previous section, the value 1 is very close to the 60% percentile. Suppose we wanted to divide up a Gamma(2, 0.5) distribution into four equal-area pieces, and needed to find the points along the x-axis corresponding to the boundaries between these pieces (does this problem sound familiar?). 
+
+:large_blue_diamond: Do this in R as follows:
 
     > qgamma(c(0.25, 0.5, 0.75, 1), shape=2, scale=0.5)
-    [1] 0.4806394 0.8391735 1.3463173
+    [1] 0.4806394 0.8391735 1.3463173 Inf
 
-Note that we have supplied 4 values to the `qgamma` function via the vector `c(0.25, 0.5, 0.75, 1)`. We did not actually need to supply the fourth value (1.0) because we know that the 100% quantile is equal to $\infty$. In case you haven't guessed, these would be the boundaries used if we applied discrete Gamma rate heterogeneity to a model, specifying 4 categories and shape=2.0.
+Note that we have supplied 4 values to the `qgamma` function via the vector `c(0.25, 0.5, 0.75, 1)`. We did not actually need to supply the fourth value (1.0) because we know that the 1.0 quantile is equal to $\infty$. In case you haven't guessed, these would be the boundaries used if we applied discrete Gamma rate heterogeneity to a model, specifying 4 categories and shape=2.0.
 
 You could check this in PAUP* using PAUP*'s `gammaplot` command:
 
-    gammaplot shape=2 ncat=4;
+    paup> gammaplot shape=2 ncat=4;
     
 Since we're not using the cluster today, I'll just show you the results of issuing this command in PAUP*:
 
@@ -605,7 +640,9 @@ Here are some basic facts about the Exponential distribution:
 
 ### Exponential densities
 
-Let's plot a couple of Exponential densities and compare them. First, plot an Exponential(10) density function as follows:
+Let's plot a couple of Exponential densities and compare them. 
+
+:large_blue_diamond: First, plot an Exponential(10) density function as follows:
 
     > x <- seq(0.0,5.0,0.01)
     > y <- dexp(x, rate=10)
@@ -662,9 +699,11 @@ qexp(0.95, 0.1) = 29.95732
 
 ## Lognormal distribution
 
-The Lognormal distribution fills a similar niche as the Gamma distribution. Like the Gamma distribution, it has **support** (the interval in which its density is greater than 0) from 0 to $\infty$, making it suitable as a prior for edge lengths, rate ratios, and other parameters that must necessarily be positive but do not have an upper bound on their possible values. One difference between Lognormal and Gamma distributions is that Lognormal distributions always have density 0.0 at the value 0.0, whereas Gamma distributions with shape parameter less than 1 have infinite density at the value 0.0. So if zero is really not an option, a Lognormal prior may be a better choice than a Gamma distribution.
+The Lognormal distribution fills a similar niche as the Gamma distribution. Like the Gamma distribution, it has **support** (the interval in which its density is greater than 0) from 0 to $\infty$, making it suitable as a prior for edge lengths, rate ratios, and other parameters that must necessarily be positive but do not have an upper bound on their possible values. One difference between Lognormal and Gamma distributions is that Lognormal distributions always have density 0.0 at the value 0.0, whereas Gamma distributions with shape parameter less than 1 have infinite density at the value 0.0. So if you are choosing a prior distribution for something that cannot be exactly zero, then a Lognormal distribution is a better choice than a Gamma distribution.
 
-The Lognormal distribution has two parameters: $\mu$ and $\sigma$. The names of these parameters may be familiar to you as the mean and standard deviation parameters of a Normal distribution. Let's generate 1 million random variates from a Lognormal distribution and ask what the sample mean and standard deviation are:
+The Lognormal distribution has two parameters: $\mu$ and $\sigma$. The names of these parameters may be familiar to you as the mean and standard deviation parameters of a Normal distribution. 
+
+:large_blue_diamond: Let's generate 1 million random variates from a Lognormal distribution and ask what the sample mean and standard deviation are:
 
     library(stats)
     z <- rlnorm(1000000, 1, 2)
@@ -683,7 +722,9 @@ I got 19.86141
 I got 131.0158
 {% endcomment %}
 
-If the mean and standard deviation were not what you expected, it is because $\mu$ and $\sigma$ do **not** represent the mean and standard deviation of a Lognormal distribution! Let me show you what these parameters actually represent:
+If the mean and standard deviation were not what you expected, it is because $\mu$ and $\sigma$ do **not** represent the mean and standard deviation of a Lognormal distribution! 
+
+:large_blue_diamond: Let me show you what these parameters actually represent:
 
     logz <- log(z)
     mean(logz)
@@ -701,11 +742,11 @@ I got 0.998603
 I got 1.999756
 {% endcomment %}
 
-Create a density plot of the `logz` values:
+:large_blue_diamond: Create a density plot of the `logz` values:
 
     plot(density(logz), type="l", col="blue", lwd=2, xlim=c(-10,10))
     
-and compare that to a Normal(1,2) density:
+:large_blue_diamond: and compare that to a Normal(1,2) density:
 
     x <- seq(-10, 10, 0.1)
     lines(x, dnorm(x, 1, 2), col="red", lwd=5, lty="dotted", xlim=c(-10,10))
@@ -726,7 +767,7 @@ It is exp(mu), which equals exp(1) = 2.71828183
 I got 2.70887
 {% endcomment %}
 
-To see what this Lognormal(1,2) density function looks like, plot it as follows:
+:large_blue_diamond: To see what this Lognormal(1,2) density function looks like, plot it as follows:
 
     x <- seq(0, 5, 0.1)
     plot(x, dlnorm(x, 1, 2), type="l", col="navy", lwd=2, xlim=c(0, 5))
@@ -735,9 +776,11 @@ Note that a Lognormal distribution looks nothing like a Normal distribution. Whi
 
 ### Calculating $\mu$ and $\sigma$ from mean and standard deviation
 
-If you want to use a Lognormal distribution as a prior, you probably know the mean (`m`) and standard devation (`sd`) that you want to use. How do you obtain the $\mu$ and $\sigma$ parameters needed to specify the Lognormal prior distribution? First calculate the coefficient of variation (`cv`), which is the ratio of the standard deviation to the mean, then use that to calculate `mu` and `sigma`:
+If you want to use a Lognormal distribution as a prior, you probably know the mean (`m`) and standard devation (`s`) that you want to use. How do you obtain the $\mu$ and $\sigma$ parameters needed to specify the Lognormal prior distribution? First calculate the coefficient of variation (`cv`), which is the ratio of the standard deviation to the mean, then use that to calculate `mu` and `sigma`:
 
-    cv <- sd/m
+    m <- 0.1
+    s <- 0.5
+    cv <- s/m
     variance <- log(1 + cv^2)
     sigma <- sqrt(variance)
     mu <- log(m) - variance/2
@@ -748,7 +791,7 @@ If you want to use a Lognormal distribution as a prior, you probably know the me
 cv = .5/.1 = 5, variance = log(1+5^2) = 3.25809654, sigma = 1.80501982, mu = log(.1) - 3.25809654/2 = -3.93163336
 {% endcomment %}
 
-You can confirm that you calculated $\mu$ and $\sigma$ correctly by simulating, say, 10 million values from a Lognormal(mu, sigma) distribution and checking that the mean and standard deviation are 0.1 and 0.5, respectively:
+:large_blue_diamond: You can confirm that you calculated $\mu$ and $\sigma$ correctly by simulating, say, 10 million values from a Lognormal(mu, sigma) distribution and checking that the mean and standard deviation are 0.1 and 0.5, respectively:
 
     x <- rlnorm(1000000, mu, sigma)
     mean(x)
@@ -773,17 +816,23 @@ The $\Gamma$ function above is the same one used in the Gamma distribution.
 
 ### Symmetrical Beta distributions
 
-Beta densities are symmetrical about 0.5 if $a = b$. Try plotting a Beta(3,3) distribution in R as follows:
+Beta densities are symmetrical about 0.5 if $a = b$. 
+
+:large_blue_diamond: Try plotting a Beta(3,3) distribution in R as follows:
 
     > x <- seq(0.0, 1.0, 0.01)
     > y <- dbeta(x, 3, 3)
     > plot(x, y, type="l")
     
-A somewhat easier way to make a plot (that we will use from this point onward) involves using the `curve` function. The `curve` function handles details like generating a list of `x` values to plot - you need only specify a "from" and "to" value for the x-axis. If you use a variable name not equal to `x` for the x-axis, then you also need to specify `xname`. Below I am pretending that the plotted Beta distribution is my prior for the pinvar (proportion of invariable sites) parameter:
+A somewhat easier way to make a plot (that we will use from this point onward) involves using the `curve` function. The `curve` function handles details like generating a list of `x` values to plot - you need only specify a "from" and "to" value for the x-axis. If you use a variable name not equal to `x` for the x-axis, then you also need to specify `xname`. 
+
+:large_blue_diamond: Below I am pretending that the plotted Beta distribution is my prior for the pinvar (proportion of invariable sites) parameter:
 
     > curve(dbeta(pinvar, 3, 3), from=0, to=1, xname="pinvar")
     
-As $a$ and $b$ get larger (still constraining $a = b$), the density becomes more and more sharply peaked at 0.5. Generate the plot again, this time for a Beta(100,100) density. Let's also plot the Beta(3,3) density for comparison. Note the addition of `add=TRUE` to the second curve, which causes the second curve to be added to the first one (very handy for comparing two curves!):
+As $a$ and $b$ get larger (still constraining $a = b$), the density becomes more and more sharply peaked at 0.5. 
+
+:large_blue_diamond: Generate the plot again, this time for a Beta(100,100) density. Let's also plot the Beta(3,3) density for comparison. Note the addition of `add=TRUE` to the second curve, which causes the second curve to be added to the first one (very handy for comparing two curves!):
 
     > curve(dbeta(x, 100, 100), from=0, to=1)
     > curve(dbeta(x, 3, 3), from=0, to=1, col="blue",lty="dotted", add=TRUE)
@@ -796,7 +845,7 @@ If $a=b=1$, the Beta distribution is identical to a Uniform(0,1) distribution, a
 
     > curve(dbeta(x, 1, 1), from=0, to=1)
     
-Plot a Beta density when $a=b=0.1$. 
+:large_blue_diamond: Plot a Beta density when $a=b=0.1$. 
 
 > :thinking: Which distribution -- Beta(1,1) or Beta(0.1, 0.1) -- would be most appropriate as a prior distribution for a parameter representing the chances of a coin coming up heads on any given flip if you believed strongly that the world was full of trick coins (two-headed or two-tailed coins)?
 
@@ -808,19 +857,21 @@ Beta(0.1, 0.1) because most of the probability is concentrated at 0 (two-tailed 
 
 If $a$ is not equal to $b$, Beta densities are skewed to the right or left and are not symmetrical. Take a look at the formula for the mean: $a/(a+b)$. If $a < b$, the mean is less than 0.5 and the Beta distribution leans to the left. If $a > b$, the Beta distribution leans to the right.
 
-Try plotting these Beta densities: Beta(1,100), Beta(100,1), Beta(2,5), and Beta(5,2).
+:large_blue_diamond: Try plotting these Beta densities: Beta(1,100), Beta(100,1), Beta(2,5), and Beta(5,2).
 
     curve(dbeta(x, 1, 100))
     curve(dbeta(x, 100, 1))
     curve(dbeta(x, 2, 5))
     curve(dbeta(x, 5, 2))
 
-Plot a Beta(20,50) density in blue, then a Beta(2,5) density in red on top of the Beta(20,50) density.
+:large_blue_diamond: Plot a Beta(20,50) density in blue, then a Beta(2,5) density in red on top of the Beta(20,50) density.
 
     curve(dbeta(x, 20, 50), col="blue")
     curve(dbeta(x, 2, 5), col="red", add=TRUE)
 
-Calculate the mean and variance of a Beta(2,5) distribution using the formulas provided at the beginning of this section. Now sample 10000 values from a Beta(2,5) distribution and compute the sample mean and variance as follows:
+Calculate the mean and variance of a Beta(2,5) distribution using the formulas provided at the beginning of this section. 
+
+:large_blue_diamond: Now sample 10000 values from a Beta(2,5) distribution and compute the sample mean and variance as follows:
 
     > x <- rbeta(10000, 2, 5)
     > mean(x)
@@ -828,15 +879,17 @@ Calculate the mean and variance of a Beta(2,5) distribution using the formulas p
     > var(x)
     [1] 0.02490558
 
-Create a histogram of the values in x:
+:large_blue_diamond: Create a histogram of the values in x:
 
     > hist(x)
     
-Save the histogram as a PDF file named _beta25a.pdf_ (we'll be using this file again in a minute). In the Plots window of RStudio, use the Export dropdown and choose "Save as PDF..." to save the file.
+:large_blue_diamond: Save the histogram as a PDF file named _beta25a.pdf_ (we'll be using this file again in a minute). In the Plots window of RStudio, use the Export dropdown and choose "Save as PDF..." to save the file.
 
 ### Relationship to the Gamma distribution
 
-Beta distributions are related to Gamma distributions. If `x` is a Gamma($a$,1) random variable, and `y` is a Gamma($b$,1) random variable, then $x/(x+y)$ is distributed as Beta($a$,$b$). Now that you have just generated 10000 Beta(2,5) random variables, let's compare that to 10000 random variables generated as described above:
+Beta distributions are related to Gamma distributions. If `x` is a Gamma($a$,1) random variable, and `y` is a Gamma($b$,1) random variable, then $x/(x+y)$ is distributed as Beta($a$,$b$). 
+
+:large_blue_diamond: Now that you have just generated 10000 Beta(2,5) random variables, let's compare that to 10000 random variables generated as described above:
 
     > xx <- rgamma(10000, 2, 1)
     > yy <- rgamma(10000, 5, 1)
@@ -846,9 +899,9 @@ Beta distributions are related to Gamma distributions. If `x` is a Gamma($a$,1) 
     
 Note in line 3 that R automatically applies formulas repeatedly to each value of a list. Both `xx` and `yy` are lists of 10000 values. Line 3 produces 10000 values stored in `z` where `z[i] = xx[i]/(xx[i] + yy[i])` for i = 1, 2, ..., 10000.
 
-Create a histogram of the values in `z`, and save as a PDF file named _beta25b.pdf_ (the procedure is described in the previous section). Compare _beta25a.pdf_ with _beta25b.pdf_ (they should be very similar because we have simply generated 10000 Beta(2,5) random variables in two different ways).
+:large_blue_diamond: Create a histogram of the values in `z`, and save as a PDF file named _beta25b.pdf_ (the procedure is described in the previous section). Compare _beta25a.pdf_ with _beta25b.pdf_ (they should be very similar because we have simply generated 10000 Beta(2,5) random variables in two different ways).
 
-You can also plot the histograms on top of each other as follows (I've used the `rgb` command (which stands for red, green, blue) for specifying colors so that I could add some transparency: the fourth argument to `rgb` after red, green, and blue is 0.2 (20% of fully opaque):
+:large_blue_diamond: You can also plot the histograms on top of each other as follows (I've used the `rgb` command (which stands for red, green, blue) for specifying colors so that I could add some transparency: the fourth argument to `rgb` after red, green, and blue is 0.2 (20% of fully opaque):
 
     > hist(x,col=rgb(1,0,0,.2), breaks=30)
     > hist(z, col=rgb(0,0,1,.2), breaks=30,add=TRUE)
@@ -882,7 +935,9 @@ $x_3 \sim \mbox{Gamma}(c,1)$
 
 $x_4 \sim \mbox{Gamma}(d,1)$
 
-(where $x_1 \sim \mbox{Gamma}(a, 1)$ is shorthand for "$x_1$ is a random number drawn from a Gamma distribution with shape $a$ and scale 1"), then a Dirichlet($a$,$b$,$c$,$d$) random variable (a vector of 4 values) can be created by dividing each $x_i$ by the sum of all four $x_i$ values. Create 10 random Dirichlet(1,1,1,1) variables using this method and list them:
+(where $x_1 \sim \mbox{Gamma}(a, 1)$ is shorthand for "$x_1$ is a random number drawn from a Gamma distribution with shape $a$ and scale 1"), then a Dirichlet($a$,$b$,$c$,$d$) random variable (a vector of 4 values) can be created by dividing each $x_i$ by the sum of all four $x_i$ values. 
+
+:large_blue_diamond: Create 10 random Dirichlet(1,1,1,1) variables using this method and list them:
 
     > x1 <- rgamma(10, 1, 1)
     > x2 <- rgamma(10, 1, 1) 
@@ -893,7 +948,7 @@ $x_4 \sim \mbox{Gamma}(d,1)$
     
 Note the use of the `c(...)` function to construct a vector of four values, each of which is one of the $x_i$ values divided by $s$, which is the sum of all four $x_i$ values.
 
-Now display the 10 Dirichlet vectors:
+:large_blue_diamond: Now display the 10 Dirichlet vectors:
 
     > d
      [1] 0.09234290 0.37789542 0.08640752 0.28049539 0.14485492 0.05511074 0.14355295
@@ -903,7 +958,9 @@ Now display the 10 Dirichlet vectors:
     [29] 0.44937431 0.19609418 0.40576141 0.01332508 0.58675072 0.15901687 0.07923820
     [36] 0.47832406 0.23183441 0.09030979 0.38400226 0.37195431
     
-Unfortunately, R dumped all 10 vectors together, creating a single vector of 40 values! We can coerce R into displaying these 4 at a time by using the `dim` command to redimension `d` into a matrix with 10 rows and 4 columns:
+Unfortunately, R dumped all 10 vectors together, creating a single vector of 40 values! 
+
+:large_blue_diamond: We can coerce R into displaying these 4 at a time by using the `dim` command to redimension `d` into an array with 10 rows and 4 columns (remember that, in R, an array is simply a vector that has defined dimensions):
 
     > dim(d) <- c(10,4)
     > d
@@ -921,7 +978,9 @@ Unfortunately, R dumped all 10 vectors together, creating a single vector of 40 
 
 Each row now represents a random draw from a Dirichlet(1,1,1,1) distribution. If we were using this Dirichlet distribution as a prior for base frequencies, each row would represent one representative vector of base frequencies from our prior. Given the impossibility of plotting a 4-dimensional density function, it would thus be useful to use the method above to produce samples from various Dirichlet distributions to see what they imply about the distribution of base frequencies.
 
-To make it easier to explore the properties of Dirichlet distributions, let's put the commands you just entered into a function that can be called with different combinations of parameters. Copy the following into your clipboard and paste it into the R console window.
+To make it easier to explore the properties of Dirichlet distributions, let's put the commands you just entered into a function that can be called with different combinations of parameters. 
+
+:large_blue_diamond: Copy the following into your clipboard and paste it into the R console window.
 
     Dirichlet <- function(a,b,c,d) {
       x1 <- rgamma(10, a, 1)
@@ -936,7 +995,9 @@ To make it easier to explore the properties of Dirichlet distributions, let's pu
 
 ### Symmetrical Dirichlet($a$,$b$,$c$,$d$) distributions
 
-Like Beta distributions, Dirichlet distributions are symmetrical if all parameters are equal. Use your new R function, which I've arbitrarily (but appropriately!) named "Dirichlet", to explore a series of symmetrical Dirichlet distributions:
+Like Beta distributions, Dirichlet distributions are symmetrical if all parameters are equal. 
+
+:large_blue_diamond: Use your new R function, which I've arbitrarily (but appropriately!) named "Dirichlet", to explore a series of symmetrical Dirichlet distributions:
 
     > Dirichlet(1,1,1,1)
     > Dirichlet(100,100,100,100)
@@ -958,7 +1019,7 @@ Dirichlet(1000000,1000000,1000000,1000000) because this distribution makes each 
 
 In the case of a Dirichlet($a$,$b$,$c$,$d$) distribution, as the parameters become larger (assuming $a=b=c=d$), the density becomes more and more sharply peaked at (0.25, 0.25, 0.25, 0.25). The magnitude of the Dirichlet parameters thus determines the _informativeness_ of the prior: if all four parameters equal 1, the Dirichlet is flat or uninformative (any possible combination of base frequencies has the same probability density as any other combination), whereas if all four parameters equal 1 million, then approximately equal base frequencies (e.g. 0.250241, 0.250133, 0.249963, 0.249663) get much more weight than very unequal base frequencies (e.g., 0.000404, 0.531065, 0.000002, 0.468529) and the distribution would be considered informative.
 
-We can visualize these samples better by plotting them. Below is an R function that plots the four base frequencies in different colors (note that it draws 1000 samples rather than just 10):
+:large_blue_diamond: We can visualize these samples better by plotting them. Below is an R function that plots the four base frequencies in different colors (note that it draws 1000 samples rather than just 10):
 
     PlotDirichlet <- function(a,b,c,d) {
      x1 <- rgamma(1000, a, 1)
@@ -976,7 +1037,7 @@ We can visualize these samples better by plotting them. Below is an R function t
     
 The `1:1000` in the `plot` and `lines` commands is shorthand for `seq(1, 1000, 1)` (i.e., a sequence of values starting at 1, ending at 1000, with a step size of 1. Also, `d[,1]` means "the first column of `d`", `d[,2]` means "the second column of `d`", etc.
 
-Now plot a few Dirichlet distributions:
+:large_blue_diamond: Now plot a few Dirichlet distributions:
 
     > PlotDirichlet(1,1,1,1)
     > PlotDirichlet(10,10,10,10)
@@ -986,7 +1047,9 @@ The x-axis in these plots doesn't have any meaning (it is just the row number of
 
 ### Asymmetrical Dirichlet distributions
 
-If some of the four parameters differ from the others, Dirichlet($a$,$b$,$c$,$d$) densities are not symmetrical. It might be useful to consider using asymmetrical Dirichlet distributions if you know your sequences are GC rich, for example. Here are three GC-rich Dirichlet distributions varying in informativeness but all having mean ($\pi_A$, $\pi_C$, $\pi_G$, $\pi_T$) = (0.2, 0.3, 0.3, 0.2):
+If some of the four parameters differ from the others, Dirichlet($a$,$b$,$c$,$d$) densities are not symmetrical. It might be useful to consider using asymmetrical Dirichlet distributions if you know your sequences are GC rich, for example. 
+
+:large_blue_diamond: Here are three GC-rich Dirichlet distributions varying in informativeness but all having mean ($\pi_A$, $\pi_C$, $\pi_G$, $\pi_T$) = (0.2, 0.3, 0.3, 0.2):
 
     > PlotDirichlet(2, 3, 3, 2)
     > PlotDirichlet(20, 30, 30, 20)
@@ -1002,7 +1065,9 @@ Check out this applet, which allows you to view 4-parameter Dirichlet distributi
 
 As you know, the GTR model specifies six relative rates (sometimes called exchangeability parameters) corresponding to the six possible types of substitutions in the rate matrix (actually there are 12, but the GTR model is symmetrical in that the relative rate for A to G substitutions is identical to that for G to A substitutions). Bayesian programs typically use a 6-parameter Dirichlet($a$,$b$,$c$,$d$,$e$,$f$) distribution as the prior distribution of these GTR relative rates.
 
-Below is a revised Dirichlet function that takes 6 values rather than 4. Copy this into your R console:
+Below is a revised Dirichlet function that takes 6 values rather than 4. 
+
+:large_blue_diamond: Copy this into your R console:
 
     Dirichlet <- function(a,b,c,d,e,f) {
       x1 <- rgamma(10, a, 1)
@@ -1024,4 +1089,4 @@ Now apply the new function:
     
 Now each row represents a set of GTR relative rates. The first case is a flat prior: it says that we have no idea which of six substitution classes we expect to be evolving at a relatively fast rate compared to the other substitution classes. The second case is an informative prior that says we expect the transition rate to be 4 times that of the transversion rate (assuming the ordering is $r_{AC}$, $r_{AG}$, $r_{AT}$, $r_{CG}$, $r_{CT}$, $r_{GT}$).
 
-Try modifying the `PlotDirichlet` function to plot 6-parameter Dirichlet distributions in the same way we plotted 4-parameter Dirichlet distributions above.
+:large_blue_diamond: Try modifying the `PlotDirichlet` function to plot 6-parameter Dirichlet distributions in the same way we plotted 4-parameter Dirichlet distributions above.
