@@ -85,7 +85,7 @@ Fowler, D. M., C. L. Araya, S. J. Fleishman, E. H. Kellogg, J. J. Stephany, D. B
 
 :heavy_check_mark: Gaut, B. S., and P. O. Lewis. 1995. [Success of maximum likelihood phylogeny inference in the four-taxon case.](https://doi.org/10.1093/oxfordjournals.molbev.a040183) Molecular Biology and Evolution 12(1):152-162.
 
-Geyer, C. J. 1991. Markov chain Monte Carlo maximum likelihood for dependent data. Pages 156-163 in Computing Science and Statistics (E. Keramidas, ed.). (Metropolis-coupled MCMC a.k.a. heated chains) 
+:heavy_check_mark: Geyer, C. J. 1991. [Markov chain Monte Carlo maximum likelihood for dependent data.](https://hdl.handle.net/11299/58440) Pages 156-163 in Computing Science and Statistics (E. Keramidas, ed.). (Metropolis-coupled MCMC a.k.a. heated chains) 
 
 Goldberg, E. E., L. T. Lancaster, and R. H. Ree. 2011. Phylogenetic inference of reciprocal effects between geographic range evolution and diversification. Systematic Biology 60:451–465. 
 
@@ -105,7 +105,7 @@ Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evoluti
 
 :heavy_check_mark: Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model) 
 
-Hastings, W. K. 1970. Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109. (Hastings ratio) 
+:heavy_check_mark: Hastings, W. K. 1970. Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109. (Hastings ratio) 
 
 Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. [The fossilized birth–death process for coherent calibration of divergence-time estimates.](http://doi.org/10.1073/pnas.1319091111) PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
 
@@ -185,7 +185,7 @@ Martins, E. P. 1994. [Estimating the rate of phenotypic evolution from comparati
 
 Martins, E. P., and T. F. Hansen. 1997. Phylogenies and the comparative method: a general approach to incorporating phylogenetic information into the analysis of interspecific data. The American Naturalist 149:646-667. (PGLS) 
 
-Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. Equation of state calculations by fast computing machines. J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC) 
+:heavy_check_mark: Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. Equation of state calculations by fast computing machines. J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC) 
 
 Michener, C. D., and R. R. Sokal. 1957. A Quantitative Approach to a Problem in Classification. Evolution 11:130-162
 

@@ -11,7 +11,7 @@ additivity of distances, Jan-29
 among-site rate heterogeneity (ASRV), Feb-10
 apomorphy, Jan-29
 
-archery priors example, Feb-17
+archery priors example, Feb-19
 
 bat monophyly test, Feb-12
 
@@ -19,17 +19,21 @@ Bayes' rule, Feb-17
 
 bootstrapping (non-parametric), Feb-17
 
+bootstrapping (IQ-TREE ultrafast), Feb-17
+
 clade, Jan-29
 
 consensus trees, Jan-22, Jan-29
 
-density example (gold-to-aluminum brick), Feb-17
+density example (gold-to-aluminum brick), Feb-19
 
 discrete Gamma model, Feb-12
 
 distribution, Gamma, Feb-12
 
-distribution, marginal posterior, Feb-17
+distribution, proposal (for MCMC), Feb-19
+
+distribution, target (for MCMC), Feb-19
 
 evolutionary distance, Jan-22
 
@@ -51,11 +55,13 @@ general time-reversible model (GTR), Feb-5
 
 Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-5
 
+heated chains (MCMC), Feb-19
+
 heterotachy, Feb-10
 
 independence of events, Feb-10
 
-integrals, Feb-17
+integrals, Feb-19
 
 invariable sites model (+I), Feb-10
 
@@ -77,9 +83,17 @@ likelihood, vs. probability, Feb-5
 
 marginal likelihood, Feb-17
 
+Markov-chain Monte Carlo (MCMC), Feb-19
+
 maximum agreement subtree, Jan-22
  
 maximum likelihood estimate (MLE), Feb-10
+
+MCMC, robot metaphor, Feb-19
+
+Metropolis algorithm, Feb-19
+
+mixing (MCMC), Feb-19
 
 models, discrete Gamma, Feb-8=10
 
@@ -111,13 +125,13 @@ probability, "and" rule, Feb-5
 
 probability, conditional, Feb-10
 
-probability, density, Feb-17
+probability, density, Feb-19
 
 probability, joint, Feb-10
 
 probability, marginal, Feb-17
 
-probability, mass vs. density, Feb-17
+probability, mass vs. density, Feb-19
 
 probability, "or" rule, Feb-5
 
@@ -160,6 +174,8 @@ subtree-pruning-regrafting (SPR) branch swapping, Jan-22
 symplesiomorphy, Jan-29
 
 synapomorphy, Jan-29
+
+trace plots, Feb-19
 
 transition (probability), Feb-3
 

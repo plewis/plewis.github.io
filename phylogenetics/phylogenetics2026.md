@@ -33,16 +33,16 @@ Thursday Feb. 5    | **[Maximum likelihood criterion](https://gnetum.eeb.uconn.e
 Tuesday Feb. 10    | **[Rate heterogeneity](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-10-ratehet.pdf)** | **Individual Meetings**  
 Thursday Feb. 12   | **[Simulation](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-12-simulation.pdf)** | **Lab 4** [Simulating sequence data](/simulation/)
 Tuesday Feb. 17	   | **[Bootstrapping, Bayes' Rule](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-17-bootstrap-bayesintro.pdf)** | **[Homework 4](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw4.pdf)**  
-Thursday Feb. 19   | **Bayesian statistics**                                         | **Lab 5** [Using R to explore probability distributions](https://plewis.github.io/rprobdist/)
-Tuesday Feb. 24    | **Markov chain Monte Carlo (MCMC)**                             | **Homework 5** 
-Thursday Feb. 26   | **MCMC (cont.)**                                                | **Lab 6** Maximum likelihood analyses with IQ-TREE
-Tuesday Mar. 3     | **Model selection**                                             | **Homework 6** 
-Thursday Mar. 5    | *Priors**                                                       | **Lab 7** TBA
-Tuesday Mar. 10    | **Coalescence**                                                 | **Individual Meetings** 
-Thursday Mar. 12   | **Species trees**                                               | **Lab 8** TBA
+Thursday Feb. 19   | **[Markov chain Monte Carlo (MCMC)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-19-mcmc.pdf)** | **Lab 5** [Using R to explore probability distributions](https://plewis.github.io/rprobdist/)
+Tuesday Feb. 24    | **MCMC (cont.)** | **Homework 5** 
+Thursday Feb. 26   | **Model selection**                                                | **Lab 6** Maximum likelihood analyses with IQ-TREE
+Tuesday Mar. 3     | **Priors** | **Homework 6** 
+Thursday Mar. 5    | **Coalescence**                                                       | **Lab 7** TBA
+Tuesday Mar. 10    | **Species trees** | **Individual Meetings** 
+Thursday Mar. 12   | **Codon and amino acid models** | **Lab 8** TBA
 Tuesday Mar. 17    | **SPRING BREAK**                                                | **SPRING BREAK**  
 Thursday Mar. 19   | **SPRING BREAK**                                                | **SPRING BREAK**  
-Tuesday Mar. 24    | **Codon and amino acid models**                                 | **Homework 7** 
+Tuesday Mar. 24    | ****                                 | **Homework 7** 
 Thursday Mar. 26   | **Discrete morphological models**                               | **Lab 9** RevBayes
 Tuesday Mar. 31    | **rjMCMC and Polytomies**; **Evolutionary Correlation**         | **Homework 8** 
 Thursday Apr. 2    | **Inferring introgression/hybridization**]                      | **Lab 10** Discrete Morphology in RevBayes
