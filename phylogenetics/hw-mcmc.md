@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Homework 7 (MCMC)
+title: Homework 5 (MCMC)
 permalink: /hwmcmc/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2024/)
+[Up to the Phylogenetics main page](/phylogenetics2026/)
 
 ## Markov chain Monte Carlo (MCMC)
 

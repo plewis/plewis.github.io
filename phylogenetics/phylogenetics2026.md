@@ -34,8 +34,8 @@ Tuesday Feb. 10    | **[Rate heterogeneity](https://gnetum.eeb.uconn.edu/courses
 Thursday Feb. 12   | **[Simulation](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-12-simulation.pdf)** | **Lab 4** [Simulating sequence data](/simulation/)
 Tuesday Feb. 17	   | **[Bootstrapping, Bayes' Rule](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-17-bootstrap-bayesintro.pdf)** | **[Homework 4](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw4.pdf)**  
 Thursday Feb. 19   | **[Markov chain Monte Carlo (MCMC)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-19-mcmc.pdf)** | **Lab 5** [Using R to explore probability distributions](https://plewis.github.io/rprobdist/)
-Tuesday Feb. 24    | **MCMC (cont.)** | **Homework 5** 
-Thursday Feb. 26   | **Model selection**                                                | **Lab 6** Maximum likelihood analyses with IQ-TREE
+Tuesday Feb. 24    | **Snow Day: no class** | **[Homework 5](/hwmcmc/)** 
+Thursday Feb. 26   | **Model selection**                                                | **Lab 6** [Maximum likelihood analyses with IQ-TREE](/iqtree/)
 Tuesday Mar. 3     | **Priors** | **Homework 6** 
 Thursday Mar. 5    | **Coalescence**                                                       | **Lab 7** TBA
 Tuesday Mar. 10    | **Species trees** | **Individual Meetings** 
