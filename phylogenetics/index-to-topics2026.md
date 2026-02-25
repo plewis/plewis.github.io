@@ -55,6 +55,8 @@ general time-reversible model (GTR), Feb-5
 
 Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-5
 
+Hastings ratio, Feb-26
+
 heated chains (MCMC), Feb-19
 
 heterotachy, Feb-10
@@ -68,6 +70,8 @@ invariable sites model (+I), Feb-10
 Jukes-Cantor (1969) model (JC69), Feb-3
 
 kappa (transition-transversion rate ratio), Feb-5
+
+kernel density estimation, Feb-26
 
 Kimura (1980) 2-parameter model (K2P, K80), Feb-3
 
@@ -83,15 +87,21 @@ likelihood, vs. probability, Feb-5
 
 marginal likelihood, Feb-17
 
-Markov-chain Monte Carlo (MCMC), Feb-19
-
 maximum agreement subtree, Jan-22
  
 maximum likelihood estimate (MLE), Feb-10
 
+MCMC, local move proposal, Feb-26
+
+MCMC, Markov-chain Monte Carlo, Feb-19
+
+MCMC, sliding window proposal, Feb-26
+
 MCMC, robot metaphor, Feb-19
 
 Metropolis algorithm, Feb-19
+
+Metropolis-Hastings algorithm, Feb-26
 
 mixing (MCMC), Feb-19
 

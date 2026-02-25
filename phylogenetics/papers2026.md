@@ -151,7 +151,7 @@ Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population histo
 
 :heavy_check_mark: Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model) 
 
-Larget, B., and D. L. Simon. 1999. Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees. Molecular Biology and Evolution 16: 750-759. (see also Holder et al. 2005) 
+:heavy_check_mark: Larget, B., and D. L. Simon. 1999. Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees. Molecular Biology and Evolution 16: 750-759. (see also Holder et al. 2005) 
 
 Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra) 
 
