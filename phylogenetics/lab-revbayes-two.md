@@ -42,6 +42,15 @@ Here is the template to use for recording your answers to the :thinking: thinkin
     9. What is the posterior clade probability of the chlorophyll b clade?
     answer: 
 
+    10. What is the posterior probability of the chlorophyll b clade now that we've accommodated rate heterogeneity?
+    answer: 
+
+    11. Why do we need to create a deterministic node this time rather than a constant node (note that the JC Qmatrix was a constant node)?
+    answer: 
+
+    12. What is the posterior probability of the chlorophyll b clade under the GTR+I+G model?
+    answer: 
+
 ## Getting started
 
 :large_blue_diamond: Login to your account on the Storrs HPC cluster and start an interactive slurm session:
@@ -403,6 +412,132 @@ We do not need to view the tree in FigTree to check whether _Anacystis_ and _Ana
 Close to zero: 0.00043329
 {% endcomment %}
     
+## Adding rate heterogeneity
+
+We found in the likelihood lab that accommodating rate heterogeneity in the model was important for getting the tree correct. Let's switch to the JC+G model now to see if that helps. Add these lines any where **above the PhyloCTMC section** in your script.
+
+    #############################
+    # Among-site rate variation #
+    #############################
+
+    # Define the shape parameter of a Gamma distribution
+    alpha ~ dnUniform( 0, 10 )
+
+    # Create a deterministic node to model discrete gamma rate heterogeneity
+    site_relrates := fnDiscretizeGamma( alpha, alpha, 4, false )
+
+    # Add a move so that alpha will be estimated
+    moves.append( mvScale(alpha, weight=2.0) )
+
+    # Create a variable representing the proportion of invariable sites
+    p_inv ~ dnBeta(1,1)
+    
+    # Add a move so that p_inv will be estimated
+    moves.append( mvBetaProbability(p_inv, weight=2.0) )
+
+Now we need to modify this line in the PhyloCTMC section to inform the likelihood model of `p_inv` and `site_relrates`:
+
+    likelihood ~ dnPhyloCTMC(tree=psi, siteRates=site_relrates, pInv=p_inv, Q=Qmatrix, type="RNA")
+
+Now run RevBayes again (being sure to **uncomment the mcmc.run line first!**).
+
+> :thinking: What is the posterior probability of the chlorophyll b clade now that we've accommodated rate heterogeneity?
+
+{% comment %}
+0.1379816
+{% endcomment %}
+
+## GTR+I+G model
+
+Let's see if estimating base frequencies and exchangeabilities (i.e. the GTR+I+G model) further increases the posterior probability of the chlorophyll b clade.
+
+Copy your _jc.Rev_ file, calling the copy _gtr.Rev__:
+
+    cp jc.Rev gtr.Rev
+    
+Edit _gtr.Rev_, replacing your _Substitution model_ section with this one:
+
+    ######################
+    # Substitution Model #
+    ######################
+
+    # Create a stochastic node representing nucleotide frequencies
+    freqs ~ dnDirichlet( v(1,1,1,1) )
+    moves.append( mvBetaSimplex(freqs, weight=2.0) )
+    moves.append( mvDirichletSimplex(freqs, weight=1.0) )
+
+    # Create a stochastic node representing GTR exchangeabilities
+    xchg ~ dnDirichlet( v(1,1,1,1,1,1) )
+    moves.append( mvBetaSimplex(xchg, weight=3.0) )
+    moves.append( mvDirichletSimplex(xchg, weight=1.5) )
+
+    # Create a deterministic node for the GTR rate matrix
+    Qmatrix := fnGTR(xchg,freqs) 
+
+    # Create a constant variable for the rate matrix
+    # Qmatrix <- fnJC(4)
+
+    print("Q matrix: ", Qmatrix)
+
+Both **nucleotide relative frequencies** (`freqs`) and **GTR exchangeabilities** (`xchg`) are multivariate parameters that are constrained to add to 1, so both are given **flat Dirichlet priors**. The Dirichlet distribution can have different numbers of parameters (4 for freqs and 6 for xchg), so RevBayes uses a single vector to provide the parameters (which also determines the dimension of the variable). A **vector** in RevBayes is created using the `v()` notation.
+
+The moves provided for freq and xchg are appropriate for multivariate parameters that add to 1.0. The term [simplex](https://en.wikipedia.org/wiki/Simplex) implies this sum-to-1 constraint.
+
+> :thinking: Why do we need to create a deterministic node this time rather than a constant node (note that the JC Qmatrix was a constant node)?
+
+{% comment %}
+In the GTR model, the Q matrix is a function of model parameters, namely frequencies and exchangeabilties. I nthe JC model, there were no parameters making up the Q matrix.
+{% endcomment %}
+
+Rename your _output_ directory so that it will not be overwritten by the GTR MCMC analysis:
+
+    mv output jc-output
+    
+Now run RevBayes again, this time providing the _gtr.Rev_ script
+
+    rb gtr.Rev
+    
+There is a very high probability that RevBayes will report an error at this point. If you get
+
+    Missing Variable:	Variable moves does not exist
+    Error:	Problem processing line 20 in file "gtr.Rev"
+    
+type `q()` to get out of the program, then open your _gtr.Rev_ script in nano and go to line 20 (or whatever line is indicated) by typing Ctrl-<hyphen> and typing in the line number. See if you can figure out what is bothering RevBayes. Hint: the solution will involve relocating the line that says "moves = VectorMoves()" (this is line 45 in my version).
+
+> :thinking: What is the posterior probability of the chlorophyll b clade under the GTR+I+G model?
+
+{% comment %}
+0.8813492
+{% endcomment %}
+
+## An optional challenge if there's time
+
+We've been applying an Exponential(10) prior to each edge length. As we've discussed in lecture, this sometimes induces an unreasonable tree length prior. How would you change your script so that the **tree length** has an Exponential(10) prior and the **edge proportions** have a flat Dirichlet prior?
+
+{% comment %}
+# Edge length prior
+#for (i in 1:nedges) {
+#    edge_length[i] ~ dnExponential(10.0)
+#    moves.append( mvScale(edge_length[i]) )
+#}
+#TL := sum(edge_length)
+
+TL ~ dnExponential(10)
+moves.append( mvScale(TL) )
+
+edge_proportions ~ dnDirichlet( v(1,1,1,1,1,1,1,1,1,1,1,1,1) ) # can also use rep(1,nedges)
+moves.append( mvBetaSimplex(edge_proportions, weight=nedges) )
+moves.append( mvDirichletSimplex(edge_proportions, weight=nedges/10) )
+edge_length := edge_proportions * TL
+{% endcomment %}
+
 ## What to turn in
 
-In addition to the :thinking: thinking questions, please use FigTree to view your _algae-map.tree_, label the branches with marginal posterior clade probabilities, and save the tree thus annotated as a PDF file.
+In addition to the :thinking: thinking questions, please use FigTree to view your final _algae-map.tree_ (from the GTR+I+G model), label the branches with posterior clade probabilities, and save the tree thus annotated as a PDF file.
+
+
+
+
+
+
+
