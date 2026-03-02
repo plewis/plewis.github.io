@@ -23,7 +23,7 @@ Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic 
 
 Blomberg, S. P., J. G. Lefevre, J. A. Wells, and M. Waterhouse. 2012. [Independent contrasts and PGLS regression estimators are equivalent.](https://doi.org/10.1093/sysbio/syr118) Systematic Biology 61:382–391. 
 
-Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). [When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates.](https://doi.org/10.1093/sysbio/syp081) Systematic Biology 59:145–161.
+:heavy_check_mark: Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). [When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates.](https://doi.org/10.1093/sysbio/syp081) Systematic Biology 59:145–161.
 
 :heavy_check_mark: Brown, W., E. Prager, A. Wang, and A. Wilson. 1982. [Mitochondrial DNA sequences of primates, tempo and mode of evolution.](https://doi.org/10.1007/BF01734101) Journal of Molecular Evolution 18:225-239. 
 
@@ -103,9 +103,9 @@ Green, P. J. 1995. Reversible jump Markov chain Monte Carlo computation and Baye
 
 Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evolution 48:523-529. 
 
-:heavy_check_mark: Hasegawa, M., H. Kishino, and T. Yano. 1985. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA. Journal of Molecular Evolution 21:160-174. (HKY85 model) 
+:heavy_check_mark: Hasegawa, M., H. Kishino, and T. Yano. 1985. [Dating of the human-ape splitting by a molecular clock of mitochondrial DNA.](https://doi.org/10.1007/BF02101694) Journal of Molecular Evolution 21:160-174. (HKY85 model) 
 
-:heavy_check_mark: Hastings, W. K. 1970. Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109. (Hastings ratio) 
+:heavy_check_mark: Hastings, W. K. 1970. [Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109.](https://doi.org/10.1093/biomet/57.1.97) (Hastings ratio) 
 
 Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. [The fossilized birth–death process for coherent calibration of divergence-time estimates.](http://doi.org/10.1073/pnas.1319091111) PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
 
@@ -135,9 +135,9 @@ Jones, C. S., F. T. Bakker, C. D. Schlichting, and A. B. Nicotra. 2009. Leaf sha
 
 :heavy_check_mark: Kidd, K. K., and Sgaramella-Zonta, L. A. 1971. [Phylogenetic analysis: concepts and methods.](https://pmc.ncbi.nlm.nih.gov/articles/PMC1706731/) American Journal of Human Genetics 23: 235-252. 
 
-:heavy_check_mark: Kimura, M. 1980. A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences. Journal of Molecular Evolution 16:111-120. (K80/K2P model) 
+:heavy_check_mark: Kimura, M. 1980. [A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences.](https://doi.org/10.1007/BF01731581) Journal of Molecular Evolution 16:111-120. (K80/K2P model) 
 
-:heavy_check_mark: Kishino, H., and M. Hasegawa. 1989. Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea. Journal of Molecular Evolution 29: 170-179. (F84 model, KH test) 
+:heavy_check_mark: Kishino, H., and M. Hasegawa. 1989. [Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea. Journal of Molecular Evolution 29: 170-179.](https://doi.org/10.1007/BF02100115) (F84 model, KH test) 
 
 Kishino, H., J. L. Thorne, and W. J. Bruno. 2001. Performance of a divergence time estimation method under a probabilistic model of rate evolution. Molecular Biology and Evolution 18:352-361.
 
@@ -149,9 +149,9 @@ Kolaczkowski, B., and J. W. Thornton. 2008. [A mixed branch length model of hete
 
 Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population history. Trends Ecol. Evol. 24:86-93. 
 
-:heavy_check_mark: Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. A new method for calculating evolutionary substitution rates. Journal of Molecular Evolution 20:86-93. (GTR model) 
+:heavy_check_mark: Lanave, C., G. Preparata, C. Saccone, and G. Serio. 1984. [A new method for calculating evolutionary substitution rates.](https://doi.org/10.1007/BF02101990) Journal of Molecular Evolution 20:86-93. (GTR model) 
 
-:heavy_check_mark: Larget, B., and D. L. Simon. 1999. Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees. Molecular Biology and Evolution 16: 750-759. (see also Holder et al. 2005) 
+:heavy_check_mark: Larget, B., and D. L. Simon. 1999. [Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees.](https://doi.org/10.1093/oxfordjournals.molbev.a026160) Molecular Biology and Evolution 16:750-759. (see also Holder et al. 2005) 
 
 Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra) 
 
@@ -185,7 +185,7 @@ Martins, E. P. 1994. [Estimating the rate of phenotypic evolution from comparati
 
 Martins, E. P., and T. F. Hansen. 1997. Phylogenies and the comparative method: a general approach to incorporating phylogenetic information into the analysis of interspecific data. The American Naturalist 149:646-667. (PGLS) 
 
-:heavy_check_mark: Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. Equation of state calculations by fast computing machines. J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC) 
+:heavy_check_mark: Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. [Equation of state calculations by fast computing machines.](https://doi.org/10.1063/1.1699114) J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC) 
 
 Michener, C. D., and R. R. Sokal. 1957. A Quantitative Approach to a Problem in Classification. Evolution 11:130-162
 
@@ -237,11 +237,11 @@ Rabosky, D. L., J. S. Mitchell, and J. Chang. 2017. [Is BAMM flawed? Theoretical
 
 Rannala B. and Z Yang. 1996. [Probability distribution of molecular evolutionary trees: a new method of phylogenetic inference.](https://doi.org/10.1007/BF02338839) Journal of Molecular Evolution 43:304–311.
 
-Rannala B., Zhu T., Yang Z. 2012. Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference. Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior) 
+:heavy_check_mark: Rannala B., Zhu T., Yang Z. 2012. [Tail paradox, partial identifiability, and influential priors in Bayesian branch length inference.](https://doi.org/10.1093/molbev/msr210) Molecular Biology and Evolution. 29:325–335. (Gamma-Dirichlet multivariate edge length prior) 
 
 Ree, R. R. 2005. [Detecting the historical signature of key innovations using stochastic models of character evolution and cladogenesis.](https://doi.org/10.1111/j.0014-3820.2005.tb00986.x) Evolution 59(2):257–265.  
 
-:heavy_check_mark: Reeves, J. H. 1992. Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA. Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model) 
+:heavy_check_mark: Reeves, J. H. 1992. [Heterogeneity in the substitution process of amino acid sites of proteins coded for by mitochondrial DNA.](https://doi.org/10.1007/BF00160257) Journal of Molecular Evolution 35:17-31. (+I among-site rate heterogeneity model) 
 
 Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610. 
 
@@ -273,7 +273,7 @@ Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspeci
 
 :heavy_check_mark: Studier, J. A., and K. J. Keppler. 1988. [A note on the neighbor-joining algorithm of Saitou and Nei.](https://doi.org/10.1093/oxfordjournals.molbev.a040527) Molecular Biology and Evolution 5:729-731. (Neighbor joining speedup)
 
-Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. Bayesian selection of continuous-time Markov chain evolutionary models. Molecular Biology and Evolution 18:1001-1013. 
+:heavy_check_mark: Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. [Bayesian selection of continuous-time Markov chain evolutionary models.](https://doi.org/10.1093/oxfordjournals.molbev.a003872) Molecular Biology and Evolution 18:1001-1013. (Early use of hierarchical models in phylogenetics.)
 
 Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O., and Rogers, J. S. 2001. Bias in Phylogenetic Estimation and Its Relevance to the Choice between Parsimony and Likelihood Methods. Systematic Biology, 50(4), 525–539.
 
@@ -299,9 +299,9 @@ Wright, A. M., Lloyd, G. T., & Hillis, D. M. (2016). [Modeling character change 
 
 Xie, W.G., P. O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal Likelihood Estimation for Bayesian Phylogenetic Model Selection. Systematic Biology 60(2):150-160. (Stepping-stone marginal likelihood estimation) 
 
-:heavy_check_mark: Yang, Z. 1993. Maximum-likelihood estimation of phylogeny from DNA sequences when substitution rates differ over sites. Molecular Biology and Evolution 10:1396-1401. 
+:heavy_check_mark: Yang, Z. 1993. [Maximum-likelihood estimation of phylogeny from DNA sequences when substitution rates differ over sites.](https://doi.org/10.1093/oxfordjournals.molbev.a040082) Molecular Biology and Evolution 10:1396-1401. (Introduced gamma rate heterogeneity models.)
 
-:heavy_check_mark: Yang, Z. 1994. Maximum likelihood phylogenetic estimation from DNA sequences with variable rates over sites: approximate methods. Journal of Molecular Evolution 39:306-314. (+G among-site rate heterogeneity model)
+:heavy_check_mark: Yang, Z. 1994. [Maximum likelihood phylogenetic estimation from DNA sequences with variable rates over sites: approximate methods.](https://doi.org/10.1007/BF00160154) Journal of Molecular Evolution 39:306-314. (+G among-site rate heterogeneity model)
 
 Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
 
@@ -311,5 +311,5 @@ Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [To
 
 Zhou, Y., H. Brinkmann, N. Rodrigue, N. Lartillot, and H. Philippe. 2010. A Dirichlet Process covarion mixture model and its assessments using posterior predictive discrepency tests. Molecular Biology and Evolution 27:371-384.
 
-Zwickl, D., and M. T. Holder. 2004. Model parameterization, prior distributions, and the general time-reversible model in Bayesian phylogenetics. Systematic Biology 53: 877-888. 
+:heavy_check_mark: Zwickl, D., and M. T. Holder. 2004. [Model parameterization, prior distributions, and the general time-reversible model in Bayesian phylogenetics.](https://doi.org/10.1080/10635150490522584) Systematic Biology 53:877-888. 
 

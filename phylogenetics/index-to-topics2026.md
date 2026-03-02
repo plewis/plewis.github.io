@@ -29,9 +29,21 @@ density example (gold-to-aluminum brick), Feb-19
 
 discrete Gamma model, Feb-12
 
+distribution, Beta, Mar-3
+
+distribution, Dirichlet, Mar-3
+
+distribution, discrete Uniform, Mar-3
+
 distribution, Gamma, Feb-12
 
+distribution, Gamma-Dirichlet, Mar-3
+
+distribution, Lognormal, Mar-3
+
 distribution, proposal (for MCMC), Feb-19
+
+distribution, support, Mar-3
 
 distribution, target (for MCMC), Feb-19
 
@@ -44,6 +56,8 @@ Farris' paraphyly/polyphyly algorithm, Jan-29
 Felsenstein (1981) model (F81), Feb-5
 
 Felsenstein (1984) model (F84), Feb-5
+
+fence analogy (truncated priors), Mar-3
 
 Fitch's parsimony algorithm, Jan-29
 
@@ -61,6 +75,10 @@ heated chains (MCMC), Feb-19
 
 heterotachy, Feb-10
 
+hyperparameter, Mar-3
+
+hyperprior, Mar-3
+
 independence of events, Feb-10
 
 integrals, Feb-19
@@ -74,6 +92,8 @@ kappa (transition-transversion rate ratio), Feb-5
 kernel density estimation, Feb-26
 
 Kimura (1980) 2-parameter model (K2P, K80), Feb-3
+
+induced prior, Mar-3
 
 likelihood (criterion), Jan-20 
 
@@ -107,6 +127,10 @@ mixing (MCMC), Feb-19
 
 models, discrete Gamma, Feb-8=10
 
+models, empirical Bayesian, Mar-3
+
+models, hierarchical, Mar-3
+
 models, mixture (+I, +G, Q matrix, edge length), Feb-10
 
 models, partition, Feb-10
@@ -130,6 +154,12 @@ paternity example, Feb-17
 plesiomorphy, Jan-29
 
 polyphyly, Jan-29 
+
+prior, distribution, Mar-3
+
+prior, Gamma-Dirichlet, Mar-3
+
+prior, induced split, Mar-3
 
 probability, "and" rule, Feb-5
 
@@ -162,6 +192,8 @@ rate heterogeneity, Feb-10
 rate matrix (instantaneous), Feb-3
 
 reconnection limit, Jan-22 
+
+running on empty (MCMC without data), Mar-3
 
 simulation, Feb-12
 

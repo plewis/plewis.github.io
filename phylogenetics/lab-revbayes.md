@@ -3,7 +3,7 @@ layout: page
 title: RevBayes Lab
 permalink: /revbayes/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2024/)
+[Up to the Phylogenetics main page](/phylogenetics2026/)
 
 ## Goals
 
@@ -320,7 +320,9 @@ for 10000 iterations to generate the posterior sample.
 
 :large_blue_diamond: Run your file in RevBayes now. It will stop after it finishes the 10000th iteration. Note that it saved the output in a directory named _output_, which it generated because you included `output/` in each of the output file paths.
 
-Open the file _algae.log_ in Tracer and **look at the trace for the Posterior**. (Note that you will need to get the file from the cluster back to your laptop in order to open it in tracer.) This file contains the combined output from the four separate files _algae_run_1.log_, _algae_run_2.log_, _algae_run_3.log_, and _algae_run_4.log_.
+:large_blue_diamond: Download and install the program [Tracer](https://beast.community/tracer) on your local laptop.
+
+:large_blue_diamond: Open the file _algae.log_ in Tracer and **look at the trace for the Posterior**. (Note that you will need to get the file from the cluster back to your laptop in order to open it in Tracer.) This file contains the combined output from the four separate files _algae_run_1.log_, _algae_run_2.log_, _algae_run_3.log_, and _algae_run_4.log_.
 
 > :thinking: Explain the downward **spikes** you see in the posterior trace? (Note: there are actually four such spikes, but the first is difficult to see because it is right at the left edge of the plot.)
 
