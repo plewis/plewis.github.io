@@ -8,7 +8,9 @@ permalink: /applets/dirichlet-prior/
 
 The [Dirichlet distribution](https://en.wikipedia.org/wiki/Dirichlet_distribution) is normally used to specify the prior distribution for equilibrium base frequencies in Bayesian phylogenetics. Unfortunately, 4 dimensions are required to plot the probability density, so I've resorted to showing you samples from the distribution instead plotted using a [barycentric coordinate system](https://en.wikipedia.org/wiki/Barycentric_coordinate_system).
 
-Drag right-to-left (or left-to-right) with mouse to rotate view. Use controls below plot to change sampling distribution. Relative distance from vertex A, for example, is proportional to nucleotide frequency of A.
+Drag right-to-left (or left-to-right) with mouse to rotate view. Use controls below plot to change sampling distribution. 
+
+The proximity of a blue dot to vertex A is proportional to the relative frequency of A. Setting the A parameter to 100 and all others to 1 will result in all blue spheres clustered very close to the A vertex; this means that the frequency of A is very high relative to the frequencies of C, G, and T.
 
 <div class="container"></div>
 <script type="text/javascript">
