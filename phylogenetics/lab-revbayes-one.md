@@ -1,13 +1,13 @@
 ---
 layout: page
 title: RevBayes Lab
-permalink: /revbayes/
+permalink: /revbayes1/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2026/)
 
 ## Goals
 
-This lab exercise will introduce you [RevBayes](https://revbayes.github.io), one of a triad of state-of-the-art Bayesian phylogenetic software packages (the other two being BEAST2 and BPP). We will be using RevBayes v1.3.2 on the cluster in this lab. 
+This lab exercise will introduce you to [RevBayes](https://revbayes.github.io), one of a triad of state-of-the-art Bayesian phylogenetic software packages (the other two being BEAST2 and BPP). We will be using RevBayes v1.3.2 on the cluster in this lab. 
 
 RevBayes does not have the gentlest learning curve, but we will take it slowly. You will need to specify every detail explicitly in your RevBayes script, including the model, the moves (i.e. algorithms used to choose new parameter values), and the monitors (output saved to the screen or file). This level of detail is a bit tedious, but the flexibility that it provides is one of RevBayes strengths. RevBayes is not limited to canned analyses; it is possible for you do to analyses in RevBayes using models that no one has used before! 
 
