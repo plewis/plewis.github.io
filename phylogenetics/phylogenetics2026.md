@@ -35,11 +35,11 @@ Thursday Feb. 12   | **[Simulation](https://gnetum.eeb.uconn.edu/courses/phyloge
 Tuesday Feb. 17	   | **[Bootstrapping, Bayes' Rule](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-17-bootstrap-bayesintro.pdf)** | **[Homework 4](https://gnetum.eeb.uconn.edu/courses/phylogenetics/hw4.pdf)**  
 Thursday Feb. 19   | **[Markov chain Monte Carlo (MCMC)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-19-mcmc.pdf)** | **Lab 5** [Using R to explore probability distributions](https://plewis.github.io/rprobdist/)
 Tuesday Feb. 24    | **Snow Day: no class** | **[Homework 5](/hwmcmc/)** 
-Thursday Feb. 26   | **[MCMC (cont.)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-26-mcmc2.pdf)**                                                | **Lab 6** [Maximum likelihood analyses with IQ-TREE](/iqtree/)
+Thursday Feb. 26   | **[MCMC (cont.)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-26-mcmc2.pdf)** | **Lab 6** [Maximum likelihood analyses with IQ-TREE](/iqtree/)
 Tuesday Mar. 3     | **[Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-03-priors.pdf)** | **[Homework 6](/hwbloodroot/)** 
 Thursday Mar. 5    | **[Model selection](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-05-model-selection.pdf)** | **Lab 7** [RevBayes 1](/revbayes1/)
-Tuesday Mar. 10    | **Coalescence** | **Individual Meetings** 
-Thursday Mar. 12   | **Species trees** | **Lab 8** TBA
+Tuesday Mar. 10    | **[Coalescence](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-09-coalescence.pdf)** | **Individual Meetings** 
+Thursday Mar. 12   | **Species trees** | **Lab 8** [RevBayes (continued)](/revbayes2/)
 Tuesday Mar. 17    | **SPRING BREAK**                                                | **SPRING BREAK**  
 Thursday Mar. 19   | **SPRING BREAK**                                                | **SPRING BREAK**  
 Tuesday Mar. 24    | **Codon and amino acid models**                                 | **Homework 7** 

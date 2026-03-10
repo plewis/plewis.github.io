@@ -137,7 +137,9 @@ Jones, C. S., F. T. Bakker, C. D. Schlichting, and A. B. Nicotra. 2009. Leaf sha
 
 :heavy_check_mark: Kimura, M. 1980. [A simple method for estimating evolutionary rate of base substitutions through comparative studies of nucleotide sequences.](https://doi.org/10.1007/BF01731581) Journal of Molecular Evolution 16:111-120. (K80/K2P model) 
 
-:heavy_check_mark: Kishino, H., and M. Hasegawa. 1989. [Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea. Journal of Molecular Evolution 29: 170-179.](https://doi.org/10.1007/BF02100115) (F84 model, KH test) 
+:heavy_check_mark: Kingman, J. F. C. 1982. [On the genealogy of large populations.](https://doi.org/10.2307/3213548) Journal of Applied Probability 19:27-43. (Coalescent theory)
+
+:heavy_check_mark: Kishino, H., and M. Hasegawa. 1989. [Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea.](https://doi.org/10.1007/BF02100115) Journal of Molecular Evolution 29: 170-179.(F84 model, KH test) 
 
 Kishino, H., J. L. Thorne, and W. J. Bruno. 2001. Performance of a divergence time estimation method under a probabilistic model of rate evolution. Molecular Biology and Evolution 18:352-361.
 

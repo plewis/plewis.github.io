@@ -83,18 +83,20 @@ Save the _.bashrc_ file so that the next time you need an interactive node you c
 
 ## Copy the RevBayes executable to your _bin_ directory
 
-You copied the _rb132_ executable into your bin directory in the [previous lab](/revbayes1/), but if you need to do it again, here is how:
+You copied the _rb132_ executable into your bin directory in the [previous lab](/revbayes1/), but, as it turns out, **you need to do it again**:
 
-:large_blue_diamond: copy it to your own _bin_ directory:
+:large_blue_diamond: copy _rb132_ to your _bin_ directory (overwriting the version you copied last time):
 
     cd 
     cp /scratch/pol02003/pol02003/rb132 ~/bin
+    
+The reason for this is obscure, but let's just say it will save a lot of headaches if you use this new build of RevBayes, which plays nicely with the runtime libraries used by R.
     
 ## Load module needed
 
 :large_blue_diamond: The RevBayes executable file needs some runtime libraries that can be loaded using the module system. Since we will also be using R on the cluster, and since loading the R module also loads the runtime library needed by rb132, we can just go ahead and load the R module:
 
-    module load r/4.5.2
+    module load r/4.3.2
 
 :large_blue_diamond: You should now be able to type **rb132** to start the program:
 
@@ -117,12 +119,11 @@ You copied the _rb132_ executable into your bin directory in the [previous lab](
     
 The dot (`.`) on the end of that last line is important, as is the space before it. That lines says to copy the _algae.nex_ file from the _rblab_ directory (the `..` means to back up one level in the directory hierarchy) to the current directory (`.`).
 
-If you've wiped out your folder from the likelihood lab, you can easily get the data file from the server again. Start by using `cd` to go into the _rblab_ folder, then use the `curl` command ("Copy URL") to download the file:
+If you've wiped out your folder from the likelihood lab, never fear! I have put copies in the scratch directory:
 
-    cd ~/rblab
-    curl -Ok https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/algae.nex
-    
-(If the curl approach fails, you will need to download the file to your laptop and move it to the cluster using scp or Cyberduck.)    
+    cd ~/rblab2
+    cp /scratch/pol02003/pol02003/algae.nex .
+    cp /scratch/pol02003/pol02003/jc.Rev .
     
 ## Creating a RevBayes script
 

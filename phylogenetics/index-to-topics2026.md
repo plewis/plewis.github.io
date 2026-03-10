@@ -23,6 +23,8 @@ bootstrapping (IQ-TREE ultrafast), Feb-17
 
 clade, Jan-29
 
+coalescence, Mar-9
+
 consensus trees, Jan-22, Jan-29
 
 density example (gold-to-aluminum brick), Feb-19
@@ -47,9 +49,13 @@ distribution, support, Mar-3
 
 distribution, target (for MCMC), Feb-19
 
+effective population size (Ne), Mar-9
+
 evolutionary distance, Jan-22
 
 exhaustive search, Jan-22 
+
+expected time to coalescence, Mar-9
 
 Farris' paraphyly/polyphyly algorithm, Jan-29
 
@@ -64,6 +70,8 @@ Fitch's parsimony algorithm, Jan-29
 four-point condition, Jan-29
 
 free rates model (+R), Feb-12
+
+gene trees, Mar-9
 
 general time-reversible model (GTR), Feb-5
 
@@ -173,6 +181,8 @@ probability, marginal, Feb-17
 
 probability, mass vs. density, Feb-19
 
+probability, no coalescence, Mar-9
+
 probability, "or" rule, Feb-5
 
 probability, posterior, Feb-17
@@ -216,6 +226,8 @@ subtree-pruning-regrafting (SPR) branch swapping, Jan-22
 symplesiomorphy, Jan-29
 
 synapomorphy, Jan-29
+
+theta (population genetics parameter), Mar-9
 
 trace plots, Feb-19
 
