@@ -6,33 +6,29 @@ permalink: /applets/coalescence/
 
 ## Coalescence 
 
-Simulates a coalescent history for 5 randomly-selected genes from among the 2*Ne genes in a random-mating population of size Ne. The MRCA is shown as a large, red-filled circle (if it is visible), but note that it will not be visible if it occurs at a time deeper than the 50 generations shown.
+Simulates a coalescent history for n randomly-selected genes from among the 2*Ne genes in a random-mating population of size Ne. The MRCA is shown as a large, red-filled circle (if it is visible), but note that it will not be visible if it occurs at a time deeper than the T generations shown.
 
-Use the drop-down control below the plot to change **Ne** The **Refresh** button regenerates the entire history (same as refreshing your browser except that Ne does not revert to its default value).
+Use the drop-down controls below the plot to change **n**, **Ne**, or **T** The **Rewrite History** button regenerates the entire history (same as refreshing your browser except that n, Ne, and T do not revert to their default values). the **Resample** button (or **s** key) chooses a different random sample of n genes.
 
-Keys that can be used:
-* **S** Chooses a different random sample of 5 genes
+The status text at the bottom shows the generation at which the first coalescence event occurred, as well as the generation at which the most recent common ancestor (MRCA) of all sample genes occurs. After changing either n or Ne, each rewrite of history updates the mean time until the first coalescence. If it says "mean unavailable", it means that at least one run failed to coalesce at all over T generations, rendering the mean meaningless.
 
-Some experiments to try:
-* **Refresh 10 times with Ne = 5.** How many times out of 10 did the MRCA occur within the 50 generations shown? 
-* **Refresh 10 times with Ne = 15.** How many times out of 10 did the MRCA occur within the 50 generations shown? _Does the MRCA tend to occur nearer the present (top of the plot) or deeper into the past (bottom of the plot) when Ne is larger?_
-* **Press the S key several times** to choose a different sample of genes while keeping the population history the same. _Does sampling different genes affect the position of the MRCA?_ Try the same exercise with several different population histories (hit the Refresh button to obtain a new population history as well as a new random sample of genes).
+The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne results in longer average coalescence times while increasing n shortens the average coalescence time. Note that the standard deviation of coalescence times equals the mean.
 
 <div id="plot"></div>
 <div id="settings"></div>
 <script type="text/javascript">
     // written by Paul O. Lewis Jan. 20, 2023
     // modified Jan. 17, 2024, to allow hiding sampled lineages
-    var rnseed = Math.floor(10000*Math.random())
-    var lot = new Random(rnseed);
+    let rnseed = Math.floor(10000*Math.random())
+    let lot = new Random(rnseed);
     
     // color(0) returns first predefined color of 20 total in schemeCategory20
-    var defaultcolor = d3.scaleOrdinal()
+    let defaultcolor = d3.scaleOrdinal()
         .range(d3.schemeCategory20);
 
     // Earth tones based on real clay pigments
     // From http://www.boomerinas.com/wp-content/uploads/2015/08/real-earth-tones-clay-pigment.jpg
-    var earthcolor = d3.scaleOrdinal()
+    let earthcolor = d3.scaleOrdinal()
         .domain([0,11])
         .range([
             d3.rgb("#8B230D"),
@@ -50,56 +46,62 @@ Some experiments to try:
             ]);
     
     // width and height of svg
-    var w = 700;    // total width
-    var h = 600;    // total height
-    var lm = 70;    // left margin
-    var rm = 30;    // right margin
-    var tm = 0;    // top margin
-    var bm = 0;    // bottom margin
-    var spacer = 20; // time labels right-justified at lm - spacer from left edge
+    let w = 800;    // total width
+    let h = 700;    // total height
+    let lm = 70;    // left margin
+    let rm = 30;    // right margin
+    let tm = 0;    // top margin
+    let bm = 0;    // bottom margin
+    let spacer = 20; // time labels right-justified at lm - spacer from left edge
     
     // sampled lineages
-    var sampled_node_radius =  6;
-    var mrca_node_color = "red";
-    var sampled_node_color = "navy";
-    var sampled_line_color = "navy";
-    var sampled_line_thickness = 4; 
+    let sampled_node_radius =  6;
+    let mrca_node_color = "red";
+    let sampled_node_color = "navy";
+    let sampled_line_color = "navy";
+    let sampled_line_thickness = 4; 
     
     // unsampled lineages
-    var unsampled_node_radius =  5;
-    var unsampled_node_color = "silver";
-    var unsampled_line_color = "silver";
-    var unsampled_line_thickness = 2;
+    let unsampled_node_radius =  5;
+    let unsampled_node_color = "silver";
+    let unsampled_line_color = "silver";
+    let unsampled_line_thickness = 2;
 
-    var genetree_showing = true; // if true, lines and nodes comprising gene history are shown; if false, they are hidden
-    var untangled = true; // if true, untangle lines so they don't cross from one gen to the next
-    var nodes_labeled = false; // if true, number of each node is displayed
+    let genetree_showing = true; // if true, lines and nodes comprising gene history are shown; if false, they are hidden
+    let untangled = true; // if true, untangle lines so they don't cross from one gen to the next
+    let nodes_labeled = false; // if true, number of each node is displayed
 
     // application specific settings
-    var Ne_cutoff = 10; // sampled_node_radius reduced if Ne > Ne_cutoff
-    var Ne_choices = [5,10,15];
-    var Ne_index = 0; // index of value selected at start
-    var Ne = Ne_choices[Ne_index];  // number of diploid individuals
+    let Ne_cutoff = 10; // sampled_node_radius reduced if Ne > Ne_cutoff
+    let Ne_choices = [10,20,30];
+    let Ne_index = 0; // index of value selected at start
+    let Ne = Ne_choices[Ne_index];  // number of diploid individuals
 
-    var n = 5;  // number of genes sampled
+    let nsampled_choices = [2,5,10];
+    let nsampled_index = 0; // index of value selected at start
+    let nsampled = nsampled_choices[nsampled_index];  // number of genes sampled
 
-    var T_cutoff = 20; // sampled_node_radius reduced if T > T_cutoff
-    var T_choices = [20,50];
-    var T_index = 0; // index of value selected at start
-    var T = T_choices[T_index];  // number of generations
+    let T_cutoff = 20; // sampled_node_radius reduced if T > T_cutoff
+    let T_choices = [20,50];
+    let T_index = 1; // index of value selected at start
+    let T = T_choices[T_index];  // number of generations
+    
+    let cum_tfirst = 0.0; // sum of times to first coalescence since last change in n or Ne 
+    let num_tfirst = 0.0;   // number of history rewrites since last change in n or Ne
+    let valid_mean_tfirst = true; // becomes false if any runs fail to coalesce at all
 
-    var plotw = w - lm - rm;    // plot width
-    var ploth = h - tm - bm;    // plot height
-    //var delta = plotw/(Ne+1);  // space between adjacent individual centers
-    var delta = plotw/(Ne - 2/3);  // space between adjacent individual centers
-    var tincr = ploth/(T+1);   // space between generations
-    var eps = delta/6;        // offset for genes within individuals
+    let plotw = w - lm - rm;    // plot width
+    let ploth = h - tm - bm;    // plot height
+    //let delta = plotw/(Ne+1);  // space between adjacent individual centers
+    let delta = plotw/(Ne - 2/3);  // space between adjacent individual centers
+    let tincr = ploth/(T+1);   // space between generations
+    let eps = delta/6;        // offset for genes within individuals
     
     // Select DIV element already created (see above) to hold SVG
-    var plot_div = d3.select("div#plot");
+    let plot_div = d3.select("div#plot");
 
     // Create SVG element
-    var plot_svg = plot_div.append("svg")
+    let plot_svg = plot_div.append("svg")
         .attr("width", w)
         .attr("height", h);
 
@@ -120,7 +122,7 @@ Some experiments to try:
         this.mrca = false;    // set to true for the node that is the MRCA
         }
     
-    var debugShowNodes = function() {
+    let debugShowNodes = function() {
         console.log("Matrix of nodes:");
         for (let t = 0; t < T; t++) {
             for (let i = 0; i < 2*Ne; i++) {
@@ -130,7 +132,7 @@ Some experiments to try:
         }
     }
 
-    var copyNodes = function(from, to) {
+    let copyNodes = function(from, to) {
         // Deep copy
         for (let t = 0; t < T-1; t++) {
             for (let i = 0; i < 2*Ne; i++) {
@@ -151,14 +153,14 @@ Some experiments to try:
         }
     }
 
-    var nodes0 = []; 
-    var nodes = []; 
+    let nodes0 = []; 
+    let nodes = []; 
     
-    var rebuildNodes = function() {
+    let rebuildNodes = function() {
         // Create matrix of CoalNode objects
         nodes0 = []; 
         nodes = []; 
-        var node_number = 0;
+        let node_number = 0;
         for (let t = 0; t < T; t++) {
             let row0 = [];
             let row = [];
@@ -183,7 +185,7 @@ Some experiments to try:
         copyNodes(nodes, nodes0);
     }
         
-    var indivFromGene = function(i) {
+    let indivFromGene = function(i) {
         // i  i/2  indiv
         // -------------
         // 0  0.0    0
@@ -199,7 +201,7 @@ Some experiments to try:
         return Math.floor(i/2);
     }
 
-    var untangleDiagram = function() {
+    let untangleDiagram = function() {
         // Reorder nodes for each generation (except the last) forward in time
         for (let t = T-2; t >= 0; t--) {
             nodes[t].sort(function(a, b){
@@ -211,7 +213,7 @@ Some experiments to try:
         }
     } 
 
-    var clearSample = function() { 
+    let clearSample = function() { 
         // Clean the slate, returning node numbers of nodes that were flagged as sampled
         let sampled_numbers = [];
         for (let t = 0; t < T; t++) {
@@ -225,7 +227,7 @@ Some experiments to try:
         return sampled_numbers;
     }
 
-    var reinstateSample = function(sampled_numbers) {
+    let reinstateSample = function(sampled_numbers) {
         clearSample();
                             
         for (let i = 0; i < 2*Ne; i++) {
@@ -252,7 +254,7 @@ Some experiments to try:
         return comparison;
     }
 
-    var resample = function() {
+    let resample = function() {
         clearSample();
                             
         // Start with all genes available
@@ -261,10 +263,10 @@ Some experiments to try:
             available.push(i);
         }
         
-        // Choose n nodes at time 0 to be sampled and propagate through to bottom
+        // Choose nsampled nodes at time 0 to be sampled and propagate through to bottom
         // Keep track of the MRCA
         let MRCAs = [];
-        for (let i = 0; i < n; i++) {
+        for (let i = 0; i < nsampled; i++) {
             // Choose one of the available (i.e. unsampled) genes
             let it = Math.floor(lot.uniform(0,1)*available.length);
             let which = available[it];
@@ -289,28 +291,62 @@ Some experiments to try:
             }
         }
         
-        // Sort MRCAs so that first one has largest t
-        MRCAs.sort(decreasing_time);
-        let t = MRCAs[0].t;
-        let i = MRCAs[0].i;
-        
-        // MRCAs[0] is the MRCA only if it is the only node on its row
-        // that represents a sampled lineage
-        let nlineages = 0;
-        for (let j = 0; j < 2*Ne; j++) {
-            if (nodes[t][j].sampled) {
-                nlineages++;
+        let tfirst = 0;
+        let nMRCAs = MRCAs.length;
+        if (nMRCAs > 0) {
+            // Sort MRCAs so that first one has largest t
+            MRCAs.sort(decreasing_time);
+            let t = MRCAs[0].t;
+            let i = MRCAs[0].i;
+            
+            tfirst = MRCAs[nMRCAs-1].t + 1;
+            cum_tfirst += tfirst;
+            num_tfirst += 1.0;
+            mean_tfirst = cum_tfirst/num_tfirst;
+            
+            // MRCAs[0] is the MRCA only if it is the only node on its row
+            // that represents a sampled lineage
+            let nlineages = 0;
+            for (let j = 0; j < 2*Ne; j++) {
+                if (nodes[t][j].sampled) {
+                    nlineages++;
+                }
+            }
+            console.log("t = " + t + ", i = " + i + ", nlineages = " + nlineages);
+            
+            if (nlineages == 1) {
+                //console.log("The MRCA: t = " + t + ", i = " + i);
+                nodes[t][i].mrca = true;
+                if (valid_mean_tfirst) {
+                    d3.select("text#mrcatime")
+                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", MRCA at " + (t+1));
+                } else {
+                    d3.select("text#mrcatime")
+                        .html("first at " + tfirst + ", mean unavailable, MRCA at " + (t+1));
+                }
+            }
+            else {
+                if (valid_mean_tfirst) {
+                    d3.select("text#mrcatime")
+                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", MRCA > " + T);
+                } else {
+                    d3.select("text#mrcatime")
+                        .html("first at " + tfirst + ", mean unavailable, MRCA > " + T);
+                }
             }
         }
-        console.log("t = " + t + ", i = " + i + ", nlineages = " + nlineages);
-        
-        if (nlineages == 1) {
-            //console.log("The MRCA: t = " + t + ", i = " + i);
-            nodes[t][i].mrca = true;
+        else {
+            // No coalescence for T generations
+            console.log("no coalescence: t > " + T);
+            valid_mean_tfirst = false;
+            d3.select("text#mrcatime")
+                .html("first > " + T + ", mean unavailable, MRCA > " + T);
         }
+        
+        
     }
 
-    var refresh = function() {
+    let refresh = function() {
         // Called when untangled is toggled or another sample is considered
         // Assume nodes and nodes0 already exist
         
@@ -394,7 +430,7 @@ Some experiments to try:
             .text(function(d) {return "nd-" + d.id;});
             
         // Use dummy text element to determine bounding box
-        var dummy = plot_svg.append("text")
+        let dummy = plot_svg.append("text")
             .attr("id", "dummy")
             .attr("x", 0)
             .attr("y", 0)
@@ -402,10 +438,10 @@ Some experiments to try:
             .style("font-size", 12)
             .attr("visibility", "hidden")
             .text("99");
-        var dummy_bb      = dummy.node().getBBox();
-        var dummy_width   = dummy_bb.width;
-        var dummy_height  = dummy_bb.height;
-        var dummy_descent = dummy_bb.height + dummy_bb.y;
+        let dummy_bb      = dummy.node().getBBox();
+        let dummy_width   = dummy_bb.width;
+        let dummy_height  = dummy_bb.height;
+        let dummy_descent = dummy_bb.height + dummy_bb.y;
             
         // Create text labels for generations
         plot_svg.selectAll("text.time")
@@ -423,7 +459,7 @@ Some experiments to try:
             .text(function(d) {return d.time;});
     }
     
-    var replot = function() {
+    let replot = function() {
         // Called when N or T changes
         rebuildNodes();
         
@@ -433,9 +469,8 @@ Some experiments to try:
         resample();
         refresh();
     }
-    replot();
     
-    var toggleHideShow = function() {
+    let toggleHideShow = function() {
         // added 2024-01-17 by POL
         if (genetree_showing) {
             genetree_showing = false;
@@ -510,8 +545,8 @@ Some experiments to try:
         }
     }
 
-    var addButton = function(panel, label, onfunc) {
-        var control_div = panel.append("div")
+    let addButton = function(panel, label, onfunc) {
+        let control_div = panel.append("div")
             .attr("class", "control")
             .style("margin", "10px")
             .style("display", "inline-block");
@@ -521,8 +556,8 @@ Some experiments to try:
             .on("click", onfunc);
         }
 
-    var addDropdown = function(panel, id, label, choices, selected_index, onfunc) {
-        var control_div = panel.append("div")
+    let addDropdown = function(panel, id, label, choices, selected_index, onfunc) {
+        let control_div = panel.append("div")
             .attr("class", "control")
             .style("margin", "10px")
             .style("display", "inline-block");
@@ -538,21 +573,49 @@ Some experiments to try:
         control_div.append("label")
             .html("&nbsp;" + label);
         }
+        
+    let addStatusText = function(panel, id, html_content) {
+        let control_div = panel.append("div")
+            .attr("id", id)
+            .attr("class", "control")
+            .style("display", "inline-block");
+        control_div.append("text")
+            .attr("id", id)
+            .style("margin-left", "1em")
+            .style("margin-right", "1em")
+            .style("font-family", "Verdana")
+            .style("font-size", "10pt")
+            .style("display", "inline-block")
+            .html(html_content);
+        }
+        
+    let settings_div = d3.select("div#settings");
+    let createSettingsPanel = function() {
+        addDropdown(settings_div, "samplesize", "n", nsampled_choices, nsampled_index, function() {
+            let selected_index = d3.select(this).property('selectedIndex');
+            nsampled = nsampled_choices[selected_index];
+            console.log("new n chosen: " + nsampled);
+            cum_tfirst = 0.0;
+            num_tfirst = 0.0;
+            valid_mean_tfirst = true;
+            replot();
+        });
 
-    var settings_div = d3.select("div#settings");
-    var createSettingsPanel = function() {
-        addDropdown(settings_div, "samplesize", "Ne", Ne_choices, Ne_index, function() {
-            var selected_index = d3.select(this).property('selectedIndex');
+        addDropdown(settings_div, "popsize", "Ne", Ne_choices, Ne_index, function() {
+            let selected_index = d3.select(this).property('selectedIndex');
             Ne = Ne_choices[selected_index];
             //delta = plotw/(Ne+1);
             delta = plotw/(Ne - 2/3);
             eps = delta/6;
             console.log("new Ne chosen: " + Ne);
+            cum_tfirst = 0.0;
+            num_tfirst = 0.0;
+            valid_mean_tfirst = true;
             replot();
         });
 
         addDropdown(settings_div, "generations", "T", T_choices, T_index, function() {
-            var selected_index = d3.select(this).property('selectedIndex');
+            let selected_index = d3.select(this).property('selectedIndex');
             T = T_choices[selected_index];
             tincr = ploth/(T+1);
             console.log("new T chosen: " + T);
@@ -572,8 +635,11 @@ Some experiments to try:
             toggleHideShow();
         });
             
+        addStatusText(settings_div, "mrcatime", "no results yet");
+            
     }
     createSettingsPanel();
+    replot();
     
     d3.select("body")
         .on("keydown", keyDown);    
