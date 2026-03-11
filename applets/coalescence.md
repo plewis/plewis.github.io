@@ -10,15 +10,16 @@ Simulates a coalescent history for n randomly-selected genes from among the 2*Ne
 
 Use the drop-down controls below the plot to change **n**, **Ne**, or **T** The **Rewrite History** button regenerates the entire history (same as refreshing your browser except that n, Ne, and T do not revert to their default values). the **Resample** button (or **s** key) chooses a different random sample of n genes.
 
-The status text at the bottom shows the generation at which the first coalescence event occurred, as well as the generation at which the most recent common ancestor (MRCA) of all sample genes occurs. After changing either n or Ne, each rewrite of history updates the mean time until the first coalescence. If it says "mean unavailable", it means that at least one run failed to coalesce at all over T generations, rendering the mean meaningless.
+The status text at the bottom shows the generation at which the first coalescence event occurred, as well as the generation at which the most recent common ancestor (MRCA) of all sample genes occurs. After changing either n or Ne, each rewrite of history updates the mean time until the first coalescence. If it says "mean NA" (i.e. mean not available), it means that at least one run failed to coalesce at all over T generations, rendering the mean meaningless.
 
-The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne results in longer average coalescence times while increasing n shortens the average coalescence time. Note that the standard deviation of coalescence times equals the mean.
+The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne results in longer average coalescence times while increasing n shortens the average coalescence time. The applet reports E[first] as the expected generation at which the first coalescence event happens (i.e. 1 greater than the expected time to coalescence). Note that the standard deviation of coalescence times equals the mean and can be quite large.
 
 <div id="plot"></div>
 <div id="settings"></div>
 <script type="text/javascript">
     // written by Paul O. Lewis Jan. 20, 2023
     // modified Jan. 17, 2024, to allow hiding sampled lineages
+    // modified Mar. 11, 2026, to add ability to modify nsamples and adding status text
     let rnseed = Math.floor(10000*Math.random())
     let lot = new Random(rnseed);
     
@@ -300,6 +301,7 @@ The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne r
             let i = MRCAs[0].i;
             
             tfirst = MRCAs[nMRCAs-1].t + 1;
+            expected_tfirst = 1 + 4.0*Ne/(nsampled*(nsampled - 1));
             cum_tfirst += tfirst;
             num_tfirst += 1.0;
             mean_tfirst = cum_tfirst/num_tfirst;
@@ -319,19 +321,19 @@ The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne r
                 nodes[t][i].mrca = true;
                 if (valid_mean_tfirst) {
                     d3.select("text#mrcatime")
-                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", MRCA at " + (t+1));
+                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", E[first] = " + expected_tfirst + ", MRCA at " + (t+1));
                 } else {
                     d3.select("text#mrcatime")
-                        .html("first at " + tfirst + ", mean unavailable, MRCA at " + (t+1));
+                        .html("first at " + tfirst + ", mean NA, E[first] = " + expected_tfirst + ", MRCA at " + (t+1));
                 }
             }
             else {
                 if (valid_mean_tfirst) {
                     d3.select("text#mrcatime")
-                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", MRCA > " + T);
+                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", E[first] = " + expected_tfirst + ", MRCA > " + T);
                 } else {
                     d3.select("text#mrcatime")
-                        .html("first at " + tfirst + ", mean unavailable, MRCA > " + T);
+                        .html("first at " + tfirst + ", mean NA, E[first] = " + expected_tfirst + ", MRCA > " + T);
                 }
             }
         }
@@ -340,7 +342,7 @@ The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne r
             console.log("no coalescence: t > " + T);
             valid_mean_tfirst = false;
             d3.select("text#mrcatime")
-                .html("first > " + T + ", mean unavailable, MRCA > " + T);
+                .html("first > " + T + ", mean NA, E[first] = " + expected_tfirst + ", MRCA > " + T);
         }
         
         
