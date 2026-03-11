@@ -545,7 +545,7 @@ The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne r
         }
     }
 
-    let addButton = function(panel, label, onfunc) {
+    var addButton = function(panel, label, onfunc) {
         let control_div = panel.append("div")
             .attr("class", "control")
             .style("margin", "10px")
@@ -556,7 +556,7 @@ The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne r
             .on("click", onfunc);
         }
 
-    let addDropdown = function(panel, id, label, choices, selected_index, onfunc) {
+    var addDropdown = function(panel, id, label, choices, selected_index, onfunc) {
         let control_div = panel.append("div")
             .attr("class", "control")
             .style("margin", "10px")
@@ -574,7 +574,7 @@ The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne r
             .html("&nbsp;" + label);
         }
         
-    let addStatusText = function(panel, id, html_content) {
+    var addStatusText = function(panel, id, html_content) {
         let control_div = panel.append("div")
             .attr("id", id)
             .attr("class", "control")
