@@ -321,19 +321,19 @@ The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne r
                 nodes[t][i].mrca = true;
                 if (valid_mean_tfirst) {
                     d3.select("text#mrcatime")
-                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", E[first] = " + expected_tfirst + ", MRCA at " + (t+1));
+                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", E[first] = " + expected_tfirst.toFixed(1) + ", MRCA at " + (t+1));
                 } else {
                     d3.select("text#mrcatime")
-                        .html("first at " + tfirst + ", mean NA, E[first] = " + expected_tfirst + ", MRCA at " + (t+1));
+                        .html("first at " + tfirst + ", mean NA, E[first] = " + expected_tfirst.toFixed(1) + ", MRCA at " + (t+1));
                 }
             }
             else {
                 if (valid_mean_tfirst) {
                     d3.select("text#mrcatime")
-                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", E[first] = " + expected_tfirst + ", MRCA > " + T);
+                        .html("first at " + tfirst + ", mean = " + mean_tfirst.toFixed(1) + ", E[first] = " + expected_tfirst.toFixed(1) + ", MRCA > " + T);
                 } else {
                     d3.select("text#mrcatime")
-                        .html("first at " + tfirst + ", mean NA, E[first] = " + expected_tfirst + ", MRCA > " + T);
+                        .html("first at " + tfirst + ", mean NA, E[first] = " + expected_tfirst.toFixed(1) + ", MRCA > " + T);
                 }
             }
         }
@@ -342,7 +342,7 @@ The expected time to the first coalescence is 4*Ne/(n*(n-1)), so increasing Ne r
             console.log("no coalescence: t > " + T);
             valid_mean_tfirst = false;
             d3.select("text#mrcatime")
-                .html("first > " + T + ", mean NA, E[first] = " + expected_tfirst + ", MRCA > " + T);
+                .html("first > " + T + ", mean NA, E[first] = " + expected_tfirst.toFixed(1) + ", MRCA > " + T);
         }
         
         
