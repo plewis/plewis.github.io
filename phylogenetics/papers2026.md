@@ -33,13 +33,13 @@ Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences i
 
 :heavy_check_mark: Cavalli-Sforza, L. L., and A. W. F. Edwards. 1967. [Phylogenetic analysis. Models and estimation procedures.](https://doi.org/10.1111/j.1558-5646.1967.tb03411.x) Evolution 21:550-570. 
 
-Chifman, J., and Kubatko, L. S. 2014. [Quartet Inference from SNP Data Under the Coalescent Model.](http://doi.org/10.1093/bioinformatics/btu530) Bioinformatics 30(23):3317-3324. 
+:heavy_check_mark: Chifman, J., and Kubatko, L. S. 2014. [Quartet Inference from SNP Data Under the Coalescent Model.](http://doi.org/10.1093/bioinformatics/btu530) Bioinformatics 30(23):3317-3324. 
 
 :heavy_check_mark: Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London. 
 
 Dayhoff, M.O., Schwartz, R.M., Orcutt, B.C. 1978. A model for evolutionary change in proteins. Atlas of Protein Sequence and Structure, 5, 345–352. (PAM amino acid model) 
 
-Degnan, J. H., and N. A. Rosenberg. 2006. [Discordance of species trees with their most likely gene trees.](http://doi.org/10.1371/journal.pgen.0020068) PLoS Genetics 2:e68. (The anomaly zone) 
+:heavy_check_mark: Degnan, J. H., and N. A. Rosenberg. 2006. [Discordance of species trees with their most likely gene trees.](http://doi.org/10.1371/journal.pgen.0020068) PLoS Genetics 2:e68. (The anomaly zone) 
 
 Drummond, A. J., S. Y. W. Ho, M. J. Phillips, A. Rambaut. 2006. Relaxed phylogenetics and dating with confidence. PLoS Biology 4(5): e88 (Uncorrelated relaxed clocks)
 
@@ -193,7 +193,7 @@ Michener, C. D., and R. R. Sokal. 1957. A Quantitative Approach to a Problem in 
 
 Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection of likelihood models for phylogeny estimation. Systematic Biology 52:674–683. (DTmodsel model selection criterion)
 
-Mirarab, S., and T. Warnow. 2015. [ASTRAL-II: coalescent-based species tree estimation with many hundreds of taxa and thousands of genes.](https://doi.org/10.1093/bioinformatics/btv234) Bioinformatics 31(12):i44–52. 
+:heavy_check_mark: Mirarab, S., and T. Warnow. 2015. [ASTRAL-II: coalescent-based species tree estimation with many hundreds of taxa and thousands of genes.](https://doi.org/10.1093/bioinformatics/btv234) Bioinformatics 31(12):i44–52. 
 
 Moore, B. R., S. Hohna, M. R. May, B. Rannala, and J. P. Huelsenbeck. 2016. [Critically evaluating the theory and performance of Bayesian analysis of macroevolutionary mixtures.](https://doi.org/10.1073/pnas.1518659113) PNAS 113:9569-9574.  
 

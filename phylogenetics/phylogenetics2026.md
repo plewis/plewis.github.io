@@ -38,8 +38,8 @@ Tuesday Feb. 24    | **Snow Day: no class** | **[Homework 5](/hwmcmc/)**
 Thursday Feb. 26   | **[MCMC (cont.)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-02-26-mcmc2.pdf)** | **Lab 6** [Maximum likelihood analyses with IQ-TREE](/iqtree/)
 Tuesday Mar. 3     | **[Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-03-priors.pdf)** | **[Homework 6](/hwbloodroot/)** 
 Thursday Mar. 5    | **[Model selection](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-05-model-selection.pdf)** | **Lab 7** [RevBayes 1](/revbayes1/)
-Tuesday Mar. 10    | **[Coalescence](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-09-coalescence.pdf)** | **Individual Meetings** 
-Thursday Mar. 12   | **Species trees** | **Lab 8** [RevBayes (continued)](/revbayes2/)
+Tuesday Mar. 10    | **[Coalescence](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-10-coalescence.pdf)** | **Individual Meetings** 
+Thursday Mar. 12   | **[Species trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-12-coal-astral.pdf)** | **Lab 8** [RevBayes (continued)](/revbayes2/)
 Tuesday Mar. 17    | **SPRING BREAK**                                                | **SPRING BREAK**  
 Thursday Mar. 19   | **SPRING BREAK**                                                | **SPRING BREAK**  
 Tuesday Mar. 24    | **Codon and amino acid models**                                 | **Homework 7** 
