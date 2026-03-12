@@ -85,7 +85,7 @@ Save the _.bashrc_ file so that the next time you need an interactive node you c
 
 You copied the _rb132_ executable into your bin directory in the [previous lab](/revbayes1/), but, as it turns out, **you need to do it again**:
 
-:large_blue_diamond: copy _rb132_ to your _bin_ directory (overwriting the version you copied last time):
+:large_blue_diamond: Copy _rb132_ to your _bin_ directory (overwriting the version you copied last time):
 
     cd 
     cp /scratch/pol02003/pol02003/rb132 ~/bin
@@ -244,7 +244,7 @@ If these two numbers are close (e.g. within one log unit of each other), then it
 
     cp jc.Rev jcig.Rev
 
-We found in the likelihood lab that accommodating rate heterogeneity in the model was important for getting the tree correct. Let's switch to the JC+G model now to see if that helps. 
+We found in the likelihood lab that accommodating rate heterogeneity in the model was important for getting the tree correct. Let's switch to the JC+I+G model now to see if that helps. 
 
 :large_blue_diamond: Add these lines **just before the PhyloCTMC section** in your _jcig.Rev_ script.
 
