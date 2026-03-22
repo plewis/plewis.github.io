@@ -42,8 +42,8 @@ Tuesday Mar. 10    | **[Coalescence](https://gnetum.eeb.uconn.edu/courses/phylog
 Thursday Mar. 12   | **[Species trees](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-12-coal-astral.pdf)** | **Lab 8** [RevBayes (continued)](/revbayes2/)
 Tuesday Mar. 17    | **SPRING BREAK**                                                | **SPRING BREAK**  
 Thursday Mar. 19   | **SPRING BREAK**                                                | **SPRING BREAK**  
-Tuesday Mar. 24    | **Codon and amino acid models**                                 | **Homework 7** 
-Thursday Mar. 26   | **Discrete morphological models**                               | **Lab 9** RevBayes
+Tuesday Mar. 24    | **Discrete morphological models**                               | **Homework 7** 
+Thursday Mar. 26   | **Codon and amino acid models**                                 | **Lab 9** [RevBayes with discrete morphological data](/morph/)
 Tuesday Mar. 31    | **rjMCMC and Polytomies**; **Evolutionary Correlation**         | **Homework 8** 
 Thursday Apr. 2    | **Inferring introgression/hybridization**]                      | **Lab 10** Discrete Morphology in RevBayes
 Tuesday Apr. 7     | **Independent Contrasts**; **PGLS regression**                  | **Homework 9** 
