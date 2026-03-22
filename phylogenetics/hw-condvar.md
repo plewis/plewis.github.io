@@ -5,7 +5,7 @@ permalink: /hwcondvar/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2026/)
 
-{% include figure.html description="Figure 1" url="/assets/img/condvar.png" css="image-center noborder" width="500px" %}
+{% include figure.html description="Figure 1" url="/assets/img/condvar.png" css="image-center noborder" width="600px" %}
 
 ## Conditioning on variability in the Mk model
 
@@ -15,7 +15,7 @@ Be sure to [ask me for help](mailto:paul.lewis@uconn.edu) if you get stuck.
 
 ## What to do
 
-Login to your account on the Storrs HPC cluster and create a file named _hw7.py_ using nano containing the code below. Edit the _hw7.py_ script in nano, replacing the xxxx placeholder with the correct formula. Assume the data for characters 1 and 2 are as shown in Figure 1.
+Login to your account on the Storrs HPC cluster and create a file named _hw7.py_ using nano containing the code below. Edit the _hw7.py_ script in nano, uncommenting the final 4 lines and replacing the xxxx placeholder with the correct formula. Assume the data for characters 1 and 2 are as shown in Figure 1.
 
     from math import exp, log
     
@@ -49,7 +49,6 @@ Login to your account on the Storrs HPC cluster and create a file named _hw7.py_
     
     # TODO: calculate likelihood for character 2 conditioned on variability
     #like2cv = xxxx
-    
     #print('Mk model (edge lengths all %.1f, conditioning on variability):' % v)
     #print('  likelihood (char. 2) = %.5f' % like2cv)
     #print('  log-likelihood (char. 2) = %.5f' % log(like2cv))
@@ -69,7 +68,7 @@ Near the top of your _hw7.py_ file is the definition of a function named `siteli
 The first argument,`same_list`, is a list of 4 numbers representing the number
 of edges (of the 5 total) in which the **state is the same**
 at both ends. There are 4 such values because there are 4
-possible ancestral state combinations (00, 01, 10, 11) for 2 states (0 and 1). For example, in the tree on the left (labeled "use for same1", the ancestral state combination 10 assigns 1 to the left ancestral state and 0 to the right ancestral state. This results in 2 edges with the same state at each end.
+possible ancestral state combinations (00, 01, 10, 11) for 2 states (0 and 1). For example, in the tree on the left (labeled "Use for same 1", the ancestral state combination 10 assigns 1 to the left ancestral state and 0 to the right ancestral state. This assignment results in the rightmost 2 edges (i.e. the edges connected to taxon 3 and taxon 4) having the same state at each end, and thus the array `same1` has a 2 in the 3rd position corresponding to the 10 ancestral state combination.
 
 The second argument is `v`, which is the **edge length** to be used for all 5 edges. 
 
@@ -122,7 +121,7 @@ The `paup` block above has two sections. The first section computes the likeliho
 
 First, make sure you are getting the correct site likelihoods _without_ conditioning on variability.
 
-Second, if you are getting the right site likelihoods when not conditioning on variability but not matching when you do condition on variability, be sure you are correctly calculating the probability of the site being variable. This value is 1 minus the probability that a site is constant, and remember that there are **two ways that a site can be constant** (either all 0s or all 1s at the leaves). You have calculated the probability that a site has all 0s (this is stored in the `like1` variable), and the probability of a site having 1 at every leaf is the same, so all you need to do is multiply the value stored in `like1` by 2 to get the probability that a site is constant.
+Second, if you are getting the correct site likelihoods when **not** conditioning on variability but not matching when you **do** condition on variability, be sure you are correctly calculating the probability of the site being variable. This value is 1 minus the probability that a site is constant, and remember that there are **two ways that a site can be constant** (either all 0s or all 1s at the leaves). You have calculated the probability that a site has all 0s (this is stored in the `like1` variable), and the probability of a site having 1 at every leaf is the same, so all you need to do is multiply the value stored in `like1` by 2 to get the probability that a site is constant.
 
 ## What do I turn in?
 
