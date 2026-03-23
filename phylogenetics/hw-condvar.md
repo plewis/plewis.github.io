@@ -15,7 +15,7 @@ Be sure to [ask me for help](mailto:paul.lewis@uconn.edu) if you get stuck.
 
 ## What to do
 
-Login to your account on the Storrs HPC cluster and create a file named _hw7.py_ using nano containing the code below. Edit the _hw7.py_ script in nano, uncommenting the final 4 lines and replacing the xxxx placeholder with the correct formula. Assume the data for characters 1 and 2 are as shown in Figure 1.
+Login to your account on the Storrs HPC cluster and create a file named _hw7.py_ using nano containing the code below. 
 
     from math import exp, log
     
@@ -60,6 +60,10 @@ Ensure that you have access to python3 on the cluster by loading the python modu
 Run the _hw7.py_ script as follows:
 
     python3 hw7.py
+    
+Because the parts that are not yet completed by you are commented out (using hashtags at the beginning of the line), the _hw7.py_ program should run and spit out the likelihood without conditioning on variability.
+
+After running it once to make sure everything works, edit the _hw7.py_ script in nano, uncommenting the final 4 lines and replacing the xxxx placeholder with the correct formula. Assume the data for characters 1 and 2 are as shown in Figure 1.
     
 ### The sitelike function
 

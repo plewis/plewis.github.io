@@ -67,7 +67,7 @@ Felsenstein, J. 1983. Statistical inference of phylogenies. Journal of the Royal
 
 Felsenstein, J. 1985b. [Phylogenies and the comparative method.](https://doi.org/10.1086/284325) American Naturalist 125:1-15. (independent contrasts) 
 
-Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood approach. Evolution 46:159-173. (conditioning on variability in discrete trait likelihood calculations) 
+:heavy_check_mark: Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood approach. Evolution 46:159-173. (conditioning on variability in discrete trait likelihood calculations) 
 
 Felsenstein, J. 2004. Inferring phylogenies. Sinauer Associates, Sunderland, MA.
 
@@ -113,7 +113,7 @@ Hennig, W. 1966. Phylogenetic systematics. University of Illinois Press, Urbana.
 
 Holder, M. T., Lewis, P. O., Swofford, D. L., and Larget, B. (2005). Hastings ratio of the LOCAL proposal used in Bayesian phylogenetics. Systematic Biology, 54(6), 961–965.
 
-Holder, M. T., P. O. Lewis, and D. L. Swofford. 2010. The Akaike Information Criterion will not choose the no common mechanism model. Systematic Biology 59:477-485.
+:heavy_check_mark: Holder, M. T., P. O. Lewis, and D. L. Swofford. 2010. The Akaike Information Criterion will not choose the no common mechanism model. Systematic Biology 59:477-485.
 
 :heavy_check_mark: Huelsenbeck, J. P., and D. M. Hillis. 1993. [Success of phylogenetic methods in the four taxon case.](https://doi.org/10.1093/sysbio/27.4.401) Systematic Biology 42:247-264. (coined the term Felsenstein Zone) 
 
@@ -129,7 +129,7 @@ Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from mu
 
 Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of mutation data matrices from protein sequences. Comput Applic Biosci, 8, 275–282. (JTT amino acid model) 
 
-Jones, C. S., F. T. Bakker, C. D. Schlichting, and A. B. Nicotra. 2009. Leaf shape evolution in the South African genus _Pelargonium_ L'Hér. (Geraniaceae). International Journal of Organic Evolution 63:479-497. 
+:heavy_check_mark: Jones, C. S., F. T. Bakker, C. D. Schlichting, and A. B. Nicotra. 2009. Leaf shape evolution in the South African genus _Pelargonium_ L'Hér. (Geraniaceae). International Journal of Organic Evolution 63:479-497. 
 
 :heavy_check_mark: Jukes, T. H., and C. R. Cantor. 1969. Evolution of protein molecules. Pages 21-132 in H. N. Munro (ed.), Mammalian Protein Metabolism. Academic Press, New York. (JC69 model) 
 
@@ -163,7 +163,7 @@ Le, S. Q., and Gascuel, O. 2008. An improved general amino acid replacement matr
 
 Lewis, L. A., B. D. Mishler, and R. Vilgalys. 1997. [Phylogenetic relationships of the liverworts (Hepaticae), a basal embryophyte lineage, inferred from nucleotide sequence data of the chloroplast gene _rbc_L](https://doi.org/10.1006/mpev.1996.0395) Molecular Phylogenetics and Evolution 7:377-393.
 
-Lewis, P. O. 2001a. A likelihood approach to estimating phylogeny from discrete morphological character data. Systematic Biology 50:913-925. 
+:heavy_check_mark: Lewis, P. O. 2001. A likelihood approach to estimating phylogeny from discrete morphological character data. Systematic Biology 50:913-925. 
 
 Lewis, P. O. 2001b. Phylogenetic systematics turns over a new leaf. Trends in Ecology and Evolution 16:30-37. 
 
@@ -209,7 +209,7 @@ Nielsen, R. 2002. Mapping mutations on phylogenies. Systematic Biology 51(5): 72
 
 Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Appropriate likelihood ratio tests and marginal distributions for evolutionary tree models with constraints on parameters. Molecular Biology and Evolution 17:798-803. (LRT border case correction)
 
-Pagel, M. 1994. Detecting correlated evolution on phylogenies: a general method for the comparative analysis of discrete characters. Proceedings of the Royal Society of London B 255:37-45. (assessing evolutionary correlation between two discrete traits) 
+:heavy_check_mark: Pagel, M. 1994. Detecting correlated evolution on phylogenies: a general method for the comparative analysis of discrete characters. Proceedings of the Royal Society of London B 255:37-45. (assessing evolutionary correlation between two discrete traits) 
 
 Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scripta 26:331–348. (introduced kappa scaling factor used in comparative analyses)
 
@@ -255,7 +255,7 @@ Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., a
 
 Sankoff, D. 1975. Minimal mutation trees of sequences. SIAM Journal on Applied Mathematics 28:35-42. (generalized parsimony, step matrices) 
 
-Schluter, D., T. Price, A. Ø. Mooers, and D. Ludwig. 1997. Likelihood of ancestor states in adaptive radiation. Evolution 51:1699-1711. 
+:heavy_check_mark: Schluter, D., T. Price, A. Ø. Mooers, and D. Ludwig. 1997. Likelihood of ancestor states in adaptive radiation. Evolution 51:1699-1711. 
 
 Schwarz, G. E. 1978. Estimating the dimension of a model. Ann Stat. 6:461–464. (BIC model selection criterion)
 
@@ -285,7 +285,7 @@ Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin
 
 Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
 
-Tuffley, C., and M. Steel. 1997. Links between maximum likelihood and maximum parsimony under a simple model of substitution. Bulletin of Mathematical Biology 59:581-607
+:heavy_check_mark: Tuffley, C., and M. Steel. 1997. Links between maximum likelihood and maximum parsimony under a simple model of substitution. Bulletin of Mathematical Biology 59:581-607
 
 Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
 
@@ -297,7 +297,7 @@ Wickett, N. J., Y. Fan, P. Lewis, and B. Goffinet. 2008. [Distribution and evolu
 
 Wiley, E. O. 1981. Phylogenetics: the theory and practice of phylogenetic systematics. John Wiley and Sons, New York.
 
-Wright, A. M., Lloyd, G. T., & Hillis, D. M. (2016). [Modeling character change heterogeneity in phylogenetic analyses of morphology through the use of priors.](https://doi.org/10.1093/sysbio/syv122) Systematic Biology 65:602–611. 
+:heavy_check_mark: Wright, A. M., Lloyd, G. T., & Hillis, D. M. (2016). [Modeling character change heterogeneity in phylogenetic analyses of morphology through the use of priors.](https://doi.org/10.1093/sysbio/syv122) Systematic Biology 65:602–611. 
 
 Xie, W.G., P. O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal Likelihood Estimation for Bayesian Phylogenetic Model Selection. Systematic Biology 60(2):150-160. (Stepping-stone marginal likelihood estimation) 
 

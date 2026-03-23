@@ -6,12 +6,19 @@ permalink: /index2026/
 Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2026/).
 
 The following topics were covered in lecture in the Spring 2026 version of EEB 5349 (Phylogenetics). Please refer to the [schedule](/phylogenetics2026/) to find links to the slides for the dates indicated.
+
 additivity of distances, Jan-29
 
 among-site rate heterogeneity (ASRV), Feb-10
 apomorphy, Jan-29
 
+among-site state frequency heterogeneity, Mar-24
+
 archery priors example, Feb-19
+
+ascertainment bias, Mar-24
+
+autoapomorphy trail, Mar-24
 
 bat monophyly test, Feb-12
 
@@ -24,6 +31,8 @@ bootstrapping (IQ-TREE ultrafast), Feb-17
 clade, Jan-29
 
 coalescence, Mar-9
+
+conditioning on variability, Mar-24
 
 consensus trees, Jan-22, Jan-29
 
@@ -70,6 +79,8 @@ Fitch's parsimony algorithm, Jan-29
 four-point condition, Jan-29
 
 free rates model (+R), Feb-12
+
+frequencies, equilibrium state, Mar-24
 
 gene trees, Mar-9
 
@@ -133,7 +144,11 @@ Metropolis-Hastings algorithm, Feb-26
 
 mixing (MCMC), Feb-19
 
+models, asymmetric, Mar-24
+
 models, discrete Gamma, Feb-8=10
+
+models, discrete morphology, Mar-24
 
 models, empirical Bayesian, Mar-3
 
@@ -141,7 +156,11 @@ models, hierarchical, Mar-3
 
 models, mixture (+I, +G, Q matrix, edge length), Feb-10
 
+models, Mk, Mar-24
+
 models, partition, Feb-10
+
+models, symmetric, Mar-24
 
 monophyly, Jan-29 
 
@@ -230,6 +249,8 @@ synapomorphy, Jan-29
 theta (population genetics parameter), Mar-9
 
 trace plots, Feb-19
+
+traffic accidents Poisson example, Mar-24
 
 transition (probability), Feb-3
 
