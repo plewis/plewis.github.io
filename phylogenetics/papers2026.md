@@ -99,7 +99,7 @@ Gogarten, J. P., H. Kibak, P. Dittrich, L. Taiz, E. J. Bowman, B. J. Bowman, M. 
 
 Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 326:119-157. (first phylogenetic regression model)
 
-Green, P. J. 1995. Reversible jump Markov chain Monte Carlo computation and Bayesian model determination. Biometrika 82:711-732. 
+:heavy_check_mark: Green, P. J. 1995. Reversible jump Markov chain Monte Carlo computation and Bayesian model determination. Biometrika 82:711-732. 
 
 Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evolution 48:523-529. 
 
@@ -167,7 +167,7 @@ Lewis, L. A., B. D. Mishler, and R. Vilgalys. 1997. [Phylogenetic relationships 
 
 Lewis, P. O. 2001b. Phylogenetic systematics turns over a new leaf. Trends in Ecology and Evolution 16:30-37. 
 
-Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian phylogenetic inference. Systematic Biology 54:241–253. 
+:heavy_check_mark: Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian phylogenetic inference. Systematic Biology 54:241–253. 
 
 Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65(6):1009-1023. 
 
@@ -217,7 +217,7 @@ Pagel, M. 1999. Inferring the historical patterns of biological evolution. Natur
 
 Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting pattern-heterogeneity in gene sequence or character-state data. Systematic Biology 53:571-581. (mixture of Q-matrices model)
 
-Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discrete characters by reversible-jump Markov chain Monte Carlo. American Naturalist 167:808-825. (rjMCMC for discrete character correlation) 
+:heavy_check_mark: Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discrete characters by reversible-jump Markov chain Monte Carlo. American Naturalist 167:808-825. (rjMCMC for discrete character correlation) 
 
 Pagel, M., and A. Meade. 2008. [Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo.](https://doi.org/10.1098/rstb.2008.0178) Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
 

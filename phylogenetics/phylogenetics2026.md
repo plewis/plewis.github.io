@@ -43,17 +43,17 @@ Thursday Mar. 12   | **[Species trees](https://gnetum.eeb.uconn.edu/courses/phyl
 Tuesday Mar. 17    | **SPRING BREAK**                                                | **SPRING BREAK**  
 Thursday Mar. 19   | **SPRING BREAK**                                                | **SPRING BREAK**  
 Tuesday Mar. 24    | **[Discrete morphological models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-24-mk.pdf)** | **[Homework 7](/hwcondvar/)** 
-Thursday Mar. 26   | **Codon and amino acid models**                                 | **Lab 9** [RevBayes with discrete morphological data](/morph/)
-Tuesday Mar. 31    | **rjMCMC and Polytomies**; **Evolutionary Correlation**         | **Homework 8** 
-Thursday Apr. 2    | **Inferring introgression/hybridization**]                      | **Lab 10** Discrete Morphology in RevBayes
-Tuesday Apr. 7     | **Independent Contrasts**; **PGLS regression**                  | **Homework 9** 
-Thursday Apr. 9    | **PGLS (cont.)**; **Phylogenetic signal **                      | **Lab 11** BayesTraits
-Tuesday Apr. 14    | **Dirichlet Process Priors**                                    | **Individual Meetings** 
-Thursday Apr. 16   | **Visit by Dr. Rosana Zenil-Ferguson**;                         | **Lab 12** Comparative methods and diversification in R
-Tuesday Apr. 21    | **Relaxed clocks**;                                             | **Homework 10** 
-Thursday Apr. 23   | **Heterotachy, and Covarion models**;                           | **Lab 13** Divergence Time Estimation with RevBayes
-Tuesday Apr. 28    | **Diversification**                                             | no homework assignment
-Thursday Apr. 30   | **Species delimitation and information**                        | **Lab 14** Plotting trees in R with ggtree
+Thursday Mar. 26   | **[Evolutionary Correlation](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-26-pagel94.pdf)**; **[Star Tree Paradox](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-26-star-tree-paradox.pdf)** | **Lab 9** [RevBayes with discrete morphological data](/morph/)
+Tuesday Mar. 31    | **Independent Contrasts** | **Homework 8** 
+Thursday Apr. 2    | **PGLS**; **Phylogenetic signal **              | **Lab 10** BayesTraits
+Tuesday Apr. 7     | **Dirichlet Process Priors**                            | **Homework 9** 
+Thursday Apr. 9    | **Relaxed clocks**                                      | **Lab 11** Divergence Time Estimation with RevBayes
+Tuesday Apr. 14    | **Divergence time estimation**                          | **Individual Meetings** 
+Thursday Apr. 16   | **Visit by Dr. Rosana Zenil-Ferguson**                  | **Lab 12** Visit by Dr. Rosana Zenil-Ferguson
+Tuesday Apr. 21    | **Inferring introgression/hybridization**               | **Homework 10** 
+Thursday Apr. 23   | **Heterotachy, and Covarion models**                    | **Lab 13** Comparative methods and diversification in R
+Tuesday Apr. 28    | **Codon and amino acid models**                         | no homework assignment
+Thursday Apr. 30   | **Species delimitation and information**                | **Lab 14** Plotting trees in R with ggtree
 
 ## Index to major topics
 

@@ -10,6 +10,7 @@ The following topics were covered in lecture in the Spring 2026 version of EEB 5
 additivity of distances, Jan-29
 
 among-site rate heterogeneity (ASRV), Feb-10
+
 apomorphy, Jan-29
 
 among-site state frequency heterogeneity, Mar-24
@@ -26,6 +27,8 @@ Bayes' rule, Feb-17
 
 bootstrapping (non-parametric), Feb-17
 
+bootstrapping (parametric), Mar-26
+
 bootstrapping (IQ-TREE ultrafast), Feb-17
 
 clade, Jan-29
@@ -37,6 +40,8 @@ conditioning on variability, Mar-24
 consensus trees, Jan-22, Jan-29
 
 density example (gold-to-aluminum brick), Feb-19
+
+dependence model, Mar-26
 
 discrete Gamma model, Feb-12
 
@@ -59,6 +64,10 @@ distribution, support, Mar-3
 distribution, target (for MCMC), Feb-19
 
 effective population size (Ne), Mar-9
+
+estrus advertisement example, Mar-26
+
+evolutionary correlation, Mar-26
 
 evolutionary distance, Jan-22
 
@@ -136,6 +145,8 @@ MCMC, Markov-chain Monte Carlo, Feb-19
 
 MCMC, sliding window proposal, Feb-26
 
+MCMC, reversible jump, Mar-26
+
 MCMC, robot metaphor, Feb-19
 
 Metropolis algorithm, Feb-19
@@ -146,6 +157,8 @@ mixing (MCMC), Feb-19
 
 models, asymmetric, Mar-24
 
+models, dependence, Mar-26
+
 models, discrete Gamma, Feb-8=10
 
 models, discrete morphology, Mar-24
@@ -153,6 +166,8 @@ models, discrete morphology, Mar-24
 models, empirical Bayesian, Mar-3
 
 models, hierarchical, Mar-3
+
+models, independence, Mar-26
 
 models, mixture (+I, +G, Q matrix, edge length), Feb-10
 
