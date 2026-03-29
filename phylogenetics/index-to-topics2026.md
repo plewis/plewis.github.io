@@ -31,13 +31,19 @@ bootstrapping (parametric), Mar-26
 
 bootstrapping (IQ-TREE ultrafast), Feb-17
 
+Brownian motion model, Mar-31
+
 clade, Jan-29
 
 coalescence, Mar-9
 
+comparative method, Mar-31
+
 conditioning on variability, Mar-24
 
 consensus trees, Jan-22, Jan-29
+
+deep coalescence, Mar-12
 
 density example (gold-to-aluminum brick), Feb-19
 
@@ -157,6 +163,8 @@ mixing (MCMC), Feb-19
 
 models, asymmetric, Mar-24
 
+models, Brownian motion, Mar-31
+
 models, dependence, Mar-26
 
 models, discrete Gamma, Feb-8=10
@@ -193,6 +201,10 @@ partitioned models, Feb-10
 
 paternity example, Feb-17
 
+phylogenetically generalized least squares (PGLS), Mar-31
+
+phylogenetically independent contrasts (PIC), mar-31
+
 plesiomorphy, Jan-29
 
 polyphyly, Jan-29 
@@ -202,6 +214,8 @@ prior, distribution, Mar-3
 prior, Gamma-Dirichlet, Mar-3
 
 prior, induced split, Mar-3
+
+prior, polytomy, Mar-26
 
 probability, "and" rule, Feb-5
 
@@ -243,7 +257,11 @@ simulation, Feb-12
 
 site-specific rates, Feb-10
 
+software, BayesTraits, Apr-2
+
 software, PAUP*, Jan-22
+
+software, RevBayes, Mar-5, Mar-12
 
 splits, Jan-20 
 
@@ -282,3 +300,7 @@ tree islands, Jan-22
 tree-bisection-reconnection (TBR) branch swapping, Jan-22 
 
 ultrametric, Jan-20 
+
+variance-covariance matrix, Apr-2
+
+

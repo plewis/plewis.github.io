@@ -65,7 +65,7 @@ Felsenstein, J. 1983. Statistical inference of phylogenies. Journal of the Royal
 
 :heavy_check_mark: Felsenstein, J. 1985a. [Confidence intervals on phylogenies: an approach using the bootstrap.](https://doi.org/10.1111/j.1558-5646.1985.tb00420.x) Evolution 39:783-791. (nonparametric bootstrapping) 
 
-Felsenstein, J. 1985b. [Phylogenies and the comparative method.](https://doi.org/10.1086/284325) American Naturalist 125:1-15. (independent contrasts) 
+:heavy_check_mark: Felsenstein, J. 1985b. [Phylogenies and the comparative method.](https://doi.org/10.1086/284325) American Naturalist 125:1-15. (independent contrasts) 
 
 :heavy_check_mark: Felsenstein, J. 1992. Phylogenies from restriction sites: a maximum-likelihood approach. Evolution 46:159-173. (conditioning on variability in discrete trait likelihood calculations) 
 
@@ -181,11 +181,11 @@ Maddison, D. R., Swofford, D. L., and Maddison, W. P. 1997. NEXUS: An extensible
 
 Maddison W. P., Midford P. E., Otto S. P. 2007. Estimating a binary character’s effect on speciation and extinction. Systematic Biology 56:701–710. 
 
-Maddison, W. P., and FitzJohn, R. G. 2015. The unsolved challenge to phylogenetic correlation tests for categorical characters. Systematic Biology 64:127–136. (need for true replication in comparative studies)
+:heavy_check_mark: Maddison, W. P., and FitzJohn, R. G. 2015. [The unsolved challenge to phylogenetic correlation tests for categorical characters.]((https://doi.org/10.1093/sysbio/syu070) Systematic Biology 64:127–136. (need for true replication in comparative studies)
 
 Martins, E. P. 1994. [Estimating the rate of phenotypic evolution from comparative data.](https://doi.org/10.1086/285670) The American Naturalist 144(2):193-209.
 
-Martins, E. P., and T. F. Hansen. 1997. Phylogenies and the comparative method: a general approach to incorporating phylogenetic information into the analysis of interspecific data. The American Naturalist 149:646-667. (PGLS) 
+:heavy_check_mark: Martins, E. P., and T. F. Hansen. 1997. Phylogenies and the comparative method: a general approach to incorporating phylogenetic information into the analysis of interspecific data. The American Naturalist 149:646-667. (PGLS) 
 
 :heavy_check_mark: Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. [Equation of state calculations by fast computing machines.](https://doi.org/10.1063/1.1699114) J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC) 
 

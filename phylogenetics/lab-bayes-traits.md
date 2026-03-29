@@ -3,11 +3,11 @@ layout: page
 title: BayesTraits Lab
 permalink: /bayes-traits/
 ---
-[Up to the Phylogenetics main page](/phylogenetics2024/)
+[Up to the Phylogenetics main page](/phylogenetics2026/)
 
 ## Goals
 
-In this lab you will learn how to use the program [BayesTraits](http://www.evolution.reading.ac.uk/BayesTraitsV4.0.0/BayesTraitsV4.0.0.html), written by Andrew Meade and Mark Pagel. BayesTraits can perform several analyses related to evaluating evolutionary correlation and ancestral state reconstruction in discrete morphological traits. 
+In this lab you will learn how to use the program [BayesTraits](https://www.evolution.reading.ac.uk/BayesTraitsV5.0.3/BayesTraitsV5.0.3.html), written by Andrew Meade and Mark Pagel. BayesTraits can perform several analyses related to evaluating evolutionary correlation and ancestral state reconstruction in discrete morphological traits. 
 
 ## Lab answer worksheet
 
@@ -19,82 +19,103 @@ Copy the following text into a text file and use this template to answer the :th
     2. Which occurs at a faster rate: entire to dissected, or dissected to entire?
     answer:
     
-    3. What type of joint evolutionary transitions seem to often have very low rates (look for an abundance of zeros in a column)?
+    3. What type of joint evolutionary transitions seem to often have a zero rate?
     answer:
     
-    4. What type of joint evolutionary transitions seem to often have very high rates (look for columns with rates in the hundreds)?
+    4. What type of joint evolutionary transitions seem to often have a rate of 100?
     answer:
     
-    5. Why am I suggesting this switch? (Hint: what is the support of a Uniform(0,100) distribution vs. an Exponential(1/29) distribution?)
+    5. Why is no rate ever larger than 100?
     answer:
     
-    6. Why choose 29? (Hint: the variance of a Uniform(0,100) distribution equals 100^2/12 and the variance of an Exponential(1/29) distribution equals 29^2)
+    6.  Why am I suggesting using an Exponential rather than a (truncated) Uniform prior distribution?
     answer:
     
-    7. What is the log marginal likelihood estimated using the stepping-stone method? This value is listed on the last line of the file _mcmc-dependent.Stones.txt_
+    7. Why choose 29? (Hint: the variance of a Uniform(0,100) distribution equals 100^2/12 and the variance of an Exponential(1/29) distribution equals 29^2)
     answer:
     
-    8. What is the estimated log marginal likelihood for this analysis using the stepping-stone method?
+    8. What is the log marginal likelihood estimated using the stepping-stone method? This value is listed on the last line of the file _mcmc-dependent.Stones.txt_
     answer:
     
-    9. Which is the better model (dependent or independent) according to these estimates of marginal likelihood?
+    9. What is the estimated log marginal likelihood for this analysis using the stepping-stone method?
     answer:
     
-    10. Which model string is most common? 
+    10. Which is the better model (dependent or independent) according to these estimates of marginal likelihood?
     answer:
     
-    11. What does this model imply?
+    11. Which model string is most common? 
     answer:
     
-    12. So what is the estimated marginal posterior probability that q21=0?
+    12. What does this model imply?
     answer:
     
-    13. Why is the term marginal appropriate here (as in marginal posterior probability)?
+    13. So what is the estimated marginal posterior probability that q21=0?
     answer:
     
-    14. Which state is most common at the xerophyte MRCA node for leaf venation?
+    14. Why is the term marginal appropriate here (as in marginal posterior probability)?
     answer:
     
-    15. Which state is most common at the xerophyte MRCA node for leaf dissection?
+    15. Which state is most common at the xerophyte MRCA node for leaf venation?
+    answer:
+    
+    16. Which state is most common at the xerophyte MRCA node for leaf dissection?
     answer:
     
 ## Getting started
 
-Login to your account on the Health Center (Xanadu) cluster, then issue
+:large_blue_diamond: Login to your account on the Storrs HPC cluster and start an interactive slurm session:
 
-    srun --qos=mcbstudent --partition=mcbstudent --mem=1G --pty bash
+    ssh hpc
+    srun -p general -q general --mem=5G --pty bash
+        
+The `--mem=5G` part is not so important for this lab, but it won't hurt either.
+        
+## Create a directory
+
+:large_blue_diamond: Use the unix `mkdir` command to create a directory to use for today's lab:
+
+    cd
+    mkdir btlab
     
-to start a session on a node that is not currently running jobs. 
+:large_blue_diamond: Navigate into the _btlab_ directory:
     
-### Create a directory
-
-Use the unix `mkdir` command to create a directory to play in today:
-
-    mkdir ~/btlab
-    cd ~/btlab
+    cd btlab
 
 ### Download BayesTraits
 
-There is no module for BayesTraits, so we will have to download the latest version into your home directory:
+:large_blue_diamond: Download the latest version of BayesTraits into your _btlab_ directory:
 
-    curl -O https://www.evolution.reading.ac.uk/BayesTraitsV4.1.1/Files/BayesTraitsV4.1.1-Linux.tar.gz
+    curl -O https://www.evolution.reading.ac.uk/BayesTraitsV5.0.3/Files/BayesTraitsV5.0.3-Linux.tar.gz
+    
+Note: if I hadn't given you the command, you could get it by going to the web site and copying the URL for "BayesTraits V5.0.3 - Linux 64". The cluster is running a 64-bit Linux operating system, which you could discover using the following command:
 
-Now unpack the gzipped "tape archive" (tar) file as follows:
+    uname -mo
+    
+You should get `x86_64 GNU/Linux` in response, which tells you that the operating system is Linux (the `-o` option), and the fact that this command returned "x86_64" (`-m` option) means that the operating system is running on an Intel/AMD system. If it returned "arm64", then you are using a computer running on an Apple Silicon/ARM system. The bottom line: if the value includes "64", then it is a 64-bit system.
 
-    tar zxvf BayesTraitsV4.1.1-Linux.tar.gz
+:large_blue_diamond: Unpack the gzipped "tape archive" (tar) file as follows:
 
-This will create a directory named _BayesTraitsV4.1.1-Linux_ in your home directory. Move the BayesTraits executable from inside _BayesTraitsV4.1.1-Linux_ down one level to your home directory for easier access:
+    tar zxvf BayesTraitsV5.0.3-Linux.tar.gz
 
-    cd BayesTraitsV4.1.1-Linux
-    mv BayesTraitsV4 ..
+This will create a directory named _BayesTraitsV5.0.3-Linux_ in your home directory. 
+
+:large_blue_diamond: Move the BayesTraits executable from inside _BayesTraitsV5.0.3-Linux_ to your _bin_ directory for easier access:
+
+    cd BayesTraitsV5.0.3-Linux
+    mv BayesTraitsV5 ~/bin
     cd ..
     
-The third line above (`cd ..`) should move you back to the `~/bdlab` directory. Check this using the `pwd` command:
+The third line above (`cd ..`) should move you back to the `~/btlab` directory. Check this using the `pwd` command:
 
     pwd
 
-Go back to Mark Pagel's web site and [download the manual](https://www.evolution.reading.ac.uk/BayesTraitsV4.1.1/Files/BayesTraitsV4.1.1-Manual.pdf) for BayesTraits. This is a PDF file and should open in your browser window.
+Go back to the [BayesTraits](https://www.evolution.reading.ac.uk/BayesTraitsV5.0.3/BayesTraitsV5.0.3.html) web site and download (**to your laptop**) the [manual](https://www.evolution.reading.ac.uk/BayesTraitsV4.1.1/Files/BayesTraitsV4.1.1-Manual.pdf) for BayesTraits.
 
+:large_blue_diamond: We no longer need either the _BayesTraitsV5.0.3-Linux.tar.gz_ file nor the _BayesTraitsV5.0.3-Linux_ directory that was created when we unpacked the file, so let's delete these now:
+
+    rm -rf BayesTraitsV5.0.3-Linux.tar.gz BayesTraitsV5.0.3-Linux
+
+{% comment %}
 #### A little aside on tar files
 
 Data used to be stored on magnetic tape, not hard drives, and the tar (tape archive) program is what was used to move files to and from the tape. This tells you something about how old the tar format is because perhaps none of you have even seen a magnetic tape used for data storage! The tar command takes all the files in a directory and simply concatenates them into one gigantic file. It also preserves file permissions and the directory structure. The four letters after the command name tar are zxvf. These stand for the following:
@@ -104,10 +125,11 @@ Data used to be stored on magnetic tape, not hard drives, and the tar (tape arch
 * f = file (this tells tar that the file name is coming next, so don't put f earlier in the list)
 
 This tar file has been compressed using the program gzip, which adds the gz ending to the file name. Most tar files are compressed with gzip or some similar algorithm so that the file requires less time to move across the internet.
+{% endcomment %}
 
 ### Download the tree and data files 
 
-For this exercise, you will use data and trees used in the SIMMAP analyses presented in this paper:
+For this exercise, you will use data and trees used in the analyses presented in this paper (both Cindi Jones and Carl Schlichting are emeritus professors in the UConn EEB department):
 
 <blockquote>Jones C.S., Bakker F.T., Schlichting C.D., Nicotra A.B. 2009. Leaf shape evolution in the South African genus _Pelargonium_ L'Her. (Geraniaceae). Evolution. 63:479–497.</blockquote>
 
@@ -117,7 +139,7 @@ The data and trees were not made available in the online supplementary materials
 
 [pelly.tre](/assets/data/pelly.tre) This is the tree file. It contains 99 trees sampled from an MCMC analysis of DNA sequences.
 
-Here's how to `curl` these files into your _btlab_ folder
+:large_blue_diamond: Here's how to `curl` these files into your _btlab_ folder
 
     curl -O https://plewis.github.io/assets/data/pelly.txt
     curl -O https://plewis.github.io/assets/data/pelly.tre
@@ -142,43 +164,43 @@ The **leaf venation** trait comprises two states:
 * 0 means leaves are _pinnately veined_ (one main vein runs down the long axis of the leaf blade), and 
 * 1 means leaves are _palmately veined_ (several major veins meet at the base of the leaf). 
 
-We will first use maximum likelihood to estimate the rates at which these two traits evolve under both an independent model (traits assumed to evolve independently) and a dependent model (the rates of change in one trait may differ depending on the state present in the other trait).
+First, we will use maximum likelihood to estimate the rates at which these two traits evolve under both an independent model (traits assumed to evolve independently) and a dependent model (the rates of change in one trait may differ depending on the state present in the other trait).
 
-To test whether these two traits are correlated, we will carry out Bayesian MCMC analyses and estimate the **marginal likelihood** under two models. The model (independent or dependent) with the higher marginal likelihood will be the preferred model. You will recall that we [discussed both of these models in lecture](https://gnetum.eeb.uconn.edu/courses/phylogenetics/17b-evol-correlation-annotated.pdf), and also discussed the [stepping-stone method](https://gnetum.eeb.uconn.edu/courses/phylogenetics/12-model-selection.pdf) that BayesTraits uses to evaluate models. You may wish to pull up those lectures to help answer the questions that you will encounter momentarily, as well as the BayesTraits manual.
+To test whether these two traits are correlated, we will carry out Bayesian MCMC analyses and estimate the **marginal likelihood** under two models. The model (independent or dependent) with the higher marginal likelihood will be the preferred model. You will recall that we [discussed both of these models in lecture](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-26-pagel94.pdf), and also discussed the [stepping-stone method](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-05-model-selection.pdf) that BayesTraits uses to evaluate models. You may wish to pull up those lectures (as well as the BayesTraits manual) to help answer the questions that you will encounter momentarily.
 
-Then we will use reversible-jump MCMC to determine which of several thousand models is best. This method effectively uses marginal likelihoods to choose among models, but has the advantage that you need not specify which models you are interested in comparing beforehand.
+Second, we will use reversible-jump MCMC to determine which of several thousand models is best. This method effectively uses marginal likelihoods to choose among models, but has the advantage that you need not specify which models you are interested in comparing beforehand.
 
 Finally, I'll show you how to estimate the marginal posterior probabilities of different ancestral state combinations using BayesTraits.
 
 ## Maximum Likelihood: Independence model 
 
-Type the following to start the BayesTraits program (assuming you are in the _btlab_ folder):
+:large_blue_diamond: Type the following to start the BayesTraits program (assuming you are in the _btlab_ folder):
 
-    ./BayesTraitsV4 pelly.tre pelly.txt
+    BayesTraitsV5 pelly.tre pelly.txt
     
 You should see this selection appear:
 
     Please select the model of evolution to use.
-    1)	    MultiState
-    2)	    Discrete: Independent
-    3)	    Discrete: Dependant
-    4)	    Continuous: Random Walk (Model A)
-    5)	    Continuous: Directional (Model B)
-    6)	    Continuous: Regression
-    7)	    Independent Contrast 
-    8)	    Independent Contrast: Correlation 
-    9)	    Independent Contrast: Regression
-    10)    Discrete: Covarion
-    12)    Fat Tail
-    13)    Geo
+    1)	MultiState
+    2)	Discrete: Independent
+    3)	Discrete: Dependant
+    4)	Continuous: Random Walk (Model A)
+    5)	Continuous: Directional (Model B)
+    6)	Continuous: Regression
+    7)	Independent Contrast
+    8)	Independent Contrast: Correlation
+    9)	Independent Contrast: Regression
+    10)	Discrete: Covarion
+    12)	Fat Tail
+    13)	Geo
  
-Press the 2 key and hit enter to select the Independent model. Now you should see these choices appear:
+:large_blue_diamond: Press the 2 key and hit enter to select the Independent model. Now you should see these choices appear:
 
     Please Select the analysis method to use.
     1)	Maximum Likelihood.
     2)	MCMC
  
-Press the 1 key and hit enter to select maximum likelihood. Now you should see some output showing the choices you explicitly (or implicitly) made:
+:large_blue_diamond: Press the 1 key and hit enter to select maximum likelihood. Now you should see some output showing the choices you explicitly (or implicitly) made:
 
     Options:
     Model:                           Discrete: Independent
@@ -188,7 +210,7 @@ Press the 1 key and hit enter to select maximum likelihood. Now you should see s
     Save Initial Trees:              False
     Save Trees:                      False
     Summary:                         False
-    Seed:                            664656726
+    Seed:                            632248283
     Analsis Type:                    Maximum Likelihood
     ML Attempt Per Tree:             10
     ML Max Evaluations:              20000
@@ -213,14 +235,19 @@ Press the 1 key and hit enter to select maximum likelihood. Now you should see s
          Taxa:                       154
          Sites:                      1
          States:                     4
+    Checkpoint:                      False
+    Re Set Itterations:              False
+    Re Set Seed:                     False
 
-Now type `run` and hit enter to perform the analysis, which will consist of estimating the parameters of the independent model on each of the 99 trees contained in the _pelly.tre_ file. You will notice that BayesTraits created a new file: _pelly.txt.Log.txt_. 
+:large_blue_diamond: Now type `run` and hit enter to perform the analysis, which will consist of estimating the parameters of the independent model on each of the 99 trees contained in the _pelly.tre_ file. 
 
-**Rename this file** _ml-independent.txt_ so that it will not be overwritten the next time you run BayesTraits:
+You will notice that BayesTraits created a new file: _pelly.txt.Log.txt_. 
+
+:large_blue_diamond: **Rename this file** _ml-independent.txt_ so that it will not be overwritten the next time you run BayesTraits:
 
     mv pelly.txt.Log.txt ml-independent.txt
 
-Open the _ml-independent.txt_ file in nano (or bring it back to your laptop and use BBEdit (Mac) or Notepad++ (Windows) to view it). Scrolling past the first 33 lines, you should see the start of the parameter samples:
+:large_blue_diamond: Download the _ml-independent.txt_ file to your laptop and use BBEdit (Mac) or Notepad++ (Windows) to view it. Scrolling past the first 36 lines, you should see the start of the parameter samples:
 
     Tree No	Lh	alpha1	beta1	alpha2	beta2	Root - P(0,0)	Root - P(0,1)	Root - P(1,0)	Root - P(1,1)
     1	-157.362972	53.767527	34.523176	35.319157	20.707416	0.249998	0.250002	0.249998	0.250002
@@ -231,7 +258,9 @@ Open the _ml-independent.txt_ file in nano (or bring it back to your laptop and 
     98	-156.647307	52.357626	36.749282	27.270771	13.086248	0.250244	0.249756	0.250244	0.249756 
     99	-156.532925	52.321467	36.641688	27.402067	13.200124	0.250234	0.249767	0.250233	0.249766
  
-(Optional: download the _ml-independent.txt_ file to your laptop, use a text editor to strip the first 33 lines, and open the file in Tracer.)
+:large_blue_diamond: Use your text editor to strip the first 36 lines, and open the file in Tracer.
+
+**Important note**: while we are using Tracer to summarize, these results are from maximum likelihood analyses performed for each tree in the tree file. Because this is not a purely Bayesian analysis, you need not be overly concerned by the low ESS values reported by Tracer.
 
 Answer these questions using the output you have generated. Here's a key to the meaning of each column in the file:
 
@@ -262,7 +291,7 @@ the 0 (entire) to 1 (dissected) transition occurs at a faster rate (alpha1 = 48.
 
 ## Maximum Likelihood: Dependence model
 
-Run BayesTraits again, this time typing 3 on the first screen to choose the dependence model and again typing 1 on the second screen to select maximum likelihood. You should see this output showing the options selected:
+Run BayesTraits again, this time typing 3 on the first screen to choose the dependence model (note that "Dependant" should be "Dependent" in the menu) and again typing 1 on the second screen to select maximum likelihood. You should see this output showing the options selected:
 
     Options:
     Model:                           Discrete: Dependent
@@ -272,7 +301,7 @@ Run BayesTraits again, this time typing 3 on the first screen to choose the depe
     Save Initial Trees:              False
     Save Trees:                      False
     Summary:                         False
-    Seed:                            776907455
+    Seed:                            2700749663
     Analsis Type:                    Maximum Likelihood
     ML Attempt Per Tree:             10
     ML Max Evaluations:              20000
@@ -300,9 +329,12 @@ Run BayesTraits again, this time typing 3 on the first screen to choose the depe
          Trees:                      99
          Taxa:                       154
          Sites:                      1
-         States:                     4    
+         States:                     4
+    Checkpoint:                      False
+    Re Set Itterations:              False
+    Re Set Seed:                     False
            
-Run the analysis. Here is an example of the output produced (in the file _pelly.txt.Log.txt_) after you type `run` to start the analysis:
+:large_blue_diamond: Run the analysis. Here is an example of the output produced (in the file _pelly.txt.Log.txt_) after you type `run` to start the analysis:
 
     Tree No	Lh	q12	q13	q21	q24	q31	q34	q42	q43	Root - P(0,0)	Root - P(0,1)	Root - P(1,0)	Root - P(1,1)
     1	-151.930254	66.451053	37.783888	0.000000	62.220033	23.997490	23.299393	46.110432	36.632979	0.24999	0.249981	0.250026	0.250000
@@ -313,7 +345,7 @@ Run the analysis. Here is an example of the output produced (in the file _pelly.
     98	-150.816306	36.534843	27.359325	0.000000	66.563262	19.823546	24.944519	63.940577	31.074092	0.250048	0.249750	0.250304	0.249898
     99	-150.712705	37.316351	27.260833	0.000000	64.364694	20.107653	25.004246	60.945163	31.658536	0.250030	0.249779	0.250272	0.249919
  
-**Before doing anything else,  rename the file** _pelly.txt.Log.txt_ to _ml-dependent.txt_ so that it will not be overwritten the next time you run BayesTraits.
+:large_blue_diamond: **Before doing anything else,  rename the file** _pelly.txt.Log.txt_ to _ml-dependent.txt_ so that it will not be overwritten the next time you run BayesTraits.
 
     mv pelly.txt.Log.txt ml-dependent.txt
     
@@ -330,22 +362,30 @@ Here's a key to the rates:
 | q42           | venation 1 (palmate)      | dissection:   1 (dissected) -> 0 (entire)
 | q43           | dissection: 1 (dissected) | venation: 1 (palmate) -> 0 (pinnate)
   
-
-> :thinking: What type of joint evolutionary transitions seem to often have very low rates (look for an abundance of zeros in a column)?
+> :thinking: What type of joint evolutionary transitions seem to often have a zero rate?
 
 {% comment %}
-q21, which involves entire leaves changing from palmate to pinnate, and q43, which involves dissected leaves changing from palmate to pinnate
+q21, which involves entire leaves changing from palmate to pinnate
+q43, which involves dissected leaves changing from palmate to pinnate
 {% endcomment %}
 
-> :thinking: What type of joint evolutionary transitions seem to often have very high rates (look for columns with rates in the hundreds)?
+> :thinking: What type of joint evolutionary transitions seem to often have a rate of 100?
 
 {% comment %}
-q12, which involves entire leaves changing from pinnate to palmate, and q13, which involves pinnate leaves changing from entire to dissected
+q12, which involves entire leaves changing from pinnate to palmate
+q13, which involves pinnate leaves changing from entire to dissected
+q42, which involves palmate leaves changing from dissected to entire
+{% endcomment %}
+
+> :thinking: Why is no rate ever larger than 100? Hint: look at the options output by BayesTraits.
+
+{% comment %}
+The "Rate Range" shown in the options is 0.000000 - 100.000000, so BayesTraits is limiting how large rate estimates can be.
 {% endcomment %}
 
 ## Bayesian MCMC: Dependence model 
 
-Run BayesTraits again, typing 3 on the first screen to choose the dependence model and this time typing 2 on the second screen to select MCMC. You should see this output showing the options selected:
+:large_blue_diamond: Run BayesTraits again, typing 3 on the first screen to choose the dependence model and this time typing 2 on the second screen to select MCMC. You should see this output showing the options selected:
 
     Options:
     Model:                           Discrete: Dependent
@@ -355,7 +395,7 @@ Run BayesTraits again, typing 3 on the first screen to choose the dependence mod
     Save Initial Trees:              False
     Save Trees:                      False
     Summary:                         False
-    Seed:                            1326361449
+    Seed:                            2313422
     Precision:                       64 bits
     Cores:                           1
     Analysis Type:                   MCMC
@@ -396,12 +436,15 @@ Run BayesTraits again, typing 3 on the first screen to choose the dependence mod
          Taxa:                       154
          Sites:                      1
          States:                     4
+    Checkpoint:                      False
+    Re Set Itterations:              False
+    Re Set Seed:                     False
 
-**Before typing run** type the following command, which tells BayesTraits to change all priors from the default Uniform(0,100) to an Exponential distribution with mean 29:
+:large_blue_diamond: **Before typing run** type the following command, which tells BayesTraits to change all priors from the default Uniform(0,100) to an Exponential distribution with mean 29:
 
     pa exp 29
 
-> :thinking: Why am I suggesting this switch? (Hint: what is the support of a Uniform(0,100) distribution vs. an Exponential(1/29) distribution?)
+> :thinking: Why am I suggesting using an Exponential rather than a (truncated) Uniform prior distribution? (Hint: what is the support of a Uniform(0,100) distribution vs. an Exponential(1/29) distribution?)
 
 {% comment %}
 The support of an Exponential(1/29) distribution matches the domain of the parameter (i.e. 0.0 to infinity).
@@ -410,14 +453,16 @@ The support of an Exponential(1/29) distribution matches the domain of the param
 > :thinking: Why choose 29? (Hint: the variance of a Uniform(0,100) distribution equals 100^2/12 and the variance of an Exponential(1/29) distribution equals 29^2)
 
 {% comment %}
-The variance of an Exponential(1/29) distribution is 29^2 = 841, which is similar to the variance of the Uniform(0,100) distribution, which is (100-0)^2/12 = 833.33. So we're choosing a prior with the same informativeness but which is not arbitrarily truncated at 100, just in case 100 turns out to be a bad choice.
+The variance of an Exponential(1/29) distribution is 29^2 = 841, which is similar to the variance of the Uniform(0,100) distribution, which is (100-0)^2/12 = 833.33, so we're choosing a prior with the same informativeness but which is not arbitrarily truncated at 100, just in case 100 turns out to be a bad choice.
 {% endcomment %}
 
-Also type the following to ask BayesTraits to perform a stepping-stone analysis:
+:large_blue_diamond: Also type the following to ask BayesTraits to perform a stepping-stone analysis:
 
     stones 100 10000
  
-Now run the analysis. This will estimate 100 ratios to brook the gap between posterior and prior, using a sample size of 10000 for each "stone".
+:large_blue_diamond: Now type `run` to start the analysis. 
+
+This will estimate 100 ratios to brook the gap between posterior and prior, using a sample size of 10000 for each "stone".
 
 Here is an example of the output stored in the file _pelly.txt.Log.txt_ after you type `run` to start the analysis:
 
@@ -429,14 +474,14 @@ Here is an example of the output stored in the file _pelly.txt.Log.txt_ after yo
     1009000	-154.343996	30	33.555198	50.086092	11.294490	38.518607	24.461032	47.295157	43.477964	21.726938	0.250057	0.249939	0.250045	0.249959
     1010000	-154.195259	87	29.584898	35.410909	2.003582	61.981073	16.976124	14.895266	49.111354	14.419644	0.251115	0.247854	0.252551	0.248480
  
-**Before doing anything else,  rename the file** _pelly.txt.Log.txt_ to _mcmc-dependent.txt_, and _pelly.txt.Stones.txt_ to _mcmc-dependent.Stones.txt_ so that they will not be overwritten the next time you run BayesTraits.
+:large_blue_diamond: **Before doing anything else, rename the file** _pelly.txt.Log.txt_ to _mcmc-dependent.txt_, and _pelly.txt.Stones.txt_ to _mcmc-dependent.Stones.txt_ so that they will not be overwritten the next time you run BayesTraits.
 
     mv pelly.txt.Log.txt mcmc-dependent.txt
     mv pelly.txt.Stones.txt mcmc-dependent.Stones.txt 
 
-The _Tree No_ column shows which of the 99 trees in the supplied _pelly.tre_ treefile was chosen at random to be used for that particular sample point. BayesTraits is sampling trees from the posterior distribution here; it cannot _actually_ sample trees from the posterior because we have given it only data for two morphological characters, which would not provide nearly enough information to estimate the phylogeny for 154 taxa. It is as if we had given BayesTraits sequence data as well as our 2 morphological characters and it was using only the sequence data to estimate the posterior distribution of trees and edge lengths and only the morphological data to estimate rates for the morphological characters.
+The _Tree No_ column shows which of the 99 trees in the supplied _pelly.tre_ treefile was chosen at random to be used for that particular sample point. BayesTraits _appears_ to be sampling trees from the posterior distribution here; it cannot _actually_ sample trees from the posterior because we have given it only data for two morphological characters, which would not provide nearly enough information to estimate the phylogeny for 154 taxa. It is as if we had given BayesTraits sequence data as well as our 2 morphological characters and it was using only the sequence data to estimate the posterior distribution of trees and edge lengths and only the morphological data to estimate rates for the morphological characters.
 
-Try to answer these questions using the output you have generated:
+Answer these questions using the output you have generated:
 
 > :thinking: What is the log marginal likelihood estimated using the stepping-stone method? This value is listed on the last line of the file _mcmc-dependent.Stones.txt_
 
@@ -446,57 +491,13 @@ I got -161.163093 (this will vary across runs however)
 
 ## Bayesian MCMC: Independence model
 
-Run BayesTraits again, this time specifying the Independent model, and again using MCMC, `pa exp 29`, and `stones 100 10000`. Rename the output file from _pelly.txt.log.txt_ to _mcmc-independent.txt_. Also rename _pelly.txt.Stones.txt_ to _mcmc-independent.Stones.txt_:
+:large_blue_diamond: Run BayesTraits again, this time specifying the Independent model, and again using MCMC, `pa exp 29`, and `stones 100 10000`. 
+
+:large_blue_diamond: Rename the output file from _pelly.txt.log.txt_ to _mcmc-independent.txt_. Also rename _pelly.txt.Stones.txt_ to _mcmc-independent.Stones.txt_:
 
     mv pelly.txt.Log.txt mcmc-independent.txt
     mv pelly.txt.Stones.txt mcmc-independent.Stones.txt
     
-{% comment %}  
-You should see this output showing the options selected:
-  
-    Options:
-    Model:                           Discrete: Independent
-    Tree File Name:                  pelly.tre
-    Data File Name:                  pelly.txt
-    Log File Name:                   pelly.txt.Log.txt
-    Save Initial Trees:              False
-    Save Trees:                      False
-    Summary:                         False
-    Seed:                            3786321296
-    Precision:                       64 bits
-    Cores:                           1
-    Analysis Type:                   MCMC
-    Sample Period:                   1000
-    Iterations:                      1010000
-    Burn in:                         10000
-    MCMC ML Start:                   False
-    Schedule File:                   pelly.txt.Schedule.txt
-    Rate Dev:                        AutoTune
-    No of Rates:                     4
-    Base frequency (PI's):           None
-    Pis used in ancestral state estimation:      Yes
-    Character Symbols:               00,01,10,11
-    Using a covarion model:          False
-    Normalise Q Matrix:              False
-    Restrictions:
-        alpha1                       None
-        beta1                        None
-        alpha2                       None
-        beta2                        None
-    Prior Information:
-        Prior Categories:            100
-        Priors
-            alpha1 - uniform 0.00 100.00
-            beta1 - uniform 0.00 100.00
-            alpha2 - uniform 0.00 100.00
-            beta2 - uniform 0.00 100.00
-    Tree Information
-         Trees:                      99
-         Taxa:                       154
-         Sites:                      1
-         States:                     4
-{% endcomment %}
-
 > :thinking: What is the estimated log marginal likelihood for this analysis using the stepping-stone method?
 
 {% comment %}
@@ -511,23 +512,27 @@ The dependent model has a slightly higher marginal likelihood and is thus prefer
 
 ## Bayesian Reversible-jump MCMC
 
-Run BayesTraits again, specifying Dependent model, MCMC and, this time, specify the reversible-jump approach using the command
+:heavy_check_mark: Run BayesTraits again, specifying Dependent model, MCMC and, this time, specify the reversible-jump approach using the command
 
     rj exp 29
  
-The previous command also sets the prior. Type `run` to start, then when it finishes rename the output file _rjmcmc-dependent.txt_:
+The previous command also sets the prior. 
+
+:heavy_check_mark: Type `run` to start, then when it finishes rename the output file _rjmcmc-dependent.txt_:
 
     mv pelly.txt.Log.txt rjmcmc-dependent.txt
 
 The reversible-jump approach carries out an MCMC analysis in which the number of model parameters (the dimension of the model) potentially changes from one iteration to the next. The full model allows each of the 8 rate parameters to be estimated separately, while other models restrict the values of some rate parameters to equal the values of other rate parameters. The output contains a column titled **Model string** that summarizes the model in a string of 8 symbols corresponding to the 8 rate parameters q12, q13, q21, q24, q31, q34, q42, and q43. For example, the model string "'1 0 Z 0 1 1 0 2" sets q21 to zero (Z),  q13=q24=q42 (parameter group 0), q12=q31=q34 (parameter group 1), and q43 has its own non-zero value distinct from parameter groups 0 and 1. 
 
-You could copy the "spreadsheet" part of the output file into Excel and sort by the model string column, but let's instead use Python to summarize the output file. Download (e.g. using curl) the file _btsummary.py_ and run it as follows:
+You could copy the "spreadsheet" part of the output file into Excel and sort by the model string column, but let's instead use Python to summarize the output file. 
+
+:heavy_check_mark: Download (e.g. using curl) the file _btsummary.py_ and run it as follows:
 
     curl -O https://plewis.github.io/assets/scripts/btsummary.py
-    module load python/3.8.1
+    module load python
     python3 btsummary.py
     
-This should produce counts of model strings. (If it doesn't, check to make sure your output file is named _rjmcmc-dependent.txt_ because _btsummary.py_ tries to open a file by that name.)   Answer the following questions using the counts provided by _btsummary.py_:
+This should produce counts of model strings. (If it doesn't, check to make sure your output file is named _rjmcmc-dependent.txt_ because _btsummary.py_ tries to open a file by that name.) Answer the following questions using the counts provided by _btsummary.py_:
 
 > :thinking: Which model string is most common? 
 
@@ -541,20 +546,24 @@ I got 0 0 Z 0 0 0 0 0 with a count of 968
 All rates are the same except q21, which is forced to have rate zero. q21 equals 0 implies that entire,palmate leaves never change to entire,pinnate
 {% endcomment %}
 
-Notice that many (but not all) model strings have Z for q21. One way to estimate the marginal posterior probability of the hypothesis that q21=0 is to sum the counts for all model strings that have Z in that third position corresponding to q21. While it is pretty easy to add these numbers in your head, let's modify _btsummary.py_ to do this for us (this might come in useful if you ever encounter results that are more complex): open _btsummary.py_ in nano and locate the line containing the [regular expression](https://en.wikipedia.org/wiki/Regular_expression) search that pulls out all the model strings from the BayesTrait output file:
+Notice that many (but not all) model strings have Z for q21. One way to estimate the marginal posterior probability of the hypothesis that q21=0 is to sum the counts for all model strings that have Z in that third position corresponding to q21. While it is pretty easy to add these numbers in your head, let's modify _btsummary.py_ to do this for us (this might come in useful if you ever encounter results that are more complex).
+
+:heavy_check_mark: Open _btsummary.py_ in nano and locate the line containing the [regular expression](https://en.wikipedia.org/wiki/Regular_expression) search that pulls out all the model strings from the BayesTrait output file:
 
     model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
  
-The `re.findall` function performs a regular expression search of the text stored in the variable stuff looking for strings that have a series of 8 space-separated characters, each of which is _either_ the character Z _or_ a digit between 0 and 9 (inclusive). Copy this line (in nano, you can do this with Ctrl-K (cut), Ctrl-U (uncut), Ctrl-U (uncut)), then comment out one copy by starting the line with the hash (#) character:
+The `re.findall` function performs a regular expression search of the text stored in the variable `stuff` looking for strings that have a series of 8 space-separated characters, each of which is _either_ the character Z _or_ a digit between 0 and 9 (inclusive). 
+
+:heavy_check_mark: Copy this line (in nano, you can do this with Ctrl-K (cut), Ctrl-U (uncut), Ctrl-U (uncut)), then comment out one copy by starting the line with the hash (#) character:
 
     #model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
     model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
     
-Now modify the uncommented copy such that it counts only models with Z in the third position of the model string.
+:heavy_check_mark: Now modify the uncommented copy such that it counts only models with Z in the third position of the model string.
 
     model_list = re.findall("'[Z0-9] [Z0-9] Z [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
  
-Rerun _btsummary.py_, and now the total matches should equal the number of model strings sampled in which q21=0.
+:heavy_check_mark: Rerun _btsummary.py_, and now the total matches should equal the number of model strings sampled in which q21 = 0.
 
 > :thinking: So what is the estimated marginal posterior probability that q21=0?
 
@@ -572,9 +581,11 @@ We are estimating the sum of all joint posteriors in which q21 equals 0 (we are 
 
 {% include figure.html description="Xerophyte venation" url="/assets/img/Xerophytevenation.png" css="image-right noborder" width="400px" %}
 
-The Jones et al. 2009 study estimated ancestral states using SIMMAP. In particular, they found that the most recent common ancestor (MRCA) of the xerophytic (dry-adapted) clade of pelargoniums almost certainly had pinnate venation (see red circle in figure on right). Let's see what BayesTraits says.
+The Jones et al. 2009 study estimated ancestral states. In particular, they found that the most recent common ancestor (MRCA) of the xerophytic (dry-adapted) clade of pelargoniums almost certainly had pinnate venation (see red circle in figure on right). Let's see what BayesTraits says.
 
-Start BayesTraits in the usual way, specifying 1 (Multistate) on the first screen and 2 (MCMC) on the second. After the options are output, type the following commands in, one line at a time, finishing with the run command:
+:heavy_check_mark: Start BayesTraits in the usual way, specifying 1 (Multistate) on the first screen and 2 (MCMC) on the second. 
+
+:heavy_check_mark: After the options are output, type the following commands in, one line at a time, finishing with the run command:
 
     pa exp 29
     addtag xerotag alternans104 rapaceum130
@@ -588,7 +599,9 @@ The **addmrca** command tells BayesTraits to add columns of numbers to the outpu
     xero - S(1) - P(0) <-- character 1 (venation), probability of state 0 (pinnate)
     xero - S(1) - P(1) <-- character 1 (venation), probability of state 1 (palmate)
 
-You can download the output file (_pelly.txt.Log.txt_) and view it in Tracer. That way you can use Tracer to tell you the means of the four columns above. Note that you will need to remove the initial text from the file (but keep the column headers) before Tracer will recognize it.
+:heavy_check_mark: Download the output file (_pelly.txt.Log.txt_) and view it in Tracer. 
+
+You can use Tracer to tell you the means of the four columns above. Note that you will need to remove the initial text from the file (but keep the column headers) before Tracer will recognize it.
 
 > :thinking: Which state is most common at the xerophyte MRCA node for leaf venation?
 
