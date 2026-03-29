@@ -512,13 +512,13 @@ The dependent model has a slightly higher marginal likelihood and is thus prefer
 
 ## Bayesian Reversible-jump MCMC
 
-:heavy_check_mark: Run BayesTraits again, specifying Dependent model, MCMC and, this time, specify the reversible-jump approach using the command
+:large_blue_diamond: Run BayesTraits again, specifying Dependent model, MCMC and, this time, specify the reversible-jump approach using the command
 
     rj exp 29
  
 The previous command also sets the prior. 
 
-:heavy_check_mark: Type `run` to start, then when it finishes rename the output file _rjmcmc-dependent.txt_:
+:large_blue_diamond: Type `run` to start, then when it finishes rename the output file _rjmcmc-dependent.txt_:
 
     mv pelly.txt.Log.txt rjmcmc-dependent.txt
 
@@ -526,7 +526,7 @@ The reversible-jump approach carries out an MCMC analysis in which the number of
 
 You could copy the "spreadsheet" part of the output file into Excel and sort by the model string column, but let's instead use Python to summarize the output file. 
 
-:heavy_check_mark: Download (e.g. using curl) the file _btsummary.py_ and run it as follows:
+:large_blue_diamond: Download (e.g. using curl) the file _btsummary.py_ and run it as follows:
 
     curl -O https://plewis.github.io/assets/scripts/btsummary.py
     module load python
@@ -548,22 +548,22 @@ All rates are the same except q21, which is forced to have rate zero. q21 equals
 
 Notice that many (but not all) model strings have Z for q21. One way to estimate the marginal posterior probability of the hypothesis that q21=0 is to sum the counts for all model strings that have Z in that third position corresponding to q21. While it is pretty easy to add these numbers in your head, let's modify _btsummary.py_ to do this for us (this might come in useful if you ever encounter results that are more complex).
 
-:heavy_check_mark: Open _btsummary.py_ in nano and locate the line containing the [regular expression](https://en.wikipedia.org/wiki/Regular_expression) search that pulls out all the model strings from the BayesTrait output file:
+:large_blue_diamond: Open _btsummary.py_ in nano and locate the line containing the [regular expression](https://en.wikipedia.org/wiki/Regular_expression) search that pulls out all the model strings from the BayesTrait output file:
 
     model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
  
 The `re.findall` function performs a regular expression search of the text stored in the variable `stuff` looking for strings that have a series of 8 space-separated characters, each of which is _either_ the character Z _or_ a digit between 0 and 9 (inclusive). 
 
-:heavy_check_mark: Copy this line (in nano, you can do this with Ctrl-K (cut), Ctrl-U (uncut), Ctrl-U (uncut)), then comment out one copy by starting the line with the hash (#) character:
+:large_blue_diamond: Copy this line (in nano, you can do this with Ctrl-K (cut), Ctrl-U (uncut), Ctrl-U (uncut)), then comment out one copy by starting the line with the hash (#) character:
 
     #model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
     model_list = re.findall("'[Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
     
-:heavy_check_mark: Now modify the uncommented copy such that it counts only models with Z in the third position of the model string.
+:large_blue_diamond: Now modify the uncommented copy such that it counts only models with Z in the third position of the model string.
 
     model_list = re.findall("'[Z0-9] [Z0-9] Z [Z0-9] [Z0-9] [Z0-9] [Z0-9] [Z0-9]", stuff, re.M | re.S)
  
-:heavy_check_mark: Rerun _btsummary.py_, and now the total matches should equal the number of model strings sampled in which q21 = 0.
+:large_blue_diamond: Rerun _btsummary.py_, and now the total matches should equal the number of model strings sampled in which q21 = 0.
 
 > :thinking: So what is the estimated marginal posterior probability that q21=0?
 
@@ -583,9 +583,9 @@ We are estimating the sum of all joint posteriors in which q21 equals 0 (we are 
 
 The Jones et al. 2009 study estimated ancestral states. In particular, they found that the most recent common ancestor (MRCA) of the xerophytic (dry-adapted) clade of pelargoniums almost certainly had pinnate venation (see red circle in figure on right). Let's see what BayesTraits says.
 
-:heavy_check_mark: Start BayesTraits in the usual way, specifying 1 (Multistate) on the first screen and 2 (MCMC) on the second. 
+:large_blue_diamond: Start BayesTraits in the usual way, specifying 1 (Multistate) on the first screen and 2 (MCMC) on the second. 
 
-:heavy_check_mark: After the options are output, type the following commands in, one line at a time, finishing with the run command:
+:large_blue_diamond: After the options are output, type the following commands in, one line at a time, finishing with the run command:
 
     pa exp 29
     addtag xerotag alternans104 rapaceum130
@@ -599,7 +599,7 @@ The **addmrca** command tells BayesTraits to add columns of numbers to the outpu
     xero - S(1) - P(0) <-- character 1 (venation), probability of state 0 (pinnate)
     xero - S(1) - P(1) <-- character 1 (venation), probability of state 1 (palmate)
 
-:heavy_check_mark: Download the output file (_pelly.txt.Log.txt_) and view it in Tracer. 
+:large_blue_diamond: Download the output file (_pelly.txt.Log.txt_) and view it in Tracer. 
 
 You can use Tracer to tell you the means of the four columns above. Note that you will need to remove the initial text from the file (but keep the column headers) before Tracer will recognize it.
 
