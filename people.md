@@ -13,7 +13,10 @@ convergent evolution in morphology associated with transitions to
 selective zooplanktivory in butterfly fishes in the lab of [Peter
 Wainwright](https://fishlab.ucdavis.edu). Analisa became a Ph.D. candidate 
 on April 13, 2023, by passing her general oral exam, and successfully defended
-her prospectus September 15, 2025. Her advisory committee 
+her prospectus September 15, 2025. Her defense is planned for May 7, 2026. 
+After graduation, she will be a postdoctoral researcher in the laboratory 
+of [Nicola Müller](https://muellerlab.io) at the University of California,
+San Francisco. Her advisory committee 
 comprises Paul Lewis (advisor), Elizabeth Jockush, Kent Holsinger, and Jill Wegrzyn.
 Chris Simon served as an outside member of the oral exam committee.
 

@@ -5,6 +5,10 @@ permalink: /publications/
 ---
 ([Jump to key to symbols](#key-to-symbols))
 
+A Milkey and PO Lewis. 2026. [Estimating Bayesian phylogenetic information content using geodesic distances.](https://doi.org/10.64898/2026.03.31.715656) bioRxiv 2026.03.31.715656 
+
+A Milkey, M-H Chen, Y-B Wang, A L, and PO Lewis. 2025. [The sequential multispecies coalescent](https://doi.org/10.1101/2025.01.31.635964) bioRxiv 2025.01.31.635964 (in revision, Systematic Biology)
+
 YB Wang, A Milkey, A Li, MH Chen, L Kuo, and PO Lewis. 2023. [LoRaD: marginal likelihood estimation with haste (but no waste).](https://doi.org/10.1093/sysbio/syad007) Systematic Biology 72(3):639--648.
 {% comment %}
 Manuscript ID: USYB-2022-066 submitted 2-Mar-2022. USYB-2022-066.R1 accepted 7-Feb-2023. USYB-2022-066.R2 submitted 11-Feb-2023. Proofs returned 2023-03-20
