@@ -6,9 +6,7 @@ permalink: /applets/linear-regression/
 
 ## Linear Regression
 
-Illustrates the concept of linear regression.
-
-Scroll down below the applet for more background and details.
+Illustrates the concept of linear regression. Scroll down below the applet for more background and details.
 
 <div id="forsvg"></div>
 <script type="text/javascript">
