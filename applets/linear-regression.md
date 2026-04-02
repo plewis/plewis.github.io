@@ -28,10 +28,9 @@ Scroll down below the applet for more background and details.
     let beta0 = beta0mle;
     let beta1 = beta1mle;
 
-    let theta = Math.atan(beta1);
+    let thetamle = Math.atan(beta1mle);
+    let theta = thetamle;
     let theta_incr = 0.02*Math.PI;
-
-    let log_likelihood_range = 20.0;
 
     let xmax = 12.0; // d3.max(scatter, function(d) {return d[0];});
     let xmin = 0.0; // d3.min(scatter, function(d) {return d[0];});
@@ -50,8 +49,14 @@ Scroll down below the applet for more background and details.
     xcenter = xmean;
     ycenter = ymean;
     
+    // normal density related
+    let sigma = 0.7;
+    let two_sigma_squared = 2.0*sigma*sigma;
+    let nsegments = 100;
+
     let min_sum_of_squares = calcSS();
-    let max_log_likelihood = -min_sum_of_squares;
+    let max_log_likelihood = -min_sum_of_squares/two_sigma_squared;
+    let log_likelihood_range = 20.0;
     let min_log_likelihood = max_log_likelihood - log_likelihood_range;
 
     console.log("X mean     = " + xmean.toFixed(5));
@@ -81,10 +86,6 @@ Scroll down below the applet for more background and details.
     let status_text_x = 8.0;
     let status_text_y = -1.5;
     
-    // normal density related
-    let sigma = 0.7;
-    let nsegments = 100;
-
     // axes labels
     let axis_label_height = 21;
     let axis_label_height_pixels = axis_label_height + "px";
@@ -187,7 +188,7 @@ Scroll down below the applet for more background and details.
         }
 
         let ss = calcSS();
-        let lnL = -ss;
+        let lnL = -ss/two_sigma_squared;
                         
         //console.log("x1 = " + x1.toFixed(1));
         //console.log("y1 = " + y1.toFixed(1));
@@ -522,6 +523,7 @@ Scroll down below the applet for more background and details.
         }
         else if (d3.event.keyCode == 82) {
             // 82 is the "r" key
+            theta = thetamle;
             xcenter = xmean;
             ycenter = ymean;
             beta0 = beta0mle;
@@ -537,11 +539,13 @@ Scroll down below the applet for more background and details.
 
 Use the **left arrow** and **right arrow** to change the **slope** of the regresion line.
 
-Use **up arrow** and **down arrow** to change the **intercept** of the regression line.
+Use **up arrow** and **down arrow** to change the **intercept** of the regression line. (You may need to hold down the **Shift key** while using the up/down arrow keys to avoid scrolling.)
 
 Use the **r** key to return to the maximum likelihood slope and intercept.
 
-The likelihood is the product of 5 normal densities, one for each observed data point. The regression line determines the predicted y value for each data point, and the difference between the observed y value and the predicted y value is the **resitual**, shown as a dashed line. The best-fitting regression line is such that the sum of squared residuals (SS) is minimized. This is equivalent to maximizing the log likelihood, which is just SS multiplied by -1 and so is maximum when SS is minimum.
+The **likelihood** is the product of **5 normal densities**, one for each observed data point. These normal densities are shown in a brick red color centered at the predicted y value. The **regression line** determines the predicted y value for each data point given the x value for that point, and the difference between the observed y value and the predicted y value is the **residual**, shown as a dashed line. 
+
+The best-fitting regression line has slope and intercept such that the sum of squared residuals (SS) is minimized (the "least-squares" solution). This is equivalent to maximizing the log likelihood, which is proportional to the negative of SS. Note that the estimated regression slope and intercept will be the same regardless of the variance of the individual normal densities (but the numerical value of the log-likelihood will differ).
 
 The regression line becomes more red as SS becomes larger (and the log likelihood becomes smaller) and is a neutral gray color if the slope and intercept of the regression line are at their maximum likelihood (or least squares) values.
 
