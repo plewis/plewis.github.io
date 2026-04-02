@@ -25,6 +25,8 @@ bat monophyly test, Feb-12
 
 Bayes' rule, Feb-17
 
+Blomberg's K, Apr-2
+
 bootstrapping (non-parametric), Feb-17
 
 bootstrapping (parametric), Mar-26
@@ -44,6 +46,8 @@ conditioning on variability, Mar-24
 consensus trees, Jan-22, Jan-29
 
 deep coalescence, Mar-12
+
+delta, Pagel's, Apr-2
 
 density example (gold-to-aluminum brick), Feb-19
 
@@ -121,6 +125,8 @@ invariable sites model (+I), Feb-10
 
 Jukes-Cantor (1969) model (JC69), Feb-3
 
+K, Blomberg's, Apr-2
+
 kappa (transition-transversion rate ratio), Feb-5
 
 kernel density estimation, Feb-26
@@ -128,6 +134,8 @@ kernel density estimation, Feb-26
 Kimura (1980) 2-parameter model (K2P, K80), Feb-3
 
 induced prior, Mar-3
+
+lambda, Pagel's, Apr-2
 
 likelihood (criterion), Jan-20 
 

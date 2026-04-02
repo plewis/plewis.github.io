@@ -19,9 +19,9 @@ Beaulieu, J. M., and B. C. O'Meara. 2016. Detecting hidden diversification shift
 
 Bergthorsson U., Adams K. L., Thomason B., Palmer J. D. 2003. Widespread horizontal transfer of mitochondrial genes in flowering plants. Nature 424:197–201. 
 
-Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic signal in comparative data: behavioral traits are more labile. Evolution 57(4):717-745. 
+:heavy_check_mark: Blomberg, S. P., T. Garland Jr., and A. R. Ives. 2003. Testing for phylogenetic signal in comparative data: behavioral traits are more labile. Evolution 57(4):717-745. 
 
-Blomberg, S. P., J. G. Lefevre, J. A. Wells, and M. Waterhouse. 2012. [Independent contrasts and PGLS regression estimators are equivalent.](https://doi.org/10.1093/sysbio/syr118) Systematic Biology 61:382–391. 
+:heavy_check_mark: Blomberg, S. P., J. G. Lefevre, J. A. Wells, and M. Waterhouse. 2012. [Independent contrasts and PGLS regression estimators are equivalent.](https://doi.org/10.1093/sysbio/syr118) Systematic Biology 61:382–391. 
 
 :heavy_check_mark: Brown, J. M., Hedtke, S. M., Lemmon, A. R., and Lemmon, E. M. (2010). [When trees grow too long: investigating the causes of highly inaccurate bayesian branch-length estimates.](https://doi.org/10.1093/sysbio/syp081) Systematic Biology 59:145–161.
 
@@ -97,7 +97,7 @@ Gogarten, J. P., H. Kibak, P. Dittrich, L. Taiz, E. J. Bowman, B. J. Bowman, M. 
 
 :heavy_check_mark: Gould, S. J. 1977. Ontogeny and phylogeny. Harvard University Press, Cambridge, Massachusetts. 
 
-Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 326:119-157. (first phylogenetic regression model)
+:heavy_check_mark: Grafen, A. 1989. The phylogenetic regression. Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 326:119-157. (first phylogenetic regression model)
 
 :heavy_check_mark: Green, P. J. 1995. Reversible jump Markov chain Monte Carlo computation and Bayesian model determination. Biometrika 82:711-732. 
 
@@ -211,9 +211,9 @@ Ota, R., P. J. Waddell, M. Hasegawa, H. Shimodaira, and H. Kishino. 2000. Approp
 
 :heavy_check_mark: Pagel, M. 1994. Detecting correlated evolution on phylogenies: a general method for the comparative analysis of discrete characters. Proceedings of the Royal Society of London B 255:37-45. (assessing evolutionary correlation between two discrete traits) 
 
-Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scripta 26:331–348. (introduced kappa scaling factor used in comparative analyses)
+:heavy_check_mark: Pagel, M. 1997. Inferring evolutionary processes from phylogenies. Zoologica Scripta 26:331–348. (introduced kappa scaling factor used in comparative analyses)
 
-Pagel, M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877–884. (introduced the delta and lambda scaling factors used in comparative analyses) 
+:heavy_check_mark: Pagel, M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877–884. (introduced the delta and lambda scaling factors used in comparative analyses) 
 
 Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting pattern-heterogeneity in gene sequence or character-state data. Systematic Biology 53:571-581. (mixture of Q-matrices model)
 
