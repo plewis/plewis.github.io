@@ -79,7 +79,7 @@ Otherwise, type
     
 **Important** The `--mem=5G` part is important for this lab, as RevBayes sometimes uses more than the default amount of memory.
 
-### Create a directory
+## Create a directory
 
 Use the unix `mkdir` command to create a directory to play in today:
 
@@ -87,7 +87,7 @@ Use the unix `mkdir` command to create a directory to play in today:
     mkdir rbdiv
     cd rbdiv
 
-### Load module needed
+## Load module needed
 
 :large_blue_diamond: The RevBayes executable file needs some runtime libraries that can be loaded using the module system. Loading the R module loads the runtime library needed by rb132:
 
@@ -104,7 +104,7 @@ Use the unix `mkdir` command to create a directory to play in today:
     
     To quit RevBayes type 'quit()' or 'q()'.
 
-### Install PAML 
+## Install PAML 
 
 You will need to install PAML, which we will use to simulate data. 
 
@@ -122,7 +122,7 @@ This will create a _paml_ directory inside your _rbdiv_ directory.
 
 :large_blue_diamond: Navigate to the _paml/src_ directory and type `make` to compile PAML.
 
-You will see several warnings that we will ignore. 
+You will see several warnings that we will ignore. Using the command `make` is one of several methods used to _compile_ source code (files containing instructions written in a computing language such as C, C++, C#, or Julia) into an _executable_ file (i.e. a computer program). A sure sign that `make` is the method chosen by the author of the program is the presence of a file named _Makefile_ inside the source directory. The so-called _scripting languages_ (e.g. R, Python, Javascript) do not require a compiling step.
 
 :large_blue_diamond: Once compiling is finished, copy the _evolver_ executable into your _~/bin_ directory:
 
@@ -155,13 +155,13 @@ Divergence time analyses are the trickiest type of analysis we will do in this c
 
 We will thus start slowly, simulating data so that we know the truth. This will help guide your expectations when conducting divergence time analyses on real data.
 
-### PAML evolver
+## PAML evolver
 
 Let's use **evolver** to simulate data for 10000 sites on a 20-taxon pure birth (Yule) tree using a strict clock. This will allow us to know everything: the **birth rate** of the tree generating process, the **clock rate** (i.e. the substitution rate that applies to the entire tree), as well as the model used for simulation.
 
 We will each use a different random number seed, so we should all get slightly different answers.
 
-#### Simulate a tree
+### Simulate a tree
 
 First simulate a pure birth tree using evolver. 
 
@@ -182,7 +182,7 @@ You should now find a tree description in the file _evolver.out_.
 
     mv evolver.out tree.txt
 
-#### Simulate sequences
+### Simulate sequences
 
 The PAML evolver program requires a control file specifying everything it needs to know to perform your simulation. 
 
@@ -321,7 +321,11 @@ Because this analysis takes a little while to run, let's get it started first an
 This run took about 5 minutes on the cluster.
 {% endcomment %}
 
-### Set up the tree submodel
+### Understanding the RevBayes code
+
+While RevBayes is running, read through the following sections so that you understand what it is doing.
+
+#### Setting up the tree submodel
 
 Take a look at the "Load data and tree" and "Birth-death tree model" sections of the _strict.Rev_ file. Note that we are assigning only the first tree in _trees.txt_ to the variable `T` (there is only 1 tree in that file, but RevBayes stores the trees it reads in a vector, so you have to add the `[1]` to select the first anyway).
 
@@ -338,13 +342,13 @@ The model can be summarized by a DAG (Directed Acyclic Graph). The nodes of this
 * **Constant nodes** are exemplified by `death_rate`,  `sampling_fraction`, and `root_time`; they can be identified by the assignment operator `<-` that fixes their value to a constant. They are not changed during the MCMC analysis.
 * **Deterministic nodes** are exemplified by `diversification`; they can be identified by the assignment operator `:=`. These nodes represent functions of other nodes used to output quantities in a more understandable way. For example, diversification (birth rate minus death rate) will show up as a column in the output even though it is not a parameter of the model itself. (The diversification node was only added here to illustrate deterministic nodes; it's value will always equal birth_rate because death_rate is a constant 0.0).
 
-### Set up the strict clock submodel
+#### Setting up the strict clock submodel
 
 Now take a look at the "Strict clock" section of your _strict.Rev_ file:
 
 This adds a parameter `clock_rate` with a vague Exponential prior (rate 0.01) and starting value 1.0. The move we're using to propose new values for this parameter as well as the `birth_rate` parameter is a _sliding window move_, which you are familiar with from your MCMC homework. The value `delta` is the width of the window centered over the current value, and we've told RevBayes to tune this proposal during the burnin period so that it achieves (if possible) an acceptance rate of 40%. The weight determines the probability that this move will be tried. At the start of the MCMC analysis, RevBayes sums the weights of all moves you've defined and uses the weight divided by the sum of all weights as the probability of selecting that particular move next.
 
-### Set up the substitution submodel
+#### Setting up the substitution submodel
 
 The "GTR model" section of your _strict.Rev_ file sets up a GTR substitution model.
 
@@ -352,7 +356,7 @@ The Q matrix for the GTR model involves state frequencies and exchangeabilities.
 
 I've assigned mvDirichletSimplex moves to both of these parameters. A simplex is a set of coordinates that are constrained to sum to 1, and this proposal mechanism modifies all of the state frequencies (or exchangeabilities) simultaneously while honoring this constraint. A list of all available moves can be found in the [Documentation section of the RevBayes web site](https://revbayes.github.io/documentation/) if you want to know more.
 
-### Finalize the PhyloCTMC
+#### Finalize the PhyloCTMC
 
 The "PhyloCTMC" section collects the various submodels (`timetree`, `Q`, and `clock_rate`) into one big Phylogenetic Continuous Time Markov Chain (`dnPhyloCTMC`) distribution object and attaches (_clamps_) the data matrix `D` to it.
 
@@ -360,7 +364,7 @@ The last line in this section is a little obscure. RevBayes needs to have an ent
 
 The `mymodel.graph` line creates a file named _strict.dot_ that contains code (in the [dot language](https://en.wikipedia.org/wiki/DOT_(graph_description_language))) for creating a plot of your DAG. The second argument (TRUE) tells the graph command to be verbose, and the last argument ("white") specifies the background color for the plot.
 
-### Set up monitors
+#### Setting up monitors
 
 The "Monitors" section creates 3 monitors to keep track of sampled parameter values, sampled trees, and screen output:
 
@@ -368,11 +372,11 @@ The first monitor will save model parameter values to a file named _strict.log_ 
 
 Note that we are sampling only every 10th iteration for the first 2 monitors and every 100th iteration for the screen monitor.
 
-### Set up MCMC
+#### Set up MCMC
 
 Finally, the "MCMC" section creates an `mcmc` object that combines the model, monitors, and moves and says to do just 1 MCMC analysis. We will devote the first 1000 iterations to burnin, stopping to tune the moves every 100 iterations (RevBayes collects data for 100 iterations to compute the acceptance probabilities for each move, then uses that to decide whether to make the move bolder or more conservative.) Then we run for real for 10000 iterations and ask RevBayes to output an operator summary, which will tell us how often each of our moves was attempted and succeeded.
 
-## Reviewing the strict clock results
+### Reviewing the strict clock results
 
 Hopefully your RevBayes run has now finished. If not, wait here until it is done.
 
@@ -482,7 +486,7 @@ Unless you are particularly interested in how well your MCMC converges from dive
 Note that I'm not using setValue for any other parameters; the analysis seems to behave without starting those off at reasonable values, indicating either that there's a enough information about those parameters (e.g. birth_rate, state_freqs, exchangeabilities) or the parameters have less influence due to the fact that they are hyperparameters one level removed from the likelihood (e.g. ucln_mu, ucln_sigma).
 {% endcomment %}
 
-You should also edit the monitors section so that the output file names reflect the fact that we're using a relaxed clock now:
+:large_blue_diamond: You should also edit the monitors section so that the output file names reflect the fact that we're using a relaxed clock now:
 
     # Monitors
 
@@ -490,11 +494,11 @@ You should also edit the monitors section so that the output file names reflect 
     monitors[nmonitors++] = mnFile(filename  = "output/relaxed.trees", printgen = 10, timetree)
     monitors[nmonitors++] = mnScreen(printgen=100)
 
-And don't forget to change the name of the dot file:
+:large_blue_diamond: And don't forget to change the name of the dot file:
 
     mymodel.graph("relaxed.dot", TRUE, "white")
 
-Now run the new model:
+:large_blue_diamond: Now run the new model:
 
     rb132 relaxed.Rev
 
@@ -502,11 +506,11 @@ Now run the new model:
 This run took about 13 minutes on the cluster.
 {% endcomment %}
 
-## Review results of the relaxed clock analysis
+### Review results of the relaxed clock analysis
 
 If you create a plot of your _relaxed.dot_ file using one of the online Graphviz viewers, the increase in model complexity will be very apparent!
 
-Open the _relaxed.log_ file in Tracer and answer the following questions:
+:large_blue_diamond: Open the _relaxed.log_ file in Tracer and answer the following questions:
 
 > :thinking: What is the true rate for any given edge in the tree?
 
@@ -544,11 +548,13 @@ So far we've not estimated any divergence times! We've assumed the true tree top
 
 In this lab, we will not be using fossil information to calibrate divergence times. We will assume that the root has age 1.0 and focus on estimating _relative_ divergence times. There are several good tutorials on the [RevBayes Tutorials web page](https://revbayes.github.io/tutorials/) that show you how to handle fossil calibration in RevBayes. This tutorial is intended to make you aware of all the issues surrounding divergence time estimation so that you have sufficient background to fully appreciate the tutorials on the RevBayes site.
 
-Let's continue our example by adding some moves that will modify the tree topology and branching times. Start by making a copy of your _relaxed.Rev_ script, calling the copy _divtime.Rev_:
+Let's continue our example by adding some moves that will modify the tree topology and branching times. 
+
+:large_blue_diamond: Start by making a copy of your _relaxed.Rev_ script, calling the copy _divtime.Rev_:
 
     cp relaxed.Rev divtime.Rev
 
-Now add the following section just before the section entitled "# Uncorrelated Lognormal relaxed clock":
+:large_blue_diamond: Now add the following section just before the section entitled "# Uncorrelated Lognormal relaxed clock":
 
     # Tree moves
     
@@ -564,25 +570,29 @@ Note that we are giving extra weight to these moves, so each tree topology move 
 
 Note also that we're still starting the MCMC off with the true tree topology and node times (see the line `timetree.setValue(T)`). This is cheating, of course, but the result would be the same if you started with a maximum likelihood estimate obtained under a strict clock.
 
-Add the following to the very end of the _divtime.Rev_ file (but **before** `quit()`). This will read all the sampled trees (each will be different this time because we added moves to modify tree topology and node times) and create a consensus tree showing 95% credible intervals around each divergence time:
+:large_blue_diamond: Add the following to the very end of the _divtime.Rev_ file (but **before** `quit()`):
 
     # Summarize divergence times
 
     tt = readTreeTrace("output/divtime.trees", "clock")
     tt.summarize()
     mapTree(tt, "output/divtimeMAP.tre")
+    
+This reads all the sampled trees (each will be different this time because we added moves to modify tree topology and node times) and creates a consensus tree showing 95% credible intervals around each divergence time.
 
-**Important:** Be sure to change all your output files to have the prefix **divtime** rather than **relaxed** so that you don't overwrite the previous results.
+:large_blue_diamond: Be sure to change all your output files to have the prefix **divtime** rather than **relaxed** so that you don't overwrite the previous results.
 
-Because this run takes more than half an hour, I have already run it for you. The output files can be copied to your directory using this command:
+Because this run takes more than half an hour, I have already run it for you. 
+
+:large_blue_diamond:The output files can be copied to your directory using this command:
 
     cp -r /scratch/pol02003/pol02003/divtime-output .
 
-## Review results of the divergence time analysis
+### Review results of the divergence time analysis
 
-Open the _divtime.log_ file in Tracer. 
+:large_blue_diamond: Open the _divtimeMAP.tre_ file in FigTree, check the "Node Bars" checkbox, then specify "age_95%_HPD" for Display after expanding the "Node Bars" section. 
 
-Also open the _divtimeMAP.tre_ file in FigTree, check the "Node Bars" checkbox, then specify "age_95%_HPD" for Display after expanding the "Node Bars" section. You may also wish to use **File > New...** from the FigTree main menu to open up a new window, then paste the tree description from _tree.txt_ into the new window for comparison. It also helps to expand the **Trees** section of FigTree and check the **Order nodes** checkbox so that both trees are _ladderized_ the same direction.
+:large_blue_diamond: Use **File > New...** from the FigTree main menu to open up a new window, then paste the tree description from _tree.txt_ into the new window for comparison. It also helps to expand the **Trees** section of FigTree and check the **Order nodes** checkbox so that both trees are _ladderized_ the same direction.
 
 > :thinking: We've added moves, but no parameters or priors for the node times. Why not?
 
@@ -612,7 +622,7 @@ We must conclude that there is no information in the data about divergence times
 
 To finish up the lab, let's see what the credible interval sizes are under the prior. While we could explore the actual prior, the results would be a little disappointing. For example, under the pure birth model we are using, sampling from the prior would yield many thousands of very different tree topologies, and the consensus of all these disparate trees would be a star tree, which would not be very interesting. Similarly, allowing the birth_rate to be sampled from its prior (which has mean 100 and variance 10000!) would produce trees that, on average, look so different from the tree we used to simulate our data that comparison of divergence time credible intervals would be difficult. So, we will fix the tree topology and birth_rate prior to their true values but keep the ucln_mu, ucln_sigma, and the branch_rates priors at their original values. This means that we will only be looking at the prior on rates, not node times.
 
-Copy your _divtime.Rev_ file to create a new file named _divprior.Rev_ and make the following changes in the new file:
+:large_blue_diamond: Copy your _divtime.Rev_ file to create a new file named _divprior.Rev_ and make the following changes in the new file:
 
 * Change output file names to have prefix _divprior_ rather than _divtime_ so that you will not overwrite previous files (don't forget to do this in the `readTreeTrace` and `mapTree` commands);
 
@@ -626,18 +636,11 @@ Copy your _divtime.Rev_ file to create a new file named _divprior.Rev_ and make 
         #moves[nmoves++] = mvSlide(birth_rate, delta=1.0, tune=true, tuneTarget=0.4, weight=1.0)
         birth_rate <- 2.6
 
-* Change the setup for the `mnScreen` monitor to have `printgen=10000` rather than `printgen=100`; and
-
 * Add the following line below the `mymodel = model(exchangeabilities)` line
 
         mymodel.ignoreAllData()
 
-* Change the number of generations in the `run` command to 1 million (don't worry, it goes fast if you don't ever calculate a likelihood!):
-
-        mymcmc.burnin(generations=1000, tuningInterval=100)
-        mymcmc.run(generations=1000000)
-
-Now run the file as usual:
+:large_blue_diamond: Now run the file as usual:
 
     rb132 divprior.Rev
 

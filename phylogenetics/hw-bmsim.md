@@ -11,17 +11,17 @@ Your challenge for this homework assignment is to simulate data for a single cha
 
 ## What to do
 
-Assume that the **variance per unit time** ($$\sigma^2$$) equals **0.5** and that the **starting state** ($$s_0$$) equals **0.0**.
+Assume that the **variance per unit time** ($$\sigma^2$$) equals **0.03** and that the **starting state** ($$s_0$$) equals **1.0**.
 
-Use Python to draw the states at nodes above the root from a normal distribution. Here is a template:
+Use Python (either on your laptop or on the cluster) to draw the state at each node above the root from a normal distribution. Here is a template:
 
     from random import seed,normalvariate
     from math import sqrt
 
     seed(xxx)
-    rate = 0.05 # this is sigma squared in the BM model
+    rate = xxx # this is sigma squared in the BM model
 
-    s0 = 0.0
+    s0 = xxx
     s1 = normalvariate(xxx, xxx)
     s2 = normalvariate(xxx, xxx)
     s3 = normalvariate(xxx, xxx)
@@ -45,8 +45,8 @@ Replace all the `xxx` placeholders with either numbers or variable names. The **
 
 You will first need to choose a pseudorandom number seed. This should be a whole number greater than 0. You can use whatever number you like here.
 
-Remember that, in the Brownian motion (BM) model, variance (i.e. uncertainty) accumulates at the rate $$\sigma^2$$ per unit time. The **trait value at the end of an edge** is normally distributed with **mean** equal to the trait value at the beginning of the edge and **variance** equal to the length of time represented by the edge multiplied by the rate $$\sigma^2$$. Note that I've imported the **sqrt** function so that you can use it to take the square root of the variance (and the square root of the variance is the standard deviation you need to supply to the normalvariate function).
+Remember that, in the Brownian motion (BM) model, variance (i.e. uncertainty) accumulates at the rate $$\sigma^2$$ per unit time. The **trait value at the end of an edge** is normally distributed with **mean** equal to the trait value at the beginning of the edge and **variance** equal to the length of time represented by the edge (these are the numbers beside the edges in the figure above) multiplied by the rate $$\sigma^2$$. Note that I've imported the **sqrt** function so that you can use it to take the square root of the variance (and the square root of the variance is the standard deviation you need to supply to the normalvariate function).
 
 ## What to turn in
 
-Please send me (via slack preferably) your python3 file that you've modified from the template above.
+Please send me (either by email or a Slack DM) your python3 file that you've modified from the template above.
