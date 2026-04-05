@@ -11,9 +11,9 @@ Your challenge for this homework assignment is to simulate data for a single cha
 
 ## What to do
 
-Assume that the **variance per unit time** ($$\sigma^2$$) equals **0.05** and that the **starting state** ($$s_0$$) equals **0.0**.
+Assume that the **variance per unit time** ($$\sigma^2$$) equals **0.5** and that the **starting state** ($$s_0$$) equals **0.0**.
 
-Use Python 3.x to draw the states at nodes above the root from a normal distribution. Here is a template:
+Use Python to draw the states at nodes above the root from a normal distribution. Here is a template:
 
     from random import seed,normalvariate
     from math import sqrt
