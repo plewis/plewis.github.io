@@ -9,59 +9,74 @@ permalink: /revdiv/
 
 The goal of this lab exercise is to introduce you to Bayesian divergence time estimation. There are other programs that are popular for divergence time analyses (notably [BEAST2](https://www.beast2.org)), but we will use [RevBayes](https://revbayes.github.io) because you already have some experience with this program.
 
+Goal 1: Simulate a tree and DNA sequence data with known properties (e.g. speciation rate, nucleotide frequencies, strict molecular clock, etc.)
+
+Goal 2: Analyze the simulated data to see how well we can estimate the parameters whose true values we know because we simulated the data
+
+We will use RevBayes to both simulate tree and data as well as for analysis of the simulated data.
+
 ## Answer template
 
 Here is a text file template in which to store your answers to the :thinking: thinking questions:
 
-    1. What is the 95% HPD (highest posterior density) credible interval for clock_rate (use the Estimates tab in Tracer to find this information)? Does this include the true value? 
+    1. What is the true tree length? What is the estimated length of the neighbor-joining tree?
     answer:
     
-    2. What is the 95% HPD (highest posterior density) credible interval for birth_rate? Does this include the true value?
+    2. What are the true base frequencies? What are the estimated base frequencies?
+    answer:
+    
+    3. What are the true exchangeabilities? What are the estimated exchangeabilities?
+    answer:
+    
+    4. What is the 95% HPD (highest posterior density) credible interval for clock_rate (use the Estimates tab in Tracer to find this information)? Does this include the true value? 
+    answer:
+    
+    5. What is the 95% HPD (highest posterior density) credible interval for birth_rate? Does this include the true value?
     answer:
         
-    3. Which parameter (clock_rate or birth_rate) is hardest to estimate precisely (i.e. has the broadest HPD credible interval)? 
+    6. Which parameter (clock_rate or birth_rate) is hardest to estimate precisely (i.e. has the broadest HPD credible interval)? 
     answer:
     
-    4. For the parameter you identified in the previous question, would it help to simulate 20000 sites rather than 10000? 
+    7. For the parameter you identified in the previous question, would it help to simulate 20000 sites rather than 10000? 
     answer:
     
-    5. What would help in reducing the HPD interval for birth_rate? 
+    8. What would help in reducing the HPD interval for birth_rate? 
     answer:
     
-    6. Using the 'Marginal Density" and "Estimates" tabs in Tracer, select all 6 exchangeabilities. What do these values represent, and what about these densities makes sense given what you know about the true model used to simulate the data? 
+    9. Using the 'Marginal Density" and "Estimates" tabs in Tracer, select all 6 exchangeabilities. What do these values represent, and what about these densities makes sense given what you know about the true model used to simulate the data? 
     answer:
     
-    7. Using the Marginal Density tab in Tracer, select all 4 state_freqs. What about these densities make sense given what you know about the true model used to simulate the data?
+    10. Using the Marginal Density tab in Tracer, select all 4 state_freqs. What about these densities make sense given what you know about the true model used to simulate the data?
     answer:
     
-    8. What is the true rate for any given edge in the tree?
+    11. What is the true rate for any given edge in the tree?
     answer:
     
-    9. Looking across the 38 branch rate parameters, do any of them get very far from 1.0 (e.g. less than 0.98 or greater than 1.2)? 
+    12. Looking across the 38 branch rate parameters, do any of them get very far from 1.0 (e.g. less than 0.98 or greater than 1.2)? 
     answer:
     
-    10. What are the mean values of ucln_mu and ucln_sigma, our two hyperparameters that govern the assumed lognormal prior applied to each branch rate? 
+    13. What are the mean values of ucln_mu and ucln_sigma, our two hyperparameters that govern the assumed lognormal prior applied to each branch rate? 
     answer:
     
-    11. What do these values translate to on the linear scale (use the formulas in the figure to do the calculation)?
+    14. What do these values translate to on the linear scale (use the formulas in the figure to do the calculation)?
     answer:
     
-    12. Do the values on the linear scale make sense in light of the fact that you know that the data were simulated under a strict clock with rate 1.0?
+    15. Do the values on the linear scale make sense in light of the fact that you know that the data were simulated under a strict clock with rate 1.0?
     answer:
     
-    13. We've added moves, but no parameters or priors for the node times. Why not?
+    16. We've added moves, but no parameters or priors for the node times. Why not?
     answer:
     
-    14. Does the MAP tree have the same topology as the true tree
+    17. Does the MAP tree have the same topology as the true tree
     answer:
     
-    15. Are we more confident about recent nodes or ancient nodes in the tree?
+    18. Are we more confident about recent nodes or ancient nodes in the tree?
     answer:
     
-    16. What would you conclude if these credible intervals were exactly the same size if we had performed the MCMC analysis on the prior only, with no data?
+    19. What would you conclude if these credible intervals were exactly the same size if we had performed the MCMC analysis on the prior only, with no data?
     answer:
     
-    17. Does the data contain information about substitution rates?
+    20. Does the data contain information about substitution rates?
     answer:
 
 
@@ -104,137 +119,131 @@ Use the unix `mkdir` command to create a directory to play in today:
     
     To quit RevBayes type 'quit()' or 'q()'.
 
-## Install PAML 
-
-You will need to install PAML, which we will use to simulate data. 
-
-:large_blue_diamond: Open a web browser and enter the following URL, which points to Ziheng Yang's PAML code repository on GitHub:
-
-    https://github.com/abacus-gene/paml/
-
-:large_blue_diamond: Click the green "<> Code" button and copy the HTTPS link by clicking on the 'Copy URL to clipboard" icon at the right of the link.
-
-:large_blue_diamond: On the HPC cluster, ensure you are in the _rbdiv_ directory and type
-
-    git clone https://github.com/abacus-gene/paml/
-    
-This will create a _paml_ directory inside your _rbdiv_ directory.
-
-:large_blue_diamond: Navigate to the _paml/src_ directory and type `make` to compile PAML.
-
-You will see several warnings that we will ignore. Using the command `make` is one of several methods used to _compile_ source code (files containing instructions written in a computing language such as C, C++, C#, or Julia) into an _executable_ file (i.e. a computer program). A sure sign that `make` is the method chosen by the author of the program is the presence of a file named _Makefile_ inside the source directory. The so-called _scripting languages_ (e.g. R, Python, Javascript) do not require a compiling step.
-
-:large_blue_diamond: Once compiling is finished, copy the _evolver_ executable into your _~/bin_ directory:
-
-    cp evolver ~/bin
-    
-:large_blue_diamond: You should now be able to start evolver by typing `evolver` at the prompt:
-
-    cd ~/rbdiv
-    evolver
-    EVOLVER in paml version 4.10.10, 29 Jan 2026
-    Results for options 1-4 & 8 go into evolver.out
-    
-        (1) Get random UNROOTED trees?
-        (2) Get random ROOTED trees?
-        (3) List all UNROOTED trees?
-        (4) List all ROOTED trees?
-        (5) Simulate nucleotide data sets (use MCbase.dat)?
-        (6) Simulate codon data sets      (use MCcodon.dat)?
-        (7) Simulate amino acid data sets (use MCaa.dat)?
-        (8) Calculate identical bi-partitions between trees?
-        (9) Calculate clade support values (evolver 9 treefile maintreefile <pick1tree>)?
-        (11) Label clades?
-        (0) Quit?    
-        
-:large_blue_diamond: For now, type `0` to quit.
-
-## Simulating and analyzing under the strict clock model
+## Use RevBayes to simulate data under a strict molecular clock
 
 Divergence time analyses are the trickiest type of analysis we will do in this course. That's because the sequences do not contain information about **substitution rates** or **divergence times** _per se_; they contain information about the **number of substitutions** that have occurred, and the number of substitutions  is the _product_ of rate and time. Thus, maximum likelihood methods cannot separate rates from times; doing so requires a Bayesian approach and careful use of priors, which constrain the range of rate and time scenarios considered plausible.
 
 We will thus start slowly, simulating data so that we know the truth. This will help guide your expectations when conducting divergence time analyses on real data.
 
-## PAML evolver
+As you already know from previous labs, RevBayes uses an R-like language called the Rev Language to specify the model and the analysis. Rev is not R, but it is so similar to R that you will often forget that you are not using R and will try things that work in R but do not work in Rev - just a heads-up!
 
-Let's use **evolver** to simulate data for 10000 sites on a 20-taxon pure birth (Yule) tree using a strict clock. This will allow us to know everything: the **birth rate** of the tree generating process, the **clock rate** (i.e. the substitution rate that applies to the entire tree), as well as the model used for simulation.
+:large_blue_diamond: Create the file _sim.Rev_ to create instructions for simulating a tree and DNA sequence data on that tree:
 
-We will each use a different random number seed, so we should all get slightly different answers.
+    # Set the number of sites, number of taxa, and specify taxon names
+    
+    n_sites <- 10000
+    
+    n_taxa <- 20
+    taxon_names[1]  <- taxon("A")
+    taxon_names[2]  <- taxon("B")
+    taxon_names[3]  <- taxon("C")
+    taxon_names[4]  <- taxon("D")
+    taxon_names[5]  <- taxon("E")
+    taxon_names[6]  <- taxon("F")
+    taxon_names[7]  <- taxon("G")
+    taxon_names[8]  <- taxon("H")
+    taxon_names[9]  <- taxon("I")
+    taxon_names[10] <- taxon("J")
+    taxon_names[11] <- taxon("K")
+    taxon_names[12] <- taxon("L")
+    taxon_names[13] <- taxon("M")
+    taxon_names[14] <- taxon("N")
+    taxon_names[15] <- taxon("O")
+    taxon_names[16] <- taxon("P")
+    taxon_names[17] <- taxon("Q")
+    taxon_names[18] <- taxon("R")
+    taxon_names[19] <- taxon("S")
+    taxon_names[20] <- taxon("T")
+    
+    # Simulate a Yule (pure-birth) tree
+    
+    timetree ~ dnBirthDeath(lambda = 2.6, mu = 0.0, rho = 1.0, rootAge = 1.0, samplingStrategy = "uniform", condition = "nTaxa", taxa = taxon_names)
+    timetree.redraw()
+    print("true root age: ", timetree.rootAge())
+    print("true tree length: ", timetree.treeLength())
+    
+    # Set up the GTR model
+    
+    state_freqs <- Simplex([0.1, 0.2, 0.3, 0.4])
+    
+    exchangeabilities <- Simplex([1,5,1,1,5,1])
+    Q := fnGTR(exchangeabilities, state_freqs)
+    
+    # Simulate DNA sequence data on timetree using the GTR Q matrix
+    
+    phySeq ~ dnPhyloCTMC(tree=timetree, Q=Q, branchRates=1.0, nSites=n_sites, type="DNA")
+    phySeq.redraw()
+    
+    # Save the simulated tree
+    write(timetree, filename="simulated.tre")
+    
+    # Save the simulated data
+    writeNexus("simulated.nex", phySeq)
+    
+    quit()
+    
+:large_blue_diamond: Run RevBayes to simulate data:
 
-### Simulate a tree
+    rb132 sim.Rev
 
-First simulate a pure birth tree using evolver. 
+Note that there are two _redraw()_ calls here, one for _timetree_ and one for _phySeq_. These calls each result in simulation. The _timetree.redraw()_ simulates a tree topology and branch lengths using the Yule model (because death rate mu is set to 0.0). The _phySeq.redraw()_ call simulates sequence data on the supplied tree and with the supplied substitution model. 
 
-:large_blue_diamond: Start evolver by simply typing evolver at the bash prompt, then enter the information provided below at the prompts (for questions that ask for multiple quantities, just separate the values by a space):
+RevBayes should have reported the true root age and the true treelength. These reports come from the two _print_ calls. The root age will be 1 because we specified that in the call to _dnBirthDeath_. 
 
-* specify that you want to generate a rooted tree by typing 2
-* specify 20 species
-* specify 1 tree and a random number seed of _your_ choosing (separate these two positive whole numbers with a space)
-* specify 1 to answer yes to the question about wanting branch lengths
-* specify 2.6 for the birth rate, 0.0 for the death rate, 1.0 for the sampling fraction, and 1.0 for the tree height (separate these numbers with at least one space; e.g. "2.6 0.0 1.0 1.0"
-* press 0 to quit
+:large_blue_diamond: Before going further, write down the true tree length so that we can see how well this can be estimated.
 
-One thing to note before we continue. PAML's evolver program scales the tree to have height equal to the specified mutation rate (1.0, the last number we specified above). Normally pure birth trees would have different heights because of stochastic variation, but apparently this is only possible in evolver by editing the source code and making your own _ad hoc_ version. I've done the next best thing, which is set the birth rate to the value (2.6) that yields a tree having _expected_ height 1.0. 
+You should now find two new files in your _rbdiv_ directory: _simulated.tre_ and _simulated.nex_.
 
-You should now find a tree description in the file _evolver.out_. 
+Let's use PAUP* to see how well we can estimate things like the base frequencies, exchangeabilities, and tree length:
 
-:large_blue_diamond: **Rename this file** _tree.txt_ (this will prevent your tree description from being overwritten when you run evolver again, and we will use the _tree.txt_ file as input to RevBayes):
+:large_blue_diamond: Open _simulated.nex_ in nano and add the following paup block to the end of the file to estimate parameters on a neighbor-joining tree:
 
-    mv evolver.out tree.txt
+    begin paup;
+        log start file=pauplog.txt replace;
+        set crit=like nowarntsave;
+        lset nst=6 basefreq=estimate rmatrix=estimate rates=equal pinvar=0;
+        nj;
+        lscores 1;
+        describe 1 / noplot brlens=sumonly;
+        log stop;
+        quit;
+    end;
+    
+:large_blue_diamond: Execute the file _simulated.nex_ in PAUP* and answer the next few questions based on PAUP*'s output, which will be saved in the file _pauplog.txt_.
+    
+> :thinking: What is the true tree length? What is the estimated length of the neighbor-joining tree?
 
-### Simulate sequences
+{% comment %}
+I got 7.710638 for the true tree length and 7.62081 for the estimated tree length
+{% endcomment %}
+    
+> :thinking: What are the true base frequencies? What are the estimated base frequencies?
 
-The PAML evolver program requires a control file specifying everything it needs to know to perform your simulation. 
+{% comment %}
+True base frequencies: 0.1 0.2 0.3 0.4
+Base frequencies:
+  A       0.099756
+  C       0.200273
+  G       0.300978
+  T       0.398993
+{% endcomment %}
+    
+> :thinking: What are the true exchangeabilities? What are the estimated exchangeabilities?
 
-:large_blue_diamond: Create a file named _control.dat_ with the following contents (**note: 2 lines require modification**: seed and tree description):
-
-    2
-    seed goes here
-    20 10000 1
-    -1
-    tree description goes here
-    4 
-    5
-    0 0 
-    0.1 0.2 0.3 0.4
-
-Here's what each of those lines does (consult the evolver section of the [PAML manual](https://github.com/abacus-gene/paml/blob/master/doc/pamlDOC.pdf) for more info about each option):
-
-* line 1: 2 specifies that we want the output as a nexus file
-* line 2: you should enter your own random number seed on the second line (can be the same as the one you used for the tree)
-* line 3: 20 taxa, 10000 sites, 1 data set
-* line 4: -1 says to use the branch lengths in the tree description
-* line 5: tree description: paste in the tree description you generated from the first evolve run here
-* line 6: 4 specifies the HKY model
-* line 7: set kappa equal to 5
-* line 8: set the gamma shape parameter to 0 and the number of rate categories to 0 (i.e. no rate heterogeneity)
-* line 9: set state frequencies to: T=0.1, C=0.2, A=0.3, and G=0.4 (note, not in alphabetical order!)
-
-When saving simulated data in nexus format, PAML's evolver command looks for three files (_paupstart_, _paupend_, and _paupblock_) specifying what text should go at the beginning, end, and following each data matrix generated, respectively. The only one of these files that needs to have anything in it is _paupstart_. 
-
-:large_blue_diamond: Here's the quick way to create these files:
-
-    echo "#nexus" > paupstart
-    touch paupblock
-    touch paupend
-
-The **echo** command parrots what you put in quotes and the `> paupstart` at the end creates the file _paupstart_ and saves the echoed contents there. 
-
-The **touch** command is intended to be used to update the time stamp on a file, but will create an empty text file if the file specified does not exist.
-
-:large_blue_diamond: Run evolver now using this control file, and selecting option (5) from the menu, which is "Simulate nucleotide data sets".
-
-    evolver 5 control.dat
-
-If you get _Error: err tree..._ it means that you did not follow the directions above :smirk: 
-
-You should now find a file named _mc.nex_ containing the sequence data.
-
+{% comment %}
+True base frequencies: 1, 5, 1, 1, 5, 1
+Exchangeabilities (R):
+  AC       0.99192
+  AG       4.88644
+  AT       1.02531
+  CG       1.00405
+  CT       4.98064
+  GT       1.00000
+{% endcomment %}
+ 
 ## Use RevBayes to estimate the birth rate and clock rate
 
-In our first RevBayes analysis, we will see how well we can estimate what we already know to be true about the evolution of both the tree and the sequences. You will cheat and fix some things to their known true values, such as the tree topology and edge lengths. The idea is to take small steps so that we know what we are doing all along.
-
-As you already know from previous labs, RevBayes uses an R-like language called the Rev Language to specify the model and the analysis. Rev is not R, but it is so similar to R that you will often forget that you are not using R and will try things that work in R but do not work in Rev - just a heads-up!
+In our first RevBayes analysis, we will see how well we can estimate what we already know to be true about the evolution of both the tree and the sequences. You will cheat a little bit and fix some things to their known true values, such as the tree topology and edge lengths. The idea is to take small steps so that we know what we are doing all along.
 
 ### Get RevBayes running
 
@@ -244,10 +253,10 @@ Because this analysis takes a little while to run, let's get it started first an
 
     # Load data and tree
     
-    D <- readDiscreteCharacterData(file="mc.nex")
+    D <- readDiscreteCharacterData(file="simulated.nex")
     n_sites <- D.nchar()
     
-    T <- readTrees("tree.txt")[1]
+    T <- readTrees("simulated.tre")[1]
     n_taxa  <- T.ntips()
     taxa  <- T.taxa()
     
@@ -265,7 +274,7 @@ Because this analysis takes a little while to run, let's get it started first an
     moves[nmoves++] = mvSlide(birth_rate, delta=1.0, tune=true, tuneTarget=0.4, weight=1.0)
     sampling_fraction <- 1.0
     root_time <- T.rootAge()
-    timetree ~ dnBDP(lambda = birth_rate, 
+    timetree ~ dnBirthDeath(lambda = birth_rate, 
         mu = death_rate, 
         rho = sampling_fraction, 
         rootAge = root_time, 
@@ -273,7 +282,7 @@ Because this analysis takes a little while to run, let's get it started first an
         condition = "nTaxa", 
         taxa = taxa)
     timetree.setValue(T)
-
+    
     # Strict clock
     
     clock_rate ~ dnExponential(0.01)
@@ -293,15 +302,15 @@ Because this analysis takes a little while to run, let's get it started first an
     phySeq ~ dnPhyloCTMC(tree=timetree, Q=Q, branchRates=clock_rate, nSites=n_sites, type="DNA")
     phySeq.clamp(D)
     mymodel = model(exchangeabilities)
-
+    
     mymodel.graph("strict.dot", TRUE, "white")
-
+    
     # Monitors
     
     monitors[nmonitors++] = mnModel(filename  = "output/strict.log",  printgen = 10, separator = TAB) 
     monitors[nmonitors++] = mnFile(filename  = "output/strict.trees", printgen = 10, timetree)
     monitors[nmonitors++] = mnScreen(printgen=100)
-
+    
     # MCMC
     
     mymcmc = mcmc(mymodel, monitors, moves, nruns=1)
@@ -318,7 +327,7 @@ Because this analysis takes a little while to run, let's get it started first an
     rb132 strict.Rev
     
 {% comment %}
-This run took about 5 minutes on the cluster.
+This run took about 7-8 minutes on the cluster.
 {% endcomment %}
 
 ### Understanding the RevBayes code
@@ -327,9 +336,9 @@ While RevBayes is running, read through the following sections so that you under
 
 #### Setting up the tree submodel
 
-Take a look at the "Load data and tree" and "Birth-death tree model" sections of the _strict.Rev_ file. Note that we are assigning only the first tree in _trees.txt_ to the variable `T` (there is only 1 tree in that file, but RevBayes stores the trees it reads in a vector, so you have to add the `[1]` to select the first anyway).
+Take a look at the "Load data and tree" and "Birth-death tree model" sections of the _strict.Rev_ file. Note that we are assigning only the first tree in _simulated.tre_ to the variable `T` (there is only 1 tree in that file, but RevBayes stores the trees it reads in a vector, so you have to add the `[1]` to select the first anyway).
 
-The functions beginning with `dn` (e.g. `dnExponential` and `dnBDP`) are probability distributions. Thus, `birth_rate` is a parameter that is assigned an Exponential prior distribution having rate 0.01, and `timetree` is a compound parameter representing the tree and its branching times that is assigned a Birth Death Process (BDP) prior distribution. The BDP is a submodel, like the +I or +G rate heterogeneity submodels: it has its own parameters (**lambda**, **mu**, **rho**, and **rootAge**) all of which are fixed except for `birth_rate`.
+The functions beginning with `dn` (e.g. `dnExponential` and `dnBirthDeath`) are probability distributions. Thus, `birth_rate` is a parameter that is assigned an Exponential prior distribution having rate 0.01, and `timetree` is a compound parameter representing the tree and its branching times that is assigned a Birth Death Process (BDP) prior distribution. The BDP is a submodel, like the +I or +G rate heterogeneity submodels: it has its own parameters (**lambda**, **mu**, **rho**, and **rootAge**) all of which are fixed except for `birth_rate`.
 
 The `setValue` function used on the last line sets the starting value of a parameter that is allowed to vary. In this case, we are using setValue to start off our MCMC analysis with the true tree and true edge lengths.
 
@@ -380,9 +389,9 @@ Finally, the "MCMC" section creates an `mcmc` object that combines the model, mo
 
 Hopefully your RevBayes run has now finished. If not, wait here until it is done.
 
-:large_blue_diamond: Before doing anything else, use nano to create a file named _operator-summary.txt_ and copy into it the operator summary table at the end of the RevBayes output so that you can refer to it later.
+:large_blue_diamond: Before doing anything else, use nano to create a file named _operator-summary-strict.txt_ and copy into it the operator summary table at the end of the RevBayes output so that you can refer to it later.
 
-    nano operator-summary.txt
+    nano operator-summary-strict.txt
 
 :large_blue_diamond: Copy the contents of the file _strict.dot_ and paste them into one of the online [Graphviz](https://www.graphviz.org) viewers such as [GraphvizFiddle](https://stamm-wilbrandt.de/GraphvizFiddle/), [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline), or [WebGraphviz](http://www.webgraphviz.com). 
 
@@ -438,7 +447,7 @@ Looking at the operator summary table generated after the MCMC analysis finished
 
 ## Relaxed clocks
 
-It is safe to assume that a strict molecular clock almost never applies to real data. So, it would be good to allow some flexibility in rates. One common approach is to assume that the rates for each edge are drawn from a lognormal distribution. This is often called an **UnCorrelated Lognormal  (UCLN) relaxed clock model** because the rate for each edge is independent of the rate for all other edges (that's the uncorrelated part) and all rates are lognormally distributed. This is to distinguish this approach from correlated relaxed clock models, which assume that rates are to some extent inherited from ancestors, and thus there is autocorrelation across the tree.
+It is safe to assume that a strict molecular clock almost never applies to real data (although it does apply to our simulated data). So, it would be good to allow some flexibility in rates. One common approach is to assume that the rates for each edge are drawn from a lognormal distribution. This is often called an **UnCorrelated Lognormal  (UCLN) relaxed clock model** because the rate for each edge is independent of the rate for all other edges (that's the uncorrelated part) and all rates are lognormally distributed. This is to distinguish this approach from correlated relaxed clock models, which assume that rates are to some extent inherited from ancestors, and thus there is autocorrelation across the tree.
 
 :large_blue_diamond: Copy your _strict.Rev_ script to a file named _relaxed.Rev_:
 
@@ -592,7 +601,7 @@ Because this run takes more than half an hour, I have already run it for you.
 
 :large_blue_diamond: Open the _divtimeMAP.tre_ file in FigTree, check the "Node Bars" checkbox, then specify "age_95%_HPD" for Display after expanding the "Node Bars" section. 
 
-:large_blue_diamond: Use **File > New...** from the FigTree main menu to open up a new window, then paste the tree description from _tree.txt_ into the new window for comparison. It also helps to expand the **Trees** section of FigTree and check the **Order nodes** checkbox so that both trees are _ladderized_ the same direction.
+:large_blue_diamond: Use **File > New...** from the FigTree main menu to open up a new window, then paste the tree description from _simulated.tre_ into the new window for comparison. It also helps to expand the **Trees** section of FigTree and check the **Order nodes** checkbox so that both trees are _ladderized_ the same direction.
 
 > :thinking: We've added moves, but no parameters or priors for the node times. Why not?
 
@@ -663,4 +672,132 @@ If you need to estimate divergence times, and especially if you have fossils tha
 ## What to turn in
 
 Use FigTree to create a PDF figure of your _divtimeMAP.tre_ with credible intervals indicated by bars and send that along with your thinking questions to Analisa on Slack to get credit.
+
+{% comment %}
+## Install PAML 
+
+You will need to install PAML, which we will use to simulate data. 
+
+:large_blue_diamond: Open a web browser and enter the following URL, which points to Ziheng Yang's PAML code repository on GitHub:
+
+    https://github.com/abacus-gene/paml/
+
+:large_blue_diamond: Click the green "<> Code" button and copy the HTTPS link by clicking on the 'Copy URL to clipboard" icon at the right of the link.
+
+:large_blue_diamond: On the HPC cluster, ensure you are in the _rbdiv_ directory and type
+
+    git clone https://github.com/abacus-gene/paml/
+    
+This will create a _paml_ directory inside your _rbdiv_ directory.
+
+:large_blue_diamond: Navigate to the _paml/src_ directory and type `make` to compile PAML.
+
+You will see several warnings that we will ignore. Using the command `make` is one of several methods used to _compile_ source code (files containing instructions written in a computing language such as C, C++, C#, or Julia) into an _executable_ file (i.e. a computer program). A sure sign that `make` is the method chosen by the author of the program is the presence of a file named _Makefile_ inside the source directory. The so-called _scripting languages_ (e.g. R, Python, Javascript) do not require a compiling step.
+
+:large_blue_diamond: Once compiling is finished, copy the _evolver_ executable into your _~/bin_ directory:
+
+    cp evolver ~/bin
+    
+:large_blue_diamond: You should now be able to start evolver by typing `evolver` at the prompt:
+
+    cd ~/rbdiv
+    evolver
+    EVOLVER in paml version 4.10.10, 29 Jan 2026
+    Results for options 1-4 & 8 go into evolver.out
+    
+        (1) Get random UNROOTED trees?
+        (2) Get random ROOTED trees?
+        (3) List all UNROOTED trees?
+        (4) List all ROOTED trees?
+        (5) Simulate nucleotide data sets (use MCbase.dat)?
+        (6) Simulate codon data sets      (use MCcodon.dat)?
+        (7) Simulate amino acid data sets (use MCaa.dat)?
+        (8) Calculate identical bi-partitions between trees?
+        (9) Calculate clade support values (evolver 9 treefile maintreefile <pick1tree>)?
+        (11) Label clades?
+        (0) Quit?    
+        
+:large_blue_diamond: For now, type `0` to quit.
+
+## Simulating and analyzing under the strict clock model
+
+Divergence time analyses are the trickiest type of analysis we will do in this course. That's because the sequences do not contain information about **substitution rates** or **divergence times** _per se_; they contain information about the **number of substitutions** that have occurred, and the number of substitutions  is the _product_ of rate and time. Thus, maximum likelihood methods cannot separate rates from times; doing so requires a Bayesian approach and careful use of priors, which constrain the range of rate and time scenarios considered plausible.
+
+We will thus start slowly, simulating data so that we know the truth. This will help guide your expectations when conducting divergence time analyses on real data.
+
+## PAML evolver
+
+Let's use **evolver** to simulate data for 10000 sites on a 20-taxon pure birth (Yule) tree using a strict clock. This will allow us to know everything: the **birth rate** of the tree generating process, the **clock rate** (i.e. the substitution rate that applies to the entire tree), as well as the model used for simulation.
+
+We will each use a different random number seed, so we should all get slightly different answers.
+
+### Simulate a tree
+
+First simulate a pure birth tree using evolver. 
+
+:large_blue_diamond: Start evolver by simply typing evolver at the bash prompt, then enter the information provided below at the prompts (for questions that ask for multiple quantities, just separate the values by a space):
+
+* specify that you want to generate a rooted tree by typing 2
+* specify 20 species
+* specify 1 tree and a random number seed of _your_ choosing (separate these two positive whole numbers with a space)
+* specify 1 to answer yes to the question about wanting branch lengths
+* specify 2.6 for the birth rate, 0.0 for the death rate, 1.0 for the sampling fraction, and 1.0 for the tree height (separate these numbers with at least one space; e.g. "2.6 0.0 1.0 1.0"
+* press 0 to quit
+
+One thing to note before we continue. PAML's evolver program scales the tree to have height equal to the specified mutation rate (1.0, the last number we specified above). Normally pure birth trees would have different heights because of stochastic variation, but apparently this is only possible in evolver by editing the source code and making your own _ad hoc_ version. I've done the next best thing, which is set the birth rate to the value (2.6) that yields a tree having _expected_ height 1.0. 
+
+You should now find a tree description in the file _evolver.out_. 
+
+:large_blue_diamond: **Rename this file** _tree.txt_ (this will prevent your tree description from being overwritten when you run evolver again, and we will use the _tree.txt_ file as input to RevBayes):
+
+    mv evolver.out tree.txt
+
+### Simulate sequences
+
+The PAML evolver program requires a control file specifying everything it needs to know to perform your simulation. 
+
+:large_blue_diamond: Create a file named _control.dat_ with the following contents (**note: 2 lines require modification**: seed and tree description):
+
+    2
+    seed goes here
+    20 10000 1
+    -1
+    tree description goes here
+    4 
+    5
+    0 0 
+    0.1 0.2 0.3 0.4
+
+Here's what each of those lines does (consult the evolver section of the [PAML manual](https://github.com/abacus-gene/paml/blob/master/doc/pamlDOC.pdf) for more info about each option):
+
+* line 1: 2 specifies that we want the output as a nexus file
+* line 2: you should enter your own random number seed on the second line (can be the same as the one you used for the tree)
+* line 3: 20 taxa, 10000 sites, 1 data set
+* line 4: -1 says to use the branch lengths in the tree description
+* line 5: tree description: paste in the tree description you generated from the first evolve run here
+* line 6: 4 specifies the HKY model
+* line 7: set kappa equal to 5
+* line 8: set the gamma shape parameter to 0 and the number of rate categories to 0 (i.e. no rate heterogeneity)
+* line 9: set state frequencies to: T=0.1, C=0.2, A=0.3, and G=0.4 (note, not in alphabetical order!)
+
+When saving simulated data in nexus format, PAML's evolver command looks for three files (_paupstart_, _paupend_, and _paupblock_) specifying what text should go at the beginning, end, and following each data matrix generated, respectively. The only one of these files that needs to have anything in it is _paupstart_. 
+
+:large_blue_diamond: Here's the quick way to create these files:
+
+    echo "#nexus" > paupstart
+    touch paupblock
+    touch paupend
+
+The **echo** command parrots what you put in quotes and the `> paupstart` at the end creates the file _paupstart_ and saves the echoed contents there. 
+
+The **touch** command is intended to be used to update the time stamp on a file, but will create an empty text file if the file specified does not exist.
+
+:large_blue_diamond: Run evolver now using this control file, and selecting option (5) from the menu, which is "Simulate nucleotide data sets".
+
+    evolver 5 control.dat
+
+If you get _Error: err tree..._ it means that you did not follow the directions above :smirk: 
+
+You should now find a file named _mc.nex_ containing the sequence data.
+{% endcomment %}
 
