@@ -46,7 +46,7 @@ Tuesday Mar. 24    | **[Discrete morphological models](https://gnetum.eeb.uconn.
 Thursday Mar. 26   | **[Evolutionary Correlation](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-26-pagel94.pdf)**; **[Star Tree Paradox](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-26-star-tree-paradox.pdf)** | **Lab 9** [RevBayes with discrete morphological data](/morph/)
 Tuesday Mar. 31    | **[Independent Contrasts](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-31-indcont.pdf)**; **[PGLS (start)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-03-31-pgls1.pdf)** | **[Homework 8](/hwmandf/)** 
 Thursday Apr. 2    | **[PGLS (cont.)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-02-pgls2.pdf)**; **[Phylogenetic signal](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-02-signal.pdf)** | **Lab 10** [BayesTraits](/bayes-traits/)
-Tuesday Apr. 7     | **OU model**, **Relaxed clocks** | **[Homework 9](/hwbmsim/)** 
+Tuesday Apr. 7     | **OU model**, **[Relaxed clocks](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-07-relaxed-clocks.pdf)** | **[Homework 9](/hwbmsim/)** 
 Thursday Apr. 9    | **Divergence time estimation**                          | **Lab 11** [Divergence Time Estimation with RevBayes](/revdiv/)
 Tuesday Apr. 14    | **Dirichlet Process Priors**                            | **Individual Meetings** 
 Thursday Apr. 16   | **Guest Lecture by Dr. Rosana Zenil-Ferguson**          | **Lab 12** TBA
