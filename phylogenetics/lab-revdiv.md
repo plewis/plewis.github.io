@@ -9,9 +9,15 @@ permalink: /revdiv/
 
 The goal of this lab exercise is to introduce you to Bayesian divergence time estimation. There are other programs that are popular for divergence time analyses (notably [BEAST2](https://www.beast2.org)), but we will use [RevBayes](https://revbayes.github.io) because you already have some experience with this program.
 
-Goal 1: Simulate a tree and DNA sequence data with known properties (e.g. speciation rate, nucleotide frequencies, strict molecular clock, etc.)
+Part 1: Simulate a tree and DNA sequence data with known properties (e.g. speciation rate, nucleotide frequencies, strict molecular clock rate, etc.)
 
-Goal 2: Analyze the simulated data to see how well we can estimate the parameters whose true values we know because we simulated the data
+Part 2: Analyze the simulated data under a strict clock model while fixing the topology to see how well we can estimate parameters such as clock rate and speciation rate whose true values we know because we simulated the data
+
+Part 3: Analyze the simulated data under a relaxed clock model while fixing the topology to see whether we can infer that the data were actually simulated under a strict clock
+
+Part 4: Analyze under a relaxed clock model, this time allowing topology to vary, and estimate relative divergence times
+
+Part 5: Compare credible intervals from part 4 to those under the prior to see whether the there is information in the data about divergence times.
 
 We will use RevBayes to both simulate tree and data as well as for analysis of the simulated data.
 
@@ -129,7 +135,9 @@ As you already know from previous labs, RevBayes uses an R-like language called 
 
 :large_blue_diamond: Create the file _sim.Rev_ to create instructions for simulating a tree and DNA sequence data on that tree:
 
-    # Set the number of sites, number of taxa, and specify taxon names
+    # Set the random number seed, number of sites, number of taxa, and specify taxon names
+    seed(12345)
+    printSeed()
     
     n_sites <- 10000
     
@@ -181,6 +189,8 @@ As you already know from previous labs, RevBayes uses an R-like language called 
     writeNexus("simulated.nex", phySeq)
     
     quit()
+    
+**Important:** Do not change the random number seed specified above. We will thus all simulate exactly the same true tree and sequence data. This will be important later on in the lab as you will see.
     
 :large_blue_diamond: Run RevBayes to simulate data:
 
@@ -251,6 +261,10 @@ Because this analysis takes a little while to run, let's get it started first an
 
 :large_blue_diamond: Create a new file named _strict.Rev_ and add the following to it:
 
+    # Set random number seed (you can choose your own this time)
+    seed(13579)
+    printSeed()
+    
     # Load data and tree
     
     D <- readDiscreteCharacterData(file="simulated.nex")
@@ -512,7 +526,11 @@ Note that I'm not using setValue for any other parameters; the analysis seems to
     rb132 relaxed.Rev
 
 {% comment %}
-This run took about 13 minutes on the cluster.
+This run took about 20 minutes for us, so if you want to get working on answering the questions you have the option of downloading the output that we obtained.
+
+:large_blue_diamond: The output files can be copied to your directory using this command:
+
+    cp -r /scratch/pol02003/pol02003/relaxed-output .
 {% endcomment %}
 
 ### Review results of the relaxed clock analysis
@@ -591,9 +609,9 @@ This reads all the sampled trees (each will be different this time because we ad
 
 :large_blue_diamond: Be sure to change all your output files to have the prefix **divtime** rather than **relaxed** so that you don't overwrite the previous results.
 
-Because this run takes more than half an hour, I have already run it for you. 
+Because this run took about 90 minutes for me, you will not actually start this analysis but, instead, you can simply download the output that we obtained. (This is why it was important for us all to simulated the data using the same seed; if you had chosen a different seed, then the output you download would be from an analysis performed on a different data set).
 
-:large_blue_diamond:The output files can be copied to your directory using this command:
+:large_blue_diamond: The output files can be copied to your directory using this command:
 
     cp -r /scratch/pol02003/pol02003/divtime-output .
 
@@ -606,7 +624,7 @@ Because this run takes more than half an hour, I have already run it for you.
 > :thinking: We've added moves, but no parameters or priors for the node times. Why not?
 
 {% comment %}
-The prior for node times is provided by dnBDP, the birth-death process distribution, which has one hyperparameter birth_rate, so the parameters and priors for node times have been there all along!
+The prior for node times is provided by dnBirthDeath, the birth-death process distribution, which has one hyperparameter birth_rate, so the parameters and priors for node times have been there all along!
 {% endcomment %}
 
 > :thinking: Does the MAP tree have the same topology as the true tree
@@ -654,10 +672,10 @@ To finish up the lab, let's see what the credible interval sizes are under the p
     rb132 divprior.Rev
 
 {% comment %}
-This run took about 2 minutes on the cluster.
+This run took only a few second on the cluster.
 {% endcomment %}
 
-Open both _divpriorMAP.tre_ and _divtimeMAP.tre_ and make the node bars equal the 95% HPD intervals in each.
+:large_blue_diamond: Open both _divpriorMAP.tre_ and _divtimeMAP.tre_ and make the node bars equal the 95% HPD intervals in each.
 
 > :thinking: Does the data contain information about substitution rates?
 
