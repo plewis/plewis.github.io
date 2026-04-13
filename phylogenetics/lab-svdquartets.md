@@ -34,6 +34,21 @@ Here is a text file template in which to store your answers to the :thinking: th
     
     Part 2: Analysis of a real data set
 
+    1. xxxx?
+    answer:
+    
+    2. xxxx?
+    answer:
+    
+    3. xxxx?
+    answer:
+    
+    4. xxxx?
+    answer:
+    
+    5. xxxx?
+    answer:
+    
 
 ## Getting started
 
@@ -406,7 +421,7 @@ Note that this analysis is more computationally intensive than the previous one 
 
 We will again run ASTRAL so that you can see how to apply ASTRAL to an empirical data set. As before the first step is to estimate gene trees for each of the 16 loci. We can do this with the following two commands:
 
-    paup> !python astral_prep_canids.py > run_astral_canids.nex
+    paup> !python3 astral_prep_canids.py > run_astral_canids.nex
     paup> exec run_astral_canids.nex;
     
 (In an interactive session you will need to hit return at the `!` prompt to return to the PAUP prompt). You can ignore warnings from PAUP* about the ingroup not being monophyletic; the trees are considered to be unrooted when input to ASTRAL.
