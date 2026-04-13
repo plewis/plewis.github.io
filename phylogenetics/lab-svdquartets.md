@@ -85,6 +85,8 @@ Use the unix `mkdir` command to create a directory to play in today:
 
 :large_blue_diamond: On your laptop, open a browser and navigate to the [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/) web site.
 
+:large_blue_diamond: Click on the "Source Code" link in the DOWNLOAD section on the left. This will take you to the RAxML GitHub site.
+
 :large_blue_diamond: On the right side of the GitHub page, you will see a "Releases" section. Click on the "Latest" link (this was v8.2.13 at the time of this writing):
 
 :large_blue_diamond: Copy the link address for _Source code (tar.gz)_
@@ -202,9 +204,9 @@ Now, if you enter `astral` at the command line (assuming the openjdk module is l
     
 ## Download the files for the tutorial
 
-:large_blue_diamond: On the cluster, in your _~/svdlab_ directory, use `curl` to download a zip file containing the files that will be accessed during the tutorial:
+:large_blue_diamond: On the cluster, in your _~/svdlab_ directory, use `cp` to copy a zip file containing the files that will be accessed during the tutorial:
 
-    curl -LO https://github.com/plewis/plewis.github.io/blob/master/assets/data/svdquartets_tutorial.zip
+    cp /scratch/pol02003/pol02003/svdquartets_tutorial.zip .
     
 :large_blue_diamond: Unzip the files as follows:
 
@@ -228,11 +230,13 @@ you would type `cat filename.txt` and hit return. Likewise, `paup>` represents t
 
 If you have not already done so, install [FigTree](https://tree.bio.ed.ac.uk/software/figtree/) on your local machine. FigTree is not a critical component of the tutorial however, so don’t sweat it if you run into problems.
 
+{% include figure.html description="Figure 2a (redrawn) from Liu and Edwards (2009)" url="/assets/img/liu-edwards-2009-fig2a.png" css="image-right noborder" width="400px" %}
+
 ### Part 1: Analysis of a data set simulated from the "anomaly zone"
 
 We will begin with an example used by Liu and Edwards (2009), calling attention to problems that can arise due to gene trees for individual loci conflicting with the species tree because of "incomplete lineage sorting" (ILS). When internal branches of the species tree are very short (or effective population sizes are extremely large), the most probable gene tree can be inconsistent with the species tree, which can cause "concatenation" methods for inferring the tree to fail. See Kubatko and Degnan (2007), Liu and Edwards (2009), and Roch and Steel (2015) for details.
 
-The data file _anomaly_zone.nex_ represents one replicate of a simulation described in Fig. 2 in Liu and Edwards (2009). This file contains data for 10,000 loci, with 500 sites per locus. We will use the PAUP* program ([https://paup.phylosolutions.com/](https://paup.phylosolutions.com/)) to analyze this data set (PAUP* will subsequently be referred to as PAUP, without the asterisk). It is often convenient to run PAUP from a Nexus-file script containing the commands used to perform the analysis, but we will usually issue the commands interactively here for pedagogic reasons.
+The data file _anomaly_zone.nex_ represents one replicate of a simulation described in Fig. 2 in Liu and Edwards (2009) (The true tree used for the simulations is shown on the right). This file contains data for 10,000 loci, with 500 sites per locus. We will use the PAUP* program ([https://paup.phylosolutions.com/](https://paup.phylosolutions.com/)) to analyze this data set (PAUP* will subsequently be referred to as PAUP, without the asterisk). It is often convenient to run PAUP from a Nexus-file script containing the commands used to perform the analysis, but we will usually issue the commands interactively here for pedagogic reasons.
 
 Start PAUP and load the data file.
 
@@ -361,6 +365,8 @@ On the MBL cluster, you can use the command "astral" rather than "java -jar astr
 ### Part 2: Analysis of a real data set
 
 The data set is for members of the family Canidae (dogs, wolves, coyotes, foxes, jackals, etc.). Lindblad-Toh et al. (2005) sequenced a collection of 16 nuclear loci. The alignments used here are from a [*BEAST2 tutorial written by Huw Ogilvie](https://github.com/genomescale/starbeast2/releases/download/v0.14.0/StarBEAST2-tutorial.zip). We reformatted them into the Nexus format and renamed the taxa from scientific to common names.
+
+(Note added by Paul and Analisa: please download and unzip the *BEAST tutorial above; later parts of this tutorial refer to a file, _StarBEAST2-tutorial.pdf_, that you will have once you unzip the *BEAST tutorial.)
 
 Start PAUP and load the canid sequence data file:
 
