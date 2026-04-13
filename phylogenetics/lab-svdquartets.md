@@ -1,7 +1,7 @@
 ---
 layout: page
-title: RevBayes Divergence Dating Lab
-permalink: /revdiv/
+title: SVDQuartets Lab
+permalink: /svdq/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2026/)
 
@@ -403,6 +403,7 @@ Note that this analysis is more computationally intensive than the previous one 
     paup> qage patProb=expBL taxpartition=species loci=combined bootstrap=multilocus treefile=test.tre modelName=MyGTR poolJC=no nreps=100;
 
 #### Analysis 2: Using ASTRAL
+
 We will again run ASTRAL so that you can see how to apply ASTRAL to an empirical data set. As before the first step is to estimate gene trees for each of the 16 loci. We can do this with the following two commands:
 
     paup> !python astral_prep_canids.py > run_astral_canids.nex
