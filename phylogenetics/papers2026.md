@@ -11,7 +11,7 @@ These papers have been cited in previous versions of the course.
 
 Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
 
-Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. [Bayesian estimation of concordance among gene trees](https://doi.org/10.1093/molbev/msl170). Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy) 
+:heavy_check_mark: Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. [Bayesian estimation of concordance among gene trees](https://doi.org/10.1093/molbev/msl170). Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy) 
 
 :heavy_check_mark: Bandelt, H.-J., and A. W. M. Dress. 1992. [Split decomposition: a new and useful approach to phylogenetic analysis of distance data.](https://doi.org/10.1016/1055-7903(92)90021-8) Molecular Phylogenetics and Evolution 1: 242-252.
 
@@ -35,15 +35,17 @@ Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences i
 
 :heavy_check_mark: Chifman, J., and Kubatko, L. S. 2014. [Quartet Inference from SNP Data Under the Coalescent Model.](http://doi.org/10.1093/bioinformatics/btu530) Bioinformatics 30(23):3317-3324. 
 
+:heavy_check_mark: Chifman J., Kubatko L.S. 2015. Identifiability of the unrooted species tree topology under the coalescent model with time-reversible substitution processes, site-specific rate variation, and invariable sites. Journal of Theoretical Biology 374:35–47.
+
 :heavy_check_mark: Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London. 
 
 Dayhoff, M.O., Schwartz, R.M., Orcutt, B.C. 1978. A model for evolutionary change in proteins. Atlas of Protein Sequence and Structure, 5, 345–352. (PAM amino acid model) 
 
 :heavy_check_mark: Degnan, J. H., and N. A. Rosenberg. 2006. [Discordance of species trees with their most likely gene trees.](http://doi.org/10.1371/journal.pgen.0020068) PLoS Genetics 2:e68. (The anomaly zone) 
 
-Drummond, A. J., S. Y. W. Ho, M. J. Phillips, A. Rambaut. 2006. Relaxed phylogenetics and dating with confidence. PLoS Biology 4(5): e88 (Uncorrelated relaxed clocks)
+:heavy_check_mark: Drummond, A. J., S. Y. W. Ho, M. J. Phillips, A. Rambaut. 2006. Relaxed phylogenetics and dating with confidence. PLoS Biology 4(5): e88 (Uncorrelated relaxed clocks)
 
-Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to rule them all. BMC Biol. 8:114. (Random local clocks)
+:heavy_check_mark: Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to rule them all. BMC Biol. 8:114. (Random local clocks)
 
 Eck, R. V., and M. O. Dayhoff. 1966. Atlas of protein sequence and structure. National Biomedical Research Foundation. Silver Spring, Maryland.
 
@@ -73,7 +75,7 @@ Felsenstein, J. 2004. Inferring phylogenies. Sinauer Associates, Sunderland, MA.
 
 :heavy_check_mark: Fitch, W. M., and E. Margoliash. 1967. [Construction of phylogenetic trees](https://doi.org/10.1126/science.155.3760.279) Science 155:279-284. 
 
-Fitch, W. M., and E. Markowitz. 1970. An improved method for determining codon variability in a gene and its application to the rate of fixation of mutations in evolution. Biochemical Genetics 4: 579–593.
+:heavy_check_mark: Fitch, W. M., and E. Markowitz. 1970. An improved method for determining codon variability in a gene and its application to the rate of fixation of mutations in evolution. Biochemical Genetics 4: 579–593.
 
 :heavy_check_mark: Fitch, W. 1971. [Toward defining the course of evolution: minimum change for a specific tree topology.](https://doi.org/10.1093/sysbio/20.4.406) Systematic Zoology 20:406-416.  
 
@@ -107,7 +109,7 @@ Harvey, P. H., R. M. May, and S. Nee. 1994. Phylogenies without fossils. Evoluti
 
 :heavy_check_mark: Hastings, W. K. 1970. [Monte Carlo sampling methods using Markov chains and their applications. Biometrika 57:97-109.](https://doi.org/10.1093/biomet/57.1.97) (Hastings ratio) 
 
-Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. [The fossilized birth–death process for coherent calibration of divergence-time estimates.](http://doi.org/10.1073/pnas.1319091111) PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
+:heavy_check_mark: Heath, T. A., Huelsenbeck, J. P., & Stadler, T. 2014. [The fossilized birth–death process for coherent calibration of divergence-time estimates.](http://doi.org/10.1073/pnas.1319091111) PNAS 111(29):E2957–E2966. (Fossilized birth-death process dating method)
 
 Hennig, W. 1966. Phylogenetic systematics. University of Illinois Press, Urbana.
 
@@ -119,9 +121,9 @@ Holder, M. T., Lewis, P. O., Swofford, D. L., and Larget, B. (2005). Hastings ra
 
 Huelsenbeck, J. P., R. Nielsen, and J. P. Bollback. 2003. [Stochastic mapping of morphological characters.](https://doi.org/10.1080/10635150390192780) Systematic Biology 52(2): 131-158.  
 
-Huelsenbeck, J. P., Jain, S., Frost, S., and Pond, S. 2006. A Dirichlet process model for detecting positive selection in protein-coding DNA sequences. Proceedings of the National Academy USA 103:6263–6268. (DP mixture model for omega) 
+:heavy_check_mark: Huelsenbeck, J. P., Jain, S., Frost, S., and Pond, S. 2006. A Dirichlet process model for detecting positive selection in protein-coding DNA sequences. Proceedings of the National Academy USA 103:6263–6268. (DP mixture model for omega) 
 
-Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommodating and testing across-site rate variation. Systematic Biology 56:975–987. (DP model for among site rate heterogeneity) 
+:heavy_check_mark: Huelsenbeck, J. P., and Suchard, M. A. 2007. A nonparametric method for accommodating and testing across-site rate variation. Systematic Biology 56:975–987. (DP model for among site rate heterogeneity) 
 
 Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from multilocus data. Molecular Biology and Evolution 27:570-580. (Bayesian species tree estimation) 
 
@@ -141,13 +143,15 @@ Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of m
 
 :heavy_check_mark: Kishino, H., and M. Hasegawa. 1989. [Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order in hominoidea.](https://doi.org/10.1007/BF02100115) Journal of Molecular Evolution 29: 170-179.(F84 model, KH test) 
 
-Kishino, H., J. L. Thorne, and W. J. Bruno. 2001. Performance of a divergence time estimation method under a probabilistic model of rate evolution. Molecular Biology and Evolution 18:352-361.
+:heavy_check_mark: Kishino, H., J. L. Thorne, and W. J. Bruno. 2001. Performance of a divergence time estimation method under a probabilistic model of rate evolution. Molecular Biology and Evolution 18:352-361.
 
 Kluge, A. G., and J. S. Farris. 1969. Quantitative phyletics and the evolution of anurans. Systematic Zoology 18:1-32.
 
-Kolaczkowski, B., and J. W. Thornton. 2004. Performance of maximum parsimony and likelihood phylogenetics when evolution is heterogeneous. Nature 431:980-984.
+:heavy_check_mark: Kolaczkowski, B., and J. W. Thornton. 2004. Performance of maximum parsimony and likelihood phylogenetics when evolution is heterogeneous. Nature 431:980-984.
 
-Kolaczkowski, B., and J. W. Thornton. 2008. [A mixed branch length model of heterotachy improves phylogenetic accuracy.](https://doi.org/10.1093/molbev/msn042) Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
+:heavy_check_mark: Kolaczkowski, B., and J. W. Thornton. 2008. [A mixed branch length model of heterotachy improves phylogenetic accuracy.](https://doi.org/10.1093/molbev/msn042) Molecular Biology and Evolution 25:1054–1066. (mixture of edge length sets heterotachy model)
+
+:heavy_check_mark: Kubatko L. S., and J. H. Degnan. 2007. Inconsistency of phylogenetic estimates from concatenated data under coalescence. Systematic Biology 56:17–24.
 
 Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population history. Trends Ecol. Evol. 24:86-93. 
 
@@ -155,13 +159,13 @@ Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population histo
 
 :heavy_check_mark: Larget, B., and D. L. Simon. 1999. [Markov chain monte carlo algorithms for the Bayesian analysis of phylogenetic trees.](https://doi.org/10.1093/oxfordjournals.molbev.a026160) Molecular Biology and Evolution 16:750-759. (see also Holder et al. 2005) 
 
-Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra) 
+:heavy_check_mark: Lartillot, N., and Philippe, H. 2004. A Bayesian mixture model for across-site heterogeneities in the amino-acid replacement process. Molecular Biology and Evolution, 21:1095–1109. (DP mixture model for amino acid spectra) 
 
-Lartillot, N., and H. Philippe. 2006. Computing bayes factors using thermodynamic integration. Systematic Biology 55(2): 195-207. (Thermodynamic integration (a.k.a. path sampling) marginal likelihood estimation) 
+:heavy_check_mark: Lartillot, N., and H. Philippe. 2006. Computing bayes factors using thermodynamic integration. Systematic Biology 55(2): 195-207. (Thermodynamic integration (a.k.a. path sampling) marginal likelihood estimation) 
 
 Le, S. Q., and Gascuel, O. 2008. An improved general amino acid replacement matrix. Molecular Biology and Evolution, 25(7):1307-1320. (LG amino acid model) 
 
-Lewis, L. A., B. D. Mishler, and R. Vilgalys. 1997. [Phylogenetic relationships of the liverworts (Hepaticae), a basal embryophyte lineage, inferred from nucleotide sequence data of the chloroplast gene _rbc_L](https://doi.org/10.1006/mpev.1996.0395) Molecular Phylogenetics and Evolution 7:377-393.
+:heavy_check_mark: Lewis, L. A., B. D. Mishler, and R. Vilgalys. 1997. [Phylogenetic relationships of the liverworts (Hepaticae), a basal embryophyte lineage, inferred from nucleotide sequence data of the chloroplast gene _rbc_L](https://doi.org/10.1006/mpev.1996.0395) Molecular Phylogenetics and Evolution 7:377-393.
 
 :heavy_check_mark: Lewis, P. O. 2001. A likelihood approach to estimating phylogeny from discrete morphological character data. Systematic Biology 50:913-925. 
 
@@ -170,6 +174,10 @@ Lewis, P. O. 2001b. Phylogenetic systematics turns over a new leaf. Trends in Ec
 :heavy_check_mark: Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian phylogenetic inference. Systematic Biology 54:241–253. 
 
 Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65(6):1009-1023. 
+
+:heavy_check_mark: Lindblad-Toh, K., C. M. Wade, T. S. Mikkelsen, E. K. Karlsson, D. B. Jaffe, M. Kamal, M. Clamp, J. L. Chang, E. J. Kulbokas, M. C. Zody, et al. 2005. Genome sequence, comparative analysis and haplotype structure of the domestic dog. Nature, 438(7069):803–819.
+
+:heavy_check_mark: Liu, L., and S. V. Edwards. 2009. Phylogenetic analysis in the anomaly zone. Systematic Biology 58:452–460.
 
 Lockhart, P. J., M. A. Steel, M. D. Hendy, and D. Penny. 1994. [Recovering evolutionary trees under a more realistic model of sequence evolution.](https://doi.org/10.1093/oxfordjournals.molbev.a040136) Molecular Biology and Evolution 11:605–612.
 
@@ -192,6 +200,8 @@ Martins, E. P. 1994. [Estimating the rate of phenotypic evolution from comparati
 Michener, C. D., and R. R. Sokal. 1957. A Quantitative Approach to a Problem in Classification. Evolution 11:130-162
 
 Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection of likelihood models for phylogeny estimation. Systematic Biology 52:674–683. (DTmodsel model selection criterion)
+
+:heavy_check_mark: Mirarab S., R. Reaz, M. S. Bayzid, T. Zimmermann, M. S. Swenson, T. J. Warnow. 2014. ASTRAL: genome-scale coalescent-based species tree estimation. Bioinformatics 30:i541–i548.
 
 :heavy_check_mark: Mirarab, S., and T. Warnow. 2015. [ASTRAL-II: coalescent-based species tree estimation with many hundreds of taxa and thousands of genes.](https://doi.org/10.1093/bioinformatics/btv234) Bioinformatics 31(12):i44–52. 
 
@@ -219,7 +229,7 @@ Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting patter
 
 :heavy_check_mark: Pagel, M., and A. Meade. 2006. Bayesian anaysis of correlated evolution of discrete characters by reversible-jump Markov chain Monte Carlo. American Naturalist 167:808-825. (rjMCMC for discrete character correlation) 
 
-Pagel, M., and A. Meade. 2008. [Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo.](https://doi.org/10.1098/rstb.2008.0178) Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
+:heavy_check_mark: Pagel, M., and A. Meade. 2008. [Modelling heterotachy in phylogenetic inference by reversible-jump Markov chain Monte Carlo.](https://doi.org/10.1098/rstb.2008.0178) Phil. Trans. R. Soc. B 363:3955-3964. (rjMCMC heterotachy model)
 
 Paradis, E. 2006. Analysis of phylogenetics and evolution with R. Springer. ISBN: 0-387-32914-5.
 
@@ -247,7 +257,9 @@ Ree, R. R. 2005. [Detecting the historical signature of key innovations using st
 
 Ricklefs, R. E. 2007. Estimating diversification rates from phylogenetic information. TREE 22:601-610. 
 
-Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
+:heavy_check_mark: Roch, S., and M. Steel. 2015. Likelihood-based tree reconstruction on a concatenation of aligned sequence data sets can be statistically inconsistent. Theoretical Population Biology 100:56-62.
+
+:heavy_check_mark: Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., and Rasnitsyn, A. P. 2012. [A total-evidence approach to dating with fossils, applied to the early radiation of the Hymenoptera.](http://doi.org/10.1093/sysbio/sys058) Systematic Biology 61(6):973–999. (Tip dating)
 
 :heavy_check_mark: Rzhetsky, A., and Nei, M. 1992. [Statistical properties of the ordinary least-squares, generalized least-squares, and minimum-evolution methods of phylogenetic inference.](https://doi.org/10.1007/BF00161174) Journal of Molecular Evolution 35:367-375. 
 
@@ -277,17 +289,19 @@ Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspeci
 
 :heavy_check_mark: Suchard, M. A., R. E. Weiss, and J. S. Sinsheimer. 2001. [Bayesian selection of continuous-time Markov chain evolutionary models.](https://doi.org/10.1093/oxfordjournals.molbev.a003872) Molecular Biology and Evolution 18:1001-1013. (Early use of hierarchical models in phylogenetics.)
 
+:heavy_check_mark: Swofford, D. L., and L. S. Kubatko. 2024. Species tree estimation using site pattern frequencies, Chapter 4, pgs. 68-88 in Species Tree Inference: A Guide to Methods and Applications, edited by L. Kubatko and L. Knowles.
+
 Swofford, D. L., Waddell, P. J., Huelsenbeck, J. P., Foster, P. G., Lewis, P. O., and Rogers, J. S. 2001. Bias in Phylogenetic Estimation and Its Relevance to the Choice between Parsimony and Likelihood Methods. Systematic Biology, 50(4), 525–539.
 
 Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin of the genus _Heterogaura_ from a species of _Clarkia_ (Onagraceae). PNAS 83: 5554-5557. (Outgroup may be part of ingroup) 
 
 :heavy_check_mark: Tavaré, S. 1986. Some probabilistic and statistical problems in the analysis of DNA sequences. Lectures on Mathematics in the Life Sciences 17:57-86.
 
-Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
+:heavy_check_mark: Thorne, J. L., H. Kishino, and I. S. Painter. 1998. Estimating the rate of evolution of the rate of molecular evolution. Molecular Biology and Evolution 15: 1647-1657. (Correlated relaxed clocks)
 
 :heavy_check_mark: Tuffley, C., and M. Steel. 1997. Links between maximum likelihood and maximum parsimony under a simple model of substitution. Bulletin of Mathematical Biology 59:581-607
 
-Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
+:heavy_check_mark: Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
 
 :heavy_check_mark: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416. 
 
@@ -309,9 +323,9 @@ Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution 
 
 Yang, Z., and B. Rannala. 2010. Bayesian species delimitation using multilocus sequence data. PNAS 107(20):9264-9269. 
 
-Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [Total-evidence dating under the fossilized birth–death process.](https://doi.org/10.1093/sysbio/syv080) Systematic Biology 65:228–249. 
+:heavy_check_mark: Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [Total-evidence dating under the fossilized birth–death process.](https://doi.org/10.1093/sysbio/syv080) Systematic Biology 65:228–249. 
 
-Zhou, Y., H. Brinkmann, N. Rodrigue, N. Lartillot, and H. Philippe. 2010. A Dirichlet Process covarion mixture model and its assessments using posterior predictive discrepency tests. Molecular Biology and Evolution 27:371-384.
+:heavy_check_mark: Zhou, Y., H. Brinkmann, N. Rodrigue, N. Lartillot, and H. Philippe. 2010. A Dirichlet Process covarion mixture model and its assessments using posterior predictive discrepency tests. Molecular Biology and Evolution 27:371-384.
 
 :heavy_check_mark: Zwickl, D., and M. T. Holder. 2004. [Model parameterization, prior distributions, and the general time-reversible model in Bayesian phylogenetics.](https://doi.org/10.1080/10635150490522584) Systematic Biology 53:877-888. 
 

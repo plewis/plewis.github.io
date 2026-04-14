@@ -25,6 +25,8 @@ bat monophyly test, Feb-12
 
 Bayes' rule, Feb-17
 
+birth-death tree model, Apr-9
+
 Blomberg's K, Apr-2
 
 bootstrapping (non-parametric), Feb-17
@@ -35,15 +37,29 @@ bootstrapping (IQ-TREE ultrafast), Feb-17
 
 Brownian motion model, Mar-31
 
+calibration prior, Apr-9
+
 clade, Jan-29
 
 coalescence, Mar-9
 
 comparative method, Mar-31
 
+concordance factor (CF), Apr-14
+
 conditioning on variability, Mar-24
 
+confidence intervals, Apr-9
+
 consensus trees, Jan-22, Jan-29
+
+confidence intervals, Apr-9
+
+correlated relaxed clock model, Apr-9
+
+covarion, Apr-14
+
+credible intervals, Apr-9
 
 deep coalescence, Mar-12
 
@@ -52,6 +68,8 @@ delta, Pagel's, Apr-2
 density example (gold-to-aluminum brick), Feb-19
 
 dependence model, Mar-26
+
+Dirichlet process prior, Apr-9, Apr-14
 
 discrete Gamma model, Feb-12
 
@@ -85,6 +103,8 @@ exhaustive search, Jan-22
 
 expected time to coalescence, Mar-9
 
+extinction rate, Apr-9
+
 Farris' paraphyly/polyphyly algorithm, Jan-29
 
 Felsenstein (1981) model (F81), Feb-5
@@ -94,6 +114,10 @@ Felsenstein (1984) model (F84), Feb-5
 fence analogy (truncated priors), Mar-3
 
 Fitch's parsimony algorithm, Jan-29
+
+extinction rate, Apr-9
+
+fossilized birth-death process, Apr-9
 
 four-point condition, Jan-29
 
@@ -173,7 +197,11 @@ models, asymmetric, Mar-24
 
 models, Brownian motion, Mar-31
 
+models, covarion, Apr-14
+
 models, dependence, Mar-26
+
+models, Dirichlet process prior, Apr-9, Apr-14
 
 models, discrete Gamma, Feb-8=10
 
@@ -190,6 +218,8 @@ models, mixture (+I, +G, Q matrix, edge length), Feb-10
 models, Mk, Mar-24
 
 models, partition, Feb-10
+
+models, relaxed clock Apr-9
 
 models, symmetric, Mar-24
 
@@ -216,6 +246,8 @@ phylogenetically independent contrasts (PIC), mar-31
 plesiomorphy, Jan-29
 
 polyphyly, Jan-29 
+
+prior, calibration, Apr-9
 
 prior, distribution, Mar-3
 
@@ -251,6 +283,8 @@ probability, vs. likelihood, Feb-5
 
 pruning algorithm, Feb-10
 
+random local clocks model, Apr-9
+
 rare disease example, Feb-17
 
 rate heterogeneity, Feb-10
@@ -271,6 +305,8 @@ software, PAUP*, Jan-22
 
 software, RevBayes, Mar-5, Mar-12
 
+speciation rate, Apr-9
+
 splits, Jan-20 
 
 split decomposition, Jan-29
@@ -288,6 +324,8 @@ symplesiomorphy, Jan-29
 synapomorphy, Jan-29
 
 theta (population genetics parameter), Mar-9
+
+tip dating, Apr-9
 
 trace plots, Feb-19
 
@@ -309,6 +347,8 @@ tree-bisection-reconnection (TBR) branch swapping, Jan-22
 
 ultrametric, Jan-20 
 
+uncorrelated lognormal relaxed clock model, Apr-9
+
 variance-covariance matrix, Apr-2
 
-
+Yule pure-birth tree model, Apr-9
