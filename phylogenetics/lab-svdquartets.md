@@ -17,36 +17,30 @@ Here is a text file template in which to store your answers to the :thinking: th
 
     Part 1: Analysis of a data set simulated from the “anomaly zone"
 
-    1. xxxx?
+    1. Which model was chosen by the AIC criterion?
     answer:
     
-    2. xxxx?
+    2. What is the newick tree description for the concatenated analysis tree topology?
     answer:
     
-    3. xxxx?
+    3. What is the newick tree description for the SVDQuartets tree topology?
     answer:
     
-    4. xxxx?
+    4. What are the bootstrap percentages that are greater than 50% and thus are shown in the majority-rule consensus tree? Please indicate the splits to which these bootstrap percentages apply.
     answer:
     
-    5. xxxx?
+    5. Use the _Edit | Copy_ command from the FigTree menu to copy the (rerooted) ASTRAL tree and paste in what you copied as the answer to this "question"
     answer:
     
     Part 2: Analysis of a real data set
 
-    1. xxxx?
+    6. Use PAUP*'s savetrees command to save the SVDQuartets tree using the "altnexus" format, then copy the newick tree description as your answer to this "question"
     answer:
     
-    2. xxxx?
+    7. Use PAUP*'s qage command to save the SVDQuartets tree with estimated edge lengths to a file (specify `bootstrap=no treefile=qagetree.txt` this time but leave other settings the same), then copy the newick tree description as your answer to this "question"?
     answer:
     
-    3. xxxx?
-    answer:
-    
-    4. xxxx?
-    answer:
-    
-    5. xxxx?
+    8. Copy the newick tree description output by ASTRAL as the answer to this "question"
     answer:
     
 
@@ -81,7 +75,7 @@ Use the unix `mkdir` command to create a directory to play in today:
 [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/) is one of two dominant programs for large-scale maximum likelihood phylogenetic inference. For small numbers of taxa, PAUP* performs a more thorough search for the maximum likelihood tree, but PAUP*'s search methods don't scale well to large numbers of taxa. While we could use IQ-TREE today instead of RAxML, we'll use RAxML because
 * the tutorial uses it
 * PAUP* is set up to call RAxML automatically (but not IQ-TREE), and 
-* this provides a good opportunity to get RAxML installed so that you have the option of using it in your future.
+* this provides a good opportunity to get RAxML installed so that you have the option of using it in the future.
 
 :large_blue_diamond: On your laptop, open a browser and navigate to the [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/) web site.
 
@@ -95,7 +89,7 @@ Use the unix `mkdir` command to create a directory to play in today:
 https://github.com/stamatak/standard-RAxML/archive/refs/tags/v8.2.13.tar.gz
 {% endcomment %}
 
-:large_blue_diamond: Back on the cluster (in your _svdlab_ directory), type the following **but replace <RAxML tar.gz link> with the actual link!)
+:large_blue_diamond: Back on the cluster (in your _svdlab_ directory), type the following **but replace <RAxML tar.gz link> with the actual link!**)
 
     curl -LO <RAxML tar.gz link>
     
@@ -114,7 +108,7 @@ The `ls` command will reveal quite a large diversity of makefiles as well as a _
 
     make -f Makefile.SSE3.gcc
     
-If the compile takes longer than a minute, use Ctrl-C to stop it and copy the file from the _/scratch/_ directory, where Paul has placed a pre-compiled copy, to your _bin_ directory:
+If the compile takes longer than a minute, use Ctrl-C to stop it and copy the file from the _/scratch/_ directory, where we have placed a pre-compiled copy, to your _bin_ directory:
 
     cp /scratch/pol02003/pol02003/raxmlHPC-SSE3 ~/bin
     
@@ -139,9 +133,18 @@ This says to make a link (`ln`) that is symbolic (`-s`) to the actual file `raxm
 
     ls -la raxml*
 
+:large_blue_diamond: Test to see if the symbolic link works correctly:
+
+    cd ~/svdlab
+    raxmlHPC
+
+You should (once again) see the following error message:
+    
+    Error, you must specify a model of substitution with the "-m" option
+    
 ## Install ASTRAL
 
-ASTRAL is a very popular program for estimating a species tree given a set of gene trees. While it is often referred to as a "coalescent" approach, its only connection to the multispecies coalescent (MSC) model is that, under the MSC, one expects the most common gene tree topology to be the species tree topology if considering only 4-taxon unrooted trees. Unlike methods that do implement the MSC model, ASTRAL never considers the original sequence data; instead, it assumes that the gene tree for each locus is known without error. While ASTRAL is fast, it does take time to estimate gene trees for each locus, and that time should be factored in when comparing ASTRAL's speed to approaches such as SVDQuartets.
+ASTRAL is a very popular program for estimating a species tree given a set of gene trees. While it is often referred to as a "coalescent" approach, its only connection to the multispecies coalescent (MSC) model is that, under the MSC, one expects the most common gene tree topology to be the species tree topology if considering only 4-taxon unrooted trees. Unlike methods that do implement the MSC model, ASTRAL never considers the original sequence data; instead, it assumes that the gene tree for each locus is known without error. While ASTRAL itself is very fast, the "prep" time required to estimate gene trees for each locus should be factored in when comparing ASTRAL's speed to approaches such as SVDQuartets.
 
 :large_blue_diamond: On your laptop, navigate to the [ASTRAL GitHub page](https://github.com/smirarab/ASTRAL/tree/master)
 
@@ -153,7 +156,7 @@ ASTRAL is a very popular program for estimating a species tree given a set of ge
 https://github.com/smirarab/ASTRAL/archive/refs/tags/v5.7.1.tar.gz
 {% endcomment %}
 
-Back on the cluster (in your _svdlab_ directory), type the following **but replace <ASTRAL tar.gz link> with the actual link!)
+Back on the cluster (in your _svdlab_ directory), type the following **but replace <ASTRAL tar.gz link> with the actual link!**)
 
     curl -LO <ASTRAL tar.gz link>
     
@@ -172,7 +175,9 @@ I'll assume that the file downloaded was named _v5.7.1.tar.gz_.
 
     unzip -d ~/bin Astral.5.7.1.zip
     
-Test to see if ASTRAL is installed correctly by typing
+Unlike RAxML, which is written in the computing language C and must be compiled, ASTRAL is written in Java and does not need to be compiled before running.
+    
+:large_blue_diamond: Test to see if ASTRAL is installed correctly by typing
 
     java -jar ~/bin/Astral/astral.5.7.1.jar
     
@@ -180,13 +185,15 @@ You should see the following error message:
     
     bash: java: command not found
     
-Unlike RAxML, where we ignored the error message, this error message is telling us that we do not have Java installed and therefore ASTRAL (a Java program) cannot be run. Fortunately, it is possible to "install" Java by loading the openjdk module:
+Unlike RAxML, where we ignored the error message, this error message is telling us that we do not have Java installed and therefore ASTRAL (a Java program) cannot be run. 
+
+:large_blue_diamond: Fortunately, it is possible to "install" Java by simply loading the openjdk module:
 
     module load openjdk
 
 Now the `java -jar ~/bin/Astral/astral.5.7.1.jar` command should work.  
     
-Once you verify that you have a running ASTRAL program, you can delete the tar.gz file and source code directory:
+:large_blue_diamond: Once you verify that you have a running ASTRAL program, you can delete the tar.gz file and source code directory:
 
     rm -rf v5.7.1.tar.gz ASTRAL-5.7.1
     
@@ -218,7 +225,9 @@ Now, if you enter `astral` at the command line (assuming the openjdk module is l
     
 ## Start the tutorial
 
-Parts 1 and 2 of the Woods Hole Workshop in Molecular Evolution [SVDQuartets tutorial](https://molevolworkshop.github.io/faculty/kubatko/pdf/species-trees-tutorial-2024.html) (written by David L. Swofford and Laura Kubatko) have been recreated below (slightly modified). The bibliographic entries for literature cited in the tutorial are provided in the [papers cited](/papers2026/) section of this web site. 
+Parts 1 and 2 of the [SVDQuartets tutorial](https://molevolworkshop.github.io/faculty/kubatko/pdf/species-trees-tutorial-2024.html) (written by David L. Swofford and Laura Kubatko) from the [Woods Hole Workshop in Molecular Evolution](https://molevolworkshop.github.io/) have been recreated below (slightly modified). The bibliographic entries for literature cited in the tutorial are provided in the [papers cited](/papers2026/) section of this web site.
+
+:exclamation: Note that (because it is a tutorial written by others) the following does not have the usual :large_blue_diamond: emojis indicating when an action is required of you. However, we have sprinkled some :thinking: questions to help you keep track of what you've learned as you go along.
 
 ### Preliminaries
 
@@ -230,13 +239,13 @@ you would type `cat filename.txt` and hit return. Likewise, `paup>` represents t
 
 If you have not already done so, install [FigTree](https://tree.bio.ed.ac.uk/software/figtree/) on your local machine. FigTree is not a critical component of the tutorial however, so don’t sweat it if you run into problems.
 
-{% include figure.html description="Figure 2a (redrawn) from Liu and Edwards (2009)" url="/assets/img/liu-edwards-2009-fig2a.png" css="image-right noborder" width="400px" %}
-
 ### Part 1: Analysis of a data set simulated from the "anomaly zone"
+
+{% include figure.html description="Figure 2a (redrawn) from Liu and Edwards (2009). Edge lengths are in expected substitutions per site." url="/assets/img/liu-edwards-2009-fig2a.png" css="image-right noborder" width="400px" %}
 
 We will begin with an example used by Liu and Edwards (2009), calling attention to problems that can arise due to gene trees for individual loci conflicting with the species tree because of "incomplete lineage sorting" (ILS). When internal branches of the species tree are very short (or effective population sizes are extremely large), the most probable gene tree can be inconsistent with the species tree, which can cause "concatenation" methods for inferring the tree to fail. See Kubatko and Degnan (2007), Liu and Edwards (2009), and Roch and Steel (2015) for details.
 
-The data file _anomaly_zone.nex_ represents one replicate of a simulation described in Fig. 2 in Liu and Edwards (2009) (The true tree used for the simulations is shown on the right). This file contains data for 10,000 loci, with 500 sites per locus. We will use the PAUP* program ([https://paup.phylosolutions.com/](https://paup.phylosolutions.com/)) to analyze this data set (PAUP* will subsequently be referred to as PAUP, without the asterisk). It is often convenient to run PAUP from a Nexus-file script containing the commands used to perform the analysis, but we will usually issue the commands interactively here for pedagogic reasons.
+The data file _anomaly_zone.nex_ represents one replicate of a simulation described in Fig. 2 in Liu and Edwards (2009) (Note added by Paul and Analisa: the true tree used for the simulations is shown in the figure). This file contains data for 10,000 loci, with 500 sites per locus. We will use the PAUP* program ([https://paup.phylosolutions.com/](https://paup.phylosolutions.com/)) to analyze this data set (PAUP* will subsequently be referred to as PAUP, without the asterisk). It is often convenient to run PAUP from a Nexus-file script containing the commands used to perform the analysis, but we will usually issue the commands interactively here for pedagogic reasons.
 
 Start PAUP and load the data file.
 
@@ -254,6 +263,10 @@ Using the default options, automodel will evaluate a set of 56 models and choose
 
 :thinking: Which model was chosen by the AIC criterion?
 
+{% comment %}
+GTR+G model chosen by AICc
+{% endcomment %}
+
 On completion, the model parameters will be set to their maximum-likelihood estimates, and we can use this as the starting point for a maximum-likelihood search:
 
     paup> set criterion=likelihood;
@@ -267,7 +280,7 @@ One way to see the tree found by the ML search is to use the describetrees comma
     
 Note the relationships among the taxa implied by the topology of this tree. 
 
-:thinking: What is the newick tree description for the concatenated analysis tree topology? (Note: create the newick tree description by hand, but do not include branch lengths)
+:thinking: What is the newick tree description for the concatenated analysis tree topology? (Note: you'll have to create the newick tree description by hand, but you do not need to include branch lengths)
 
 {% comment %}
 (E,(A,B),(C,D))
@@ -288,8 +301,8 @@ The analysis finishes quickly and outputs the estimated tree, which is the one c
 :thinking: What is the newick tree description for the SVDQuartets tree topology?
 
 {% comment %}
-unrooted version: ((E,D), C, (A,B)))
-rooted version: (E, (D, (C, (A,B))))
+unrooted version: ((E, D), C, (A, B)))
+rooted version: (E, (D, (C, (A, B))))
 {% endcomment %}
 
 :thinking: What are the bootstrap percentages that are greater than 50% and thus are shown in the majority-rule consensus tree? Please indicate the splits to which these bootstrap percentages apply.
@@ -314,7 +327,7 @@ You will remain in the shell until you hit the return key at the `!` prompt, so 
 The created Nexus file simply defines a "character partition" specifying the site numbers for each locus and runs a set of three commands for each of the 10,000 loci, e.g.:
 
     include loci.locus_130/only;
-    raxml exec=raxmlHPCastrak;
+    raxml exec=raxmlHPC;
     savetree file=az_tree.tre format=newick append;
         
 For each locus, all of the sites except those belonging to that locus are excluded, RAxML is executed using PAUP’s current model settings, and the resulting tree is appended to a growing treefile that will ultimately contain one tree for each locus.
@@ -356,6 +369,15 @@ Like SVDQuartets, ASTRAL infers the (unrooted) species tree correctly. Note the 
 
 To view the tree, copy the output tree description the clipboard (e.g., ctrl-C), launch FigTree and paste the clipboard contents (e.g., ctrl-V). Select the terminal branch leading to tip E, and click the Reroot tool.
 
+:thinking: Use the _Edit | Copy_ command from the FigTree menu to copy the (rerooted) ASTRAL tree and paste in what you copied as the answer to this question.
+
+{% comment %}
+#NEXUS
+begin trees;
+	tree tree_1 = [&R] (D:1.00000,(C:1.00000,(B:1.00000,A:2.00000)[&label=1]:0.0339153)[&label=1]:0.0254947);
+end;
+{% endcomment %}
+
 If you want to gain more familiarity with ASTRAL (after our practical session ends), you can run the tutorial at [https://github.com/smirarab/ASTRAL/blob/master/astral-tutorial.md](https://github.com/smirarab/ASTRAL/blob/master/astral-tutorial.md). 
 
 {% comment %}
@@ -395,6 +417,12 @@ NOTE for MOLE 2024: The version of PAUP* running on the MOLE virtual machines ha
 Perform an SVDQuartets analysis, referencing this taxon partition:
 
     paup> svdq nthreads=1 evalq=all taxpartition=species;
+    
+:thinking: Use PAUP*'s savetrees command to save the SVDQuartets tree using the "altnexus" format, then copy the newick tree description as your answer to this "question"    
+
+{% comment %}
+(sidestriped_jackal_a,(((((sidestriped_jackal_b,African_golden_wolf_b),African_golden_wolf_a),coyote_b),gray_wolf_a),gray_wolf_b),coyote_a);
+{% endcomment %}
 
 Notice that the (North American) gray wolf (_Canis lupus_) joins with the African golden wolf (_Canis anthus_) rather than the (North American) coyote (_Canis latrans_), unlike the result of the *BEAST tutorial (see _StarBEAST2-tutorial.pdf_). However, this result is not well supported, as we can see by doing a multilocus nonparametric bootstrap, which resamples (with replacement) both loci and sites within loci:
 
@@ -411,17 +439,31 @@ To estimate the branch lengths under the JC69 model, we can use the commands bel
     paup> roottrees rootmethod=outgroup;
     paup> qage taxpartition=species outunits=both bootstrap=multilocus loci=combined;
     
+:thinking: Use PAUP*'s qage command to save the SVDQuartets tree with estimated edge lengths to a file (specify `bootstrap=no treefile=qagetree.txt` this time but leave other settings the same), then copy the newick tree description as your answer to this "question"
+
+{% comment %}
+((sidestriped_jackal:1.07874467,blackbacked_jackal:1.07874467):0.56259222,((((African_golden_wolf:0.13410505,(coyote:0,gray_wolf:0):0.13410505):0.47564481,Ethiopian_wolf:0.60974987):0.45098495,Dhole:1.06073482):0.28004506,African_wild_dog:1.34077987):0.30055701):0
+{% endcomment %}
+    
 qAge also includes an option to carry out estimation under more complex substitution models. This option is invoked by changing `patProb=exactJC` to `patProb=expBL`. Prior to doing this, however, you must define a model using the `lset` command and provide the name of that model to the qAge command. Below is sample code. 
-* In the first line, we specify a GTR model, with parameters in the model to be estimated. 
-* The second line asks PAUP* to estimate those parameters using our data and the current tree in memory. 
-* In the third line, we set the model with the estimated values of the parameters, and we name it "MyGTR". 
-* The final line uses qAge to carry out estimation under that model. 
-Note that this analysis is more computationally intensive than the previous one that assumes the JC69 model. If you plan to try this analysis now, you may want to reduce the number of bootstrap replicates (currently set as `nreps=100`).
+
+In the first line, we specify a GTR model, with parameters in the model to be estimated. 
 
     paup> lset nst=6 rmatrix=estimate baseFreq=empirical;
+
+The second line asks PAUP* to estimate those parameters using our data and the current tree in memory. 
+
     paup> lscores;
+
+In the third line, we set the model with the estimated values of the parameters, and we name it "MyGTR". 
+
     paup> lset nst=6 rmatrix=(0.749 2.410 0.365 1.066 4.465 1.000) baseFreq=(0.2476 0.2679 0.2558 0.2286)    modelName=MyGTR;
+
+The final line uses qAge to carry out estimation under that model. 
+
     paup> qage patProb=expBL taxpartition=species loci=combined bootstrap=multilocus treefile=test.tre modelName=MyGTR poolJC=no nreps=100;
+
+Note that this analysis is more computationally intensive than the previous one that assumes the JC69 model. If you plan to try this analysis now, you may want to reduce the number of bootstrap replicates (currently set as `nreps=100`).
 
 #### Analysis 2: Using ASTRAL
 
@@ -436,7 +478,15 @@ After issuing these two commands, you will have a file called _canids_genetrees.
 
     $ astral -i canids_genetrees.tre -a astral_canid_mapfile
     
-Again, you can locate the tree in the output written to the screen. Copying and pasting the estimated tree into FigTree and rooting along the branch that separates the sidestriped jackal and the blackbacked jackal from the rest of the species, we see that this tree agrees with that estimated with SVDQuartets using the bootstrap and with *BEAST2.
+Again, you can locate the tree in the output written to the screen. 
+
+:thinking: Copy the newick tree description output by ASTRAL as the answer to this "question"
+
+{% comment %}
+((sidestriped_jackal_b,sidestriped_jackal_a)1:1.128465251817791,((blackbacked_jackal_a,blackbacked_jackal_b)1:0.887303195000903,((African_wild_dog_a,African_wild_dog_b)1:1.957744606702316,((Dhole_a,Dhole_b)1:0.9808292530117262,((Ethiopian_wolf_b,Ethiopian_wolf_a)1:1.1398939476414136,((African_golden_wolf_b,African_golden_wolf_a)0.99:0.587198602550565,((coyote_a,coyote_b)0.98:0.4998565923954166,(gray_wolf_a,gray_wolf_b)0.92:0.36405505123635495)0.48:0.08354146826318648)0.61:0.12907704227514236)0.78:0.22590471275553797)0.64:0.13932545676651048)0.43:0.029852963149681274)1:1.128465251817791);
+{% endcomment %}
+
+Copying and pasting the estimated tree into FigTree and rooting along the branch that separates the sidestriped jackal and the blackbacked jackal from the rest of the species, we see that this tree agrees with that estimated with SVDQuartets using the bootstrap and with *BEAST2.
 
 ## What to turn in
 

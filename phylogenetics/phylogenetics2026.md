@@ -49,7 +49,7 @@ Thursday Apr. 2    | **[PGLS (cont.)](https://gnetum.eeb.uconn.edu/courses/phylo
 Tuesday Apr. 7     | **OU model**, **[Relaxed clocks](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-07-relaxed-clocks.pdf)** | **[Homework 9](/hwbmsim/)** 
 Thursday Apr. 9    | **[Fossilized Birth Death Process](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-09-fbd.pdf)**; **[Confidence vs. credible intervals](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-09-credible-intervals.pdf)**; [Dirichlet Process Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-09-dpp.pdf)** | **Lab 11** [Divergence Time Estimation with RevBayes](/revdiv/)
 Tuesday Apr. 14    | **[Dirichlet Process Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-14-dpp.pdf)**; **[Heterotachy and Covarion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-14-heterotachy-covarion.pdf))** | **Individual Meetings** 
-Thursday Apr. 16   | **Codon and amino acid models** | **Lab 12** TBA
+Thursday Apr. 16   | **Codon and amino acid models** | **Lab 12**  [Species tree estimation with SVDQuartets](/svdq/)
 Tuesday Apr. 21    | **Inferring introgression/hybridization** | **Homework 10** 
 Thursday Apr. 23   | **Diversification** | **Lab 13** Comparative methods and diversification in R
 Tuesday Apr. 28    | **TBA** | no homework assignment
