@@ -20,7 +20,7 @@ Here is a text file template in which to store your answers to the :thinking: th
     1. Which model was chosen by the AIC criterion?
     answer:
     
-    2. What is the newick tree description for the concatenated analysis tree topology?
+    2. What is the newick tree description for the concatenated analysis tree topology? 
     answer:
     
     3. What is the newick tree description for the SVDQuartets tree topology?
@@ -28,19 +28,22 @@ Here is a text file template in which to store your answers to the :thinking: th
     
     4. What are the bootstrap percentages that are greater than 50% and thus are shown in the majority-rule consensus tree? Please indicate the splits to which these bootstrap percentages apply.
     answer:
-    
-    5. Use the _Edit | Copy_ command from the FigTree menu to copy the (rerooted) ASTRAL tree and paste in what you copied as the answer to this "question"
-    answer:
-    
+        
     Part 2: Analysis of a real data set
 
-    6. Use PAUP*'s savetrees command to save the SVDQuartets tree using the "altnexus" format, then copy the newick tree description as your answer to this "question"
+    5. Use PAUP*'s savetrees command to save the SVDQuartets tree using the "altnexus" format, then copy the newick tree description as your answer to this "question"
     answer:
     
-    7. Use PAUP*'s qage command to save the SVDQuartets tree with estimated edge lengths to a file (specify `bootstrap=no treefile=qagetree.txt` this time but leave other settings the same), then copy the newick tree description as your answer to this "question"?
+    6. Use PAUP*'s qage command to save the SVDQuartets tree with estimated edge lengths to a file (specify `bootstrap=no treefile=qagetree.txt` this time but leave other settings the same), then copy the newick tree description as your answer to this "question"
     answer:
     
-    8. Copy the newick tree description output by ASTRAL as the answer to this "question"
+    7. Using the coalescent units table, which internal edge in the tree is expected to exhibit the **greatest** number of deep coalescences?
+    answer:
+    
+    8: Which internal edge in the tree is expected to exhibit the **fewest** deep coalescences?
+    answer:
+    
+    9. Copy the newick tree description output by ASTRAL as the answer to this "question"
     answer:
     
 
@@ -280,10 +283,10 @@ One way to see the tree found by the ML search is to use the describetrees comma
     
 Note the relationships among the taxa implied by the topology of this tree. 
 
-:thinking: What is the newick tree description for the concatenated analysis tree topology? (Note: you'll have to create the newick tree description by hand, but you do not need to include branch lengths)
+:thinking: What is the newick tree description for the concatenated analysis tree topology? (Note: you'll have to use the `savetrees` command to save the tree to a file (with a name of your choosing), specifying the "altnexus" format and that branch lengths should be saved; open the file you saved and copy the tree description out of it.)
 
 {% comment %}
-(E,(A,B),(C,D))
+(((A:0.136111,B:0.134724):0.011672,(C:0.139150,D:0.151562):0.009839):2.595287,E:0);
 {% endcomment %}
 
 Now we’ll do an svdquartets analysis (Chifman and Kubatko, 2014, 2015) for the same data. For any command in PAUP, you can see the available options by typing `command-name ?;`
@@ -369,15 +372,6 @@ Like SVDQuartets, ASTRAL infers the (unrooted) species tree correctly. Note the 
 
 To view the tree, copy the output tree description the clipboard (e.g., ctrl-C), launch FigTree and paste the clipboard contents (e.g., ctrl-V). Select the terminal branch leading to tip E, and click the Reroot tool.
 
-:thinking: Use the _Edit | Copy_ command from the FigTree menu to copy the (rerooted) ASTRAL tree and paste in what you copied as the answer to this question.
-
-{% comment %}
-#NEXUS
-begin trees;
-	tree tree_1 = [&R] (D:1.00000,(C:1.00000,(B:1.00000,A:2.00000)[&label=1]:0.0339153)[&label=1]:0.0254947);
-end;
-{% endcomment %}
-
 If you want to gain more familiarity with ASTRAL (after our practical session ends), you can run the tutorial at [https://github.com/smirarab/ASTRAL/blob/master/astral-tutorial.md](https://github.com/smirarab/ASTRAL/blob/master/astral-tutorial.md). 
 
 {% comment %}
@@ -444,6 +438,22 @@ To estimate the branch lengths under the JC69 model, we can use the commands bel
 {% comment %}
 ((sidestriped_jackal:1.07874467,blackbacked_jackal:1.07874467):0.56259222,((((African_golden_wolf:0.13410505,(coyote:0,gray_wolf:0):0.13410505):0.47564481,Ethiopian_wolf:0.60974987):0.45098495,Dhole:1.06073482):0.28004506,African_wild_dog:1.34077987):0.30055701):0
 {% endcomment %}
+
+:thinking: Note that PAUP* provided estimated branch lengths in two different units: substitutions/site and coalescent units. A coalescent unit is the expected time for two randomly selected genes from a population to coalesce given the effective population size. Using the coalescent units table, which internal edge in the tree is expected to exhibit the **greatest** number of deep coalescences? (Please don't just give the node number: specify all taxa on one side of this edge)
+
+{% comment %}
+The shortest internal edge, with length 0.11725593 coalescent units
+This edge joins the African golden wolf and gray wolf to all other taxa
+{% endcomment %}
+
+:thinking: Which internal edge in the tree is expected to exhibit the **fewest** deep coalescences? Again, specify the taxa on one side of the split to identify the edge.
+
+{% comment %}
+0.55970748 (sidestriped jackal, blackbacked jackal | all other taxa)
+The longest internal edge, with length 0.55970748 coalescent units
+This edge joins the sidestriped jackal and blackbacked jackal to all other taxa
+{% endcomment %}
+
     
 qAge also includes an option to carry out estimation under more complex substitution models. This option is invoked by changing `patProb=exactJC` to `patProb=expBL`. Prior to doing this, however, you must define a model using the `lset` command and provide the name of that model to the qAge command. Below is sample code. 
 
