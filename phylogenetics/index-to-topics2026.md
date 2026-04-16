@@ -43,6 +43,8 @@ clade, Jan-29
 
 coalescence, Mar-9
 
+codon models, Apr-16
+
 comparative method, Mar-31
 
 concordance factor (CF), Apr-14
@@ -115,6 +117,8 @@ fence analogy (truncated priors), Mar-3
 
 Fitch's parsimony algorithm, Jan-29
 
+exchangeabilities, amino acid, Apr-16
+
 extinction rate, Apr-9
 
 fossilized birth-death process, Apr-9
@@ -123,11 +127,15 @@ four-point condition, Jan-29
 
 free rates model (+R), Feb-12
 
-frequencies, equilibrium state, Mar-24
+frequencies, equilibrium amino acid, Apr-16
+
+frequencies, equilibrium nucleotide, Mar-24
 
 gene trees, Mar-9
 
 general time-reversible model (GTR), Feb-5
+
+genetic code, Apr-16
 
 Hasegawa, Kishino, and Yano (1985) model (HKY85), Feb-5
 
@@ -193,9 +201,13 @@ Metropolis-Hastings algorithm, Feb-26
 
 mixing (MCMC), Feb-19
 
+models, amino acid, Apr-16
+
 models, asymmetric, Mar-24
 
 models, Brownian motion, Mar-31
+
+models, codon, Apr-16
 
 models, covarion, Apr-14
 
@@ -219,6 +231,8 @@ models, Mk, Mar-24
 
 models, partition, Feb-10
 
+models, protein, Apr-16
+
 models, relaxed clock Apr-9
 
 models, symmetric, Mar-24
@@ -230,6 +244,8 @@ nearest-neighbor interchange (NNI) branch swapping, Jan-22
 neighbor-joining (NJ), Jan-29
 
 newick trees, Jan-20 
+
+nonsynonymous/synonymous rate ratio (omega), Apr-16
 
 paraphyly, Jan-29 
 
@@ -244,6 +260,8 @@ phylogenetically generalized least squares (PGLS), Mar-31
 phylogenetically independent contrasts (PIC), mar-31
 
 plesiomorphy, Jan-29
+
+point accepted mutation (PAM) unit, Apr-16
 
 polyphyly, Jan-29 
 
@@ -301,7 +319,11 @@ site-specific rates, Feb-10
 
 software, BayesTraits, Apr-2
 
+software, BUCKy, Apr-14
+
 software, PAUP*, Jan-22
+
+software, PhyloBayes, Apr-14
 
 software, RevBayes, Mar-5, Mar-12
 

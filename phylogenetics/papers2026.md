@@ -39,7 +39,7 @@ Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences i
 
 :heavy_check_mark: Darwin, C. R. 1859. Origin of species by means of natural selection (or the preservation of favoured races in the struggle for life). Originally published by John Murray. This figure from pp. 160-161 in Penguin Classics edition published 1985 by Penguin Books, London. 
 
-Dayhoff, M.O., Schwartz, R.M., Orcutt, B.C. 1978. A model for evolutionary change in proteins. Atlas of Protein Sequence and Structure, 5, 345–352. (PAM amino acid model) 
+:heavy_check_mark: Dayhoff, M.O., Schwartz, R.M., Orcutt, B.C. 1978. A model for evolutionary change in proteins. Atlas of Protein Sequence and Structure, 5, 345–352. (PAM amino acid model) 
 
 :heavy_check_mark: Degnan, J. H., and N. A. Rosenberg. 2006. [Discordance of species trees with their most likely gene trees.](http://doi.org/10.1371/journal.pgen.0020068) PLoS Genetics 2:e68. (The anomaly zone) 
 
@@ -83,7 +83,7 @@ FitzJohn, R. G. 2010. Quantitative traits and diversification. Systematic Biolog
 
 Fitzjohn, R. G. 2012. [Diversitree: comparative phylogenetic analyses of diversification in R.](https://doi.org/10.1111/j.2041-210X.2012.00234.x) Methods in Ecology and Evolution 3:1084-1092. 
 
-Fowler, D. M., C. L. Araya, S. J. Fleishman, E. H. Kellogg, J. J. Stephany, D. Baker. and S. Fields. 2010. [High-resolution mapping of protein sequence-function relationships.](https://doi.org/10.1038/nmeth.1492) Nature Methods 7:741-746. 
+:heavy_check_mark: Fowler, D. M., C. L. Araya, S. J. Fleishman, E. H. Kellogg, J. J. Stephany, D. Baker. and S. Fields. 2010. [High-resolution mapping of protein sequence-function relationships.](https://doi.org/10.1038/nmeth.1492) Nature Methods 7:741-746. 
 
 :heavy_check_mark: Gaut, B. S., and P. O. Lewis. 1995. [Success of maximum likelihood phylogeny inference in the four-taxon case.](https://doi.org/10.1093/oxfordjournals.molbev.a040183) Molecular Biology and Evolution 12(1):152-162.
 
@@ -91,7 +91,7 @@ Fowler, D. M., C. L. Araya, S. J. Fleishman, E. H. Kellogg, J. J. Stephany, D. B
 
 Goldberg, E. E., L. T. Lancaster, and R. H. Ree. 2011. Phylogenetic inference of reciprocal effects between geographic range evolution and diversification. Systematic Biology 60:451–465. 
 
-Goldman, N., and Z. Yang. 1994. A codon-based model of nucleotide substitution for protein-coding DNA sequences. Molecular Biology and Evolution, 11, 725-736. (Goldman-Yang codon model) 
+:heavy_check_mark: Goldman, N., and Z. Yang. 1994. A codon-based model of nucleotide substitution for protein-coding DNA sequences. Molecular Biology and Evolution, 11, 725-736. (Goldman-Yang codon model) 
 
 Goldman, N., J. P. Anderson, and A. G. Rodrigo. 2000. Likelihood-based tests of topologies in phylogenetics. Systematic Biology 49:652-670.
 
@@ -129,7 +129,7 @@ Heled, J., and Drummond, A. J. 2010. Bayesian inference of species trees from mu
 
 :heavy_check_mark: Huson, D. H., and D. Bryant. 2006. [Application of phylogenetic networks in evolutionary studies.](https://doi.org/10.1093/molbev/msj030) Molecular Biology and Evolution 23:254-267. (SplitsTree) 
 
-Jones, D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of mutation data matrices from protein sequences. Comput Applic Biosci, 8, 275–282. (JTT amino acid model) 
+:heavy_check_mark: , D. T., Taylor, W. R., and Thornton, J. M. 1992. The rapid generation of mutation data matrices from protein sequences. Comput Applic Biosci, 8, 275–282. (JTT amino acid model) 
 
 :heavy_check_mark: Jones, C. S., F. T. Bakker, C. D. Schlichting, and A. B. Nicotra. 2009. Leaf shape evolution in the South African genus _Pelargonium_ L'Hér. (Geraniaceae). International Journal of Organic Evolution 63:479-497. 
 
@@ -163,7 +163,7 @@ Kuhner, M. K. 2009. Coalescent genealogy samplers: windows into population histo
 
 :heavy_check_mark: Lartillot, N., and H. Philippe. 2006. Computing bayes factors using thermodynamic integration. Systematic Biology 55(2): 195-207. (Thermodynamic integration (a.k.a. path sampling) marginal likelihood estimation) 
 
-Le, S. Q., and Gascuel, O. 2008. An improved general amino acid replacement matrix. Molecular Biology and Evolution, 25(7):1307-1320. (LG amino acid model) 
+:heavy_check_mark: Le, S. Q., and Gascuel, O. 2008. An improved general amino acid replacement matrix. Molecular Biology and Evolution, 25(7):1307-1320. (LG amino acid model) 
 
 :heavy_check_mark: Lewis, L. A., B. D. Mishler, and R. Vilgalys. 1997. [Phylogenetic relationships of the liverworts (Hepaticae), a basal embryophyte lineage, inferred from nucleotide sequence data of the chloroplast gene _rbc_L](https://doi.org/10.1006/mpev.1996.0395) Molecular Phylogenetics and Evolution 7:377-393.
 
@@ -207,9 +207,9 @@ Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection
 
 Moore, B. R., S. Hohna, M. R. May, B. Rannala, and J. P. Huelsenbeck. 2016. [Critically evaluating the theory and performance of Bayesian analysis of macroevolutionary mixtures.](https://doi.org/10.1073/pnas.1518659113) PNAS 113:9569-9574.  
 
-Muse, S. 1995. evolutionary analyses of DNA sequences subject to constraints on secondary structure. Genetics, 139(3), 1429–1439. (secondary structure model)
+:heavy_check_mark: Muse, S. 1995. evolutionary analyses of DNA sequences subject to constraints on secondary structure. Genetics, 139(3), 1429–1439. (secondary structure model)
 
-Muse, S. V., and B. S. Gaut. 1994. A likelihood approach for comparing synonymous and nonsynonymous substitution rates, with application to the chloroplast genome. Molecular Biology and Evolution, 11, 715-724. 
+:heavy_check_mark: Muse, S. V., and B. S. Gaut. 1994. A likelihood approach for comparing synonymous and nonsynonymous substitution rates, with application to the chloroplast genome. Molecular Biology and Evolution, 11, 715-724. 
 
 Neupane, S., P. O. Lewis, S. Dessein, H. Shanks, S. Paudyal, and F. Lens. 2017. [Evolution of woody life form on tropical mountains in the tribe Spermacoceae (Rubiaceae).](https://doi.org/10.3732/ajb.1600248) American Journal of Botany 104(3):419-438. 
 
@@ -277,7 +277,7 @@ Shimodaira, H., and M. Hasegawa. 1999. Multiple comparisons of log-likelihoods w
 
 Shimodaira H. 2002. An approximately unbiased test of phylogenetic tree selection. Systematic Biology. 51:492–508. (AU topology test)
 
-Si Quang, L., O. Gascuel, and N. Lartillot. 2008. [Empirical profile mixture models for phylogenetic reconstruction.](https://doi.org/10.1093/bioinformatics/btn445) Bioinformatics 24(20): 2317-2323. 
+:heavy_check_mark: Si Quang, L., O. Gascuel, and N. Lartillot. 2008. [Empirical profile mixture models for phylogenetic reconstruction.](https://doi.org/10.1093/bioinformatics/btn445) Bioinformatics 24(20): 2317-2323. 
 
 Siddall, M. E. 1998. Success of parsimony in the four-taxon case: long-branch repulsion by likelihood in the Farris Zone. Cladistics 14:209-220.
 
@@ -305,7 +305,7 @@ Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin
 
 :heavy_check_mark: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416. 
 
-Whelan, S., and N. Goldman. 2001. A general empirical model of protein evolution derived from multiple protein families using a maximum likelihood approach. Molecular Biology and Evolution, 18, 691-699. (WAG amino acid model) 
+:heavy_check_mark: Whelan, S., and N. Goldman. 2001. A general empirical model of protein evolution derived from multiple protein families using a maximum likelihood approach. Molecular Biology and Evolution, 18, 691-699. (WAG amino acid model) 
 
 Wickett, N. J., Y. Fan, P. Lewis, and B. Goffinet. 2008. [Distribution and evolution of pseudogenes, gene losses, and a gene rearrangement in the plastid genome of the nonphotosynthetic liverwort, _Aneura mirabilis_ (Metzgeriales, Jungermanniopsida).](http://dx.doi.org/10.1007/s00239-008-9133-1) Journal of Molecular Evolution 67:111-122.
 
