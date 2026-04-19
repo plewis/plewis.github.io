@@ -39,9 +39,6 @@ Here is a text file template in which to store your answers to the :thinking: th
     8. How many core shifts were identified? Does this make sense? Explain why or why not.
     answer:    
     
-    9. xxxx
-    answer:    
-
 ## Getting started
 
 :large_blue_diamond: Login to your account on the Storrs HPC cluster and start an interactive slurm session. 
@@ -91,23 +88,6 @@ You will probably find that you **need to install** the **TreeSim**, **BAMMtools
 :large_blue_diamond: Be sure to re-run the snippet above after you install these packages so that the packages are loaded and ready to be used.
 
 We will add to this notebook throughout the lab today.
-
-### Login to Xanadu
-
-:large_blue_diamond: Login to your account on the Health Center (Xanadu) cluster, then issue
-
-    srun --qos=mcbstudent --partition=mcbstudent --mem=1G --pty bash
-    
-to start a session on a node that is not currently running jobs. 
-
-{% comment %}
-**Important** The <tt>--mem=5G</tt> part is important for this lab, as RevBayes uses more than the default amount (128 MB) of memory sometimes.
-{% endcomment %}
-
-:large_blue_diamond: Use the unix <tt>mkdir</tt> command to create a directory to play in today:
-
-    cd
-    mkdir bammlab
 
 ## A test using a simulated Yule tree
 
