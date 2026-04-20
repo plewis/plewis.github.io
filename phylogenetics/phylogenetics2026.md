@@ -53,7 +53,7 @@ Thursday Apr. 16   | **[Codon, amino acid, and stem-loop models](https://gnetum.
 Tuesday Apr. 21    | **Diversification** | **[Homework 10](/hwdpp/)** 
 Thursday Apr. 23   | **Species delimitation** | **Lab 13** Comparative methods and diversification in R
 Tuesday Apr. 28    | **Inferring introgression/hybridization** | no homework assignment
-Thursday Apr. 30   | ***Analisa guest lecture* | **Lab 14** Plotting trees in R with ggtree
+Thursday Apr. 30   | **Analisa guest lecture** | **Lab 14** Plotting trees in R with ggtree
 
 ## Index to major topics
 
