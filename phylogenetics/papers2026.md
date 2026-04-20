@@ -47,6 +47,8 @@ Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences i
 
 :heavy_check_mark: Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to rule them all. BMC Biol. 8:114. (Random local clocks)
 
+Durand, E. Y., N. Patterson, D. Reich, and M. Slatkin. 2011. Testing for ancient admixture between closely-related populations. Molecular Biology and Evolution 28:2239–2252. [DOI:10.1093/molbev/msr048](https://doi.org/10.1093/molbev/msr048)
+
 Eck, R. V., and M. O. Dayhoff. 1966. Atlas of protein sequence and structure. National Biomedical Research Foundation. Silver Spring, Maryland.
 
 Edwards, A. W. F., and L. L. Cavalli-Sforza. 1964. Reconstruction of evolutionary trees. pp. 67-76 in Phenetic and phylogenetic classification, ed. V. H. Heywood and J. McNeill. Systematics Association Publ. No. 6, London.
