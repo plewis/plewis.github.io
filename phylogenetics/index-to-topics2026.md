@@ -7,6 +7,8 @@ Return to the [Phylogenetics (EEB 5349) main page](/phylogenetics2026/).
 
 The following topics were covered in lecture in the Spring 2026 version of EEB 5349 (Phylogenetics). Please refer to the [schedule](/phylogenetics2026/) to find links to the slides for the dates indicated.
 
+adaptive radiations, Apr-21
+
 additivity of distances, Jan-29
 
 among-site rate heterogeneity (ASRV), Feb-10
@@ -24,6 +26,10 @@ autoapomorphy trail, Mar-24
 bat monophyly test, Feb-12
 
 Bayes' rule, Feb-17
+
+Bayesian analysis of macroevolutionary mixtures (BAMM), Apr-21
+
+binary-state speciation and extinction (BiSSE) model, Apr-21
 
 birth-death tree model, Apr-9
 
@@ -44,6 +50,8 @@ clade, Jan-29
 coalescence, Mar-9
 
 codon models, Apr-16
+
+columbine example, Apr-21
 
 comparative method, Mar-31
 
@@ -93,6 +101,8 @@ distribution, support, Mar-3
 
 distribution, target (for MCMC), Feb-19
 
+diversification rate, Apr-21
+
 effective population size (Ne), Mar-9
 
 estrus advertisement example, Mar-26
@@ -130,6 +140,8 @@ free rates model (+R), Feb-12
 frequencies, equilibrium amino acid, Apr-16
 
 frequencies, equilibrium nucleotide, Mar-24
+
+gamma, Pybus and Harvey, Apr-21
 
 gene trees, Mar-9
 
@@ -178,6 +190,8 @@ likelihood (evolutionary distance), Feb-10
 likelihood (tree), Feb-10
 
 likelihood, vs. probability, Feb-5
+
+lineage-through-time (LTT) plots, Apr-21
 
 marginal likelihood, Feb-17
 
@@ -234,6 +248,8 @@ models, partition, Feb-10
 models, protein, Apr-16
 
 models, relaxed clock Apr-9
+
+models, state-dependent diversification (BiSSE, MuSSE, GeoSSE, QuaSSE, HiSSE), Apr-21
 
 models, symmetric, Mar-24
 
@@ -301,6 +317,8 @@ probability, vs. likelihood, Feb-5
 
 pruning algorithm, Feb-10
 
+pull of the present, Apr-21
+
 random local clocks model, Apr-9
 
 rare disease example, Feb-17
@@ -337,6 +355,8 @@ splitstree, Jan-29
  
 star decomposition, Jan-22 
 
+state-dependent diversification models, Apr-21
+
 stepwise addition, Jan-22 
 
 subtree-pruning-regrafting (SPR) branch swapping, Jan-22 
@@ -366,6 +386,8 @@ transversion (substitution type), Feb-3
 tree islands, Jan-22 
 
 tree-bisection-reconnection (TBR) branch swapping, Jan-22 
+
+turnover, Apr-21
 
 ultrametric, Jan-20 
 
