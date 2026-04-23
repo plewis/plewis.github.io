@@ -52,8 +52,8 @@ Tuesday Apr. 14    | **[Dirichlet Process Priors](https://gnetum.eeb.uconn.edu/c
 Thursday Apr. 16   | **[Codon, amino acid, and stem-loop models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-16-codon-aa-models.pdf)** | **Lab 12**  [Species tree estimation with SVDQuartets](/svdq/)
 Tuesday Apr. 21    | **[Diversification](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-21-diversification.pdf)** | **[Homework 10](/hwdpp/)** 
 Thursday Apr. 23   | **[Inferring introgression/hybridization](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-23-introgression.pdf)** | **Lab 13** [Diversification in R](/bamm/)
-Tuesday Apr. 28    | **Species delimitation**; **Phylogenetic information** | no homework assignment
-Thursday Apr. 30   | **Analisa guest lecture** | **Lab 14** Plotting trees in R with ggtree
+Tuesday Apr. 28    | **Analisa guest lecture**; **** | no homework assignment
+Thursday Apr. 30   | **Phylogenetic information (plus 3 slides on species delimitation)** | **Lab 14** Plotting trees
 
 ## Index to major topics
 
