@@ -9,6 +9,8 @@ These papers have been cited in previous versions of the course.
 
 :heavy_check_mark: indicates papers cited in Spring 2026. 
 
+:heavy_check_mark: Aguillon, S. M., T. O. Dodge, G. A. Preising, and M. Schumer. 2022. [Primer: Introgression.](https://www.cell.com/current-biology/pdf/S0960-9822(22)01105-8.pdf) Current Biology 32:R865-R868.
+
 Akaike, H. 1973. Information theory as an extension of the maximum likelihood principle. Pages 267-281 in B. N. Petrov and F. Csaki (eds.), Second International Symposium on Information Theory. Akademiai Kiado, Budapest. (AIC model selection criterion)
 
 :heavy_check_mark: Ané, C., B. Larget, D. A. Baum, S. D. Smith, and A. Rokas. 2007. [Bayesian estimation of concordance among gene trees](https://doi.org/10.1093/molbev/msl170). Molecular Biology and Evolution 24:412-426. (Describes the DPP model behind BUCKy) 
@@ -47,7 +49,7 @@ Camin, J. H., and R. R. Sokal. 1965. A method for deducing branching sequences i
 
 :heavy_check_mark: Drummond A.J., Suchard M.A. 2010. Bayesian random local clocks, or one rate to rule them all. BMC Biol. 8:114. (Random local clocks)
 
-Durand, E. Y., N. Patterson, D. Reich, and M. Slatkin. 2011. Testing for ancient admixture between closely-related populations. Molecular Biology and Evolution 28:2239–2252. [DOI:10.1093/molbev/msr048](https://doi.org/10.1093/molbev/msr048)
+:heavy_check_mark: Durand, E. Y., N. Patterson, D. Reich, and M. Slatkin. 2011. Testing for ancient admixture between closely-related populations. Molecular Biology and Evolution 28:2239–2252. [DOI:10.1093/molbev/msr048](https://doi.org/10.1093/molbev/msr048)
 
 Eck, R. V., and M. O. Dayhoff. 1966. Atlas of protein sequence and structure. National Biomedical Research Foundation. Silver Spring, Maryland.
 
@@ -235,6 +237,8 @@ Pagel, M., and A. Meade. 2004. A phylogenetic mixture model for detecting patter
 
 Paradis, E. 2006. Analysis of phylogenetics and evolution with R. Springer. ISBN: 0-387-32914-5.
 
+:heavy_check_mark: Patterson, N., P. Moorjani, Y. Luo, S. Mallick, N. Rohland, Y. Zhan, T. Genschoreck, T. Webster, and D. Reich. 2012. [Ancient admixture in human history.](https://doi.org/10.1534/genetics.112.145037) Genetics 192:1065–1093. 
+
 Pettigrew, J. D. 1991. Wings or brain? convergent evolution in the origins of bats. Systematic Zoology, 40(2):199-216. 
 
 :heavy_check_mark: Pettigrew, J. D. 1994. [Genomic evolution: flying DNA.](https://doi.org/10.1016/S0960-9822(00)00065-8) Current Biology 4(3):277-280. 
@@ -283,6 +287,8 @@ Shimodaira H. 2002. An approximately unbiased test of phylogenetic tree selectio
 
 Siddall, M. E. 1998. Success of parsimony in the four-taxon case: long-branch repulsion by likelihood in the Farris Zone. Cladistics 14:209-220.
 
+:heavy_check_mark: Solís-Lemus, C., and C. Ané. 2016. [Inferring phylogenetic networks with maximum pseudolikelihood under incomplete lineage sorting.](https://doi.org/10.1371/journal.pgen.1005896) PLoS Genetics 12:e1005896.
+
 Stamatakis, A. 2006. Phylogenetic models of rate heterogeneity: a high performance computing perspective. Proceedings 20th. IEEE International Parallel and Distributed Processing Symposium.
 
 Strimmer K., and Rambaut A. 2002. Inferring confidence sets of possibly misspecified gene trees. Proc. Biol. Sci. 269:137–142.
@@ -305,7 +311,9 @@ Sytsma, K. J., and L. D. Gottlieb. 1986. Chloroplast DNA evidence for the origin
 
 :heavy_check_mark: Tuffley C, Steel M. 1998. Modeling the covarion hypothesis of nucleotide substitution. Math Biosci. 147:63–91. (covarion model)
 
-:heavy_check_mark: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution, 10(3), 408–416. 
+:heavy_check_mark: Van Den Bussche, R., Baker, R., Huelsenbeck, J. P., and Hillis, D. M. 1998. [Base compositional bias and phylogenetic analyses: A test of the “flying DNA” hypothesis.](https://doi.org/10.1006/mpev.1998.0531) Molecular Phylogenetics and Evolution 10:408–416. 
+
+:heavy_check_mark: Weilstra, B., and J. W. Arntzen. 2012. [Postglacial species displacement in _Triturus_ newts deduced from asymmetrical introgressed mitochondrial DNA and ecological niche models.](https://doi.org/10.1186/1471-2148-12-161) BMC Evolutionary Biology 12:161. (mitochondrial introgression figure)
 
 :heavy_check_mark: Whelan, S., and N. Goldman. 2001. A general empirical model of protein evolution derived from multiple protein families using a maximum likelihood approach. Molecular Biology and Evolution, 18, 691-699. (WAG amino acid model) 
 
