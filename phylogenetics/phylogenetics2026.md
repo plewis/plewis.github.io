@@ -51,7 +51,7 @@ Thursday Apr. 9    | **[Fossilized Birth Death Process](https://gnetum.eeb.uconn
 Tuesday Apr. 14    | **[Dirichlet Process Priors](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-14-dpp.pdf)**; **[Heterotachy and Covarion](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-14-heterotachy-covarion.pdf))** | **Individual Meetings** 
 Thursday Apr. 16   | **[Codon, amino acid, and stem-loop models](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-16-codon-aa-models.pdf)** | **Lab 12**  [Species tree estimation with SVDQuartets](/svdq/)
 Tuesday Apr. 21    | **[Diversification](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-21-diversification.pdf)** | **[Homework 10](/hwdpp/)** 
-Thursday Apr. 23   | **[Inferring introgression/hybridization](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-23-introgression.pdf)** | **Lab 13** Comparative methods and diversification in R
+Thursday Apr. 23   | **[Inferring introgression/hybridization](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-23-introgression.pdf)** | **Lab 13** [Diversification in R](/bamm/)
 Tuesday Apr. 28    | **Species delimitation**; **Phylogenetic information** | no homework assignment
 Thursday Apr. 30   | **Analisa guest lecture** | **Lab 14** Plotting trees in R with ggtree
 
