@@ -127,7 +127,7 @@ Finally, you will need to edit the `config` file. You must use a _text editor_ (
 
     pwd
 
-You should see this output (except with your home directory and not mine):
+You should see this output (except with your home directory and not xxxxx):
 
     /Users/xxxxx/.ssh      
     
