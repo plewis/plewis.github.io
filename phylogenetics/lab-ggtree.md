@@ -128,7 +128,7 @@ The geoms that add layers to your plot can also be stored in variables, making f
 
 ### Clean out your plot window periodically
 
-Unbeknownst to you, each time you replot your tree (except when you use `ggsave`), the new plot gets drawn over the top of the previous plot. These plots pile up silently, leading to a lot of plot baggage in RStudio. Try clicking the red circle with a white X inside it <img src="red-circle-white-x.png" width="20" height="20" alt="red circle with white x inside">in the toolbar of the plot window: you will see the blue-label version of your tree disappear and be replaced by the previous tree (with large black taxon labels). You can clean out all the old plots using the menu item _Plots > Clear all..._ in the main menu of RStudio.
+Unbeknownst to you, each time you replot your tree (except when you use `ggsave`), the new plot gets drawn over the top of the previous plot. These plots pile up silently, leading to a lot of plot baggage in RStudio. Try clicking the red circle with a white X inside it <img src="https://https://plewis.github.io/assets/img/red-circle-white-x.png" width="20" height="20" alt="red circle with white x inside">in the toolbar of the plot window: you will see the blue-label version of your tree disappear and be replaced by the previous tree (with large black taxon labels). You can clean out all the old plots using the menu item _Plots > Clear all..._ in the main menu of RStudio.
 
 :large_blue_diamond: Now that we have everything stored in variables, you can replot your tree inside RStudio just by typing `t`!
 
@@ -313,6 +313,13 @@ Most recently, the lead author of `ggtree` released a [comprehensive online book
 ### Download a tree file
 
 :large_blue_diamond: Download [this tree file](https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/big-green-rbcl-tree.txt).
+
+:large_blue_diamond: Open a web browswer and go to the [iTOL page](https://itol.embl.de/)
+
+    https://itol.embl.de/
+    
+:large_blue_diamond: Click the _Upload_ button and select the _big-green-rbcl-tree.txt_ file. Name it whatever you like; I chose _Green plants_
+
 
 
 ### References
