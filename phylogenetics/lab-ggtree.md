@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ggtree Lab
+title: Creating Publication-quality Tree Figures
 permalink: /ggtree/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2026/)
@@ -128,7 +128,7 @@ The geoms that add layers to your plot can also be stored in variables, making f
 
 ### Clean out your plot window periodically
 
-Unbeknownst to you, each time you replot your tree (except when you use `ggsave`), the new plot gets drawn over the top of the previous plot. These plots pile up silently, leading to a lot of plot baggage in RStudio. Try clicking the red circle with a white X inside it <img src="https://https://plewis.github.io/assets/img/red-circle-white-x.png" width="20" height="20" alt="red circle with white x inside">in the toolbar of the plot window: you will see the blue-label version of your tree disappear and be replaced by the previous tree (with large black taxon labels). You can clean out all the old plots using the menu item _Plots > Clear all..._ in the main menu of RStudio.
+Unbeknownst to you, each time you replot your tree (except when you use `ggsave`), the new plot gets drawn over the top of the previous plot. These plots pile up silently, leading to a lot of plot baggage in RStudio. Try clicking the red circle with a white X inside it <img src="https://plewis.github.io/assets/img/red-circle-white-x.png" width="20" height="20" alt="red circle with white x inside">in the toolbar of the plot window: you will see the blue-label version of your tree disappear and be replaced by the previous tree (with large black taxon labels). You can clean out all the old plots using the menu item _Plots > Clear all..._ in the main menu of RStudio.
 
 :large_blue_diamond: Now that we have everything stored in variables, you can replot your tree inside RStudio just by typing `t`!
 
