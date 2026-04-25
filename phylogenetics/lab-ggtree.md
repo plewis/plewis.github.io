@@ -310,17 +310,63 @@ Most recently, the lead author of `ggtree` released a [comprehensive online book
 
 ## Using iTOL to make tree figures
 
+If you thought ggtree was a bit difficult to use, you will probably become a big fan of [iTOL](https://itol.embl.de/)! Our purpose here is just to give you the barest introduction to this amazing software: the excellent documentation and video tutorials make it easy to learn how to do what you need to do on your own. If you've even wondered how people made those beautiful circle trees in journals such as_ Science_ and _Nature_, the answer is that they probably used iTOL.
+
 ### Download a tree file
 
-:large_blue_diamond: Download [this tree file](https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/big-green-rbcl-tree.txt).
+:large_blue_diamond: Download [this tree file](https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/big-green-rbcl-tree.txt). This is a 700-taxon tree of green plants based on the chloroplast-encoded RuBisCO large subunit gene _rbc_L.
 
 :large_blue_diamond: Open a web browswer and go to the [iTOL page](https://itol.embl.de/)
 
     https://itol.embl.de/
     
-:large_blue_diamond: Click the _Upload_ button and select the _big-green-rbcl-tree.txt_ file. Name it whatever you like; I chose _Green plants_
+:large_blue_diamond: You may wish to create a free account now so that you can save your work. It is not necessary to create an account for purposes of completing this lab, however.
 
+:large_blue_diamond: Click the _Upload_ button and select the _big-green-rbcl-tree.txt_ file. Name it whatever you like; I chose _Green plants_.
 
+### Rerooting the tree
+
+The first issue is that the tree is rooted in a terrible place. 
+
+:large_blue_diamond: Type `Cyanophora` in the text field that results from clicking the Search Tree Nodes button in the left panel (labeled Aa). It should find a taxon named _Cyanophora paradoxa U30821.1_. Click on the link to see where this taxon is located in the tree.
+
+:large_blue_diamond: Click on the branch highlighted in red, then choose _Tree stucture_ and then _Re-root the tree here_ from the pop-up menus.
+
+### Coloring the branches of a clade
+
+Let's thicken the branches of the angiosperm (flowering plant) clade and give these branches a different color.
+
+:large_blue_diamond: Type `Amborella` using the Search Tree Nodes button in the left panel (labeled Aa). It should find a taxon named _Amborella trichopoda L12628.1_. Click on the link to see where this taxon is located in the tree. This taxon is sister to a small clade of 5 other taxa (call it the _Nuphar_ clade), and _Amborella_ plus the _Nuphar_ clade form the sister group to all other angiosperms. 
+
+:large_blue_diamond: Click on the relatively long edge that is the parent of the _Amborella_ + _Nuphar_ clade. This should highlight a clade of 462 leaves (two thirds of all leaves in the tree) and choose _Branches_, then _Whole clade_, then _Color_ and choose a color of your choice. While here, set the width factor to 2 to make the edges in the angiosperm clade twice the normal thickness.
+
+### Highlight a clade using shading
+
+Let's now shade the clade of all ferns.
+
+:large_blue_diamond: Type `Angiopteris` using the Search Tree Nodes button in the left panel (labeled Aa). It should find a taxon named _Angiopteris evecta L11052.1_. Click on the link to see where this taxon is located in the tree.
+
+:large_blue_diamond: _Angiopteris evecta_ is sister to all other ferns in this tree, so click on the **parent** edge (the stem of the fern clade, which contains 61 leaves) and choose _Colored ranges_, then _Create a new range_ and choose a color of your choice as well as a label (e.g. "Ferns"). 
+
+:large_blue_diamond: Click the _+ Create range_ button.
+
+Note that you can choose _Label_ to shade the taxon labels in the clade, _Clade_ to shade the clade itself, or _Full_ to shade the clade all the way back to the root. You can also add a border around the shading using the _Colored ranges_ dialog box. 
+
+### Exporting a tree image
+
+:large_blue_diamond: To export the tree to a PDF file, click on the _Export_ tab of the main _Control panel_. 
+
+:large_blue_diamond: Choose _PDF: Portable Document Format_ from the _Format_ dropdown.
+
+:large_blue_diamond: Choose _Full image_ from the _Export area_ radio button panel.
+
+:large_blue_diamond: Type a file name of your choice into the _File name_ text box.
+
+:large_blue_diamond: Push the _Export_ button to start the process of generating the figure. You will be notified when the download has begun.
+
+### Explore iTOL
+
+We've just given you a very small taste of what iTOL can do. Check out the [Tree Gallery](https://itol.embl.de/gallery.cgi) page to see what's possible.
 
 ### References
 
