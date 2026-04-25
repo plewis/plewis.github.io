@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Creating Publication-quality Tree Figures
+title: Creating figures for publication
 permalink: /ggtree/
 ---
 [Up to the Phylogenetics main page](/phylogenetics2026/)
@@ -316,13 +316,13 @@ If you thought ggtree was a bit difficult to use, you will probably become a big
 
 :large_blue_diamond: Download [this tree file](https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/big-green-rbcl-tree.txt). This is a 700-taxon tree of green plants based on the chloroplast-encoded RuBisCO large subunit gene _rbc_L.
 
-:large_blue_diamond: Open a web browswer and go to the [iTOL page](https://itol.embl.de/)
+:large_blue_diamond: Open a new tab in your web browswer and go to the [iTOL page](https://itol.embl.de/)
 
     https://itol.embl.de/
     
 :large_blue_diamond: You may wish to create a free account now so that you can save your work. It is not necessary to create an account for purposes of completing this lab, however.
 
-:large_blue_diamond: Click the _Upload_ button and select the _big-green-rbcl-tree.txt_ file. Name it whatever you like; I chose _Green plants_.
+:large_blue_diamond: Click the _Upload a tree_ button and select the _big-green-rbcl-tree.txt_ file. Name it whatever you like; I chose _Green plants_.
 
 ### Rerooting the tree
 
