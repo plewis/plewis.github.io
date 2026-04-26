@@ -314,7 +314,7 @@ If you thought ggtree was a bit difficult to use, you will probably become a big
 
 ### Download a tree file
 
-:large_blue_diamond: Download [this tree file](https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/big-green-rbcl-tree.txt). This is a 700-taxon tree of green plants based on the chloroplast-encoded RuBisCO large subunit gene _rbc_L.
+:large_blue_diamond: Download [this tree file](https://gnetum.eeb.uconn.edu/courses/phylogenetics/lab/rbcl738.txt). This is a 738-taxon tree of green plants based on the chloroplast-encoded RuBisCO large subunit gene _rbc_L.
 
 :large_blue_diamond: Open a new tab in your web browswer and go to the [iTOL page](https://itol.embl.de/)
 
@@ -324,6 +324,7 @@ If you thought ggtree was a bit difficult to use, you will probably become a big
 
 :large_blue_diamond: Click the _Upload a tree_ button and select the _big-green-rbcl-tree.txt_ file. Name it whatever you like; I chose _Green plants_.
 
+{% comment %}
 ### Rerooting the tree
 
 The first issue is that the tree is rooted in a terrible place. 
@@ -331,6 +332,7 @@ The first issue is that the tree is rooted in a terrible place.
 :large_blue_diamond: Type `Cyanophora` in the text field that results from clicking the Search Tree Nodes button in the left panel (labeled Aa). It should find a taxon named _Cyanophora paradoxa U30821.1_. Click on the link to see where this taxon is located in the tree.
 
 :large_blue_diamond: Click on the branch highlighted in red, then choose _Tree stucture_ and then _Re-root the tree here_ from the pop-up menus.
+{% endcomment %}
 
 ### Coloring the branches of a clade
 
@@ -338,7 +340,7 @@ Let's thicken the branches of the angiosperm (flowering plant) clade and give th
 
 :large_blue_diamond: Type `Amborella` using the Search Tree Nodes button in the left panel (labeled Aa). It should find a taxon named _Amborella trichopoda L12628.1_. Click on the link to see where this taxon is located in the tree. This taxon is sister to a small clade of 5 other taxa (call it the _Nuphar_ clade), and _Amborella_ plus the _Nuphar_ clade form the sister group to all other angiosperms. 
 
-:large_blue_diamond: Click on the relatively long edge that is the parent of the _Amborella_ + _Nuphar_ clade. This should highlight a clade of 462 leaves (two thirds of all leaves in the tree) and choose _Branches_, then _Whole clade_, then _Color_ and choose a color of your choice. While here, set the width factor to 2 to make the edges in the angiosperm clade twice the normal thickness.
+:large_blue_diamond: Click on the relatively long edge that is the parent of the _Amborella_ + _Nuphar_ clade. This should highlight a clade of 496 leaves (two thirds of all leaves in the tree) and choose _Branches_, then _Whole clade_, then choose a color of your choice. While here, set the width factor to 2 to make the edges in the angiosperm clade twice the normal thickness.
 
 ### Highlight a clade using shading
 
@@ -352,6 +354,136 @@ Let's now shade the clade of all ferns.
 
 Note that you can choose _Label_ to shade the taxon labels in the clade, _Clade_ to shade the clade itself, or _Full_ to shade the clade all the way back to the root. You can also add a border around the shading using the _Colored ranges_ dialog box. 
 
+### Adding a color strip
+
+The last thing we will do is add a ring of colored tick marks that indicate plants that are of particular economic importance (or are of interest to Paul).
+
+:large_blue_diamond: Create a plain text file (i.e. use BBEdit if you have a Mac or Notepad++ if you have Windows; do **not** use a word processor) on your laptop named _plant-uses.txt_ and fill it with the following text:
+
+    DATASET_COLORSTRIP
+    SEPARATOR SPACE
+    DATASET_LABEL Plants
+    LEGEND_TITLE Uses
+    LEGEND_SCALE 1
+    LEGEND_SHAPES 1 1 1 1 1
+    LEGEND_COLORS #ffa500 #ff0000 #964B00 #00ff00 #0000ff
+    LEGEND_LABELS Spices/beverages Fragrances/medicines/floral Fruits/grains Trees Other
+    DATA
+    
+    # Spices, beverages
+    Thymus_vulgaris_Z37472.1_Thyme #ffa500
+    Origanum_vulgare_Z37427.1_Oregano #ffa500
+    Salvia_officinalis_Z37446.1_Sage #ffa500
+    Rosmarinus_officinalis_Z37435.1_Rosemary #ffa500
+    Coriandrum_sativum_L11676.1_Coriander_Cilantro #ffa500
+    Zingiber_gramineum_L05465.1_Z._officinale_is_Ginger #ffa500
+    Piper_betle_L12660.2_P._nigrum_is_Black_Pepper #ffa500
+    Cinnamomum_camphora_L12641.2_Cinnamon #ffa500
+    Coffea_arabica_X83631.1_Coffee #ffa500
+    Cichorium_intybus_L13652.1_Chicory #ffa500
+    Vitis_aestivalis_L01960.2_Grape #ffa500
+    Humulus_lupulus_AF206777.1_Hops #ffa500
+    Sassafras_albidum_AF206819.1_Sassafras #ffa500
+    
+    # Fragrances, medicines, drugs, floral
+    Lavandula_angustifolia_Z37407.1_Lavender #ff0000
+    Jasminum_suavissimum_L01929.2_Jasmine #ff0000
+    Dianthus_caryophyllus_M77699.1_Carnation #ff0000
+    Passiflora_quadrangularis_L01940.2_Passionflower #ff0000
+    Ranunculus_trichophyllus_L08766.1_Buttercup #ff0000
+    Papaver_orientale_L08764.1_Poppy #ff0000
+    Strelitzia_nicolai_L05461.1_Bird_Of_Paradise_Flower #ff0000
+    Sansevieria_cylindrica_Z73698.1_Snake_Plant #ff0000
+    Lilium_superbum_L12682.2_Turks_Cap_Lily #ff0000
+    Nicotiana_tabacum_J01450.1_Tobacco #ff0000
+    Digitalis_purpurea_L01902.2_Foxglove #ff0000
+    Panax_quinquefolius_U50250.1_Ginseng #ff0000
+    Colchicum_speciosum_L12673.2_Colchicine #ff0000
+    
+    # Foods (grains, fruits)
+    Sesamum_indicum_L14408.1_Sesame #964B00
+    Lycopersicon_esculentum_AM087200.2_Tomato #964B00
+    Vaccinium_macrocarpon_L12625.2_Cranberry #964B00
+    Diospyros_virginiana_L12613.2_Persimmon #964B00
+    Sambucus_racemosa_AF446928.1_Elderberry #964B00
+    Spinacia_oleracea_V00168.1_Spinach #964B00
+    Fagopyrum_esculentum_D86285.1_Buckwheat #964B00
+    Ficus_pretoriae_AJ390067.1_F._carica_is_Fig #964B00
+    Morus_rubra_U06812.1_Red_Mulberry #964B00
+    Prunus_persica_AF206813.1_Prunus_includes_Almond_Apricot_Cherry_Plum #964B00
+    Cucurbita_pepo_AF206756.1_Squash_Pumpkin #964B00
+    Cucumis_sativus_AF206755.1_Cucumber #964B00
+    Pisum_sativum_X03853.1_Pea #964B00
+    Ceratonia_siliqua_Z70165.1_Carob #964B00
+    Glycyrrhiza_glabra_Z70171.1_Licorice #964B00
+    Pistacia_vera_AJ235786.1_Pistachio #964B00
+    Mangifera_indica_U39269.2_Mango #964B00
+    Anacardium_occidentale_AY462008.1_Cashew #964B00
+    Citrus_paradisi_AJ238407.1_Grapefruit #964B00
+    Theobroma_cacao_AF022125.1_Chocolate #964B00
+    Brassica_rapa_DQ231548.1_Turnip #964B00
+    Armoracia_rusticana_AF020323.1_Horseradish #964B00
+    Carica_papaya_M95671.1_Papaya #964B00
+    Punica_granatum_L10223.1_Pomegranate #964B00
+    Avena_sativa_L15300.1_Oats #964B00
+    Triticum_aestivum_AB042240.3_Wheat #964B00
+    Oryza_sativa_DQ167807.1_Rice #964B00
+    Ananas_comosus_L19977.1_Pineapple #964B00
+    Cocos_nucifera_AY012507.1_Coconut_Palm #964B00
+    Dioscorea_polygonoides_AF206762.1_Yam #964B00
+    Persea_americana_L14620.1_Avocado #964B00
+    Myristica_fragrans_AY298839.1_Nutmeg_Mace #964B00
+    
+    # Trees
+    Betula_nigra_L12634.2_Birch #00ff00
+    Carya_glabra_L12637.2_Hickory #00ff00
+    Fagus_americana_L13338.1_Beech #00ff00
+    Acer_saccharum_L01881.2_Sugar_Maple #00ff00
+    Ginkgo_biloba_AJ235804.1 #0000ff Ginkgo #00ff00
+    Metasequoia_glyptostroboides_AJ235805.1_Dawn_Redwood #00ff00
+    Sequoia_sempervirens_L25755.2_California_Redwood #00ff00
+    Taxodium_distichum_S75127.1_Bald_Cypress #00ff00
+    Pinus_radiata_AY497250.1_Monterrey_Pine #00ff00
+    Picea_pungens_AF456382.1_Blue_Spruce #00ff00
+    Larix_occidentalis_X63663.1_Western_Larch #00ff00
+    Pseudotsuga_menziesii_X52937.1_Douglas_Fir #00ff00
+    Cedrus_deodara_AF456381.1_Deodar_Cedar #00ff00
+    Abies_magnifica_X58391.1_Red_Fir #00ff00
+    Liriodendron_tulipifera_AF190430.1_Tulip_Tree #00ff00
+    
+    # Other
+    Monarda_didyma_Z37418.1_Bee_Balm #0000ff
+    Nepeta_cataria_Z37421.1_Catnip #0000ff
+    Asclepias_exaltata_L14390.1_Milkweed #0000ff
+    Taraxacum_officinale_AY395562.1_Dandelion #0000ff
+    Drosera_filliformis_L01911.2_Sundew #0000ff
+    Dionaea_muscipula_L01904.2_Venus_Flytrap #0000ff
+    Medicago_sativa_X04975.1_Alfalfa #0000ff
+    Viola_soraria_L11674.1_Violet #0000ff
+    Rhus_copallina_U00440.1_Winged_Sumac #0000ff
+    Gossypium_robinsonii_L13186.2_Cotton #0000ff
+    Nelumbo_lutea_M77032.1_Lotus #0000ff
+    Bambusa_valida_AJ746171.1_Bamboo #0000ff
+    Typha_latifolia_M91634.1_Cattail #0000ff
+    Tillandsia_elizabethae_L19971.1_Spanish_Moss #0000ff
+    Smilax_glauca_AF206822.1_Greenbriar #0000ff
+    Lemna_minuta_M91630.1_Duckweed #0000ff
+    Aristolochia_macrophylla_L12630.2_Dutchmans_Pipe #0000ff
+    Nuphar_advena_DQ069501.1_Water_Lily #0000ff
+    Victoria_cruziana_M77036.1_Victoria_Lily #0000ff
+    Dennstaedtia_punctilobula_U05918.1_Hay_Scented_Fern #0000ff
+    Pteridium_aquilinum_U05939.1_Bracken_Fern #0000ff
+    Osmunda_cinnamomea_D14882.1_Cinnamon_Fern #0000ff
+    Equisetum_arvense_L11053.1_Horsetail_Scouring_Rush #0000ff
+    Psilotum_nudum_AP004638.1_Whisk_Fern #0000ff
+    Selaginella_apoda_AJ010854.1_Meadow_Spike_Moss #0000ff
+
+:large_blue_diamond: Using your file manager, simply drag the file onto your tree in iTOL to create a **color strip** (a ring of colored tick marks) indicating the different uses of plants defined in the file.
+
+Each non-blank,non-comment line of file below the `DATA` keyword lists a taxon name (as defined in the original tree file that you uploaded) followed by the hexadecimal code for a color. The keyword `SEPARATOR` near the top of the file specifies that a single `SPACE` should separate the taxon name from the color code. The keyword `DATASET_COLORSTRIP` at the very beginning of the file says that the data contained in this file is for use in making a color strip. 
+
+The [Tree annotation help page](https://itol.embl.de/help.cgi#annot) has a link to a collection of templates that can be used for various sorts of annotations. We modified the template named _dataset_color_strip_template.txt_ to create the example above. There are also nice video tutorials on annotating trees that you should watch if you get serious about creating an annotated tree.
+
 ### Exporting a tree image
 
 :large_blue_diamond: To export the tree to a PDF file, click on the _Export_ tab of the main _Control panel_. 
@@ -360,7 +492,7 @@ Note that you can choose _Label_ to shade the taxon labels in the clade, _Clade_
 
 :large_blue_diamond: Choose _Full image_ from the _Export area_ radio button panel.
 
-:large_blue_diamond: Type a file name of your choice into the _File name_ text box.
+:large_blue_diamond: Type _rbcl738tree.pdf_ as the file name into the _File name_ text box.
 
 :large_blue_diamond: Push the _Export_ button to start the process of generating the figure. You will be notified when the download has begun.
 
@@ -376,7 +508,7 @@ G Yu, D Smith, H Zhu, Y Guan, and TT Lam. 2017. ggtree: an R package for visuali
 
 ### What to turn in
 
-Send _circletree.pdf_ and _bstree.pdf_ to Analisa in order to get credit for this lab.
+Send _circletree.pdf_, _bstree.pdf_, and _rbcl738tree.pdf_ to Analisa in order to get credit for this lab.
 
 ## Acknowledgements
 
