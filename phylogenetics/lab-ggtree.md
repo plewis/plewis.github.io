@@ -348,7 +348,7 @@ Let's now shade the clade of all ferns.
 
 :large_blue_diamond: Type `Angiopteris` using the Search Tree Nodes button in the left panel (labeled Aa). It should find a taxon named _Angiopteris evecta L11052.1_. Click on the link to see where this taxon is located in the tree.
 
-:large_blue_diamond: _Angiopteris evecta_ is sister to all other ferns in this tree, so click on the **parent** edge (the stem of the fern clade, which contains 61 leaves) and choose _Colored ranges_, then _Create a new range_ and choose a color of your choice as well as a label (e.g. "Ferns"). 
+:large_blue_diamond: _Angiopteris evecta_ is sister to all other ferns in this tree, so click on the **parent** edge (the stem of the fern clade, which contains 63 leaves) and choose _Colored ranges_, then _Create a new range_ and choose a color of your choice as well as a label (e.g. "Ferns"). 
 
 :large_blue_diamond: Click the _+ Create range_ button.
 
@@ -478,7 +478,7 @@ The last thing we will do is add a ring of colored tick marks that indicate plan
     Psilotum_nudum_AP004638.1_Whisk_Fern #0000ff
     Selaginella_apoda_AJ010854.1_Meadow_Spike_Moss #0000ff
 
-:large_blue_diamond: Using your file manager, simply drag the file onto your tree in iTOL to create a **color strip** (a ring of colored tick marks) indicating the different uses of plants defined in the file.
+:large_blue_diamond: Using your file manager, simply drag the file onto your tree in iTOL to create a **color strip** (a ring of colored tick marks) indicating the different uses of plants defined in the file. If dragging doesn't work, you can also choose the _Datasets_ tab in the _Control panel_, then click _Upload annotation files_ to load the file.
 
 Each non-blank,non-comment line of file below the `DATA` keyword lists a taxon name (as defined in the original tree file that you uploaded) followed by the hexadecimal code for a color. The keyword `SEPARATOR` near the top of the file specifies that a single `SPACE` should separate the taxon name from the color code. The keyword `DATASET_COLORSTRIP` at the very beginning of the file says that the data contained in this file is for use in making a color strip. 
 
