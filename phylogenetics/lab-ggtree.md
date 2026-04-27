@@ -310,7 +310,7 @@ Most recently, the lead author of `ggtree` released a [comprehensive online book
 
 ## Using iTOL to make tree figures
 
-If you thought ggtree was a bit difficult to use, you will probably become a big fan of [iTOL](https://itol.embl.de/)! Our purpose here is just to give you the barest introduction to this amazing software: the excellent documentation and video tutorials make it easy to learn how to do what you need to do on your own. If you've even wondered how people made those beautiful circle trees in journals such as_ Science_ and _Nature_, the answer is that they probably used iTOL.
+If you thought ggtree was a bit difficult to use, you will probably become a big fan of [iTOL](https://itol.embl.de/)! Our purpose here is just to give you the barest introduction to this amazing software: the excellent documentation and video tutorials make it easy to learn how to do what you need to do on your own. If you've even wondered how people made those beautiful circle trees in journals such as _Science_ and _Nature_, the answer is that they probably used iTOL.
 
 ### Download a tree file
 
@@ -322,7 +322,7 @@ If you thought ggtree was a bit difficult to use, you will probably become a big
     
 :large_blue_diamond: You may wish to create a free account now so that you can save your work. It is not necessary to create an account for purposes of completing this lab, however.
 
-:large_blue_diamond: Click the _Upload a tree_ button and select the _big-green-rbcl-tree.txt_ file. Name it whatever you like; I chose _Green plants_.
+:large_blue_diamond: Click the _Upload a tree_ button and select the _rbcl738.txt_ file. Name it whatever you like; I chose _Green plants_.
 
 {% comment %}
 ### Rerooting the tree
