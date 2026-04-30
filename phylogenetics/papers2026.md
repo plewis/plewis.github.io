@@ -177,7 +177,7 @@ Lewis, P. O. 2001b. Phylogenetic systematics turns over a new leaf. Trends in Ec
 
 :heavy_check_mark: Lewis, P. O., M. T. Holder, and K. E. Holsinger. 2005. Polytomies and Bayesian phylogenetic inference. Systematic Biology 54:241–253. 
 
-Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65(6):1009-1023. 
+:heavy_check_mark: Lewis, P. O., M.-H. Chen, L. Kuo, L. A. Lewis, K. Fučíková, S. Neupane, Y.-B. Wang, and D. Shi. 2016. [Estimating Bayesian phylogenetic information content](https://doi.org/10.1093/sysbio/syw042). Systematic Biology 65(6):1009-1023. 
 
 :heavy_check_mark: Lindblad-Toh, K., C. M. Wade, T. S. Mikkelsen, E. K. Karlsson, D. B. Jaffe, M. Kamal, M. Clamp, J. L. Chang, E. J. Kulbokas, M. C. Zody, et al. 2005. Genome sequence, comparative analysis and haplotype structure of the domestic dog. Nature, 438(7069):803–819.
 
@@ -202,6 +202,9 @@ Martins, E. P. 1994. [Estimating the rate of phenotypic evolution from comparati
 :heavy_check_mark: Metropolis, N., A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, and E. Teller. 1953. [Equation of state calculations by fast computing machines.](https://doi.org/10.1063/1.1699114) J. Chem. Phys. 21:1087-1092. (The Metropolis algorithm used in MCMC) 
 
 Michener, C. D., and R. R. Sokal. 1957. A Quantitative Approach to a Problem in Classification. Evolution 11:130-162
+
+:heavy_check_mark: Milkey, A. A., and P. O. Lewis. 2026. [Estimating Bayesian phylogenetic information content using geodesic distances.](https://doi.org/10.64898/2026.03.31.715656
+). bioRxiv 2026.03.31.715656.
 
 Minin, V., Z. Abdo, P. Joyce, and J. Sullivan. 2003. Performance-based selection of likelihood models for phylogeny estimation. Systematic Biology 52:674–683. (DTmodsel model selection criterion)
 
@@ -331,7 +334,7 @@ Xie, W.G., P. O. Lewis, Y. Fan, L. Kuo and M.-H. Chen. 2011. Improving Marginal 
 
 Yang, Z., Nielsen, R., and Hasegawa, M. 1998. Models of amino acid substitution and applications to mitochondrial protein evolution. Molecular Biology and Evolution, 15, 1600-1611.
 
-Yang, Z., and B. Rannala. 2010. Bayesian species delimitation using multilocus sequence data. PNAS 107(20):9264-9269. 
+:heavy_check_mark: Yang, Z., and B. Rannala. 2010. Bayesian species delimitation using multilocus sequence data. PNAS 107(20):9264-9269. 
 
 :heavy_check_mark: Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., and Ronquist, F. 2016. [Total-evidence dating under the fossilized birth–death process.](https://doi.org/10.1093/sysbio/syv080) Systematic Biology 65:228–249. 
 

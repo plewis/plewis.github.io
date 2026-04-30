@@ -53,7 +53,7 @@ Thursday Apr. 16   | **[Codon, amino acid, and stem-loop models](https://gnetum.
 Tuesday Apr. 21    | **[Diversification](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-21-diversification.pdf)** | **[Homework 10](/hwdpp/)** 
 Thursday Apr. 23   | **[Inferring introgression/hybridization](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-23-introgression.pdf)** | **Lab 13** [Diversification in R](/bamm/)
 Tuesday Apr. 28    | **Analisa guest lecture** | no homework assignment
-Thursday Apr. 30   | **Phylogenetic information (plus 3 slides on species delimitation)** | **Lab 14** [Plotting trees](/ggtree/)
+Thursday Apr. 30   | **[Phylogenetic information (plus 3 slides on species delimitation)](https://gnetum.eeb.uconn.edu/courses/phylogenetics/2026-04-30-info-sppdelim.pdf)** | **Lab 14** [Plotting trees](/ggtree/)
 
 ## Index to major topics
 
