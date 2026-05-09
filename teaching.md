@@ -8,11 +8,11 @@ permalink: /teaching/
 
 ---
 
-### [Introduction to Botany (BIOL 1110)](/botany2024/) ###
+### [Introduction to Botany (BIOL 1110)](/botany2026/) ###
 
 {% include figure.html description="Liverwort, Woods Hole, MA." url="/assets/img/liverwort.jpg" css="image-left" width="300px" targeturl="https://en.wikipedia.org/wiki/Marchantiophyta" %}
 
-**Being taught Fall 2024!**
+**Being taught Fall 2026!**
 
 This is a freshman-level 4-credit undergraduate BIOL/EEB majors lab course that satisfies the General Education Content Area 3 (lab) ([Common Curriculum](https://commoncurriculum.senate.uconn.edu) [TOI-6 lab](https://commoncurriculum.senate.uconn.edu/scientific-and-empirical-inquiry/)) requirement at the University of Connecticut. The course covers many key aspects of biology (anatomy, physiology, ecology, biodiversity, genetics, population genetics, and evolution) using examples from green plants (including green algae), fungi, cyanobacteria, heterokonts, and red algae. Lab topics include selection, photosynthesis, transpiration, plant hormones, and fossil plants. 
 
