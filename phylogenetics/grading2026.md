@@ -7,12 +7,14 @@ Return to the [Phylogenetics (EEB 5349) 2026 main page](/phylogenetics2026/).
 
 ## Points
 
+Note: the points distribution has changed as a result of holding only 3 individual meetings instead of 4 and having 2 labs more than originally planned. Individual meetings are now worth 4 points each (instead of the original 5), and we increased participation to 32 points (instead of the original 30) to keep the total at 200.
+
 | Percentage  |  Points  | Description                              |
 | :---------: |  :----:  | :--------------------------------------: |
 |      50     |    100   | Homeworks (10 at 10 points each)         |
-|      25     |     50   | Lab activities (12 at 4 points each*)    |
-|      15     |     30   | Participation (30 at 1 point each)       |
-|      10     |     20   | Individual Meetings (4 at 5 points each) |
+|      28     |     56   | Lab activities (14 at 4 points each*)    |
+|      16     |     32   | Participation (32 points)                |
+|       6     |     12   | Individual Meetings (3 at 4 points each) |
 |     100     |    200   | Total                                    |
 
 \* First lab is worth 2 points (12 times 4 plus 2 = 50)
