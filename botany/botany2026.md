@@ -52,10 +52,10 @@ Monday     | Sep. 28 | **12. Mitosis and meiosis**<br/>Chapter 6                
 Wednesday  | Sep. 30 | **13. Mitosis and meiosis (cont.)**<br/>Chapter 14                  | **5. Photosynthesis**<br/>**Peas: day 1**
 Friday     | Oct.  2 | **EXAM I**<br/>up to and including lecture on 9/30)                 | **Peas: day 3**
 Monday     | Oct.  5 | **14. Phylogeny, Life Cycles, Endosymbiosis**<br/>Chapters 18,19,20 | **Peas: day 6**
-Wednesday  | Oct.  7 | **15. Cyanobacteria, Red Algae**<br/>Chapter 20                     | **6. Mitosis/Meiosis**<br/>**Peas: day 8**
+Wednesday  | Oct.  7 | **15. Cyanobacteria, Red Algae**<br/>Chapter 20                     | **6. Algae**<br/>**Peas: day 8**
 Friday     | Oct.  9 | **16. Heterokonts, Chlorophyte Green Algae**<br/>Chapter 20         | **Peas: day 10**
 Monday     | Oct. 12 | **17. Streptophyte Green Algae**<br/>Chapter 20                     | **Peas: day 13**
-Wednesday  | Oct. 14 | **18. Bryophytes (Hornworts, Mosses, Liverworts)**<br/>Chapter 22   | **7. Algae**<br/>**Peas: day 15**
+Wednesday  | Oct. 14 | **18. Bryophytes (Hornworts, Mosses, Liverworts)**<br/>Chapter 22   | **7.Mitosis/Meiosis **<br/>**Peas: day 15**
 Friday     | Oct. 16 | **19. Vascular plants, Lycophytes, heterospory**<br/>Chapter 22     | 
 Monday     | Oct. 19 | **20. Pteridophytes**<br/>Chapter 22                                | 
 Wednesday  | Oct. 21 | **21. Seed plants**<br/>Chapter 23                                  | **8. Seedless plants**
