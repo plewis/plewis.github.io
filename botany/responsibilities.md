@@ -3,7 +3,7 @@ layout: page
 title: Student Responsibilities and Resources
 permalink: /responsibilities/
 ---
-As a member of the University of Connecticut student community, you are held to certain standards and academic policies. In addition, there are numerous resources available to help you succeed in your academic work. Review these [important standards, policies and resources](https://onlinestudent.uconn.edu/learn--more/#POL), which include:
+As a member of the University of Connecticut student community, you are held to certain standards and academic policies. In addition, there are numerous resources available to help you succeed in your academic work. Review these [important standards, policies and resources](https://ecampus.uconn.edu/students/policies/), which include:
 
 * The Student Code
 * Academic Integrity

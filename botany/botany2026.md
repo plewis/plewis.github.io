@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated May 9, 2026_
+_Last updated August 24, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -14,14 +14,14 @@ _Last updated May 9, 2026_
 
 This is a freshman-level introdution to the science of plants, emphasizing the anatomy, physiology, diversity, genetics, and evolution of green plants (including green algae). Because it is a general education course, there is considerable attention given to how science works, from hypothesis generation to design of experiments to test the predictions arising from hypotheses. As is traditional in introductory botany courses, some time is devoted to protist algal groups (red seaweeds, brown kelps, diatoms, etc.), fungi, and slime molds, even though these organisms are now known to be distantly related to green plants.
 
-Note that this course is designed as a **core course for Biology (BIOL) or Ecology and Evolutionary Biology (EEB) majors**. Thus, if you are not majoring in BIOL or EEB, you may find this course more difficult/demanding than you were perhaps expecting. It is a course designed to prepare biology majors for later coursework, but using plants as examples of living organsisms.
+Note that this course is designed as a **core course for Biology (BIOL) or Ecology and Evolutionary Biology (EEB) majors**. Thus, if you are not majoring in BIOL or EEB, you may find this course more difficult/demanding than you were perhaps expecting. It is a course designed to prepare biology majors for later coursework, but using plants rather than animals as examples of living organsisms.
 
 ### Lecture
 
 **Time:** Monday/Wednesday/Friday 10:10-11:00 <br/>
-**Place:** MCHU 305<br/>
-**Instructor** [Paul O. Lewis](mailto:paul.lewis@uconn.edu)
-**Office hours** I'm happy to meet with you; just email me to set up a time!
+**Place:** MCHU (McHugh Hall) 305<br/>
+**Instructor** [Paul O. Lewis](mailto:paul.lewis@uconn.edu) <br/>
+**Office hours** TBA
 
 ### Lab
 
@@ -29,8 +29,8 @@ Note that this course is designed as a **core course for Biology (BIOL) or Ecolo
 **Time (section 2):** Wednesday 12:20-3:20 <br/>
 **Time (section 3):** Wednesday 3:35-6:35 <br/>
 **Place:** Torrey Life Science (TLS) 309, Storrs Campus <br/>
-**Instructor** TBA {% comment %}[Ellie Loew-Mendelson](mailto:emendelson@uconn.edu){% endcomment %}
-**Office hours** {% comment %}TBA Mondays right after lecture (11-12){% endcomment %}
+**Instructor** [Weijun Liang](mailto:weijun.liang@uconn.edu) <br/>
+**Office hours** TBA 
 
 ## Schedule
 
