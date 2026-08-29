@@ -140,27 +140,28 @@ The purpose of the assigned textbook reading is to give you the material from a 
 Note: this section is still in development
 {:.pozor}
 
-{% comment %}
-The total number of points you can earn is 470. The lecture component accounts for 300 points and the lab accounts for the remaining 170.
+The total number of points you can earn is 500. The lecture component accounts for 300 points and the lab accounts for the remaining 200.
 
 Lecture        | Points
 :------------- | :---------------
-Exam 1         | 100
-Exam 2         | 100
-Final exam     | 100
- 
-The 2 highest scores from the 3 exams will be counted. If you missed an exam (for any reason) and were not able to make it up before the answer key was posted, that will be the exam that is dropped. Note that you **must take the final exam** (even if you did well on the first two exams).
+Quizzes        | 90
+Exam 1         | 70
+Exam 2         | 70
+Final exam     | 70
+
+Lecture quizzes will be given almost every lecture. These lecture quizzes are only worth 3 points each, but, as you can see, they add up to more than a lecture exam, so please take them seriously. The quizzes are designed to prepare you for the lecture exam by giving you what amounts to a single exam question every lecture period.
  
 Laboratory     | Points
 :------------- | :---------------
-Quizes         | 50
-Transpiration  | 10
-Photosynthesis | 10
-Hormones       | 30
-Climate change | 10
-Final exam     | 20
-Participation  | 40
-{% endcomment %}
+Quizzes        | 60
+Transpiration  | 15
+Photosynthesis | 15
+Hormones       | 20
+Climate change | 15
+Final exam     | 15
+Participation  | 60
+
+A 10-point quiz will be given almost every lab period on the material you learned in lab the previous week. Transpiration, Photosynthesis, Hormones, and Climate Change are reports that you will prepare about the results of experiments you conduct in lab. The Final exam in lab is a practical exam: you will rotate among stations at which there will be something to observe or perhaps a microscope with a specimen to answer a question or questions about. Finally, 5 participation points are accrued each lab period for answering questions in the lab manual about what you saw in lab. 
 
 ### Grading scale
 
