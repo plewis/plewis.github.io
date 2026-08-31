@@ -142,15 +142,17 @@ There are two midterm lecture exams and one (cumulative) final exam in this cour
 
 ### Textbook and lab manual
 
-* Plant Biology (4th edition) by Linda Graham, James M. Graham, and Lee W. Wilcox. (The textbook is available only as a PDF and is not available in the UConn Bookstore; purchase it directly from [LJLM Press](https://www.ljlmpress.com/plant_biology.html))
+* Plant Biology (4th edition) by Linda Graham, James M. Graham, and Lee W. Wilcox. (The textbook is available only as a PDF and is included in your UConn Book Bundle; if you did not buy into the book bundle, you can purchase the textbook directly from [LJLM Press](https://www.ljlmpress.com/plant_biology.html))
 * Introduction to Botany, Biology 1110 Laboratory Manual, University of Connecticut, 2022 (Chapters of the lab manual will be made available to you for free as needed as PDF files)
 
 The purpose of the assigned textbook reading is to give you the material from a different perspective. This is important because sometimes one person's explanation of a subject does not work for all people. You are not expected to know everything in the chapters assigned. Concentrate your textbook reading on subjects that were discussed in lecture. If you know I discussed a topic, but you cannot understand the topic even after reading about it in the textbook, please come to see one of us during office hours or arrange some other time to meet with us. Some test questions will come from the textbook, so the assigned reading is important.
 
 ### Grade determination
 
+{% comment %} 
 Note: this section is still in development
 {:.pozor}
+{% endcomment %} 
 
 The total number of points you can earn is 500. The lecture component accounts for 300 points and the lab accounts for the remaining 200.
 
