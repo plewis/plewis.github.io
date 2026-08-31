@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated August 24, 2026_
+_Last updated August 31, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -87,6 +87,26 @@ Monday     | Dec. 14 | **FINAL EXAM: day/time to be announced**                 
 [Study Guide](/study-guide-botany-final-exam/), [Flash Cards](https://gnetum.eeb.uconn.edu/courses/botany/flash3/flash.html), [Polls](https://gnetum.eeb.uconn.edu/courses/botany/polls3.pdf)
 {% endcomment %}
       
+### Attendance in lab and lecture
+
+Attending all lectures and labs is important because this is the only way to obtain the material on which you will be tested. 
+
+**In particular, missing 3 labs will result in an automatic F grade in the course.** This is because it is impossible to make up a lab or get the material elsewhere; the lab preparators spend a lot of time setting up the labs and cannot set up the lab again later for those who missed the lab. If you must miss lab a particular week, talk to us; if there are enough empty seats in a different lab section, you may be able to attend a different lab section for that week.
+
+Attending lectures is important too. If you miss a lecture, you will miss the quiz, and, remember, those lecture quizzes add up to more points than an exam by the end of the course. 
+
+### Due dates and late policy
+
+You are expected to be present for all quizzes and exams and to turn in assignments on the dates listed in the course schedule above. Late assignments will be penalized 20% for every day beyond the deadline unless an extension is arranged at least 24 hours before the deadline. Makeup exams will only be given in cases of family emergencies or illness, and the lecture instructor must be consulted prior to the exam.
+
+### Academic misconduct and Artificial Intelligence (AI)
+
+Please take note of the [university's policy on Academic misconduct](https://policy.uconn.edu/2023/07/11/academic-scholarly-and-professional-integrity-and-misconduct-aspim-policy-on/). Academic misconduct involves, at the most basic level, using the work of someone else and claiming it as your own work. Probably everyone knows that cheating on exams and quizzes constitutes misconduct, but these days the easiest way to slip into misconduct is through the use of artificial intelligence (AI).
+
+You may **not** use AI to answer questions in the lab manual, prepare lab reports, assist in lecture/lab quizzes, or assist with lecture exams. Using AI means that you are letting AI do the thinking for you, and the degree you earn from UConn should reflect what you know, not what AI's large language models have learned. You will get an automatic zero on any assignment that we determine was assisted by AI.
+
+You may use AI to get a separate explanation, _while studying_, of something that you don't understand from the lecture or the textbook. In fact, it is difficult to avoid AI these days when using web browsers. Just don't use AI when preparing any documents that you will submit to us to directly earn points in this course. Using AI for preparing documents that you claim to be your own work is a form of [plagiarism[(https://uconn.libwizard.com/f/plagiarism) because AI can do what it does by learning from what others have said in print and media, so you are really using the work of others when you use AI.
+
 ### Course Learning Objectives
 
 After successfully completing this course, students will be able to:
@@ -115,14 +135,6 @@ BIOL 1110 satisfies the Common Curriculum [Scientific and Empirical Inquiry](htt
 | TOI-6            | 2. Students will be able to design or conduct an experiment or analysis suitable to test a scientific hypothesis and be able to interpret the results | LO1,LO9 | Laboratory exercises/reports |
 | TOI-6            | 3. Students will be able to solve problems described verbally, graphically, symbolically, or numerically | LO2,LO3,LO4,LO5,LO9 | Laboratory reports, lecture exams |
 | TOI-6 lab        | Through application-based experiences using the scientific method, students will be able to identify problems, make observations, analyze data, interpret data, and develop models or explanations | LO1, LO9 | Laboratory experiments and reports |
-
-### Attendance in lab and lecture
-
-Attending all lectures and labs is important because this is the only way to obtain the material on which you will be tested. 
-
-### Due dates and late policy
-
-You are expected to be present for all quizzes and exams and to turn in assignments on the dates listed in the course schedule above. Late assignments will be penalized 20% for every day beyond the deadline unless an extension is arranged at least 24 hours before the deadline. Makeup exams will only be given in cases of family emergencies or illness, and the lecture instructor must be consulted prior to the exam.
 
 ### Exams
 
