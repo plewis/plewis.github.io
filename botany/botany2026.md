@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated August 31, 2026_
+_Last updated September 3, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -38,9 +38,9 @@ Day        |  Date   |  Lecture topic                                           
 :--------  | :-----  | :--------------------------------------------------------------     | :------------------------------------------------------------
 Monday     | Aug. 31 | **1. Introduction, plant cells**<br/>Chapter 5                      | 
 Wednesday  | Sep. 2  | **2. Plant cell types and tissues types**<br/>Chapters 5, 9, 10     | **1. Microscope, Plant Cells, Greenhouse Tour**
-Friday     | Sep. 4  | **3. Leaves and stems**<br/>Chapters 9,10,12                        | 
+Friday     | Sep. 4  | **3. Stems, Roots**<br/>Chapters 9,10,12                            | 
 Monday     | Sep. 7  | **LABOR DAY**                                                       |
-Wednesday  | Sep. 9  | **4. Stems, Roots**<br/>Chapters 9,10,11                            | **2. Plant anatomy I**
+Wednesday  | Sep. 9  | **4. Leaves**<br/>Chapters 9,10,11                                  | **2. Plant anatomy I**
 Friday     | Sep. 11 | **5. Woody Dicot Stems**<br/>Chapter 10                             | 
 Monday     | Sep. 14 | **6. Water Potential, transpiration**<br/>Chapter 12                | 
 Wednesday  | Sep. 16 | **7. Food Transport**<br/>Chapters 4,12                             | **3. Plant anatomy II**<br/>**Peas: plant seeds**
