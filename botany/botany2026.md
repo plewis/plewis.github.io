@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated September 3, 2026_
+_Last updated September 13, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -55,7 +55,7 @@ Monday     | Oct.  5 | **14. Phylogeny, Life Cycles, Endosymbiosis**<br/>Chapter
 Wednesday  | Oct.  7 | **15. Cyanobacteria, Red Algae**<br/>Chapter 20                     | **6. Algae**<br/>**Peas: day 8**
 Friday     | Oct.  9 | **16. Heterokonts, Chlorophyte Green Algae**<br/>Chapter 20         | **Peas: day 10**
 Monday     | Oct. 12 | **17. Streptophyte Green Algae**<br/>Chapter 20                     | **Peas: day 13**
-Wednesday  | Oct. 14 | **18. Bryophytes (Hornworts, Mosses, Liverworts)**<br/>Chapter 22   | **7.Mitosis/Meiosis **<br/>**Peas: day 15**
+Wednesday  | Oct. 14 | **18. Bryophytes (Hornworts, Mosses, Liverworts)**<br/>Chapter 22   | **7. Mitosis/Meiosis**<br/>**Peas: day 15**
 Friday     | Oct. 16 | **19. Vascular plants, Lycophytes, heterospory**<br/>Chapter 22     | 
 Monday     | Oct. 19 | **20. Pteridophytes**<br/>Chapter 22                                | 
 Wednesday  | Oct. 21 | **21. Seed plants**<br/>Chapter 23                                  | **8. Seedless plants**
