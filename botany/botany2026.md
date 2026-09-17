@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated September 13, 2026_
+_Last updated September 17, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -21,7 +21,7 @@ Note that this course is designed as a **core course for Biology (BIOL) or Ecolo
 **Time:** Monday/Wednesday/Friday 10:10-11:00 <br/>
 **Place:** MCHU (McHugh Hall) 305<br/>
 **Instructor** [Paul O. Lewis](mailto:paul.lewis@uconn.edu) <br/>
-**Office hours** TBA
+**Office hours** Mondays 11-11:50 (McHugh near lecture room), Thursdays 10-11 (Gant West room W420)
 
 ### Lab
 
@@ -30,7 +30,7 @@ Note that this course is designed as a **core course for Biology (BIOL) or Ecolo
 **Time (section 3):** Wednesday 3:35-6:35 <br/>
 **Place:** Torrey Life Science (TLS) 309, Storrs Campus <br/>
 **Instructor** [Weijun Liang](mailto:weijun.liang@uconn.edu) <br/>
-**Office hours** TBA 
+**Office hour** Mondays 1-1:50 in Pharmacy-Biology room 304
 
 ## Schedule
 
