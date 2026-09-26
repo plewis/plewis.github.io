@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated September 17, 2026_
+_Last updated September 26, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -50,7 +50,7 @@ Wednesday  | Sep. 23 | **10. Photosynthesis (cont.)**<br/>Chapters 6            
 Friday     | Sep. 25 | **11. Photorespiration, CAM, C4**<br/>Chapter 6                     | 
 Monday     | Sep. 28 | **12. Mitosis and meiosis**<br/>Chapter 6                           |  
 Wednesday  | Sep. 30 | **13. Mitosis and meiosis (cont.)**<br/>Chapter 14                  | **5. Photosynthesis**<br/>**Peas: day 1**
-Friday     | Oct.  2 | **EXAM I**<br/>up to and including lecture on 9/30)                 | **Peas: day 3**
+Friday     | Oct.  2 | **EXAM I**<br/>up to and including lecture on 9/25)                 | **Peas: day 3**
 Monday     | Oct.  5 | **14. Phylogeny, Life Cycles, Endosymbiosis**<br/>Chapters 18,19,20 | **Peas: day 6**
 Wednesday  | Oct.  7 | **15. Cyanobacteria, Red Algae**<br/>Chapter 20                     | **6. Algae**<br/>**Peas: day 8**
 Friday     | Oct.  9 | **16. Heterokonts, Chlorophyte Green Algae**<br/>Chapter 20         | **Peas: day 10**
