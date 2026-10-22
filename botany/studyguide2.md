@@ -4,13 +4,12 @@ title: BIOL 1110 Study Guide for Second Exam
 permalink: /study-guide-botany-second-exam/
 ---
 
-## Second lecture exam (Friday, Oct. 25, 2024)
+## Second lecture exam (Friday, Oct. 30, 2026)
 
 Note: 
 
 * this study guide is subject to updates until this notice is removed.
 * some topics listed here have not yet been covered in lecture
-* words in _italics_ have been added since this document was created on Oct. 13, 2024
 
 ### Phylogeny
 
@@ -55,25 +54,23 @@ You should also be able able to place the origin of these major events at the ap
 * Chlorophyll a
 * Chlorophyll b
 * Chlorophyll c
-* Carotenoid pigments
-* nucleus with linear chromosomes
+* Carotenoid pigments become important accessory pigments for photosynthesis
+* Nucleus with linear chromosomes
 * Loss of phycobilin pigments (phycocyanin, phycoerythrin)
 * Embryos in green plants
 * Twisted sperm
-* Cellulose cell walls
 * Fucoxanthin pigments
 * Vascular tissues (xylem, phloem)
 * Sporophyte dominance in the life cycle
 * Branched sporophytes
-* Megaphylls
-* Microphylls
+* Megaphylls (larger true leaves with a network of veins)
+* Microphylls (smaller true leaves with just one major vein)
 * Seeds
 * Pollen
 * Vessels in xylem
 * Double fertilization
 * Carpels
 * Spores via meiosis
-* Heterocytes
 
 ### Life Cycles
 
@@ -88,7 +85,7 @@ You should be able to provide examples (of particular genera whose life cycles w
 
 You should be able to define these terms (note that some of these are special cases of others):
 
-* Anteridium
+* Antheridium
 * Oogonium
 * Archegonium
 * Gametangium
@@ -102,7 +99,7 @@ You should be able to define these terms (note that some of these are special ca
 * Sperm
 * Megaspore
 * Microspore
-* _Sporocyte_
+* Sporocyte (=spore mother cell)
 
 You should be able to draw a homosporous life cycle from memory, connecting the following terms with arrows pointed in the correct direction:
 
@@ -114,7 +111,7 @@ You should be able to draw a homosporous life cycle from memory, connecting the 
 * Gametophyte
 * Sporophyte
 * Spores
-* _Sporocytes_
+* Sporocytes
 
 You should be able to draw a heterosporous life cycle from memory, connecting the following terms with arrows pointed in the correct direction:
 
@@ -128,14 +125,27 @@ You should be able to draw a heterosporous life cycle from memory, connecting th
 * Sporophyte
 * Megaspores
 * Micropores
-* _Microporocytes_
-* _Megasporocytes_
+* Microporocytes
+* Megasporocytes
 
 You should, for both homosporous and heterosporous life cycles above, add these terms in the appropriate places:
 
 * Mitosis
 * Haploid
 * Diploid
+
+You should know whether each of these stages in a plant life cycle are single cells vs. multicellular structures:
+
+* Spore
+* Zygote
+* Gametophyte
+* Sporophyte
+* Sporocyte
+* Gamete
+* Egg
+* Sperm
+* Pollen grain
+* Embryo
 
 You should be able to define these terms and list the group(s) in which these features are found:
 
@@ -146,61 +156,61 @@ You should be able to define these terms and list the group(s) in which these fe
 * Antheridiophore
 * Elaters
 * Thallus
-* _Frond_
-* _Pinna_
-* _Endospory_
-* _Megaphyll_
-* _Microphyll_
-* _Fiddlehead_
-* _Sorus_
-* _Indusium_
-* _Annulus_
-* _Swimming sperm_
-* _Haustorial pollen tube_
-* _Tube cell_
-* _Generative cell_
-* _Cotyledon_
-* _Pistil_
-* _Carpel_
-* _Ovary_
-* _Style_
-* _Stigma_
-* _Stamen_
-* _Filament_
-* _Anther_
-* _Seed_
-* _Pollen grain_
-* _Ovule_
-* _Corolla_
-* _Calyx_
-* _Fruit_
-* _Androecium_
-* _Gynoecium_
+* Frond
+* Pinna
+* Endospory
+* Megaphyll
+* Microphyll
+* Fiddlehead
+* Sorus
+* Indusium
+* Annulus
+* Swimming sperm
+* Haustorial pollen tube
+* Tube cell
+* Generative cell
+* Cotyledon
+* Pistil
+* Carpel
+* Ovary
+* Style
+* Stigma
+* Stamen
+* Filament
+* Anther
+* Seed
+* Pollen grain
+* Ovule
+* Corolla
+* Calyx
+* Fruit
+* Androecium
+* Gynoecium
 
-_You should be able to..._
+You should be able to...
 
-* _Identify which generations are present in a pine seed
-* _Explain why fleshy_ Ginkgo _and Yew seeds are naked seeds and not fleshy fruits_
-* _Explain why fossils of the African genus_ Welwitschia _have been found in Brazil_
-* _Name the gymnosperm clade in which the oldest trees are found_
-* _Name the gymnosperm clade in which the tallest trees are found_
-* _Name the gymnosperm clade in which the most massive trees are found_
-* _Name the gymnosperm clade that represents a monotypic phylum_
-* _Explain the difference between deciduous and evergreen_
-* _Explain the difference between monoecious and dioecious_
-* _Explain how the terms carpel and pistil are related_
-* _Explain the difference between apocarpous and syncarpous_
-* _Explain the difference between inferior and superior ovaries and hypogynous, perigynous, and epigynous flowers_
-* _Explain what double fertilization is and why it makes angiosperms more efficient in their use of energy than gymnosperms_
+* Identify which generations are present in a pine seed
+* Explain why fleshy _Ginkgo_ and Yew seeds are naked seeds and not fleshy fruits
+* Explain why fossils of the African genus _Welwitschia_ have been found in Brazil
+* Name the gymnosperm clade in which the oldest trees are found
+* Name the gymnosperm clade in which the tallest trees are found
+* Name the gymnosperm clade in which the most massive trees are found
+* Name the gymnosperm clade that represents a monotypic phylum
+* Explain the difference between deciduous and evergreen
+* Explain the difference between monoecious and dioecious
+* Explain how the terms carpel and pistil are related
+* Explain the difference between apocarpous and syncarpous
+* Explain the difference between inferior and superior ovaries and hypogynous, perigynous, and epigynous flowers
+* Explain what double fertilization is and why it makes angiosperms more efficient in their use of energy than gymnosperms
 
 ### Mitosis and Meiosis
 
 You should be able to...
-* draw a cell cycle diagram showing G0, G1, S, G2, and the 4 phases of mitosis in order
-* list what key events take place in each phase of mitosis
-* identify whether a cell is in anophase I or anophase II of meiosis by the number of chromatids in each chromosome
-* explain the key differences between prophase I of meiosis and prophase of mitosis
-* describe the two mechanisms by which the genetic contributions of parents get mixed up in creating the haploid genome of a gamete
-* answer these questions: "How many cells are created from a cell that undergoes mitosis? meiosis?"
-* answer these questions: "Can mitosis happen in a haploid cells? Can meiosis happen in a haploid cell?"
-* explain how chromosomes get from the center of the cell to the poles in anaphase of mitosis or meiosis (do they walk or are they pulled?)
+* Draw a cell cycle diagram showing G0, G1, S, G2, and the 4 phases of mitosis in order
+* List what key events take place in each phase of mitosis
+* Identify whether a cell is in anophase I or anophase II of meiosis by the number of chromatids in each chromosome
+* Explain the key differences between prophase I of meiosis and prophase of mitosis
+* Describe the two mechanisms by which the genetic contributions of parents get mixed up in creating the haploid genome of a gamete
+* Answer these questions: "How many cells are created from a cell that undergoes mitosis? meiosis?"
+* Answer these questions: "Can mitosis happen in a haploid cells? Can meiosis happen in a haploid cell?"
+* Explain how chromosomes get from the center of the cell to the poles in anaphase of mitosis or meiosis (do they walk or are they pulled?)

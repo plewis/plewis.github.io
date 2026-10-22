@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated September 26, 2026_
+_Last updated October 22, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -62,7 +62,7 @@ Wednesday  | Oct. 21 | **21. Seed plants**<br/>Chapter 23                       
 Friday     | Oct. 23 | **22. Gymnosperms**<br/>Chapter 23                                  | 
 Monday     | Oct. 26 | **23. Angiosperms (flowers)**<br/>Chapter 24                        | 
 Wednesday  | Oct. 28 | **24. Angiosperms (inflorescences)**<br/>Chapter 25                 | **9. Plant life cycles** 
-Friday     | Oct. 30 | **EXAM II**<br/>lecture material from 10/5 through 10/28            | 
+Friday     | Oct. 30 | **EXAM II**<br/>lecture material from 10/5 through 10/26<br/>[Study Guide](/study-guide-botany-second-exam/)            | 
 Monday     | Nov.  2 | **25. Angiosperms (fruits)**<br/>Chapters 25                        | 
 Wednesday  | Nov.  4 | **26. Angiosperms (pollination)**<br/>Chapter 25                    | **10.Gymnosperms and fossils**
 Friday     | Nov.  6 | **27. Fungi**<br/>Chapter 21                                        | 
@@ -81,7 +81,7 @@ Friday     | Dec.  4 | 36. Speciation**<br/>Chapter 17                          
 Monday     | Dec.  7 | **37. Nutrient cycles**<br/>Chapter 26                              | 
 Wednesday  | Dec.  9 | **38. Six Important Angiosperm Families**<br/>                      | **Lab Final**
 Friday     | Dec. 11 | **Last day of class**                                               | 
-Monday     | Dec. 14 | **FINAL EXAM: day/time to be announced**                            | 
+Friday     | Dec. 18 | **FINAL EXAM: 8-10am, MCHU 305**                                    | 
 
 {% comment %}
 [Study Guide](/study-guide-botany-final-exam/), [Flash Cards](https://gnetum.eeb.uconn.edu/courses/botany/flash3/flash.html), [Polls](https://gnetum.eeb.uconn.edu/courses/botany/polls3.pdf)
