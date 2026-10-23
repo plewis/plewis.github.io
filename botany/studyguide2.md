@@ -6,11 +6,6 @@ permalink: /study-guide-botany-second-exam/
 
 ## Second lecture exam (Friday, Oct. 30, 2026)
 
-Note: 
-
-* this study guide is subject to updates until this notice is removed.
-* some topics listed here have not yet been covered in lecture
-
 ### Phylogeny
 
 You should be able to draw the phylogeny given in class from memory, including these taxa:
@@ -67,9 +62,6 @@ You should also be able able to place the origin of these major events at the ap
 * Microphylls (smaller true leaves with just one major vein)
 * Seeds
 * Pollen
-* Vessels in xylem
-* Double fertilization
-* Carpels
 * Spores via meiosis
 
 ### Life Cycles
@@ -166,26 +158,12 @@ You should be able to define these terms and list the group(s) in which these fe
 * Indusium
 * Annulus
 * Swimming sperm
-* Haustorial pollen tube
+* Haustorial pollen tube of cycads and _Ginkgo_
 * Tube cell
 * Generative cell
-* Cotyledon
-* Pistil
-* Carpel
-* Ovary
-* Style
-* Stigma
-* Stamen
-* Filament
-* Anther
 * Seed
 * Pollen grain
 * Ovule
-* Corolla
-* Calyx
-* Fruit
-* Androecium
-* Gynoecium
 
 You should be able to...
 
@@ -198,10 +176,6 @@ You should be able to...
 * Name the gymnosperm clade that represents a monotypic phylum
 * Explain the difference between deciduous and evergreen
 * Explain the difference between monoecious and dioecious
-* Explain how the terms carpel and pistil are related
-* Explain the difference between apocarpous and syncarpous
-* Explain the difference between inferior and superior ovaries and hypogynous, perigynous, and epigynous flowers
-* Explain what double fertilization is and why it makes angiosperms more efficient in their use of energy than gymnosperms
 
 ### Mitosis and Meiosis
 
