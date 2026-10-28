@@ -61,7 +61,7 @@ Monday     | Oct. 19 | **20. Pteridophytes**<br/>Chapter 22                     
 Wednesday  | Oct. 21 | **21. Seed plants**<br/>Chapter 23                                  | **8. Seedless plants**
 Friday     | Oct. 23 | **22. Gymnosperms**<br/>Chapter 23                                  | 
 Monday     | Oct. 26 | **23. Angiosperms (flowers)**<br/>Chapter 24                        | 
-Wednesday  | Oct. 28 | **24. Angiosperms (life cycle)**<br/>Chapter 25                     | **9. Gymnosperms** 
+Wednesday  | Oct. 28 | **24. Angiosperms (life cycle)**<br/>Chapter 24                     | **9. Gymnosperms** 
 Friday     | Oct. 30 | **EXAM II**<br/>lecture material from 9/28 through 10/23<br/>[Study Guide](/study-guide-botany-second-exam/)            | 
 Monday     | Nov.  2 | **25. Angiosperms (inflorescences, fruits)**<br/>Chapters 25        | 
 Wednesday  | Nov.  4 | **26. Angiosperms (pollination)**<br/>Chapter 25                    | **10. Angiosperms and flowers**
@@ -81,7 +81,7 @@ Friday     | Dec.  4 | 36. Speciation**<br/>Chapter 17                          
 Monday     | Dec.  7 | **37. Nutrient cycles**<br/>Chapter 26                              | 
 Wednesday  | Dec.  9 | **38. Six Important Angiosperm Families**<br/>                      | **Lab Final**
 Friday     | Dec. 11 | **Last day of class**                                               | 
-Friday     | Dec. 18 | **FINAL EXAM: 8-10am, MCHU 305 (covers lectures from Oct. 26 to Dec. 11 (inclusive))**     | 
+Friday     | Dec. 18 | **FINAL EXAM: 8-10am, MCHU 305** (covers lectures from 10/26 to 12/11, inclusive) | 
 
 {% comment %}
 [Study Guide](/study-guide-botany-final-exam/), [Flash Cards](https://gnetum.eeb.uconn.edu/courses/botany/flash3/flash.html), [Polls](https://gnetum.eeb.uconn.edu/courses/botany/polls3.pdf)
