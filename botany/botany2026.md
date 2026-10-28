@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated October 23, 2026_
+_Last updated October 28, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -61,16 +61,16 @@ Monday     | Oct. 19 | **20. Pteridophytes**<br/>Chapter 22                     
 Wednesday  | Oct. 21 | **21. Seed plants**<br/>Chapter 23                                  | **8. Seedless plants**
 Friday     | Oct. 23 | **22. Gymnosperms**<br/>Chapter 23                                  | 
 Monday     | Oct. 26 | **23. Angiosperms (flowers)**<br/>Chapter 24                        | 
-Wednesday  | Oct. 28 | **24. Angiosperms (inflorescences)**<br/>Chapter 25                 | **9. Plant life cycles** 
+Wednesday  | Oct. 28 | **24. Angiosperms (life cycle)**<br/>Chapter 25                     | **9. Gymnosperms** 
 Friday     | Oct. 30 | **EXAM II**<br/>lecture material from 9/28 through 10/23<br/>[Study Guide](/study-guide-botany-second-exam/)            | 
-Monday     | Nov.  2 | **25. Angiosperms (fruits)**<br/>Chapters 25                        | 
-Wednesday  | Nov.  4 | **26. Angiosperms (pollination)**<br/>Chapter 25                    | **10.Gymnosperms and fossils**
+Monday     | Nov.  2 | **25. Angiosperms (inflorescences, fruits)**<br/>Chapters 25        | 
+Wednesday  | Nov.  4 | **26. Angiosperms (pollination)**<br/>Chapter 25                    | **10. Angiosperms and flowers **
 Friday     | Nov.  6 | **27. Fungi**<br/>Chapter 21                                        | 
 Monday     | Nov.  9 | **28. Lichens, Slime Molds, and Fermentation**<br/>Chapter 21       | 
-Wednesday  | Nov. 11 | **29. Tropisms and auxin**<br/>Chapter 13                           | **11. Angiosperms and flowers**
+Wednesday  | Nov. 11 | **29. Tropisms and auxin**<br/>Chapter 13                           | **11. Fungi**
 Friday     | Nov. 13 | **30. Hormones (cont.)**<br/>Chapter 13                             | 
 Monday     | Nov. 16 | **31. Phytochrome (or how plants tell time)**<br/>Chapter 26        | 
-Wednesday  | Nov. 18 | **32. Mendelian genetics**<br/>Chapter 15                           | **12. Fungi**
+Wednesday  | Nov. 18 | **32. Mendelian genetics**<br/>Chapter 15                           | **12. Fossils and genetics **
 Friday     | Nov. 20 | **33. Recombination**<br/>Chapter 15                                | 
 Monday     | Nov. 23 | **THANKSGIVING BREAK**                                              | 
 Wednesday  | Nov. 25 | **THANKSGIVING BREAK**                                              | (no lab Thanksgiving break week)
@@ -81,7 +81,7 @@ Friday     | Dec.  4 | 36. Speciation**<br/>Chapter 17                          
 Monday     | Dec.  7 | **37. Nutrient cycles**<br/>Chapter 26                              | 
 Wednesday  | Dec.  9 | **38. Six Important Angiosperm Families**<br/>                      | **Lab Final**
 Friday     | Dec. 11 | **Last day of class**                                               | 
-Friday     | Dec. 18 | **FINAL EXAM: 8-10am, MCHU 305**                                    | 
+Friday     | Dec. 18 | **FINAL EXAM: 8-10am, MCHU 305 (covers lectures from Oct. 26 to Dec. 11 (inclusive))**     | 
 
 {% comment %}
 [Study Guide](/study-guide-botany-final-exam/), [Flash Cards](https://gnetum.eeb.uconn.edu/courses/botany/flash3/flash.html), [Polls](https://gnetum.eeb.uconn.edu/courses/botany/polls3.pdf)
