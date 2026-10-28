@@ -64,7 +64,7 @@ Monday     | Oct. 26 | **23. Angiosperms (flowers)**<br/>Chapter 24             
 Wednesday  | Oct. 28 | **24. Angiosperms (life cycle)**<br/>Chapter 25                     | **9. Gymnosperms** 
 Friday     | Oct. 30 | **EXAM II**<br/>lecture material from 9/28 through 10/23<br/>[Study Guide](/study-guide-botany-second-exam/)            | 
 Monday     | Nov.  2 | **25. Angiosperms (inflorescences, fruits)**<br/>Chapters 25        | 
-Wednesday  | Nov.  4 | **26. Angiosperms (pollination)**<br/>Chapter 25                    | **10. Angiosperms and flowers **
+Wednesday  | Nov.  4 | **26. Angiosperms (pollination)**<br/>Chapter 25                    | **10. Angiosperms and flowers**
 Friday     | Nov.  6 | **27. Fungi**<br/>Chapter 21                                        | 
 Monday     | Nov.  9 | **28. Lichens, Slime Molds, and Fermentation**<br/>Chapter 21       | 
 Wednesday  | Nov. 11 | **29. Tropisms and auxin**<br/>Chapter 13                           | **11. Fungi**
