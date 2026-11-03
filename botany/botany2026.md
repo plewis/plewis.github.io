@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated October 28, 2026_
+_Last updated November 3, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -63,9 +63,9 @@ Friday     | Oct. 23 | **22. Gymnosperms**<br/>Chapter 23                       
 Monday     | Oct. 26 | **23. Angiosperms (flowers)**<br/>Chapter 24                        | 
 Wednesday  | Oct. 28 | **24. Angiosperms (life cycle)**<br/>Chapter 24                     | **9. Gymnosperms** 
 Friday     | Oct. 30 | **EXAM II**<br/>lecture material from 9/28 through 10/23<br/>[Study Guide](/study-guide-botany-second-exam/)            | 
-Monday     | Nov.  2 | **25. Angiosperms (inflorescences, fruits)**<br/>Chapters 25        | 
-Wednesday  | Nov.  4 | **26. Angiosperms (pollination)**<br/>Chapter 25                    | **10. Angiosperms and flowers**
-Friday     | Nov.  6 | **27. Fungi**<br/>Chapter 21                                        | 
+Monday     | Nov.  2 | **25. Angiosperms (inflorescences)**<br/>Chapters 25                | 
+Wednesday  | Nov.  4 | **26. Angiosperms (fruits)**<br/>Chapter 25                         | **10. Angiosperms and flowers**
+Friday     | Nov.  6 | **27. Angiosperms (pollination), Fungi (intro)**<br/>Chapter 21                                        | 
 Monday     | Nov.  9 | **28. Lichens, Slime Molds, and Fermentation**<br/>Chapter 21       | 
 Wednesday  | Nov. 11 | **29. Tropisms and auxin**<br/>Chapter 13                           | **11. Fungi**
 Friday     | Nov. 13 | **30. Hormones (cont.)**<br/>Chapter 13                             | 
