@@ -4,7 +4,7 @@ title: Introduction to Botany (BIOL 1110)
 permalink: /botany2026/
 ---
 ### Syllabus for Fall Semester 2026
-_Last updated November 3, 2026_
+_Last updated November 7, 2026_
 
 {% comment %}
 [Scroll straight to this week in the schedule](#today)
@@ -50,7 +50,7 @@ Wednesday  | Sep. 23 | **10. Photosynthesis (cont.)**<br/>Chapters 6            
 Friday     | Sep. 25 | **11. Photorespiration, CAM, C4**<br/>Chapter 6                     | 
 Monday     | Sep. 28 | **12. Mitosis and meiosis**<br/>Chapter 6                           |  
 Wednesday  | Sep. 30 | **13. Mitosis and meiosis (cont.)**<br/>Chapter 14                  | **5. Photosynthesis**<br/>**Peas: day 1**
-Friday     | Oct.  2 | **EXAM I**<br/>up to and including lecture on 9/25) [Study Guide](https://plewis.github.io/study-guide-botany-first-exam/)                | **Peas: day 3**
+Friday     | Oct.  2 | **EXAM I**<br/>up to and including lecture on 9/25) [Study Guide](https://plewis.github.io/study-guide-botany-first-exam/) | **Peas: day 3**
 Monday     | Oct.  5 | **14. Phylogeny, Life Cycles, Endosymbiosis**<br/>Chapters 18,19,20 | **Peas: day 6**
 Wednesday  | Oct.  7 | **15. Cyanobacteria, Red Algae**<br/>Chapter 20                     | **6. Algae**<br/>**Peas: day 8**
 Friday     | Oct.  9 | **16. Heterokonts, Chlorophyte Green Algae**<br/>Chapter 20         | **Peas: day 10**
@@ -62,22 +62,22 @@ Wednesday  | Oct. 21 | **21. Seed plants**<br/>Chapter 23                       
 Friday     | Oct. 23 | **22. Gymnosperms**<br/>Chapter 23                                  | 
 Monday     | Oct. 26 | **23. Angiosperms (flowers)**<br/>Chapter 24                        | 
 Wednesday  | Oct. 28 | **24. Angiosperms (life cycle)**<br/>Chapter 24                     | **9. Gymnosperms** 
-Friday     | Oct. 30 | **EXAM II**<br/>lecture material from 9/28 through 10/23<br/>[Study Guide](/study-guide-botany-second-exam/)            | 
+Friday     | Oct. 30 | **EXAM II**<br/>lecture material from 9/28 through 10/23<br/>[Study Guide](/study-guide-botany-second-exam/) | 
 Monday     | Nov.  2 | **25. Angiosperms (inflorescences)**<br/>Chapters 25                | 
 Wednesday  | Nov.  4 | **26. Angiosperms (fruits)**<br/>Chapter 25                         | **10. Angiosperms and flowers**
-Friday     | Nov.  6 | **27. Angiosperms (pollination), Fungi (intro)**<br/>Chapter 21                                        | 
-Monday     | Nov.  9 | **28. Lichens, Slime Molds, and Fermentation**<br/>Chapter 21       | 
-Wednesday  | Nov. 11 | **29. Tropisms and auxin**<br/>Chapter 13                           | **11. Fungi**
-Friday     | Nov. 13 | **30. Hormones (cont.)**<br/>Chapter 13                             | 
-Monday     | Nov. 16 | **31. Phytochrome (or how plants tell time)**<br/>Chapter 26        | 
-Wednesday  | Nov. 18 | **32. Mendelian genetics**<br/>Chapter 15                           | **12. Fossils and genetics **
-Friday     | Nov. 20 | **33. Recombination**<br/>Chapter 15                                | 
+Friday     | Nov.  6 | **27. Angiosperms (pollination), Fungi (intro)**<br/>Chapter 21     | 
+Monday     | Nov.  9 | **28. Fungi and Lichens**<br/>Chapter 21                            | 
+Wednesday  | Nov. 11 | **29. Mendelian genetics**<br/>Chapter 15                           | **11. Fungi**
+Friday     | Nov. 13 | **30. Recombination**<br/>Chapter 15                                |
+Monday     | Nov. 16 | **31. Population genetics**<br/>Chapter 17                          |
+Wednesday  | Nov. 18 | **32. Natural selection**<br/>Chapter 17                            | **12. Fossils and genetics**
+Friday     | Nov. 20 | **33. Speciation**<br/>Chapter 17                                   | 
 Monday     | Nov. 23 | **THANKSGIVING BREAK**                                              | 
 Wednesday  | Nov. 25 | **THANKSGIVING BREAK**                                              | (no lab Thanksgiving break week)
 Friday     | Nov. 27 | **THANKSGIVING BREAK**                                              | 
-Monday     | Nov. 30 | 34. Population genetics**<br/>Chapter 17                            | 
-Wednesday  | Dec.  2 | 35. Natural selection**<br/>Chapter 17                              | **13. Climate change**
-Friday     | Dec.  4 | 36. Speciation**<br/>Chapter 17                                     | 
+Monday     | Nov. 30 | **34. Tropisms and auxin**<br/>Chapter 13                           | 
+Wednesday  | Dec.  2 | **35. Hormones (cont.)**<br/>Chapter 13                             | **13. Climate change**
+Friday     | Dec.  4 | **36. Phytochrome (or how plants tell time)**<br/>Chapter 26        | 
 Monday     | Dec.  7 | **37. Nutrient cycles**<br/>Chapter 26                              | 
 Wednesday  | Dec.  9 | **38. Six Important Angiosperm Families**<br/>                      | **Lab Final**
 Friday     | Dec. 11 | **Last day of class**                                               | 
@@ -86,7 +86,7 @@ Friday     | Dec. 18 | **FINAL EXAM: 8-10am, MCHU 305** (covers lectures from 10
 {% comment %}
 [Study Guide](/study-guide-botany-final-exam/), [Flash Cards](https://gnetum.eeb.uconn.edu/courses/botany/flash3/flash.html), [Polls](https://gnetum.eeb.uconn.edu/courses/botany/polls3.pdf)
 {% endcomment %}
-      
+            
 ### Attendance in lab and lecture
 
 Attending all lectures and labs is important because this is the only way to obtain the material on which you will be tested. 
